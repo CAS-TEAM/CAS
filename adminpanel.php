@@ -6,11 +6,9 @@ include 'dbh.php';
 
 include 'top.php';
 
-
 date_default_timezone_set('Asia/Kolkata');
 
 ?>
-
 
 	<nav class="navbar bg-dark">
 		<p class="navbar-brand" style="color:white;width:100%;text-align:center">CAS</p>
@@ -24,7 +22,7 @@ date_default_timezone_set('Asia/Kolkata');
 
 				<br>
 
-
+				<div class="admin-table">
 				<table class="table table-bordered">
 				  	<thead class="thead-dark">
 					    <tr>
@@ -88,21 +86,82 @@ date_default_timezone_set('Asia/Kolkata');
 						    }
 
 						    ?>
-						      	<form>
+						      	<form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
 						      		<td class="table-center">
-							      		<input type="checkbox" value="" id="defaultCheck1">
+						      			<?php
+
+						      			if($hod==1)
+						      			{
+						      				?>
+						      				<input type="checkbox" class="admin-table-checkbox" name="hod" id="hod<?php echo $id; ?>" value="hod" checked>
+						      				<?php
+						      			}
+						      			else
+						      			{
+						      				?>
+						      				<input type="checkbox" class="admin-table-checkbox" name="hod" id="hod<?php echo $id; ?>" value="hod">
+						      				<?php
+						      			}
+
+						      			?>							      		
 		  							</td>
 		  							<td class="table-center">
-							      		<input type="checkbox" value="" id="defaultCheck1">
+		  								<?php
+
+		  								if($committee==1)
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="committee" id="committee<?php echo $id; ?>" value="committee" checked>
+		  									<?php
+		  								}
+		  								else
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="committee" id="committee<?php echo $id; ?>" value="committee">
+		  									<?php
+		  								}
+
+		  								?>							      		
 		  							</td>
 		  							<td class="table-center">
-							      		<input type="checkbox" value="" id="defaultCheck1">
+		  								<?php
+
+		  								if($principal==1)
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="principal" id="principal<?php echo $id; ?>" value="principal" checked>
+		  									<?php
+		  								}
+		  								else
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="principal"id="principal<?php echo $id; ?>"  value="principal">
+		  									<?php
+		  								}
+
+		  								?>							      		
 		  							</td>
 		  							<td class="table-center">
-							      		<input type="checkbox" value="" id="defaultCheck1">
+		  								<?php
+
+		  								if($admin==1)
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="admin" id="admin<?php echo $id; ?>" value="admin" checked>
+		  									<?php
+		  								}
+		  								else
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="admin" id="admin<?php echo $id; ?>" value="admin">
+		  									<?php
+		  								}
+
+		  								?>							      		
 		  							</td>
 		  							<td class="table-center">
-		  								<button type="submit" class="btn btn-default" disabled>Update</button>
+		  								<input type="hidden" name="userId" value="<?php echo $id; ?>">
+		  								<button type="submit" name="submit" class="btn btn-default" id="update<?php echo $id; ?>" disabled>Update</button>
 		  							</td>
 						      	</form>
 						      	
@@ -114,8 +173,7 @@ date_default_timezone_set('Asia/Kolkata');
 					    ?>
 				  </tbody>
 				</table>
-
-
+				</div>
 
 			</div>
 		</div>

@@ -6,3 +6,7 @@ td.table-center{
 	text-align: center;
 	vertical-align: middle;
 }
+
+.admin-table{
+	overflow-x:auto;
+}
