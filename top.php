@@ -8,5 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" href="js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="Frontend/global.css">
 </head>
 <body>

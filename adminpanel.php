@@ -25,7 +25,7 @@ date_default_timezone_set('Asia/Kolkata');
 				<br>
 
 
-				<table class="table table-bordered" style="text-align: center;vertical-align: middle;">
+				<table class="table table-bordered">
 				  	<thead class="thead-dark">
 					    <tr>
 					      	<th scope="col">#</th>
@@ -89,19 +89,19 @@ date_default_timezone_set('Asia/Kolkata');
 
 						    ?>
 						      	<form>
-						      		<td>
-							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+						      		<td class="table-center">
+							      		<input type="checkbox" value="" id="defaultCheck1">
 		  							</td>
-		  							<td>
-							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							<td class="table-center">
+							      		<input type="checkbox" value="" id="defaultCheck1">
 		  							</td>
-		  							<td>
-							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							<td class="table-center">
+							      		<input type="checkbox" value="" id="defaultCheck1">
 		  							</td>
-		  							<td>
-							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							<td class="table-center">
+							      		<input type="checkbox" value="" id="defaultCheck1">
 		  							</td>
-		  							<td>
+		  							<td class="table-center">
 		  								<button type="submit" class="btn btn-default" disabled>Update</button>
 		  							</td>
 						      	</form>
