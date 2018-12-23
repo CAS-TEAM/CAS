@@ -2,20 +2,15 @@
 
 session_start();
 
+include 'dbh.php';
+
+include 'top.php';
+
+
+date_default_timezone_set('Asia/Kolkata');
+
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CAS | Career Advancement Scheme</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
-<body>
 
 	<nav class="navbar bg-dark">
 		<p class="navbar-brand" style="color:white;width:100%;text-align:center">CAS</p>
@@ -30,7 +25,7 @@ session_start();
 				<br>
 
 
-				<table class="table">
+				<table class="table table-bordered" style="text-align: center;vertical-align: middle;">
 				  	<thead class="thead-dark">
 					    <tr>
 					      	<th scope="col">#</th>
@@ -43,27 +38,80 @@ session_start();
 					      	<th scope="col">Committee</th>
 					      	<th scope="col">Principal</th>
 					      	<th scope="col">Admin</th>
+					      	<th scope="col">Update</th>
 					    </tr>
 				  	</thead>
 				  	<tbody>
-					    <tr>
-					      	<th scope="row">1</th>
-					      	<td>Mark</td>
-					      	<td>Otto</td>
-					      	<td>@mdo</td>
-					    </tr>
-					    <tr>
-					      	<th scope="row">2</th>
-					      	<td>Jacob</td>
-					      	<td>Thornton</td>
-					      <td>@fat</td>
-					    </tr>
-					    <tr>
-					      	<th scope="row">3</th>
-					      	<td>Larry</td>
-					      	<td>the Bird</td>
-					      	<td>@twitter</td>
-					    </tr>
+				  		<?php
+
+				  		$sql="SELECT id, faculty_name, email, date_of_joining, department, hod, committee, principal, admin FROM faculty_table";
+				  		$result=mysqli_query($conn,$sql);
+
+				  		while($row=mysqli_fetch_assoc($result))
+				  		{
+
+				  			$id=$row['id'];
+				  			$faculty_name=$row['faculty_name'];
+				  			$email=$row['email'];
+				  			$date_of_joining=$row['date_of_joining'];
+				  			$department=$row['department'];
+				  			$hod=$row['hod'];
+				  			$committee=$row['committee'];
+				  			$principal=$row['principal'];
+				  			$admin=$row['admin'];
+
+					  		?>
+						    <tr>
+						      	<th scope="row"><?php echo $id; ?></th>
+						      	<td><?php echo $faculty_name; ?></td>
+						      	<td><?php echo $email; ?></td>
+						      	<td><?php echo $department; ?></td>
+						      	<td><?php echo $date_of_joining; ?></td>					      	
+
+						    <?php
+							$now = time();
+							$your_date = strtotime($date_of_joining);
+							$datediff = $now - $your_date;
+							$years = floor($datediff / (365*60*60*24));
+						    // echo $years;
+						    if($years>=5)
+						    {
+						    	?>
+						    	<td>Eligible</td>	
+						    	<?php
+						    }
+						    else
+						    {
+						    	?>
+						    	<td>Not Eligible</td>
+						    	<?php
+						    }
+
+						    ?>
+						      	<form>
+						      		<td>
+							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							</td>
+		  							<td>
+							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							</td>
+		  							<td>
+							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							</td>
+		  							<td>
+							      		<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+		  							</td>
+		  							<td>
+		  								<button type="submit" class="btn btn-default" disabled>Update</button>
+		  							</td>
+						      	</form>
+						      	
+						    </tr>						   
+						    
+						    <?php
+						}
+
+					    ?>
 				  </tbody>
 				</table>
 
