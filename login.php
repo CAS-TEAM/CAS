@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -24,50 +22,7 @@ session_start();
 	<div class="container">
 		
 		<div class="row justify-content-center">
-			<div class="col-md-12">
-				<h1 style="text-align:center">ADMIN PANEL</h1>
-
-				<br>
-
-
-				<table class="table">
-				  	<thead class="thead-dark">
-					    <tr>
-					      	<th scope="col">#</th>
-					      	<th scope="col">Faculty Name</th>
-					      	<th scope="col">Email</th>
-					      	<th scope="col">Department</th>
-					      	<th scope="col">Date of Joining</th>
-					      	<th scope="col">Eligibility for CAS</th>
-					      	<th scope="col">H.O.D.</th>
-					      	<th scope="col">Committee</th>
-					      	<th scope="col">Principal</th>
-					      	<th scope="col">Admin</th>
-					    </tr>
-				  	</thead>
-				  	<tbody>
-					    <tr>
-					      	<th scope="row">1</th>
-					      	<td>Mark</td>
-					      	<td>Otto</td>
-					      	<td>@mdo</td>
-					    </tr>
-					    <tr>
-					      	<th scope="row">2</th>
-					      	<td>Jacob</td>
-					      	<td>Thornton</td>
-					      <td>@fat</td>
-					    </tr>
-					    <tr>
-					      	<th scope="row">3</th>
-					      	<td>Larry</td>
-					      	<td>the Bird</td>
-					      	<td>@twitter</td>
-					    </tr>
-				  </tbody>
-				</table>
-
-
+			<div class="col-md-4">
 
 			</div>
 		</div>
