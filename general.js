@@ -1,57 +1,53 @@
 $(document).ready(function(){
-    // alert("hi");
 
-    $('.admin-table-checkbox').click(function() {
+	$('.admin-table-checkbox').click(function(){
 
-        // alert($(this).attr('id'));
+		var idstr = $(this).attr('id');
+		var facultyId=parseInt(idstr.match(/\d+$/)[0], 10);
 
-        var idstr = $(this).attr('id');
-        var facultyId=parseInt(idstr.match(/\d+$/)[0], 10);
+		document.getElementById('update'+facultyId).disabled = false;
+		$('#update'+facultyId).addClass('btn-primary');
 
-        document.getElementById('update'+facultyId).disabled = false;
-        $('#update'+facultyId).addClass('btn-primary');
-    });
+	});
 
 });
 
 $(document).ready(function(){
 
-    // $(".setupPayPalInfo").submit(function(e){ 
-    //     e.preventDefault();        
-    //     //document.getElementById("setupPayPalInfoButton").disabled = true;
-    //     //$(".setupPayPalInfoButton").addClass('disabled');
-    //     var formData = new FormData(this);  
+	$(".update-rights-form").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
 
-    //     $.ajax
-    //     ({
-    //         type: 'POST',
-    //         url: 'setupchannelsystem.php',
-    //         data:formData,
-    //         //dataType: 'text',  // what to expect back from the PHP script, if anything
-    //         cache: false,
-    //         contentType: false,
-    //         processData: false,                
-    //         success: function (response) 
-    //         {
-    //             //alert("ikde ala re!");
-    //             //alert(response);   
-                
-    //             //var data=JSON.parse(response);
-    //             //console.log(data.transactions[0].amount.total);
-    //             //alert("Payment of $"+data.transactions[0].amount.total+" is successful");
-    //             //alert(data['amount']['total']);
-    //             //$(".setupPayPalInfoButton").removeClass('disabled');
-    //             if(response.trim()=="success")
-    //             {           
-    //                 window.location.href="creatorstudio.php";
-    //             }                    
-                
-    //         },                
-    //         error: function(xhr, status, error) {
-    //             alert(xhr.responseText);
-    //         }              
-    //     });
-        
-    //     return false;
-    // })
+		//disable update button once again
+		var idstr = $(this).attr('id');
+		var facultyId=parseInt(idstr.match(/\d+$/)[0], 10);
+		// alert(facultyId);
+		document.getElementById('update'+facultyId).disabled = true;
+		$('#update'+facultyId).removeClass('btn-primary');
+
+		$.ajax
+		({
+			type: 'POST',
+			url: 'admin-panel-system.php',
+			data:formData,
+			//dataType: 'text',  // what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,                
+			success: function (response) 
+			{
+				// alert(response);
+
+				if(response.trim()=="success")
+				{           
+					$('#myModal').modal('show');
+				}      
+			},                
+			error: function(xhr, status, error) {
+				alert(xhr.responseText);
+			}              
+		});
+		
+		return false;
+	})
 });
