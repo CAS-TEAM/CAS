@@ -1,3 +1,27 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #343a40 !important;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: new time roman;
+}
+
+.index-h1{
+	font-size: 40px;
+	color: #d9d9d9;
+	margin-top: 250px;
+}
+
+.index-text{
+	font-size: 22px;
+	color: #d9d9d9;
+}
+
 a {
 	text-decoration: none;
 }
@@ -9,4 +33,117 @@ td.table-center{
 
 .admin-table{
 	overflow-x:auto;
+}
+
+h3{
+	font-size: 25px;
+	color: #d9d9d9;
+}
+
+.glyphicon-pencil{
+	font-size: 35px;
+	color: #d9d9d9;
+	float: right;
+	margin-top: 20px;
+}
+
+.regist-form-div{
+	margin-top: 80px;
+	box-shadow: -1px 1px 60px 10px black;
+    background: rgba(0,0,0,0.1);
+}
+
+.label{
+	font-weight: normal;
+	margin-top: 15px;
+	color: #d9d9d9;
+	font-size: 19px;
+}
+
+.form-control{
+	background: transparent;
+	border-radius: 0px;
+	border: 0px;
+	border-bottom: 1px solid #a6a6a6;
+	font-size: 18px;
+	margin-top: 15px;
+	height:40px;
+	color: #a6a6a6;
+}
+
+.custom-control-label{
+
+	color: #d9d9d9;
+	padding: 0px;
+	margin-left: 0px;
+
+}
+
+input[type="checkbox"]
+{
+	margin-top: 15px;
+	width: 15px;
+	height: 15px; 
+}
+
+.btn-info{
+	margin-top: 20px;
+	font-size: 20px;
+	width:  100px;
+	margin-left: 170px;
+	margin-bottom: 20px;
+	align-content: center;
+}
+
+.btn-warning{
+	margin-top: 20px;
+	font-size: 18px;
+	width: 100px;
+	margin-left: 80px;
+	margin-bottom: 20px;
+}
+
+.signin-link{
+	margin-top: 20px: 
+	margin-left: 120px;
+    color: #d9d9d9;
+	border: 1px solid #d9d9d9;
+}
+
+.signin-header{
+	font-size: 25px;
+}
+
+.remember{
+	color: grey;
+}
+
+.signin-btnn{
+	width: 100px;
+	/*margin-left: 145px; */
+	display: block;
+	margin: 0 auto;
+}
+
+.user-img img{
+	height: 150px;
+	]width: 120px;
+	border-radius: 60px;  
+	background-color: #343a40;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width:120px;
+}
+
+div.user-img{
+	margin-top: -60px;
+	margin-bottom: 45px;
+	/*margin-left: 145px;*/
+	
+}
+
+.google-i{
+	height: 27px;
+	width: 27px;
 }
