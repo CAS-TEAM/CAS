@@ -27,7 +27,7 @@ if(mysqli_num_rows($result)==1)
        $_SESSION['id']=$id;
 	   $_SESSION['faculty_name']=$faculty_name;
 
-	header("LOCATION: userprofile.php");
+		header("LOCATION: userprofile.php");
     } 
     else
     {

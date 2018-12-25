@@ -4,12 +4,12 @@
 	padding: 0px;
 }
 
-body{
+/*body{
 	background-color: #343a40 !important;
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: new time roman;
-}
+}*/
 
 .index-h1{
 	font-size: 40px;
@@ -127,7 +127,7 @@ input[type="checkbox"]
 
 .user-img img{
 	height: 150px;
-	]width: 120px;
+	width: 120px;
 	border-radius: 60px;  
 	background-color: #343a40;
 	margin-left: auto;
@@ -146,4 +146,14 @@ div.user-img{
 .google-i{
 	height: 27px;
 	width: 27px;
+}
+
+/* USERPROFILE CSS */
+.userprofile-card{
+	margin-top:20px;
+}
+
+.userprofile-form-btn{
+	margin-top: 10px;
+	width:100%;
 }
