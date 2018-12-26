@@ -24,8 +24,12 @@ if(mysqli_num_rows($result)==1)
 
 	if(password_verify($password, $password1)) 
 	{
-       $_SESSION['id']=$id;
-	   $_SESSION['faculty_name']=$faculty_name;
+       	$_SESSION['id']=$id;
+	   	$_SESSION['faculty_name']=$faculty_name;
+
+	   if (!file_exists('users/'.$email)) {
+		    mkdir('users/'.$email, 0777, true);
+		}
 
 		header("LOCATION: userprofile.php");
     } 

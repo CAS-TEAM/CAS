@@ -64,7 +64,9 @@ if($password==$cpassword)
 
 		$_SESSION['id']=$conn->insert_id;
 
-		// $_SESSION['name']=$name;
+		$_SESSION['faculty_name']=$faculty_name;
+
+		mkdir('users/'.$email, 0777, true);
 
 		header("LOCATION: adminpanel.php");
 	}

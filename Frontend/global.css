@@ -2,6 +2,8 @@
 *{
 	margin: 0px;
 	padding: 0px;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
 }
 
 /*body{
@@ -60,7 +62,7 @@ h3{
 	font-size: 19px;
 }
 
-.form-control{
+/*.form-control{
 	background: transparent;
 	border-radius: 0px;
 	border: 0px;
@@ -69,7 +71,7 @@ h3{
 	margin-top: 15px;
 	height:40px;
 	color: #a6a6a6;
-}
+}*/
 
 .custom-control-label{
 

@@ -15,8 +15,13 @@
 	<!-- global.css import -->
 	<link rel="stylesheet" type="text/css" href="Frontend/global.css">
 
+
 	<!-- general.js import -->
 	<script type="text/javascript" src="general.js"></script>
+
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
 </head>
 <body>
 	
