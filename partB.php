@@ -651,6 +651,282 @@ include 'top.php';
 		</div>
 		<hr style="border: 0.5px solid #c8c8c8">
 
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic4">
+							<thead>
+
+							<!-- <col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 0px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;"> -->
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD/<br>Type of Activity</th>
+								<th class="text-center"></th>
+							</tr>
+						</thead>
+							 
+							<tbody>
+								<tr id='addr50'>
+									<td>1</td>
+									<td>
+									<input type="text" name='ha' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='hb' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr51'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row4" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row4' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+		</div><br><br><br>
+			<div class="row">
+			<div class="col-md-12 text-left">
+				<p>For HOD/Dean/Vice Principal 40 PI and for Associate HOD/NBA and NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
+			</div>
+		</div><br>
+
+		<div class="row">
+			<div class="col-md-12 text-left">
+				<p>Activities</p>
+			</div>
+		</div>
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic5">
+							<thead>
+
+							<!-- <col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 0px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;"> -->
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Extension, Co-Curricular and Field based activities / internships in college<br> Type of Activity</th>
+								<th class="text-center"></th>
+							</tr>
+						</thead>
+							 
+							<tbody>
+								<tr id='addr60'>
+									<td>1</td>
+									<td>
+									<input type="text" name='ea' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='eb' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr61'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row5" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row5' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+		</div><br><br><br>
+			<div class="row">
+			<div class="col-md-12 text-left">
+				<p>5 Marks for each compliance. Max.20</p>
+			</div>
+		</div>
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic6">
+							<thead>
+
+							<!-- <col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 0px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;"> -->
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
+								<th class="text-center"></th>
+							</tr>
+						</thead>
+							 
+							<tbody>
+								<tr id='addr70'>
+									<td>1</td>
+									<td>
+									<input type="text" name='eca' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='ecb' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr71'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row6" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row6' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+		</div><br><br><br>
+			<div class="row">
+			<div class="col-md-12 text-left">
+				<p>5 Marks for each compliance. Max.20</p>
+			</div>
+		</div>
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic7">
+							<thead>
+
+							<!-- <col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 0px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;"> -->
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">College administration/organization member/committee member/NBA/NAAC of college: <br> Type of Activity</th>
+								<th class="text-center"></th>
+							</tr>
+						</thead>
+							 
+							<tbody>
+								<tr id='addr80'>
+									<td>1</td>
+									<td>
+									<input type="text" name='ca' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='cb' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr81'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row7" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row7' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+		</div><br><br><br>
+			<div class="row">
+			<div class="col-md-12 text-left">
+				<p>5 Marks for each compliance. Max.20</p>
+			</div>
+		</div>
+		<hr style="border: 0.5px solid #c8c8c8"><br>
+
+		<div class="row">
+			<div class="col-md-12">
+				<p><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
+			</div>
+		</div>
+		<hr style="border: 0.5px solid #c8c8c8">
+
+		<div class="container" style="border: 1px solid #c8c8c8"><br>
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>Title with page no.</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>Name of peer review Journals (not online journals)</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<p>ISSN/ISBN No.</p>
+				</div>
+
+				<div class="col-md-6 text-right">
+					<p>Impact factor</p>
+				</div>
+			</div>		
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-2 text-left">
+					<p>Whether you are main author</p>
+				</div>
+		    	<div class="col-md-3 text-left">
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-3 text-left">
+					<p>No. of co-author</p>
+				</div>
+					<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-1 text-left">
+					<p>PI=</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>20 marks for peer review journal first author and 10 marks for second author</p>
+				</div>
+			</div>
+
+			
+			
+		</div>
+
+
 	</div>
 
 
@@ -712,6 +988,89 @@ include 'top.php';
     	 if(k>1){
 		 $("#addr3"+(k-1)).html('');
 		 k--;
+		 }
+	});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var l=1;
+     $("#add_row4").click(function(){
+      $('#addr5'+l).html("<td>"+ (l+1) +"</td><td><input name='ha"+l+"' type='text' class='form-control input-md'  /> </td><td><input name='hb"+l+"' type='text' class='form-control input-md'  />");
+
+      $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
+      l++; 
+  	});
+     $("#delete_row4").click(function(){
+    	 if(l>1){
+		 $("#addr5"+(l-1)).html('');
+		 l--;
+		 }
+	});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var m=1;
+     $("#add_row5").click(function(){
+      $('#addr6'+m).html("<td>"+ (m+1) +"</td><td><input name='ea"+m+"' type='text' class='form-control input-md'  /> </td><td><input name='eb"+m+"' type='text' class='form-control input-md'  />");
+
+      $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
+      m++; 
+  	});
+     $("#delete_row5").click(function(){
+    	 if(m>1){
+		 $("#addr6"+(m-1)).html('');
+		 m--;
+		 }
+	});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var n=1;
+     $("#add_row6").click(function(){
+      $('#addr7'+n).html("<td>"+ (n+1) +"</td><td><input name='eca"+n+"' type='text' class='form-control input-md'  /> </td><td><input name='ecb"+n+"' type='text' class='form-control input-md'  />");
+
+      $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
+      n++; 
+  	});
+     $("#delete_row6").click(function(){
+    	 if(n>1){
+		 $("#addr7"+(n-1)).html('');
+		 n--;
+		 }
+	});
+	});
+
+    </script>
+
+     <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var o=1;
+     $("#add_row7").click(function(){
+      $('#addr8'+o).html("<td>"+ (o+1) +"</td><td><input name='ca"+o+"' type='text' class='form-control input-md'  /> </td><td><input name='cb"+o+"' type='text' class='form-control input-md'  />");
+
+      $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
+      o++; 
+  	});
+     $("#delete_row7").click(function(){
+    	 if(o>1){
+		 $("#addr8"+(o-1)).html('');
+		 o--;
 		 }
 	});
 	});

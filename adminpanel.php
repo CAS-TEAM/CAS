@@ -12,31 +12,31 @@ date_default_timezone_set('Asia/Kolkata');
 
 	<nav class="navbar bg-dark">
 		<p class="navbar-brand" style="color:white;width:100%;text-align:center">CAS</p>
-	</nav>
+	</nav><br>
 
 	<div class="container">
 		
 		<div class="row justify-content-center">
 			<div class="col-md-12">
-				<h1 style="text-align:center">ADMIN PANEL</h1>
+				<h1 style="text-align:center;font-size: 30px">ADMIN PANEL</h1>
 
 				<br>
 
 				<div class="admin-table">
-				<table class="table table-bordered">
-				  	<thead class="thead-dark">
+				<table class="table table-bordered" style="background-color: white">
+				  	<thead style="color: white">
 					    <tr>
-					      	<th scope="col">#</th>
-					      	<th scope="col">Faculty Name</th>
-					      	<th scope="col">Email</th>
-					      	<th scope="col">Department</th>
-					      	<th scope="col">Date of Joining</th>
-					      	<th scope="col">Eligibility for CAS</th>
-					      	<th scope="col">H.O.D.</th>
-					      	<th scope="col">Committee</th>
-					      	<th scope="col">Principal</th>
-					      	<th scope="col">Admin</th>
-					      	<th scope="col">Update</th>
+					      	<th scope="col" style="background-color: #343a40">#</th>
+					      	<th scope="col" style="background-color: #343a40">Faculty Name</th>
+					      	<th scope="col" style="background-color: #343a40">Email</th>
+					      	<th scope="col" style="background-color: #343a40">Department</th>
+					      	<th scope="col" style="background-color: #343a40">Date of Joining</th>
+					      	<th scope="col" style="background-color: #343a40">Eligibility for CAS</th>
+					      	<th scope="col" style="background-color: #343a40">H.O.D.</th>
+					      	<th scope="col" style="background-color: #343a40">Committee</th>
+					      	<th scope="col" style="background-color: #343a40">Principal</th>
+					      	<th scope="col" style="background-color: #343a40">Admin</th>
+					      	<th scope="col" style="background-color: #343a40">Update</th>
 					    </tr>
 				  	</thead>
 				  	<tbody>
