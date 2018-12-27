@@ -864,23 +864,51 @@ include 'top.php';
 		<div class="container" style="border: 1px solid #c8c8c8"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p>Title with page no.</p>
+		    		<div class="form-group row">
+						<div class="col-md-3">
+							<p>Title with page no.</p>			
+						</div>
+						<div class="col-md-4">
+							<input type="text" name='pptitle' class="form-control"/>
+						</div>
+					</div>
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p>Name of peer review Journals (not online journals)</p>
+					<div class="form-group row">
+						<div class="col-md-6">
+							<p>Name of peer review Journals (not online journals)</p>	
+						</div>
+						<div class="col-md-4">
+							<input type="text" name='ppnpr' class="form-control"/>
+						</div>
+					</div>					
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 text-left">
-					<p>ISSN/ISBN No.</p>
+					<div class="form-group row">
+						<div class="col-md-4">
+							<p>ISSN/ISBN No.</p>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name='ppisbn' class="form-control"/>
+						</div>
+					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
-					<p>Impact factor</p>
+					<div class="form-group row">
+						<div class="col-md-4">
+							<p>Impact factor</p>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name='ppisbn' class="form-control"/>
+						</div>
+					</div>						
 				</div>
 			</div>		
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -904,14 +932,28 @@ include 'top.php';
 					</div>
 				</div>
 				<div class="col-md-3 text-left">
-					<p>No. of co-author</p>
+					<div class="form-group row">
+						<div class="col-md-8">
+							<p>No. of co-author</p>
+						</div>
+						<div class="col-md-4">
+							<input type="text" name='ppnca' class="form-control"/>
+						</div>
+					</div>
 				</div>
 					<div class="col-md-1">
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
 				<div class="col-md-1 text-left">
-					<p>PI=</p>
+					<div class="form-group row">
+						<div class="col-md-6">
+							<p>PI=</p>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name='pppi' class="form-control"/>
+						</div>
+					</div>
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
