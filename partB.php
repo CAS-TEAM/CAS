@@ -921,10 +921,71 @@ include 'top.php';
 					<p>20 marks for peer review journal first author and 10 marks for second author</p>
 				</div>
 			</div>
+		</div><br>
 
-			
-			
+		<div class="container" style="border: 1px solid #c8c8c8"><br>
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>Title with page no.</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>Name of peer review Journals (not online journals)</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<p>ISSN/ISBN No.</p>
+				</div>
+
+				<div class="col-md-6 text-right">
+					<p>Impact factor</p>
+				</div>
+			</div>		
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-2 text-left">
+					<p>Whether you are main author</p>
+				</div>
+		    	<div class="col-md-3 text-left">
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-3 text-left">
+					<p>No. of co-author</p>
+				</div>
+					<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-1 text-left">
+					<p>PI=</p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>20 marks for peer review journal first author and 10 marks for second author</p>
+				</div>
+			</div>
 		</div>
+
+
 
 
 	</div>
