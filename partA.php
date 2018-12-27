@@ -11,7 +11,7 @@ include 'top.php';
    
   
     <div class="container parta">
-    	<header class="heading"><b>Part A: GENERAL INFORMATION</b></header>
+    	<header class="heading"><b>'Part A: GENERAL INFORMATION'</b></header>
     	<hr style="border: 0.5px solid grey"><br>
     	<div class="row">
     		<div class="col-md-12">
@@ -194,7 +194,7 @@ include 'top.php';
 			<div class="col-md-6">
 	    		<div class="form-group row">
 					<div class="col-3">
-	    				<label for="example-text-input" class="col-form-label">Present basic and grade pay</label>
+	    				<label for="example-text-input" class="col-form-label text-left">Present basic and grade pay</label>
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">

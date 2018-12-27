@@ -33,35 +33,35 @@ include 'top.php';
 				<div class="row">
 					<label class="label col-md-2 control-label">Name</label>
 					<div class="col-md-10">
-						<input type="text" class="form-control" name="faculty_name" placeholder="Full Name" required>
+						<input type="text" class="form-control register-form" name="faculty_name" placeholder="Full Name" required>
 					</div>
 				</div>
 
 				<div class="row">
 					<label class="label col-md-2 control-label">Email</label>
 					<div class="col-md-10">
-						<input type="email" class="form-control" name="email" placeholder="E-mail" required>
+						<input type="email" class="form-control register-form" name="email" placeholder="E-mail" required>
 					</div>
 				</div>
 
 				<div class="row">
 					<label class="label col-md-2 control-label">Password</label>
 					<div class="col-md-10">
-						<input type="password" class="form-control" name="password" placeholder="Password" required>
+						<input type="password" class="form-control register-form" name="password" placeholder="Password" required>
 					</div>
 				</div>
 
 				<div class="row">
 					<label class="label col-md-2 control-label">Confirm Password</label>
 					<div class="col-md-10">
-						<input type="password" class="form-control" name="cpassword" placeholder="Retype-Password" required>
+						<input type="password" class="form-control register-form" name="cpassword" placeholder="Retype-Password" required>
 					</div>
 				</div>
 				
 				<div class="row">
 					<label class="label col-md-2 control-label">Date of Joining</label>
 					<div class="col-md-10">
-						<input type="date" class="form-control" name="date_of_joining" placeholder="" required>
+						<input type="date" class="form-control register-form" name="date_of_joining" placeholder="" required>
 					</div>
 				</div>
 

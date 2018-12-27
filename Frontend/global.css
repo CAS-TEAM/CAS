@@ -60,7 +60,7 @@ h3{
 	font-size: 19px;
 }
 
-.form-control{
+.register-form{
 	background: transparent;
 	border-radius: 0px;
 	border: 0px;
@@ -127,7 +127,7 @@ input[type="checkbox"]
 
 .user-img img{
 	height: 150px;
-	]width: 120px;
+	width: 120px;
 	border-radius: 60px;  
 	background-color: #343a40;
 	margin-left: auto;
@@ -147,7 +147,6 @@ div.user-img{
 	height: 27px;
 	width: 27px;
 }
-
 
 /*partA*/
 
@@ -188,5 +187,31 @@ div.user-img{
 	margin: 6px;
 	padding: 10px;
 	width:200px;
+}
 
+/* USERPROFILE CSS */
+.userprofile-card{
+	margin-top:20px;
+}
+
+.userprofile-form-btn{
+	margin-top: 10px;
+	width:100%;
+}
+
+/*partB*/
+
+.partb{
+	font-family:Roboto,sans-serif;
+	background-color: white;
+    border-style: 1px solid grey;
+    margin: 0 auto;
+    text-align: center;
+    /*opacity: 0.8;*/
+    margin-top: 67px;
+    /*box-shadow: 2px 5px 5px 0px #eee;*/
+    max-width: 910px;
+    padding-top: 10px;
+    height: auto;
+    margin-top: 20px;
 }
