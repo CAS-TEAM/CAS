@@ -1,13 +1,24 @@
 <?php
 
+session_start();
+
+if(isset($_SESSION['id']))
+{
+	header("LOCATION: userprofile.php");
+}
+else
+{
+
 include 'top.php';
 
 ?>
 
-	<nav class="navbar bg-dark">
-		<p class="navbar-brand" style="color: #a6a6a6;text-align:left">CAS | CAREER ADVANCEMENT SCHEME</p>
-
-		<a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a>
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.php">CAS</a>
+		<div class="navbar-nav ml-auto">
+			<a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a>
+		</div>
+		
 	</nav>
 
  	
@@ -132,11 +143,11 @@ include 'top.php';
 
 				<!-- <a href="login.php">Log-In</a>
 				<a href="signup.php">Sign-Up</a>
-				<a href="adminpanel.php">Admin Panel</a> -->
+				<a href="adminpanel.php">Admin Panel</a> 
 
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 	<?php 
 
@@ -194,3 +205,9 @@ include 'top.php';
 
 </body>
 </html>
+
+<?php
+
+}
+
+?>
