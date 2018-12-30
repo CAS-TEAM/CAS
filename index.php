@@ -131,7 +131,7 @@ include 'top.php';
 					</div>
 				</div>
 
-				<input type="submit" name="submit" value="Sign Up" class="btn btn-info" />
+				<input type="submit" name="submit" value="Sign Up" class="btn btn-index-info" />
 				<!-- <a href="#"><div class="btn btn-warning">cancel</div></a> -->
 
 			</form>
