@@ -23,29 +23,14 @@ include 'top.php';
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>ODD SEMESTER</p>
-			</div>
-		</div>
-
 		<div class="container">
     		<div class="row clearfix">
 			<div class="col-md-12 column">
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic1">
 					<thead>
-
-						<!-- <col style="width: 40px;">
-				     	<col style="width: 380px;">
-				     	<col style="width: 40px;">
-				     	<col style="width: 10px;">
-				     	<col style="width: 10px;">
-				     	<col style="width: 0px;">
-				     	<col style="width: 40px;">
-				     	<col style="width: 380px;">
-				     	<col style="width: 40px;"> -->
-					     	
+						<th colspan="9">ODD SEMESTER</th>
+					</thead>
 						<tr>
 							<th class="text-center">Sr.No</th>
 							<th class="text-center">Course</th>
@@ -57,7 +42,6 @@ include 'top.php';
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
 						</tr>
-					</thead>
 					<tbody>
 						<tr id='addr10'>
 							<td>1</td>
@@ -97,28 +81,14 @@ include 'top.php';
 		</div><br><br><br>
 		<!-- <hr style="border: 0.5px solid grey"> -->
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>EVEN SEMESTER</p>
-			</div>
-		</div>
-
 		<div class="container">
     		<div class="row clearfix">
 			<div class="col-md-12 column">
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic2">
 					<thead>
-
-						<!-- <col style="width: 40px;">
-				     	<col style="width: 380px;">
-				     	<col style="width: 40px;">
-				     	<col style="width: 10px;">
-				     	<col style="width: 10px;">
-				     	<col style="width: 0px;">
-				     	<col style="width: 40px;">
-				     	<col style="width: 380px;">
-				     	<col style="width: 40px;"> -->
+						<th colspan="9">EVEN SEMESTER</th>
+					</thead>
 					     	
 						<tr>
 							<th class="text-center">Sr.No</th>
@@ -131,7 +101,6 @@ include 'top.php';
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
 						</tr>
-					</thead>
 					<tbody>
 						<tr id='addr20'>
 							<td>1</td>
@@ -173,7 +142,7 @@ include 'top.php';
 		<div class="row">
 			<div class="col">
 				<div class="col-md-12 text-left" style="border: 1px solid #b7b7b7"><br>
-					<p style="font-size: 18px">Classes Taken (Max.40for 90%-100% performance, and proportionate score upto 75% performance below which no score may be given. If (AVC)*100 is 90%-100% then PI 1=40, If (AVC)*100>75% then PI 1=((AVC)*40), If (AVC)*100 < 75 then PI 1=0)</p>
+					<p style="font-size: 16px">Classes Taken (Max.40for 90%-100% performance, and proportionate score upto 75% performance below which no score may be given. If (AVC)*100 is 90%-100% then PI 1=40, If (AVC)*100>75% then PI 1=((AVC)*40), If (AVC)*100 < 75 then PI 1=0)</p>
 				</div>
 			</div>
 		</div>
@@ -184,36 +153,20 @@ include 'top.php';
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<p>ODD SEMESTER</p>
-			</div>
-		</div>
-
 		<div class="container">
 	    	<div class="row clearfix">
 				<div class="col-md-12 column">
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
-						     	
+							<th colspan="4">ODD SEMESTER</th>
+						</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Type of Examination Duties</th>
 								<th class="text-center">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
 								<th class="text-center">Extent to which carried out (%) (Max.100%) (A)</th>
 							</tr>
-						</thead>
 						<tbody>
 							<tr id='addr10'>
 								<td>1</td>
@@ -350,13 +303,7 @@ include 'top.php';
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				<p>EVEN SEMESTER</p>
-			</div>
-		</div>
+		</div><br>
 
 		<div class="container">
 			<div class="row clearfix">
@@ -364,24 +311,14 @@ include 'top.php';
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
-						     	
+							<th colspan="4">EVEN SEMESTER</th>
+						</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Type of Examination Duties</th>
 								<th class="text-center">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
 								<th class="text-center">Extent to which carried out (%) (Max.100%) (A)</th>
 							</tr>
-						</thead>
 						<tbody>
 							<tr id='addr10'>
 								<td>1</td>
@@ -519,20 +456,16 @@ include 'top.php';
 				</div>
 			</div>	
 		</div>
-		<hr style="border: 0.5px solid #c8c8c8">
-
-		<div class="row">
-			<div class="col-md-12 text-left">
-				<p>Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</p>
-			</div>
-		</div>
+		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container">
     		<div class="row clearfix">
 				<div class="col-md-12 column">
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic3">
-							
+							<thead>
+								<th colspan="3">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
+							</thead>
 
 								<!-- <col style="width: 40px;">
 						     	<col style="width: 380px;">
@@ -564,19 +497,16 @@ include 'top.php';
 			<a id="add_row3" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row3' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 		</div><br><br><br>
-		<hr style="border: 0.5px solid #c8c8c8">
-
-		<div class="row">
-			<div class="col-md-12 text-left">
-				<p>Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</p>
-			</div>
-		</div>
+		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container">
 			<div class="row clearfix">
 				<div class="col-md-12 column text-left">
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
+						<thead>
+							<th colspan="3">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+						</thead>
 						
 						<tbody>
 							<tr id='addr40'>
@@ -628,8 +558,7 @@ include 'top.php';
 								<input type="text" name='deseps' class="form-control"/>
 								</td>
 		                    </tr>
-		                   
-						</tbody>
+		                </tbody>
 					</table>
 					</div>
 				</div>
@@ -642,14 +571,7 @@ include 'top.php';
 				<p><b>Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></p>
 			</div>
 		</div>
-		<hr style="border: 0.5px solid #c8c8c8">
-
-		<div class="row">
-			<div class="col-md-12 text-left">
-				<p>Administrative Post</p>
-			</div>
-		</div>
-		<hr style="border: 0.5px solid #c8c8c8">
+		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container">
     		<div class="row clearfix">
@@ -657,7 +579,9 @@ include 'top.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic4">
 							<thead>
-
+								<th colspan="3">Administrative Post</th>
+							</thead>
+							
 							<!-- <col style="width: 40px;">
 					     	<col style="width: 380px;">
 					     	<col style="width: 40px;">
@@ -673,7 +597,7 @@ include 'top.php';
 								<th class="text-center">Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD/<br>Type of Activity</th>
 								<th class="text-center"></th>
 							</tr>
-						</thead>
+						
 							 
 							<tbody>
 								<tr id='addr50'>
@@ -693,18 +617,15 @@ include 'top.php';
 			</div>
 			<a id="add_row4" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row4' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
-		</div><br><br><br>
+		
 			<div class="row">
-			<div class="col-md-12 text-left">
-				<p>For HOD/Dean/Vice Principal 40 PI and for Associate HOD/NBA and NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
+				<div class="col-md-12 text-center">
+					<p>For HOD/Dean/Vice Principal 40 PI and for Associate HOD/NBA and NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
+				</div>
 			</div>
-		</div><br>
+		</div><br><br>
 
-		<div class="row">
-			<div class="col-md-12 text-left">
-				<p>Activities</p>
-			</div>
-		</div>
+		
 
 		<div class="container">
     		<div class="row clearfix">
@@ -712,6 +633,8 @@ include 'top.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic5">
 							<thead>
+								<th colspan="3">Activities</th>
+							</thead>
 
 							<!-- <col style="width: 40px;">
 					     	<col style="width: 380px;">
@@ -728,7 +651,6 @@ include 'top.php';
 								<th class="text-center">Extension, Co-Curricular and Field based activities / internships in college<br> Type of Activity</th>
 								<th class="text-center"></th>
 							</tr>
-						</thead>
 							 
 							<tbody>
 								<tr id='addr60'>
@@ -748,12 +670,13 @@ include 'top.php';
 			</div>
 			<a id="add_row5" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row5' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
-		</div><br><br><br>
 			<div class="row">
-			<div class="col-md-12 text-left">
-				<p>5 Marks for each compliance. Max.20</p>
+				<div class="col-md-12 text-center">
+					<p>5 Marks for each compliance. Max.20</p>
+				</div>
 			</div>
-		</div>
+		</div><br><br><br>
+		
 
 		<div class="container">
     		<div class="row clearfix">
@@ -797,12 +720,13 @@ include 'top.php';
 			</div>
 			<a id="add_row6" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row6' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
-		</div><br><br><br>
 			<div class="row">
-			<div class="col-md-12 text-left">
-				<p>5 Marks for each compliance. Max.20</p>
-			</div>
-		</div>
+				<div class="col-md-12 text-center">
+					<p>5 Marks for each compliance. Max.20</p>
+				</div>
+			</div>		
+		</div><br><br><br>
+			
 
 		<div class="container">
     		<div class="row clearfix">
@@ -846,12 +770,13 @@ include 'top.php';
 			</div>
 			<a id="add_row7" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row7' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
-		</div><br><br><br>
 			<div class="row">
-			<div class="col-md-12 text-left">
-				<p>5 Marks for each compliance. Max.20</p>
+				<div class="col-md-12 text-center">
+					<p>5 Marks for each compliance. Max.20</p>
+				</div>
 			</div>
-		</div>
+		</div><br><br>
+			
 		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="row">
@@ -859,18 +784,14 @@ include 'top.php';
 				<p><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
 			</div>
 		</div>
-		<hr style="border: 0.5px solid #c8c8c8">
+		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container" style="border: 1px solid #c8c8c8"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
-		    		<div class="form-group row">
-						<div class="col-md-3">
-							<p>Title with page no.</p>			
-						</div>
-						<div class="col-md-4">
-							<input type="text" name='pptitle' class="form-control"/>
-						</div>
+		    		<div class="form-inline my-2">
+		    			<label class="mr-sm-2">Title with page no.</label>
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
 					</div>
 				</div>
 			</div>
@@ -878,36 +799,104 @@ include 'top.php';
 
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<div class="form-group row">
-						<div class="col-md-6">
-							<p>Name of peer review Journals (not online journals)</p>	
-						</div>
-						<div class="col-md-4">
-							<input type="text" name='ppnpr' class="form-control"/>
-						</div>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Name of peer review Journals (not online journals)</label>
+						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
 					</div>					
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 text-left">
-					<div class="form-group row">
-						<div class="col-md-4">
-							<p>ISSN/ISBN No.</p>
-						</div>
-						<div class="col-md-6">
-							<input type="text" name='ppisbn' class="form-control"/>
-						</div>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">ISSN/ISBN No.</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
-					<div class="form-group row">
-						<div class="col-md-4">
-							<p>Impact factor</p>
-						</div>
-						<div class="col-md-6">
-							<input type="text" name='ppisbn' class="form-control"/>
-						</div>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Impact factor</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>						
+				</div>
+			</div>		
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-2 text-left">
+					<label>Whether you are main author</label>
+				</div>
+		    	<div class="col-md-3 text-left">
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-3 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">No. of co-author</label>
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+					<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-2 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">PI=</label>
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>20 marks for peer review journal first author and 10 marks for second author</p>
+				</div>
+			</div>
+		</div><br><br>
+
+		<div class="container" style="border: 1px solid #c8c8c8"><br>
+			<div class="row">
+				<div class="col-md-12 text-left">
+		    		<div class="form-inline my-2">
+		    			<label class="mr-sm-2">Title with page no.</label>
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Name of peer review Journals (not online journals)</label>
+						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">ISSN/ISBN No.</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+
+				<div class="col-md-6 text-right">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Impact factor</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
 					</div>						
 				</div>
 			</div>		
@@ -932,27 +921,19 @@ include 'top.php';
 					</div>
 				</div>
 				<div class="col-md-3 text-left">
-					<div class="form-group row">
-						<div class="col-md-8">
-							<p>No. of co-author</p>
-						</div>
-						<div class="col-md-4">
-							<input type="text" name='ppnca' class="form-control"/>
-						</div>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">No. of co-author</label>
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
-				<div class="col-md-1 text-left">
-					<div class="form-group row">
-						<div class="col-md-6">
-							<p>PI=</p>
-						</div>
-						<div class="col-md-6">
-							<input type="text" name='pppi' class="form-control"/>
-						</div>
+				<div class="col-md-2 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">PI=</label>
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
 					</div>
 				</div>
 			</div>
@@ -963,28 +944,48 @@ include 'top.php';
 					<p>20 marks for peer review journal first author and 10 marks for second author</p>
 				</div>
 			</div>
-		</div><br>
+		</div><br><br>
 
+	
 		<div class="container" style="border: 1px solid #c8c8c8"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p>Title with page no.</p>
+					<p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p>
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p>Name of peer review Journals (not online journals)</p>
+		    		<div class="form-inline my-2">
+		    			<label class="mr-sm-2">Title with page no.</label>
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Name of International Conference held Abroad</label>
+						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+					</div>					
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6 text-left">
-					<p>ISSN/ISBN No.</p>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">ISSN/ISBN No.</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
-					<p>Impact factor</p>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Impact factor</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>						
 				</div>
 			</div>		
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -1008,28 +1009,709 @@ include 'top.php';
 					</div>
 				</div>
 				<div class="col-md-3 text-left">
-					<p>No. of co-author</p>
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">No. of co-author</label>
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+					</div>
 				</div>
 					<div class="col-md-1">
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
-				<div class="col-md-1 text-left">
-					<p>PI=</p>
+				<div class="col-md-2 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">PI=</label>
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+					</div>
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p>20 marks for peer review journal first author and 10 marks for second author</p>
+					<p>15 marks for International conference for first author and 08 marks for second author</p>
 				</div>
 			</div>
+		</div><br><br>
+
+		<div class="container" style="border: 1px solid #c8c8c8"><br>
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+		    		<div class="form-inline my-2">
+		    			<label class="mr-sm-2">Title with page no.</label>
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Name of International Conference held in India</label>
+						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">ISSN/ISBN No.</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+
+				<div class="col-md-6 text-right">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Impact factor</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>						
+				</div>
+			</div>		
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-2 text-left">
+					<p>Whether you are main author</p>
+				</div>
+		    	<div class="col-md-3 text-left">
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-3 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">No. of co-author</label>
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+					<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-2 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">PI=</label>
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>10 marks for International conference for first author and 05 marks for second author</p>
+				</div>
+			</div>
+		</div><br><br>
+
+
+		<div class="container" style="border: 1px solid #c8c8c8"><br>
+			<div class="row">
+				<div class="col-md-12 text-left">
+		    		<div class="form-inline my-2">
+		    			<label class="mr-sm-2">Title with page no.</label>
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Name of International Conference held in India</label>
+						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">ISSN/ISBN No.</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+
+				<div class="col-md-6 text-right">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Impact factor</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>						
+				</div>
+			</div>		
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-2 text-left">
+					<p>Whether you are main author</p>
+				</div>
+		    	<div class="col-md-3 text-left">
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-3 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">No. of co-author</label>
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+					<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-2 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">PI=</label>
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>10 marks for International conference for first author and 05 marks for second author</p>
+				</div>
+			</div>
+		</div><br><br>
+
+		<div class="container" style="border: 1px solid #c8c8c8"><br>
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+		    		<div class="form-inline my-2">
+		    			<label class="mr-sm-2">Title with page no.</label>
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Publisher</label>
+						<!-- <input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/> -->
+					</div>					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">ISSN/ISBN No.</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>					
+				</div>
+
+				<div class="col-md-6 text-right">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Date of Publication</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>						
+				</div>
+			</div>		
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+
+				<div class="col-md-5 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">Impact factor</label>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+					</div>						
+				</div>
+
+				<div class="col-md-2 text-left">
+					<p>Whether you are main author</p>
+				</div>
+		    	<div class="col-md-3">
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-3 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">No. of co-author</label>
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+					<div class="col-md-1">
+					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
+					</div>
+				</div>
+				<div class="col-md-2 text-left">
+					<div class="form-inline my-2">
+						<label class="mr-sm-2">PI=</label>
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+					</div>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
+
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p>15 marks for first author and 08 marks for co-author</p>
+				</div>
+			</div>
+		</div><br>
+		<hr style="border: 0.5px solid #c8c8c8"><br>
+
+		<div class="container">
+	    	<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+					<table class="table table-bordered table-hover" id="tab_logic1">
+						<thead>
+							<th colspan="5">Research/thesis supervisor and project guide (Max.PI=40)</th>
+						</thead>
+							<!-- <col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 10px;">
+					     	<col style="width: 0px;">
+					     	<col style="width: 40px;">
+					     	<col style="width: 380px;">
+					     	<col style="width: 40px;"> -->
+						     	
+							<tr>
+								<th class="text-center">Degree</th>
+								<th class="text-center">Number Enrolled</th>
+								<th class="text-center">Thesis submitted</th>
+								<th class="text-center">No. of Degree Awarded</th>
+								<th class="text-center">PI</th>
+							</tr>
+						<tbody>
+							<tr id='addr90'>
+								<td>Ph.D</td>
+								<td>
+								<input type="number" name='phdne' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='phdts' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='phdda' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='phdpi' class="form-control"/>
+								</td>
+							</tr>
+		                    <tr id='addr91'>
+		                    	<td>M.Tech</td>
+								<td>
+								<input type="number" name='mtechne' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='mtechts' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='mtechda' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='mtechpi' class="form-control"/>
+								</td>
+		                    </tr>
+		                    <tr id='addr92'>
+		                    	<td>B.Tech</td>
+								<td>
+								<input type="number" name='btechne' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='btechts' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='btechda' class="form-control"/>
+								</td>
+								<td>
+								<input type="number" name='btechpi' class="form-control"/>
+								</td>
+		                    </tr>
+						</tbody>
+						<thead>
+							<th colspan="5">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year. 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year. 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year. For co-guide the marks will be half.</th>
+						</thead>
+					</table>
+					</div>
+				</div>
+			</div>
+		</div><br><br>
+	
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic8">
+							<thead>
+								<th colspan="5">Research/project/consultancy proposals submitted in academic year 20__/2-__ but yet to get approval (Max. PI=15)</th>
+							</thead>
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Title</th>
+								<th class="text-center">Agency</th>
+								<th class="text-center">Date of Submission</th>
+								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+							</tr>
+							<tbody>
+								<tr id='addr100'>
+									<td>1</td>
+									<td>
+									<input type="text" name='ta' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='ab' class="form-control"/>
+									</td>
+									<td>
+									<input type="date" name='dc' class="form-control"/>
+									</td>
+									<td>
+									<input type="number" name='gd' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr101'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row8" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row8' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator. If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				</div>
+			</div>
+		</div><br><br>
+
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic9">
+							<thead>
+								<th colspan="5">Ongoing Research/project/consultancy proposals approved/initiated in academic year 20__/2-__ but yet to complete (Max. PI=15)</th>
+							</thead>
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Title</th>
+								<th class="text-center">Agency</th>
+								<th class="text-center">Period in years</th>
+								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+							</tr>
+
+							 
+							<tbody>
+								<tr id='addr110'>
+									<td>1</td>
+									<td>
+									<input type="text" name='tta' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='aab' class="form-control"/>
+									</td>
+									<td>
+									<input type="date" name='ddc' class="form-control"/>
+									</td>
+									<td>
+									<input type="number" name='ggd' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr111'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row9" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row9' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator. If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				</div>
+			</div>
+		</div><br><br>
+
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic10">
+							<thead>
+								<th colspan="5">Completed Research Project and Consultancies initiated in academic year 20__/2-__ but completed in academic year 20__/20__ (Max. PI=20) (Max. PI=20)</th>
+							</thead>
+							
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Title</th>
+								<th class="text-center">Agency</th>
+								<th class="text-center">Date of Completion</th>
+								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+							</tr>
+							<tbody>
+								<tr id='addr120'>
+									<td>1</td>
+									<td>
+									<input type="text" name='tca' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='acb' class="form-control"/>
+									</td>
+									<td>
+									<input type="date" name='dcc' class="form-control"/>
+									</td>
+									<td>
+									<input type="number" name='gcd' class="form-control"/>
+									</td>	
+								</tr>
+			                    <tr id='addr121'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row10" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row10' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator completed in the academic year.If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				</div>
+			</div>
+		</div><br><br>
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic11">
+							<thead>
+								<th colspan="5">Patent/Intellectual property filed/received (Max.PI=25)</th>
+							</thead>
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Details of patent/intellectual property</th>
+								<th class="text-center">Date of received/filed</th>
+							</tr>
+							
+							 
+							<tbody>
+								<tr id='addr130'>
+									<td>1</td>
+									<td>
+									<input type="text" name='dpi' class="form-control"/>
+									</td>
+									<td>
+									<input type="date" name='drf' class="form-control"/>
+									</td>
+								</tr>
+			                    <tr id='addr131'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row11" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row11' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>25 Marks each for patent/intellectual property received and 10 each for filed in the academic year</p>
+				</div>
+			</div>
+		</div><br>
+
+		
+		<hr style="border: 0.5px solid #c8c8c8">
+
+		<div class="row">
+			<div class="col-md-12">
+				<p><b>Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></p>
+			</div>
 		</div>
+		<hr style="border: 0.5px solid #c8c8c8">
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic12">
+							<thead>
+								<th colspan="4">Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college (Max.PI=30)</th>
+							</thead>
+						     	
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Details of Programme</th>
+								<th class="text-center">Date</th>
+								<th class="text-center">Organized by</th>
+							</tr>
+									 
+							<tbody>
+								<tr id='addr140'>
+									<td>1</td>
+									<td>
+									<input type="text" name='cativ-dp' class="form-control"/>
+									</td>
+									<td>
+									<input type="date" name='cativ-datee' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='cativ-o' class="form-control"/>
+									</td>
+								</tr>
+			                    <tr id='addr141'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row12" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row12' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>05 Marks for each at national level and 10 marks for international level abroad</p>
+				</div>
+			</div>
+		</div><br><br><br>
+
+	
+
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic13">
+							<thead>
+								<th colspan="4">Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college (Max. PI=30)</th>
+							</thead>
+
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Details of Programme</th>
+								<th class="text-center">Date</th>
+								<th class="text-center">Organized by</th>
+							</tr>
+							
+							 
+							<tbody>
+								<tr id='addr150'>
+									<td>1</td>
+									<td>
+									<input type="text" name='cativ1-dp' class="form-control"/>
+									</td>
+									<td>
+									<input type="date" name='cativ1-datee' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='cativ1-o' class="form-control"/>
+									</td>
+								</tr>
+			                    <tr id='addr151'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row13" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row13' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>05 Marks for each at national level and 10 marks for international level abroad</p>
+				</div>
+			</div>
+		</div><br><br>
+		
+		<div class="container">
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic14">
+							<thead>
+								<th colspan="4">Please give details of any other credential, significant contributions, and awards received etc. Which are not mentioned. (Max. PI=15)</th>
+							</thead>
+							
+							<tr>
+								<th class="text-center">Sr.No</th>
+								<th class="text-center">Details</th>
+								<th class="text-center"></th>
+							</tr>
+							 
+							<tbody>
+								<tr id='addr160'>
+									<td>1</td>
+									<td>
+									<input type="text" name='cativ2-dp' class="form-control"/>
+									</td>
+									<td>
+									<input type="text" name='cativ2' class="form-control"/>
+									</td>
+								</tr>
+			                    <tr id='addr161'></tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<a id="add_row14" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+			<a id='delete_row14' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>05 Marks for international/national credentials/activity/contribution not mentioned in application</p>
+				</div>
+			</div>
+		</div><br><br>
+
+	
 
 
 
-
+		
 	</div>
 
 
@@ -1179,4 +1861,152 @@ include 'top.php';
 	});
 
     </script>
+
+     <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var p=1;
+     $("#add_row8").click(function(){
+      $('#addr10'+p).html("<td>"+ (p+1) +"</td><td><input name='ta"+p+"' type='text' class='form-control input-md'  /> </td><td><input name='ab"+p+"' type='text' class='form-control input-md'  /> </td><td><input name='dc"+p+"' type='date' class='form-control input-md'  /> </td><td><input name='gd"+p+"' type='number' class='form-control input-md'  />");
+
+      $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
+      p++; 
+  	});
+     $("#delete_row8").click(function(){
+    	 if(p>1){
+		 $("#addr10"+(p-1)).html('');
+		 p--;
+		 }
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var q=1;
+     $("#add_row9").click(function(){
+      $('#addr11'+q).html("<td>"+ (q+1) +"</td><td><input name='tta"+q+"' type='text' class='form-control input-md'  /> </td><td><input name='aab"+q+"' type='text' class='form-control input-md'  /> </td><td><input name='ddc"+q+"' type='date' class='form-control input-md'  /> </td><td><input name='ggd"+q+"' type='number' class='form-control input-md'  />");
+
+      $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+      q++; 
+  	});
+     $("#delete_row9").click(function(){
+    	 if(q>1){
+		 $("#addr11"+(q-1)).html('');
+		 q--;
+		 }
+	});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var r=1;
+     $("#add_row10").click(function(){
+      $('#addr12'+r).html("<td>"+ (r+1) +"</td><td><input name='tca"+r+"' type='text' class='form-control input-md'  /> </td><td><input name='acb"+r+"' type='text' class='form-control input-md'  /> </td><td><input name='dcc"+r+"' type='date' class='form-control input-md'  /> </td><td><input name='gcd"+r+"' type='number' class='form-control input-md'  />");
+
+      $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
+      r++; 
+  	});
+     $("#delete_row10").click(function(){
+    	 if(r>1){
+		 $("#addr12"+(r-1)).html('');
+		 r--;
+		 }
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var s=1;
+     $("#add_row11").click(function(){
+      $('#addr13'+s).html("<td>"+ (s+1) +"</td><td><input name='dpi"+s+"' type='text' class='form-control input-md'  /> </td><td><input name='drf"+s+"' type='date' class='form-control input-md'  /> ");
+
+      $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
+      s++; 
+  	});
+     $("#delete_row11").click(function(){
+    	 if(s>1){
+		 $("#addr13"+(s-1)).html('');
+		 s--;
+		 }
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var t=1;
+     $("#add_row12").click(function(){
+      $('#addr14'+t).html("<td>"+ (t+1) +"</td><td><input name='cativ-dp"+t+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ-datee"+t+"' type='date' class='form-control input-md'  /> </td><td><input name='cativ-o"+t+"' type='text' class='form-control input-md'  />");
+
+      $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
+      t++; 
+  	});
+     $("#delete_row12").click(function(){
+    	 if(t>1){
+		 $("#addr14"+(t-1)).html('');
+		 t--;
+		 }
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var u=1;
+     $("#add_row13").click(function(){
+      $('#addr15'+u).html("<td>"+ (u+1) +"</td><td><input name='cativ1-dp"+u+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ1-datee"+u+"' type='date' class='form-control input-md'  /> </td><td><input name='cativ1-o"+u+"' type='text' class='form-control input-md'  />");
+
+      $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
+      u++; 
+  	});
+     $("#delete_row13").click(function(){
+    	 if(u>1){
+		 $("#addr15"+(u-1)).html('');
+		 u--;
+		 }
+	});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var v=1;
+     $("#add_row14").click(function(){
+      $('#addr16'+v).html("<td>"+ (v+1) +"</td><td><input name='cativ2-dp"+v+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ2"+v+"' type='text' class='form-control input-md'  /> ");
+
+      $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
+      v++; 
+  	});
+     $("#delete_row14").click(function(){
+    	 if(v>1){
+		 $("#addr16"+(v-1)).html('');
+		 v--;
+		 }
+	});
+	});
+
+    </script>
+
+
+
+
+
+
 

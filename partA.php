@@ -12,7 +12,7 @@ include 'top.php';
   
     <div class="container parta">
     	<header class="heading"><b>'Part A: GENERAL INFORMATION'</b></header>
-    	<hr style="border: 0.5px solid grey"><br>
+    	<hr style="border: 0.5px solid #c8c8c8"><br>
     	<div class="row">
     		<div class="col-md-12">
     			<div class="row">
@@ -119,7 +119,7 @@ include 'top.php';
     			</div>
     		</div>
     	</div>		
-    	<hr style="border: 1px solid grey">
+    	<hr style="border: 1px solid #c8c8c8">
 
     	<div class="row">
     		<div class="col-md-6 text-left">
@@ -152,7 +152,7 @@ include 'top.php';
 				</div>
 			</div>		
 		</div>
-		<hr style="border: 1px solid grey"><br>
+		<hr style="border: 1px solid #c8c8c8"><br>
 
 		<div class="row">
     		<div class="col-md-6">
@@ -203,7 +203,7 @@ include 'top.php';
 				</div>
 			</div>		
 		</div>
-		<hr style="border: 1px solid grey">
+		<hr style="border: 1px solid #c8c8c8">
 
 		<div class="row">
     		<div class="col-md-5 text-left">
@@ -259,7 +259,7 @@ include 'top.php';
 				</div>
 			</div>
 		</div>
-		<hr style="border: 1px solid grey">
+		<hr style="border: 1px solid #c8c8c8">
 
 		<div class="row">
     		<div class="col-md-5 text-left">
@@ -299,7 +299,7 @@ include 'top.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control" type="number" name="cscalecas" id="example-text-input" required />
+						<input class="form-control partalabel" type="number" name="cscalecas" id="example-text-input" required />
 					</div>
 				</div>
 			</div>
@@ -311,12 +311,12 @@ include 'top.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control" type="number" name="cbasiccas" id="example-text-input" required />
+						<input class="form-control partalabel" type="number" name="cbasiccas" id="example-text-input" required />
 					</div>
 				</div>
 			</div>
 		</div>
-		<hr style="border: 1px solid grey">
+		<hr style="border: 1px solid #c8c8c8">
 
 		<div class="row">
 			<div class="col-md-6">
@@ -368,7 +368,7 @@ include 'top.php';
 				</div>
 			</div>
 		</div>
-		<hr style="border: 0.5px solid grey">
+		<hr style="border: 0.5px solid #c8c8c8">
 
 	    		<div class="form-group row">
 					<div class="col-md-6 text-left">
@@ -379,7 +379,7 @@ include 'top.php';
 						<input class="form-control partalabel" type="text" name="institute" id="example-text-input" required />
 					</div>
 				</div>
-		<hr style="border: 0.5px solid grey">
+		<hr style="border: 0.5px solid #c8c8c8">
 
 		<div class="row">
     		<div class="col-md-12">

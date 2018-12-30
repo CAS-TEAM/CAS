@@ -50,9 +50,9 @@ h3{
 }
 
 .regist-form-div{
-	margin-top: 80px;
-	box-shadow: -1px 1px 60px 10px black;
-    background: rgba(0,0,0,0.1);
+	margin-top: 45px;
+	box-shadow: -1px 5px 30px 10px black;
+    background: rgba(0,0,0,0.2);
 }
 
 .label{
@@ -88,22 +88,24 @@ input[type="checkbox"]
 	height: 15px; 
 }
 
-.btn-info{
+.btn-index-info{
 	margin-top: 20px;
 	font-size: 20px;
 	width:  100px;
 	margin-left: 170px;
 	margin-bottom: 20px;
 	align-content: center;
+	background-color: #007bff; 
+	color: white;
 }
 
-.btn-warning{
+/*.btn-warning{
 	margin-top: 20px;
 	font-size: 18px;
 	width: 100px;
 	margin-left: 80px;
 	margin-bottom: 20px;
-}
+}*/
 
 .signin-link{
 	margin-top: 20px: 
@@ -128,18 +130,17 @@ input[type="checkbox"]
 }
 
 .user-img img{
-	height: 150px;
-	width: 120px;
-	border-radius: 60px;  
-	background-color: #343a40;
+	height: 190px;
+	width: 160px;
+	border-radius: 80px;  
+	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width:120px;
 }
 
 div.user-img{
-	margin-top: -60px;
+	margin-top: -90px;
 	margin-bottom: 45px;
 	/*margin-left: 145px;*/
 	
