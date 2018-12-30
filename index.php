@@ -18,7 +18,6 @@ include 'top.php';
 		<div class="navbar-nav ml-auto">
 			<a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a>
 		</div>
-		
 	</nav>
 
  	
@@ -31,12 +30,12 @@ include 'top.php';
 
 			<div class="col-md-5 regist-form-div">
 				<div class="row">
-					<div class="col-md-6"><br>
-						<h3 class="text-left">Registration Form</h3>
+					<div class="col-md-12"><br>
+						<h3 class="text-center">Registration Form</h3>
 					</div>
-					<div class="col-md-6">
+					<!-- <div class="col-md-6">
 						<span class="glyphicon glyphicon-pencil"></span>
-					</div>
+					</div> -->
 				</div>
 				<hr style="border: 1px solid #a6a6a6">
 

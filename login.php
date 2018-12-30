@@ -11,7 +11,7 @@ else
 
 include 'top.php';
 
-?>
+?>	
 
 	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
 		<a class="navbar-brand" href="index.php">CAS</a>
@@ -19,9 +19,8 @@ include 'top.php';
 			<a href="index.php">
 				<button type="button" class="btn btn-outline-primary signin-link">Sign-Up</button>
 			</a>
-		</div>
-		
-	</nav>
+		</div>	
+	</nav><br><br>
 
 	
   	<div class="container">

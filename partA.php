@@ -377,6 +377,7 @@ else
 						  
 					<div class="col-8" style="padding-left: 0">
 						<input class="form-control" type="number" name="cscalecas" id="cscalecas"  />
+						<input class="form-control partalabel" type="number" name="cscalecas" id="example-text-input" required />
 					</div>
 				</div>
 			</div>
@@ -389,6 +390,7 @@ else
 						  
 					<div class="col-8" style="padding-left: 0">
 						<input class="form-control" type="number" name="cbasiccas" id="cbasiccas"  />
+						<input class="form-control partalabel" type="number" name="cbasiccas" id="example-text-input" required />
 					</div>
 				</div>
 			</div>
