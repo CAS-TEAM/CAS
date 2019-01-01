@@ -208,6 +208,12 @@ div.user-img{
 	width:100%;
 }
 
+li .active{
+	background-color: #bdc3c7 !important;
+	/*width:50px;*/
+	/*border-radius: 50% !important;*/
+}
+
 /*partB*/
 
 .partb{

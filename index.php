@@ -25,7 +25,7 @@ include 'top.php';
 		<div class="row">
 			<div class="col-md-7">
 				<h1 class="text-left index-h1">CAS</h1>
-				<p class="text-left index-text">I love youu majha goadd goadd, Majha tujhyavarr khuppp premmmm aahe. Thankyouu majhya life madhe yenyasaathi.Thankyou sooo muchhhhh</p>
+				<p class="text-left index-text">~ CAS INFO ~</p>
 			</div>
 
 			<div class="col-md-5 regist-form-div">
