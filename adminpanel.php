@@ -16,11 +16,16 @@ date_default_timezone_set('Asia/Kolkata');
 
 	<div class="container">
 		
-		<div class="row justify-content-center">
+		<div class="row form-inline justify-content-center">
 			<div class="col-md-12">
 				<h1 style="text-align:center;font-size: 30px">ADMIN PANEL</h1>
-
+				
+				<div class="col-md-6">
+					<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
+		  			Create User
+					</button>
 				<br>
+				</div>
 
 				<div class="admin-table">
 				<table class="table table-bordered" style="background-color: white">
