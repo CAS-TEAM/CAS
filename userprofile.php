@@ -89,15 +89,15 @@ include 'top.php';
 			      			<div class="col-md-11 col-sm-10 col-xs-9">
 			      				<h5><?php echo $faculty_name; ?></h5>
 			      			</div>
-			      			<div class="col-md-1 col-sm-2 col-xs-3">
+			      			<!-- <div class="col-md-1 col-sm-2 col-xs-3">
 			        			<a href="#" class="align-bottom"><img src="settings.png" style="width:auto;height:100%;margin-top:-10px"></a>
-			      			</div>
+			      			</div> -->
 			      		</div>
 			        	
 			        	<div class="row">
 
 			        		<div class="col-md-4">
-			        			<img src="<?php echo $profilePicLocation; ?>" width="216px" height="216px" style="border-radius: 5px;display:block;margin:0 auto">
+			        			<img class="img-responsive" src="<?php echo $profilePicLocation; ?>" width="180px" height="180px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto">
 			        			<?php
 			        			if($admin==1)
 			        			{
