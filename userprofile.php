@@ -235,8 +235,8 @@ include 'top.php';
 									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
 									    		</div>
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
-									    		</div>
+									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>	
+									    		</div> 
 									    	</div>
 									    	<hr>
 									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
@@ -532,3 +532,9 @@ include 'top.php';
 }
 
 ?>
+
+<script type="text/javascript">
+	$('.tree-toggle').click(function () {
+	$(this).parent().children('ul.tree').toggle(200);
+});
+</script>

@@ -11,6 +11,7 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: new time roman;
+	background-image: url(img/back1.jpg);
 }
 
 .index-h1{
@@ -111,7 +112,7 @@ input[type="checkbox"]
 	margin-top: 20px: 
 	margin-left: 120px;
     color: #d9d9d9;
-	border: 1px solid #d9d9d9;
+	border: 1px solid #44a0b3;
 }
 
 .signin-header{
@@ -123,16 +124,23 @@ input[type="checkbox"]
 }
 
 .signin-btnn{
-	width: 100px;
+	width: 100%;
 	/*margin-left: 145px; */
 	display: block;
 	margin: 0 auto;
+	background-color: #44a0b3;
+	border: 1px solid #44a0b3;
 }
 
+.signin-btnn:hover{
+	border: 1px solid #44a0b3;
+	background-color: white;
+	color: #44a0b3;
+}
 .user-img img{
-	height: 190px;
-	width: 160px;
-	border-radius: 80px;  
+	height: 160px;
+	width: 140px;
+	border-radius: 50%;  
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
@@ -140,16 +148,31 @@ input[type="checkbox"]
 }
 
 div.user-img{
-	margin-top: -90px;
+	margin-top: -20px;
 	margin-bottom: 45px;
-	/*margin-left: 145px;*/
-	
 }
+
+
+.login-card{
+	/*background: rgba(0,0,0,0.2);*/
+}
+
 
 .google-i{
 	height: 27px;
 	width: 27px;
 }
+
+.fontAwesome-signin{ 
+	font-family: 'Helvetica', FontAwesome, sans-serif; 
+	font-size: 19px;	
+	
+}
+
+.signin-google-btn{
+	background-color: white;
+}
+
 
 /*partA*/
 
@@ -229,4 +252,23 @@ li .active{
     padding-top: 10px;
     height: auto;
     margin-top: 20px;
+}
+
+.nav-tabs .nav-link.active{
+	font-family:Roboto,sans-serif;
+	font-size: 22px;
+	background-color: #47C9AF;
+	color:white;
+	border-bottom:5px solid #47C9AF;
+}
+
+.nav-tabs .nav-link{
+	font-family:Roboto,sans-serif;
+	font-size: 20px;
+	color:black;
+	border-bottom:5px solid #47C9AF;
+}
+
+.cat-info{
+	font-size: 20px;
 }
