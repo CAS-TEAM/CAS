@@ -39,15 +39,15 @@ include 'top.php';
 			    }			      	
 			    else
 			    {
-			    	?>
+			    	?>			    	
 			      	<li class="nav-item dropdown">
 				        <img class="nav-link dropdown-toggle" src="defaults/default_userprofile_pic.png" width="50px" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
 				        <!-- </a> -->
 				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
-				          	<a class="dropdown-item" href="userprofile.php">My Profile</a>
-				          	<a class="dropdown-item" href="#">Upload Profile Picture</a>
+				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto"><span class="my-auto ml-2">My Profile</span></a>
+				          	<a class="dropdown-item" href="usersettings.php"><img src="settings.png" style="width:30px;height:auto"><span class="my-auto ml-2">Settings</span></a>
 				          	<div class="dropdown-divider"></div>
 				          	<a class="dropdown-item" href="logout.php">Log out</a>
 				        </div>
@@ -66,7 +66,7 @@ include 'top.php';
 				
 				<?php
 
-				$sql="SELECT email, faculty_name, date_of_joining, department, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
+				$sql="SELECT email, faculty_name, date_of_joining, department, profilePicLocation, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
 				$result=mysqli_query($conn,$sql);
 
 				$row=mysqli_fetch_assoc($result);
@@ -75,6 +75,7 @@ include 'top.php';
 				$faculty_name=$row['faculty_name'];
 				$date_of_joining=$row['date_of_joining'];
 				$department=$row['department'];
+				$profilePicLocation=$row['profilePicLocation'];
 				$hod=$row['hod'];
 				$committee=$row['committee'];
 				$principal=$row['principal'];
@@ -84,11 +85,19 @@ include 'top.php';
 
 				<div class="card userprofile-card">
 			      	<div class="card-body">
-			        	<h5 class="card-title"><?php echo $faculty_name; ?></h5>
+			      		<div class="row">
+			      			<div class="col-md-11 col-sm-10 col-xs-9">
+			      				<h5><?php echo $faculty_name; ?></h5>
+			      			</div>
+			      			<div class="col-md-1 col-sm-2 col-xs-3">
+			        			<a href="#" class="align-bottom"><img src="settings.png" style="width:auto;height:100%;margin-top:-10px"></a>
+			      			</div>
+			      		</div>
+			        	
 			        	<div class="row">
 
 			        		<div class="col-md-4">
-			        			<img src="defaults/default_userprofile_pic.png" width="216px" style="display:block;margin:0 auto">
+			        			<img src="<?php echo $profilePicLocation; ?>" width="216px" height="216px" style="border-radius: 5px;display:block;margin:0 auto">
 			        			<?php
 			        			if($admin==1)
 			        			{
@@ -165,6 +174,7 @@ include 'top.php';
 
 							<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CHECK CAS ELIGBILITY TAB ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 					  		<div class="tab-pane fade show active" id="pills-apply" role="tabpanel" aria-labelledby="pills-apply-tab">	
+					  			<br><h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br>
 					  			<!-- CHECK ELIGIBILITY STATUS -->
 					  			<p>
 								  	<button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseEligible" aria-expanded="false" aria-controls="collapseEligible">
@@ -271,7 +281,8 @@ include 'top.php';
 					  		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 					  			<!-- VIEW OTHER PROFILES -->						
 								<!-- <hr> -->
-								<p class="card-text"><b>VIEW PROFILES OF FACULTY IN YOUR (<?php echo $department; ?>) DEPARTMENT</b></p>							
+								<br><h3 class="text-center">VIEW PROFILES OF FACULTY IN YOUR (<?php echo $department; ?>) DEPARTMENT</h3><br>
+								<!-- <p class="card-text"><b></b></p>							 -->
 								<p>
 								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHODFaculty<?php echo $department; ?>" aria-expanded="false" aria-controls="collapseHODFaculty<?php echo $department; ?>">
 								    View profiles
@@ -378,7 +389,7 @@ include 'top.php';
 					  		<div class="tab-pane fade" id="pills-all-faculty" role="tabpanel" aria-labelledby="pills-all-faculty-tab">
 					  			
 					  			<!-- <hr> -->
-								<p class="card-text"><b>VIEW PROFILES OF ALL FACULTY</b></p>							
+					  			<br><h3 class="text-center">VIEW PROFILES OF ALL FACULTY</h3><br>			
 								<p>
 								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseAllFaculty" aria-expanded="false" aria-controls="collapseAllFaculty">
 								    View profiles

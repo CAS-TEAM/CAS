@@ -40,7 +40,7 @@ td.table-center{
 
 h3{
 	font-size: 25px;
-	color: #d9d9d9;
+	/*color: #d9d9d9;*/
 }
 
 .glyphicon-pencil{
@@ -271,4 +271,19 @@ li .active{
 
 .cat-info{
 	font-size: 20px;
+}
+
+/*SETTINGS*/
+.setting-save{
+	background-color: #44a0b3;
+	border: 1px solid #44a0b3;
+	letter-spacing: 1px;
+	width: 100%;
+}
+
+.change-btn{
+	background-color: #44a0b3;
+	border: 1px solid #44a0b3;
+	letter-spacing: 1px;
+	width:100%;
 }
