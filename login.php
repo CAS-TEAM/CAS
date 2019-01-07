@@ -15,11 +15,11 @@ include 'top.php';
 
 	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
 		<a class="navbar-brand" href="index.php">CAS</a>
-		<div class="navbar-nav ml-auto">
+		<!-- <div class="navbar-nav ml-auto">
 			<a href="index.php">
 				<button type="button" class="btn btn-outline-primary signin-link">Sign-Up</button>
 			</a>
-		</div>	
+		</div>	 -->
 	</nav><br>
 
 	
@@ -42,11 +42,11 @@ include 'top.php';
 	                <!--<h5 class="card-title text-center signin-header">Sign In</h5>-->
 	            	<form class="form-signin" method="POST" action="login_sys.php">
             	      		<div class="form-label-group">
-            	      		 	<input type="email" id="inputEmail" name="email" class="form-control register-form fontAwesome-signin" placeholder="&#xf0e0;  Email address" required autofocus>
-              				</div>
+            	      		 	<input type="email" id="inputEmail" name="email" class="form-control signin-form-input fontAwesome-signin" placeholder="&#xf0e0;  Email address" required autofocus>
+              				</div><br>
 
 	              			<div class="form-label-group">
-	                			<input type="password" id="inputPassword" name="password" class="form-control register-form fontAwesome-signin" placeholder="&#xf13e;   Password" required autofocus>
+	                			<input type="password" id="inputPassword" name="password" class="form-control signin-form-input fontAwesome-signin" placeholder="&#xf13e;   Password" required autofocus>
 	                		</div>
 	              			
 	              			<br>
@@ -63,8 +63,8 @@ include 'top.php';
 	              				<a href="" style="color: #44a0b3">Forgot Password?</a>
 	              			</div>
 	              		</div>
-	              		<hr class="my-4">
-	              		<button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><!-- <i class="fa fa-google" aria-hidden="true"></i> --><img src="https://img.icons8.com/color/48/000000/google-logo.png" class="google-i">  Sign in with Google</button>	            
+	              		<!-- <hr style="border:1px solid #44a0b3"><br> -->
+	              		<!-- <button class="btn btn-lg btn-google btn-block signin-google-btn" type="submit"><img src="https://img.icons8.com/color/48/000000/google-logo.png" class="google-i"> Sign in with Google</button> -->	            
 	          		</div>
 	        	</div>
 	      	</div>

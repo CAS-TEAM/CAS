@@ -16,16 +16,21 @@ date_default_timezone_set('Asia/Kolkata');
 
 	<div class="container">
 		
-		<div class="row form-inline justify-content-center">
+		<div class="row justify-content-center">
 			<div class="col-md-12">
-				<h1 style="text-align:center;font-size: 30px">ADMIN PANEL</h1>
-				
-				<div class="col-md-6">
-					<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-		  			Create User
-					</button>
-				<br>
+				<div class="container-fluid">
+				  	<div class="row">
+				  		<div class="col-md-6 text-left"> 
+						   <p style="color: white;font-size: 30px">Admin Panel</p>
+				        </div>
+				        <div class="col-md-6 text-right">
+				        	<form class="" method="POST" action="createuser.php">
+							 	<button type="submit" class="btn btn-primary custom-button-width .navbar-right" style="font-size: 17px">Create User</button>
+					    	</form>
+						</div>
+				  	</div>
 				</div>
+
 
 				<div class="admin-table">
 				<table class="table table-bordered" style="background-color: white">

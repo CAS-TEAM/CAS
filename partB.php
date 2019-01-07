@@ -13,17 +13,17 @@ include 'top.php';
 		<header class="heading"><b>'Part B'</b></header><br>
 
 		<nav>
-		  <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
-		    <a class="nav-item nav-link active cat-tabs" id="nav-cat1-tab" data-toggle="tab" href="#nav-cat1" role="tab" aria-controls="nav-cat1" aria-selected="true">Category I</a>
-		    <a class="nav-item nav-link cat-tabs" id="nav-cat2-tab" data-toggle="tab" href="#nav-cat2" role="tab" aria-controls="nav-cat2" aria-selected="false">Category II</a>
-		    <a class="nav-item nav-link cat-tabs" id="nav-cat3-tab" data-toggle="tab" href="#nav-cat3" role="tab" aria-controls="nav-cat3" aria-selected="false">Category III</a>
-		    <a class="nav-item nav-link cat-tabs" id="nav-cat4-tab" data-toggle="tab" href="#nav-cat4" role="tab" aria-controls="nav-cat4" aria-selected="false">Category IV</a>
+          <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+		    <a class="nav-item nav-link active" id="nav-cat1-tab" data-toggle="tab" href="#nav-cat1" role="tab" aria-controls="nav-cat1" aria-selected="true">Category I</a>
+			<a class="nav-item nav-link" id="nav-cat2-tab" data-toggle="tab" href="#nav-cat2" role="tab" aria-controls="nav-cat2" aria-selected="false">Category II</a>
+			<a class="nav-item nav-link" id="nav-cat3-tab" data-toggle="tab" href="#nav-cat3" role="tab" aria-controls="nav-cat3" aria-selected="false">Category III</a>
+            <a class="nav-item nav-link" id="nav-cat4-tab" data-toggle="tab" href="#nav-cat4" role="tab" aria-controls="nav-cat4" aria-selected="false">Category IV</a>
+		    
 		  </div>
 		</nav>
-		<br><br>
-		<div class="tab-content" id="nav-tabContent">
-		    <div class="tab-pane fade show active" id="nav-cat1" role="tabpanel" aria-labelledby="nav-cat1-tab">
-
+		
+		<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-cat1" role="tabpanel" aria-labelledby="nav-cat1-tab"><br>
 		
 		<div class="row">
 			<div class="col-md-12">
@@ -583,17 +583,24 @@ include 'top.php';
 
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE FORM
+	  			SAVE 
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT FORM
+	  			NEXT 
 				</button>
+
+				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
+	  			EDIT
+				</button>
+				
+
+				
 			</div>
 		</div>
 		</div>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
-		<div class="tab-pane fade show active" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab">
+		<div class="tab-pane fade" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab"><br>
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></p>
@@ -808,17 +815,22 @@ include 'top.php';
 
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE FORM
+	  			SAVE 
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT FORM
+	  			NEXT 
+				</button>
+
+				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
+	  			EDIT 
 				</button>
 			</div>
 		</div>
 		</div>	
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
-		<div class="tab-pane fade show active" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab">
+		<div class="tab-pane fade" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab"><br>
+
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
@@ -1609,18 +1621,22 @@ include 'top.php';
 
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE FORM
+	  			SAVE 
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT FORM
+	  			NEXT 
+				</button>
+
+				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
+	  			EDIT 
 				</button>
 			</div>
 		</div>
 		</div>
 		
 		<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
-		<div class="tab-pane fade show active" id="nav-cat4" role="tabpanel" aria-labelledby="nav-cat4-tab">
+		<div class="tab-pane fade" id="nav-cat4" role="tabpanel" aria-labelledby="nav-cat4-tab"><br>
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></p>
@@ -1762,11 +1778,15 @@ include 'top.php';
 
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE FORM
+	  			SAVE 
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT FORM
+	  			NEXT 
+				</button>
+
+				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
+	  			EDIT 
 				</button>
 			</div>
 		</div>
