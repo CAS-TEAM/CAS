@@ -187,130 +187,130 @@ include 'top.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='odpstest1' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='epstest1' class="form-control"/>
+								<input type="text" name='oepstest1' class="form-control" maxlength="200" />
 								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='odpstest2' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='epstest2' class="form-control"/>
+								<input type="text" name='oepstest2' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control"/>
+								<input type="text" name='odtest1in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest1in' class="form-control"/>
+								<input type="text" name='oetest1in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control"/>
+								<input type="text" name='odtest2in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest2in' class="form-control"/>
+								<input type="text" name='oetest2in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='dtest1ass' class="form-control"/>
+								<input type="text" name='odtest1ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest1ass' class="form-control"/>
+								<input type="text" name='oetest1ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='dtest2ass' class="form-control"/>
+								<input type="text" name='odtest2ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest2ass' class="form-control"/>
+								<input type="text" name='oetest2ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='deseps' class="form-control"/>
+								<input type="text" name='odeseps' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eeseps' class="form-control"/>
+								<input type="text" name='oeeseps' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='desein' class="form-control"/>
+								<input type="text" name='odesein' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eesein' class="form-control"/>
+								<input type="text" name='oeesein' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='deseth' class="form-control"/>
+								<input type="text" name='odeseth' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eeseth' class="form-control"/>
+								<input type="text" name='oeeseth' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='desepo' class="form-control"/>
+								<input type="text" name='odesepo' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eesepo' class="form-control"/>
+								<input type="text" name='oeesepo' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='desere-ass' class="form-control"/>
+								<input type="text" name='odesere-ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eesere-ass' class="form-control"/>
+								<input type="text" name='oeesere-ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='dproofr' class="form-control"/>
+								<input type="text" name='odproofr' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eproofr' class="form-control"/>
+								<input type="text" name='oeproofr' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='dopenday' class="form-control"/>
+								<input type="text" name='odopenday' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eopenday' class="form-control"/>
+								<input type="text" name='oeopenday' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 						</tbody>
@@ -339,130 +339,130 @@ include 'top.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='edpstest1' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='epstest1' class="form-control"/>
+								<input type="text" name='eepstest1' class="form-control"/>
 								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='edpstest2' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='epstest2' class="form-control"/>
+								<input type="text" name='eepstest2' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control"/>
+								<input type="text" name='edtest1in' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest1in' class="form-control"/>
+								<input type="text" name='eetest1in' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control"/>
+								<input type="text" name='edtest2in' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest2in' class="form-control"/>
+								<input type="text" name='eetest2in' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='dtest1ass' class="form-control"/>
+								<input type="text" name='edtest1ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest1ass' class="form-control"/>
+								<input type="text" name='eetest1ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='dtest2ass' class="form-control"/>
+								<input type="text" name='edtest2ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest2ass' class="form-control"/>
+								<input type="text" name='eetest2ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='deseps' class="form-control"/>
+								<input type="text" name='edeseps' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeseps' class="form-control"/>
+								<input type="text" name='eeeseps' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='desein' class="form-control"/>
+								<input type="text" name='edesein' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eesein' class="form-control"/>
+								<input type="text" name='eeesein' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='deseth' class="form-control"/>
+								<input type="text" name='edeseth' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeseth' class="form-control"/>
+								<input type="text" name='eeeseth' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='desepo' class="form-control"/>
+								<input type="text" name='edesepo' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eesepo' class="form-control"/>
+								<input type="text" name='eeesepo' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='desere-ass' class="form-control"/>
+								<input type="text" name='edesere-ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eesere-ass' class="form-control"/>
+								<input type="text" name='eeesere-ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='dproofr' class="form-control"/>
+								<input type="text" name='edproofr' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eproofr' class="form-control"/>
+								<input type="text" name='eeproofr' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='dopenday' class="form-control"/>
+								<input type="text" name='edopenday' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eopenday' class="form-control"/>
+								<input type="text" name='eeopenday' class="form-control"/>
 								</td>
 		                    </tr>
 						</tbody>
@@ -481,16 +481,6 @@ include 'top.php';
 							<thead>
 								<th colspan="3">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
 							</thead>
-
-								<!-- <col style="width: 40px;">
-						     	<col style="width: 380px;">
-						     	<col style="width: 40px;">
-						     	<col style="width: 10px;">
-						     	<col style="width: 10px;">
-						     	<col style="width: 0px;">
-						     	<col style="width: 40px;">
-						     	<col style="width: 380px;">
-						     	<col style="width: 40px;"> -->
 							 
 							<tbody>
 								<tr id='addr30'>
@@ -528,28 +518,28 @@ include 'top.php';
 								<td>1</td>
 								<td>Problem based learning, case studies, group discussions, activity based learning etc.</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='dpstest1' class="form-control" maxlength="200" />
 								</td>
 							</tr>
 		                    <tr id='addr41'>
 		                    	<td>2</td>
 								<td>Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='dpstest2' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr42'>
 		                    	<td>3</td>
 								<td>Developing and imparting Remedial / Bridge Courses</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control"/>
+								<input type="text" name='dtest1in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr43'>
 		                    	<td>4</td>
 								<td>Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control"/>
+								<input type="text" name='dtest2in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr44'>
@@ -592,8 +582,9 @@ include 'top.php';
 			</div>
 		</div>
 		</div>
+		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
-		<div class="tab-pane fade show active" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab">
+		<div class="tab-pane fade show" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab">
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></p>
@@ -663,16 +654,6 @@ include 'top.php';
 							<thead>
 								<th colspan="3">Activities</th>
 							</thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -711,24 +692,13 @@ include 'top.php';
 				<div class="col-md-12 column">
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic6">
-							<thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
-						     	
-							<tr>
-								<th class="text-center">Sr.No</th>
-								<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
-								<th class="text-center"></th>
-							</tr>
-						</thead>
+							<thead>						     	
+								<tr>
+									<th class="text-center">Sr.No</th>
+									<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
+									<th class="text-center"></th>
+								</tr>
+							</thead>
 							 
 							<tbody>
 								<tr id='addr70'>
@@ -817,8 +787,9 @@ include 'top.php';
 			</div>
 		</div>
 		</div>	
+		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
-		<div class="tab-pane fade show active" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab">
+		<div class="tab-pane fade show" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab">
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
@@ -1618,9 +1589,9 @@ include 'top.php';
 			</div>
 		</div>
 		</div>
-		
+		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
-		<div class="tab-pane fade show active" id="nav-cat4" role="tabpanel" aria-labelledby="nav-cat4-tab">
+		<div class="tab-pane fade show" id="nav-cat4" role="tabpanel" aria-labelledby="nav-cat4-tab">
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></p>
