@@ -500,8 +500,11 @@ else
 
 					<div class="clear"></div>		
 				</div>
-		 
-	
+			</div><br>
+			<div class="row">
+				<div class="col-md-4 text-left">
+					<p>Three GPI per day but maximum 30</p>
+				</div>
 			</div>
 		</div>
 
