@@ -467,31 +467,33 @@ else
 		<div class="panel panel-default">
 		  
 		  	<div class="panel-body">
+
+		  		<input type="hidden" name="room" value="1" id="room">
 		  
 		  		<div id="parta_dynamic_form"></div>
 
 		  		<div class="row form-inline justify-content-center">
 		  			<div class="nopadding">
 				  		<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="srno" name="srno[]" value="" placeholder="Sr.no">
+				    		<input type="text" class="dynamic-four" id="srno1" name="srno[]" value="" placeholder="Sr.no">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 				  		<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="course" name="course[]" value="" maxlength="100" placeholder="Name of summer school/course">
+				    		<input type="text" class="dynamic-four" id="course1" name="course[]" value="" maxlength="100" placeholder="Name of summer school/course">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 				  		<div class="form-group">
-				   			<input type="text" class="dynamic-four" id="days" name="days[]" value="" placeholder="Duration(Days)">
+				   			<input type="text" class="dynamic-four" id="days1" name="days[]" value="" placeholder="Duration(Days)">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 						<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="agency" name="agency[]" value="" placeholder="Organising Agency">
+				    		<input type="text" class="dynamic-four" id="agency1" name="agency[]" value="" placeholder="Organising Agency">
 				  		</div>
 					</div>
 				  	<div class="input-group-btn">
@@ -549,20 +551,25 @@ else
 
 	<script type="text/javascript">
 
-	var room = 1;
-	function parta_dynamic_form() {
-	 
+	// var room = 1;
+	function parta_dynamic_form()
+	{	 
+		var room=document.getElementById('room').value;
 	    room++;
-	    var objTo = document.getElementById('parta_dynamic_form')
+	    // var objTo = document.getElementById('parta_dynamic_form')
 	    var divtest = document.createElement("div");
 		divtest.setAttribute("class", "form-group removeclass"+room);
 		var rdiv = 'removeclass'+room;
-	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="input-group-btn"> <img src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
+	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="input-group-btn"> <img src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
 	    
-	    objTo.appendChild(divtest);
+	    // objTo.appendChild(divtest);
+	    $("#parta_dynamic_form").prepend(divtest);
+	    document.getElementById("room").value=room;
 	}
 	function remove_education_fields(rid) {
 		$('.removeclass'+rid).remove();
+		var room=document.getElementById('room').value;
+		document.getElementById("room").value=room-1;
 	}
 
 

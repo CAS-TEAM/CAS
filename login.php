@@ -20,7 +20,7 @@ include 'top.php';
 				<button type="button" class="btn btn-outline-primary signin-link">Sign-Up</button>
 			</a>
 		</div>	 -->
-	</nav><br>
+	</nav>
 
 	
   	<div class="container">

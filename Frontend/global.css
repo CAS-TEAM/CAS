@@ -181,7 +181,7 @@ input[type="checkbox"]
 }
 .user-img img{
 	height: 160px;
-	width: 140px;
+	width: 160px;
 	border-radius: 50%;  
 	background-color: #44a0b3;
 	border: 2px solid #44a0b3;
@@ -191,7 +191,7 @@ input[type="checkbox"]
 }
 
 div.user-img{
-	margin-top: -20px;
+	margin-top: 30px;
 	margin-bottom: 45px;
 }
 

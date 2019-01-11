@@ -89,15 +89,15 @@ include 'top.php';
 			      			<div class="col-md-11 col-sm-10 col-xs-9">
 			      				<h5><?php echo $faculty_name; ?></h5>
 			      			</div>
-			      			<div class="col-md-1 col-sm-2 col-xs-3">
+			      			<!-- <div class="col-md-1 col-sm-2 col-xs-3">
 			        			<a href="#" class="align-bottom"><img src="settings.png" style="width:auto;height:100%;margin-top:-10px"></a>
-			      			</div>
+			      			</div> -->
 			      		</div>
 			        	
 			        	<div class="row">
 
 			        		<div class="col-md-4">
-			        			<img src="<?php echo $profilePicLocation; ?>" width="216px" height="216px" style="border-radius: 5px;display:block;margin:0 auto">
+			        			<img class="img-responsive" src="<?php echo $profilePicLocation; ?>" width="180px" height="180px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto">
 			        			<?php
 			        			if($admin==1)
 			        			{
@@ -174,7 +174,7 @@ include 'top.php';
 
 							<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CHECK CAS ELIGBILITY TAB ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 					  		<div class="tab-pane fade show active" id="pills-apply" role="tabpanel" aria-labelledby="pills-apply-tab">	
-					  			<br><h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br>
+					  			<h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br>
 					  			<!-- CHECK ELIGIBILITY STATUS -->
 					  			<p>
 								  	<button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseEligible" aria-expanded="false" aria-controls="collapseEligible">
@@ -281,12 +281,13 @@ include 'top.php';
 					  		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 					  			<!-- VIEW OTHER PROFILES -->						
 								<!-- <hr> -->
-								<br><h3 class="text-center">VIEW PROFILES OF FACULTY IN YOUR (<?php echo $department; ?>) DEPARTMENT</h3><br>
+								<h3 class="text-center">VIEW FORMS AND PROFILES OF FACULTY IN YOUR (<?php echo $department; ?>) DEPARTMENT</h3><br>
 								<!-- <p class="card-text"><b></b></p>							 -->
 								<p>
 								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHODFaculty<?php echo $department; ?>" aria-expanded="false" aria-controls="collapseHODFaculty<?php echo $department; ?>">
-								    View profiles
+								    View Forms
 								  	</button>
+								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
 								</p>
 								<div class="collapse" id="collapseHODFaculty<?php echo $department; ?>">
 								  	<div class="card card-body">
@@ -389,11 +390,12 @@ include 'top.php';
 					  		<div class="tab-pane fade" id="pills-all-faculty" role="tabpanel" aria-labelledby="pills-all-faculty-tab">
 					  			
 					  			<!-- <hr> -->
-					  			<br><h3 class="text-center">VIEW PROFILES OF ALL FACULTY</h3><br>			
+					  			<h3 class="text-center">VIEW PROFILES AND FORMS OF ALL FACULTY</h3><br>			
 								<p>
 								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseAllFaculty" aria-expanded="false" aria-controls="collapseAllFaculty">
-								    View profiles
+								    View Forms
 								  	</button>
+								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
 								</p>
 								<div class="collapse" id="collapseAllFaculty">
 								  	<div class="card card-body">

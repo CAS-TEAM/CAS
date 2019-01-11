@@ -61,33 +61,34 @@ include 'top.php';
 						<tr id='addr10'>
 							<td>1</td>
 							<td>
-							<input type="text" name='course' class="form-control"/>
+							<input type="text" name='course[]' class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='typrlpt' class="form-control"/>
+							<input type="text" name='typrlpt[]' class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='ugpg' class="form-control"/>
+							<input type="text" name='ugpg[]' class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='classsemester' class="form-control"/>
+							<input type="text" name='classsemester[]' class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='hrsweek' class="form-control"/>
+							<input type="text" name='hrsweek[]' class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='hrsengaged' class="form-control"/>
+							<input type="text" name='hrsengaged[]' class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='maxhrs' class="form-control"/>
+							<input type="text" name='maxhrs[]' class="form-control" maxlength="200" />
 							</td> 
 							<td>
-							<input type="text" name='c' class="form-control"/>
+							<input type="text" name='c[]' class="form-control" maxlength="200" />
 							</td>
 						</tr>
 	                    <tr id='addr11'></tr>
 					</tbody>
 				</table>
+				<input type="hidden" id="i" value="1">
 				</div>
 			</div>
 			</div>
@@ -120,28 +121,28 @@ include 'top.php';
 						<tr id='addr20'>
 							<td>1</td>
 							<td>
-							<input type="text" name='course' class="form-control"/>
+							<input type="text" name='course[]' class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='typrlpt' class="form-control"/>
+							<input type="text" name='typrlpt[]' class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='ugpg' class="form-control"/>
+							<input type="text" name='ugpg[]' class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='classsemester' class="form-control"/>
+							<input type="text" name='classsemester[]' class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='hrsweek' class="form-control"/>
+							<input type="text" name='hrsweek[]' class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='hrsengaged' class="form-control"/>
+							<input type="text" name='hrsengaged[]' class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='maxhrs' class="form-control"/>
+							<input type="text" name='maxhrs[]' class="form-control" maxlength="200"/>
 							</td> 
 							<td>
-							<input type="text" name='c' class="form-control"/>
+							<input type="text" name='c[]' class="form-control" maxlength="200"/>
 							</td>
 						</tr>
 	                    <tr id='addr21'></tr>
@@ -187,130 +188,130 @@ include 'top.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='odpstest1' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='epstest1' class="form-control"/>
+								<input type="text" name='oepstest1' class="form-control" maxlength="200" />
 								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='odpstest2' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='epstest2' class="form-control"/>
+								<input type="text" name='oepstest2' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control"/>
+								<input type="text" name='odtest1in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest1in' class="form-control"/>
+								<input type="text" name='oetest1in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control"/>
+								<input type="text" name='odtest2in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest2in' class="form-control"/>
+								<input type="text" name='oetest2in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='dtest1ass' class="form-control"/>
+								<input type="text" name='odtest1ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest1ass' class="form-control"/>
+								<input type="text" name='oetest1ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='dtest2ass' class="form-control"/>
+								<input type="text" name='odtest2ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='etest2ass' class="form-control"/>
+								<input type="text" name='oetest2ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='deseps' class="form-control"/>
+								<input type="text" name='odeseps' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eeseps' class="form-control"/>
+								<input type="text" name='oeeseps' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='desein' class="form-control"/>
+								<input type="text" name='odesein' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eesein' class="form-control"/>
+								<input type="text" name='oeesein' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='deseth' class="form-control"/>
+								<input type="text" name='odeseth' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eeseth' class="form-control"/>
+								<input type="text" name='oeeseth' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='desepo' class="form-control"/>
+								<input type="text" name='odesepo' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eesepo' class="form-control"/>
+								<input type="text" name='oeesepo' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='desere-ass' class="form-control"/>
+								<input type="text" name='odesere-ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eesere-ass' class="form-control"/>
+								<input type="text" name='oeesere-ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='dproofr' class="form-control"/>
+								<input type="text" name='odproofr' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eproofr' class="form-control"/>
+								<input type="text" name='oeproofr' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='dopenday' class="form-control"/>
+								<input type="text" name='odopenday' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='eopenday' class="form-control"/>
+								<input type="text" name='oeopenday' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 						</tbody>
@@ -339,130 +340,130 @@ include 'top.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='edpstest1' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='epstest1' class="form-control"/>
+								<input type="text" name='eepstest1' class="form-control"/>
 								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='edpstest2' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='epstest2' class="form-control"/>
+								<input type="text" name='eepstest2' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control"/>
+								<input type="text" name='edtest1in' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest1in' class="form-control"/>
+								<input type="text" name='eetest1in' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control"/>
+								<input type="text" name='edtest2in' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest2in' class="form-control"/>
+								<input type="text" name='eetest2in' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='dtest1ass' class="form-control"/>
+								<input type="text" name='edtest1ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest1ass' class="form-control"/>
+								<input type="text" name='eetest1ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='dtest2ass' class="form-control"/>
+								<input type="text" name='edtest2ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='etest2ass' class="form-control"/>
+								<input type="text" name='eetest2ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='deseps' class="form-control"/>
+								<input type="text" name='edeseps' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeseps' class="form-control"/>
+								<input type="text" name='eeeseps' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='desein' class="form-control"/>
+								<input type="text" name='edesein' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eesein' class="form-control"/>
+								<input type="text" name='eeesein' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='deseth' class="form-control"/>
+								<input type="text" name='edeseth' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeseth' class="form-control"/>
+								<input type="text" name='eeeseth' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='desepo' class="form-control"/>
+								<input type="text" name='edesepo' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eesepo' class="form-control"/>
+								<input type="text" name='eeesepo' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='desere-ass' class="form-control"/>
+								<input type="text" name='edesere-ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eesere-ass' class="form-control"/>
+								<input type="text" name='eeesere-ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='dproofr' class="form-control"/>
+								<input type="text" name='edproofr' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eproofr' class="form-control"/>
+								<input type="text" name='eeproofr' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='dopenday' class="form-control"/>
+								<input type="text" name='edopenday' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eopenday' class="form-control"/>
+								<input type="text" name='eeopenday' class="form-control"/>
 								</td>
 		                    </tr>
 						</tbody>
@@ -481,16 +482,6 @@ include 'top.php';
 							<thead>
 								<th colspan="3">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
 							</thead>
-
-								<!-- <col style="width: 40px;">
-						     	<col style="width: 380px;">
-						     	<col style="width: 40px;">
-						     	<col style="width: 10px;">
-						     	<col style="width: 10px;">
-						     	<col style="width: 0px;">
-						     	<col style="width: 40px;">
-						     	<col style="width: 380px;">
-						     	<col style="width: 40px;"> -->
 							 
 							<tbody>
 								<tr id='addr30'>
@@ -528,28 +519,28 @@ include 'top.php';
 								<td>1</td>
 								<td>Problem based learning, case studies, group discussions, activity based learning etc.</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='dpstest1' class="form-control" maxlength="200" />
 								</td>
 							</tr>
 		                    <tr id='addr41'>
 		                    	<td>2</td>
 								<td>Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control"/>
+								<input type="text" name='dpstest2' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr42'>
 		                    	<td>3</td>
 								<td>Developing and imparting Remedial / Bridge Courses</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control"/>
+								<input type="text" name='dtest1in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr43'>
 		                    	<td>4</td>
 								<td>Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control"/>
+								<input type="text" name='dtest2in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr44'>
@@ -599,7 +590,9 @@ include 'top.php';
 			</div>
 		</div>
 		</div>
+		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
+		<!-- <div class="tab-pane fade show" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab"> -->
 		<div class="tab-pane fade" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab"><br>
 		<div class="row">
 			<div class="col-md-12">
@@ -638,10 +631,10 @@ include 'top.php';
 								<tr id='addr50'>
 									<td>1</td>
 									<td>
-									<input type="text" name='ha' class="form-control"/>
+									<input type="text" name='ha' class="form-control" maxlength="200" />
 									</td>
 									<td>
-									<input type="text" name='hb' class="form-control"/>
+									<input type="text" name='hb' class="form-control" maxlength="200" />
 									</td>	
 								</tr>
 			                    <tr id='addr51'></tr>
@@ -670,16 +663,6 @@ include 'top.php';
 							<thead>
 								<th colspan="3">Activities</th>
 							</thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -718,24 +701,13 @@ include 'top.php';
 				<div class="col-md-12 column">
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic6">
-							<thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
-						     	
-							<tr>
-								<th class="text-center">Sr.No</th>
-								<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
-								<th class="text-center"></th>
-							</tr>
-						</thead>
+							<thead>						     	
+								<tr>
+									<th class="text-center">Sr.No</th>
+									<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
+									<th class="text-center"></th>
+								</tr>
+							</thead>
 							 
 							<tbody>
 								<tr id='addr70'>
@@ -828,9 +800,10 @@ include 'top.php';
 			</div>
 		</div>
 		</div>	
+		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
-		<div class="tab-pane fade" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab"><br>
 
+		<div class="tab-pane fade" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab"><br>
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
@@ -1634,9 +1607,9 @@ include 'top.php';
 			</div>
 		</div>
 		</div>
-		
+		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
-		<div class="tab-pane fade" id="nav-cat4" role="tabpanel" aria-labelledby="nav-cat4-tab"><br>
+		<div class="tab-pane fade" id="nav-cat4" role="tabpanel" aria-labelledby="nav-cat4-tab">
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></p>
@@ -1808,12 +1781,14 @@ include 'top.php';
      $("#add_row1").click(function(){
       $('#addr1'+i).html("<td>"+ (i+1) +"</td><td><input name='course"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='typrlpt"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='ugpg"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='classsemester"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsweek"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsengaged"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='maxhrs"+i+"' type='text' class='form-control input-md'></td><td><input name='c"+i+"' type='text' class='form-control input-md'></td>");
 
-      $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
+      // $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
+      $('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
       i++; 
   	});
      $("#delete_row1").click(function(){
     	 if(i>1){
 		 $("#addr1"+(i-1)).html('');
+		 $("#addr1"+(i)).remove();
 		 i--;
 		 }
 	});
@@ -1829,12 +1804,14 @@ include 'top.php';
      $("#add_row2").click(function(){
       $('#addr2'+j).html("<td>"+ (j+1) +"</td><td><input name='course"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='typrlpt"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='ugpg"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='classsemester"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsweek"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsengaged"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='maxhrs"+j+"' type='text' class='form-control input-md'></td><td><input name='c"+j+"' type='text' class='form-control input-md'></td>");
 
-      $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
+      // $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
+      $('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
       j++; 
   	});
      $("#delete_row2").click(function(){
     	 if(j>1){
 		 $("#addr2"+(j-1)).html('');
+		 $("#addr2"+(j)).remove();
 		 j--;
 		 }
 	});
@@ -1849,12 +1826,14 @@ include 'top.php';
      $("#add_row3").click(function(){
       $('#addr3'+k).html("<td>"+ (k+1) +"</td><td><input name='a"+k+"' type='text' class='form-control input-md'  /> </td><td><input name='b"+k+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
+      // $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
+       $('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
       k++; 
   	});
      $("#delete_row3").click(function(){
     	 if(k>1){
 		 $("#addr3"+(k-1)).html('');
+		 $("#addr3"+(k)).remove();
 		 k--;
 		 }
 	});
@@ -1870,12 +1849,14 @@ include 'top.php';
      $("#add_row4").click(function(){
       $('#addr5'+l).html("<td>"+ (l+1) +"</td><td><input name='ha"+l+"' type='text' class='form-control input-md'  /> </td><td><input name='hb"+l+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
+      // $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
+      $('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
       l++; 
   	});
      $("#delete_row4").click(function(){
     	 if(l>1){
 		 $("#addr5"+(l-1)).html('');
+		 $("#addr5"+(l)).remove();
 		 l--;
 		 }
 	});
@@ -1891,12 +1872,14 @@ include 'top.php';
      $("#add_row5").click(function(){
       $('#addr6'+m).html("<td>"+ (m+1) +"</td><td><input name='ea"+m+"' type='text' class='form-control input-md'  /> </td><td><input name='eb"+m+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
+      // $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
+      $('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
       m++; 
   	});
      $("#delete_row5").click(function(){
     	 if(m>1){
 		 $("#addr6"+(m-1)).html('');
+		 $("#addr6"+(m)).remove();
 		 m--;
 		 }
 	});
@@ -1912,12 +1895,14 @@ include 'top.php';
      $("#add_row6").click(function(){
       $('#addr7'+n).html("<td>"+ (n+1) +"</td><td><input name='eca"+n+"' type='text' class='form-control input-md'  /> </td><td><input name='ecb"+n+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
+      // $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
+       $('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
       n++; 
   	});
      $("#delete_row6").click(function(){
     	 if(n>1){
 		 $("#addr7"+(n-1)).html('');
+		 $("#addr7"+(n)).remove();
 		 n--;
 		 }
 	});
@@ -1932,12 +1917,14 @@ include 'top.php';
      $("#add_row7").click(function(){
       $('#addr8'+o).html("<td>"+ (o+1) +"</td><td><input name='ca"+o+"' type='text' class='form-control input-md'  /> </td><td><input name='cb"+o+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
+      // $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
+      $('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
       o++; 
   	});
      $("#delete_row7").click(function(){
     	 if(o>1){
 		 $("#addr8"+(o-1)).html('');
+		 $("#addr8"+(o)).remove();
 		 o--;
 		 }
 	});
@@ -1952,12 +1939,14 @@ include 'top.php';
      $("#add_row8").click(function(){
       $('#addr10'+p).html("<td>"+ (p+1) +"</td><td><input name='ta"+p+"' type='text' class='form-control input-md'  /> </td><td><input name='ab"+p+"' type='text' class='form-control input-md'  /> </td><td><input name='dc"+p+"' type='date' class='form-control input-md'  /> </td><td><input name='gd"+p+"' type='number' class='form-control input-md'  />");
 
-      $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
+      // $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
+      $('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
       p++; 
   	});
      $("#delete_row8").click(function(){
     	 if(p>1){
 		 $("#addr10"+(p-1)).html('');
+		 $("#addr10"+(p)).remove();
 		 p--;
 		 }
 	});
@@ -1972,12 +1961,14 @@ include 'top.php';
      $("#add_row9").click(function(){
       $('#addr11'+q).html("<td>"+ (q+1) +"</td><td><input name='tta"+q+"' type='text' class='form-control input-md'  /> </td><td><input name='aab"+q+"' type='text' class='form-control input-md'  /> </td><td><input name='ddc"+q+"' type='date' class='form-control input-md'  /> </td><td><input name='ggd"+q+"' type='number' class='form-control input-md'  />");
 
-      $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+      $('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
       q++; 
   	});
      $("#delete_row9").click(function(){
     	 if(q>1){
 		 $("#addr11"+(q-1)).html('');
+		 $("#addr11"+(q)).remove();
 		 q--;
 		 }
 	});
@@ -1993,12 +1984,14 @@ include 'top.php';
      $("#add_row10").click(function(){
       $('#addr12'+r).html("<td>"+ (r+1) +"</td><td><input name='tca"+r+"' type='text' class='form-control input-md'  /> </td><td><input name='acb"+r+"' type='text' class='form-control input-md'  /> </td><td><input name='dcc"+r+"' type='date' class='form-control input-md'  /> </td><td><input name='gcd"+r+"' type='number' class='form-control input-md'  />");
 
-      $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
+      // $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
+      $('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
       r++; 
   	});
      $("#delete_row10").click(function(){
     	 if(r>1){
 		 $("#addr12"+(r-1)).html('');
+		 $("#addr12"+(r)).remove();
 		 r--;
 		 }
 	});
@@ -2007,18 +2000,20 @@ include 'top.php';
     </script>
 
     <script type="text/javascript">
-     $(document).ready(function()
+    $(document).ready(function()
     {
-      var s=1;
-     $("#add_row11").click(function(){
-      $('#addr13'+s).html("<td>"+ (s+1) +"</td><td><input name='dpi"+s+"' type='text' class='form-control input-md'  /> </td><td><input name='drf"+s+"' type='date' class='form-control input-md'  /> ");
+      	var s=1;
+     	$("#add_row11").click(function(){
+      	$('#addr13'+s).html("<td>"+ (s+1) +"</td><td><input name='dpi"+s+"' type='text' class='form-control input-md'  /> </td><td><input name='drf"+s+"' type='date' class='form-control input-md'  /> ");
 
-      $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
-      s++; 
+      	// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
+      	$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
+      	s++; 
   	});
      $("#delete_row11").click(function(){
     	 if(s>1){
 		 $("#addr13"+(s-1)).html('');
+		 $("#addr13"+(s)).remove();
 		 s--;
 		 }
 	});
@@ -2033,12 +2028,14 @@ include 'top.php';
      $("#add_row12").click(function(){
       $('#addr14'+t).html("<td>"+ (t+1) +"</td><td><input name='cativ-dp"+t+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ-datee"+t+"' type='date' class='form-control input-md'  /> </td><td><input name='cativ-o"+t+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
+      // $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
+      $('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
       t++; 
   	});
      $("#delete_row12").click(function(){
     	 if(t>1){
 		 $("#addr14"+(t-1)).html('');
+		 $("#addr14"+(t)).remove();
 		 t--;
 		 }
 	});
@@ -2053,12 +2050,14 @@ include 'top.php';
      $("#add_row13").click(function(){
       $('#addr15'+u).html("<td>"+ (u+1) +"</td><td><input name='cativ1-dp"+u+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ1-datee"+u+"' type='date' class='form-control input-md'  /> </td><td><input name='cativ1-o"+u+"' type='text' class='form-control input-md'  />");
 
-      $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
+      // $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
+      $('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
       u++; 
   	});
      $("#delete_row13").click(function(){
     	 if(u>1){
 		 $("#addr15"+(u-1)).html('');
+		 $("#addr15"+(u)).remove();
 		 u--;
 		 }
 	});
@@ -2074,12 +2073,14 @@ include 'top.php';
      $("#add_row14").click(function(){
       $('#addr16'+v).html("<td>"+ (v+1) +"</td><td><input name='cativ2-dp"+v+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ2"+v+"' type='text' class='form-control input-md'  /> ");
 
-      $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
+      // $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
+      $('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
       v++; 
   	});
      $("#delete_row14").click(function(){
     	 if(v>1){
 		 $("#addr16"+(v-1)).html('');
+		 $("#addr16"+(v)).remove();
 		 v--;
 		 }
 	});
