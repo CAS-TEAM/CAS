@@ -43,40 +43,85 @@ h3{
 	/*color: #d9d9d9;*/
 }
 
-.glyphicon-pencil{
+/*.glyphicon-pencil{
 	font-size: 35px;
 	color: #d9d9d9;
 	float: right;
 	margin-top: 20px;
-}
+}*/
+
+/*Create user*/
 
 .regist-form-div{
 	margin-top: 45px;
-	box-shadow: -1px 5px 30px 10px black;
-    background: rgba(0,0,0,0.2);
+	width: 500px;
+    background: transparent;
+    border: 1px solid  #44a0b3;
 }
 
-.label{
+.upload-form-div{
+	margin-top: 45px;
+    background: transparent;
+    border: 1px solid  #44a0b3;
+}
+
+.label-user{
 	font-weight: normal;
 	margin-top: 15px;
-	color: #d9d9d9;
+	color: #44a0b3;
 	font-size: 19px;
 }
 
-.register-form{
+.register-form-input{
 	background: transparent;
-	border-radius: 0px;
-	border: 0px;
-	border-bottom: 1px solid #a6a6a6;
 	font-size: 18px;
 	margin-top: 15px;
+	width: 320px;
 	height:40px;
 	color: #a6a6a6;
+	margin-left: 22px; 
+	font-family: 'Roboto', sans-serif;
+}
+
+.upload-form-input{
+	background: transparent;
+	font-size: 18px;
+	height:48px;
+	color: #a6a6a6;
+	font-family: 'Roboto', sans-serif;
+}
+
+.create-user-btn{
+	margin-top: 20px;
+	font-size: 20px;
+	width:  100px;
+	margin-left: 170px;
+	margin-bottom: 20px;
+	align-content: center;
+	background-color: transparent; 
+	border: 1px solid #44a0b3;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.submit-user-btn{
+	margin-top: 20px;
+	font-size: 20px;
+	width:  100px;
+	margin-left: -10px;
+	margin-bottom: 20px;
+	align-content: center;
+	background-color: transparent; 
+	border: 1px solid #44a0b3;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+
 }
 
 .custom-control-label{
 
-	color: #d9d9d9;
+	color: #495057;
 	padding: 0px;
 	margin-left: 0px;
 
@@ -100,13 +145,10 @@ input[type="checkbox"]
 	color: white;
 }
 
-/*.btn-warning{
-	margin-top: 20px;
-	font-size: 18px;
-	width: 100px;
-	margin-left: 80px;
-	margin-bottom: 20px;
-}*/
+
+
+
+/*Login*/
 
 .signin-link{
 	margin-top: 20px: 
@@ -134,29 +176,38 @@ input[type="checkbox"]
 
 .signin-btnn:hover{
 	border: 1px solid #44a0b3;
-	background-color: white;
+	background-color: transparent;
 	color: #44a0b3;
 }
 .user-img img{
 	height: 160px;
-	width: 140px;
+	width: 160px;
 	border-radius: 50%;  
-	background-color: white;
+	background-color: #44a0b3;
+	border: 2px solid #44a0b3;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 }
 
 div.user-img{
-	margin-top: -20px;
+	margin-top: 30px;
 	margin-bottom: 45px;
 }
 
 
 .login-card{
-	/*background: rgba(0,0,0,0.2);*/
+	background: transparent;
+	border: 1px solid #44a0b3;
+	width: 430px;
 }
 
+.signin-form-input{
+	background-color: transparent;
+	color: #a9a9a9;
+	border: 1px solid #44a0b3;
+
+}
 
 .google-i{
 	height: 27px;
@@ -170,7 +221,7 @@ div.user-img{
 }
 
 .signin-google-btn{
-	background-color: white;
+	background-color: white	;
 }
 
 
@@ -254,7 +305,7 @@ li .active{
     margin-top: 20px;
 }
 
-.nav-tabs .nav-link.active{
+/*.nav-tabs .nav-link.active{
 	font-family:Roboto,sans-serif;
 	font-size: 22px;
 	background-color: #47C9AF;
@@ -267,10 +318,57 @@ li .active{
 	font-size: 20px;
 	color:black;
 	border-bottom:5px solid #47C9AF;
-}
+}*/
 
 .cat-info{
-	font-size: 20px;
+	font-size: 17px;
+}
+
+nav > .nav.nav-tabs{
+
+  	border: none;
+    color:#fff;
+    background:#343a40;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background: #427198;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -59px;
+  left: -19%;
+  border: 15px solid transparent;
+  border-top-color: #234968;
+}
+.tab-content{
+  	background: #fdfdfd;
+    line-height: 25px;
+  	border: 1px solid #ddd;
+	border-top:5px solid #234968;
+    /*border-bottom:5px solid #e74c3c;*/
+    padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #234968;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+    font-size: 17px;
 }
 
 /*SETTINGS*/

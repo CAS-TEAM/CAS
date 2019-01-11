@@ -520,11 +520,15 @@ else
 
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE FORM
+	  			SAVE 
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT FORM
+	  			EDIT 
+				</button>
+
+				<button type="button" class="btn btn-primary mx-2" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  			PRINT 
 				</button>
 			</div>
 		</div>
@@ -596,6 +600,19 @@ else
 	</script>
 
 	<!-- FORM UPDATED MODAL -->
+
+	<script type="text/javascript">
+	function myFunction() {
+		$("#part-a-save-form").toggle();
+		$("#part-a-edit-form").toggle();
+		$("#part-a-print-form").toggle();
+	  	window.print();
+
+	  	$("#part-a-save-form").toggle();
+		$("#part-a-edit-form").toggle();
+		$("#part-a-print-form").toggle();
+	}
+	</script>
 
 	<?php 
 
