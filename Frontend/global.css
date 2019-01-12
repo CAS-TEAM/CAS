@@ -272,6 +272,17 @@ div.user-img{
 	bottom:10px;
 }
 
+.parta-self-btn{
+	background-color: white;
+	border: 1px solid white;
+	margin-top: -12px;
+}
+
+.parta-self-img{
+	height: 40px;
+	width: 40px;
+}
+
 /* USERPROFILE CSS */
 .userprofile-card{
 	margin-top:20px;

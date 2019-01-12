@@ -505,12 +505,104 @@ else
 			</div><br>
 			<div class="row">
 				<div class="col-md-4 text-left">
-					<p>Three GPI per day but maximum 30</p>
-				</div>
+	    			<label for="gpi-parta" class="col-form-label"><b>Three GPI per day but maximum 30</b></label>
+	    		</div>
+
+				<div class="col-md-3">
+	    			<div class="form-group row justify-content-center">
+	    				<div class="col-3">
+	    					<label for="gpi-parta" class="col-form-label"><b>GPI:</b></label>
+	    				</div>
+						  
+						<div class="col-2" style="padding-left: 0">
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry"><img src="img/appraisals.png" class="parta-self-img"></button>
+
+							<!-- The modal -->
+							<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+								<div class="modal-dialog  modal-lg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<table class="table table-bordered">
+											  <thead>
+											    <tr>
+											      <th scope="col">Self</th>
+											      <th scope="col">H.O.D</th>
+											      <th scope="col">Committee</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      <td><input class="form-control" id="self-a" type="text"></td>
+											      <td><input class="form-control" id="hod-a" type="text"></td>
+											      <td><input class="form-control" id="xommittee-a" type="text"></td>
+											    </tr>
+											 </tbody>
+											</table>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>							
+		    	</div>
+
+				<div class="col-md-5">
+	    			<label ><b>PI Part A = GPI =
+	    				
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+					out of 50</b></label>
+							<!-- The modal -->
+							<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+								<div class="modal-dialog  modal-lg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<table class="table table-bordered">
+											  <thead>
+											    <tr>
+											      <th scope="col">Self</th>
+											      <th scope="col">H.O.D</th>
+											      <th scope="col">Committee</th>
+											    </tr>
+											  </thead>
+											  <tbody>
+											    <tr>
+											      <td><input class="form-control" id="pi-self-a" type="text"></td>
+											      <td><input class="form-control" id="pi-hod-a" type="text"></td>
+											      <td><input class="form-control" id="pi-committee-a" type="text"></td>
+											    </tr>
+											 </tbody>
+											</table>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+					
+	    		</div>			
 			</div>
 		</div>
 
 		<hr style="border: 0.5px solid #c8c8c8">
+		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 840px">
+		</a>
 
 		<?php
 
@@ -530,7 +622,7 @@ else
 	  			EDIT 
 				</button>
 
-				<button type="button" class="btn btn-primary mx-2" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
 			</div>
