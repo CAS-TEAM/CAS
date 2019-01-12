@@ -578,14 +578,13 @@ include 'top.php';
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			NEXT 
+	  			EDIT 
 				</button>
 
-				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
-	  			EDIT
+				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  			PRINT 
 				</button>
 				
-
 				
 			</div>
 		</div>
@@ -791,11 +790,11 @@ include 'top.php';
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			NEXT 
+	  			EDIT 
 				</button>
 
-				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
-	  			EDIT 
+				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  			PRINT 
 				</button>
 			</div>
 		</div>
@@ -1598,11 +1597,11 @@ include 'top.php';
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			NEXT 
+	  			EDIT 
 				</button>
 
-				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
-	  			EDIT 
+				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  			PRINT 
 				</button>
 			</div>
 		</div>
@@ -1755,11 +1754,11 @@ include 'top.php';
 				</button>
 
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			NEXT 
+	  			EDIT 
 				</button>
 
-				<button type="button" class="btn btn-success" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically edit whatever information you have uploaded so far.">
-	  			EDIT 
+				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  			PRINT 
 				</button>
 			</div>
 		</div>
@@ -2087,6 +2086,19 @@ include 'top.php';
 	});
 
     </script>
+
+    <script type="text/javascript">
+	function myFunction() {
+		$("#part-a-save-form").toggle();
+		$("#part-a-edit-form").toggle();
+		$("#part-a-print-form").toggle();
+	  	window.print();
+
+	  	$("#part-a-save-form").toggle();
+		$("#part-a-edit-form").toggle();
+		$("#part-a-print-form").toggle();
+	}
+	</script>
 
 </body>
 </html>
