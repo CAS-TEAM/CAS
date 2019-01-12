@@ -59,36 +59,35 @@ include 'top.php';
 						</tr>
 					<tbody>
 						<tr id='addr10'>
-							<td>1</td>
+							<td id="ctosrno1">1</td>
 							<td>
-							<input type="text" name='course[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctocourse[]' id="ctocourse1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='typrlpt[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctotyprlpt[]' id="ctotyprlpt1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='ugpg[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctougpg[]' id="ctougpg1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='classsemester[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctoclasssemester[]' id="ctoclasssemester1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='hrsweek[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctohrsweek[]' id="ctohrsweek1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='hrsengaged[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctohrsengaged[]' id="ctohrsengaged1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='maxhrs[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctomaxhrs[]' id="ctomaxhrs1" class="form-control" maxlength="200" />
 							</td> 
 							<td>
-							<input type="text" name='c[]' class="form-control" maxlength="200" />
+							<input type="text" name='ctoc[]' id="ctoc1" class="form-control" maxlength="200" />
 							</td>
 						</tr>
 	                    <tr id='addr11'></tr>
 					</tbody>
 				</table>
-				<input type="hidden" id="i" value="1">
 				</div>
 			</div>
 			</div>
@@ -119,30 +118,30 @@ include 'top.php';
 						</tr>
 					<tbody>
 						<tr id='addr20'>
-							<td>1</td>
+							<td id="ctesrno1">1</td>
 							<td>
-							<input type="text" name='course[]' class="form-control" maxlength="200"/>
+							<input type="text" name='ctecourse[]' id="ctecourse1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='typrlpt[]' class="form-control" maxlength="200"/>
+							<input type="text" name='ctetyprlpt[]' id="ctetyprlpt1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='ugpg[]' class="form-control" maxlength="200"/>
+							<input type="text" name='cteugpg[]' id="cteugpg1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='classsemester[]' class="form-control" maxlength="200"/>
+							<input type="text" name='cteclasssemester[]' id="cteclasssemester1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='hrsweek[]' class="form-control" maxlength="200"/>
+							<input type="text" name='ctehrsweek[]' id="ctehrsweek1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='hrsengaged[]' class="form-control" maxlength="200"/>
+							<input type="text" name='ctehrsengaged[]' id="ctehrsengaged1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='maxhrs[]' class="form-control" maxlength="200"/>
+							<input type="text" name='ctemaxhrs[]' id="ctemaxhrs1" class="form-control" maxlength="200"/>
 							</td> 
 							<td>
-							<input type="text" name='c[]' class="form-control" maxlength="200"/>
+							<input type="text" name='ctec[]' id="ctec1" class="form-control" maxlength="200"/>
 							</td>
 						</tr>
 	                    <tr id='addr21'></tr>
@@ -485,12 +484,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr30'>
-									<td>1</td>
+									<td id='dar1'>1</td>
 									<td>
-									<input type="text" name='a' class="form-control"/>
+									<input type="text" name='dara[]' id='a1' class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='b' class="form-control"/>
+									<input type="text" name='darb[]' id='b1' class="form-control"/>
 									</td>
 									
 								</tr>
@@ -609,16 +608,6 @@ include 'top.php';
 							<thead>
 								<th colspan="3">Administrative Post</th>
 							</thead>
-							
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -629,12 +618,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr50'>
-									<td>1</td>
+									<td id='hasr1'>1</td>
 									<td>
-									<input type="text" name='ha' class="form-control" maxlength="200" />
+									<input type="text" name='ha[]' id='ha1' class="form-control" maxlength="200" />
 									</td>
 									<td>
-									<input type="text" name='hb' class="form-control" maxlength="200" />
+									<input type="text" name='hb[]' id='hb2' class="form-control" maxlength="200" />
 									</td>	
 								</tr>
 			                    <tr id='addr51'></tr>
@@ -672,12 +661,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr60'>
-									<td>1</td>
+									<td id='actsr1'>1</td>
 									<td>
-									<input type="text" name='ea' class="form-control"/>
+									<input type="text" name='ea[]' id='ea1' class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='eb' class="form-control"/>
+									<input type="text" name='eb[]' id='eb1' class="form-control"/>
 									</td>	
 								</tr>
 			                    <tr id='addr61'></tr>
@@ -711,12 +700,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr70'>
-									<td>1</td>
+									<td id="exca1">1</td>
 									<td>
-									<input type="text" name='eca' class="form-control"/>
+									<input type="text" name="eca[]" id="eca1" class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='ecb' class="form-control"/>
+									<input type="text" name="ecb[]" id="ecb1" class="form-control"/>
 									</td>	
 								</tr>
 			                    <tr id='addr71'></tr>
@@ -741,16 +730,6 @@ include 'top.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic7">
 							<thead>
-
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -761,12 +740,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr80'>
-									<td>1</td>
+									<td id="csr1">1</td>
 									<td>
-									<input type="text" name='ca' class="form-control"/>
+									<input type="text" name="ca[]" id="ca1" class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='cb' class="form-control"/>
+									<input type="text" name="cb[]" id="cb1" class="form-control"/>
 									</td>	
 								</tr>
 			                    <tr id='addr81'></tr>
@@ -800,10 +779,10 @@ include 'top.php';
 			</div>
 		</div>
 		</div>	
-		<br>
+		<!-- <br> -->
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
 
-		<div class="tab-pane fade" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab"><br>
+		<div class="tab-pane fade" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab">
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
@@ -811,12 +790,12 @@ include 'top.php';
 		</div>
 		<hr style="border: 0.5px solid #c8c8c8"><br>
 
-		<div class="container" style="border: 1px solid #c8c8c8"><br>
+		<div class="container" style="border: 1px solid #c8c8c8" id="ppr1"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+		    			<input type="text" name="pptitle[]" id="pptitle1" class="form-control my-0 my-sm-0" maxlength="200"/>						
 					</div>
 				</div>
 			</div>
@@ -826,7 +805,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of peer review Journals (not online journals)</label>
-						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+						<input type="text" name="ppnpr[]" id="ppnpr1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 			</div>
@@ -834,14 +813,14 @@ include 'top.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name="ppisbn[]" id="ppisbn1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name="ppif[]" id="ppif1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -853,12 +832,12 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					  <input type="radio" id="customRadioInline11" name="customRadioInline1[]" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline11" selected>Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					  <input type="radio" id="customRadioInline21" name="customRadioInline2[]" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline21">No</label>
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -868,7 +847,7 @@ include 'top.php';
 				<div class="col-md-3 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+						<input type="text" name="ppnca[]" id="ppnca1" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
@@ -878,7 +857,7 @@ include 'top.php';
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+						<input type="text" name="pppi[]" id="pppi1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 			</div>
@@ -889,90 +868,21 @@ include 'top.php';
 					<p>20 marks for peer review journal first author and 10 marks for second author</p>
 				</div>
 			</div>
-		</div><br><br>
+		</div>
 
-		<div class="container" style="border: 1px solid #c8c8c8"><br>
-			<div class="row">
-				<div class="col-md-12 text-left">
-		    		<div class="form-inline my-2">
-		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
-					</div>
-				</div>
-			</div>
-			<hr style="border: 0.5px solid #c8c8c8">
+		<br id="br2" style="display: none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppr2"></div>
 
-			<div class="row">
-				<div class="col-md-12 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">Name of peer review Journals (not online journals)</label>
-						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
-					</div>					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
-					</div>					
-				</div>
+		<a id="add_row_ppr" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+		<a id='delete_row_ppr' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+		<br><br>
 
-				<div class="col-md-6 text-right">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
-					</div>						
-				</div>
-			</div>		
-			<hr style="border: 0.5px solid #c8c8c8">
+		<hr><br>
 
-			<div class="row">
-				<div class="col-md-2 text-left">
-					<p>Whether you are main author</p>
-				</div>
-		    	<div class="col-md-3 text-left">
-					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2">No</label>
-					</div>
-				</div>
-				<div class="col-md-1">
-					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
-					</div>
-				</div>
-				<div class="col-md-3 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
-					</div>
-				</div>
-					<div class="col-md-1">
-					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
-					</div>
-				</div>
-				<div class="col-md-2 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
-					</div>
-				</div>
-			</div>
-			<hr style="border: 0.5px solid #c8c8c8">
 
-			<div class="row">
-				<div class="col-md-12 text-left">
-					<p>20 marks for peer review journal first author and 10 marks for second author</p>
-				</div>
-			</div>
-		</div><br><br>
+
 
 	
-		<div class="container" style="border: 1px solid #c8c8c8"><br>
+		<div class="container" style="border: 1px solid #c8c8c8" id="ppric1"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
 					<p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p>
@@ -984,7 +894,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+		    			<input type="text" name="pptitleic[]" id="pptitleic1" class="form-control my-0 my-sm-0" maxlength="200"/>						
 					</div>
 				</div>
 			</div>
@@ -994,7 +904,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of International Conference held Abroad</label>
-						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+						<input type="text" name="ppnpric[]" id="ppnpric1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 			</div>
@@ -1002,14 +912,14 @@ include 'top.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name="ppisbnic[]" id="ppisbnic1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name="ppisbnic[]" id="ppisbnic1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -1021,12 +931,12 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					  <input type="radio" id="customRadioInline11ic" name="customRadioInline1ic[]" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline11ic">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					  <input type="radio" id="customRadioInline21ic" name="customRadioInline2ic[]" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline21ic">No</label>
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -1036,7 +946,7 @@ include 'top.php';
 				<div class="col-md-3 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+						<input type="text" name="ppncaic[]" id="ppncaic1" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
@@ -1046,7 +956,7 @@ include 'top.php';
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+						<input type="text" name="ppncaic[]" id="ppncaic1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 			</div>
@@ -1057,7 +967,18 @@ include 'top.php';
 					<p>15 marks for International conference for first author and 08 marks for second author</p>
 				</div>
 			</div>
-		</div><br><br>
+		</div>
+
+		<br id="bric2" style="display: none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppric2"></div>
+
+		<a id="add_row_ppric" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+		<a id='delete_row_ppric' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+
+		<br><br>
+
+		<hr><br>
+
+
 
 		<div class="container" style="border: 1px solid #c8c8c8"><br>
 
@@ -1072,7 +993,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0" maxlength="200"/>						
 					</div>
 				</div>
 			</div>
@@ -1082,7 +1003,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of International Conference held in India</label>
-						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
+						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 			</div>
@@ -1090,14 +1011,14 @@ include 'top.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -1109,12 +1030,12 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					  <input type="radio" id="customRadioInline1ici" name="customRadioInline1ici[]" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline1ici">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					  <input type="radio" id="customRadioInline2ici" name="customRadioInline2ici[]" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline2ici">No</label>
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -1124,7 +1045,7 @@ include 'top.php';
 				<div class="col-md-3 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
@@ -1134,7 +1055,7 @@ include 'top.php';
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 			</div>
@@ -1148,7 +1069,7 @@ include 'top.php';
 		</div><br><br>
 
 
-		<div class="container" style="border: 1px solid #c8c8c8"><br>
+		<!-- <div class="container" style="border: 1px solid #c8c8c8"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
@@ -1226,7 +1147,7 @@ include 'top.php';
 					<p>10 marks for International conference for first author and 05 marks for second author</p>
 				</div>
 			</div>
-		</div><br><br>
+		</div><br><br> -->
 
 		<div class="container" style="border: 1px solid #c8c8c8"><br>
 			<div class="row">
@@ -1240,7 +1161,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
+		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0" maxlength="200"/>						
 					</div>
 				</div>
 			</div>
@@ -1258,14 +1179,14 @@ include 'top.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Date of Publication</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -1276,7 +1197,7 @@ include 'top.php';
 				<div class="col-md-5 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
+						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 
@@ -1300,7 +1221,7 @@ include 'top.php';
 				<div class="col-md-3 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
+						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
@@ -1310,7 +1231,7 @@ include 'top.php';
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
+						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 			</div>
@@ -1412,7 +1333,7 @@ include 'top.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="5">Research/project/consultancy proposals submitted in academic year 20__/2-__ but yet to get approval (Max. PI=15)</th>
+								<th colspan="5">Research/project/consultancy proposals submitted in academic year 20__/20__ but yet to get approval (Max. PI=15)</th>
 							</thead>
 						     	
 							<tr>
@@ -1426,10 +1347,10 @@ include 'top.php';
 								<tr id='addr100'>
 									<td>1</td>
 									<td>
-									<input type="text" name='ta' class="form-control"/>
+									<input type="text" name='ta' class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='ab' class="form-control"/>
+									<input type="text" name='ab' class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="date" name='dc' class="form-control"/>
@@ -1460,7 +1381,7 @@ include 'top.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic9">
 							<thead>
-								<th colspan="5">Ongoing Research/project/consultancy proposals approved/initiated in academic year 20__/2-__ but yet to complete (Max. PI=15)</th>
+								<th colspan="5">Ongoing Research/project/consultancy proposals approved/initiated in academic year 20__/20__ but yet to complete (Max. PI=15)</th>
 							</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -1475,10 +1396,10 @@ include 'top.php';
 								<tr id='addr110'>
 									<td>1</td>
 									<td>
-									<input type="text" name='tta' class="form-control"/>
+									<input type="text" name='tta' class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='aab' class="form-control"/>
+									<input type="text" name='aab' class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="date" name='ddc' class="form-control"/>
@@ -1523,10 +1444,10 @@ include 'top.php';
 								<tr id='addr120'>
 									<td>1</td>
 									<td>
-									<input type="text" name='tca' class="form-control"/>
+									<input type="text" name='tca' class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='acb' class="form-control"/>
+									<input type="text" name='acb' class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="date" name='dcc' class="form-control"/>
@@ -1570,7 +1491,7 @@ include 'top.php';
 								<tr id='addr130'>
 									<td>1</td>
 									<td>
-									<input type="text" name='dpi' class="form-control"/>
+									<input type="text" name='dpi' class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="date" name='drf' class="form-control"/>
@@ -1637,13 +1558,13 @@ include 'top.php';
 								<tr id='addr140'>
 									<td>1</td>
 									<td>
-									<input type="text" name='cativ-dp' class="form-control"/>
+									<input type="text" name='cativ-dp' class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="date" name='cativ-datee' class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='cativ-o' class="form-control"/>
+									<input type="text" name='cativ-o' class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr141'></tr>
@@ -1684,13 +1605,13 @@ include 'top.php';
 								<tr id='addr150'>
 									<td>1</td>
 									<td>
-									<input type="text" name='cativ1-dp' class="form-control"/>
+									<input type="text" name='cativ1-dp' class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="date" name='cativ1-datee' class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='cativ1-o' class="form-control"/>
+									<input type="text" name='cativ1-o' class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr151'></tr>
@@ -1727,10 +1648,10 @@ include 'top.php';
 								<tr id='addr160'>
 									<td>1</td>
 									<td>
-									<input type="text" name='cativ2-dp' class="form-control"/>
+									<input type="text" name='cativ2-dp' class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='cativ2' class="form-control"/>
+									<input type="text" name='cativ2' class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr161'></tr>
@@ -1779,7 +1700,7 @@ include 'top.php';
     {
       var i=1;
      $("#add_row1").click(function(){
-      $('#addr1'+i).html("<td>"+ (i+1) +"</td><td><input name='course"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='typrlpt"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='ugpg"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='classsemester"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsweek"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsengaged"+i+"' type='text' class='form-control input-md'  /> </td><td><input name='maxhrs"+i+"' type='text' class='form-control input-md'></td><td><input name='c"+i+"' type='text' class='form-control input-md'></td>");
+      $('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td>');
 
       // $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
       $('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
@@ -1802,7 +1723,7 @@ include 'top.php';
     {
       var j=1;
      $("#add_row2").click(function(){
-      $('#addr2'+j).html("<td>"+ (j+1) +"</td><td><input name='course"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='typrlpt"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='ugpg"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='classsemester"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsweek"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='hrsengaged"+j+"' type='text' class='form-control input-md'  /> </td><td><input name='maxhrs"+j+"' type='text' class='form-control input-md'></td><td><input name='c"+j+"' type='text' class='form-control input-md'></td>");
+      $('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
       $('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
@@ -1824,7 +1745,7 @@ include 'top.php';
     {
       var k=1;
      $("#add_row3").click(function(){
-      $('#addr3'+k).html("<td>"+ (k+1) +"</td><td><input name='a"+k+"' type='text' class='form-control input-md'  /> </td><td><input name='b"+k+"' type='text' class='form-control input-md'  />");
+      $('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
        $('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
@@ -1847,7 +1768,7 @@ include 'top.php';
     {
       var l=1;
      $("#add_row4").click(function(){
-      $('#addr5'+l).html("<td>"+ (l+1) +"</td><td><input name='ha"+l+"' type='text' class='form-control input-md'  /> </td><td><input name='hb"+l+"' type='text' class='form-control input-md'  />");
+      $('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" /></td>');
 
       // $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
       $('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
@@ -1870,7 +1791,7 @@ include 'top.php';
     {
       var m=1;
      $("#add_row5").click(function(){
-      $('#addr6'+m).html("<td>"+ (m+1) +"</td><td><input name='ea"+m+"' type='text' class='form-control input-md'  /> </td><td><input name='eb"+m+"' type='text' class='form-control input-md'  />");
+      $('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control"/></td>');
 
       // $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
       $('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
@@ -1893,7 +1814,7 @@ include 'top.php';
     {
       var n=1;
      $("#add_row6").click(function(){
-      $('#addr7'+n).html("<td>"+ (n+1) +"</td><td><input name='eca"+n+"' type='text' class='form-control input-md'  /> </td><td><input name='ecb"+n+"' type='text' class='form-control input-md'  />");
+      $('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control"/></td>');
 
       // $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
        $('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
@@ -1915,7 +1836,7 @@ include 'top.php';
     {
       var o=1;
      $("#add_row7").click(function(){
-      $('#addr8'+o).html("<td>"+ (o+1) +"</td><td><input name='ca"+o+"' type='text' class='form-control input-md'  /> </td><td><input name='cb"+o+"' type='text' class='form-control input-md'  />");
+      $('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control"/></td>');
 
       // $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
       $('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
@@ -2083,6 +2004,60 @@ include 'top.php';
 		 $("#addr16"+(v)).remove();
 		 v--;
 		 }
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var ppr=2;
+     $("#add_row_ppr").click(function(){
+      $('#ppr'+ppr).html('<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1[]" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+ppr+'" selected>Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1[]" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-2 text-left"><div class="form-inline my-2"><label class="mr-sm-2">PI=</label><input type="text" name="pppi[]" id="pppi'+ppr+'" class="col-4 form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
+
+	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      $('#ppr'+ppr).toggle();
+	      $('#br'+ppr).toggle();
+	      $('#ppr'+ppr).after('<br id="br'+(ppr+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppr'+(ppr+1)+'"></div>');
+	      ppr++; 
+  	});
+     $("#delete_row_ppr").click(function(){
+    	if(ppr>2){
+		 	$("#ppr"+(ppr-1)).html('');
+		 	$('#ppr'+(ppr-1)).toggle();
+		 	$("#br"+(ppr-1)).toggle();
+		 	$("#ppr"+(ppr)).remove();
+		 	$("#br"+(ppr)).remove();
+		 	ppr--;
+		}
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var ppric=2;
+     $("#add_row_ppric").click(function(){
+      $('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1ic" name="customRadioInline1ic[]" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2ic" name="customRadioInline2ic[]" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-2 text-left"><div class="form-inline my-2"><label class="mr-sm-2">PI=</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-4 form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
+
+	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      $('#ppric'+ppric).toggle();
+	      $('#bric'+ppric).toggle();
+	      $('#ppric'+ppric).after('<br id="bric'+(ppric+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppric'+(ppric+1)+'"></div>');
+	      ppric++; 
+  	});
+     $("#delete_row_ppric").click(function(){
+    	if(ppric>2){
+		 	$("#ppric"+(ppric-1)).html('');
+		 	$('#ppric'+(ppric-1)).toggle();
+		 	$("#bric"+(ppric-1)).toggle();
+		 	$("#ppric"+(ppric)).remove();
+		 	$("#bric"+(ppric)).remove();
+		 	ppric--;
+		}
 	});
 	});
 
