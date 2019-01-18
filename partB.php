@@ -1,13 +1,65 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id']))
+{
+	header("LOCATION: index.php");
+}
+else
+{
+
+include 'dbh.php';
+
+$userId=mysqli_real_escape_string($conn,$_SESSION['id']);
+
 include 'top.php';
 
 ?>
 
-	<nav class="navbar bg-dark">
-		<p class="navbar-brand" style="color:white;width:100%;text-align:center"></p>
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	  	<a class="navbar-brand" href="#">CAS</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      	<!-- <li class="nav-item active">
+		        	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		      	</li> -->
+		      	<?php
+		      	if(!isset($_SESSION['id']))
+		      	{
+			      	?>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="index.php">Sign Up | Sign In</a>
+			      	</li>
+			      	<?php
+			    }			      	
+			    else
+			    {
+			    	?>			    	
+			      	<li class="nav-item dropdown">
+				        <img class="nav-link dropdown-toggle" src="defaults/default_userprofile_pic.png" width="50px" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
+				        <!-- </a> -->
+				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
+				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto"><span class="my-auto ml-2">My Profile</span></a>
+				          	<a class="dropdown-item" href="usersettings.php"><img src="settings.png" style="width:30px;height:auto"><span class="my-auto ml-2">Settings</span></a>
+				          	<div class="dropdown-divider"></div>
+				          	<a class="dropdown-item" href="logout.php">Log out</a>
+				        </div>
+			      	</li>
+			      	<?php
+		      	}
+		      	?>
+		    </ul>
+	  	</div>
 	</nav>
     
+    <form method="POST" action="partBsys.php" class="part-b-form" id="part-b-form">
 	<div class="container partb">
 
 		<header class="heading"><b>'Part B'</b></header><br>
@@ -18,7 +70,6 @@ include 'top.php';
 			<a class="nav-item nav-link" id="nav-cat2-tab" data-toggle="tab" href="#nav-cat2" role="tab" aria-controls="nav-cat2" aria-selected="false">Category II</a>
 			<a class="nav-item nav-link" id="nav-cat3-tab" data-toggle="tab" href="#nav-cat3" role="tab" aria-controls="nav-cat3" aria-selected="false">Category III</a>
             <a class="nav-item nav-link" id="nav-cat4-tab" data-toggle="tab" href="#nav-cat4" role="tab" aria-controls="nav-cat4" aria-selected="false">Category IV</a>
-		    
 		  </div>
 		</nav>
 		
@@ -158,24 +209,24 @@ include 'top.php';
 			<div class="col-md-4">
 				<label class="col-form-label"><b>*Max hours(B)=(Hrs./week)*(13)</b></label>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-5" >
     			<div class="form-group row justify-content-center">
-    				<div class="col-6">
-    					<label for="avg-c" class="col-form-label"><b>Average of C(AVC)</b></label>
+    				<div class="col-6 text-right" style="margin:0;padding:0;padding-right: 10px">
+    					<label for="avg-c" class="col-form-label"><b>Average of C(AVC) :</b></label>
     				</div>
 					  
-					<div class="col-4">
+					<div class="col-3" style="margin:0;padding:0">
 					   <input class="form-control" type="text" name="avg-c" id="avg-c" maxlength="200"/>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-3">
     			<div class="form-group row justify-content-center">
-    				<div class="col-6 text-right">
-    					<label for="total-c" class="col-form-label"><b>Total of C</b></label>
+    				<div class="col-6 text-right" style="margin:0;padding:0;padding-right: 10px">
+    					<label for="total-c" class="col-form-label"><b>Total of C :</b></label>
     				</div>
 					  
-					<div class="col-5">
+					<div class="col-4" style="margin:0;padding:0;padding-right:10px">
 					   <input class="form-control" type="text" name="total-c" id="total-c" maxlength="200"/>
 					</div>
 				</div>							
@@ -185,12 +236,12 @@ include 'top.php';
 		<div class="row">
 			<div class="col-md-3 offset-md-9">
 				<label class="col-form-label"><b>PI 1 =
-						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat1-1" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 				out of 40</b>
 				</label>
 
 						<!-- The modal -->
-					<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal fade" id="flipFlop-cat1-1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 						<div class="modal-dialog  modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -210,9 +261,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-self-a" type="text"></td>
-									      <td><input class="form-control" id="pi-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pi-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="40"></td>
+									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="40"></td>
+									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="40"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -548,7 +599,7 @@ include 'top.php';
 		<div class="row">
 			<div class="col-md-8">
     			<div class="form-group row justify-content-center">
-    				<div class="col-6 text-right">
+    				<div class="col-6 text-right" style="padding:0">
     					<label for="avg-ap" class="col-form-label"><b>Average of A in % =</b></label>
     				</div>
 					  
@@ -562,12 +613,12 @@ include 'top.php';
 		<div class="row">
 			<div class="col-md-6 offset-md-6">
 				<label class="col-form-label"><b>PI2 = (Average A in % * 40)/100 =
-						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat1-2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 				out of 40</b>
 				</label>
 			</div>
 						<!-- The modal -->
-				<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+				<div class="modal fade" id="flipFlop-cat1-2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 					<div class="modal-dialog  modal-lg" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -639,44 +690,44 @@ include 'top.php';
 		<div class="row">
 			<div class="col-md-7 offset-md-8">
 				<label class="col-form-label"><b>PI 3 = 
-						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat1-3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 				out of 10</b>
 				</label>
 			</div>
-						<!-- The modal -->
-				<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-					<div class="modal-dialog  modal-lg" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4 class="modal-title" id="modalLabel">Appraisals</h4>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<table class="table table-bordered">
-								  <thead>
-								    <tr>
-								      <th scope="col">Self</th>
-								      <th scope="col">H.O.D</th>
-								      <th scope="col">Committee</th>
-								    </tr>
-								  </thead>
-								  <tbody>
-								    <tr>
-								      <td><input class="form-control" id="pi3-self-a" type="text"></td>
-								      <td><input class="form-control" id="pi3-hod-a" type="text"></td>
-								      <td><input class="form-control" id="pi3-committee-a" type="text"></td>
-								    </tr>
-								 </tbody>
-								</table>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-							</div>
+			<!-- The modal -->
+			<div class="modal fade" id="flipFlop-cat1-3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+				<div class="modal-dialog  modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<table class="table table-bordered">
+							  <thead>
+							    <tr>
+							      <th scope="col">Self</th>
+							      <th scope="col">H.O.D</th>
+							      <th scope="col">Committee</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><input class="form-control" id="pi3-self-a" type="text"></td>
+							      <td><input class="form-control" id="pi3-hod-a" type="text"></td>
+							      <td><input class="form-control" id="pi3-committee-a" type="text"></td>
+							    </tr>
+							 </tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
 						</div>
 					</div>
 				</div>
+			</div>
 			
 		    
 		</div>	
@@ -758,12 +809,12 @@ include 'top.php';
 		<div class="row">
 			<div class="col-md-7 offset-md-7">
 				<label class="col-form-label"><b>PI 4 = 
-						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat1-4" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 				out of 10</b>
 				</label>
 			</div>
 						<!-- The modal -->
-			<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+			<div class="modal fade" id="flipFlop-cat1-4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 				<div class="modal-dialog  modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -807,13 +858,13 @@ include 'top.php';
 
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<label class="col-form-label"><b>Teaching and Learning Total = PI1+PI2+PI3+PI4 = 
-						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				<label class="col-form-label"><b>Teaching and Learning Total = PI1 + PI2 + PI3 + PI4 = 
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat1-5" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 				out of 100</b>
 				</label>
 			</div>
 						<!-- The modal -->
-			<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+			<div class="modal fade" id="flipFlop-cat1-5" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 				<div class="modal-dialog  modal-lg" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -850,11 +901,9 @@ include 'top.php';
 
 	
 
-		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
-		</a>
+		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px"></a>
 
-		<div class="row form-inline justify-content-center">
-
+		<!-- <div class="row form-inline justify-content-center">
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SAVE 
@@ -866,16 +915,15 @@ include 'top.php';
 
 				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
-				</button>
-
-				
+				</button>				
 			</div>
-		</div>
+		</div> -->
+
 		</div>
 		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
 		<!-- <div class="tab-pane fade show" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab"> -->
-		<div class="tab-pane fade" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab"><br>
+		<div class="tab-pane fade" id="nav-cat2" role="tabpanel" aria-labelledby="nav-cat2-tab">
 		<div class="row">
 			<div class="col-md-12">
 				<p class="cat-info"><b>Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></p>
@@ -927,12 +975,12 @@ include 'top.php';
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PII 1 =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2-1" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
 						<!-- The modal -->
-					<div class="modal fade" id="flipFlop1-cat2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal fade" id="flipFlop1-cat2-1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 						<div class="modal-dialog  modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -1013,12 +1061,12 @@ include 'top.php';
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PII 2 =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2-2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
 						<!-- The modal -->
-					<div class="modal fade" id="flipFlop-cat2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal fade" id="flipFlop-cat2-2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 						<div class="modal-dialog  modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -1097,12 +1145,12 @@ include 'top.php';
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PII 3 =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2-3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
 						<!-- The modal -->
-					<div class="modal fade" id="flipFlop-cat2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal fade" id="flipFlop-cat2-3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 						<div class="modal-dialog  modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -1181,12 +1229,12 @@ include 'top.php';
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PII 4 =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2-4" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
-						<!-- The modal -->
-					<div class="modal fade" id="flipFlop-cat2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat2-4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 						<div class="modal-dialog  modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -1226,7 +1274,7 @@ include 'top.php';
  -->
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
-		<div class="row form-inline justify-content-center">
+		<!-- <div class="row form-inline justify-content-center">
 
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
@@ -1241,7 +1289,7 @@ include 'top.php';
 	  			PRINT 
 				</button>
 			</div>
-		</div>
+		</div> -->
 		</div>	
 		<!-- <br> -->
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
@@ -1249,12 +1297,18 @@ include 'top.php';
 		<div class="tab-pane fade" id="nav-cat3" role="tabpanel" aria-labelledby="nav-cat3-tab">
 		<div class="row">
 			<div class="col-md-12">
-				<p class="cat-info"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175) Published Papers in peer reviewed Journals (Max. PI=100)</b></p>
+				<p class="cat-info"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175)</b></p>
 			</div>
 		</div>
 		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container" style="border: 1px solid #c8c8c8" id="ppr1"><br>
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p>
+				</div>
+			</div>
+			<hr style="border: 0.5px solid #c8c8c8">
 			<div class="row">
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
@@ -1296,11 +1350,11 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline11" name="customRadioInline1[]" class="custom-control-input yesradio">
+					  <input type="radio" id="customRadioInline11" name="customRadioInline1[1]" class="custom-control-input yesradio">
 					  <label class="custom-control-label yes" for="customRadioInline11" selected>Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline21" name="customRadioInline2[]" class="custom-control-input noradio">
+					  <input type="radio" id="customRadioInline21" name="customRadioInline1[1]" class="custom-control-input noradio">
 					  <label class="custom-control-label no" for="customRadioInline21">No</label>
 					</div>
 				</div>
@@ -1314,16 +1368,16 @@ include 'top.php';
 						<input type="text" name="ppnca[]" id="ppnca1" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
-					<div class="col-md-1">
+				<div class="col-md-1">
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
-				<div class="col-md-2 text-left">
+				<!-- <div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
 						<input type="text" name="pppi[]" id="pppi1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
@@ -1339,6 +1393,50 @@ include 'top.php';
 		<a id="add_row_ppr" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 		<a id='delete_row_ppr' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 		<br><br>
+
+		<div class="row justify-content-center">
+			<div class="col-md-3">
+				<label class="col-form-label"><b>PI  =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-1" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3-1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="100"></td>
+									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="100"></td>
+									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="100"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		    </div>
+		</div>		
 
 		<hr><br>
 
@@ -1383,7 +1481,7 @@ include 'top.php';
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name="ppisbnic[]" id="ppisbnic1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="text" name="ppific[]" id="ppific1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -1395,11 +1493,11 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline11ic" name="customRadioInline1ic[]" class="custom-control-input yesradio">
+					  <input type="radio" id="customRadioInline11ic" name="customRadioInline1ic[1]" class="custom-control-input yesradio">
 					  <label class="custom-control-label yes" for="customRadioInline11ic">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline21ic" name="customRadioInline2ic[]" class="custom-control-input noradio">
+					  <input type="radio" id="customRadioInline21ic" name="customRadioInline1ic[1]" class="custom-control-input noradio">
 					  <label class="custom-control-label no" for="customRadioInline21ic">No</label>
 					</div>
 				</div>
@@ -1417,12 +1515,12 @@ include 'top.php';
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
-				<div class="col-md-2 text-left">
+				<!-- <div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name="ppncaic[]" id="ppncaic1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+						<input type="text" name="pppiic[]" id="pppiic1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
@@ -1440,11 +1538,59 @@ include 'top.php';
 
 		<br><br>
 
+		<div class="row justify-content-center">
+			<div class="col-md-3">
+				<label class="col-form-label"><b>PI  =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3-2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="15"></td>
+									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="15"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		    </div>
+		</div>
+
 		<hr><br>
 
 
 
-		<div class="container" style="border: 1px solid #c8c8c8"><br>
+
+
+
+
+		<div class="container" style="border: 1px solid #c8c8c8" id="pprinc1"><br>
 
 			<div class="row">
 				<div class="col-md-12 text-left">
@@ -1457,7 +1603,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0" maxlength="200"/>						
+		    			<input type="text" name="pptitleinc[]" id="pptitleinc1" class="form-control my-0 my-sm-0" maxlength="200"/>						
 					</div>
 				</div>
 			</div>
@@ -1467,7 +1613,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of International Conference held in India</label>
-						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="text" name="ppnprinc[]" id="ppnprinc1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 			</div>
@@ -1475,14 +1621,14 @@ include 'top.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="text" name="ppisbnpinc[]" id="ppisbninc1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="text" name="ppifinc[]" id="ppifinc1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -1494,12 +1640,12 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1ici" name="customRadioInline1ici[]" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1ici">Yes</label>
+					  <input type="radio" id="customRadioInline11inc" name="customRadioInline1inc[1]" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline11inc">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2ici" name="customRadioInline2ici[]" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2ici">No</label>
+					  <input type="radio" id="customRadioInline21inc" name="customRadioInline1inc[1]" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline21inc">No</label>
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -1509,19 +1655,19 @@ include 'top.php';
 				<div class="col-md-3 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
+						<input type="text" name="ppncainc[]" id="ppncainc1" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
-				<div class="col-md-2 text-left">
+				<!-- <div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+						<input type="text" name="pppiinc[]" id="pppiinc1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
@@ -1530,90 +1676,70 @@ include 'top.php';
 					<p>10 marks for International conference for first author and 05 marks for second author</p>
 				</div>
 			</div>
-		</div><br><br>
+		</div>
+
+		<br id="brinc2" style="display: none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprinc2"></div>
+
+		<a id="add_row_pprinc" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+		<a id='delete_row_pprinc' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+
+		<br><br>
+
+		<div class="row justify-content-center">
+			<div class="col-md-3">
+				<label class="col-form-label"><b>PI  =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3-3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="10"></td>
+									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="10"></td>
+									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="10"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		    </div>
+		</div>
+
+		<hr><br>
 
 
-		<!-- <div class="container" style="border: 1px solid #c8c8c8"><br>
-			<div class="row">
-				<div class="col-md-12 text-left">
-		    		<div class="form-inline my-2">
-		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0"/>						
-					</div>
-				</div>
-			</div>
-			<hr style="border: 0.5px solid #c8c8c8">
 
-			<div class="row">
-				<div class="col-md-12 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">Name of International Conference held in India</label>
-						<input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/>
-					</div>					
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
-					</div>					
-				</div>
 
-				<div class="col-md-6 text-right">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0"/>
-					</div>						
-				</div>
-			</div>		
-			<hr style="border: 0.5px solid #c8c8c8">
 
-			<div class="row">
-				<div class="col-md-2 text-left">
-					<p>Whether you are main author</p>
-				</div>
-		    	<div class="col-md-3 text-left">
-					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2">No</label>
-					</div>
-				</div>
-				<div class="col-md-1">
-					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
-					</div>
-				</div>
-				<div class="col-md-3 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0"/>	
-					</div>
-				</div>
-					<div class="col-md-1">
-					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
-					</div>
-				</div>
-				<div class="col-md-2 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0"/>	
-					</div>
-				</div>
-			</div>
-			<hr style="border: 0.5px solid #c8c8c8">
 
-			<div class="row">
-				<div class="col-md-12 text-left">
-					<p>10 marks for International conference for first author and 05 marks for second author</p>
-				</div>
-			</div>
-		</div><br><br> -->
 
-		<div class="container" style="border: 1px solid #c8c8c8"><br>
+
+
+		<div class="container" style="border: 1px solid #c8c8c8" id="pprbk1"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
 					<p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p>
@@ -1625,7 +1751,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name='pptitle' class="form-control my-0 my-sm-0" maxlength="200"/>						
+		    			<input type="text" name="pptitlebk[]" id="pptitlebk1" class="form-control my-0 my-sm-0" maxlength="200"/>						
 					</div>
 				</div>
 			</div>
@@ -1635,7 +1761,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Publisher</label>
-						<!-- <input type="text" name='ppnpr' class="form-control my-0 my-sm-0"/> -->
+						<!-- <input type="text" name="ppnpr[]" class="form-control my-0 my-sm-0"/> -->
 					</div>					
 				</div>
 			</div>
@@ -1643,14 +1769,14 @@ include 'top.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="text" name="ppisbnbk[]" id="ppisbnbk1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Date of Publication</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="date" name="ppdatebk[]" id="ppdatebk1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -1661,7 +1787,7 @@ include 'top.php';
 				<div class="col-md-5 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Impact factor</label>
-						<input type="text" name='ppisbn' class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="text" name="ppifbk[]" id="ppifbk1" class="form-control my-0 my-sm-0" maxlength="200"/>
 					</div>						
 				</div>
 
@@ -1670,12 +1796,12 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline1">Yes</label>
+					  <input type="radio" id="customRadioInline11bk" name="customRadioInline1bk[1]" class="custom-control-input yesradio">
+					  <label class="custom-control-label yes" for="customRadioInline11bk">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input noradio">
-					  <label class="custom-control-label no" for="customRadioInline2">No</label>
+					  <input type="radio" id="customRadioInline21bk" name="customRadioInline1bk[1]" class="custom-control-input noradio">
+					  <label class="custom-control-label no" for="customRadioInline21bk">No</label>
 					</div>
 				</div>
 				<div class="col-md-1">
@@ -1685,19 +1811,19 @@ include 'top.php';
 				<div class="col-md-3 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">No. of co-author</label>
-						<input type="text" name='ppnca' class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
+						<input type="text" name="ppncabk[]" id="ppncabk1" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
 				</div>
 					<div class="col-md-1">
 					<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
 					</div>
 				</div>
-				<div class="col-md-2 text-left">
+				<!-- <div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+						<input type="text" name="pppibk[]" id="pppibk1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
 
@@ -1706,7 +1832,64 @@ include 'top.php';
 					<p>15 marks for first author and 08 marks for co-author</p>
 				</div>
 			</div>
-		</div><br>
+		</div>
+
+		<br id="brbk2" style="display: none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprbk2"></div>
+
+		<a id="add_row_pprbk" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+		<a id='delete_row_pprbk' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+
+		<br><br>
+
+
+		<div class="row justify-content-center">
+			<div class="col-md-3">
+				<label class="col-form-label"><b>PI  =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-4" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3-4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="15"></td>
+									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="15"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+		    </div>
+		</div>
+
+
+
+
+
 		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container">
@@ -1717,15 +1900,6 @@ include 'top.php';
 						<thead>
 							<th colspan="5">Research/thesis supervisor and project guide (Max.PI=40)</th>
 						</thead>
-							<!-- <col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 10px;">
-					     	<col style="width: 0px;">
-					     	<col style="width: 40px;">
-					     	<col style="width: 380px;">
-					     	<col style="width: 40px;"> -->
 						     	
 							<tr>
 								<th class="text-center">Degree</th>
@@ -1791,6 +1965,12 @@ include 'top.php';
 		</div><br><br>
 	
 
+
+
+
+
+
+
 		<div class="container">
     		<div class="row clearfix">
 				<div class="col-md-12 column">
@@ -1809,18 +1989,18 @@ include 'top.php';
 							</tr>
 							<tbody>
 								<tr id='addr100'>
-									<td>1</td>
+									<td id="res1">1</td>
 									<td>
-									<input type="text" name='ta' class="form-control" maxlength="200"/>
+									<input type="text" name="ta[]" id="ta1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='ab' class="form-control" maxlength="200"/>
+									<input type="text" name="ab[]" id="ab1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name='dc' class="form-control"/>
+									<input type="date" name="dc[]" id="dc1" class="form-control"/>
 									</td>
 									<td>
-									<input type="number" name='gd' class="form-control"/>
+									<input type="number" name="gd[]" id="gd1" class="form-control"/>
 									</td>	
 								</tr>
 			                    <tr id='addr101'></tr>
@@ -1837,6 +2017,12 @@ include 'top.php';
 				</div>
 			</div>
 		</div><br><br>
+
+
+
+
+
+
 
 
 		<div class="container">
@@ -1858,18 +2044,18 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr110'>
-									<td>1</td>
+									<td id="ores1">1</td>
 									<td>
-									<input type="text" name='tta' class="form-control" maxlength="200"/>
+									<input type="text" name="tta[]" id="tta1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='aab' class="form-control" maxlength="200"/>
+									<input type="text" name="aab[]" id="aab1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name='ddc' class="form-control"/>
+									<input type="date" name="ddc[]" id="ddc1" class="form-control"/>
 									</td>
 									<td>
-									<input type="number" name='ggd' class="form-control"/>
+									<input type="number" name="ggd[]" id="ggd1" class="form-control"/>
 									</td>	
 								</tr>
 			                    <tr id='addr111'></tr>
@@ -1894,7 +2080,7 @@ include 'top.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic10">
 							<thead>
-								<th colspan="5">Completed Research Project and Consultancies initiated in academic year 20__/2-__ but completed in academic year 20__/20__ (Max. PI=20) (Max. PI=20)</th>
+								<th colspan="5">Completed Research Project and Consultancies initiated in academic year 20__/20__ but completed in academic year 20__/20__ (Max. PI=20) (Max. PI=20)</th>
 							</thead>
 							
 							<tr>
@@ -1906,18 +2092,18 @@ include 'top.php';
 							</tr>
 							<tbody>
 								<tr id='addr120'>
-									<td>1</td>
+									<td id="cres1">1</td>
 									<td>
-									<input type="text" name='tca' class="form-control" maxlength="200"/>
+									<input type="text" name="tca[]" id="tca1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='acb' class="form-control" maxlength="200"/>
+									<input type="text" name="acb[]" id="acb1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name='dcc' class="form-control"/>
+									<input type="date" name="dcc[]" id="dcc1" class="form-control"/>
 									</td>
 									<td>
-									<input type="number" name='gcd' class="form-control"/>
+									<input type="number" name="gcd[]" id="gcd1" class="form-control"/>
 									</td>	
 								</tr>
 			                    <tr id='addr121'></tr>
@@ -1953,12 +2139,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr130'>
-									<td>1</td>
+									<td id="pip1">1</td>
 									<td>
-									<input type="text" name='dpi' class="form-control" maxlength="200"/>
+									<input type="text" name="dpi[]" id="dpi1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name='drf' class="form-control"/>
+									<input type="date" name="drf[]" id="drf1" class="form-control"/>
 									</td>
 								</tr>
 			                    <tr id='addr131'></tr>
@@ -1979,8 +2165,7 @@ include 'top.php';
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
-		<div class="row form-inline justify-content-center">
-
+		<!-- <div class="row form-inline justify-content-center">
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SAVE 
@@ -1994,7 +2179,8 @@ include 'top.php';
 	  			PRINT 
 				</button>
 			</div>
-		</div>
+		</div> -->
+
 		</div>
 		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
@@ -2024,15 +2210,15 @@ include 'top.php';
 									 
 							<tbody>
 								<tr id='addr140'>
-									<td>1</td>
+									<td id="sem1">1</td>
 									<td>
-									<input type="text" name='cativ-dp' class="form-control" maxlength="200"/>
+									<input type="text" name="cativ-dp[]" id="cativ-dp1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name='cativ-datee' class="form-control"/>
+									<input type="date" name="cativ-datee[]" id="cativ-datee1" class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='cativ-o' class="form-control" maxlength="200"/>
+									<input type="text" name="cativ-o[]" id="cativ-o1" class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr141'></tr>
@@ -2071,15 +2257,15 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr150'>
-									<td>1</td>
+									<td id="inv1">1</td>
 									<td>
-									<input type="text" name='cativ1-dp' class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1-dp[]" id="cativ1-dp1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name='cativ1-datee' class="form-control"/>
+									<input type="date" name="cativ1-datee[]" id="cativ1-datee1" class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name='cativ1-o' class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1-o[]" id="cativ1-o1" class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr151'></tr>
@@ -2114,12 +2300,12 @@ include 'top.php';
 							 
 							<tbody>
 								<tr id='addr160'>
-									<td>1</td>
+									<td id="creds1">1</td>
 									<td>
-									<input type="text" name='cativ2-dp' class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2-dp[]" id="cativ2-dp1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name='cativ2' class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2[]" id="cativ21" class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr161'></tr>
@@ -2138,10 +2324,9 @@ include 'top.php';
 		</div>
 		<hr style="border: 0.5px solid #c8c8c8">
 
-		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
-		</a><br>
+		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px"></a><br><br><br>
+		<!-- 
 		<div class="row form-inline justify-content-center">
-
 			<div class="col se-btn">
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SAVE 
@@ -2155,15 +2340,26 @@ include 'top.php';
 	  			PRINT 
 				</button>
 			</div>
+		</div> -->
+	</div>
+
+	
+	<div class="row form-inline justify-content-center">
+		<div class="col se-btn">
+			<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+	  		SAVE 
+			</button>
+			<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
+	  		EDIT 
+			</button>
+			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  		PRINT 
+			</button>
 		</div>
 	</div>
 	</div>
-
-
-		
 	</div>
-
-
+	</form>
 
 
 
@@ -2330,7 +2526,7 @@ include 'top.php';
     {
       var p=1;
      $("#add_row8").click(function(){
-      $('#addr10'+p).html("<td>"+ (p+1) +"</td><td><input name='ta"+p+"' type='text' class='form-control input-md'  /> </td><td><input name='ab"+p+"' type='text' class='form-control input-md'  /> </td><td><input name='dc"+p+"' type='date' class='form-control input-md'  /> </td><td><input name='gd"+p+"' type='number' class='form-control input-md'  />");
+      $('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control"/></td></tr>');
 
       // $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
       $('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
@@ -2352,7 +2548,7 @@ include 'top.php';
     {
       var q=1;
      $("#add_row9").click(function(){
-      $('#addr11'+q).html("<td>"+ (q+1) +"</td><td><input name='tta"+q+"' type='text' class='form-control input-md'  /> </td><td><input name='aab"+q+"' type='text' class='form-control input-md'  /> </td><td><input name='ddc"+q+"' type='date' class='form-control input-md'  /> </td><td><input name='ggd"+q+"' type='number' class='form-control input-md'  />");
+      $('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control"/></td></tr>');
 
       // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
       $('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
@@ -2375,7 +2571,7 @@ include 'top.php';
     {
       var r=1;
      $("#add_row10").click(function(){
-      $('#addr12'+r).html("<td>"+ (r+1) +"</td><td><input name='tca"+r+"' type='text' class='form-control input-md'  /> </td><td><input name='acb"+r+"' type='text' class='form-control input-md'  /> </td><td><input name='dcc"+r+"' type='date' class='form-control input-md'  /> </td><td><input name='gcd"+r+"' type='number' class='form-control input-md'  />");
+      $('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control"/></td>');
 
       // $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
       $('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
@@ -2397,7 +2593,7 @@ include 'top.php';
     {
       	var s=1;
      	$("#add_row11").click(function(){
-      	$('#addr13'+s).html("<td>"+ (s+1) +"</td><td><input name='dpi"+s+"' type='text' class='form-control input-md'  /> </td><td><input name='drf"+s+"' type='date' class='form-control input-md'  /> ");
+      	$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control"/></td>');
 
       	// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
       	$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
@@ -2419,7 +2615,7 @@ include 'top.php';
     {
       var t=1;
      $("#add_row12").click(function(){
-      $('#addr14'+t).html("<td>"+ (t+1) +"</td><td><input name='cativ-dp"+t+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ-datee"+t+"' type='date' class='form-control input-md'  /> </td><td><input name='cativ-o"+t+"' type='text' class='form-control input-md'  />");
+      $('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ-dp[]" id="cativ-dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ-datee[]" id="cativ-datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
       $('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
@@ -2441,7 +2637,7 @@ include 'top.php';
     {
       var u=1;
      $("#add_row13").click(function(){
-      $('#addr15'+u).html("<td>"+ (u+1) +"</td><td><input name='cativ1-dp"+u+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ1-datee"+u+"' type='date' class='form-control input-md'  /> </td><td><input name='cativ1-o"+u+"' type='text' class='form-control input-md'  />");
+      $('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1-dp[]" id="cativ1-dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1-datee[]" id="cativ1-datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1-o[]" id="cativ1-o'+(u+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
       $('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
@@ -2464,7 +2660,7 @@ include 'top.php';
     {
       var v=1;
      $("#add_row14").click(function(){
-      $('#addr16'+v).html("<td>"+ (v+1) +"</td><td><input name='cativ2-dp"+v+"' type='text' class='form-control input-md'  /> </td><td><input name='cativ2"+v+"' type='text' class='form-control input-md'  /> ");
+      $('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2-dp[]" id="cativ2-dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
       $('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
@@ -2486,7 +2682,7 @@ include 'top.php';
     {
       var ppr=2;
      $("#add_row_ppr").click(function(){
-      $('#ppr'+ppr).html('<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1[]" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+ppr+'" selected>Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1[]" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-2 text-left"><div class="form-inline my-2"><label class="mr-sm-2">PI=</label><input type="text" name="pppi[]" id="pppi'+ppr+'" class="col-4 form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
+      $('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+ppr+'" selected>Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
 
 	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      $('#ppr'+ppr).toggle();
@@ -2513,7 +2709,7 @@ include 'top.php';
     {
       var ppric=2;
      $("#add_row_ppric").click(function(){
-      $('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1ic" name="customRadioInline1ic[]" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2ic" name="customRadioInline2ic[]" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-2 text-left"><div class="form-inline my-2"><label class="mr-sm-2">PI=</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-4 form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
+      $('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
 
 	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      $('#ppric'+ppric).toggle();
@@ -2534,6 +2730,63 @@ include 'top.php';
 	});
 
     </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var pprinc=2;
+     $("#add_row_pprinc").click(function(){
+      $('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div></div>');
+
+	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      $('#pprinc'+pprinc).toggle();
+	      $('#brinc'+pprinc).toggle();
+	      $('#pprinc'+pprinc).after('<br id="brinc'+(pprinc+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprinc'+(pprinc+1)+'"></div>');
+	      pprinc++; 
+  	});
+     $("#delete_row_pprinc").click(function(){
+    	if(pprinc>2){
+		 	$("#pprinc"+(pprinc-1)).html('');
+		 	$('#pprinc'+(pprinc-1)).toggle();
+		 	$("#brinc"+(pprinc-1)).toggle();
+		 	$("#pprinc"+(pprinc)).remove();
+		 	$("#brinc"+(pprinc)).remove();
+		 	pprinc--;
+		}
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      var pprbk=2;
+     $("#add_row_pprbk").click(function(){
+      $('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio"> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div></div>'
+      	);
+
+	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      $('#pprbk'+pprbk).toggle();
+	      $('#brbk'+pprbk).toggle();
+	      $('#pprbk'+pprbk).after('<br id="brbk'+(pprbk+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprbk'+(pprbk+1)+'"></div>');
+	      pprbk++; 
+  	});
+     $("#delete_row_pprbk").click(function(){
+    	if(pprbk>2){
+		 	$("#pprbk"+(pprbk-1)).html('');
+		 	$('#pprbk'+(pprbk-1)).toggle();
+		 	$("#brbk"+(pprbk-1)).toggle();
+		 	$("#pprbk"+(pprbk)).remove();
+		 	$("#brbk"+(pprbk)).remove();
+		 	pprbk--;
+		}
+	});
+	});
+
+    </script>
+
+    <script type="text/javascript">
 	function myFunction() {
 		$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
@@ -2549,6 +2802,11 @@ include 'top.php';
 </body>
 </html>
 
+<?php
+
+}
+
+?>
 
 
 

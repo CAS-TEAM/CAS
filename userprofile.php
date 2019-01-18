@@ -97,7 +97,7 @@ include 'top.php';
 			        	<div class="row">
 
 			        		<div class="col-md-4">
-			        			<img class="img-responsive" src="<?php echo $profilePicLocation; ?>" width="180px" height="180px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto">
+			        			<img class="img-responsive" src="<?php echo $profilePicLocation; ?>" width="180px" height="180px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto;object-fit: cover;">
 			        			<?php
 			        			if($admin==1)
 			        			{
@@ -285,7 +285,7 @@ include 'top.php';
 								<!-- <p class="card-text"><b></b></p>							 -->
 								<p>
 								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHODFaculty<?php echo $department; ?>" aria-expanded="false" aria-controls="collapseHODFaculty<?php echo $department; ?>">
-								    View Forms
+								    View Forms of Faculty
 								  	</button>
 								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
 								</p>
@@ -393,7 +393,7 @@ include 'top.php';
 					  			<h3 class="text-center">VIEW PROFILES AND FORMS OF ALL FACULTY</h3><br>			
 								<p>
 								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseAllFaculty" aria-expanded="false" aria-controls="collapseAllFaculty">
-								    View Forms
+								    View Forms of Faculty
 								  	</button>
 								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
 								</p>

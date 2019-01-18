@@ -351,6 +351,7 @@ nav > div a.nav-item.nav-link.active
     color:#fff;
     background: #427198;
     border-radius:0;
+    outline: none;
 }
 
 nav > div a.nav-item.nav-link.active:after
@@ -395,4 +396,9 @@ nav > div a.nav-item.nav-link:focus
 	border: 1px solid #44a0b3;
 	letter-spacing: 1px;
 	width:100%;
+}
+
+/*VIEW PROFILES PAGE*/
+input:disabled {
+  background: #dddddd;
 }
