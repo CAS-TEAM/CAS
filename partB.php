@@ -1222,8 +1222,53 @@ include 'top.php';
 				</div>
 			</div>			
 		</div>
-<!-- 		<hr style="border: 0.5px solid #c8c8c8"><br>
- -->
+		<hr style="border: 0.5px solid #c8c8c8">
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<label class="col-form-label"><b>Co-Curricular and administrative activities Total = PII1+PII2+PII3+PII4 = 
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				out of 100</b>
+				</label>
+			</div>
+						<!-- The modal -->
+			<div class="modal fade" id="flipFlop-cat2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+				<div class="modal-dialog  modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<table class="table table-bordered">
+							  <thead>
+							    <tr>
+							      <th scope="col">Self</th>
+							      <th scope="col">H.O.D</th>
+							      <th scope="col">Committee</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><input class="form-control" id="pii-total-self-a" type="text"></td>
+							      <td><input class="form-control" id="pii3-total-hod-a" type="text"></td>
+							      <td><input class="form-control" id="pii3-total-committee-a" type="text"></td>
+							    </tr>
+							 </tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>   
+		</div>	
+
+	
+
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
 		<div class="row form-inline justify-content-center">
@@ -1319,10 +1364,47 @@ include 'top.php';
 					</div>
 				</div>
 				<div class="col-md-2 text-left">
-					<div class="form-inline my-2">
-						<label class="mr-sm-2">PI=</label>
-						<input type="text" name="pppi[]" id="pppi1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+					<div class="form-inline my-4">
+						<label class="mr-sm-2">PI =</label>
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+
+						<!-- <input type="text" name="pppi[]" id="pppi1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/> -->	
+
 					</div>
+					<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pp-self-a" type="text"></td>
+									      <td><input class="form-control" id="pp-hod-a" type="text"></td>
+									      <td><input class="form-control" id="pp-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>   
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -1419,9 +1501,44 @@ include 'top.php';
 				</div>
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
-						<label class="mr-sm-2">PI=</label>
-						<input type="text" name="ppncaic[]" id="ppncaic1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+						<label class="mr-sm-2">PI =</label>
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+						<!-- <input type="text" name="ppncaic[]" id="ppncaic1" class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	 -->
 					</div>
+					<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pabroad-self-a" type="text"></td>
+									      <td><input class="form-control" id="pabroad-hod-a" type="text"></td>
+									      <td><input class="form-control" id="pabroad-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>   
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -1519,8 +1636,43 @@ include 'top.php';
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+						<!-- <input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/> -->	
 					</div>
+					<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pindia-self-a" type="text"></td>
+									      <td><input class="form-control" id="pindia-hod-a" type="text"></td>
+									      <td><input class="form-control" id="pindia-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>   
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -1695,8 +1847,43 @@ include 'top.php';
 				<div class="col-md-2 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">PI=</label>
-						<input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/>	
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+						<!-- <input type="text" name='ppnca' class="col-4 form-control my-0 my-sm-0" maxlength="200"/> -->	
 					</div>
+					<!-- The modal -->
+					<div class="modal fade" id="flipFlop-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="books-self-a" type="text"></td>
+									      <td><input class="form-control" id="books-hod-a" type="text"></td>
+									      <td><input class="form-control" id="books-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>  
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -1782,6 +1969,45 @@ include 'top.php';
 		                    </tr>
 						</tbody>
 						<thead>
+							<th colspan="5" style="text-align: right"><label class="mr-sm-2">PI =</label>
+								<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 35px;width: 35px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+								<!-- The modal -->
+								<div class="modal fade" id="flipFlop-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+									<div class="modal-dialog  modal-lg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<table class="table table-bordered">
+												  <thead>
+												    <tr>
+												      <th scope="col">Self</th>
+												      <th scope="col">H.O.D</th>
+												      <th scope="col">Committee</th>
+												    </tr>
+												  </thead>
+												  <tbody>
+												    <tr>
+												      <td><input class="form-control" id="research-self-a" type="text"></td>
+												      <td><input class="form-control" id="research-hod-a" type="text"></td>
+												      <td><input class="form-control" id="research-committee-a" type="text"></td>
+												    </tr>
+												 </tbody>
+												</table>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+											</div>
+										</div>
+									</div>
+								</div>  
+							</th>
+						</thead>
+						<thead>
 							<th colspan="5">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year. 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year. 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year. For co-guide the marks will be half.</th>
 						</thead>
 					</table>
@@ -1836,6 +2062,50 @@ include 'top.php';
 					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator. If second/third investigator then marks will be 5,4 and 3 respectively</p>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-4 offset-md-9">
+					<label class="col-form-label"><b>PI =
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+					</b>
+					</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop1-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-project-self-a" type="text"></td>
+									      <td><input class="form-control" id="pi-project-hod-a" type="text"></td>
+									      <td><input class="form-control" id="pi-project-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
 		</div><br><br>
 
 
@@ -1883,6 +2153,51 @@ include 'top.php';
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator. If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-4 offset-md-9">
+					<label class="col-form-label"><b>PI =
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+					</b>
+					</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop1-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-ongoing-self-a" type="text"></td>
+									      <td><input class="form-control" id="pi-ongoing-hod-a" type="text"></td>
+									      <td><input class="form-control" id="pi-ongoing-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div><br><br>
@@ -1933,6 +2248,50 @@ include 'top.php';
 					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator completed in the academic year.If second/third investigator then marks will be 5,4 and 3 respectively</p>
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-4 offset-md-9">
+					<label class="col-form-label"><b>PI =
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+					</b>
+					</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop1-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+									      <th scope="col">H.O.D</th>
+									      <th scope="col">Committee</th>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control" id="pi-completed-self-a" type="text"></td>
+									      <td><input class="form-control" id="pi-completed-hod-a" type="text"></td>
+									      <td><input class="form-control" id="pi-completed-committee-a" type="text"></td>
+									    </tr>
+									 </tbody>
+									</table>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div><br><br>
 
 		<div class="container">
@@ -1975,7 +2334,59 @@ include 'top.php';
 				</div>
 			</div>
 		</div>
-		<hr style="border: 0.5px solid #c8c8c8">
+		<hr style="border: 0.5px solid #c8c8c8"><br>
+
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<label><b>Publication, supervisor, guide, research, consultancy and intellectual properties</b></label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<label class="col-form-label"><b>Category III: PI =   
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				out of 175</b>
+				</label>
+			</div>
+						<!-- The modal -->
+			<div class="modal fade" id="flipFlop-cat3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+				<div class="modal-dialog  modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<table class="table table-bordered">
+							  <thead>
+							    <tr>
+							      <th scope="col">Self</th>
+							      <th scope="col">H.O.D</th>
+							      <th scope="col">Committee</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><input class="form-control" id="cat3-self" type="text"></td>
+							      <td><input class="form-control" id="cat3-hod" type="text"></td>
+							      <td><input class="form-control" id="cat3-committee" type="text"></td>
+							    </tr>
+							 </tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>   
+		</div>	
+
+	
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
@@ -2048,7 +2459,51 @@ include 'top.php';
 					<p>05 Marks for each at national level and 10 marks for international level abroad</p>
 				</div>
 			</div>
-		</div><br><br><br>
+		</div><br>
+
+		<div class="row">
+			<div class="col-md-4 offset-md-9">
+				<label class="col-form-label"><b>PI =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat4-1" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+					<!-- The modal -->
+				<div class="modal fade" id="flipFlop-cat4-1" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog  modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<table class="table table-bordered">
+								  <thead>
+								    <tr>
+								      <th scope="col">Self</th>
+								      <th scope="col">H.O.D</th>
+								      <th scope="col">Committee</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td><input class="form-control" id="seminar-self-a" type="text"></td>
+								      <td><input class="form-control" id="seminar-hod-a" type="text"></td>
+								      <td><input class="form-control" id="seminar-committee-a" type="text"></td>
+								    </tr>
+								 </tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
 
 	
 
@@ -2095,7 +2550,51 @@ include 'top.php';
 					<p>05 Marks for each at national level and 10 marks for international level abroad</p>
 				</div>
 			</div>
-		</div><br><br>
+		</div><br>
+
+		<div class="row">
+			<div class="col-md-4 offset-md-9">
+				<label class="col-form-label"><b>PI =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat4-2" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+					<!-- The modal -->
+				<div class="modal fade" id="flipFlop-cat4-2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog  modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<table class="table table-bordered">
+								  <thead>
+								    <tr>
+								      <th scope="col">Self</th>
+								      <th scope="col">H.O.D</th>
+								      <th scope="col">Committee</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td><input class="form-control" id="cheifguest-self-a" type="text"></td>
+								      <td><input class="form-control" id="cheifguest-hod-a" type="text"></td>
+								      <td><input class="form-control" id="cheifguest-committee-a" type="text"></td>
+								    </tr>
+								 </tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
 		
 		<div class="container">
     		<div class="row clearfix">
@@ -2136,7 +2635,95 @@ include 'top.php';
 				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-md-4 offset-md-9">
+				<label class="col-form-label"><b>PI =
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat4-3" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				</b>
+				</label>
+
+					<!-- The modal -->
+				<div class="modal fade" id="flipFlop-cat4-3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+					<div class="modal-dialog  modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<table class="table table-bordered">
+								  <thead>
+								    <tr>
+								      <th scope="col">Self</th>
+								      <th scope="col">H.O.D</th>
+								      <th scope="col">Committee</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td><input class="form-control" id="please-self-a" type="text"></td>
+								      <td><input class="form-control" id="please-hod-a" type="text"></td>
+								      <td><input class="form-control" id="please-committee-a" type="text"></td>
+								    </tr>
+								 </tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
 		<hr style="border: 0.5px solid #c8c8c8">
+
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<label class="col-form-label"><b>Category IV: PI =   
+						<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat4-4" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+				out of 75</b>
+				</label>
+			</div>
+						<!-- The modal -->
+			<div class="modal fade" id="flipFlop-cat4-4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+				<div class="modal-dialog  modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<table class="table table-bordered">
+							  <thead>
+							    <tr>
+							      <th scope="col">Self</th>
+							      <th scope="col">H.O.D</th>
+							      <th scope="col">Committee</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><input class="form-control" id="cat4-self" type="text"></td>
+							      <td><input class="form-control" id="cat4-hod" type="text"></td>
+							      <td><input class="form-control" id="cat4-committee" type="text"></td>
+							    </tr>
+							 </tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>   
+		</div>	
+
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a><br>
@@ -2534,6 +3121,8 @@ include 'top.php';
 	});
 
     </script>
+
+    <script type="text/javascript">
 	function myFunction() {
 		$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
