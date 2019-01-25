@@ -52,10 +52,16 @@ $(document).ready(function(){
 	})
 });
 
-function disableinput(){
+function disableAinput(){
 	// alert("disabling");
 	$("#part-a-form input").prop("disabled", true);//disablig all inputs
 	$(".part-a-plus-btn").prop("onclick", null).off("click");//diabling on-click on dynamic form plus button
+}
+
+function disableBinput(){
+	// alert("disabling");
+	$("#part-b-form input").prop("disabled", true);//disablig all inputs
+	$(".part-b-plus-btn").prop("onclick", null).off("click");//diabling on-click on dynamic form plus button
 }
 
 $(document).ready(function(){
@@ -174,6 +180,139 @@ function getPartAData(){
 				}
 
 				document.getElementById("room").value=room;
+			}
+		},                
+		error: function(xhr, status, error) {
+			alert(xhr.responseText);
+		}              
+	});
+	
+	return false;
+}
+
+//PART B 
+
+$(document).ready(function(){
+
+	$('#part-b-save-form').click(function(){
+
+		// alert("save here");
+		$("#part-b-form input").prop("disabled", false);//have to enable inputs before submitting
+		// alert(document.getElementById("alreadybegun").value);
+		$('form#part-b-form').submit();
+
+	});
+
+	$('#part-b-edit-form').click(function(){
+
+		// alert("edit here");
+
+		$("#part-b-form input").prop("disabled", false);//disablig all inputs
+		// $(".part-a-plus-btn").prop("onclick", parta_dynamic_form()).off("click");//diabling on-click on dynamic form plus button
+		//enable on click for the dynamic form and disable edit button
+
+	});
+
+});
+
+
+function getPartBData(){
+
+	var yr=document.getElementById('year').value;
+
+	// alert("yr="+yr);
+
+	$.ajax
+	({
+		type: 'POST',
+		url: 'get-part-b-data.php',
+		data:
+		{
+			year:yr
+		},
+		//dataType: 'text',  // what to expect back from the PHP script, if anything               
+		success: function (response) 
+		{
+			alert(response);
+
+			if(response.trim()=="not begun")
+			{           
+				// $('#myModal').modal('show');
+				document.getElementById("alreadybegun").value=0;
+			}
+			else
+			{
+				document.getElementById("alreadybegun").value=1;
+
+				// var room=0;//variable for the dynamic form
+
+				var result = $.parseJSON(response);
+				for(var i=0;i<result.length;i++)
+				{
+					var res=result[i];
+					// alert("res="+res);
+					$.each(res, function(k, v) {
+					    //display the key and value pair
+					    // alert("k="+k+" v="+v);
+					    if(k!="part_b_cat_1_cto" && k!="part_b_cat_1_cte" && k!="part_b_cat_1_dar" && k!="part_b_cat_2_ha" && k!="part_b_cat_2_act" && k!="part_b_cat_2_exc" && k!="part_b_cat_2_c" && k!="part_b_cat_3_pp" && k!="part_b_cat_3_ppic" && k!="part_b_cat_3_ppinc" && k!="part_b_cat_3_bk" && k!="part_b_cat_3_res" && k!="part_b_cat_3_ores" && k!="part_b_cat_3_cres" && k!="part_b_cat_3_pip" && k!="part_b_cat_4_sem" && k!="part_b_cat_4_inv" && k!="part_b_cat_4_creds")
+					    {
+					    	// alert("here");
+					    	// alert("k="+k+" v="+v);
+					    	document.getElementById(k).value=v;
+					    	$("#"+k).prop("disabled", true);
+					    }
+					    else
+					    {
+					    	// alert(k);
+					    	// alert("in");
+					    	
+
+					   //  	var srno=JSON.parse(v[0]['srno']);
+					   //  	var course=JSON.stringify(v[1]['course']).replace(/['"]+/g, '');
+					   //  	var days=JSON.stringify(v[2]['days']).replace(/['"]+/g, '');
+					   //  	var agency=JSON.stringify(v[3]['agency']).replace(/['"]+/g, '');
+
+					   //  	// alert(srno+","+course+","+days+","+agency);
+					   //  	// alert(srno+","+course);
+					   //  	if(srno!=0)
+					   //  	{
+					   //  		room++;
+							 //    var objTo = document.getElementById('parta_dynamic_form')
+							 //    var divtest = document.createElement("div");
+								// divtest.setAttribute("class", "form-group removeclass"+room);
+								// var rdiv = 'removeclass'+room;
+							    
+							 //    if(room!=1)
+							 //    {
+							 //    	divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="input-group-btn"> <img src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
+							 //    	$("#parta_dynamic_form").prepend(divtest);
+							 //    	// objTo.appendChild(divtest);		
+							 //    	// alert("room="+room+","+days+","+agency);
+							 //    	document.getElementById('srno'+room).value=srno;
+							 //    	document.getElementById('course'+room).value=course;
+							 //    	document.getElementById('days'+room).value=days;
+							 //    	document.getElementById('agency'+room).value=agency;
+
+
+							 //    }
+							 //    else
+							 //    {
+							 //    	// alert('idhar');
+							 //    	document.getElementById('srno'+room).value=srno;
+							 //    	document.getElementById('course'+room).value=course;
+							 //    	document.getElementById('days'+room).value=days;
+							 //    	document.getElementById('agency'+room).value=agency;
+							 //    }
+							    
+							    
+					   //  	}
+					    	
+					    }
+					    
+					});
+				}
+
+				// document.getElementById("room").value=room;
 			}
 		},                
 		error: function(xhr, status, error) {
