@@ -680,7 +680,7 @@ else
 		?>
 		<!-- Disabling all forms for other viewers -->
 		<script type="text/javascript">
-			disableinput();
+			disableAinput();
 		</script>
 
 		<?php

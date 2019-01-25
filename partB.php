@@ -6,14 +6,32 @@ if(!isset($_SESSION['id']))
 {
 	header("LOCATION: index.php");
 }
+else if(!isset($_GET['id']) || !isset($_GET['year']))
+{
+	header("LOCATION: userprofile.php");
+}
 else
 {
 
 include 'dbh.php';
-
-$userId=mysqli_real_escape_string($conn,$_SESSION['id']);
-
 include 'top.php';
+
+$viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
+
+$userId=mysqli_real_escape_string($conn,$_GET['id']);
+$year=mysqli_real_escape_string($conn,$_GET['year']);
+
+if($userId==$viewerId)
+{
+	$same_user=1;
+}
+else
+{
+	$same_user=0;
+	
+}
+
+
 
 ?>
 
@@ -60,6 +78,8 @@ include 'top.php';
 	</nav>
     
     <form method="POST" action="partBsys.php" class="part-b-form" id="part-b-form">
+    <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+    <input type="hidden" name="alreadybegun" id="alreadybegun" value="0">
 	<div class="container partb">
 
 		<header class="heading"><b>'Part B'</b></header><br>
@@ -124,16 +144,16 @@ include 'top.php';
 							<input type="text" name='ctoclasssemester[]' id="ctoclasssemester1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='ctohrsweek[]' id="ctohrsweek1" class="form-control" maxlength="200" />
+							<input type="number" name='ctohrsweek[]' id="ctohrsweek1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='ctohrsengaged[]' id="ctohrsengaged1" class="form-control" maxlength="200" />
+							<input type="number" name='ctohrsengaged[]' id="ctohrsengaged1" class="form-control" maxlength="200" />
 							</td>
 							<td>
-							<input type="text" name='ctomaxhrs[]' id="ctomaxhrs1" class="form-control" maxlength="200" />
+							<input type="number" name='ctomaxhrs[]' id="ctomaxhrs1" class="form-control" maxlength="200" />
 							</td> 
 							<td>
-							<input type="text" name='ctoc[]' id="ctoc1" class="form-control" maxlength="200" />
+							<input type="number" name='ctoc[]' id="ctoc1" class="form-control" maxlength="200" />
 							</td>
 						</tr>
 	                    <tr id='addr11'></tr>
@@ -183,16 +203,16 @@ include 'top.php';
 							<input type="text" name='cteclasssemester[]' id="cteclasssemester1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='ctehrsweek[]' id="ctehrsweek1" class="form-control" maxlength="200"/>
+							<input type="number" name='ctehrsweek[]' id="ctehrsweek1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='ctehrsengaged[]' id="ctehrsengaged1" class="form-control" maxlength="200"/>
+							<input type="number" name='ctehrsengaged[]' id="ctehrsengaged1" class="form-control" maxlength="200"/>
 							</td>
 							<td>
-							<input type="text" name='ctemaxhrs[]' id="ctemaxhrs1" class="form-control" maxlength="200"/>
+							<input type="number" name='ctemaxhrs[]' id="ctemaxhrs1" class="form-control" maxlength="200"/>
 							</td> 
 							<td>
-							<input type="text" name='ctec[]' id="ctec1" class="form-control" maxlength="200"/>
+							<input type="number" name='ctec[]' id="ctec1" class="form-control" maxlength="200"/>
 							</td>
 						</tr>
 	                    <tr id='addr21'></tr>
@@ -212,22 +232,22 @@ include 'top.php';
 			<div class="col-md-5" >
     			<div class="form-group row justify-content-center">
     				<div class="col-6 text-right" style="margin:0;padding:0;padding-right: 10px">
-    					<label for="avg-c" class="col-form-label"><b>Average of C(AVC) :</b></label>
+    					<label for="avg_c" class="col-form-label"><b>Average of C(AVC) :</b></label>
     				</div>
 					  
 					<div class="col-3" style="margin:0;padding:0">
-					   <input class="form-control" type="text" name="avg-c" id="avg-c" maxlength="200"/>
+					   <input class="form-control" type="text" name="avg_c" id="avg_c" maxlength="200"/>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-3">
     			<div class="form-group row justify-content-center">
     				<div class="col-6 text-right" style="margin:0;padding:0;padding-right: 10px">
-    					<label for="total-c" class="col-form-label"><b>Total of C :</b></label>
+    					<label for="total_c" class="col-form-label"><b>Total of C :</b></label>
     				</div>
 					  
 					<div class="col-4" style="margin:0;padding:0;padding-right:10px">
-					   <input class="form-control" type="text" name="total-c" id="total-c" maxlength="200"/>
+					   <input class="form-control" type="text" name="total_c" id="total_c" maxlength="200"/>
 					</div>
 				</div>							
     		</div>
@@ -261,9 +281,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="40"></td>
-									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="40"></td>
-									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="40"></td>
+									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="40"></td>
+									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="40"></td>
+									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="40"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -311,130 +331,130 @@ include 'top.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='odpstest1' class="form-control" maxlength="200" />
+								<input type="text" name='odpstest1' id='odpstest1' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oepstest1' class="form-control" maxlength="200" />
+								<input type="text" name='oepstest1' id='oepstest1' class="form-control" maxlength="200" />
 								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='odpstest2' class="form-control" maxlength="200" />
+								<input type="text" name='odpstest2' id='odpstest2' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oepstest2' class="form-control" maxlength="200" />
+								<input type="text" name='oepstest2' id='oepstest2' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='odtest1in' class="form-control" maxlength="200" />
+								<input type="text" name='odtest1in' id='odtest1in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest1in' class="form-control" maxlength="200" />
+								<input type="text" name='oetest1in' id='oetest1in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='odtest2in' class="form-control" maxlength="200" />
+								<input type="text" name='odtest2in' id='odtest2in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest2in' class="form-control" maxlength="200" />
+								<input type="text" name='oetest2in' id='oetest2in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='odtest1ass' class="form-control" maxlength="200" />
+								<input type="text" name='odtest1ass' id='odtest1ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest1ass' class="form-control" maxlength="200" />
+								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='odtest2ass' class="form-control" maxlength="200" />
+								<input type="text" name='odtest2ass' id='odtest2ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest2ass' class="form-control" maxlength="200" />
+								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='odeseps' class="form-control" maxlength="200" />
+								<input type="text" name='odeseps' id='odeseps' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeeseps' class="form-control" maxlength="200" />
+								<input type="text" name='oeeseps' id='oeeseps' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='odesein' class="form-control" maxlength="200" />
+								<input type="text" name='odesein' id='odesein' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesein' class="form-control" maxlength="200" />
+								<input type="text" name='oeesein' id='oeesein' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='odeseth' class="form-control" maxlength="200" />
+								<input type="text" name='odeseth' id='odeseth' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeeseth' class="form-control" maxlength="200" />
+								<input type="text" name='oeeseth' id='oeeseth' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='odesepo' class="form-control" maxlength="200" />
+								<input type="text" name='odesepo' id='odesepo' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesepo' class="form-control" maxlength="200" />
+								<input type="text" name='oeesepo' id='oeesepo' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='odesere-ass' class="form-control" maxlength="200" />
+								<input type="text" name='odesere_ass' id='odesere_ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesere-ass' class="form-control" maxlength="200" />
+								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='odproofr' class="form-control" maxlength="200" />
+								<input type="text" name='odproofr' id='odproofr' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeproofr' class="form-control" maxlength="200" />
+								<input type="text" name='oeproofr' id='oeproofr' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='odopenday' class="form-control" maxlength="200" />
+								<input type="text" name='odopenday' id='odopenday' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeopenday' class="form-control" maxlength="200" />
+								<input type="text" name='oeopenday' id='oeopenday' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 						</tbody>
@@ -463,130 +483,130 @@ include 'top.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='edpstest1' class="form-control"/>
+								<input type="text" name='edpstest1' id='edpstest1' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eepstest1' class="form-control"/>
+								<input type="text" name='eepstest1' id='eepstest1' class="form-control"/>
 								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='edpstest2' class="form-control"/>
+								<input type="text" name='edpstest2' id='edpstest2' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eepstest2' class="form-control"/>
+								<input type="text" name='eepstest2' id='eepstest2' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='edtest1in' class="form-control"/>
+								<input type="text" name='edtest1in' id='edtest1in' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eetest1in' class="form-control"/>
+								<input type="text" name='eetest1in' id='eetest1in' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='edtest2in' class="form-control"/>
+								<input type="text" name='edtest2in' id='edtest2in' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eetest2in' class="form-control"/>
+								<input type="text" name='eetest2in' id='eetest2in' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='edtest1ass' class="form-control"/>
+								<input type="text" name='edtest1ass' id='edtest1ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eetest1ass' class="form-control"/>
+								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='edtest2ass' class="form-control"/>
+								<input type="text" name='edtest2ass' id='edtest2ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eetest2ass' class="form-control"/>
+								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='edeseps' class="form-control"/>
+								<input type="text" name='edeseps' id='edeseps' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeeseps' class="form-control"/>
+								<input type="text" name='eeeseps' id='eeeseps' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='edesein' class="form-control"/>
+								<input type="text" name='edesein' id='edesein' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeesein' class="form-control"/>
+								<input type="text" name='eeesein' id='eeesein' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='edeseth' class="form-control"/>
+								<input type="text" name='edeseth' id='edeseth' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeeseth' class="form-control"/>
+								<input type="text" name='eeeseth' id='eeeseth' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='edesepo' class="form-control"/>
+								<input type="text" name='edesepo' id='edesepo' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeesepo' class="form-control"/>
+								<input type="text" name='eeesepo' id='eeesepo' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='edesere-ass' class="form-control"/>
+								<input type="text" name='edesere_ass' id='edesere_ass' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeesere-ass' class="form-control"/>
+								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='edproofr' class="form-control"/>
+								<input type="text" name='edproofr' id='edproofr' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeproofr' class="form-control"/>
+								<input type="text" name='eeproofr' id='eeproofr' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='edopenday' class="form-control"/>
+								<input type="text" name='edopenday' id='edopenday' class="form-control"/>
 								</td>
 								<td>
-								<input type="text" name='eeopenday' class="form-control"/>
+								<input type="text" name='eeopenday' id='eeopenday' class="form-control"/>
 								</td>
 		                    </tr>
 						</tbody>
@@ -604,7 +624,7 @@ include 'top.php';
     				</div>
 					  
 					<div class="col-2">
-					   <input class="form-control" type="text" name="avg-ap" id="avg-ap" maxlength="200"/>
+					   <input class="form-control" type="text" name="avg_ap" id="avg_ap" maxlength="200"/>
 					</div>
 				</div>							
     		</div>
@@ -638,9 +658,9 @@ include 'top.php';
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="pi2-self-a" type="text"></td>
-								      <td><input class="form-control" id="pi2-hod-a" type="text"></td>
-								      <td><input class="form-control" id="pi2-committee-a" type="text"></td>
+								      <td><input class="form-control" id="pi2_self_a" type="text"></td>
+								      <td><input class="form-control" id="pi2_hod_a" type="text"></td>
+								      <td><input class="form-control" id="pi2_committee_a" type="text"></td>
 								    </tr>
 								 </tbody>
 								</table>
@@ -715,9 +735,9 @@ include 'top.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="pi3-self-a" type="text"></td>
-							      <td><input class="form-control" id="pi3-hod-a" type="text"></td>
-							      <td><input class="form-control" id="pi3-committee-a" type="text"></td>
+							      <td><input class="form-control" id="pi3_self_a" type="text"></td>
+							      <td><input class="form-control" id="pi3_hod_a" type="text"></td>
+							      <td><input class="form-control" id="pi3_committee_a" type="text"></td>
 							    </tr>
 							 </tbody>
 							</table>
@@ -754,49 +774,49 @@ include 'top.php';
 								<td>1</td>
 								<td>Problem based learning, case studies, group discussions, activity based learning etc.</td>
 								<td>
-								<input type="text" name='dpstest1' class="form-control" maxlength="200" />
+								<input type="text" name='dpstest1' id='dpstest1' class="form-control" maxlength="200" />
 								</td>
 							</tr>
 		                    <tr id='addr41'>
 		                    	<td>2</td>
 								<td>Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
 								<td>
-								<input type="text" name='dpstest2' class="form-control" maxlength="200" />
+								<input type="text" name='dpstest2' id='dpstest2' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr42'>
 		                    	<td>3</td>
 								<td>Developing and imparting Remedial / Bridge Courses</td>
 								<td>
-								<input type="text" name='dtest1in' class="form-control" maxlength="200" />
+								<input type="text" name='dtest1in' id='dtest1in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr43'>
 		                    	<td>4</td>
 								<td>Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
 								<td>
-								<input type="text" name='dtest2in' class="form-control" maxlength="200" />
+								<input type="text" name='dtest2in' id='dtest2in' class="form-control" maxlength="200" />
 								</td>
 		                    </tr>
 		                    <tr id='addr44'>
 		                    	<td>5</td>
 								<td>Developing and imparting specialized teaching-learning programmes in physical education, library; innovative compositions and creations in music, performing and visual arts and other tradition areas</td>
 								<td>
-								<input type="text" name='dtest1ass' class="form-control"/>
+								<input type="text" name='dtest1ass' id='dtest1ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr45'>
 		                    	<td>6</td>
 								<td>Audit courses taken (given name/semester/term)</td>
 								<td>
-								<input type="text" name='dtest2ass' class="form-control"/>
+								<input type="text" name='dtest2ass' id='dtest2ass' class="form-control"/>
 								</td>
 		                    </tr>
 		                    <tr id='addr46'>
 		                    	<td>7</td>
 								<td>Other:</td>
 								<td>
-								<input type="text" name='deseps' class="form-control"/>
+								<input type="text" name='deseps' id='deseps' class="form-control"/>
 								</td>
 		                    </tr>
 		                </tbody>
@@ -834,9 +854,9 @@ include 'top.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="pi4-self-a" type="text"></td>
-							      <td><input class="form-control" id="pi4-hod-a" type="text"></td>
-							      <td><input class="form-control" id="pi4-committee-a" type="text"></td>
+							      <td><input class="form-control" id="pi4_self_a" type="text"></td>
+							      <td><input class="form-control" id="pi4_hod_a" type="text"></td>
+							      <td><input class="form-control" id="pi4_committee_a" type="text"></td>
 							    </tr>
 							 </tbody>
 							</table>
@@ -884,9 +904,9 @@ include 'top.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="pi3-self-a" type="text"></td>
-							      <td><input class="form-control" id="pi3-hod-a" type="text"></td>
-							      <td><input class="form-control" id="pi3-committee-a" type="text"></td>
+							      <td><input class="form-control" id="pi3_self_a" type="text"></td>
+							      <td><input class="form-control" id="pi3_hod_a" type="text"></td>
+							      <td><input class="form-control" id="pi3_committee_a" type="text"></td>
 							    </tr>
 							 </tbody>
 							</table>
@@ -903,21 +923,6 @@ include 'top.php';
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px"></a>
 
-		<!-- <div class="row form-inline justify-content-center">
-			<div class="col se-btn">
-				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE 
-				</button>
-
-				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT 
-				</button>
-
-				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
-	  			PRINT 
-				</button>				
-			</div>
-		</div> -->
 
 		</div>
 		<br>
@@ -1000,9 +1005,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii1-self-a" type="text"></td>
-									      <td><input class="form-control" id="pii1-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pii1-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pii1_self_a" type="text"></td>
+									      <td><input class="form-control" id="pii1_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pii1_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1086,9 +1091,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii2-self-a" type="text"></td>
-									      <td><input class="form-control" id="pii2-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pii2-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pii2_self_a" type="text"></td>
+									      <td><input class="form-control" id="pii2_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pii2_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1170,9 +1175,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii3-self-a" type="text"></td>
-									      <td><input class="form-control" id="pii3-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pii3-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pii3_self_a" type="text"></td>
+									      <td><input class="form-control" id="pii3_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pii3_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1254,9 +1259,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii4-self-a" type="text"></td>
-									      <td><input class="form-control" id="pii4-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pii4-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pii4_self_a" type="text"></td>
+									      <td><input class="form-control" id="pii4_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pii4_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1300,9 +1305,9 @@ include 'top.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="pii-total-self-a" type="text"></td>
-							      <td><input class="form-control" id="pii3-total-hod-a" type="text"></td>
-							      <td><input class="form-control" id="pii3-total-committee-a" type="text"></td>
+							      <td><input class="form-control" id="pii3_total_self_a" type="text"></td>
+							      <td><input class="form-control" id="pii3_total_hod_a" type="text"></td>
+							      <td><input class="form-control" id="pii3_total_committee_a" type="text"></td>
 							    </tr>
 							 </tbody>
 							</table>
@@ -1319,22 +1324,7 @@ include 'top.php';
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
-		<!-- <div class="row form-inline justify-content-center">
 
-			<div class="col se-btn">
-				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE 
-				</button>
-
-				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT 
-				</button>
-
-				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
-	  			PRINT 
-				</button>
-			</div>
-		</div> -->
 		</div>	
 		<!-- <br> -->
 		<!-- <hr style="border: 0.5px solid #c8c8c8"><br> -->
@@ -1395,11 +1385,11 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline11" name="customRadioInline1[1]" class="custom-control-input yesradio">
-					  <label class="custom-control-label yes" for="customRadioInline11" selected>Yes</label>
+					  <input type="radio" id="customRadioInline11" name="customRadioInline1[1]" class="custom-control-input yesradio" value="Yes" checked>
+					  <label class="custom-control-label yes" for="customRadioInline11">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline21" name="customRadioInline1[1]" class="custom-control-input noradio">
+					  <input type="radio" id="customRadioInline21" name="customRadioInline1[1]" class="custom-control-input noradio" value="No">
 					  <label class="custom-control-label no" for="customRadioInline21">No</label>
 					</div>
 				</div>
@@ -1468,9 +1458,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="100"></td>
-									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="100"></td>
-									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="100"></td>
+									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="100"></td>
+									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="100"></td>
+									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="100"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1539,11 +1529,11 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline11ic" name="customRadioInline1ic[1]" class="custom-control-input yesradio">
+					  <input type="radio" id="customRadioInline11ic" name="customRadioInline1ic[1]" class="custom-control-input yesradio" value="Yes" checked>
 					  <label class="custom-control-label yes" for="customRadioInline11ic">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline21ic" name="customRadioInline1ic[1]" class="custom-control-input noradio">
+					  <input type="radio" id="customRadioInline21ic" name="customRadioInline1ic[1]" class="custom-control-input noradio" value="No">
 					  <label class="custom-control-label no" for="customRadioInline21ic">No</label>
 					</div>
 				</div>
@@ -1612,9 +1602,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="15"></td>
-									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="15"></td>
-									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="15"></td>
+									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="15"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1686,11 +1676,11 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3 text-left">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline11inc" name="customRadioInline1inc[1]" class="custom-control-input yesradio">
+					  <input type="radio" id="customRadioInline11inc" name="customRadioInline1inc[1]" class="custom-control-input yesradio" value="Yes" checked>
 					  <label class="custom-control-label yes" for="customRadioInline11inc">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline21inc" name="customRadioInline1inc[1]" class="custom-control-input noradio">
+					  <input type="radio" id="customRadioInline21inc" name="customRadioInline1inc[1]" class="custom-control-input noradio" value="No">
 					  <label class="custom-control-label no" for="customRadioInline21inc">No</label>
 					</div>
 				</div>
@@ -1759,9 +1749,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="10"></td>
-									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="10"></td>
-									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="10"></td>
+									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="10"></td>
+									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="10"></td>
+									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="10"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1807,7 +1797,7 @@ include 'top.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Publisher</label>
-						<!-- <input type="text" name="ppnpr[]" class="form-control my-0 my-sm-0"/> -->
+						<input type="text" name="ppnprbk[]" id="ppnprbk1" class="form-control my-0 my-sm-0" maxlength="200" />
 					</div>					
 				</div>
 			</div>
@@ -1842,11 +1832,11 @@ include 'top.php';
 				</div>
 		    	<div class="col-md-3">
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline11bk" name="customRadioInline1bk[1]" class="custom-control-input yesradio">
+					  <input type="radio" id="customRadioInline11bk" name="customRadioInline1bk[1]" class="custom-control-input yesradio" value="Yes" checked>
 					  <label class="custom-control-label yes" for="customRadioInline11bk">Yes</label>
 					</div>
 					<div class="custom-control custom-radio custom-control-inline">
-					  <input type="radio" id="customRadioInline21bk" name="customRadioInline1bk[1]" class="custom-control-input noradio">
+					  <input type="radio" id="customRadioInline21bk" name="customRadioInline1bk[1]" class="custom-control-input noradio" value="No">
 					  <label class="custom-control-label no" for="customRadioInline21bk">No</label>
 					</div>
 				</div>
@@ -1916,9 +1906,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-self-a" type="text"  min="0" max="15"></td>
-									      <td><input class="form-control" id="pi-hod-a" type="text" min="0" max="15"></td>
-									      <td><input class="form-control" id="pi-committee-a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="15"></td>
+									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="15"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -1958,46 +1948,154 @@ include 'top.php';
 							<tr id='addr90'>
 								<td>Ph.D</td>
 								<td>
-								<input type="number" name='phdne' class="form-control"/>
+									<input type="number" id='phdne' name='phdne' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='phdts' class="form-control"/>
+									<input type="number" id='phdts' name='phdts' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='phdda' class="form-control"/>
+									<input type="number" id='phdda' name='phdda' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='phdpi' class="form-control"/>
+									<!-- <input type="number" name='phdpi' class="form-control"/> -->
+									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-phd" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+									</label>
+									 
+									<div class="modal fade" id="flipFlop-cat3-phd" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+										<div class="modal-dialog  modal-lg" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<table class="table table-bordered">
+													  <thead>
+													    <tr>
+													      <th scope="col">Self</th>
+													      <th scope="col">H.O.D</th>
+													      <th scope="col">Committee</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <td><input class="form-control" id="research-self-a" type="text"></td>
+													      <td><input class="form-control" id="research-hod-a" type="text"></td>
+													      <td><input class="form-control" id="research-committee-a" type="text"></td>
+													    </tr>
+													 </tbody>
+													</table>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+												</div>
+											</div>
+										</div>
+									</div>  
 								</td>
 							</tr>
 		                    <tr id='addr91'>
 		                    	<td>M.Tech</td>
 								<td>
-								<input type="number" name='mtechne' class="form-control"/>
+									<input type="number" id='mtechne' name='mtechne' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='mtechts' class="form-control"/>
+									<input type="number" id='mtechts' name='mtechts' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='mtechda' class="form-control"/>
+									<input type="number" id='mtechda' name='mtechda' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='mtechpi' class="form-control"/>
+									<!-- <input type="number" name='mtechpi' class="form-control"/> -->
+									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-phd" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+									</label>
+
+									<div class="modal fade" id="flipFlop-cat3-mtech" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+										<div class="modal-dialog  modal-lg" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<table class="table table-bordered">
+													  <thead>
+													    <tr>
+													      <th scope="col">Self</th>
+													      <th scope="col">H.O.D</th>
+													      <th scope="col">Committee</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <td><input class="form-control" id="research_self_a" type="text"></td>
+													      <td><input class="form-control" id="research_hod_a" type="text"></td>
+													      <td><input class="form-control" id="research_committee_a" type="text"></td>
+													    </tr>
+													 </tbody>
+													</table>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+												</div>
+											</div>
+										</div>
+									</div>  
 								</td>
 		                    </tr>
 		                    <tr id='addr92'>
 		                    	<td>B.Tech</td>
 								<td>
-								<input type="number" name='btechne' class="form-control"/>
+									<input type="number" id='btechne' name='btechne' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='btechts' class="form-control"/>
+									<input type="number" id='btechts' name='btechts' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='btechda' class="form-control"/>
+									<input type="number" id='btechda' name='btechda' class="form-control"/>
 								</td>
 								<td>
-								<input type="number" name='btechpi' class="form-control"/>
+									<!-- <input type="number" name='btechpi' class="form-control"/> -->
+									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-phd" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+									</label>
+
+									<div class="modal fade" id="flipFlop-cat3-btech" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+										<div class="modal-dialog  modal-lg" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													<table class="table table-bordered">
+													  <thead>
+													    <tr>
+													      <th scope="col">Self</th>
+													      <th scope="col">H.O.D</th>
+													      <th scope="col">Committee</th>
+													    </tr>
+													  </thead>
+													  <tbody>
+													    <tr>
+													      <td><input class="form-control" id="research_self_a" type="text"></td>
+													      <td><input class="form-control" id="research_hod_a" type="text"></td>
+													      <td><input class="form-control" id="research_committee_a" type="text"></td>
+													    </tr>
+													 </tbody>
+													</table>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+												</div>
+											</div>
+										</div>
+									</div>  
 								</td>
 		                    </tr>
 						</tbody>
@@ -2130,9 +2228,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-project-self-a" type="text"></td>
-									      <td><input class="form-control" id="pi-project-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pi-project-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pi_project_self_a" type="text"></td>
+									      <td><input class="form-control" id="pi_project_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pi_project_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -2230,9 +2328,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-ongoing-self-a" type="text"></td>
-									      <td><input class="form-control" id="pi-ongoing-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pi-ongoing-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pi_ongoing_self_a" type="text"></td>
+									      <td><input class="form-control" id="pi_ongoing_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pi_ongoing_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -2322,9 +2420,9 @@ include 'top.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi-completed-self-a" type="text"></td>
-									      <td><input class="form-control" id="pi-completed-hod-a" type="text"></td>
-									      <td><input class="form-control" id="pi-completed-committee-a" type="text"></td>
+									      <td><input class="form-control" id="pi_completed_self_a" type="text"></td>
+									      <td><input class="form-control" id="pi_completed_hod_a" type="text"></td>
+									      <td><input class="form-control" id="pi_completed_committee_a" type="text"></td>
 									    </tr>
 									 </tbody>
 									</table>
@@ -2416,9 +2514,9 @@ include 'top.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat3-self" type="text"></td>
-							      <td><input class="form-control" id="cat3-hod" type="text"></td>
-							      <td><input class="form-control" id="cat3-committee" type="text"></td>
+							      <td><input class="form-control" id="cat3_self" type="text"></td>
+							      <td><input class="form-control" id="cat3_hod" type="text"></td>
+							      <td><input class="form-control" id="cat3_committee" type="text"></td>
 							    </tr>
 							 </tbody>
 							</table>
@@ -2435,21 +2533,6 @@ include 'top.php';
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
-		<!-- <div class="row form-inline justify-content-center">
-			<div class="col se-btn">
-				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE 
-				</button>
-
-				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT 
-				</button>
-
-				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
-	  			PRINT 
-				</button>
-			</div>
-		</div> -->
 
 		</div>
 		<br>
@@ -2482,13 +2565,13 @@ include 'top.php';
 								<tr id='addr140'>
 									<td id="sem1">1</td>
 									<td>
-									<input type="text" name="cativ-dp[]" id="cativ-dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ_dp[]" id="cativ_dp1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="cativ-datee[]" id="cativ-datee1" class="form-control"/>
+									<input type="date" name="cativ_datee[]" id="cativ_datee1" class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name="cativ-o[]" id="cativ-o1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr141'></tr>
@@ -2534,9 +2617,9 @@ include 'top.php';
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="seminar-self-a" type="text"></td>
-								      <td><input class="form-control" id="seminar-hod-a" type="text"></td>
-								      <td><input class="form-control" id="seminar-committee-a" type="text"></td>
+								      <td><input class="form-control" id="seminar_self_a" type="text"></td>
+								      <td><input class="form-control" id="seminar_hod_a" type="text"></td>
+								      <td><input class="form-control" id="seminar_committee_a" type="text"></td>
 								    </tr>
 								 </tbody>
 								</table>
@@ -2573,13 +2656,13 @@ include 'top.php';
 								<tr id='addr150'>
 									<td id="inv1">1</td>
 									<td>
-									<input type="text" name="cativ1-dp[]" id="cativ1-dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1_dp[]" id="cativ1_dp1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="cativ1-datee[]" id="cativ1-datee1" class="form-control"/>
+									<input type="date" name="cativ1_datee[]" id="cativ1_datee1" class="form-control"/>
 									</td>
 									<td>
-									<input type="text" name="cativ1-o[]" id="cativ1-o1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control" maxlength="200"/>
 									</td>
 								</tr>
 			                    <tr id='addr151'></tr>
@@ -2625,9 +2708,9 @@ include 'top.php';
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="cheifguest-self-a" type="text"></td>
-								      <td><input class="form-control" id="cheifguest-hod-a" type="text"></td>
-								      <td><input class="form-control" id="cheifguest-committee-a" type="text"></td>
+								      <td><input class="form-control" id="cheifguest_self_a" type="text"></td>
+								      <td><input class="form-control" id="cheifguest_hod_a" type="text"></td>
+								      <td><input class="form-control" id="cheifguest_committee_a" type="text"></td>
 								    </tr>
 								 </tbody>
 								</table>
@@ -2660,7 +2743,7 @@ include 'top.php';
 								<tr id='addr160'>
 									<td id="creds1">1</td>
 									<td>
-									<input type="text" name="cativ2-dp[]" id="cativ2-dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2_dp[]" id="cativ2_dp1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
 									<input type="text" name="cativ2[]" id="cativ21" class="form-control" maxlength="200"/>
@@ -2709,9 +2792,9 @@ include 'top.php';
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="please-self-a" type="text"></td>
-								      <td><input class="form-control" id="please-hod-a" type="text"></td>
-								      <td><input class="form-control" id="please-committee-a" type="text"></td>
+								      <td><input class="form-control" id="please_self_a" type="text"></td>
+								      <td><input class="form-control" id="please_hod_a" type="text"></td>
+								      <td><input class="form-control" id="please_committee_a" type="text"></td>
 								    </tr>
 								 </tbody>
 								</table>
@@ -2756,9 +2839,9 @@ include 'top.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat4-self" type="text"></td>
-							      <td><input class="form-control" id="cat4-hod" type="text"></td>
-							      <td><input class="form-control" id="cat4-committee" type="text"></td>
+							      <td><input class="form-control" id="cat4_self" type="text"></td>
+							      <td><input class="form-control" id="cat4_hod" type="text"></td>
+							      <td><input class="form-control" id="cat4_committee" type="text"></td>
 							    </tr>
 							 </tbody>
 							</table>
@@ -2774,37 +2857,40 @@ include 'top.php';
 
 		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a><br>
+
+		
+	</div>
+
+	<?php
+
+	if($same_user==1)
+	{
+
+		?>
+	
 		<div class="row form-inline justify-content-center">
 			<div class="col se-btn">
-				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+				<button type="button" class="btn btn-success" id="part-b-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SAVE 
 				</button>
 
-				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
+				<button type="button" class="btn btn-primary mx-2" id="part-b-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
 	  			EDIT 
 				</button>
 
-				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
 			</div>
-		</div> -->
-	</div>
-
-	
-	<div class="row form-inline justify-content-center">
-		<div class="col se-btn">
-			<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  		SAVE 
-			</button>
-			<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  		EDIT 
-			</button>
-			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
-	  		PRINT 
-			</button>
 		</div>
-	</div>
+
+		<?php
+
+	}
+
+	?> 
+
+
 	</div>
 	</div>
 	</form>
@@ -2816,7 +2902,7 @@ include 'top.php';
     {
       var i=1;
      $("#add_row1").click(function(){
-      $('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td>');
+      $('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td>');
 
       // $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
       $('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
@@ -2839,7 +2925,7 @@ include 'top.php';
     {
       var j=1;
      $("#add_row2").click(function(){
-      $('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td>');
+      $('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
       $('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
@@ -3063,7 +3149,7 @@ include 'top.php';
     {
       var t=1;
      $("#add_row12").click(function(){
-      $('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ-dp[]" id="cativ-dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ-datee[]" id="cativ-datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td>');
+      $('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
       $('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
@@ -3085,7 +3171,7 @@ include 'top.php';
     {
       var u=1;
      $("#add_row13").click(function(){
-      $('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1-dp[]" id="cativ1-dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1-datee[]" id="cativ1-datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1-o[]" id="cativ1-o'+(u+1)+'" class="form-control" maxlength="200"/></td>');
+      $('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
       $('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
@@ -3108,7 +3194,7 @@ include 'top.php';
     {
       var v=1;
      $("#add_row14").click(function(){
-      $('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2-dp[]" id="cativ2-dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td>');
+      $('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td>');
 
       // $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
       $('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
@@ -3130,7 +3216,7 @@ include 'top.php';
     {
       var ppr=2;
      $("#add_row_ppr").click(function(){
-      $('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+ppr+'" selected>Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
+      $('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
 
 	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      $('#ppr'+ppr).toggle();
@@ -3157,7 +3243,7 @@ include 'top.php';
     {
       var ppric=2;
      $("#add_row_ppric").click(function(){
-      $('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
+      $('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
 
 	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      $('#ppric'+ppric).toggle();
@@ -3184,7 +3270,7 @@ include 'top.php';
     {
       var pprinc=2;
      $("#add_row_pprinc").click(function(){
-      $('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio"><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div></div>');
+      $('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div></div>');
 
 	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      $('#pprinc'+pprinc).toggle();
@@ -3211,7 +3297,7 @@ include 'top.php';
     {
       var pprbk=2;
      $("#add_row_pprbk").click(function(){
-      $('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio"> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div></div>'
+      $('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><input type="text" name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200/> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div></div>'
       	);
 
 	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
@@ -3233,6 +3319,28 @@ include 'top.php';
 	});
 
     </script>
+
+    <!-- DISABLING INPUT WHEREVER NECESSARY -->
+
+	<?php
+
+	if($same_user==0)
+	{
+		?>
+		<!-- Disabling all forms for other viewers -->
+		<script type="text/javascript">
+			disableBinput();
+		</script>
+		<?php
+	}
+
+	?>
+
+	<!-- GET DATA OF FORM -->
+
+	<script type="text/javascript">
+		getPartBData();
+	</script>
 
     <script type="text/javascript">
 	function myFunction() {
