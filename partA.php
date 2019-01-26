@@ -31,6 +31,12 @@ else
 	
 }
 
+$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$userId'";
+$resultx=mysqli_query($conn,$sqlx);
+$rowx=mysqli_fetch_assoc($resultx);
+
+$hod=$rowx['hod'];
+$committee=$rowx['committee'];
 
 
 ?>
@@ -513,12 +519,12 @@ else
 	    				<div class="col-3">
 	    					<label for="gpi-parta" class="col-form-label"><b>GPI:</b></label>
 	    				</div>
-						  
+
 						<div class="col-2" style="padding-left: 0">
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry"><img src="img/appraisals.png" class="parta-self-img"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop_partA_gpi" title="Clicking this button will allow you to appraise this entry"><img src="img/appraisals.png" class="parta-self-img"></button>
 
 							<!-- The modal -->
-							<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+							<div class="modal fade" id="flipFlop_partA_gpi" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 								<div class="modal-dialog  modal-lg" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -529,24 +535,61 @@ else
 										</div>
 										<div class="modal-body">
 											<table class="table table-bordered">
-											  <thead>
-											    <tr>
-											      <th scope="col">Self</th>
-											      <th scope="col">H.O.D</th>
-											      <th scope="col">Committee</th>
-											    </tr>
-											  </thead>
-											  <tbody>
-											    <tr>
-											      <td><input class="form-control" id="self-a" type="text"></td>
-											      <td><input class="form-control" id="hod-a" type="text"></td>
-											      <td><input class="form-control" id="xommittee-a" type="text"></td>
-											    </tr>
-											 </tbody>
+											  	<thead>
+												    <tr>
+												      	<th scope="col">Self</th>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">H.O.D</th>
+															<?php
+												      	}
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">Committee</th>
+															<?php
+												      	}
+												      	?>
+
+												    </tr>
+											  	</thead>
+											  	<tbody>
+												    <tr>
+												      	<td><input class="form-control" id="parta_gpi_self_a" type="number"></td>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+															<td><input class="form-control" id="parta_gpi_hod_a" type="number"></td>
+															<?php
+												      	}
+
+												 
+												      	
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<td><input class="form-control" id="parta_gpi_committee_a" type="number"></td>
+															<?php
+												      	}
+
+												      	?>
+												      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+												    </tr>
+											 	</tbody>
 											</table>
+											<p id="parta_gpi_msg"></p>
 										</div>
+
 										<div class="modal-footer">
-											<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+											<button  id="parta_gpi_btn" class="btn btn-primary">Save</button>
 										</div>
 									</div>
 								</div>
@@ -558,10 +601,10 @@ else
 				<div class="col-md-5">
 	    			<label ><b>PI Part A = GPI =
 	    				
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
-					out of 50</b></label>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop_partA_gpi_pi" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							out of 50</b></label>
 							<!-- The modal -->
-							<div class="modal fade" id="flipFlop" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+							<div class="modal fade" id="flipFlop_partA_gpi_pi" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
 								<div class="modal-dialog  modal-lg" role="document">
 									<div class="modal-content">
 										<div class="modal-header">
@@ -570,27 +613,64 @@ else
 											<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
+
+										<!-- <form action="parta_gpi_pi_sys.php" method="POST"> -->
 										<div class="modal-body">
 											<table class="table table-bordered">
-											  <thead>
-											    <tr>
-											      <th scope="col">Self</th>
-											      <th scope="col">H.O.D</th>
-											      <th scope="col">Committee</th>
-											    </tr>
-											  </thead>
-											  <tbody>
-											    <tr>
-											      <td><input class="form-control" id="pi-self-a" type="text"></td>
-											      <td><input class="form-control" id="pi-hod-a" type="text"></td>
-											      <td><input class="form-control" id="pi-committee-a" type="text"></td>
-											    </tr>
-											 </tbody>
+											  	<thead>
+											    	<tr>
+												      	<th scope="col">Self</th>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">H.O.D</th>
+															<?php
+												      	}
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">Committee</th>
+															<?php
+												      	}
+												      	?>
+											   		</tr>
+											  	</thead>
+
+											  	<tbody>
+											    	<tr>
+											      		<td><input class="form-control" id="parta_gpi_pi_self_a" type="text"></td>
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+											     			<td><input class="form-control" id="parta_gpi_pi_hod_a" type="text"></td>
+															<?php
+												      	}
+
+											      		if($committee==1)
+												      	{
+												      		?>
+												      		<td><input class="form-control" id="parta_gpi_pi_committee_a" type="text"></td>
+															<?php
+												      	}
+
+											      		?>
+											      		<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+											    	</tr>
+											 	</tbody>
 											</table>
+											<p id="parta_gpi_pi_msg"></p>
+
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+											<button type="button" id="parta_gpi_pi_btn" class="btn btn-primary">Save</button>
 										</div>
+										<!-- </form> -->
 									</div>
 								</div>
 							</div>
