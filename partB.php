@@ -31,6 +31,16 @@ else
 	
 }
 
+$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$userId'";
+$resultx=mysqli_query($conn,$sqlx);
+$rowx=mysqli_fetch_assoc($resultx);
+
+$hod=$rowx['hod'];
+$committee=$rowx['committee'];
+
+
+?>
+
 
 
 ?>
@@ -272,24 +282,60 @@ else
 								</div>
 								<div class="modal-body">
 									<table class="table table-bordered">
-									  <thead>
-									    <tr>
-									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
-									    </tr>
-									  </thead>
-									  <tbody>
-									    <tr>
-									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="40"></td>
-									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="40"></td>
-									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="40"></td>
-									    </tr>
-									 </tbody>
+									  	<thead>
+									    	<tr>
+										    	<th scope="col">Self</th>
+
+										      	<?php
+
+										      	if($hod==1 || $committee==1)
+										      	{
+										      		?>
+										      		<th scope="col">H.O.D</th>
+
+													<?php
+										      	}
+										      	if($committee==1)
+										      	{
+										      		?>
+							      					<th scope="col">Committee</th>
+													<?php
+										      	}
+										      	?>
+										    </tr>
+									  	</thead>
+
+									  	<tbody>
+									    	<tr>
+
+									      		<td><input class="form-control" id="cat1_pi1_self_a" type="number"  min="0" max="40"></td>
+
+												<?php
+
+										      	if($hod==1 || $committee==1)
+										      	{
+										      		?>
+													<td><input class="form-control" id="cat1_pi1_hod_a" type="number" min="0" max="40"></td>
+													<?php
+										      	}
+										      	
+
+										      	if($committee==1)
+										      	{
+										      		?>
+													 <td><input class="form-control" id="cat1_pi1_committee_a" type="number" min="0" max="40"></td>
+													<?php
+										      	}
+										      	?>
+										      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+									      	</tr>
+									 	</tbody>
 									</table>
+									<p id="partb_cat1_pi1_msg"></p>
+
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button id="partb_cat1_pi1_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -649,24 +695,59 @@ else
 							</div>
 							<div class="modal-body">
 								<table class="table table-bordered">
-								  <thead>
-								    <tr>
-								      <th scope="col">Self</th>
-								      <th scope="col">H.O.D</th>
-								      <th scope="col">Committee</th>
-								    </tr>
-								  </thead>
-								  <tbody>
-								    <tr>
-								      <td><input class="form-control" id="pi2_self_a" type="text"></td>
-								      <td><input class="form-control" id="pi2_hod_a" type="text"></td>
-								      <td><input class="form-control" id="pi2_committee_a" type="text"></td>
-								    </tr>
-								 </tbody>
+								  	<thead>
+								    	<tr>
+								      		<th scope="col">Self</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+
+								    	</tr>
+								  	</thead>
+								  	<tbody>
+									    <tr>
+									      	<td><input class="form-control" id="cat1_pi2_self_a" type="number"></td>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+								      			<td><input class="form-control" id="cat1_pi2_hod_a" type="number"></td>
+												<?php
+									      	}
+
+
+									      	if($committee==1)
+									      	{
+									      		?>
+								      			<td><input class="form-control" id="cat1_pi2_committee_a" type="number"></td>
+												<?php
+									      	}
+											
+											?>
+											<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+									    </tr>
+								 	</tbody>
 								</table>
+								<p id="partb_cat1_pi2_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								<button type="button" id="partb_cat1_pi2_btn" class="btn btn-primary">Save</button>
 							</div>
 						</div>
 					</div>
@@ -726,24 +807,55 @@ else
 						</div>
 						<div class="modal-body">
 							<table class="table table-bordered">
-							  <thead>
-							    <tr>
-							      <th scope="col">Self</th>
-							      <th scope="col">H.O.D</th>
-							      <th scope="col">Committee</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <td><input class="form-control" id="pi3_self_a" type="text"></td>
-							      <td><input class="form-control" id="pi3_hod_a" type="text"></td>
-							      <td><input class="form-control" id="pi3_committee_a" type="text"></td>
-							    </tr>
-							 </tbody>
+							  	<thead>
+							    	<tr>
+							      		<th scope="col">Self</th>
+
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">H.O.D</th>
+											<?php
+								      	}
+								      	if($committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">Committee</th>
+											<?php
+								      	}
+								      	?>
+							   		</tr>
+							  	</thead>
+							  	<tbody>
+							    	<tr>
+								      	<td><input class="form-control" id="cat1_pi3_self_a" type="number"></td>
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+							      			<td><input class="form-control" id="cat1_pi3_hod_a" type="number"></td>
+											<?php
+								      	}
+
+								      	if($committee==1)
+								      	{
+								      		?>
+							      			<td><input class="form-control" id="cat1_pi3_committee_a" type="number"></td>
+											<?php
+								      	}
+
+								      	?>
+								      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+							    	</tr>
+							 	</tbody>
 							</table>
+							<p id="partb_cat1_pi3_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" id="partb_cat1_pi3_btn" class="btn btn-primary">Save</button>
 						</div>
 					</div>
 				</div>
@@ -845,24 +957,57 @@ else
 						</div>
 						<div class="modal-body">
 							<table class="table table-bordered">
-							  <thead>
-							    <tr>
-							      <th scope="col">Self</th>
-							      <th scope="col">H.O.D</th>
-							      <th scope="col">Committee</th>
-							    </tr>
+							  	<thead>
+							    	<tr>
+							      		<th scope="col">Self</th>
+
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">H.O.D</th>
+											<?php
+								      	}
+								      	if($committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">Committee</th>
+											<?php
+								      	}
+								      	?>
+							    	</tr>
 							  </thead>
 							  <tbody>
-							    <tr>
-							      <td><input class="form-control" id="pi4_self_a" type="text"></td>
-							      <td><input class="form-control" id="pi4_hod_a" type="text"></td>
-							      <td><input class="form-control" id="pi4_committee_a" type="text"></td>
-							    </tr>
-							 </tbody>
+							    	<tr>
+								      	<td><input class="form-control" id="cat1_pi4_self_a" type="number"></td>
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+							      			<td><input class="form-control" id="cat1_pi4_hod_a" type="number"></td>
+											<?php
+								      	}
+
+								      	if($committee==1)
+								      	{
+								      		?>
+							      			<td><input class="form-control" id="cat1_pi4_committee_a" type="number"></td>
+							      			<?php
+
+								      	}
+
+								      	?>
+								      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+							   		</tr>
+							 	</tbody>
 							</table>
+							<p id="partb_cat1_pi4_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" id="partb_cat1_pi4_btn" class="btn btn-primary">Save</button>
 						</div>
 					</div>
 				</div>
@@ -898,21 +1043,54 @@ else
 							  <thead>
 							    <tr>
 							      <th scope="col">Self</th>
-							      <th scope="col">H.O.D</th>
-							      <th scope="col">Committee</th>
+
+							      	<?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">H.O.D</th>
+										<?php
+							      	}
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">Committee</th>
+										<?php
+							      	}
+							      	?>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="pi3_self_a" type="text"></td>
-							      <td><input class="form-control" id="pi3_hod_a" type="text"></td>
-							      <td><input class="form-control" id="pi3_committee_a" type="text"></td>
+							      <td><input class="form-control" id="cat1_pitotal_self_a" type="number"></td>
+							      <?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat1_pitotal_hod_a" type="number"></td>
+										<?php
+							      	}
+							      	
+
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat1_pitotal_committee_a" type="number"></td>
+										<?php
+							      	}
+							      	?>
+							      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+
 							    </tr>
 							 </tbody>
 							</table>
+							<p id="partb_cat1_pitotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" id="partb_cat1_pitotal_btn" class="btn btn-primary">Save</button>
 						</div>
 					</div>
 				</div>
@@ -980,7 +1158,7 @@ else
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PII 1 =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat2-1" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop1-cat2-1" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
@@ -999,21 +1177,52 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii1_self_a" type="text"></td>
-									      <td><input class="form-control" id="pii1_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pii1_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat2_pii1_self_a" type="number"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat2_pii1_hod_a" type="number"></td>
+												<?php
+									      	}
+
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat2_pii1_committee_a" type="number"></td>
+												<?php
+									      	}
+									      	?>
+
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat2_pii1_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat2_pii1_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1085,21 +1294,54 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii2_self_a" type="text"></td>
-									      <td><input class="form-control" id="pii2_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pii2_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat2_pii2_self_a" type="number"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+								     			<td><input class="form-control" id="cat2_pii2_hod_a" type="number"></td>
+
+												<?php
+									      	}
+
+								      		if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat2_pii2_committee_a" type="number"></td>
+
+												<?php
+									      	}
+
+								      		?>
+								      		<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat2_pii2_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat2_pii2_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1168,22 +1410,55 @@ else
 									<table class="table table-bordered">
 									  <thead>
 									    <tr>
-									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+									      	<th scope="col">Self</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii3_self_a" type="text"></td>
-									      <td><input class="form-control" id="pii3_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pii3_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat2_pii3_self_a" type="number"></td>
+									      	<?php
+
+											if($hod==1 || $committee==1)
+									      	{
+									      		?>
+								     			<td><input class="form-control" id="cat2_pii3_hod_a" type="number"></td>
+
+												<?php
+									      	}
+
+									      	if($committee==1)
+									      	{
+									      		?>
+								     			<td><input class="form-control" id="cat2_pii3_committee_a" type="number"></td>
+
+												<?php
+									      	}
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat2_pii3_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat2_pii3_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1252,22 +1527,53 @@ else
 									<table class="table table-bordered">
 									  <thead>
 									    <tr>
-									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+									    <th scope="col">Self</th>
+
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pii4_self_a" type="text"></td>
-									      <td><input class="form-control" id="pii4_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pii4_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat2_pii4_self_a" type="number"></td>
+
+									      	<?php
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+								     			<td><input class="form-control" id="cat2_pii4_hod_a" type="number"></td>
+
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+								     			<td><input class="form-control" id="cat2_pii4_committee_a" type="number"></td>
+
+												<?php
+									      	}
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat2_pii4_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat2_pii4_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1299,21 +1605,53 @@ else
 							  <thead>
 							    <tr>
 							      <th scope="col">Self</th>
-							      <th scope="col">H.O.D</th>
-							      <th scope="col">Committee</th>
+
+							      	<?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">H.O.D</th>
+										<?php
+							      	}
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">Committee</th>
+										<?php
+							      	}
+							      	?>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="pii3_total_self_a" type="text"></td>
-							      <td><input class="form-control" id="pii3_total_hod_a" type="text"></td>
-							      <td><input class="form-control" id="pii3_total_committee_a" type="text"></td>
+							      <td><input class="form-control" id="cat2_piitotal_self_a" type="number"></td>
+							      <?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat2_piitotal_hod_a" type="number"></td>
+
+										<?php
+							      	}
+
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat2_piitotal_committee_a" type="number"></td>
+
+										<?php
+							      	}
+							      	?>
+
 							    </tr>
 							 </tbody>
 							</table>
+							<p id="partb_cat2_piitotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" id="partb_cat2_piitotal_btn" class="btn btn-primary">Save</button>
 						</div>
 					</div>
 				</div>
@@ -1452,21 +1790,58 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="100"></td>
-									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="100"></td>
-									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="100"></td>
+									      <td><input class="form-control" id="cat3_piii1_self_a" type="number"  min="0" max="100"></td>
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat3_piii1_hod_a" type="number" min="0" max="100"></td>
+												<?php
+									      	}
+
+									 
+									      	
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat3_piii1_committee_a" type="number" min="0" max="100"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+									      
+									      
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii1_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii1_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1595,22 +1970,58 @@ else
 									<table class="table table-bordered">
 									  <thead>
 									    <tr>
-									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
-									    </tr>
+									      	<th scope="col">Self</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+
+								    	</tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="15"></td>
-									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="15"></td>
-									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="cat3_piii2_self_a" type="number"  min="0" max="15"></td>
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii2_hod_a" type="number" min="0" max="15"></td>
+												<?php
+									      	}
+
+									 
+									      	
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat3_piii2_committee_a" type="number" min="0" max="15"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+									      
+									      
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii2_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii2_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1742,22 +2153,55 @@ else
 									<table class="table table-bordered">
 									  <thead>
 									    <tr>
-									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+							        		<th scope="col">Self</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="10"></td>
-									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="10"></td>
-									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="10"></td>
-									    </tr>
+									      <td><input class="form-control" id="cat3_piii3_self_a" type="number"  min="0" max="15"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii3_hod_a" type="number" min="0" max="15"></td>
+												<?php
+									      	}
+
+									 
+									      	
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat3_piii3_committee_a" type="number" min="0" max="15"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+										</tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii3_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii3_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1900,21 +2344,55 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_self_a" type="text"  min="0" max="15"></td>
-									      <td><input class="form-control" id="pi_hod_a" type="text" min="0" max="15"></td>
-									      <td><input class="form-control" id="pi_committee_a" type="text" min="0" max="15"></td>
+									      <td><input class="form-control" id="cat3_piii4_self_a" type="number"  min="0" max="15"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii4_hod_a" type="number" min="0" max="15"></td>
+												<?php
+									      	}
+
+									      	if($committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii4_committee_a" type="number" min="0" max="15"></td>
+												<?php
+									      	}
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+									      
+									      
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii4_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii4_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1975,21 +2453,52 @@ else
 													  <thead>
 													    <tr>
 													      <th scope="col">Self</th>
-													      <th scope="col">H.O.D</th>
-													      <th scope="col">Committee</th>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">H.O.D</th>
+															<?php
+												      	}
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">Committee</th>
+															<?php
+												      	}
+												      	?>
 													    </tr>
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control" id="research-self-a" type="text"></td>
-													      <td><input class="form-control" id="research-hod-a" type="text"></td>
-													      <td><input class="form-control" id="research-committee-a" type="text"></td>
+													      <td><input class="form-control" id="cat3_piii5_self_a" type="number"></td>
+													      <?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+															<td><input class="form-control" id="cat3_piii5_hod_a" type="number"></td>
+															<?php
+												      	}
+
+												      	if($committee==1)
+												      	{
+												      		?>
+															<td><input class="form-control" id="cat3_piii5_committee_a" type="number"></td>
+															<?php
+												      	}
+													      
+													    ?>
+													    <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 													    </tr>
 													 </tbody>
 													</table>
+													<p id="partb_cat3_piii5_msg"></p>
 												</div>
 												<div class="modal-footer">
-													<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+													<button type="button" id="partb_cat3_piii5_btn" class="btn btn-primary" >Save</button>
 												</div>
 											</div>
 										</div>
@@ -2009,7 +2518,7 @@ else
 								</td>
 								<td>
 									<!-- <input type="number" name='mtechpi' class="form-control"/> -->
-									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-phd" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-mtech" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
 									</label>
 
 									<div class="modal fade" id="flipFlop-cat3-mtech" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -2026,21 +2535,58 @@ else
 													  <thead>
 													    <tr>
 													      <th scope="col">Self</th>
-													      <th scope="col">H.O.D</th>
-													      <th scope="col">Committee</th>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">H.O.D</th>
+															<?php
+												      	}
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">Committee</th>
+															<?php
+												      	}
+												      	?>
 													    </tr>
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control" id="research_self_a" type="text"></td>
-													      <td><input class="form-control" id="research_hod_a" type="text"></td>
-													      <td><input class="form-control" id="research_committee_a" type="text"></td>
+													      <td><input class="form-control" id="cat3_piii6_self_a" type="text"></td>
+
+													      <?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+															<td><input class="form-control" id="cat3_piii6_hod_a" type="text"></td>
+															<?php
+												      	}
+
+												 
+												      	
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<td><input class="form-control" id="cat3_piii6_committee_a" type="text"></td>
+															<?php
+												      	}
+
+												      	?>
+												      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+													      
+													      
 													    </tr>
 													 </tbody>
 													</table>
+													<p id="partb_cat3_piii6_msg"></p>
 												</div>
 												<div class="modal-footer">
-													<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+													<button type="button" id="partb_cat3_piii6_btn" class="btn btn-primary">Save</button>
 												</div>
 											</div>
 										</div>
@@ -2060,7 +2606,7 @@ else
 								</td>
 								<td>
 									<!-- <input type="number" name='btechpi' class="form-control"/> -->
-									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-phd" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
+									<label class="col-form-label"><b><button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-btech" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button></b>
 									</label>
 
 									<div class="modal fade" id="flipFlop-cat3-btech" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -2077,21 +2623,53 @@ else
 													  <thead>
 													    <tr>
 													      <th scope="col">Self</th>
-													      <th scope="col">H.O.D</th>
-													      <th scope="col">Committee</th>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">H.O.D</th>
+															<?php
+												      	}
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">Committee</th>
+															<?php
+												      	}
+												      	?>
 													    </tr>
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control" id="research_self_a" type="text"></td>
-													      <td><input class="form-control" id="research_hod_a" type="text"></td>
-													      <td><input class="form-control" id="research_committee_a" type="text"></td>
+													      <td><input class="form-control" id="cat3_piii7_self_a" type="number"></td>
+													      <?php
+
+													      	if($hod==1 || $committee==1)
+													      	{
+													      		?>
+																<td><input class="form-control" id="cat3_piii7_hod_a" type="number"></td>
+																<?php
+													      	}
+
+													      	if($committee==1)
+													      	{
+													      		?>
+																<td><input class="form-control" id="cat3_piii7_committee_a" type="number"></td>
+																<?php
+													      	}
+													      	?>
+													      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+													      
+													     
 													    </tr>
 													 </tbody>
 													</table>
+													<p id="partb_cat3_piii7_msg"></p>
 												</div>
 												<div class="modal-footer">
-													<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+													<button type="button" id="partb_cat3_piii7_btn" class="btn btn-primary">Save</button>
 												</div>
 											</div>
 										</div>
@@ -2203,7 +2781,7 @@ else
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PI =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-res" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop1-cat3-res" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
@@ -2222,21 +2800,53 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_project_self_a" type="text"></td>
-									      <td><input class="form-control" id="pi_project_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pi_project_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat3_piii8_self_a" type="number"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii8_hod_a" type="number"></td>
+
+												<?php
+									      	}
+
+									      	if($committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii8_committee_a" type="number"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii8_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii8_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2303,7 +2913,7 @@ else
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PI =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-ores" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop1-cat3-ores" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
@@ -2322,21 +2932,58 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_ongoing_self_a" type="text"></td>
-									      <td><input class="form-control" id="pi_ongoing_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pi_ongoing_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat3_piii9_self_a" type="number"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii9_hod_a" type="number"></td>
+
+												<?php
+									      	}
+
+									 
+									      	
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat3_piii9_committee_a" type="number"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+									      
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii9_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii9_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2395,7 +3042,7 @@ else
 			<div class="row">
 				<div class="col-md-4 offset-md-9">
 					<label class="col-form-label"><b>PI =
-							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop-cat3-cres" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop1-cat3-cres" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
 					</b>
 					</label>
 
@@ -2414,21 +3061,56 @@ else
 									  <thead>
 									    <tr>
 									      <th scope="col">Self</th>
-									      <th scope="col">H.O.D</th>
-									      <th scope="col">Committee</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
 									    </tr>
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="pi_completed_self_a" type="text"></td>
-									      <td><input class="form-control" id="pi_completed_hod_a" type="text"></td>
-									      <td><input class="form-control" id="pi_completed_committee_a" type="text"></td>
+									      <td><input class="form-control" id="cat3_piii10_self_a" type="number"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control" id="cat3_piii10_hod_a" type="number"></td>
+
+												<?php
+									      	}
+
+									 
+									      	
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat3_piii10_committee_a" type="number"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+									      
 									    </tr>
 									 </tbody>
 									</table>
+									<p id="partb_cat3_piii10_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+									<button type="button" id="partb_cat3_piii10_btn" class="btn btn-primary">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2507,22 +3189,56 @@ else
 							<table class="table table-bordered">
 							  <thead>
 							    <tr>
-							      <th scope="col">Self</th>
-							      <th scope="col">H.O.D</th>
-							      <th scope="col">Committee</th>
+							     	<th scope="col">Self</th>
+
+							      	<?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">H.O.D</th>
+										<?php
+							      	}
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">Committee</th>
+										<?php
+							      	}
+							      	?>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat3_self" type="text"></td>
-							      <td><input class="form-control" id="cat3_hod" type="text"></td>
-							      <td><input class="form-control" id="cat3_committee" type="text"></td>
+							      <td><input class="form-control" id="cat3_piiitotal_self_a" type="number"></td>
+							      <?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+										<td><input class="form-control" id="cat3_piiitotal_hod_a" type="number"></td>
+										<?php
+							      	}
+
+							 
+							      	
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat3_piiitotal_committee_a" type="number"></td>
+										<?php
+							      	}
+
+							      	?>
+							      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
 							    </tr>
 							 </tbody>
 							</table>
+							<p id="partb_cat3_piiitotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" id="partb_cat3_piiitotal_btn" class="btn btn-primary">Save</button>
 						</div>
 					</div>
 				</div>
@@ -2608,24 +3324,55 @@ else
 							</div>
 							<div class="modal-body">
 								<table class="table table-bordered">
-								  <thead>
-								    <tr>
-								      <th scope="col">Self</th>
-								      <th scope="col">H.O.D</th>
-								      <th scope="col">Committee</th>
-								    </tr>
-								  </thead>
-								  <tbody>
-								    <tr>
-								      <td><input class="form-control" id="seminar_self_a" type="text"></td>
-								      <td><input class="form-control" id="seminar_hod_a" type="text"></td>
-								      <td><input class="form-control" id="seminar_committee_a" type="text"></td>
-								    </tr>
-								 </tbody>
+								  	<thead>
+								   		<tr>
+								      	<th scope="col">Self</th>
+
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">H.O.D</th>
+											<?php
+								      	}
+								      	if($committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">Committee</th>
+											<?php
+								      	}
+								      	?>
+							    		</tr>
+							  		</thead>
+							  		<tbody>
+								    	<tr>
+								      		<td><input class="form-control" id="cat4_piv1_self_a" type="number"></td>
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat4_piv1_hod_a" type="number"></td>
+												<?php
+									      	}
+
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control" id="cat4_piv1_committee_a" type="number"></td>
+												<?php
+									      	}
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+								    	</tr>
+							 		</tbody>
 								</table>
+								<p id="partb_cat4_piv1_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								<button type="button" id="partb_cat4_piv1_btn" class="btn btn-primary">Save</button>
 							</div>
 						</div>
 					</div>
@@ -2702,21 +3449,52 @@ else
 								  <thead>
 								    <tr>
 								      <th scope="col">Self</th>
-								      <th scope="col">H.O.D</th>
-								      <th scope="col">Committee</th>
+
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">H.O.D</th>
+											<?php
+								      	}
+								      	if($committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">Committee</th>
+											<?php
+								      	}
+							      		?>
 								    </tr>
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="cheifguest_self_a" type="text"></td>
-								      <td><input class="form-control" id="cheifguest_hod_a" type="text"></td>
-								      <td><input class="form-control" id="cheifguest_committee_a" type="text"></td>
+								      <td><input class="form-control" id="cat4_piv2_self_a" type="number"></td>
+								      <?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<td><input class="form-control" id="cat4_piv2_hod_a" type="number"></td>
+											<?php
+								      	}
+
+								      	if($committee==1)
+								      	{
+								      		?>
+								      		<td><input class="form-control" id="cat4_piv2_committee_a" type="number"></td>
+											<?php
+								      	}
+								      	
+								      	?>
+								      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 								    </tr>
 								 </tbody>
 								</table>
+								<p id="partb_cat4_piv2_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								<button type="button" id="partb_cat4_piv2_btn" class="btn btn-primary">Save</button>
 							</div>
 						</div>
 					</div>
@@ -2785,22 +3563,56 @@ else
 								<table class="table table-bordered">
 								  <thead>
 								    <tr>
-								      <th scope="col">Self</th>
-								      <th scope="col">H.O.D</th>
-								      <th scope="col">Committee</th>
+								    	<th scope="col">Self</th>
+
+								      	<?php
+
+								      	if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">H.O.D</th>
+											<?php
+								      	}
+								      	if($committee==1)
+								      	{
+								      		?>
+								      		<th scope="col">Committee</th>
+											<?php
+								      	}
+								      	?>
+								     
 								    </tr>
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="please_self_a" type="text"></td>
-								      <td><input class="form-control" id="please_hod_a" type="text"></td>
-								      <td><input class="form-control" id="please_committee_a" type="text"></td>
+								      <td><input class="form-control" id="cat4_piv3_self_a" type="number"></td>
+
+								      <?php
+								      if($hod==1 || $committee==1)
+								      	{
+								      		?>
+								      		<td><input class="form-control" id="cat4_piv3_hod_a" type="number"></td>
+
+											<?php
+								      	}
+
+							      		if($committee==1)
+								      	{
+								      		?>
+								      		<td><input class="form-control" id="cat4_piv3_committee_a" type="number"></td>
+
+											<?php
+								      	}
+
+							      		?>
+							      		<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 								    </tr>
 								 </tbody>
 								</table>
+								<p id="partb_cat4_piv3_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+								<button type="button" id="partb_cat4_piv3_btn" class="btn btn-primary">Save</button>
 							</div>
 						</div>
 					</div>
@@ -2833,21 +3645,52 @@ else
 							  <thead>
 							    <tr>
 							      <th scope="col">Self</th>
-							      <th scope="col">H.O.D</th>
-							      <th scope="col">Committee</th>
+
+							      	<?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">H.O.D</th>
+										<?php
+							      	}
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<th scope="col">Committee</th>
+										<?php
+							      	}
+							      	?>
 							    </tr>
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat4_self" type="text"></td>
-							      <td><input class="form-control" id="cat4_hod" type="text"></td>
-							      <td><input class="form-control" id="cat4_committee" type="text"></td>
+							      <td><input class="form-control" id="cat4_pivtotal_self_a" type="number"></td>
+							      <?php
+
+							      	if($hod==1 || $committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat4_pivtotal_hod_a" type="number"></td>
+										<?php
+							      	}
+
+							      	if($committee==1)
+							      	{
+							      		?>
+							      		<td><input class="form-control" id="cat4_pivtotal_committee_a" type="number"></td>
+										<?php
+							      	}
+							      	?>
+							      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
 							    </tr>
 							 </tbody>
 							</table>
+							<p id="partb_cat4_pivtotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+							<button type="button" id="partb_cat4_pivtotal_btn" class="btn btn-primary">Save</button>
 						</div>
 					</div>
 				</div>
