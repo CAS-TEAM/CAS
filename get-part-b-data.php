@@ -413,7 +413,7 @@ else
 	
 	$sql1="SELECT * FROM part_b_cat_1_cto WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -436,7 +436,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_1_cte WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -459,7 +459,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_1_dar WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -480,7 +480,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_2_ha WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -497,7 +497,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_2_act WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -514,7 +514,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_2_exc WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -531,7 +531,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_2_c WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -610,7 +610,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_pp WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -631,7 +631,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_ppic WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -652,7 +652,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_ppinc WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -673,7 +673,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_bk WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -684,7 +684,7 @@ else
 			$data_doc[]=array('ppdatebk'=>$row1['ppdatebk']);
 			$data_doc[]=array('ppifbk'=>$row1['ppifbk']);
 			$data_doc[]=array('customRadioInline1bk'=>$row1['customRadioInline1bk']);
-			$data_doc[]=array('ppncabk'=>$row1['ppncabkc']);
+			$data_doc[]=array('ppncabk'=>$row1['ppncabk']);
 
 			$data[]=array('part_b_cat_3_bk'=>$data_doc);
 
@@ -697,7 +697,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_res WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -716,7 +716,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_ores WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -735,7 +735,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_cres WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -754,7 +754,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_3_pip WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -775,7 +775,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_4_sem WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -793,7 +793,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_4_inv WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))
@@ -811,7 +811,7 @@ else
 
 	$sql1="SELECT * FROM part_b_cat_4_creds WHERE formId='$formId'";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>=1)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))

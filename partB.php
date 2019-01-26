@@ -959,7 +959,7 @@ else
 									<input type="text" name='ha[]' id='ha1' class="form-control" maxlength="200" />
 									</td>
 									<td>
-									<input type="text" name='hb[]' id='hb2' class="form-control" maxlength="200" />
+									<input type="text" name='hb[]' id='hb1' class="form-control" maxlength="200" />
 									</td>	
 								</tr>
 			                    <tr id='addr51'></tr>
@@ -2895,229 +2895,80 @@ else
 	</div>
 	</form>
 
+	<input type="hidden" id="i" name="i" value="1" />
+	<input type="hidden" id="j" name="j" value="1" />
+	<input type="hidden" id="k" name="k" value="1" />
+	<input type="hidden" id="l" name="l" value="1" />
+	<input type="hidden" id="m" name="m" value="1" />
+	<input type="hidden" id="n" name="n" value="1" />
+	<input type="hidden" id="o" name="o" value="1" />
+	<input type="hidden" id="p" name="p" value="1" />
+	<input type="hidden" id="q" name="q" value="1" />
+	<input type="hidden" id="r" name="r" value="1" />
+	<input type="hidden" id="s" name="s" value="1" />
+	<input type="hidden" id="t" name="t" value="1" />
+	<input type="hidden" id="u" name="u" value="1" />
+	<input type="hidden" id="v1" name="v1" value="1" />
+	<input type="hidden" id="w" name="w" value="1" />
+	<input type="hidden" id="x" name="x" value="1" />
+	<input type="hidden" id="y" name="y" value="1" />
+	<input type="hidden" id="z" name="z" value="1" />
+	<input type="hidden" id="ppr" name="ppr" value="2" />
+	<input type="hidden" id="ppric" name="ppric" value="2" />
+	<input type="hidden" id="pprinc" name="pprinc" value="2" />
+	<input type="hidden" id="pprbk" name="pprbk" value="2" />
+
+	<script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var i=1;
+
+     	$("#add_row1").click(function(){
+     		var i=parseInt(document.getElementById('i').value);
+      		// alert("i="+i);
+      		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td>');
+
+      		// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
+      		$('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
+      		i++; 
+      		document.getElementById("i").value=i;
+  		});
+     	$("#delete_row1").click(function(){
+     		var i=parseInt(document.getElementById('i').value);
+    	 	if(i>1){
+		 		$("#addr1"+(i-1)).html('');
+		 		$("#addr1"+(i)).remove();
+		 		i--;
+				document.getElementById("i").value=i;
+			}
+		});
+	});
+
+    </script>
 
 
 	<script type="text/javascript">
-     $(document).ready(function()
+    $(document).ready(function()
     {
-      var i=1;
-     $("#add_row1").click(function(){
-      $('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td>');
+      	// var j=1;      
+     	$("#add_row2").click(function(){
+     		var j=parseInt(document.getElementById('j').value);
+      		$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td>');
 
-      // $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
-      $('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
-      i++; 
-  	});
-     $("#delete_row1").click(function(){
-    	 if(i>1){
-		 $("#addr1"+(i-1)).html('');
-		 $("#addr1"+(i)).remove();
-		 i--;
-		 }
-	});
-	});
-
-    </script>
-
-
-	<script type="text/javascript">
-     $(document).ready(function()
-    {
-      var j=1;
-     $("#add_row2").click(function(){
-      $('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td>');
-
-      // $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
-      $('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
-      j++; 
-  	});
-     $("#delete_row2").click(function(){
-    	 if(j>1){
-		 $("#addr2"+(j-1)).html('');
-		 $("#addr2"+(j)).remove();
-		 j--;
-		 }
-	});
-	});
-
-    </script>
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var k=1;
-     $("#add_row3").click(function(){
-      $('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control" maxlength="200"/></td>');
-
-      // $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
-       $('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
-      k++; 
-  	});
-     $("#delete_row3").click(function(){
-    	 if(k>1){
-		 $("#addr3"+(k-1)).html('');
-		 $("#addr3"+(k)).remove();
-		 k--;
-		 }
-	});
-	});
-
-    </script>
-
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var l=1;
-     $("#add_row4").click(function(){
-      $('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" /></td>');
-
-      // $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
-      $('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
-      l++; 
-  	});
-     $("#delete_row4").click(function(){
-    	 if(l>1){
-		 $("#addr5"+(l-1)).html('');
-		 $("#addr5"+(l)).remove();
-		 l--;
-		 }
-	});
-	});
-
-    </script>
-
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var m=1;
-     $("#add_row5").click(function(){
-      $('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control"/></td>');
-
-      // $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
-      $('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
-      m++; 
-  	});
-     $("#delete_row5").click(function(){
-    	 if(m>1){
-		 $("#addr6"+(m-1)).html('');
-		 $("#addr6"+(m)).remove();
-		 m--;
-		 }
-	});
-	});
-
-    </script>
-
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var n=1;
-     $("#add_row6").click(function(){
-      $('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control"/></td>');
-
-      // $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
-       $('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
-      n++; 
-  	});
-     $("#delete_row6").click(function(){
-    	 if(n>1){
-		 $("#addr7"+(n-1)).html('');
-		 $("#addr7"+(n)).remove();
-		 n--;
-		 }
-	});
-	});
-
-    </script>
-
-     <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var o=1;
-     $("#add_row7").click(function(){
-      $('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control"/></td>');
-
-      // $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
-      $('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
-      o++; 
-  	});
-     $("#delete_row7").click(function(){
-    	 if(o>1){
-		 $("#addr8"+(o-1)).html('');
-		 $("#addr8"+(o)).remove();
-		 o--;
-		 }
-	});
-	});
-
-    </script>
-
-     <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var p=1;
-     $("#add_row8").click(function(){
-      $('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control"/></td></tr>');
-
-      // $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
-      $('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
-      p++; 
-  	});
-     $("#delete_row8").click(function(){
-    	 if(p>1){
-		 $("#addr10"+(p-1)).html('');
-		 $("#addr10"+(p)).remove();
-		 p--;
-		 }
-	});
-	});
-
-    </script>
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var q=1;
-     $("#add_row9").click(function(){
-      $('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control"/></td></tr>');
-
-      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
-      $('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
-      q++; 
-  	});
-     $("#delete_row9").click(function(){
-    	 if(q>1){
-		 $("#addr11"+(q-1)).html('');
-		 $("#addr11"+(q)).remove();
-		 q--;
-		 }
-	});
-	});
-
-    </script>
-
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var r=1;
-     $("#add_row10").click(function(){
-      $('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control"/></td>');
-
-      // $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
-      $('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
-      r++; 
-  	});
-     $("#delete_row10").click(function(){
-    	 if(r>1){
-		 $("#addr12"+(r-1)).html('');
-		 $("#addr12"+(r)).remove();
-		 r--;
-		 }
-	});
+      		// $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
+      		$('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
+      		j++; 
+      		document.getElementById("j").value=j;
+  		});
+     	$("#delete_row2").click(function(){
+     		var j=parseInt(document.getElementById('j').value);
+    	 	if(j>1){
+		 		$("#addr2"+(j-1)).html('');
+		 		$("#addr2"+(j)).remove();
+		 		j--;
+		 		document.getElementById("j").value=j;
+			}
+		});
 	});
 
     </script>
@@ -3125,21 +2976,263 @@ else
     <script type="text/javascript">
     $(document).ready(function()
     {
-      	var s=1;
+      	// var k=1;
+	    $("#add_row3").click(function(){
+     		var k=parseInt(document.getElementById('k').value);
+      		$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control" maxlength="200"/></td>');
+
+      		// $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
+       		$('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
+      		k++; 
+      		document.getElementById("k").value=k;
+  		});
+     	$("#delete_row3").click(function(){
+     		var k=parseInt(document.getElementById('k').value);
+    	 	if(k>1){
+		 		$("#addr3"+(k-1)).html('');
+		 		$("#addr3"+(k)).remove();
+		 		k--;
+		 		document.getElementById("k").value=k;
+		 	}
+		});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+     $(document).ready(function()
+    {
+      	// var l=1;      
+     	$("#add_row4").click(function(){
+     		var l=parseInt(document.getElementById('l').value);
+      		$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" /></td>');
+
+      		// $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
+      		$('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
+      		l++; 
+      		document.getElementById("l").value=l;
+  		});
+     	$("#delete_row4").click(function(){
+     		var l=parseInt(document.getElementById('l').value);
+    	 	if(l>1){
+		 		$("#addr5"+(l-1)).html('');
+		 		$("#addr5"+(l)).remove();
+		 		l--;
+		 		document.getElementById("l").value=l;
+		 	}
+		});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var m=1;      
+     	$("#add_row5").click(function(){
+     		var m=parseInt(document.getElementById('m').value);
+      		$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control"/></td>');
+
+      		// $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
+      		$('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
+      		m++; 
+      		document.getElementById("m").value=m;
+  		});
+     	$("#delete_row5").click(function(){
+     		var m=parseInt(document.getElementById('m').value);
+    	 	if(m>1){
+		 		$("#addr6"+(m-1)).html('');
+		 		$("#addr6"+(m)).remove();
+		 		m--;
+		 		document.getElementById("m").value=m;
+		 	}
+		});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var n=1;
+      	$("#add_row6").click(function(){
+     		var n=parseInt(document.getElementById('n').value);
+      		$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control"/></td>');
+
+      		// $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
+       		$('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
+      		n++; 
+      		document.getElementById("n").value=n;
+  		});
+     	$("#delete_row6").click(function(){
+     		var n=parseInt(document.getElementById('n').value);
+    	 	if(n>1){
+		 		$("#addr7"+(n-1)).html('');
+		 		$("#addr7"+(n)).remove();
+		 		n--;
+		 		document.getElementById("n").value=n;
+		 	}
+		});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var o=1;     
+     	$("#add_row7").click(function(){
+     	 	var o=parseInt(document.getElementById('o').value);
+      		$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control"/></td>');
+
+      		// $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
+      		$('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
+      		o++; 
+      		document.getElementById("o").value=o;
+  		});
+     	$("#delete_row7").click(function(){
+     		var o=parseInt(document.getElementById('o').value);
+    	 	if(o>1){
+		 		$("#addr8"+(o-1)).html('');
+		 		$("#addr8"+(o)).remove();
+		 		o--;
+		 		document.getElementById("o").value=o;
+		 	}
+		});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var p=1;      
+     	$("#add_row8").click(function(){
+     		var p=parseInt(document.getElementById('p').value);
+      		$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control"/></td></tr>');
+
+      		// $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
+      		$('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
+      		p++; 
+      		document.getElementById("p").value=p;
+  		});
+     	$("#delete_row8").click(function(){
+     		var p=parseInt(document.getElementById('p').value);
+    	 	if(p>1){
+		 		$("#addr10"+(p-1)).html('');
+		 		$("#addr10"+(p)).remove();
+		 		p--;
+		 		document.getElementById("p").value=p;
+		 	}
+		});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var q=1;
+     	$("#add_row9").click(function(){
+     		var q=parseInt(document.getElementById('q').value);
+      		$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control"/></td></tr>');
+
+      		// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+      		$('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
+      		q++; 
+      		document.getElementById("q").value=q;
+  		});
+     	$("#delete_row9").click(function(){
+     		var q=parseInt(document.getElementById('q').value);
+    	 	if(q>1){
+		 		$("#addr11"+(q-1)).html('');
+		 		$("#addr11"+(q)).remove();
+		 		q--;
+		 		document.getElementById("q").value=q;
+		 	}
+		});
+	});
+
+    </script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var r=1;      
+     	$("#add_row10").click(function(){
+     		var r=parseInt(document.getElementById('r').value);
+      		$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control"/></td>');
+
+      		// $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
+      		$('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
+      		r++; 
+      		document.getElementById("r").value=r;
+  		});
+     	$("#delete_row10").click(function(){
+     		var r=parseInt(document.getElementById('r').value);
+    	 	if(r>1){
+		 		$("#addr12"+(r-1)).html('');
+		 		$("#addr12"+(r)).remove();
+		 		r--;
+		 		document.getElementById("r").value=r;
+		 	}
+		});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var s=1;      	
      	$("#add_row11").click(function(){
-      	$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control"/></td>');
+     		var s=parseInt(document.getElementById('s').value);
+      		$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control"/></td>');
 
-      	// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
-      	$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
-      	s++; 
-  	});
-     $("#delete_row11").click(function(){
-    	 if(s>1){
-		 $("#addr13"+(s-1)).html('');
-		 $("#addr13"+(s)).remove();
-		 s--;
-		 }
+      		// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
+      		$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
+      		s++; 
+      		document.getElementById("s").value=s;
+  		});
+     	$("#delete_row11").click(function(){
+     		var s=parseInt(document.getElementById('s').value);
+    	 	if(s>1){
+		 		$("#addr13"+(s-1)).html('');
+		 		$("#addr13"+(s)).remove();
+		 		s--;
+		 		document.getElementById("s").value=s;
+			}
+		});
 	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var t=1;      
+     	$("#add_row12").click(function(){
+     		var t=parseInt(document.getElementById('t').value);
+     		$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td>');
+
+      		// $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
+      		$('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
+      		t++; 
+      		document.getElementById("t").value=t;
+  		});
+     	$("#delete_row12").click(function(){
+     		var t=parseInt(document.getElementById('t').value);
+    	 	if(t>1){
+		 		$("#addr14"+(t-1)).html('');
+		 		$("#addr14"+(t)).remove();
+		 		t--;
+		 		document.getElementById("t").value=t;
+		 	}
+		});
 	});
 
     </script>
@@ -3147,21 +3240,116 @@ else
     <script type="text/javascript">
      $(document).ready(function()
     {
-      var t=1;
-     $("#add_row12").click(function(){
-      $('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td>');
+      	// var u=1;      
+     	$("#add_row13").click(function(){
+     		var u=parseInt(document.getElementById('u').value);
+      		$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200"/></td>');
 
-      // $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
-      $('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
-      t++; 
-  	});
-     $("#delete_row12").click(function(){
-    	 if(t>1){
-		 $("#addr14"+(t-1)).html('');
-		 $("#addr14"+(t)).remove();
-		 t--;
-		 }
+      		// $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
+      		$('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
+      		u++; 
+      		document.getElementById("u").value=u;
+  		});
+     	$("#delete_row13").click(function(){
+     		var u=parseInt(document.getElementById('u').value);
+    	 	if(u>1){
+		 		$("#addr15"+(u-1)).html('');
+		 		$("#addr15"+(u)).remove();
+		 		u--;
+		 		document.getElementById("u").value=u;
+		 	}
+		});
 	});
+
+    </script>
+
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var v=1;      
+     	$("#add_row14").click(function(){
+     		var v=parseInt(document.getElementById('v1').value);
+      		$('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td>');
+
+      		// $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
+      		$('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
+      		v++; 
+      		document.getElementById("v").value=v;
+  		});
+     	$("#delete_row14").click(function(){
+     		var v=parseInt(document.getElementById('v1').value);
+    	 	if(v>1){
+		 		$("#addr16"+(v-1)).html('');
+		 		$("#addr16"+(v)).remove();
+		 		v--;
+		 		document.getElementById("v").value=v;
+		 	}
+		});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var ppr=2;      
+     	$("#add_row_ppr").click(function(){
+     		var ppr=parseInt(document.getElementById('ppr').value);
+     		alert(ppr);
+      		$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
+
+	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      	$('#ppr'+ppr).toggle();
+	      	$('#br'+ppr).toggle();
+	     	$('#ppr'+ppr).after('<br id="br'+(ppr+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppr'+(ppr+1)+'"></div>');
+	      	ppr++; 
+	      	document.getElementById("ppr").value=ppr;
+  		});
+     	$("#delete_row_ppr").click(function(){
+     		var ppr=parseInt(document.getElementById('ppr').value);
+     		// alert(ppr);
+	    	if(ppr>2){
+			 	$("#ppr"+(ppr-1)).html('');
+			 	$('#ppr'+(ppr-1)).toggle();
+			 	$("#br"+(ppr-1)).toggle();
+			 	$("#ppr"+(ppr)).remove();
+			 	$("#br"+(ppr)).remove();
+			 	ppr--;
+			 	document.getElementById("ppr").value=ppr;
+			}
+		});
+	});
+
+    </script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+      	// var ppric=2;      
+     	$("#add_row_ppric").click(function(){
+     		var ppric=parseInt(document.getElementById('ppric').value);
+      		$('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
+
+		    // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+		    $('#ppric'+ppric).toggle();
+		    $('#bric'+ppric).toggle();
+		    $('#ppric'+ppric).after('<br id="bric'+(ppric+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppric'+(ppric+1)+'"></div>');
+		    ppric++; 
+		    document.getElementById("ppric").value=ppric;
+  		});
+     	$("#delete_row_ppric").click(function(){
+     		var ppric=parseInt(document.getElementById('ppric').value);
+	    	if(ppric>2){
+			 	$("#ppric"+(ppric-1)).html('');
+			 	$('#ppric'+(ppric-1)).toggle();
+			 	$("#bric"+(ppric-1)).toggle();
+			 	$("#ppric"+(ppric)).remove();
+			 	$("#bric"+(ppric)).remove();
+			 	ppric--;
+			 	document.getElementById("ppric").value=ppric;
+			}
+		});
 	});
 
     </script>
@@ -3169,153 +3357,61 @@ else
     <script type="text/javascript">
      $(document).ready(function()
     {
-      var u=1;
-     $("#add_row13").click(function(){
-      $('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200"/></td>');
+      	// var pprinc=2;      
+     	$("#add_row_pprinc").click(function(){
+     		var pprinc=parseInt(document.getElementById('pprinc').value);
+      		$('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div></div>');
 
-      // $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
-      $('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
-      u++; 
-  	});
-     $("#delete_row13").click(function(){
-    	 if(u>1){
-		 $("#addr15"+(u-1)).html('');
-		 $("#addr15"+(u)).remove();
-		 u--;
-		 }
-	});
-	});
-
-    </script>
-
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var v=1;
-     $("#add_row14").click(function(){
-      $('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td>');
-
-      // $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
-      $('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
-      v++; 
-  	});
-     $("#delete_row14").click(function(){
-    	 if(v>1){
-		 $("#addr16"+(v-1)).html('');
-		 $("#addr16"+(v)).remove();
-		 v--;
-		 }
-	});
+	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      	$('#pprinc'+pprinc).toggle();
+	      	$('#brinc'+pprinc).toggle();
+	      	$('#pprinc'+pprinc).after('<br id="brinc'+(pprinc+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprinc'+(pprinc+1)+'"></div>');
+	      	pprinc++; 
+	      	document.getElementById("pprinc").value=pprinc;
+  		});
+     	$("#delete_row_pprinc").click(function(){
+     		var pprinc=parseInt(document.getElementById('pprinc').value);
+	    	if(pprinc>2){
+			 	$("#pprinc"+(pprinc-1)).html('');
+			 	$('#pprinc'+(pprinc-1)).toggle();
+			 	$("#brinc"+(pprinc-1)).toggle();
+			 	$("#pprinc"+(pprinc)).remove();
+			 	$("#brinc"+(pprinc)).remove();
+			 	pprinc--;
+			 	document.getElementById("pprinc").value=pprinc;
+			}
+		});
 	});
 
     </script>
 
     <script type="text/javascript">
-     $(document).ready(function()
+    $(document).ready(function()
     {
-      var ppr=2;
-     $("#add_row_ppr").click(function(){
-      $('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
+      	// var pprbk=2;      
+     	$("#add_row_pprbk").click(function(){
+     		var pprbk=parseInt(document.getElementById('pprbk').value);
+      		$('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><input type="text" name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200/> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div></div>');
 
-	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
-	      $('#ppr'+ppr).toggle();
-	      $('#br'+ppr).toggle();
-	      $('#ppr'+ppr).after('<br id="br'+(ppr+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppr'+(ppr+1)+'"></div>');
-	      ppr++; 
-  	});
-     $("#delete_row_ppr").click(function(){
-    	if(ppr>2){
-		 	$("#ppr"+(ppr-1)).html('');
-		 	$('#ppr'+(ppr-1)).toggle();
-		 	$("#br"+(ppr-1)).toggle();
-		 	$("#ppr"+(ppr)).remove();
-		 	$("#br"+(ppr)).remove();
-		 	ppr--;
-		}
-	});
-	});
-
-    </script>
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var ppric=2;
-     $("#add_row_ppric").click(function(){
-      $('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
-
-	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
-	      $('#ppric'+ppric).toggle();
-	      $('#bric'+ppric).toggle();
-	      $('#ppric'+ppric).after('<br id="bric'+(ppric+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppric'+(ppric+1)+'"></div>');
-	      ppric++; 
-  	});
-     $("#delete_row_ppric").click(function(){
-    	if(ppric>2){
-		 	$("#ppric"+(ppric-1)).html('');
-		 	$('#ppric'+(ppric-1)).toggle();
-		 	$("#bric"+(ppric-1)).toggle();
-		 	$("#ppric"+(ppric)).remove();
-		 	$("#bric"+(ppric)).remove();
-		 	ppric--;
-		}
-	});
-	});
-
-    </script>
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var pprinc=2;
-     $("#add_row_pprinc").click(function(){
-      $('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div></div>');
-
-	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
-	      $('#pprinc'+pprinc).toggle();
-	      $('#brinc'+pprinc).toggle();
-	      $('#pprinc'+pprinc).after('<br id="brinc'+(pprinc+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprinc'+(pprinc+1)+'"></div>');
-	      pprinc++; 
-  	});
-     $("#delete_row_pprinc").click(function(){
-    	if(pprinc>2){
-		 	$("#pprinc"+(pprinc-1)).html('');
-		 	$('#pprinc'+(pprinc-1)).toggle();
-		 	$("#brinc"+(pprinc-1)).toggle();
-		 	$("#pprinc"+(pprinc)).remove();
-		 	$("#brinc"+(pprinc)).remove();
-		 	pprinc--;
-		}
-	});
-	});
-
-    </script>
-
-    <script type="text/javascript">
-     $(document).ready(function()
-    {
-      var pprbk=2;
-     $("#add_row_pprbk").click(function(){
-      $('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><input type="text" name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200/> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div></div>'
-      	);
-
-	      // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
-	      $('#pprbk'+pprbk).toggle();
-	      $('#brbk'+pprbk).toggle();
-	      $('#pprbk'+pprbk).after('<br id="brbk'+(pprbk+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprbk'+(pprbk+1)+'"></div>');
-	      pprbk++; 
-  	});
-     $("#delete_row_pprbk").click(function(){
-    	if(pprbk>2){
-		 	$("#pprbk"+(pprbk-1)).html('');
-		 	$('#pprbk'+(pprbk-1)).toggle();
-		 	$("#brbk"+(pprbk-1)).toggle();
-		 	$("#pprbk"+(pprbk)).remove();
-		 	$("#brbk"+(pprbk)).remove();
-		 	pprbk--;
-		}
-	});
+	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
+	      	$('#pprbk'+pprbk).toggle();
+	      	$('#brbk'+pprbk).toggle();
+	      	$('#pprbk'+pprbk).after('<br id="brbk'+(pprbk+1)+'" style="display:none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="pprbk'+(pprbk+1)+'"></div>');
+	      	pprbk++; 
+	      	document.getElementById("pprbk").value=pprbk;
+  		});
+     	$("#delete_row_pprbk").click(function(){
+     		var pprbk=parseInt(document.getElementById('pprbk').value);
+	    	if(pprbk>2){
+			 	$("#pprbk"+(pprbk-1)).html('');
+			 	$('#pprbk'+(pprbk-1)).toggle();
+			 	$("#brbk"+(pprbk-1)).toggle();
+			 	$("#pprbk"+(pprbk)).remove();
+			 	$("#brbk"+(pprbk)).remove();
+			 	pprbk--;
+			 	document.getElementById("pprbk").value=pprbk;
+			}
+		});
 	});
 
     </script>

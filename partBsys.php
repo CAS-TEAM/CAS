@@ -266,7 +266,7 @@ if($alreadybegun==1)
 	
 
 	//part_b_cat_1_cto
-	$sqlx="DELETE FROM art_b_cat_1_cto WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_1_cto WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($i=0;$i<sizeof($ctocourse);$i++)
 	{
@@ -276,7 +276,7 @@ if($alreadybegun==1)
 		
 	}
 
-	$sqlx="DELETE FROM art_b_cat_1_cte WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_1_cte WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($j=0;$j<sizeof($ctecourse);$j++)
 	{	
@@ -286,7 +286,7 @@ if($alreadybegun==1)
 		
 	}
 
-	$sqlx="DELETE FROM art_b_cat_1_dar WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_1_dar WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($k=0;$k<sizeof($dara);$k++)
 	{
@@ -299,10 +299,10 @@ if($alreadybegun==1)
 	// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CATEGORY 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-	$sqlcat2="INSERT INTO part_b_cat_2 (formId) VALUES ('$formId')";
-	$resultcat2=mysqli_query($conn,$sqlcat2);
+	// $sqlcat2="INSERT INTO part_b_cat_2 (formId) VALUES ('$formId')";
+	// $resultcat2=mysqli_query($conn,$sqlcat2);
 
-	$sqlx="DELETE FROM art_b_cat_2_ha WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_2_ha WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($l=0;$l<sizeof($ha);$l++)
 	{		
@@ -312,7 +312,7 @@ if($alreadybegun==1)
 		
 	}
 
-	$sqlx="DELETE FROM art_b_cat_2_act WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_2_act WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($m=0;$m<sizeof($ea);$m++)
 	{		
@@ -322,7 +322,7 @@ if($alreadybegun==1)
 		
 	}
 
-	$sqlx="DELETE FROM art_b_cat_2_exc WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_2_exc WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($n=0;$n<sizeof($eca);$n++)
 	{	
@@ -332,7 +332,7 @@ if($alreadybegun==1)
 		
 	}
 
-	$sqlx="DELETE FROM art_b_cat_2_c WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_2_c WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($o=0;$o<sizeof($ca);$o++)
 	{
@@ -347,7 +347,7 @@ if($alreadybegun==1)
 	$sqlcat3="INSERT INTO part_b_cat_3 (formId, phdne, phdts, phdda, mtechne, mtechts, mtechda, btechne, btechts, btechda) VALUES ('$formId', '$phdne', '$phdts', '$phdda', '$mtechne', '$mtechts', '$mtechda', '$btechne', '$btechts', '$btechda')";
 	$resultcat3=mysqli_query($conn,$sqlcat3);
 
-	$sqlx="DELETE FROM art_b_cat_3_pp WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_3_pp WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($p=0;$p<sizeof($pptitle);$p++)
 	{
@@ -357,7 +357,7 @@ if($alreadybegun==1)
 		
 	}
 
-	$sqlx="DELETE FROM art_b_cat_3_ppic WHERE formId='$formId'";
+	$sqlx="DELETE FROM part_b_cat_3_ppic WHERE formId='$formId'";
 	$resultx=mysqli_query($conn,$sqlx);
 	for($q=0;$q<sizeof($pptitleic);$q++)
 	{
