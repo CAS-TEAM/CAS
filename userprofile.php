@@ -338,20 +338,20 @@ include 'top.php';
 													    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
 													    	<div class="row">							    		
 													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-													    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+													    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
 													    		</div>
 													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-													    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+													    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 													    		</div>
 													    	</div>
 													    	<hr>
 													    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
 													    	<div class="row">							    		
 													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-													    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+													    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
 													    		</div>
 													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-													    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+													    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 													    		</div>
 													    	</div>
 													    	<?php
@@ -475,20 +475,20 @@ include 'top.php';
 															    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
 															    	<div class="row">							    		
 															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-															    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+															    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
 															    		</div>
 															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-															    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+															    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 															    		</div>
 															    	</div>
 															    	<hr>
 															    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
 															    	<div class="row">							    		
 															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-															    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+															    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
 															    		</div>
 															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-															    			<a href="#" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+															    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 															    		</div>
 															    	</div>
 

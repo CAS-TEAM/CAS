@@ -679,11 +679,11 @@ include 'top.php';
 			<div class="col-md-6">
 				<input type="text" name='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 			</div>
-		</div><br><br>
+		</div><br>
 
 		<div class="row form-inline justify-content-center">
 
-			<div class="col se-btn">
+			<div class="col">
 				<button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
 				</button>
@@ -696,11 +696,13 @@ include 'top.php';
 	  			PRINT 
 				</button>
 			</div>
-		</div>
+		</div><br>
 	
 	</div>
 
 	</form>
+
+	<br><br>
 
 
  	<script type="text/javascript">

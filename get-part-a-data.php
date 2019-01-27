@@ -4,7 +4,7 @@ session_start();
 
 include 'dbh.php';
 
-$userId=mysqli_real_escape_String($conn,$_SESSION['id']);
+$userId=mysqli_real_escape_String($conn,$_POST['userId']);
 
 $year=mysqli_real_escape_String($conn,$_POST['year']);
 
