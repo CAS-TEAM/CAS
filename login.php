@@ -25,7 +25,7 @@ include 'top.php';
 	
   	<div class="container">
 	    <div class="row">
-	      	<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+	      	<div class="col-sm-12 col-md-7 col-lg-5 mx-auto">
 	        	<div class="card card-signin my-1 login-card"><br><br>
 	        			<div class="row">
 			        		<div class="col-md-12 user-img">

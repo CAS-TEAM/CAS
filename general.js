@@ -81,7 +81,7 @@ $(document).ready(function(){
 
 	$('#part-a-edit-form').click(function(){
 
-		alert("edit here");
+		// alert("edit here");
 
 		$("#part-a-form input").prop("disabled", false);//disablig all inputs
 		// $(".part-a-plus-btn").prop("onclick", parta_dynamic_form()).off("click");//diabling on-click on dynamic form plus button
@@ -2675,3 +2675,15 @@ $(document).ready(function(){
 });
 
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SUMMARY PAGE JS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//changing file name of selected file on input
+$(document).ready(function(){
+	$(document).on('change', '.custom-file-input', function()
+	{
+	    //get the file name
+	    var fileName = $(this).val().replace(/^.*\\/, ""); // regexp added at the end to remove C://fakepath/ from the file path
+	    //replace the "Choose a file" label
+	    $(this).next('.custom-file-label').html(fileName);
+	});
+});

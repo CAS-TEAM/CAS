@@ -1,17 +1,106 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id']))
+{
+	header("LOCATION: index.php");
+}
+else if(!isset($_GET['id']) || !isset($_GET['year']))
+{
+	header("LOCATION: userprofile.php");
+}
+else
+{
+
+include 'dbh.php';
 include 'top.php';
+
+$viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
+
+$userId=mysqli_real_escape_string($conn,$_GET['id']);
+$year=mysqli_real_escape_string($conn,$_GET['year']);
+
+if($userId==$viewerId)
+{
+	$same_user=1;
+}
+else
+{
+	$same_user=0;
+	
+}
+
+$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$viewerId'";
+$resultx=mysqli_query($conn,$sqlx);
+$rowx=mysqli_fetch_assoc($resultx);
+
+$hod=$rowx['hod'];
+$committee=$rowx['committee'];
+// echo "committee=".$committee;
 
 ?>
 
-	<nav class="navbar bg-dark">
-		<p class="navbar-brand" style="color:white;width:100%;text-align:center"></p>
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	  	<a class="navbar-brand" href="#">CAS</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      	<!-- <li class="nav-item active">
+		        	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		      	</li> -->
+		      	<?php
+		      	if(!isset($_SESSION['id']))
+		      	{
+			      	?>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="index.php">Sign Up | Sign In</a>
+			      	</li>
+			      	<?php
+			    }			      	
+			    else
+			    {
+			    	?>			    	
+			      	<li class="nav-item dropdown">
+				        <img class="nav-link dropdown-toggle" src="defaults/default_userprofile_pic.png" width="50px" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
+				        <!-- </a> -->
+				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
+				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto"><span class="my-auto ml-2">My Profile</span></a>
+				          	<a class="dropdown-item" href="usersettings.php"><img src="settings.png" style="width:30px;height:auto"><span class="my-auto ml-2">Settings</span></a>
+				          	<div class="dropdown-divider"></div>
+				          	<a class="dropdown-item" href="logout.php">Log out</a>
+				        </div>
+			      	</li>
+			      	<?php
+		      	}
+		      	?>
+		    </ul>
+	  	</div>
 	</nav>
 
-	<div class="container partb">
-		<header class="heading"><b>Summary of PI Scores(to be filled by applicant)</b></header><br>
 
-		<form action="summary_sys.php" method="POST">
+
+	<div class="container partb">
+
+		<?php 
+
+		if($viewerId==$userId)
+		{
+
+		?>
+		
+		<header class="heading"><b>Summary of PI Scores(to be filled by applicant)</b></header><br>
+		<form class="summary_self_form.php" action="summary_sys.php" enctype="multipart/form-data" method="POST">
+
+		<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+		<input type="hidden" name="userId" id="userId" value="<?php echo $userId; ?>">
+   		<!-- <input type="hidden" name="viewerId" id="viewerId" value="<?php echo $viewerId; ?>"> -->
+
 		<div class="container">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
@@ -341,27 +430,26 @@ include 'top.php';
 		</div><br>
 
 		<div class="container">         
-		  <table class="table table-bordered">
-		    <thead>
-		      <tr>
-		        <th>Grade</th>
-		        <th>% Average PI score</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>Satisfactory</td>
-		        <td>50-100</td>
-		      </tr>
-		      <tr>
-		        <td>Not Satisfactory</td>
-		        <td>0-49</td>
-		      </tr>
-		    </tbody>
-		  </table>
+		  	<table class="table table-bordered">
+			    <thead>
+			      	<tr>
+			        	<th>Grade</th>
+			        	<th>% Average PI score</th>
+			      	</tr>
+			    </thead>
+			    <tbody>
+			      	<tr>
+			        	<td>Satisfactory</td>
+			        	<td>50-100</td>
+			      	</tr>
+			      	<tr>
+			        	<td>Not Satisfactory</td>
+			        	<td>0-49</td>
+			      	</tr>
+			    </tbody>
+		  	</table>
 		</div><br>
-<!-- 		<hr style="border: 0.5px solid #c8c8c8">
- -->
+		<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-left">
@@ -375,14 +463,20 @@ include 'top.php';
 						    <tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Description</th>
-							</tr>
-						
+								<th class="text-center">Attach File</th>
+							</tr>				
 							 
 							<tbody>
 								<tr id='addr50'>
 									<td id='hasr1'>1</td>
 									<td>
-									<input type="text" name='ecs[]' id='Enclosures1' class="form-control" maxlength="200" />
+									<input type="number" name='ecs[]' id='ecs1' class="form-control" maxlength="200" />
+									</td>
+									<td>
+										<div class="custom-file">
+							                <input type="file" class="custom-file-input" id="papers1" name="papers[]" multiple="multiple"/>
+							                <label class="custom-file-label" for="papers1">Choose file</label>
+							            </div>
 									</td>
 								</tr>
 			                    <tr id='addr51'></tr>
@@ -400,8 +494,38 @@ include 'top.php';
 				</div>
 			</div>
 		</div>
+
 		<hr style="border: 0.5px solid #c8c8c8">
 
+		<div class="row form-inline justify-content-center">
+
+			<div class="col">
+				<button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+	  			SUBMIT 
+				</button>
+
+				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+	  			PRINT 
+				</button>
+			</div>
+		</div><br>
+		</form>
+		
+
+		<?php
+
+		}
+		
+		if($committee==1)
+		{
+
+		?>	
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EVALUATION BY THE COMMITTEE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+		<form class="summary_comm_form" action="" method="POST">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -688,19 +812,24 @@ include 'top.php';
 	  			SUBMIT 
 				</button>
 
-				<!-- <button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT 
-				</button> -->
-
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
 			</div>
 		</div><br>
+
+		</form>
+
+		<?php
+
+		}
+
+		?>
+
+		
 	
 	</div>
 
-	</form>
 
 	<br><br>
 
@@ -710,7 +839,7 @@ include 'top.php';
     {
       var l=1;
      $("#add_row4").click(function(){
-      $('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="number" name="ecs[]" id="enclosure1'+(l+1)+'" class="form-control" maxlength="200" /></td>');
+      $('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="number" name="ecs[]" id="ecs'+(l+1)+'" class="form-control" maxlength="200" /></td><td><div class="custom-file"><input type="file" class="custom-file-input" id="papers'+(l+1)+'" name="papers[]" multiple/><label class="custom-file-label" for="papers'+(l+1)+'">Choose file</label></div></td>');
 
       // $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
       $('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
@@ -737,3 +866,12 @@ include 'top.php';
 		$("#part-a-print-form").toggle();
 	}
 	</script>
+
+</body>
+</html>
+
+<?php
+
+}
+
+?>
