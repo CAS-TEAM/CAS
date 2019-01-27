@@ -35,7 +35,7 @@ include 'top.php';
 			<div class="col-md-10 align-self-center">
 				<h1 class="text-center index-h1 fadeInUp animated delay-1s">CAREER ADVANCEMENT SCHEME</h1><br>
 				<!-- <p class="text-center index-text fadeInUp animated">~ CAS INFO ~</p> -->
-				<a class=" fadeInUp animated delay-2s" style="width:107px;display:block;margin:0 auto;" href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Get Started</button></a>
+				<a class=" fadeInUp animated delay-2s" style="width:107px;display:block;margin:0 auto;" href="login.php"><button type="button" class="btn btn-outline-primary signin-link get-started-btn">Get Started</button></a>
 				<br><br><br>
 			</div>
 

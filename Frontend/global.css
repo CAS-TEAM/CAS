@@ -29,6 +29,16 @@ body{
  
 }
 
+.get-started-btn:hover{
+	background-color: #262626;
+	border: 1px solid white;
+}
+.get-started-btn:active{
+	background-color: #262626;
+	border: 1px solid white;
+	box-shadow: none;
+}
+
 .flex-fill{
 	flex:1;
 }

@@ -179,7 +179,10 @@ include 'top.php';
 					  			<p>
 								  	<button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseEligible" aria-expanded="false" aria-controls="collapseEligible">
 								    Check CAS Eligibility Status
-								  	</button>						  	
+								  	</button>	
+								  	<a href="guidelines.php"><button class="btn btn-dark ml-2" type="button" data-toggle="collapse" data-target="#collapseGuidelines" aria-expanded="false" aria-controls="collapseGuidelines">
+									Check CAS Guidelines
+									</button></a>					  	
 								</p>
 								<div class="collapse" id="collapseEligible">
 								  	<div class="card card-body">
@@ -204,17 +207,15 @@ include 'top.php';
 									    }
 									    ?>
 
-									    <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseEligibleCriteria" aria-expanded="false" aria-controls="collapseEligibleCriteria">
-									    Check CAS Eligibility Criteria
-									  	</button>
-									  	<div class="collapse" id="collapseEligibleCriteria">
-								  			<div class="card card-body">
-								  				Criteria
-								  			</div>
-								  		</div>
+									    
 								  	</div>
 								</div>
 								
+								<!-- <div class="collapse" id="collapseGuidelines">
+									<div class="card card-body">
+										
+									</div>
+								</div> -->
 								<!-- CHECK ELIGIBILITY STATUS OVER -->
 								<!-- <hr> -->
 								<!-- FORMS -->
