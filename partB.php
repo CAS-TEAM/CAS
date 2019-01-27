@@ -2213,12 +2213,6 @@ $committee=$rowx['committee'];
 
 
 
-
-
-
-
-
-
 		<div class="container" style="border: 1px solid #c8c8c8" id="pprbk1"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">

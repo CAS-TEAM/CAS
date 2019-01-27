@@ -16,9 +16,9 @@ else
 include 'dbh.php';
 include 'top.php';
 
-$viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
+$viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);//the one who is viewing the form
 
-$userId=mysqli_real_escape_string($conn,$_GET['id']);
+$userId=mysqli_real_escape_string($conn,$_GET['id']);//the one whose form is being viewed
 $year=mysqli_real_escape_string($conn,$_GET['year']);
 
 if($userId==$viewerId)
@@ -31,13 +31,24 @@ else
 	
 }
 
-$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$userId'";
+$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$viewerId'";
 $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
 
 $hod=$rowx['hod'];
 $committee=$rowx['committee'];
 
+$sqly="SELECT parta_gpi_self_a, parta_gpi_hod_a, parta_gpi_committee_a, parta_gpi_pi_self_a, parta_gpi_pi_hod_a, parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId'";
+$resulty=mysqli_query($conn,$sqly);
+$rowy=mysqli_fetch_assoc($resulty);
+
+$parta_gpi_self_a=$rowy['parta_gpi_self_a'];
+// echo "gpi=".$parta_gpi_self_a;
+$parta_gpi_hod_a=$rowy['parta_gpi_hod_a'];
+$parta_gpi_committee_a=$rowy['parta_gpi_committee_a'];
+$parta_gpi_pi_self_a=$rowy['parta_gpi_pi_self_a'];
+$parta_gpi_pi_hod_a=$rowy['parta_gpi_pi_hod_a'];
+$parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
 ?>
 
@@ -88,6 +99,7 @@ $committee=$rowx['committee'];
     	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form">
     	<header class="heading"><b>'Part A: GENERAL INFORMATION'</b></header>
     	<hr style="border: 0.5px solid #c8c8c8"><br>
+    	<input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
     	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
     	<input type="hidden" name="alreadybegun" id="alreadybegun" value="0">
     	<div class="row">
@@ -559,14 +571,14 @@ $committee=$rowx['committee'];
 											  	</thead>
 											  	<tbody>
 												    <tr>
-												      	<td><input class="form-control" id="parta_gpi_self_a" type="number"></td>
+												      	<td><input class="form-control selfapp" id="parta_gpi_self_a" type="number" value="<?php echo $parta_gpi_self_a; ?>"></td>
 
 												      	<?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control" id="parta_gpi_hod_a" type="number"></td>
+															<td><input class="form-control hodapp" id="parta_gpi_hod_a" type="number" value="<?php echo $parta_gpi_hod_a; ?>"></td>
 															<?php
 												      	}
 
@@ -575,7 +587,7 @@ $committee=$rowx['committee'];
 												      	if($committee==1)
 												      	{
 												      		?>
-												      		<td><input class="form-control" id="parta_gpi_committee_a" type="number"></td>
+												      		<td><input class="form-control commapp" id="parta_gpi_committee_a" type="number" value="<?php echo $parta_gpi_committee_a; ?>"></td>
 															<?php
 												      	}
 
@@ -641,20 +653,20 @@ $committee=$rowx['committee'];
 
 											  	<tbody>
 											    	<tr>
-											      		<td><input class="form-control" id="parta_gpi_pi_self_a" type="text"></td>
+											      		<td><input class="form-control selfapp" id="parta_gpi_pi_self_a" type="text" value="<?php echo $parta_gpi_pi_self_a; ?>"></td>
 												      	<?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-											     			<td><input class="form-control" id="parta_gpi_pi_hod_a" type="text"></td>
+											     			<td><input class="form-control hodapp" id="parta_gpi_pi_hod_a" type="text" value="<?php echo $parta_gpi_pi_hod_a; ?>"></td>
 															<?php
 												      	}
 
 											      		if($committee==1)
 												      	{
 												      		?>
-												      		<td><input class="form-control" id="parta_gpi_pi_committee_a" type="text"></td>
+												      		<td><input class="form-control commapp" id="parta_gpi_pi_committee_a" type="text" value="<?php echo $parta_gpi_pi_committee_a; ?>"></td>
 															<?php
 												      	}
 
@@ -732,7 +744,7 @@ $committee=$rowx['committee'];
 	    var divtest = document.createElement("div");
 		divtest.setAttribute("class", "form-group removeclass"+room);
 		var rdiv = 'removeclass'+room;
-	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="input-group-btn"> <img src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
+	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
 	    
 	    // objTo.appendChild(divtest);
 	    $("#parta_dynamic_form").prepend(divtest);
@@ -749,6 +761,12 @@ $committee=$rowx['committee'];
  		$('[data-toggle="tooltip"]').tooltip();   
 	});
 
+	</script>
+
+	<!-- GET DATA OF FORM -->
+
+	<script type="text/javascript">
+		getPartAData();
 	</script>
 
 	<!-- DISABLING INPUT WHEREVER NECESSARY -->
@@ -768,11 +786,7 @@ $committee=$rowx['committee'];
 
 	?>
 
-	<!-- GET DATA OF FORM -->
-
-	<script type="text/javascript">
-		getPartAData();
-	</script>
+	
 
 	<!-- FORM UPDATED MODAL -->
 
@@ -824,6 +838,42 @@ $committee=$rowx['committee'];
 		    </div>
 	  	</div>
 	</div>
+
+	<!-- DISABLING ALL INPUTS -->
+	<script type="text/javascript">
+		$("#part-a-form :input").prop("disabled", true);//disabling all inputs
+		$(':button').prop('disabled', false);//but enabling all buttons because the above line disables all buttons also
+		
+	</script>
+
+	<?php
+
+	if($userId==$viewerId)
+	{
+		?>
+		<script type="text/javascript">
+			enableself();
+		</script>
+		<?php
+	}
+	if($hod==1)
+	{
+		?>
+		<script type="text/javascript">
+			enablehod();
+		</script>
+		<?php
+	}
+	if($committee==1)
+	{
+		?>
+		<script type="text/javascript">
+			enablecomm();
+		</script>
+		<?php
+	}
+
+	?>
 
 </body>
 </html>

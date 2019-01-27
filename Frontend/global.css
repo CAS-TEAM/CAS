@@ -6,18 +6,48 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+html{
+	height:100%;
+}
+
 body{
 	background-color: #343a40 !important;
 	background-size: cover;
 	background-attachment: fixed;
-	font-family: new time roman;
-	background-image: url(img/back1.jpg);
+	/*font-family: new time roman;*/
+	/*background-image: url(img/back1.jpg);*/
+	height:100%;
+}
+
+ .bg-overlay  {
+    height: 550px;
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),url('../defaults/indexback.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+ 
+}
+
+.get-started-btn:hover{
+	background-color: #262626;
+	border: 1px solid white;
+}
+.get-started-btn:active{
+	background-color: #262626;
+	border: 1px solid white;
+	box-shadow: none;
+}
+
+.flex-fill{
+	flex:1;
 }
 
 .index-h1{
 	font-size: 40px;
 	color: #d9d9d9;
-	margin-top: 250px;
+	/*margin-top: 250px;*/
+	font-family: 'Open Sans', sans-serif;
 }
 
 .index-text{
