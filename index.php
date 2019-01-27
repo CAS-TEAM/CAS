@@ -13,29 +13,38 @@ include 'top.php';
 
 ?>
 
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.php">CAS</a>
-		<div class="navbar-nav ml-auto">
-			<a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a>
-		</div>
-	</nav>
+	
 
  	
-	<div class="container">
+	<div class="container-fluid d-flex h-100 flex-column bg-overlay">
+
 		<div class="row">
-			<div class="col-md-7">
-				<h1 class="text-left index-h1">CAS</h1>
-				<p class="text-left index-text">~ CAS INFO ~</p>
+			<div class="col">
+				<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark bg-transparent">
+					<a class="navbar-brand" href="index.php">CAS</a>
+					<div class="navbar-nav ml-auto">
+						<a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a>
+					</div>
+				</nav>
+			</div>
+			
+		</div>
+		
+
+		<div class="row justify-content-center flex-fill">
+			<div class="col-md-10 align-self-center">
+				<h1 class="text-center index-h1 fadeInUp animated delay-1s">CAREER ADVANCEMENT SCHEME</h1><br>
+				<!-- <p class="text-center index-text fadeInUp animated">~ CAS INFO ~</p> -->
+				<a class=" fadeInUp animated delay-2s" style="width:107px;display:block;margin:0 auto;" href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Get Started</button></a>
+				<br><br><br>
 			</div>
 
-			<div class="col-md-5 regist-form-div">
+
+			<!-- <div class="col-md-5 regist-form-div">
 				<div class="row">
 					<div class="col-md-12"><br>
 						<h3 class="text-center">Registration Form</h3>
 					</div>
-					<!-- <div class="col-md-6">
-						<span class="glyphicon glyphicon-pencil"></span>
-					</div> -->
 				</div>
 				<hr style="border: 1px solid #a6a6a6">
 
@@ -131,23 +140,13 @@ include 'top.php';
 				</div>
 
 				<input type="submit" name="submit" value="Sign Up" class="btn btn-index-info" />
-				<!-- <a href="#"><div class="btn btn-warning">cancel</div></a> -->
 
 			</form>
 
-			</div>
+			</div> -->
 		</div>
 	</div>
-
-
-				<!-- <a href="login.php">Log-In</a>
-				<a href="signup.php">Sign-Up</a>
-				<a href="adminpanel.php">Admin Panel</a> 
-
-			</div>
-		</div>
-	</div>-->
-
+	
 	<?php 
 
 	if (isset($_GET['error']))
