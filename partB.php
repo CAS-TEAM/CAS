@@ -31,20 +31,109 @@ else
 	
 }
 
-$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$userId'";
+$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$viewerId'";
 $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
 
 $hod=$rowx['hod'];
 $committee=$rowx['committee'];
+// echo "committee=".$committee;
 
+$sqly="SELECT * FROM partb_cat1_pi WHERE facultyId='$userId'";
+$resulty=mysqli_query($conn,$sqly);
+$rowy=mysqli_fetch_assoc($resulty);
+$cat1_pi1_self_a=$rowy['cat1_pi1_self_a'];
+$cat1_pi1_hod_a=$rowy['cat1_pi1_hod_a'];
+$cat1_pi1_committee_a=$rowy['cat1_pi1_committee_a'];
+$cat1_pi2_self_a=$rowy['cat1_pi2_self_a'];
+$cat1_pi2_hod_a=$rowy['cat1_pi2_hod_a'];
+$cat1_pi2_committee_a=$rowy['cat1_pi2_committee_a'];
+$cat1_pi3_self_a=$rowy['cat1_pi3_self_a'];
+$cat1_pi3_hod_a=$rowy['cat1_pi3_hod_a'];
+$cat1_pi3_committee_a=$rowy['cat1_pi3_committee_a'];
+$cat1_pi4_self_a=$rowy['cat1_pi4_self_a'];
+$cat1_pi4_hod_a=$rowy['cat1_pi4_hod_a'];
+$cat1_pi4_committee_a=$rowy['cat1_pi4_committee_a'];
+$cat1_pitotal_self_a=$rowy['cat1_pitotal_self_a'];
+$cat1_pitotal_hod_a=$rowy['cat1_pitotal_hod_a'];
+$cat1_pitotal_committee_a=$rowy['cat1_pitotal_committee_a'];
+
+// echo "cat=".$cat1_pi1_self_a;
+
+$sqlz="SELECT * FROM partb_cat2_pi WHERE facultyId='$userId'";
+$resultz=mysqli_query($conn,$sqlz);
+$rowz=mysqli_fetch_assoc($resultz);
+$cat2_pii1_self_a=$rowz['cat2_pii1_self_a'];
+$cat2_pii1_hod_a=$rowz['cat2_pii1_hod_a'];
+$cat2_pii1_committee_a=$rowz['cat2_pii1_committee_a'];
+$cat2_pii2_self_a=$rowz['cat2_pii2_self_a'];
+$cat2_pii2_hod_a=$rowz['cat2_pii2_hod_a'];
+$cat2_pii2_committee_a=$rowz['cat2_pii2_committee_a'];
+$cat2_pii3_self_a=$rowz['cat2_pii3_self_a'];
+$cat2_pii3_hod_a=$rowz['cat2_pii3_hod_a'];
+$cat2_pii3_committee_a=$rowz['cat2_pii3_committee_a'];
+$cat2_pii4_self_a=$rowz['cat2_pii4_self_a'];
+$cat2_pii4_hod_a=$rowz['cat2_pii4_hod_a'];
+$cat2_pii4_committee_a=$rowz['cat2_pii4_committee_a'];
+$cat2_piitotal_self_a=$rowz['cat2_piitotal_self_a'];
+$cat2_piitotal_hod_a=$rowz['cat2_piitotal_hod_a'];
+$cat2_piitotal_committee_a=$rowz['cat2_piitotal_committee_a'];
+
+$sqlzz="SELECT * FROM partb_cat3_pi WHERE facultyId='$userId'";
+$resultzz=mysqli_query($conn,$sqlzz);
+$rowzz=mysqli_fetch_assoc($resultzz);
+$cat3_piii1_self_a=$rowzz['cat3_piii1_self_a'];
+$cat3_piii1_hod_a=$rowzz['cat3_piii1_hod_a'];
+$cat3_piii1_committee_a=$rowzz['cat3_piii1_committee_a'];
+$cat3_piii2_self_a=$rowzz['cat3_piii2_self_a'];
+$cat3_piii2_hod_a=$rowzz['cat3_piii2_hod_a'];
+$cat3_piii2_committee_a=$rowzz['cat3_piii2_committee_a'];
+$cat3_piii3_self_a=$rowzz['cat3_piii3_self_a'];
+$cat3_piii3_hod_a=$rowzz['cat3_piii3_hod_a'];
+$cat3_piii3_committee_a=$rowzz['cat3_piii3_committee_a'];
+$cat3_piii4_self_a=$rowzz['cat3_piii4_self_a'];
+$cat3_piii4_hod_a=$rowzz['cat3_piii4_hod_a'];
+$cat3_piii4_committee_a=$rowzz['cat3_piii4_committee_a'];
+$cat3_piii5_self_a=$rowzz['cat3_piii5_self_a'];
+$cat3_piii5_hod_a=$rowzz['cat3_piii5_hod_a'];
+$cat3_piii5_committee_a=$rowzz['cat3_piii5_committee_a'];
+$cat3_piii6_self_a=$rowzz['cat3_piii6_self_a'];
+$cat3_piii6_hod_a=$rowzz['cat3_piii6_hod_a'];
+$cat3_piii6_committee_a=$rowzz['cat3_piii6_committee_a'];
+$cat3_piii7_self_a=$rowzz['cat3_piii7_self_a'];
+$cat3_piii7_hod_a=$rowzz['cat3_piii7_hod_a'];
+$cat3_piii7_committee_a=$rowzz['cat3_piii7_committee_a'];
+$cat3_piii8_self_a=$rowzz['cat3_piii8_self_a'];
+$cat3_piii8_hod_a=$rowzz['cat3_piii8_hod_a'];
+$cat3_piii8_committee_a=$rowzz['cat3_piii8_committee_a'];
+$cat3_piii9_self_a=$rowzz['cat3_piii9_self_a'];
+$cat3_piii9_hod_a=$rowzz['cat3_piii9_hod_a'];
+$cat3_piii9_committee_a=$rowzz['cat3_piii9_committee_a'];
+$cat3_piii10_self_a=$rowzz['cat3_piii10_self_a'];
+$cat3_piii10_hod_a=$rowzz['cat3_piii10_hod_a'];
+$cat3_piii10_committee_a=$rowzz['cat3_piii10_committee_a'];
+$cat3_piiitotal_self_a=$rowzz['cat3_piiitotal_self_a'];
+$cat3_piiitotal_hod_a=$rowzz['cat3_piiitotal_hod_a'];
+$cat3_piiitotal_committee_a=$rowzz['cat3_piiitotal_committee_a'];
+
+
+$sqlzzz="SELECT * FROM partb_cat4_pi WHERE facultyId='$userId'";
+$resultzzz=mysqli_query($conn,$sqlzzz);
+$rowzzz=mysqli_fetch_assoc($resultzzz);
+$cat4_piv1_self_a=$rowzzz['cat4_piv1_self_a'];
+$cat4_piv1_hod_a=$rowzzz['cat4_piv1_hod_a'];
+$cat4_piv1_committee_a=$rowzzz['cat4_piv1_committee_a'];
+$cat4_piv2_self_a=$rowzzz['cat4_piv2_self_a'];
+$cat4_piv2_hod_a=$rowzzz['cat4_piv2_hod_a'];
+$cat4_piv2_committee_a=$rowzzz['cat4_piv2_committee_a'];
+$cat4_piv3_self_a=$rowzzz['cat4_piv3_self_a'];
+$cat4_piv3_hod_a=$rowzzz['cat4_piv3_hod_a'];
+$cat4_piv3_committee_a=$rowzzz['cat4_piv3_committee_a'];
+$cat4_pivtotal_self_a=$rowzzz['cat4_pivtotal_self_a'];
+$cat4_pivtotal_hod_a=$rowzzz['cat4_pivtotal_hod_a'];
+$cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 
 ?>
-
-
-
-?>
-
 	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
 	  	<a class="navbar-brand" href="#">CAS</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,8 +177,15 @@ $committee=$rowx['committee'];
 	</nav>
     
     <form method="POST" action="partBsys.php" class="part-b-form" id="part-b-form">
+    <input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
     <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
     <input type="hidden" name="alreadybegun" id="alreadybegun" value="0">
+
+    <input type="hidden" name="userId" id="userId" value="<?php echo $userId; ?>">
+    <input type="hidden" name="viewerId" id="viewerId" value="<?php echo $viewerId; ?>">
+    <input type="hidden" name="hod" id="hod" value="<?php echo $hod; ?>">
+    <input type="hidden" name="committee" id="committee" value="<?php echo $committee; ?>">
+
 	<div class="container partb">
 
 		<header class="heading"><b>'Part B'</b></header><br>
@@ -308,14 +404,14 @@ $committee=$rowx['committee'];
 									  	<tbody>
 									    	<tr>
 
-									      		<td><input class="form-control" id="cat1_pi1_self_a" type="number"  min="0" max="40"></td>
+									      		<td><input class="form-control selfapp" id="cat1_pi1_self_a" type="number"  min="0" max="40" value="<?php echo $cat1_pi1_self_a; ?>"></td>
 
 												<?php
 
 										      	if($hod==1 || $committee==1)
 										      	{
 										      		?>
-													<td><input class="form-control" id="cat1_pi1_hod_a" type="number" min="0" max="40"></td>
+													<td><input class="form-control hodapp" id="cat1_pi1_hod_a" type="number" min="0" max="40" value="<?php echo $cat1_pi1_hod_a; ?>"></td>
 													<?php
 										      	}
 										      	
@@ -323,7 +419,7 @@ $committee=$rowx['committee'];
 										      	if($committee==1)
 										      	{
 										      		?>
-													 <td><input class="form-control" id="cat1_pi1_committee_a" type="number" min="0" max="40"></td>
+													 <td><input class="form-control commapp" id="cat1_pi1_committee_a" type="number" min="0" max="40" value="<?php echo $cat1_pi1_committee_a; ?>"></td>
 													<?php
 										      	}
 										      	?>
@@ -719,14 +815,14 @@ $committee=$rowx['committee'];
 								  	</thead>
 								  	<tbody>
 									    <tr>
-									      	<td><input class="form-control" id="cat1_pi2_self_a" type="number"></td>
+									      	<td><input class="form-control selfapp" id="cat1_pi2_self_a" type="number" value="<?php echo $cat1_pi2_self_a; ?>"></td>
 
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								      			<td><input class="form-control" id="cat1_pi2_hod_a" type="number"></td>
+								      			<td><input class="form-control hodapp" id="cat1_pi2_hod_a" type="number" value="<?php echo $cat1_pi2_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -734,7 +830,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-								      			<td><input class="form-control" id="cat1_pi2_committee_a" type="number"></td>
+								      			<td><input class="form-control commapp" id="cat1_pi2_committee_a" type="number" value="<?php echo $cat1_pi2_committee_a; ?>"></td>
 												<?php
 									      	}
 											
@@ -830,20 +926,20 @@ $committee=$rowx['committee'];
 							  	</thead>
 							  	<tbody>
 							    	<tr>
-								      	<td><input class="form-control" id="cat1_pi3_self_a" type="number"></td>
+								      	<td><input class="form-control selfapp" id="cat1_pi3_self_a" type="number" value="<?php echo $cat1_pi3_self_a; ?>"></td>
 								      	<?php
 
 								      	if($hod==1 || $committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control" id="cat1_pi3_hod_a" type="number"></td>
+							      			<td><input class="form-control hodapp" id="cat1_pi3_hod_a" type="number" value="<?php echo $cat1_pi3_hod_a; ?>"></td>
 											<?php
 								      	}
 
 								      	if($committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control" id="cat1_pi3_committee_a" type="number"></td>
+							      			<td><input class="form-control commapp" id="cat1_pi3_committee_a" type="number" value="<?php echo $cat1_pi3_committee_a; ?>"></td>
 											<?php
 								      	}
 
@@ -980,20 +1076,20 @@ $committee=$rowx['committee'];
 							  </thead>
 							  <tbody>
 							    	<tr>
-								      	<td><input class="form-control" id="cat1_pi4_self_a" type="number"></td>
+								      	<td><input class="form-control selfapp" id="cat1_pi4_self_a" type="number" value="<?php echo $cat1_pi4_self_a; ?>"></td>
 								      	<?php
 
 								      	if($hod==1 || $committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control" id="cat1_pi4_hod_a" type="number"></td>
+							      			<td><input class="form-control hodapp" id="cat1_pi4_hod_a" type="number" value="<?php echo $cat1_pi4_hod_a; ?>"></td>
 											<?php
 								      	}
 
 								      	if($committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control" id="cat1_pi4_committee_a" type="number"></td>
+							      			<td><input class="form-control commapp" id="cat1_pi4_committee_a" type="number" value="<?php echo $cat1_pi4_committee_a; ?>"></td>
 							      			<?php
 
 								      	}
@@ -1063,13 +1159,13 @@ $committee=$rowx['committee'];
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat1_pitotal_self_a" type="number"></td>
+							      <td><input class="form-control selfapp" id="cat1_pitotal_self_a" type="number" value="<?php echo $cat1_pitotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat1_pitotal_hod_a" type="number"></td>
+							      		<td><input class="form-control hodapp" id="cat1_pitotal_hod_a" type="number" value="<?php echo $cat1_pitotal_hod_a; ?>"></td>
 										<?php
 							      	}
 							      	
@@ -1077,7 +1173,7 @@ $committee=$rowx['committee'];
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat1_pitotal_committee_a" type="number"></td>
+							      		<td><input class="form-control commapp" id="cat1_pitotal_committee_a" type="number" value="<?php echo $cat1_pitotal_committee_a; ?>"></td>
 										<?php
 							      	}
 							      	?>
@@ -1197,20 +1293,20 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat2_pii1_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat2_pii1_self_a" type="number" value="<?php echo $cat2_pii1_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat2_pii1_hod_a" type="number"></td>
+									      		<td><input class="form-control hodapp" id="cat2_pii1_hod_a" type="number" value="<?php echo $cat2_pii1_hod_a; ?>"></td>
 												<?php
 									      	}
 
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat2_pii1_committee_a" type="number"></td>
+									      		<td><input class="form-control commapp" id="cat2_pii1_committee_a" type="number" value="<?php echo $cat2_pii1_committee_a; ?>"></td>
 												<?php
 									      	}
 									      	?>
@@ -1314,13 +1410,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat2_pii2_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat2_pii2_self_a" type="number" value="<?php echo $cat2_pii2_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control" id="cat2_pii2_hod_a" type="number"></td>
+								     			<td><input class="form-control hodapp" id="cat2_pii2_hod_a" type="number" value="<?php echo $cat2_pii2_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -1328,7 +1424,7 @@ $committee=$rowx['committee'];
 								      		if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat2_pii2_committee_a" type="number"></td>
+									      		<td><input class="form-control commapp" id="cat2_pii2_committee_a" type="number" value="<?php echo $cat2_pii2_committee_a; ?>"></td>
 
 												<?php
 									      	}
@@ -1431,13 +1527,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat2_pii3_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat2_pii3_self_a" type="number" value="<?php echo $cat2_pii3_self_a; ?>"></td>
 									      	<?php
 
 											if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control" id="cat2_pii3_hod_a" type="number"></td>
+								     			<td><input class="form-control hodapp" id="cat2_pii3_hod_a" type="number" value="<?php echo $cat2_pii3_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -1445,7 +1541,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control" id="cat2_pii3_committee_a" type="number"></td>
+								     			<td><input class="form-control commapp" id="cat2_pii3_committee_a" type="number" value="<?php echo $cat2_pii3_committee_a; ?>"></td>
 
 												<?php
 									      	}
@@ -1548,20 +1644,20 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat2_pii4_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat2_pii4_self_a" type="number" value="<?php echo $cat2_pii4_self_a; ?>"></td>
 
 									      	<?php
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control" id="cat2_pii4_hod_a" type="number"></td>
+								     			<td><input class="form-control hodapp" id="cat2_pii4_hod_a" type="number" value="<?php echo $cat2_pii4_hod_a; ?>"></td>
 
 												<?php
 									      	}
 									      	if($committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control" id="cat2_pii4_committee_a" type="number"></td>
+								     			<td><input class="form-control commapp" id="cat2_pii4_committee_a" type="number" value="<?php echo $cat2_pii4_committee_a; ?>"></td>
 
 												<?php
 									      	}
@@ -1625,13 +1721,13 @@ $committee=$rowx['committee'];
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat2_piitotal_self_a" type="number"></td>
+							      <td><input class="form-control selfapp" id="cat2_piitotal_self_a" type="number" value="<?php echo $cat2_piitotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat2_piitotal_hod_a" type="number"></td>
+							      		<td><input class="form-control hodapp" id="cat2_piitotal_hod_a" type="number" value="<?php echo $cat2_piitotal_hod_a; ?>"></td>
 
 										<?php
 							      	}
@@ -1639,7 +1735,7 @@ $committee=$rowx['committee'];
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat2_piitotal_committee_a" type="number"></td>
+							      		<td><input class="form-control commapp" id="cat2_piitotal_committee_a" type="number" value="<?php echo $cat2_piitotal_committee_a; ?>"></td>
 
 										<?php
 							      	}
@@ -1811,13 +1907,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii1_self_a" type="number"  min="0" max="100"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii1_self_a" type="number"  min="0" max="100" value="<?php echo $cat3_piii1_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat3_piii1_hod_a" type="number" min="0" max="100"></td>
+									      		<td><input class="form-control hodapp" id="cat3_piii1_hod_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -1826,7 +1922,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat3_piii1_committee_a" type="number" min="0" max="100"></td>
+									      		<td><input class="form-control commapp" id="cat3_piii1_committee_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -1992,13 +2088,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii2_self_a" type="number"  min="0" max="15"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii2_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii2_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii2_hod_a" type="number" min="0" max="15"></td>
+												<td><input class="form-control hodapp" id="cat3_piii2_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii2_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2007,7 +2103,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat3_piii2_committee_a" type="number" min="0" max="15"></td>
+									      		<td><input class="form-control commapp" id="cat3_piii2_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii2_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2174,13 +2270,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii3_self_a" type="number"  min="0" max="15"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii3_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii3_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii3_hod_a" type="number" min="0" max="15"></td>
+												<td><input class="form-control hodapp" id="cat3_piii3_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii3_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2189,7 +2285,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat3_piii3_committee_a" type="number" min="0" max="15"></td>
+									      		<td><input class="form-control commapp" id="cat3_piii3_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii3_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2210,6 +2306,12 @@ $committee=$rowx['committee'];
 		</div>
 
 		<hr><br>
+
+
+
+
+
+
 
 
 
@@ -2359,20 +2461,20 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii4_self_a" type="number"  min="0" max="15"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii4_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii4_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii4_hod_a" type="number" min="0" max="15"></td>
+												<td><input class="form-control hodapp" id="cat3_piii4_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii4_hod_a; ?>"></td>
 												<?php
 									      	}
 
 									      	if($committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii4_committee_a" type="number" min="0" max="15"></td>
+												<td><input class="form-control commapp" id="cat3_piii4_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii4_committee_a; ?>"></td>
 												<?php
 									      	}
 									      	?>
@@ -2467,20 +2569,20 @@ $committee=$rowx['committee'];
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control" id="cat3_piii5_self_a" type="number"></td>
+													      <td><input class="form-control selfapp" id="cat3_piii5_self_a" type="number" value="<?php echo $cat3_piii5_self_a; ?>"></td>
 													      <?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control" id="cat3_piii5_hod_a" type="number"></td>
+															<td><input class="form-control hodapp" id="cat3_piii5_hod_a" type="number" value="<?php echo $cat3_piii5_hod_a; ?>"></td>
 															<?php
 												      	}
 
 												      	if($committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control" id="cat3_piii5_committee_a" type="number"></td>
+															<td><input class="form-control commapp" id="cat3_piii5_committee_a" type="number" value="<?php echo $cat3_piii5_committee_a; ?>"></td>
 															<?php
 												      	}
 													      
@@ -2549,14 +2651,14 @@ $committee=$rowx['committee'];
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control" id="cat3_piii6_self_a" type="text"></td>
+													      <td><input class="form-control selfapp" id="cat3_piii6_self_a" type="text" value="<?php echo $cat3_piii6_self_a; ?>"></td>
 
 													      <?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control" id="cat3_piii6_hod_a" type="text"></td>
+															<td><input class="form-control hodapp" id="cat3_piii6_hod_a" type="text" value="<?php echo $cat3_piii6_hod_a; ?>"></td>
 															<?php
 												      	}
 
@@ -2565,7 +2667,7 @@ $committee=$rowx['committee'];
 												      	if($committee==1)
 												      	{
 												      		?>
-												      		<td><input class="form-control" id="cat3_piii6_committee_a" type="text"></td>
+												      		<td><input class="form-control commapp" id="cat3_piii6_committee_a" type="text" value="<?php echo $cat3_piii6_committee_a; ?>"></td>
 															<?php
 												      	}
 
@@ -2637,20 +2739,20 @@ $committee=$rowx['committee'];
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control" id="cat3_piii7_self_a" type="number"></td>
+													      <td><input class="form-control selfapp" id="cat3_piii7_self_a" type="number" value="<?php echo $cat3_piii7_self_a; ?>"></td>
 													      <?php
 
 													      	if($hod==1 || $committee==1)
 													      	{
 													      		?>
-																<td><input class="form-control" id="cat3_piii7_hod_a" type="number"></td>
+																<td><input class="form-control hodapp" id="cat3_piii7_hod_a" type="number" value="<?php echo $cat3_piii7_hod_a; ?>"></td>
 																<?php
 													      	}
 
 													      	if($committee==1)
 													      	{
 													      		?>
-																<td><input class="form-control" id="cat3_piii7_committee_a" type="number"></td>
+																<td><input class="form-control commapp" id="cat3_piii7_committee_a" type="number" value="<?php echo $cat3_piii7_committee_a; ?>"></td>
 																<?php
 													      	}
 													      	?>
@@ -2814,13 +2916,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii8_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii8_self_a" type="number" value="<?php echo $cat3_piii8_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii8_hod_a" type="number"></td>
+												<td><input class="form-control hodapp" id="cat3_piii8_hod_a" type="number" value="<?php echo $cat3_piii8_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2828,7 +2930,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii8_committee_a" type="number"></td>
+												<td><input class="form-control commapp" id="cat3_piii8_committee_a" type="number" value="<?php echo $cat3_piii8_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2947,13 +3049,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii9_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii9_self_a" type="number" value="<?php echo $cat3_piii9_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii9_hod_a" type="number"></td>
+												<td><input class="form-control hodapp" id="cat3_piii9_hod_a" type="number" value="<?php echo $cat3_piii9_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2963,7 +3065,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat3_piii9_committee_a" type="number"></td>
+									      		<td><input class="form-control commapp" id="cat3_piii9_committee_a" type="number" value="<?php echo $cat3_piii9_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3075,13 +3177,13 @@ $committee=$rowx['committee'];
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control" id="cat3_piii10_self_a" type="number"></td>
+									      <td><input class="form-control selfapp" id="cat3_piii10_self_a" type="number" value="<?php echo $cat3_piii10_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control" id="cat3_piii10_hod_a" type="number"></td>
+												<td><input class="form-control hodapp" id="cat3_piii10_hod_a" type="number" value="<?php echo $cat3_piii10_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -3091,7 +3193,7 @@ $committee=$rowx['committee'];
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat3_piii10_committee_a" type="number"></td>
+									      		<td><input class="form-control commapp" id="cat3_piii10_committee_a" type="number" value="<?php echo $cat3_piii10_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3204,13 +3306,13 @@ $committee=$rowx['committee'];
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat3_piiitotal_self_a" type="number"></td>
+							      <td><input class="form-control selfapp" id="cat3_piiitotal_self_a" type="number" value="<?php echo $cat3_piiitotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-										<td><input class="form-control" id="cat3_piiitotal_hod_a" type="number"></td>
+										<td><input class="form-control hodapp" id="cat3_piiitotal_hod_a" type="number" value="<?php echo $cat3_piiitotal_hod_a; ?>"></td>
 										<?php
 							      	}
 
@@ -3219,7 +3321,7 @@ $committee=$rowx['committee'];
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat3_piiitotal_committee_a" type="number"></td>
+							      		<td><input class="form-control commapp" id="cat3_piiitotal_committee_a" type="number" value="<?php echo $cat3_piiitotal_committee_a; ?>"></td>
 										<?php
 							      	}
 
@@ -3341,20 +3443,20 @@ $committee=$rowx['committee'];
 							  		</thead>
 							  		<tbody>
 								    	<tr>
-								      		<td><input class="form-control" id="cat4_piv1_self_a" type="number"></td>
+								      		<td><input class="form-control selfapp" id="cat4_piv1_self_a" type="number" value="<?php echo $cat4_piv1_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat4_piv1_hod_a" type="number"></td>
+									      		<td><input class="form-control hodapp" id="cat4_piv1_hod_a" type="number" value="<?php echo $cat4_piv1_hod_a; ?>"></td>
 												<?php
 									      	}
 
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control" id="cat4_piv1_committee_a" type="number"></td>
+									      		<td><input class="form-control commapp" id="cat4_piv1_committee_a" type="number" value="<?php echo $cat4_piv1_committee_a; ?>"></td>
 												<?php
 									      	}
 									      	?>
@@ -3463,20 +3565,20 @@ $committee=$rowx['committee'];
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="cat4_piv2_self_a" type="number"></td>
+								      <td><input class="form-control selfapp" id="cat4_piv2_self_a" type="number" value="<?php echo $cat4_piv2_self_a; ?>"></td>
 								      <?php
 
 								      	if($hod==1 || $committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control" id="cat4_piv2_hod_a" type="number"></td>
+								      		<td><input class="form-control hodapp" id="cat4_piv2_hod_a" type="number" value="<?php echo $cat4_piv2_hod_a; ?>"></td>
 											<?php
 								      	}
 
 								      	if($committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control" id="cat4_piv2_committee_a" type="number"></td>
+								      		<td><input class="form-control commapp" id="cat4_piv2_committee_a" type="number" value="<?php echo $cat4_piv2_committee_a; ?>"></td>
 											<?php
 								      	}
 								      	
@@ -3579,13 +3681,13 @@ $committee=$rowx['committee'];
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control" id="cat4_piv3_self_a" type="number"></td>
+								      <td><input class="form-control selfapp" id="cat4_piv3_self_a" type="number" value="<?php echo $cat4_piv3_self_a; ?>"></td>
 
 								      <?php
 								      if($hod==1 || $committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control" id="cat4_piv3_hod_a" type="number"></td>
+								      		<td><input class="form-control hodapp" id="cat4_piv3_hod_a" type="number" value="<?php echo $cat4_piv3_hod_a; ?>"></td>
 
 											<?php
 								      	}
@@ -3593,7 +3695,7 @@ $committee=$rowx['committee'];
 							      		if($committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control" id="cat4_piv3_committee_a" type="number"></td>
+								      		<td><input class="form-control commapp" id="cat4_piv3_committee_a" type="number" value="<?php echo $cat4_piv3_committee_a; ?>"></td>
 
 											<?php
 								      	}
@@ -3659,20 +3761,20 @@ $committee=$rowx['committee'];
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control" id="cat4_pivtotal_self_a" type="number"></td>
+							      <td><input class="form-control selfapp" id="cat4_pivtotal_self_a" type="number" value="<?php echo $cat4_pivtotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat4_pivtotal_hod_a" type="number"></td>
+							      		<td><input class="form-control hodapp" id="cat4_pivtotal_hod_a" type="number" value="<?php echo $cat4_pivtotal_hod_a; ?>"></td>
 										<?php
 							      	}
 
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control" id="cat4_pivtotal_committee_a" type="number"></td>
+							      		<td><input class="form-control commapp" id="cat4_pivtotal_committee_a" type="number" value="<?php echo $cat4_pivtotal_committee_a; ?>"></td>
 										<?php
 							      	}
 							      	?>
@@ -4288,6 +4390,43 @@ $committee=$rowx['committee'];
 	}
 	</script>
 
+	<!-- DISABLING ALL INPUTS -->
+	<script type="text/javascript">
+		// $("#part-a-form :input").prop("disabled", true);//disabling all inputs
+		// $(':button').prop('disabled', false);//but enabling all buttons because the above line disables all buttons also
+		
+	</script>
+
+
+	<?php
+	/*
+	if($userId==$viewerId)
+	{
+		?>
+		<script type="text/javascript">
+			enableself();
+		</script>
+		<?php
+	}
+	if($hod==1)
+	{
+		?>
+		<script type="text/javascript">
+			enablehod();
+		</script>
+		<?php
+	}
+	if($committee==1)
+	{
+		?>
+		<script type="text/javascript">
+			enablecomm();
+		</script>
+		<?php
+	}
+	*/
+	?>
+
 </body>
 </html>
 
@@ -4296,6 +4435,5 @@ $committee=$rowx['committee'];
 }
 
 ?>
-
 
 

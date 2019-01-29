@@ -1027,6 +1027,11 @@ function getPartBData(){
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FORM APPRAISAL ENABLE INPUTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 function enableinputs()
 {
+	// $("#userId").prop('disabled', false);
+	// $("#viewerId").prop('disabled', false);
+	// $("#hod").prop('disabled', false);
+	// $("#committee").prop('disabled', false);
+
 	var userId=parseInt(document.getElementById("userId").value);
 	var viewerId=parseInt(document.getElementById("viewerId").value);
 	var hod=parseInt(document.getElementById("hod").value);
