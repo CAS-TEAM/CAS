@@ -38,7 +38,7 @@ $rowx=mysqli_fetch_assoc($resultx);
 $hod=$rowx['hod'];
 $committee=$rowx['committee'];
 
-$sqly="SELECT parta_gpi_self_a, parta_gpi_hod_a, parta_gpi_committee_a, parta_gpi_pi_self_a, parta_gpi_pi_hod_a, parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId'";
+$sqly="SELECT parta_gpi_self_a, parta_gpi_hod_a, parta_gpi_committee_a, parta_gpi_pi_self_a, parta_gpi_pi_hod_a, parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$year'";
 $resulty=mysqli_query($conn,$sqly);
 $rowy=mysqli_fetch_assoc($resulty);
 
@@ -96,8 +96,55 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
    
   	
     <div class="container parta">
-    	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form">
-    	<header class="heading"><b>'Part A: GENERAL INFORMATION'</b></header>
+    	<header>
+    		<h2 class="heading"><b>'Part A: GENERAL INFORMATION'</b></h2>
+    		<?php 
+
+			if($_SESSION['id']==$userId)
+			{
+
+				$sqlsfr="SELECT partA FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$year'";
+				$resultsfr=mysqli_query($conn,$sqlsfr);
+
+				if(mysqli_num_rows($resultsfr)==0)
+				{
+
+					?>
+					<form method="POST" action="sfrA_sys.php">
+						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+						<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review">
+					</form><br>
+					<?php
+
+				}
+				else
+				{
+					$rowsfr=mysqli_fetch_assoc($resultsfr);
+
+					if($rowsfr['partA']==0)
+					{
+						?>
+						<form method="POST" action="sfrA_sys.php">
+							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+							<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review">
+						</form>	<br>
+						<?php
+					}
+					else
+					{
+						?>
+						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
+						<?php
+					}
+					
+				}
+
+			}
+
+			?>
+    	</header>
+    	
+    	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form">    	
     	<hr style="border: 0.5px solid #c8c8c8"><br>
     	<input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
     	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">

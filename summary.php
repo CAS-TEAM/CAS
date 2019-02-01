@@ -6,7 +6,7 @@ if(!isset($_SESSION['id']))
 {
 	header("LOCATION: index.php");
 }
-else if(!isset($_GET['id']) || !isset($_GET['year']))
+else if(!isset($_GET['id']))
 {
 	header("LOCATION: userprofile.php");
 }
@@ -19,7 +19,7 @@ include 'top.php';
 $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 $userId=mysqli_real_escape_string($conn,$_GET['id']);
-$year=mysqli_real_escape_string($conn,$_GET['year']);
+// $year=mysqli_real_escape_string($conn,$_GET['year']);
 
 if($userId==$viewerId)
 {
@@ -38,6 +38,9 @@ $rowx=mysqli_fetch_assoc($resultx);
 $hod=$rowx['hod'];
 $committee=$rowx['committee'];
 // echo "committee=".$committee;
+
+$currentyear=date("Y");
+$previousyear=$currentyear-1;
 
 ?>
 
@@ -92,10 +95,93 @@ $committee=$rowx['committee'];
 		if($viewerId==$userId)
 		{
 
+		$sqlpartA="SELECT parta_gpi_pi_self_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$currentyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$cparta_gpi_pi_self_a=$rowpartA['parta_gpi_pi_self_a'];
+
+		$sqlpartA="SELECT parta_gpi_pi_self_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$previousyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$pparta_gpi_pi_self_a=$rowpartA['parta_gpi_pi_self_a'];
+
+		// echo "current=".$cparta_gpi_pi_self_a.",".$pparta_gpi_pi_self_a;
+
+		$sqlpartA="SELECT cat1_pitotal_self_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$currentyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$ccat1_pitotal_self_a=$rowpartA['cat1_pitotal_self_a'];
+
+		$sqlpartA="SELECT cat1_pitotal_self_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$previousyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$pcat1_pitotal_self_a=$rowpartA['cat1_pitotal_self_a'];
+
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		$sqlpartA="SELECT cat2_piitotal_self_a FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$currentyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$ccat2_piitotal_self_a=$rowpartA['cat2_piitotal_self_a'];
+
+		$sqlpartA="SELECT cat2_piitotal_self_a FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$previousyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$pcat2_piitotal_self_a=$rowpartA['cat2_piitotal_self_a'];
+
+		////////////////////////////////////////////////////////////
+
+		$sqlpartA="SELECT cat3_piiitotal_self_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$currentyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$ccat3_piiitotal_self_a=$rowpartA['cat3_piiitotal_self_a'];
+
+		$sqlpartA="SELECT cat3_piiitotal_self_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$previousyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$pcat3_piiitotal_self_a=$rowpartA['cat3_piiitotal_self_a'];
+
+
+		/////////////////////////////////////////////////////////////////
+
+
+		$sqlpartA="SELECT cat4_pivtotal_self_a FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$currentyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$ccat4_pivtotal_self_a=$rowpartA['cat4_pivtotal_self_a'];
+
+		$sqlpartA="SELECT cat4_pivtotal_self_a FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$previousyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$pcat4_pivtotal_self_a=$rowpartA['cat4_pivtotal_self_a'];
+
+
+		///////////////////////////////////////////////////////////////
+		//calculating percentages
+		$Atotal= ($pparta_gpi_pi_self_a/50*100 + ($pcat1_pitotal_self_a/50)*100 + $pcat2_piitotal_self_a + $pcat3_piiitotal_self_a/175*100 + $pcat4_pivtotal_self_a/75*100);
+		$A=$Atotal/5;
+
+		$Btotal = ($cparta_gpi_pi_self_a/50*100 +	$ccat1_pitotal_self_a +	$ccat2_piitotal_self_a +	$ccat3_piiitotal_self_a/175*100 +	$ccat4_pivtotal_self_a/75*100);
+
+		$B=$Btotal/5;
+
+		$avgpi=0.25*$A + 0.75*$B;
+
+
 		?>
 		
 		<header class="heading"><b>Summary of PI Scores(to be filled by applicant)</b></header><br>
-		<form class="summary_self_form.php" action="summary_sys.php" enctype="multipart/form-data" method="POST">
+		<!-- <form class="summary_self_form.php" action="summary_sys.php" enctype="multipart/form-data" method="POST"> -->
 
 		<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
 		<input type="hidden" name="userId" id="userId" value="<?php echo $userId; ?>">
@@ -110,8 +196,8 @@ $committee=$rowx['committee'];
 							<th class="text-center">Category</th>
 							<th class="text-center">Max.<br> Marks for PI</th>
 							<th class="text-center">Criteria</th>
-							<th class="text-center">A<br> Last Academic Year 2016-17</th>
-							<th class="text-center">B<br> Current Academic Year 2017-18</th>
+							<th class="text-center">A<br> Last Academic Year 2017-18</th>
+							<th class="text-center">B<br> Current Academic Year 2018-19</th>
 
 						</tr>
 						<tbody>
@@ -125,7 +211,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicA_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicA_last' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
@@ -137,7 +223,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academic_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academic_last' value="<?php echo $pparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -147,7 +233,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='current_academicA_current' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='current_academicA_current' value="<?php echo $cparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
@@ -159,7 +245,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicA_current' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicA_current' value="<?php echo $cparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -174,7 +260,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBI_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBI_last' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -186,7 +272,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBI_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBI_last' value="<?php echo ($pcat1_pitotal_self_a/100)*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -196,7 +282,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='current_academicBI_current' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='current_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -208,7 +294,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBI_current' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -223,7 +309,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBII_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -235,7 +321,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBII_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -245,7 +331,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='current_academicBII_current' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='current_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -257,7 +343,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBII_current' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -272,7 +358,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBIII_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
@@ -284,7 +370,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBIII_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -294,7 +380,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='current_academicBIII_current' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='current_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
@@ -306,7 +392,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBIII_current' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -321,7 +407,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBIV_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
@@ -333,7 +419,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBIV_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -343,7 +429,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='current_academicBIV_current' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='current_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
@@ -355,7 +441,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBIV_current' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -368,7 +454,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBIV_avgA_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBIV_avgA_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
@@ -380,7 +466,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBIV_avgA_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBIV_avgA_last' value="<?php echo $A; ?>" class="form-control" style="width: 100%"  disabled/>
 										</div>
 									</div>
 								</td>
@@ -390,7 +476,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBIV_avgB_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBIV_avgB_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Btotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
@@ -402,7 +488,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" name='pi_academicBIV_avgB_last' class="form-control" style="width: 100%" />
+											<input type="number" name='pi_academicBIV_avgB_last' value="<?php echo number_format((float)$B, 2, '.', ''); ?>" class="form-control" style="width: 100%"  disabled/>
 										</div>
 									</div>
 								</td>
@@ -414,7 +500,7 @@ $committee=$rowx['committee'];
 											<label class="col-form-label">Average PI = [ (0.25 * A) + (0.75 * B) ] = </label>
 										</div>
 										<div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" name='last_academicBIV_avgpi_last' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+											<input type="number" name='last_academicBIV_avgpi_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
 										</div>
 										<div class="col-md-1 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">%</label>
@@ -500,16 +586,16 @@ $committee=$rowx['committee'];
 		<div class="row form-inline justify-content-center">
 
 			<div class="col">
-				<button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+				<!-- <button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
-				</button>
-
+				</button> -->
+				
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
 			</div>
 		</div><br>
-		</form>
+		<!-- </form> -->
 		
 
 		<?php

@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Jan 26, 2019 at 01:08 PM
-=======
--- Generation Time: Jan 27, 2019 at 12:22 PM
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+-- Generation Time: Feb 01, 2019 at 08:16 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -88,11 +84,8 @@ CREATE TABLE `partb_cat1_pi` (
 --
 
 INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1_pi1_hod_a`, `cat1_pi1_committee_a`, `cat1_pi2_self_a`, `cat1_pi2_hod_a`, `cat1_pi2_committee_a`, `cat1_pi3_self_a`, `cat1_pi3_hod_a`, `cat1_pi3_committee_a`, `cat1_pi4_self_a`, `cat1_pi4_hod_a`, `cat1_pi4_committee_a`, `cat1_pitotal_self_a`, `cat1_pitotal_hod_a`, `cat1_pitotal_committee_a`) VALUES
-<<<<<<< HEAD
-(1, 2019, 2, 0, 0, 0, 7878, 879, 0, 589, 45, 0, 45, 45, 0, 77458, 456456, 0);
-=======
-(1, 2019, 2, 20, 10, 45, 7878, 879, 56, 589, 45, 56, 0, 0, 0, 77458, 456456, 50);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(1, 2019, 2, 20, 10, 45, 7878, 879, 56, 589, 45, 56, 0, 0, 0, 77, 75, 50),
+(2, 2018, 2, 20, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 65, 60);
 
 -- --------------------------------------------------------
 
@@ -126,11 +119,8 @@ CREATE TABLE `partb_cat2_pi` (
 --
 
 INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat2_pii1_hod_a`, `cat2_pii1_committee_a`, `cat2_pii2_self_a`, `cat2_pii2_hod_a`, `cat2_pii2_committee_a`, `cat2_pii3_self_a`, `cat2_pii3_hod_a`, `cat2_pii3_committee_a`, `cat2_pii4_self_a`, `cat2_pii4_hod_a`, `cat2_pii4_committee_a`, `cat2_piitotal_self_a`, `cat2_piitotal_hod_a`, `cat2_piitotal_committee_a`) VALUES
-<<<<<<< HEAD
-(1, 2019, 2, 78, 78, 0, 877, 7777, 0, 23, 45, 0, 23, 32, 0, 23, 43, 0);
-=======
-(1, 2019, 2, 78, 78, 70, 877, 7777, 100, 23, 45, 40, 23, 32, 23, 23, 43, 20);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(1, 2019, 2, 78, 78, 70, 877, 7777, 100, 23, 45, 40, 23, 32, 23, 23, 43, 20),
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 43, 0);
 
 -- --------------------------------------------------------
 
@@ -182,11 +172,8 @@ CREATE TABLE `partb_cat3_pi` (
 --
 
 INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `cat3_piii1_hod_a`, `cat3_piii1_committee_a`, `cat3_piii2_self_a`, `cat3_piii2_hod_a`, `cat3_piii2_committee_a`, `cat3_piii3_self_a`, `cat3_piii3_hod_a`, `cat3_piii3_committee_a`, `cat3_piii4_self_a`, `cat3_piii4_hod_a`, `cat3_piii4_committee_a`, `cat3_piii5_self_a`, `cat3_piii5_hod_a`, `cat3_piii5_committee_a`, `cat3_piii6_self_a`, `cat3_piii6_hod_a`, `cat3_piii6_committee_a`, `cat3_piii7_self_a`, `cat3_piii7_hod_a`, `cat3_piii7_committee_a`, `cat3_piii8_self_a`, `cat3_piii8_hod_a`, `cat3_piii8_committee_a`, `cat3_piii9_self_a`, `cat3_piii9_hod_a`, `cat3_piii9_committee_a`, `cat3_piii10_self_a`, `cat3_piii10_hod_a`, `cat3_piii10_committee_a`, `cat3_piiitotal_self_a`, `cat3_piiitotal_hod_a`, `cat3_piiitotal_committee_a`) VALUES
-<<<<<<< HEAD
-(1, 2019, 2, 78, 78, 0, 41, 11, 0, 44, 755, 0, 55, 56, 0, 5588, 213, 0, 89, 78, 0, 77, 88, 0, 333, 44, 0, 878, 7878, 0, 2300, 11, 0, 777, 78, 0);
-=======
-(1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 777, 78, 170);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 150, 145, 140),
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100);
 
 -- --------------------------------------------------------
 
@@ -217,11 +204,8 @@ CREATE TABLE `partb_cat4_pi` (
 --
 
 INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat4_piv1_hod_a`, `cat4_piv1_committee_a`, `cat4_piv2_self_a`, `cat4_piv2_hod_a`, `cat4_piv2_committee_a`, `cat4_piv3_self_a`, `cat4_piv3_hod_a`, `cat4_piv3_committee_a`, `cat4_pivtotal_self_a`, `cat4_pivtotal_hod_a`, `cat4_pivtotal_committee_a`) VALUES
-<<<<<<< HEAD
-(0, 2019, 2, 45, 44, 0, 23, 23, 0, 56, 56, 0, 89, 98, 0);
-=======
-(0, 2019, 2, 45, 44, 20, 23, 23, 20, 56, 56, 30, 89, 98, 40);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(1, 2019, 2, 45, 44, 20, 23, 23, 20, 56, 56, 30, 65, 50, 60),
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 65, 0);
 
 -- --------------------------------------------------------
 
@@ -274,32 +258,8 @@ CREATE TABLE `part_a_gpi` (
 --
 
 INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_gpi_self_a`, `parta_gpi_hod_a`, `parta_gpi_committee_a`, `parta_gpi_pi_self_a`, `parta_gpi_pi_hod_a`, `parta_gpi_pi_committee_a`) VALUES
-(3, 2019, 2, 22, 22, 20, 45, 45, 40);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `part_a_gpi`
---
-
-CREATE TABLE `part_a_gpi` (
-  `id` int(11) NOT NULL,
-  `year` int(11) NOT NULL,
-  `facultyId` int(11) NOT NULL,
-  `parta_gpi_self_a` float NOT NULL,
-  `parta_gpi_hod_a` float NOT NULL,
-  `parta_gpi_committee_a` float NOT NULL,
-  `parta_gpi_pi_self_a` float NOT NULL,
-  `parta_gpi_pi_hod_a` float NOT NULL,
-  `parta_gpi_pi_committee_a` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `part_a_gpi`
---
-
-INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_gpi_self_a`, `parta_gpi_hod_a`, `parta_gpi_committee_a`, `parta_gpi_pi_self_a`, `parta_gpi_pi_hod_a`, `parta_gpi_pi_committee_a`) VALUES
-(3, 2019, 2, 144, 45, 0, 474, 748, 0);
+(3, 2019, 2, 22, 51, 20, 45, 45, 40),
+(4, 2018, 2, 0, 0, 0, 45, 45, 0);
 
 -- --------------------------------------------------------
 
@@ -345,7 +305,7 @@ CREATE TABLE `part_a_table` (
 
 INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `faculty_name`, `ecode`, `praddr`, `peaddr`, `email`, `mobileno`, `highq`, `dob`, `desi`, `nameo`, `pdesi`, `dojkjsce`, `pscale`, `pbg`, `lastdesisel`, `promowef`, `cscales`, `cbasics`, `lastdesicas`, `promowefcas`, `cscalecas`, `cbasiccas`, `customRadioInline1`, `nameofdegree`, `institute`, `ugpg`) VALUES
 (1, 2017, 2, 'Manish Potey', 120039, '', '', 'manish.potey@somaiya.edu', 0, '', '2018-12-11', '', '', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', ''),
-(2, 2019, 2, 'Manish Potey', 29163, '', '', 'manish.potey@somaiya.edu', 2147483647, 'PHD', '0000-00-00', '', '', 'Head of Department', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', ''),
+(2, 2019, 2, 'Manish Potey', 29163, '', '', 'manish.potey@somaiya.edu', 2147483647, 'PHD', '0000-00-00', 'HOD', '', 'Head of Department', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', ''),
 (3, 2019, 3, 'Jyoti Trymbake', 5476, 'Ghatkopar', 'Ghatkopar', 'jyoti.trymbake@somaiya.edu', 883957483, 'PHD', '1982-01-27', 'Professor', 'SPIT', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', '');
 
 -- --------------------------------------------------------
@@ -454,9 +414,10 @@ CREATE TABLE `part_b_cat_1_cte` (
 --
 
 INSERT INTO `part_b_cat_1_cte` (`id`, `formId`, `ctecourse`, `ctetyprlpt`, `cteugpg`, `cteclasssemester`, `ctehrsweek`, `ctehrsengaged`, `ctemaxhrs`, `ctec`) VALUES
-(23, 1, 'jvjh', 'hg', 'hg', 'gh', 145, 58, 548, 5),
-(24, 1, 'jh', 'jn', 'jn', 'jn', 48, 48, 5, 5),
-(25, 1, 'jvjh', 'hg', 'hg', 'ghey', 145, 58, 548, 5);
+(26, 1, 'jvjh', 'hg', 'hg', 'gh', 145, 58, 548, 5),
+(27, 1, 'jh', 'jn', 'jn', 'jn', 48, 48, 5, 5),
+(28, 1, 'jvjh', 'hg', 'hg', 'ghey', 145, 58, 548, 5),
+(29, 1, 'hug', 'ieiu', 'uhu', 'uuhiu', 56, 43, 32, 35);
 
 -- --------------------------------------------------------
 
@@ -484,14 +445,10 @@ CREATE TABLE `part_b_cat_1_cto` (
 INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctougpg`, `ctoclasssemester`, `ctohrsweek`, `ctohrsengaged`, `ctomaxhrs`, `ctoc`) VALUES
 (3, 2, 'asd', 'sd', 'wd', 'wd', 12, 3, 2, 3),
 (4, 2, 'asd', 'a', 'dw', 'w', 12, 21, 1, 2),
-(23, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87),
-<<<<<<< HEAD
-(24, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76);
-=======
-(24, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76),
 (25, 3, 'iuhf', 'iuh', 'iuh', 'iuh', 1, 3, 23, 43),
-(26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1),
+(27, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87),
+(28, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76);
 
 -- --------------------------------------------------------
 
@@ -511,10 +468,10 @@ CREATE TABLE `part_b_cat_1_dar` (
 --
 
 INSERT INTO `part_b_cat_1_dar` (`id`, `formId`, `dara`, `darb`) VALUES
-(23, 1, 'asdasd', 'asdasd'),
-(24, 1, 'asdef', 'rb'),
-(25, 1, 'asdasd424', 'asdasd42'),
-(26, 1, 'yo', 'ou');
+(27, 1, 'asdasd', 'asdasd'),
+(28, 1, 'asdef', 'rb'),
+(29, 1, 'asdasd424', 'asdasd42'),
+(30, 1, 'yo', 'ou');
 
 -- --------------------------------------------------------
 
@@ -536,12 +493,8 @@ INSERT INTO `part_b_cat_2` (`id`, `formId`) VALUES
 (2, 2),
 (3, 1),
 (4, 1),
-<<<<<<< HEAD
-(5, 1);
-=======
 (5, 1),
 (6, 3);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
 
 -- --------------------------------------------------------
 
@@ -561,8 +514,8 @@ CREATE TABLE `part_b_cat_2_act` (
 --
 
 INSERT INTO `part_b_cat_2_act` (`id`, `formId`, `ea`, `eb`) VALUES
-(21, 1, 'jn', 'ijn'),
-(22, 1, 'ijn', 'ijn');
+(23, 1, 'jn', 'ijn'),
+(24, 1, 'ijn', 'ijn');
 
 -- --------------------------------------------------------
 
@@ -582,9 +535,9 @@ CREATE TABLE `part_b_cat_2_c` (
 --
 
 INSERT INTO `part_b_cat_2_c` (`id`, `formId`, `ca`, `cb`) VALUES
-(23, 1, 'kjn', 'jkn'),
-(24, 1, 'kjn', 'kjn'),
-(25, 1, '5323vsd', 'sfe2');
+(26, 1, 'kjn', 'jkn'),
+(27, 1, 'kjn', 'kjn'),
+(28, 1, '5323vsd', 'sfe2');
 
 -- --------------------------------------------------------
 
@@ -604,9 +557,9 @@ CREATE TABLE `part_b_cat_2_exc` (
 --
 
 INSERT INTO `part_b_cat_2_exc` (`id`, `formId`, `eca`, `ecb`) VALUES
-(31, 1, 'jn', 'ijn'),
-(32, 1, 'jb', 'hjb'),
-(33, 1, '53', '1daf');
+(34, 1, 'jn', 'ijn'),
+(35, 1, 'jb', 'hjb'),
+(36, 1, '53', '1daf');
 
 -- --------------------------------------------------------
 
@@ -626,9 +579,9 @@ CREATE TABLE `part_b_cat_2_ha` (
 --
 
 INSERT INTO `part_b_cat_2_ha` (`id`, `formId`, `ha`, `hb`) VALUES
-(23, 1, 'jnf', 'in'),
-(24, 1, 'ijn', 'ijn'),
-(25, 1, 'ter', 'qwe');
+(26, 1, 'jnf', 'in'),
+(27, 1, 'ijn', 'ijn'),
+(28, 1, 'ter', 'qwe');
 
 -- --------------------------------------------------------
 
@@ -661,12 +614,9 @@ INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `mtechne`
 (4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (6, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-<<<<<<< HEAD
-(7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-=======
 (7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(9, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -691,8 +641,8 @@ CREATE TABLE `part_b_cat_3_bk` (
 --
 
 INSERT INTO `part_b_cat_3_bk` (`id`, `formId`, `pptitlebk`, `ppnprbk`, `ppisbnbk`, `ppdatebk`, `ppifbk`, `customRadioInline1bk`, `ppncabk`) VALUES
-(9, 1, 'yeet', 'egr', 'erge', '2019-01-16', 'qwe', '', 'dqdw'),
-(10, 1, 'jeoe', 'ihiuh', 'jhg', '2019-01-16', 'kh', 'No', 'oihlijo');
+(11, 1, 'yeet', 'egr', 'erge', '2019-01-16', 'qwe', '', 'dqdw'),
+(12, 1, 'jeoe', 'ihiuh', 'jhg', '2019-01-16', 'kh', 'No', 'oihlijo');
 
 -- --------------------------------------------------------
 
@@ -714,7 +664,7 @@ CREATE TABLE `part_b_cat_3_cres` (
 --
 
 INSERT INTO `part_b_cat_3_cres` (`id`, `formId`, `tca`, `acb`, `dcc`, `gcd`) VALUES
-(6, 1, 'er', 'ty', '2019-01-09', 56);
+(7, 1, 'er', 'ty', '2019-01-09', 56);
 
 -- --------------------------------------------------------
 
@@ -736,7 +686,7 @@ CREATE TABLE `part_b_cat_3_ores` (
 --
 
 INSERT INTO `part_b_cat_3_ores` (`id`, `formId`, `tta`, `aab`, `ddc`, `ggd`) VALUES
-(6, 1, 'yu', 'nm', '2019-01-02', 89);
+(7, 1, 'yu', 'nm', '2019-01-02', 89);
 
 -- --------------------------------------------------------
 
@@ -756,7 +706,7 @@ CREATE TABLE `part_b_cat_3_pip` (
 --
 
 INSERT INTO `part_b_cat_3_pip` (`id`, `formId`, `dpi`, `drf`) VALUES
-(6, 1, 'er', '2019-01-09');
+(7, 1, 'er', '2019-01-09');
 
 -- --------------------------------------------------------
 
@@ -780,8 +730,8 @@ CREATE TABLE `part_b_cat_3_pp` (
 --
 
 INSERT INTO `part_b_cat_3_pp` (`id`, `formId`, `pptitle`, `ppnpr`, `ppisbn`, `ppif`, `customRadioInline1`, `ppnca`) VALUES
-(8, 1, 'hey', '34', '123', 'sd', '', '12'),
-(9, 1, 'retu', 'wew', 'qwq', 'ree', 'No', '12');
+(10, 1, 'hey', '34', '123', 'sd', '', '12'),
+(11, 1, 'retu', 'wew', 'qwq', 'ree', 'No', '12');
 
 -- --------------------------------------------------------
 
@@ -805,8 +755,8 @@ CREATE TABLE `part_b_cat_3_ppic` (
 --
 
 INSERT INTO `part_b_cat_3_ppic` (`id`, `formId`, `pptitleic`, `ppnpric`, `ppisbnic`, `ppific`, `customRadioInline1ic`, `ppncaic`) VALUES
-(8, 1, 'ghi', '12', 'as', '34', '', '12'),
-(9, 1, 'HI', 'io', 'ojoi', 'jk', 'No', 'kln');
+(10, 1, 'ghi', '12', 'as', '34', '', '12'),
+(11, 1, 'HI', 'io', 'ojoi', 'jk', 'No', 'kln');
 
 -- --------------------------------------------------------
 
@@ -830,9 +780,9 @@ CREATE TABLE `part_b_cat_3_ppinc` (
 --
 
 INSERT INTO `part_b_cat_3_ppinc` (`id`, `formId`, `pptitleinc`, `ppnprinc`, `ppisbnpinc`, `ppifinc`, `customRadioInline1inc`, `ppncainc`) VALUES
-(10, 1, 'He3', 'NS2', '57021', 'byt', '', '23'),
-(11, 1, 'asd', 'asd', 'fe', 'we', 'No', '123'),
-(12, 1, 'hola', 'afwe', 'wew23', 'ewwewewe', 'No', '3');
+(13, 1, 'He3', 'NS2', '57021', 'byt', '', '23'),
+(14, 1, 'asd', 'asd', 'fe', 'we', 'No', '123'),
+(15, 1, 'hola', 'afwe', 'wew23', 'ewwewewe', 'No', '3');
 
 -- --------------------------------------------------------
 
@@ -854,8 +804,8 @@ CREATE TABLE `part_b_cat_3_res` (
 --
 
 INSERT INTO `part_b_cat_3_res` (`id`, `formId`, `ta`, `ab`, `dc`, `gd`) VALUES
-(8, 1, 'ewr', 're', '2019-01-10', 34),
-(9, 1, 'ge', 'er', '2019-01-09', 5);
+(10, 1, 'ewr', 're', '2019-01-10', 34),
+(11, 1, 'ge', 'er', '2019-01-09', 5);
 
 -- --------------------------------------------------------
 
@@ -879,12 +829,9 @@ INSERT INTO `part_b_cat_4` (`id`, `formId`) VALUES
 (4, 1),
 (5, 1),
 (6, 1),
-<<<<<<< HEAD
-(7, 1);
-=======
 (7, 1),
-(8, 3);
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+(8, 3),
+(9, 1);
 
 -- --------------------------------------------------------
 
@@ -904,7 +851,7 @@ CREATE TABLE `part_b_cat_4_creds` (
 --
 
 INSERT INTO `part_b_cat_4_creds` (`id`, `formId`, `cativ2_dp`, `cativ2`) VALUES
-(6, 1, '23', '34');
+(7, 1, '23', '34');
 
 -- --------------------------------------------------------
 
@@ -925,7 +872,7 @@ CREATE TABLE `part_b_cat_4_inv` (
 --
 
 INSERT INTO `part_b_cat_4_inv` (`id`, `formId`, `cativ1_dp`, `cativ1_datee`, `cativ1_o`) VALUES
-(6, 1, '23', '2019-01-09', '234');
+(7, 1, '23', '2019-01-09', '234');
 
 -- --------------------------------------------------------
 
@@ -946,7 +893,7 @@ CREATE TABLE `part_b_cat_4_sem` (
 --
 
 INSERT INTO `part_b_cat_4_sem` (`id`, `formId`, `cativ_dp`, `cativ_datee`, `cativ_o`) VALUES
-(6, 1, '43', '2019-01-10', '45');
+(7, 1, '43', '2019-01-10', '45');
 
 -- --------------------------------------------------------
 
@@ -971,46 +918,47 @@ INSERT INTO `part_b_table` (`id`, `year`, `facultyId`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `summary_table`
+-- Table structure for table `submitted_for_review_table`
 --
 
-CREATE TABLE `summary_table` (
+CREATE TABLE `submitted_for_review_table` (
   `id` int(11) NOT NULL,
-  `last_academicA_last` int(11) NOT NULL,
-  `pi_academic_last` int(11) NOT NULL,
-  `current_academicA_current` int(11) NOT NULL,
-  `pi_academicA_current` int(11) NOT NULL,
-  `last_academicBI_last` int(11) NOT NULL,
-  `pi_academicBI_last` int(11) NOT NULL,
-  `current_academicBI_current` int(11) NOT NULL,
-  `pi_academicBI_current` int(11) NOT NULL,
-  `last_academicBII_last` int(11) NOT NULL,
-  `pi_academicBII_last` int(11) NOT NULL,
-  `current_academicBII_current` int(11) NOT NULL,
-  `pi_academicBII_current` int(11) NOT NULL,
-  `last_academicBIII_last` int(11) NOT NULL,
-  `pi_academicBIII_last` int(11) NOT NULL,
-  `current_academicBIII_current` int(11) NOT NULL,
-  `pi_academicBIII_current` int(11) NOT NULL,
-  `last_academicBIV_last` int(11) NOT NULL,
-  `pi_academicBIV_last` int(11) NOT NULL,
-  `current_academicBIV_current` int(11) NOT NULL,
-  `pi_academicBIV_current` int(11) NOT NULL,
-  `last_academicBIV_avgA_last` int(11) NOT NULL,
-  `pi_academicBIV_avgA_last` int(11) NOT NULL,
-  `last_academicBIV_avgB_last` int(11) NOT NULL,
-  `pi_academicBIV_avgB_last` int(11) NOT NULL,
-  `last_academicBIV_avgpi_last` int(11) NOT NULL
+  `year` int(11) NOT NULL,
+  `facultyId` int(11) NOT NULL,
+  `partA` int(11) NOT NULL DEFAULT '0',
+  `partB` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `summary_table`
+-- Dumping data for table `submitted_for_review_table`
 --
 
-INSERT INTO `summary_table` (`id`, `last_academicA_last`, `pi_academic_last`, `current_academicA_current`, `pi_academicA_current`, `last_academicBI_last`, `pi_academicBI_last`, `current_academicBI_current`, `pi_academicBI_current`, `last_academicBII_last`, `pi_academicBII_last`, `current_academicBII_current`, `pi_academicBII_current`, `last_academicBIII_last`, `pi_academicBIII_last`, `current_academicBIII_current`, `pi_academicBIII_current`, `last_academicBIV_last`, `pi_academicBIV_last`, `current_academicBIV_current`, `pi_academicBIV_current`, `last_academicBIV_avgA_last`, `pi_academicBIV_avgA_last`, `last_academicBIV_avgB_last`, `pi_academicBIV_avgB_last`, `last_academicBIV_avgpi_last`) VALUES
-(1, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 584, 454, 5456, 565, 4565, 545, 455665, 45656, 212, 131, 2121, 23123, 2123, 1212, 121, 212121, 2, 22, 212, 12, 121, 2122, 122, 121, 2212);
+INSERT INTO `submitted_for_review_table` (`id`, `year`, `facultyId`, `partA`, `partB`) VALUES
+(1, 2019, 2, 1, 1),
+(2, 2018, 2, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `summary_hasr`
+--
+
+CREATE TABLE `summary_hasr` (
+  `id` int(11) NOT NULL,
+  `formId` int(11) NOT NULL,
+  `ecs` varchar(200) NOT NULL,
+  `papers` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `summary_hasr`
+--
+
+INSERT INTO `summary_hasr` (`id`, `formId`, `ecs`, `papers`) VALUES
+(1, 1, '1', 'users/manish.potey@somaiya.edu/Lighthouse.jpg'),
+(2, 1, '2', 'users/manish.potey@somaiya.edu/Penguins.jpg'),
+(3, 1, '3', 'NAN'),
+(4, 1, '4', 'users/manish.potey@somaiya.edu/Chrysanthemum.jpg');
 
 -- --------------------------------------------------------
 
@@ -1020,6 +968,8 @@ INSERT INTO `summary_table` (`id`, `last_academicA_last`, `pi_academic_last`, `c
 
 CREATE TABLE `summary_table` (
   `id` int(11) NOT NULL,
+  `year` int(11) NOT NULL,
+  `facultyId` int(11) NOT NULL,
   `last_academicA_last` int(11) NOT NULL,
   `pi_academic_last` int(11) NOT NULL,
   `current_academicA_current` int(11) NOT NULL,
@@ -1051,10 +1001,8 @@ CREATE TABLE `summary_table` (
 -- Dumping data for table `summary_table`
 --
 
-INSERT INTO `summary_table` (`id`, `last_academicA_last`, `pi_academic_last`, `current_academicA_current`, `pi_academicA_current`, `last_academicBI_last`, `pi_academicBI_last`, `current_academicBI_current`, `pi_academicBI_current`, `last_academicBII_last`, `pi_academicBII_last`, `current_academicBII_current`, `pi_academicBII_current`, `last_academicBIII_last`, `pi_academicBIII_last`, `current_academicBIII_current`, `pi_academicBIII_current`, `last_academicBIV_last`, `pi_academicBIV_last`, `current_academicBIV_current`, `pi_academicBIV_current`, `last_academicBIV_avgA_last`, `pi_academicBIV_avgA_last`, `last_academicBIV_avgB_last`, `pi_academicBIV_avgB_last`, `last_academicBIV_avgpi_last`) VALUES
-(1, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 584, 454, 5456, 565, 4565, 545, 455665, 45656, 212, 131, 2121, 23123, 2123, 1212, 121, 212121, 2, 22, 212, 12, 121, 2122, 122, 121, 2212);
+INSERT INTO `summary_table` (`id`, `year`, `facultyId`, `last_academicA_last`, `pi_academic_last`, `current_academicA_current`, `pi_academicA_current`, `last_academicBI_last`, `pi_academicBI_last`, `current_academicBI_current`, `pi_academicBI_current`, `last_academicBII_last`, `pi_academicBII_last`, `current_academicBII_current`, `pi_academicBII_current`, `last_academicBIII_last`, `pi_academicBIII_last`, `current_academicBIII_current`, `pi_academicBIII_current`, `last_academicBIV_last`, `pi_academicBIV_last`, `current_academicBIV_current`, `pi_academicBIV_current`, `last_academicBIV_avgA_last`, `pi_academicBIV_avgA_last`, `last_academicBIV_avgB_last`, `pi_academicBIV_avgB_last`, `last_academicBIV_avgpi_last`) VALUES
+(1, 2019, 2, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
 
 --
 -- Indexes for dumped tables
@@ -1082,6 +1030,12 @@ ALTER TABLE `partb_cat2_pi`
 -- Indexes for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `partb_cat4_pi`
+--
+ALTER TABLE `partb_cat4_pi`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1241,6 +1195,18 @@ ALTER TABLE `part_b_table`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `submitted_for_review_table`
+--
+ALTER TABLE `submitted_for_review_table`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `summary_hasr`
+--
+ALTER TABLE `summary_hasr`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `summary_table`
 --
 ALTER TABLE `summary_table`
@@ -1259,17 +1225,22 @@ ALTER TABLE `faculty_table`
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `partb_cat4_pi`
+--
+ALTER TABLE `partb_cat4_pi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
@@ -1279,12 +1250,7 @@ ALTER TABLE `part_a_doc`
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `part_a_gpi`
---
-ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
@@ -1299,137 +1265,127 @@ ALTER TABLE `part_b_cat_1`
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
 ALTER TABLE `part_b_cat_1_cte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cto`
 --
 ALTER TABLE `part_b_cat_1_cto`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_dar`
 --
 ALTER TABLE `part_b_cat_1_dar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
 ALTER TABLE `part_b_cat_2`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
 ALTER TABLE `part_b_cat_2_act`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_c`
 --
 ALTER TABLE `part_b_cat_2_c`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_exc`
 --
 ALTER TABLE `part_b_cat_2_exc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_ha`
 --
 ALTER TABLE `part_b_cat_2_ha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
 ALTER TABLE `part_b_cat_3_bk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_cres`
 --
 ALTER TABLE `part_b_cat_3_cres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ores`
 --
 ALTER TABLE `part_b_cat_3_ores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pip`
 --
 ALTER TABLE `part_b_cat_3_pip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pp`
 --
 ALTER TABLE `part_b_cat_3_pp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppic`
 --
 ALTER TABLE `part_b_cat_3_ppic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppinc`
 --
 ALTER TABLE `part_b_cat_3_ppinc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_res`
 --
 ALTER TABLE `part_b_cat_3_res`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
 ALTER TABLE `part_b_cat_4_creds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_inv`
 --
 ALTER TABLE `part_b_cat_4_inv`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_sem`
 --
 ALTER TABLE `part_b_cat_4_sem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `part_b_table`
 --
 ALTER TABLE `part_b_table`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-=======
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
->>>>>>> eed413d6754fb32b8ea08c96c54bdd1e4a0e72f1
+--
+-- AUTO_INCREMENT for table `submitted_for_review_table`
+--
+ALTER TABLE `submitted_for_review_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `summary_hasr`
+--
+ALTER TABLE `summary_hasr`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `summary_table`
 --
 ALTER TABLE `summary_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

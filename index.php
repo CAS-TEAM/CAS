@@ -14,7 +14,7 @@ include 'top.php';
 ?>
 
 	
-
+<section class="container-fluid" style="height:100vh;width:100vw;margin:0px;padding:0px">
  	
 	<div class="container-fluid d-flex h-100 flex-column bg-overlay">
 
@@ -199,7 +199,7 @@ include 'top.php';
 	  	</div>
 	</div>
 
-
+</section>
 
 </body>
 </html>

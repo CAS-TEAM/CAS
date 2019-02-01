@@ -39,7 +39,7 @@ $hod=$rowx['hod'];
 $committee=$rowx['committee'];
 // echo "committee=".$committee;
 
-$sqly="SELECT * FROM partb_cat1_pi WHERE facultyId='$userId'";
+$sqly="SELECT * FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$year'";
 $resulty=mysqli_query($conn,$sqly);
 $rowy=mysqli_fetch_assoc($resulty);
 $cat1_pi1_self_a=$rowy['cat1_pi1_self_a'];
@@ -60,7 +60,7 @@ $cat1_pitotal_committee_a=$rowy['cat1_pitotal_committee_a'];
 
 // echo "cat=".$cat1_pi1_self_a;
 
-$sqlz="SELECT * FROM partb_cat2_pi WHERE facultyId='$userId'";
+$sqlz="SELECT * FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$year'";
 $resultz=mysqli_query($conn,$sqlz);
 $rowz=mysqli_fetch_assoc($resultz);
 $cat2_pii1_self_a=$rowz['cat2_pii1_self_a'];
@@ -79,7 +79,7 @@ $cat2_piitotal_self_a=$rowz['cat2_piitotal_self_a'];
 $cat2_piitotal_hod_a=$rowz['cat2_piitotal_hod_a'];
 $cat2_piitotal_committee_a=$rowz['cat2_piitotal_committee_a'];
 
-$sqlzz="SELECT * FROM partb_cat3_pi WHERE facultyId='$userId'";
+$sqlzz="SELECT * FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$year'";
 $resultzz=mysqli_query($conn,$sqlzz);
 $rowzz=mysqli_fetch_assoc($resultzz);
 $cat3_piii1_self_a=$rowzz['cat3_piii1_self_a'];
@@ -117,7 +117,7 @@ $cat3_piiitotal_hod_a=$rowzz['cat3_piiitotal_hod_a'];
 $cat3_piiitotal_committee_a=$rowzz['cat3_piiitotal_committee_a'];
 
 
-$sqlzzz="SELECT * FROM partb_cat4_pi WHERE facultyId='$userId'";
+$sqlzzz="SELECT * FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$year'";
 $resultzzz=mysqli_query($conn,$sqlzzz);
 $rowzzz=mysqli_fetch_assoc($resultzzz);
 $cat4_piv1_self_a=$rowzzz['cat4_piv1_self_a'];
@@ -176,19 +176,59 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 	  	</div>
 	</nav>
     
-    <form method="POST" action="partBsys.php" class="part-b-form" id="part-b-form">
-    <input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
-    <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
-    <input type="hidden" name="alreadybegun" id="alreadybegun" value="0">
-
-    <input type="hidden" name="userId" id="userId" value="<?php echo $userId; ?>">
-    <input type="hidden" name="viewerId" id="viewerId" value="<?php echo $viewerId; ?>">
-    <input type="hidden" name="hod" id="hod" value="<?php echo $hod; ?>">
-    <input type="hidden" name="committee" id="committee" value="<?php echo $committee; ?>">
+    
 
 	<div class="container partb">
 
-		<header class="heading"><b>'Part B'</b></header><br>
+		<header>
+			<h2 class="heading"><b>'Part B'</b></h2>
+			<?php 
+
+			if($_SESSION['id']==$userId)
+			{
+
+				$sqlsfr="SELECT partB FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$year'";
+				$resultsfr=mysqli_query($conn,$sqlsfr);
+
+				if(mysqli_num_rows($resultsfr)==0)
+				{
+
+					?>
+					<form method="POST" action="sfrB_sys.php">
+						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
+					</form><br>
+					<?php
+
+				}
+				else
+				{
+					$rowsfr=mysqli_fetch_assoc($resultsfr);
+
+					if($rowsfr['partB']==0)
+					{
+						?>
+						<form method="POST" action="sfrB_sys.php">
+							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
+						</form>	<br>
+						<?php
+					}
+					else
+					{
+						?>
+						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
+						<?php
+					}
+					
+				}
+
+			}
+
+			?>
+
+		</header>
+		<!-- <br> -->
 
 		<nav>
           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
@@ -198,6 +238,16 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
             <a class="nav-item nav-link" id="nav-cat4-tab" data-toggle="tab" href="#nav-cat4" role="tab" aria-controls="nav-cat4" aria-selected="false">Category IV</a>
 		  </div>
 		</nav>
+
+	<form method="POST" action="partBsys.php" class="part-b-form" id="part-b-form">
+    <input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
+    <input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+    <input type="hidden" name="alreadybegun" id="alreadybegun" value="0">
+
+    <input type="hidden" name="userId" id="userId" value="<?php echo $userId; ?>">
+    <input type="hidden" name="viewerId" id="viewerId" value="<?php echo $viewerId; ?>">
+    <input type="hidden" name="hod" id="hod" value="<?php echo $hod; ?>">
+    <input type="hidden" name="committee" id="committee" value="<?php echo $committee; ?>">
 		
 		<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-cat1" role="tabpanel" aria-labelledby="nav-cat1-tab"><br>

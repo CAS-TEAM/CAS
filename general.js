@@ -1014,6 +1014,7 @@ function getPartBData(){
 				$("#part-b-form :input").prop("disabled", true);//disabling all inputs
 				$(':button').prop('disabled', false);//but enabling all buttons because the above line disables all buttons also
 				$(".btn-default").prop('disabled', true);
+				$('#sfrb_submit').prop('disabled', false);
 				enableinputs();
 			}
 		},                

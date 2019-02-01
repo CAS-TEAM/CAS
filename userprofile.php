@@ -239,6 +239,34 @@ include 'top.php';
 									  		$currentyear=date("Y");
 									  		$previousyear=$currentyear-1;
 
+
+
+									    		if($_SESSION['id']==$userId)
+												{
+
+													$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$currentyear' AND partA=1 AND partB=1";
+													$resultsfr=mysqli_query($conn,$sqlsfr);
+
+													if(mysqli_num_rows($resultsfr)!=0)
+													{	
+														$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$previousyear' AND partA=1 AND partB=1";
+														$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+														if(mysqli_num_rows($resultsfrp)!=0)
+														{	
+
+														?>
+														<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+															<a href="summary.php?id=<?php echo $userId; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+														</div>
+														<br>
+														<?php
+														}
+													}
+
+												}
+
+									    		
 									  		?>
 									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
 									    	<div class="row">							    		
@@ -248,6 +276,8 @@ include 'top.php';
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
 									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>	
 									    		</div> 
+									    		
+
 									    	</div>
 									    	<hr>
 									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
@@ -259,6 +289,7 @@ include 'top.php';
 									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 									    		</div>
 									    	</div>
+									    	
 									    	<?php
 
 									    	?>
@@ -344,6 +375,22 @@ include 'top.php';
 													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
 													    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 													    		</div>
+													    		<?php
+
+												    		
+																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+																$resultsfr=mysqli_query($conn,$sqlsfr);
+
+																if(mysqli_num_rows($resultsfr)!=0)
+																{	
+																	?>
+																	<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																		<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+																	</div>
+																	<?php
+																}
+
+												    			?>
 													    	</div>
 													    	<hr>
 													    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
@@ -354,7 +401,24 @@ include 'top.php';
 													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
 													    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 													    		</div>
+													    		<?php
+
+												    		
+																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
+																$resultsfr=mysqli_query($conn,$sqlsfr);
+
+																if(mysqli_num_rows($resultsfr)!=0)
+																{	
+																	?>
+																	<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																		<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+																	</div>
+																	<?php
+																}
+
+												    			?>
 													    	</div>
+
 													    	<?php
 
 													    	?>
@@ -481,6 +545,21 @@ include 'top.php';
 															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
 															    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 															    		</div>
+															    		<?php
+
+																		$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+																		$resultsfr=mysqli_query($conn,$sqlsfr);
+
+																		if(mysqli_num_rows($resultsfr)!=0)
+																		{	
+																			?>
+																			<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																				<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+																			</div>
+																			<?php
+																		}
+
+														    			?>
 															    	</div>
 															    	<hr>
 															    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
@@ -491,6 +570,22 @@ include 'top.php';
 															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
 															    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
 															    		</div>
+															    		<?php
+
+												    		
+																		$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+																		$resultsfr=mysqli_query($conn,$sqlsfr);
+
+																		if(mysqli_num_rows($resultsfr)!=0)
+																		{	
+																			?>
+																			<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																				<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+																			</div>
+																			<?php
+																		}
+
+														    			?>
 															    	</div>
 
 															  	</div>
