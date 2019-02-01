@@ -37,20 +37,20 @@
           
           <li class="sidebar-dropdown active">
             <a href="userprofile.php">
-              <i class="fa fa-tachometer-alt" style="font-size: 15px"></i>
+              <i class="fas fa-user" style="font-size: 15px"></i>
               <span style="font-size: 15px">My Profile</span>
             </a>
           </li>
 
           <li class="sidebar-dropdown">
             <a href="partA.php">
-              <i class="fa fa-shopping-cart" style="font-size: 15px"></i>
+              <i class="fab fa-wpforms" style="font-size: 15px"></i>
               <span style="font-size: 15px">PartA form</span>
             </a>
           </li>
           <li class="sidebar-dropdown dropdown-arrow">
             <a href="#">
-              <i class="far fa-gem" style="font-size: 15px"></i>
+              <i class="fab fa-wpforms" style="font-size: 15px"></i>
               <span style="font-size: 15px">PartB form</span>
             </a>
             <div class="sidebar-submenu">
@@ -72,7 +72,7 @@
           </li>
           <li class="sidebar-dropdown">
             <a href="guidelines.php">
-              <i class="fa fa-chart-line" style="font-size: 15px"></i>
+              <i class="fas fa-info" style="font-size: 15px"></i>
               <span style="font-size: 15px">CAS Guidelines</span>
             </a>
             

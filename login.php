@@ -26,7 +26,7 @@ include 'top.php';
   	<div class="container">
 	    <div class="row">
 	      	<div class="col-sm-12 col-md-7 col-lg-5 mx-auto">
-	        	<div class="card card-signin my-1 login-card"><br><br>
+	        	<div class="card card-signin my-1 login-card">
 	        			<div class="row">
 			        		<div class="col-md-12 user-img">
 				        		<img src="img/face.png">
@@ -39,7 +39,7 @@ include 'top.php';
 		        		</div>
 
 	          		<div class="card-body" style="margin-top: -10px">
-	                <!--<h5 class="card-title text-center signin-header">Sign In</h5>-->
+	                <!--<h5 class="card-title text-center signin-headr">Sign In</h5>-->
 	            	<form class="form-signin" method="POST" action="login_sys.php">
             	      		<div class="form-label-group">
             	      		 	<input type="email" id="inputEmail" name="email" class="form-control signin-form-input fontAwesome-signin" placeholder="&#xf0e0;  Email address" required autofocus>
