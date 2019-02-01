@@ -5,6 +5,7 @@ session_start();
 include 'dbh.php';
 
 include 'top.php';
+include 'left-nav.php';
 
 date_default_timezone_set('Asia/Kolkata');
 

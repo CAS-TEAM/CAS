@@ -15,6 +15,7 @@ else
 
 include 'dbh.php';
 include 'top.php';
+include 'left-nav.php';
 
 $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
@@ -44,7 +45,7 @@ $previousyear=$currentyear-1;
 
 ?>
 
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="height: 50px">
 	  	<a class="navbar-brand" href="#">CAS</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
@@ -66,15 +67,15 @@ $previousyear=$currentyear-1;
 			    }			      	
 			    else
 			    {
-			    	?>			    	
+			    	?>
 			      	<li class="nav-item dropdown">
 				        <img class="nav-link dropdown-toggle" src="defaults/default_userprofile_pic.png" width="50px" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
 				        <!-- </a> -->
 				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
-				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto"><span class="my-auto ml-2">My Profile</span></a>
-				          	<a class="dropdown-item" href="usersettings.php"><img src="settings.png" style="width:30px;height:auto"><span class="my-auto ml-2">Settings</span></a>
+				          	<a class="dropdown-item" href="userprofile.php">My Profile</a>
+				          	<a class="dropdown-item" href="#">Upload Profile Picture</a>
 				          	<div class="dropdown-divider"></div>
 				          	<a class="dropdown-item" href="logout.php">Log out</a>
 				        </div>
@@ -88,11 +89,13 @@ $previousyear=$currentyear-1;
 
 
 
-	<div class="container partb">
+	<div class="container">
+    <div class="row justify-content-center">    		
+    <div class="col offset-md-2 parta">
 
 		<?php 
 
-		if($viewerId==$userId)
+		if($viewerId==$userId || $committee==1)
 		{
 
 		$sqlpartA="SELECT parta_gpi_pi_self_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$currentyear'";
@@ -601,6 +604,11 @@ $previousyear=$currentyear-1;
 		<?php
 
 		}
+
+		?>
+
+		<hr>
+		<?php
 		
 		if($committee==1)
 		{
@@ -657,7 +665,7 @@ $previousyear=$currentyear-1;
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="number" name='remarks-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="text" name='remarks-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
@@ -697,7 +705,7 @@ $previousyear=$currentyear-1;
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="number" name='remarks-partbi' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="text" name='remarks-partbi' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
@@ -737,7 +745,7 @@ $previousyear=$currentyear-1;
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="number" name='remarks_partbii' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="text" name='remarks_partbii' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
@@ -777,7 +785,7 @@ $previousyear=$currentyear-1;
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="number" name='remarks_partbiii' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="text" name='remarks_partbiii' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
@@ -817,7 +825,7 @@ $previousyear=$currentyear-1;
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="number" name='remarks_partbiv' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="text" name='remarks_partbiv' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
@@ -913,7 +921,8 @@ $previousyear=$currentyear-1;
 		?>
 
 		
-	
+	</div>
+	</div>
 	</div>
 
 

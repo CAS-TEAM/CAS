@@ -14,7 +14,7 @@ include 'dbh.php';
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 include 'top.php';
-include 'left-nav.php';
+include 'left-nav.php';	
 
 
 
@@ -33,7 +33,7 @@ $committee=$row['committee'];
 $principal=$row['principal'];
 $admin=$row['admin'];
 
-				
+			
 
 ?>
 
@@ -396,10 +396,7 @@ $admin=$row['admin'];
 																{	
 
 																?>
-																<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-																	<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
-																</div>
-																<br>
+																	<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info">Summary</a>	
 																<?php
 																}
 															}
@@ -599,10 +596,10 @@ $admin=$row['admin'];
 																		{	
 
 																		?>
-																		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-																			<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
-																		</div>
-																		<br>
+																		<!-- <div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px"> -->
+																			<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info">Summary</a>	
+																		<!-- </div> -->
+																		<!-- <br> -->
 																		<?php
 																		}
 																	}
