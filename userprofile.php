@@ -14,6 +14,7 @@ include 'dbh.php';
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 include 'top.php';
+include 'left-nav.php';
 
 
 
@@ -36,7 +37,7 @@ $admin=$row['admin'];
 
 ?>
 
-   	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+   	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark"  style="height: 50px">
 	  	<a class="navbar-brand" href="#">CAS</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
@@ -78,10 +79,10 @@ $admin=$row['admin'];
 	  	</div>
 	</nav>
 	
-  	
-   	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-10">
+	<div class="container">
+    <div class="row justify-content-center">    		
+    <div class="col offset-md-2">
+
 				
 				<?php
 
@@ -714,8 +715,11 @@ $admin=$row['admin'];
 			    </div>
 			</div>
 		</div>
-	</div>
+	
 	<br>
+</div>
+</div>
+
 	
 </body>
 </html>

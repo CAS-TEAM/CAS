@@ -15,6 +15,7 @@ else
 
 include 'dbh.php';
 include 'top.php';
+include 'left-nav.php';
 
 $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);//the one who is viewing the form
 
@@ -52,7 +53,7 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
 ?>
 
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="height: 50px">
 	  	<a class="navbar-brand" href="#">CAS</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
@@ -95,7 +96,11 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 	</nav>
    
   	
-    <div class="container parta">
+    <div class="container">
+    <div class="row">    		
+    <div class="col offset-md-2 parta">
+
+    	
     	<header>
     		<h2 class="heading"><b>'Part A: GENERAL INFORMATION'</b></h2>
     		<?php 
@@ -777,6 +782,8 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
 	</form>
 	</div>
+	</div>
+	</div>
 
 	<br>
 
@@ -922,6 +929,7 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
 	?>
 
+</div>
 </body>
 </html>
 

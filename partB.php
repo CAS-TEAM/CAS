@@ -15,6 +15,7 @@ else
 
 include 'dbh.php';
 include 'top.php';
+include 'left-nav.php';
 
 $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
@@ -134,7 +135,7 @@ $cat4_pivtotal_hod_a=$rowzzz['cat4_pivtotal_hod_a'];
 $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 
 ?>
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark"  style="height: 50px">
 	  	<a class="navbar-brand" href="#">CAS</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
@@ -178,7 +179,9 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
     
     
 
-	<div class="container partb">
+	<div class="container">
+    <div class="row">       
+    <div class="col offset-md-2 parta">
 
 		<header>
 			<h2 class="heading"><b>'Part B'</b></h2>
@@ -3849,6 +3852,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 
 		
 	</div>
+</div>
+</div>
 
 	<?php
 

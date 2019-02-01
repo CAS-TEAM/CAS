@@ -4,10 +4,11 @@ session_start();
 
 include 'dbh.php';
 include 'top.php';
+include 'left-nav.php';
 
 ?>
 
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark"  style="height: 50px">
 	  	<a class="navbar-brand" href="#">CAS</a>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
@@ -34,7 +35,10 @@ include 'top.php';
 	  	</div>
 	</nav>
 
-	<div class="container parta"><br>
+	 <div class="container">
+    <div class="row">       
+    <div class="col offset-md-2 parta">
+
     	
     	<header class="heading"><b>'Guidelines to Fill Application Form'</b></header>
     	<hr style="border: 0.5px solid #c8c8c8"><br>
@@ -342,6 +346,8 @@ include 'top.php';
 			
 
     </div>
+</div>
+</div>
 
 
 
