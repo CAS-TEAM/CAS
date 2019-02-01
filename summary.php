@@ -589,7 +589,7 @@ $previousyear=$currentyear-1;
 				<!-- <button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
 				</button> -->
-				
+
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
@@ -611,7 +611,7 @@ $previousyear=$currentyear-1;
 
 		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EVALUATION BY THE COMMITTEE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-		<form class="summary_comm_form" action="" method="POST">
+		<!-- <form class="summary_comm_form" action="" method="POST"> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -647,17 +647,17 @@ $previousyear=$currentyear-1;
 								<td>Part A</td>
 								<td>
 									<div class="col-md-12">
-										<input type="text" name='correct-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="number" name='correct-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="text" name='exaggerated-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="number" name='exaggerated-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
 									<div class="col-md-12">
-										<input type="text" name='remarks-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
+										<input type="number" name='remarks-parta' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 									</div>
 								</td>
 								<td>
@@ -668,7 +668,7 @@ $previousyear=$currentyear-1;
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" name='current_academicA' class="form-control" style="width: 100%;margin: 0;padding: 0" />
 										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<div class="col-md-4 number-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
 										</div>
 									</div><br>
@@ -894,9 +894,9 @@ $previousyear=$currentyear-1;
 		<div class="row form-inline justify-content-center">
 
 			<div class="col">
-				<button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+				<!-- <button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
-				</button>
+				</button> -->
 
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
@@ -904,7 +904,7 @@ $previousyear=$currentyear-1;
 			</div>
 		</div><br>
 
-		</form>
+		<!-- </form> -->
 
 		<?php
 

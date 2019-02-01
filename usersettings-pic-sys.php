@@ -32,5 +32,5 @@ if(move_uploaded_file($_FILES['pic']['tmp_name'],$dest))
 }
 else
 {
-	header("LOCATION: uploadpic.php?results=ierror");
+	header("LOCATION: usersettings.php?result=ierror");
 }

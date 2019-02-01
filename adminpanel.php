@@ -8,11 +8,59 @@ include 'top.php';
 
 date_default_timezone_set('Asia/Kolkata');
 
+
+$userId=mysqli_real_escape_string($conn,$_SESSION['id']);
+
+$sqlp="SELECT profilePicLocation FROM faculty_table WHERE id='$userId'";
+$resultp=mysqli_query($conn,$sqlp);
+
+$rowp=mysqli_fetch_assoc($resultp);
+
+$profilePicLocation=$rowp['profilePicLocation'];
+
 ?>
 
-	<nav class="navbar bg-dark">
-		<p class="navbar-brand" style="color:white;width:100%;text-align:center">CAS</p>
-	</nav><br>
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+	  	<a class="navbar-brand" href="#">CAS</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    	<span class="navbar-toggler-icon"></span>
+	  	</button>
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      	<!-- <li class="nav-item active">
+		        	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+		      	</li> -->
+		      	<?php
+		      	if(!isset($_SESSION['id']))
+		      	{
+			      	?>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="index.php">Sign Up | Sign In</a>
+			      	</li>
+			      	<?php
+			    }			      	
+			    else
+			    {
+			    	?>			    	
+			      	<li class="nav-item dropdown">
+				        <img class="nav-link dropdown-toggle" src="<?php echo $profilePicLocation; ?>" width="50px" height="50px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto;object-fit: cover;cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
+				        <!-- </a> -->
+				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
+				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto;"><span class="my-auto ml-2">My Profile</span></a>
+				          	<a class="dropdown-item" href="usersettings.php"><img src="settings.png" style="width:30px;height:auto"><span class="my-auto ml-2">Settings</span></a>
+				          	<div class="dropdown-divider"></div>
+				          	<a class="dropdown-item" href="logout.php">Log out</a>
+				        </div>
+			      	</li>
+			      	<?php
+		      	}
+		      	?>
+		    </ul>
+	  	</div>
+	</nav>
 
 	<div class="container">
 		
@@ -25,7 +73,7 @@ date_default_timezone_set('Asia/Kolkata');
 				        </div>
 				        <div class="col-md-6 text-right">
 				        	<form class="" method="POST" action="createuser.php">
-							 	<button type="submit" class="btn btn-primary custom-button-width .navbar-right" style="font-size: 17px">Create User</button>
+							 	<button type="submit" class="btn btn-info custom-button-width .navbar-right" style="font-size: 17px">Create User</button>
 					    	</form>
 						</div>
 				  	</div>

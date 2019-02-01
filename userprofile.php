@@ -15,6 +15,25 @@ $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 include 'top.php';
 
+
+
+$sql="SELECT email, faculty_name, date_of_joining, department, profilePicLocation, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
+$result=mysqli_query($conn,$sql);
+
+$row=mysqli_fetch_assoc($result);
+
+$email=$row['email'];
+$faculty_name=$row['faculty_name'];
+$date_of_joining=$row['date_of_joining'];
+$department=$row['department'];
+$profilePicLocation=$row['profilePicLocation'];
+$hod=$row['hod'];
+$committee=$row['committee'];
+$principal=$row['principal'];
+$admin=$row['admin'];
+
+				
+
 ?>
 
    	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
@@ -41,12 +60,12 @@ include 'top.php';
 			    {
 			    	?>			    	
 			      	<li class="nav-item dropdown">
-				        <img class="nav-link dropdown-toggle" src="defaults/default_userprofile_pic.png" width="50px" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <img class="nav-link dropdown-toggle" src="<?php echo $profilePicLocation; ?>" width="50px" height="50px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto;object-fit: cover;cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
 				        <!-- </a> -->
 				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
-				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto"><span class="my-auto ml-2">My Profile</span></a>
+				          	<a class="dropdown-item" href="userprofile.php"><img src="defaults/default_userprofile_pic.png" style="width:30px;height:auto;"><span class="my-auto ml-2">My Profile</span></a>
 				          	<a class="dropdown-item" href="usersettings.php"><img src="settings.png" style="width:30px;height:auto"><span class="my-auto ml-2">Settings</span></a>
 				          	<div class="dropdown-divider"></div>
 				          	<a class="dropdown-item" href="logout.php">Log out</a>
@@ -66,20 +85,20 @@ include 'top.php';
 				
 				<?php
 
-				$sql="SELECT email, faculty_name, date_of_joining, department, profilePicLocation, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
-				$result=mysqli_query($conn,$sql);
+				// $sql="SELECT email, faculty_name, date_of_joining, department, profilePicLocation, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
+				// $result=mysqli_query($conn,$sql);
 
-				$row=mysqli_fetch_assoc($result);
+				// $row=mysqli_fetch_assoc($result);
 
-				$email=$row['email'];
-				$faculty_name=$row['faculty_name'];
-				$date_of_joining=$row['date_of_joining'];
-				$department=$row['department'];
-				$profilePicLocation=$row['profilePicLocation'];
-				$hod=$row['hod'];
-				$committee=$row['committee'];
-				$principal=$row['principal'];
-				$admin=$row['admin'];
+				// $email=$row['email'];
+				// $faculty_name=$row['faculty_name'];
+				// $date_of_joining=$row['date_of_joining'];
+				// $department=$row['department'];
+				// $profilePicLocation=$row['profilePicLocation'];
+				// $hod=$row['hod'];
+				// $committee=$row['committee'];
+				// $principal=$row['principal'];
+				// $admin=$row['admin'];
 
 				?>
 
@@ -102,7 +121,7 @@ include 'top.php';
 			        			if($admin==1)
 			        			{
 			        				?>
-			        				<a class="btn btn-primary" href="adminpanel.php" style="display:block;margin:0 auto">Access Admin Panel</a>
+			        				<a class="btn btn-primary my-2" href="adminpanel.php" style="display:block;margin:0 auto">Access Admin Panel</a>
 			        				<?php
 			        			}
 			        			?>
@@ -239,8 +258,6 @@ include 'top.php';
 									  		$currentyear=date("Y");
 									  		$previousyear=$currentyear-1;
 
-
-
 									    		if($_SESSION['id']==$userId)
 												{
 
@@ -358,6 +375,37 @@ include 'top.php';
 													  	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormMenuUnderHOD<?php echo $facultyId1; ?>" aria-expanded="false" aria-controls="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
 													    VIEW FORMS
 													  	</button>
+													  	<?php
+
+													  	$currentyear=date("Y");
+												  		$previousyear=$currentyear-1;
+
+											    		if($_SESSION['id']==$userId)
+														{
+
+															$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+															$resultsfr=mysqli_query($conn,$sqlsfr);
+
+															if(mysqli_num_rows($resultsfr)!=0)
+															{	
+																$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
+																$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+																if(mysqli_num_rows($resultsfrp)!=0)
+																{	
+
+																?>
+																<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																	<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+																</div>
+																<br>
+																<?php
+																}
+															}
+
+														}
+
+													  	?>
 													</p>
 												  	<div class="collapse" id="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
 													  	<div class="card card-body">
@@ -377,7 +425,7 @@ include 'top.php';
 													    		</div>
 													    		<?php
 
-												    		
+												    			/*
 																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
 																$resultsfr=mysqli_query($conn,$sqlsfr);
 
@@ -389,6 +437,7 @@ include 'top.php';
 																	</div>
 																	<?php
 																}
+																*/
 
 												    			?>
 													    	</div>
@@ -403,7 +452,7 @@ include 'top.php';
 													    		</div>
 													    		<?php
 
-												    		
+												    			/*
 																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
 																$resultsfr=mysqli_query($conn,$sqlsfr);
 
@@ -415,6 +464,7 @@ include 'top.php';
 																	</div>
 																	<?php
 																}
+																*/
 
 												    			?>
 													    	</div>
@@ -528,6 +578,37 @@ include 'top.php';
 															  	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormMenuUnderHOD<?php echo $facultyId1; ?>" aria-expanded="false" aria-controls="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
 															    VIEW FORMS
 															  	</button>
+															  	<?php
+
+															  	$currentyear=date("Y");
+														  		$previousyear=$currentyear-1;
+
+													    		if($_SESSION['id']==$userId)
+																{
+
+																	$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+																	$resultsfr=mysqli_query($conn,$sqlsfr);
+
+																	if(mysqli_num_rows($resultsfr)!=0)
+																	{	
+																		$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
+																		$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+																		if(mysqli_num_rows($resultsfrp)!=0)
+																		{	
+
+																		?>
+																		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																			<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+																		</div>
+																		<br>
+																		<?php
+																		}
+																	}
+
+																}
+
+															  	?>
 															</p>
 														  	<div class="collapse" id="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
 															  	<div class="card card-body">
@@ -547,6 +628,7 @@ include 'top.php';
 															    		</div>
 															    		<?php
 
+															    		/*
 																		$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
 																		$resultsfr=mysqli_query($conn,$sqlsfr);
 
@@ -558,6 +640,7 @@ include 'top.php';
 																			</div>
 																			<?php
 																		}
+																		*/
 
 														    			?>
 															    	</div>
@@ -572,7 +655,7 @@ include 'top.php';
 															    		</div>
 															    		<?php
 
-												    		
+												    					/*
 																		$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
 																		$resultsfr=mysqli_query($conn,$sqlsfr);
 
@@ -584,6 +667,7 @@ include 'top.php';
 																			</div>
 																			<?php
 																		}
+																		*/
 
 														    			?>
 															    	</div>
