@@ -2700,35 +2700,200 @@ $(document).ready(function(){
 jQuery(function ($) {
 
     $(".sidebar-dropdown > a").click(function() {
-  $(".sidebar-submenu").slideUp(200);
-  if (
-    $(this)
-      .parent()
-      .hasClass("active")
-  ) {
-    $(".sidebar-dropdown").removeClass("active");
-    $(this)
-      .parent()
-      .removeClass("active");
-  } else {
-    $(".sidebar-dropdown").removeClass("active");
-    $(this)
-      .next(".sidebar-submenu")
-      .slideDown(200);
-    $(this)
-      .parent()
-      .addClass("active");
-  }
+  		$(".sidebar-submenu").slideUp(200);
+  		if(
+    		$(this)
+      		.parent()
+      		.hasClass("active")
+  		)
+  		{
+   			$(".sidebar-dropdown").removeClass("active");
+    		$(this)
+      		.parent()
+      		.removeClass("active");
+  		} else {
+    	$(".sidebar-dropdown").removeClass("active");
+    	$(this)
+      	.next(".sidebar-submenu")
+      	.slideDown(200);
+    	$(this)
+      	.parent()
+      	.addClass("active");
+  	}
 });
 
 $("#close-sidebar").click(function() {
-  $(".page-wrapper").removeClass("toggled");
+  	$(".page-wrapper").removeClass("toggled");
 });
 $("#show-sidebar").click(function() {
-  $(".page-wrapper").addClass("toggled");
+  	$(".page-wrapper").addClass("toggled");
 });
 
 
    
    
 });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SUMMARY COMMITTEE PART AUTOMATIC PERCENT CALCULATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+$(document).ready(function(){
+
+	var pa=0;
+	var pbc1=0;
+	var pbc2=0;
+	var pbc3=0;
+	var pbc4=0;
+
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part A
+	$('#current_academicA').click(function() {
+        pa+=1;
+    });
+
+    $('body').click(function(e) {
+	    var t = $(e.target);
+	    if(t.is('#current_academicA')==false) {	    	
+	    	if(document.getElementById('current_academicA').value!='')
+	    	{
+	    		document.getElementById('pi_academicA').value=(document.getElementById('current_academicA').value/50*100).toFixed(2);
+		       	// pa--;
+		    }
+	    } 
+	});
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 1
+	$('#current_academicBI').click(function() {
+        pbc1+=1;
+    });
+
+    $('body').click(function(e) {
+	    var t = $(e.target);
+	    if(t.is('#current_academicBI')==false) {	    	
+	    	if(document.getElementById('current_academicBI').value!='')
+	    	{
+	    		document.getElementById('pi_academicBI').value=(document.getElementById('current_academicBI').value/100*100).toFixed(2);
+		       	// pbc1--;
+		    }
+	    } 
+	});
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 2
+	$('#current_academicBII').click(function() {
+        pbc2+=1;
+    });
+
+    $('body').click(function(e) {
+	    var t = $(e.target);
+	    if(t.is('#current_academicBII')==false) {	    	
+	    	if(document.getElementById('current_academicBII').value!='')
+	    	{
+	    		document.getElementById('pi_academicBII').value=(document.getElementById('current_academicBII').value/100*100).toFixed(2);
+		       	// pbc2--;
+		    }
+	    } 
+	});
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 3
+	$('#current_academicBIII').click(function() {
+        pbc3+=1;
+    });
+
+    $('body').click(function(e) {
+	    var t = $(e.target);
+	    if(t.is('#current_academicBIII')==false) {	    	
+	    	if(document.getElementById('current_academicBIII').value!='')
+	    	{
+	    		document.getElementById('pi_academicBIII').value=(document.getElementById('current_academicBIII').value/175*100).toFixed(2);
+		       	// pbc3--;
+		    }
+	    } 
+	});
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 4
+	$('#current_academicBIV').click(function() {
+        pbc4+=1;
+    });
+
+    $('body').click(function(e) {
+	    var t = $(e.target);
+	    if(t.is('#current_academicBIV')==false) {	    	
+	    	if(document.getElementById('current_academicBIV').value!='')
+	    	{
+	    		document.getElementById('pi_academicBIV').value=(document.getElementById('current_academicBIV').value/75*100).toFixed(2);
+		       	// pbc4--;
+		    }
+	    } 
+	});
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~```---> Average
+
+	$('#last_academicBIV_avg_comm').click(function() {
+		if( pa>0 && pbc1>0 && pbc2>0 && pbc3>0 && pbc4>0)
+		{			
+			document.getElementById('last_academicBIV_avg_comm').value = (parseInt(document.getElementById('pi_academicA').value) + parseInt(document.getElementById('pi_academicBI').value) + parseInt(document.getElementById('pi_academicBII').value) + parseInt(document.getElementById('pi_academicBIII').value) + parseInt(document.getElementById('pi_academicBIV').value)).toFixed(2);
+			document.getElementById('pi_academicBIV_avg_comm').value=(document.getElementById('last_academicBIV_avg_comm').value/5).toFixed(2);
+		}
+        
+    });
+
+
+});
+
+
+function getSummaryData(){
+
+	var yr=document.getElementById('year').value;
+	var userId=document.getElementById('userId').value;
+
+	// alert("yr="+yr);
+
+	$.ajax
+	({
+		type: 'POST',
+		url: 'get-summary-data.php',
+		data:
+		{
+			year:yr,
+			userId:userId
+		},
+		//dataType: 'text',  // what to expect back from the PHP script, if anything               
+		success: function (response) 
+		{
+			// alert(response);
+
+			if(response.trim()=="not begun")
+			{           
+				// $('#myModal').modal('show');
+				document.getElementById("alreadybegun").value=0;
+			}
+			else
+			{
+				document.getElementById("alreadybegun").value=1;
+
+				var result = $.parseJSON(response);
+				for(var i=0;i<result.length;i++)
+				{
+					var res=result[i];
+					$.each(res, function(k, v) {
+					    //display the key and value pair
+					    // alert(k+","+v);
+					    document.getElementById(k).value=v;
+					    $("#"+k).prop("disabled", true);					    
+					    
+					});
+				}
+
+				// $(".part-a-plus-btn").prop("onclick", false);
+				$("#summary-comm-submit-form").remove();
+			}
+		},                
+		error: function(xhr, status, error) {
+			alert(xhr.responseText);
+		}              
+	});
+	
+	return false;
+}

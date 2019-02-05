@@ -56,6 +56,13 @@ $committee=$rowp['committee'];
 			<!-- sidebar-header  -->
 			<!--  -->
 			<!-- sidebar-search  -->
+			<?php
+
+			$currentyear=date("Y");
+			$previousyear=$currentyear-1;
+
+			?>
+
 			<div class="sidebar-menu">
 				<ul>
 					
@@ -66,11 +73,21 @@ $committee=$rowp['committee'];
 						</a>
 					</li>
 
-					<li class="sidebar-dropdown">
-						<a href="partA.php">
+					<li class="sidebar-dropdown dropdown-arrow">
+						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
 							<span style="font-size: 15px">PartA form</span>
 						</a>
+						<div class="sidebar-submenu">
+							<ul>
+								<li>
+									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear; ?></a>
+								</li>
+								<li>
+									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear; ?></a>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
@@ -80,16 +97,10 @@ $committee=$rowp['committee'];
 						<div class="sidebar-submenu">
 							<ul>
 								<li>
-									<a href="partB.php">Category I</a>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear; ?></a>
 								</li>
 								<li>
-									<a href="#">Category II</a>
-								</li>
-								<li>
-									<a href="#">Category III</a>
-								</li>
-								<li>
-									<a href="#">Category IV</a>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear; ?></a>
 								</li>
 							</ul>
 						</div>
@@ -125,7 +136,7 @@ $committee=$rowp['committee'];
 		<!-- sidebar-content  -->
 		<div class="sidebar-footer">
 			<a>
-				<p style="font-size: 15px">Copyright  <i class="far fa-copyright"></i>  2019  CAS</p>
+				<p style="font-size: 15px">Copyright  <i class="far fa-copyright"></i>  <?php echo $currentyear; ?>  CAS</p>
 			</a>
 		</div>
 	</nav>
