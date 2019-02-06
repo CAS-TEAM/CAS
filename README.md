@@ -11,3 +11,5 @@ Now create a database inside your phpmyadmin panel called "cas_db". Once this is
 
 <b>The website is now ready!</b>
 
+<h3>Faculty Member POV</h3>
+<iframe src="https://giphy.com/embed/lfd4BwP1d3MZMBuxYC" width="480" height="228" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
