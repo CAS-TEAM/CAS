@@ -14,6 +14,7 @@ include 'dbh.php';
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 include 'top.php';
+include 'left-nav.php';
 
 ?>
 
@@ -59,10 +60,9 @@ include 'top.php';
 	  	</div>
 	</nav>
 
-
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-6 col-sm-12">
+    	<div class="row justify-content-center">       
+    		<div class="col-md-6 col-sm-12 parta" style="margin-top: 5px">
 				
 				<?php
 
@@ -93,23 +93,23 @@ include 'top.php';
  								<form action="usersettings-sys.php" method="POST">
 
 		 							<div class="form-inline">
-									  	<label for="email" class="mr-sm-3">Email:</label>
-									  	<input type="email" class="form-control d-inline mb-3" id="email" name="email" style="width: 280px;margin-left: 50px" value="<?php echo $email; ?>">
+									  	<label for="email" class="col-form-label mr-sm-3">Email:</label>
+									  	<input type="email" class="form-control d-inline mb-3" id="email" name="email" style="width: 280px;margin-left: 60px" value="<?php echo $email; ?>">
 									</div>
 
 									<div class="form-inline">
 									  	<label for="faculty_name" class="mr-sm-3">Name:</label>
-									  	<input class="form-control partalabel mb-3" type="text" name="faculty_name" style="width: 280px;margin-left: 50px" id="faculty_name" value="<?php echo $faculty_name; ?>"/>
+									  	<input class="form-control partalabel mb-3" type="text" name="faculty_name" style="width: 280px;margin-left: 58px" id="faculty_name" value="<?php echo $faculty_name; ?>"/>
 									</div> 
 
 									<div class="form-inline">
 									  	<label for="department" class="mr-sm-3">Department:</label>
-									  	<input class="form-control partalabel mb-3" type="text" name="department" style="width: 280px;margin-left: 10px" id="department" value="<?php echo $department; ?>"/>
+									  	<input class="form-control partalabel mb-3" type="text" name="department" style="width: 280px;margin-left: 20px" id="department" value="<?php echo $department; ?>"/>
 									</div> 
 									
 									<div class="form-inline">
 									  	<label for="date_of_joining" class="mr-sm-3">Date of Joining:</label>
-									  	<input class="form-control partalabel mb-3" type="date" name="date_of_joining" style="width: 215px" id="date_of_joining" value="<?php echo $date_of_joining; ?>"/>
+									  	<input class="form-control partalabel mb-3" type="date" name="date_of_joining" style="width: 280px;margin-left: 1px" id="date_of_joining" value="<?php echo $date_of_joining; ?>"/>
 									</div><br> 
 								  	
 								  	<div class="row justify-content-center">
@@ -121,8 +121,7 @@ include 'top.php';
  							</div>
  						</div>
  						
- 						<hr style="border: 0.3px solid #c8c8c8">
-
+						<hr style="border: 0.5px solid #c8c8c8">
 			        	<div class="row justify-content-center">
  							<div class="col-12">
  								<h4 class="text-center" style="color: #44a0b3">Change Password</h4><br>
