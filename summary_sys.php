@@ -70,13 +70,13 @@ if(isset($_SESSION['id']))
 			echo '<br>'.$ecs[$l].','.$dest;
 
 			if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql3="INSERT INTO summary_hasr (formId, ecs, papers) VALUES ('$formId','$ecs[$l]', '$dest')";
+				$sql3="INSERT INTO summary_hasr (formId, facultyId, ecs, papers) VALUES ('$formId','$facultyId','$ecs[$l]', '$dest')";
 				$result3=mysqli_query($conn,$sql3);		
 			}			
 		}
 		else
 		{
-			$sql3="INSERT INTO summary_hasr (formId, ecs, papers) VALUES ('$formId','$ecs[$l]', 'NAN')";
+			$sql3="INSERT INTO summary_hasr (formId, facultyId, ecs, papers) VALUES ('$formId','$facultyId','$ecs[$l]', 'NAN')";
 			$result3=mysqli_query($conn,$sql3);	
 		}
 	}

@@ -149,7 +149,7 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 			?>
     	</header>
     	
-    	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form">    	
+    	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form" enctype="multipart/form-data">    	
     	<hr style="border: 0.5px solid #c8c8c8"><br>
     	<input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
     	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
@@ -566,6 +566,36 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 				    		<input type="text" class="dynamic-four" id="agency1" name="agency[]" value="" placeholder="Organising Agency">
 				  		</div>
 					</div>
+					
+					<!-- <div class="nopadding">
+						<div class="form-group">
+				    		<input type="file" class="dynamic-four" id="file1" name="file[]" value="" placeholder="">
+				  		</div>
+					</div> -->
+
+					<div class="nopadding">
+						<div class="form-group dynamic-four">
+							<div class="filepart">
+								<div class="row justify-content-center">
+									<div class="col-3 offset-md-3" style="padding:0;margin:0">
+										<div class="file-upload mx-auto" style="width:26px">
+										    <label for="file1" style="cursor:pointer">
+										        <img src="https://img.icons8.com/material/26/000000/attach.png">
+										    </label>
+										    <input type="file" class="dynamic-four" id="file1" name="file[]" value="" placeholder="">
+										    <input type="hidden" name="filelocation[]" id="filelocation1" value="">
+										</div>
+									</div>
+									<div class="col-md-3" style="padding:0;margin:0">
+										<a href="viewfile.php?location=none" id="viewfile1" target="_blank">
+											<img src="https://img.icons8.com/ios/24/000000/document.png">
+										</a>										
+									</div>
+								</div>
+							</div>										    		
+				  		</div>
+					</div>
+
 				  	<div class="input-group-btn">
 				        <img src="https://img.icons8.com/color/48/000000/plus.png" class="part-a-plus-btn" onclick="parta_dynamic_form();" style="cursor:pointer"/>
 				    </div>
@@ -798,7 +828,7 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 	    var divtest = document.createElement("div");
 		divtest.setAttribute("class", "form-group removeclass"+room);
 		var rdiv = 'removeclass'+room;
-	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
+	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="nopadding"><div class="form-group dynamic-four"><div class="filepart"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="file'+room+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="file'+room+'" name="file[]" value="" placeholder=""><input type="hidden" name="filelocation[]" id="filelocation'+room+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="viewfile'+room+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"></div></div><div class="clear"></div></div>';
 	    
 	    // objTo.appendChild(divtest);
 	    $("#parta_dynamic_form").prepend(divtest);

@@ -191,6 +191,7 @@ else
 			$data_doc[]=array('course'=>$row1['course']);
 			$data_doc[]=array('days'=>$row1['days']);
 			$data_doc[]=array('agency'=>$row1['agency']);
+			$data_doc[]=array('file'=>$row1['file']);
 
 			$data[]=array('parta_dynamic_form'=>$data_doc);
 

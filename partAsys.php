@@ -45,6 +45,7 @@ $srno=$_POST['srno'];
 $course=$_POST['course'];
 $days=$_POST['days'];
 $agency=$_POST['agency'];
+$filelocation=$_POST['filelocation'];
 
 // echo $institute.','.$ugpg.','.$customRadioInline1.','.$nameofdegree;
 $echo=null;
@@ -59,16 +60,51 @@ if($alreadybegun==1)
 	$row=mysqli_fetch_assoc($result3);
 	$formId=$row['id'];
 
-	for($i=0;$i<sizeof($srno);$i++)
-	{
+	$sqlx="DELETE FROM part_a_doc WHERE formId='$formId'";
+	$resultx=mysqli_query($conn,$sqlx);
 
-		$sql2="SELECT id FROM part_a_doc WHERE formId='$formId' AND srno='$srno[$i]'";
-		$result2=mysqli_query($conn,$sql2);
-		if(mysqli_num_rows($result2)==0)
+	for($i=0;$i<sizeof($srno);$i++)
+	{	
+
+		// $sql2="SELECT id FROM part_a_doc WHERE formId='$formId' AND srno='$srno[$i]'";
+		// $result2=mysqli_query($conn,$sql2);
+		// if(mysqli_num_rows($result2)==0)
+		// {
+
+		// echo 'herer';
+		// echo $_FILES['file']['tmp_name'][$i];
+
+		$tmpFilePath = $_FILES['file']['tmp_name'][$i];
+		// echo "temp->".$tmpFilePath;
+		if ($tmpFilePath != "")
 		{
-			$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]')";
-			$result1=mysqli_query($conn,$sql1);
+		    //Setup our new file path
+		    $dest = "users/".$email. "/".$_FILES['file']['name'][$i];
+
+		    if(move_uploaded_file($tmpFilePath, $dest)) {
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$dest')";
+				$result1=mysqli_query($conn,$sql1);
+			}	
+
 		}
+		else
+		{
+			if($filelocation[$i]!="")
+			{
+				//that means if file was previously attached but now form has been edited and user hasnt manually attached it
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$filelocation[$i]')";
+				$result1=mysqli_query($conn,$sql1);
+			}
+			else
+			{
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','NAN')";
+				$result1=mysqli_query($conn,$sql1);
+			}
+			
+		}		
+			
+		// }
+		
 		
 	} 
 
@@ -82,8 +118,27 @@ else
 
 	for($i=0;$i<sizeof($srno);$i++)
 	{
-		$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]')";
-		$result1=mysqli_query($conn,$sql1);
+		$tmpFilePath = $_FILES['file']['tmp_name'][$i];
+		// echo "temp->".$tmpFilePath;
+		if ($tmpFilePath != "")
+		{
+		    //Setup our new file path
+		    $dest = "users/".$email. "/".$_FILES['file']['name'][$i];
+
+		    if(move_uploaded_file($tmpFilePath, $dest)) {
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$dest')";
+				$result1=mysqli_query($conn,$sql1);
+			}	
+
+		}
+		else
+		{
+			$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','NAN')";
+			$result1=mysqli_query($conn,$sql1);
+		}		
+
+		// $sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]')";
+		// $result1=mysqli_query($conn,$sql1);
 	}
 }
 
