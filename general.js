@@ -187,7 +187,7 @@ function getPartAData(){
 							    	document.getElementById('agency'+room).value=agency;
 							    	// document.getElementById('file'+room).value=file;
 							    	document.getElementById('viewfile'+room).href="viewfile.php?location="+file;
-							    	document.getElementById('filelocation'+room).href=file;
+							    	document.getElementById('filelocation'+room).value=file;
 
 							    }
 							    
