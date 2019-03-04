@@ -76,7 +76,7 @@ $committee=$rowp['committee'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px">PartA form</span>
+							<span style="font-size: 15px;cursor:pointer">PartA form</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
@@ -92,7 +92,7 @@ $committee=$rowp['committee'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px">PartB form</span>
+							<span style="font-size: 15px;cursor:pointer">PartB form</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>

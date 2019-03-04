@@ -86,8 +86,8 @@ $(document).ready(function(){
 		$("#part-a-form input").prop("disabled", false);//disablig all inputs
 		// $(".part-a-plus-btn").prop("onclick", parta_dynamic_form()).off("click");//diabling on-click on dynamic form plus button
 		//enable on click for the dynamic form and disable edit button
-		$(".part-a-minus-button").prop("onclick", true);
-		$(".part-a-plus-btn").prop("onclick", true);
+		// $(".part-a-minus-button").prop("onclick", true);
+		// $(".part-a-plus-btn").prop("onclick", true);
 
 	});
 
@@ -146,9 +146,10 @@ function getPartAData(){
 					    	var course=JSON.stringify(v[1]['course']).replace(/['"]+/g, '');
 					    	var days=JSON.stringify(v[2]['days']).replace(/['"]+/g, '');
 					    	var agency=JSON.stringify(v[3]['agency']).replace(/['"]+/g, '');
+					    	var file=JSON.stringify(v[4]['file']).replace(/['"]+/g, '');
 
 					    	// alert(srno+","+course+","+days+","+agency);
-					    	// alert(srno+","+course);
+					    	// alert(file);
 					    	if(srno!=0)
 					    	{
 					    		room++;
@@ -159,7 +160,7 @@ function getPartAData(){
 							    
 							    if(room!=1)
 							    {
-							    	divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no" disabled></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course" disabled></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)" disabled></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency" disabled></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
+							    	divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no" disabled></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course" disabled></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)" disabled></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency" disabled></div></div><div class="nopadding"><div class="form-group dynamic-four"><div class="filepart"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="file'+room+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="file'+room+'" name="file[]" value="" placeholder=""><input type="hidden" name="filelocation[]" id="filelocation'+room+'" value="'+file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="viewfile'+room+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"> </div></div><div class="clear"></div></div>';
 							    	$("#parta_dynamic_form").prepend(divtest);
 
 							    	// $(".part-a-minus-button").prop("onclick", false);//disabling the minus button onclicks
@@ -172,6 +173,8 @@ function getPartAData(){
 							    	document.getElementById('course'+room).value=course;
 							    	document.getElementById('days'+room).value=days;
 							    	document.getElementById('agency'+room).value=agency;
+							    	document.getElementById('viewfile'+room).href="viewfile.php?location="+file;
+
 
 
 							    }
@@ -182,6 +185,9 @@ function getPartAData(){
 							    	document.getElementById('course'+room).value=course;
 							    	document.getElementById('days'+room).value=days;
 							    	document.getElementById('agency'+room).value=agency;
+							    	// document.getElementById('file'+room).value=file;
+							    	document.getElementById('viewfile'+room).href="viewfile.php?location="+file;
+							    	document.getElementById('filelocation'+room).href=file;
 
 							    }
 							    
@@ -2746,98 +2752,102 @@ $(document).ready(function(){
 	var pbc2=0;
 	var pbc3=0;
 	var pbc4=0;
+	// alert(window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1));
 
+	if(window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1)=="summary.php")
+	{
 
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part A
-	$('#current_academicA').click(function() {
-        pa+=1;
-    });
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part A
+		$('#current_academicA').click(function() {
+	        pa+=1;
+	    });
 
-    $('body').click(function(e) {
-	    var t = $(e.target);
-	    if(t.is('#current_academicA')==false) {	    	
-	    	if(document.getElementById('current_academicA').value!='')
-	    	{
-	    		document.getElementById('pi_academicA').value=(document.getElementById('current_academicA').value/50*100).toFixed(2);
-		       	// pa--;
-		    }
-	    } 
-	});
+	    $('body').click(function(e) {
+		    var t = $(e.target);
+		    if(t.is('#current_academicA')==false) {	    	
+		    	if(document.getElementById('current_academicA').value!='')
+		    	{
+		    		document.getElementById('pi_academicA').value=(document.getElementById('current_academicA').value/50*100).toFixed(2);
+			       	// pa--;
+			    }
+		    } 
+		});
 
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 1
-	$('#current_academicBI').click(function() {
-        pbc1+=1;
-    });
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 1
+		$('#current_academicBI').click(function() {
+	        pbc1+=1;
+	    });
 
-    $('body').click(function(e) {
-	    var t = $(e.target);
-	    if(t.is('#current_academicBI')==false) {	    	
-	    	if(document.getElementById('current_academicBI').value!='')
-	    	{
-	    		document.getElementById('pi_academicBI').value=(document.getElementById('current_academicBI').value/100*100).toFixed(2);
-		       	// pbc1--;
-		    }
-	    } 
-	});
+	    $('body').click(function(e) {
+		    var t = $(e.target);
+		    if(t.is('#current_academicBI')==false) {	    	
+		    	if(document.getElementById('current_academicBI').value!='')
+		    	{
+		    		document.getElementById('pi_academicBI').value=(document.getElementById('current_academicBI').value/100*100).toFixed(2);
+			       	// pbc1--;
+			    }
+		    } 
+		});
 
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 2
-	$('#current_academicBII').click(function() {
-        pbc2+=1;
-    });
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 2
+		$('#current_academicBII').click(function() {
+	        pbc2+=1;
+	    });
 
-    $('body').click(function(e) {
-	    var t = $(e.target);
-	    if(t.is('#current_academicBII')==false) {	    	
-	    	if(document.getElementById('current_academicBII').value!='')
-	    	{
-	    		document.getElementById('pi_academicBII').value=(document.getElementById('current_academicBII').value/100*100).toFixed(2);
-		       	// pbc2--;
-		    }
-	    } 
-	});
+	    $('body').click(function(e) {
+		    var t = $(e.target);
+		    if(t.is('#current_academicBII')==false) {	    	
+		    	if(document.getElementById('current_academicBII').value!='')
+		    	{
+		    		document.getElementById('pi_academicBII').value=(document.getElementById('current_academicBII').value/100*100).toFixed(2);
+			       	// pbc2--;
+			    }
+		    } 
+		});
 
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 3
-	$('#current_academicBIII').click(function() {
-        pbc3+=1;
-    });
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 3
+		$('#current_academicBIII').click(function() {
+	        pbc3+=1;
+	    });
 
-    $('body').click(function(e) {
-	    var t = $(e.target);
-	    if(t.is('#current_academicBIII')==false) {	    	
-	    	if(document.getElementById('current_academicBIII').value!='')
-	    	{
-	    		document.getElementById('pi_academicBIII').value=(document.getElementById('current_academicBIII').value/175*100).toFixed(2);
-		       	// pbc3--;
-		    }
-	    } 
-	});
+	    $('body').click(function(e) {
+		    var t = $(e.target);
+		    if(t.is('#current_academicBIII')==false) {	    	
+		    	if(document.getElementById('current_academicBIII').value!='')
+		    	{
+		    		document.getElementById('pi_academicBIII').value=(document.getElementById('current_academicBIII').value/175*100).toFixed(2);
+			       	// pbc3--;
+			    }
+		    } 
+		});
 
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 4
-	$('#current_academicBIV').click(function() {
-        pbc4+=1;
-    });
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~----> part B cat 4
+		$('#current_academicBIV').click(function() {
+	        pbc4+=1;
+	    });
 
-    $('body').click(function(e) {
-	    var t = $(e.target);
-	    if(t.is('#current_academicBIV')==false) {	    	
-	    	if(document.getElementById('current_academicBIV').value!='')
-	    	{
-	    		document.getElementById('pi_academicBIV').value=(document.getElementById('current_academicBIV').value/75*100).toFixed(2);
-		       	// pbc4--;
-		    }
-	    } 
-	});
+	    $('body').click(function(e) {
+		    var t = $(e.target);
+		    if(t.is('#current_academicBIV')==false) {	    	
+		    	if(document.getElementById('current_academicBIV').value!='')
+		    	{
+		    		document.getElementById('pi_academicBIV').value=(document.getElementById('current_academicBIV').value/75*100).toFixed(2);
+			       	// pbc4--;
+			    }
+		    } 
+		});
 
-	//~~~~~~~~~~~~~~~~~~~~~~~~~~```---> Average
+		//~~~~~~~~~~~~~~~~~~~~~~~~~~```---> Average
 
-	$('#last_academicBIV_avg_comm').click(function() {
-		if( pa>0 && pbc1>0 && pbc2>0 && pbc3>0 && pbc4>0)
-		{			
-			document.getElementById('last_academicBIV_avg_comm').value = (parseInt(document.getElementById('pi_academicA').value) + parseInt(document.getElementById('pi_academicBI').value) + parseInt(document.getElementById('pi_academicBII').value) + parseInt(document.getElementById('pi_academicBIII').value) + parseInt(document.getElementById('pi_academicBIV').value)).toFixed(2);
-			document.getElementById('pi_academicBIV_avg_comm').value=(document.getElementById('last_academicBIV_avg_comm').value/5).toFixed(2);
-		}
-        
-    });
+		$('#last_academicBIV_avg_comm').click(function() {
+			if( pa>0 && pbc1>0 && pbc2>0 && pbc3>0 && pbc4>0)
+			{			
+				document.getElementById('last_academicBIV_avg_comm').value = (parseInt(document.getElementById('pi_academicA').value) + parseInt(document.getElementById('pi_academicBI').value) + parseInt(document.getElementById('pi_academicBII').value) + parseInt(document.getElementById('pi_academicBIII').value) + parseInt(document.getElementById('pi_academicBIV').value)).toFixed(2);
+				document.getElementById('pi_academicBIV_avg_comm').value=(document.getElementById('last_academicBIV_avg_comm').value/5).toFixed(2);
+			}
+	        
+	    });
+	}
 
 
 });

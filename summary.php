@@ -555,28 +555,91 @@ $previousyear=$currentyear-1;
 								<th class="text-center">Attach File</th>
 							</tr>				
 							 
-							<tbody>
-								<tr id='addr50'>
-									<td id='hasr1'>1</td>
-									<td>
-									<input type="number" step="0.01" name='ecs[]' id='ecs1' class="form-control" maxlength="200" />
-									</td>
-									<td>
-										<div class="custom-file">
-							                <input type="file" class="custom-file-input" id="papers1" name="papers[]" multiple="multiple"/>
-							                <label class="custom-file-label" for="papers1">Choose file</label>
-							            </div>
-									</td>
-								</tr>
-			                    <tr id='addr51'></tr>
+							<tbody>								
+								<?php 
+
+								$l=1;
+								$flag=true;//flag to check if atleast one file has been previous;y uploaded or not..true means uploaded false means not uploaded
+
+								$sqlxxx="SELECT id FROM summary_table WHERE facultyId='$userId' AND year='$currentyear'";
+								$resultxxx=mysqli_query($conn,$sqlxxx);
+								if(mysqli_num_rows($resultxxx)>0)
+								{
+
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+
+									$sqlxx="SELECT ecs,papers FROM summary_hasr WHERE formId='$formId'";
+									$resultxx=mysqli_query($conn,$sqlxx);
+									if(mysqli_num_rows($resultxx)>0)
+									{
+										while($rowxx=mysqli_fetch_assoc($resultxx))
+										{
+											?>
+											<tr id='addr5<?php echo $l-1; ?>'>
+												<td id='hasr<?php echo $l; ?>'><?php echo $l; ?></td>
+												<td>
+												<input type="number" step="0.01" name='ecs[]' id='ecs<?php echo $l; ?>' class="form-control" value="<?php echo $rowxx['ecs']; ?>" maxlength="200" />
+												</td>
+												<td>
+													<div class="custom-file">
+										                <input type="file" class="custom-file-input" id="papers<?php echo $l; ?>" name="papers[]" value="<?php echo $rowxx['papers']; ?>"/>
+										                <label class="custom-file-label" for="papers<?php echo $l; ?>"><?php echo basename($rowxx['papers']); ?></label>
+										            </div>
+												</td>
+											</tr>						                    
+											<?php
+											$l+=1;
+										}
+										?>
+										<tr id='addr5<?php echo $l-1; ?>'></tr>
+										<?php
+									}						
+									else
+									{
+										$flag=false;
+									}
+
+								}
+								else
+								{
+									$flag=false;
+								}
+								
+								if($flag==false)
+								{
+								?>
+									<tr id='addr50'>
+										<td id='hasr1'>1</td>
+										<td>
+										<input type="number" step="0.01" name='ecs[]' id='ecs1' class="form-control" maxlength="200" />
+										</td>
+										<td>
+											<div class="custom-file">
+								                <input type="file" class="custom-file-input" id="papers1" name="papers[]"/>
+								                <label class="custom-file-label" for="papers1">Choose file</label>
+								            </div>
+										</td>
+									</tr>
+				                    <tr id='addr51'></tr>
+			                    <?php
+			                	}
+			                	?>
+			                	<input type="hidden" name="l" id="l" value="<?php echo $l-1; ?>">
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
-			<a id="add_row4" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
-			<a id='delete_row4' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
-
+			<?php
+			if($flag==false)
+			{
+			?>
+				<a id="add_row4" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
+				<a id='delete_row4' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
+			<?php
+			}
+			?>
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
@@ -973,22 +1036,26 @@ $previousyear=$currentyear-1;
 
 
  	<script type="text/javascript">
-     $(document).ready(function()
+    $(document).ready(function()
     {
-      var l=1;
-     $("#add_row4").click(function(){
-      $('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="number" step="0.01" name="ecs[]" id="ecs'+(l+1)+'" class="form-control" maxlength="200" /></td><td><div class="custom-file"><input type="file" class="custom-file-input" id="papers'+(l+1)+'" name="papers[]" multiple/><label class="custom-file-label" for="papers'+(l+1)+'">Choose file</label></div></td>');
+      	var l=1;
+     	$("#add_row4").click(function(){
+     	l=parseInt(document.getElementById('l').value);
+      	$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="number" step="0.01" name="ecs[]" id="ecs'+(l+1)+'" class="form-control" maxlength="200" /></td><td><div class="custom-file"><input type="file" class="custom-file-input" id="papers'+(l+1)+'" name="papers[]" multiple/><label class="custom-file-label" for="papers'+(l+1)+'">Choose file</label></div></td>');
 
-      // $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
-      $('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
-      l++; 
+      	// $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
+      	$('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
+      	l++; 
+      	document.getElementById("l").value=l;
   	});
-     $("#delete_row4").click(function(){
-    	 if(l>1){
-		 $("#addr5"+(l-1)).html('');
-		 $("#addr5"+(l)).remove();
-		 l--;
-		 }
+    $("#delete_row4").click(function(){
+    	var l=parseInt(document.getElementById('l').value);
+    	if(l>1){
+		 	$("#addr5"+(l-1)).html('');
+		 	$("#addr5"+(l)).remove();
+		 	l--;
+		 	document.getElementById("l").value=l;
+		}
 	});
 	});
 
