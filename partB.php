@@ -274,7 +274,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic1">
 					<thead>
-						<th colspan="9">ODD SEMESTER</th>
+						<th colspan="10">ODD SEMESTER</th>
 					</thead>
 						<tr>
 							<th class="text-center">Sr.No</th>
@@ -286,6 +286,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 							<th class="text-center">Total no. of Hours engagaed(A)</th>
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
+							<th class="text-center">Attachments</th>
 						</tr>
 					<tbody>
 						<tr id='addr10'>
@@ -314,6 +315,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 							<td>
 							<input type="number" name='ctoc[]' id="ctoc1" class="form-control" maxlength="200" />
 							</td>
+							<td>
+							<div class="filepartb">
+								<div class="row justify-content-center">
+									<div class="col-3 offset-md-3" style="padding:0;margin:0">
+										<div class="file-upload mx-auto" style="width:26px">
+										    <label for="ctofile1" style="cursor:pointer">
+										        <img src="https://img.icons8.com/material/26/000000/attach.png">
+										    </label>
+										    <input type="file" class="dynamic-four" id="ctofile1" name="ctofile[]" value="" placeholder="">
+										    <input type="hidden" name="ctofilelocation[]" id="ctofilelocation1" value="">
+										</div>
+									</div>
+									<div class="col-md-3" style="padding:0;margin:0">
+										<a href="viewfile.php?location=none" id="ctoviewfile1" target="_blank">
+											<img src="https://img.icons8.com/ios/24/000000/document.png">
+										</a>										
+									</div>
+								</div>
+							</div>	
+							</td>
 						</tr>
 	                    <tr id='addr11'></tr>
 					</tbody>
@@ -332,7 +353,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic2">
 					<thead>
-						<th colspan="9">EVEN SEMESTER</th>
+						<th colspan="10">EVEN SEMESTER</th>
 					</thead>
 					     	
 						<tr>
@@ -345,6 +366,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 							<th class="text-center">Total no. of Hours engagaed(A)</th>
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
+							<th class="text-center">Attachments</th>
 						</tr>
 					<tbody>
 						<tr id='addr20'>
@@ -372,6 +394,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 							</td> 
 							<td>
 							<input type="number" name='ctec[]' id="ctec1" class="form-control" maxlength="200"/>
+							</td>
+							<td>
+							<div class="filepartb">
+								<div class="row justify-content-center">
+									<div class="col-3 offset-md-3" style="padding:0;margin:0">
+										<div class="file-upload mx-auto" style="width:26px">
+										    <label for="ctefile1" style="cursor:pointer">
+										        <img src="https://img.icons8.com/material/26/000000/attach.png">
+										    </label>
+										    <input type="file" class="dynamic-four" id="ctefile1" name="ctefile[]" value="" placeholder="">
+										    <input type="hidden" name="ctefilelocation[]" id="ctefilelocation1" value="">
+										</div>
+									</div>
+									<div class="col-md-3" style="padding:0;margin:0">
+										<a href="viewfile.php?location=none" id="cteviewfile1" target="_blank">
+											<img src="https://img.icons8.com/ios/24/000000/document.png">
+										</a>										
+									</div>
+								</div>
+							</div>	
 							</td>
 						</tr>
 	                    <tr id='addr21'></tr>
@@ -513,13 +555,14 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-							<th colspan="4">ODD SEMESTER</th>
+							<th colspan="5">ODD SEMESTER</th>
 						</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Type of Examination Duties</th>
 								<th class="text-center">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
 								<th class="text-center">Extent to which carried out (%) (Max.100%) (A)</th>
+								<th>Attachments</th>
 							</tr>
 						<tbody>
 							<tr id='addr10'>
@@ -531,6 +574,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oepstest1' id='oepstest1' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o1file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o1file1" name="o1file[]" value="" placeholder="">
+											    <input type="hidden" name="o1filelocation[]" id="o1filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o1viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
@@ -540,6 +603,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='oepstest2' id='oepstest2' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o2file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o2file1" name="o2file[]" value="" placeholder="">
+											    <input type="hidden" name="o2filelocation[]" id="o2filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o2viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
@@ -551,6 +634,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oetest1in' id='oetest1in' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o3file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o1file3" name="o3file[]" value="" placeholder="">
+											    <input type="hidden" name="o3filelocation[]" id="o3filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o3viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
@@ -560,6 +663,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='oetest2in' id='oetest2in' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o4file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o4file1" name="o4file[]" value="" placeholder="">
+											    <input type="hidden" name="o4filelocation[]" id="o4filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o4viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
@@ -571,6 +694,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o5file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o5file1" name="o5file[]" value="" placeholder="">
+											    <input type="hidden" name="o5filelocation[]" id="o5filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o5viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
@@ -580,6 +723,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o6file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o6file1" name="o6file[]" value="" placeholder="">
+											    <input type="hidden" name="o6filelocation[]" id="o6filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o6viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
@@ -591,6 +754,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oeeseps' id='oeeseps' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o7file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o7file1" name="o7file[]" value="" placeholder="">
+											    <input type="hidden" name="o7filelocation[]" id="o7filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o7viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
@@ -600,6 +783,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='oeesein' id='oeesein' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o8file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o8file1" name="o8file[]" value="" placeholder="">
+											    <input type="hidden" name="o8filelocation[]" id="o8filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o8viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
@@ -611,6 +814,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oeeseth' id='oeeseth' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o9file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o9file1" name="o9file[]" value="" placeholder="">
+											    <input type="hidden" name="o9filelocation[]" id="o9filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o9viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
@@ -620,6 +843,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='oeesepo' id='oeesepo' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o10file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o10file1" name="o10file[]" value="" placeholder="">
+											    <input type="hidden" name="o10filelocation[]" id="o10filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o10viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
@@ -631,6 +874,27 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o11file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o11file1" name="o11file[]" value="" placeholder="">
+											    <input type="hidden" name="o11filelocation[]" id="o11filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o11viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
+
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
@@ -641,6 +905,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='oeproofr' id='oeproofr' class="form-control" maxlength="200" />
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o12file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o12file1" name="o12file[]" value="" placeholder="">
+											    <input type="hidden" name="o12filelocation[]" id="o12filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o12viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
@@ -650,6 +934,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='oeopenday' id='oeopenday' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o13file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o13file1" name="o13file[]" value="" placeholder="">
+											    <input type="hidden" name="o13filelocation[]" id="o13filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o13viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 						</tbody>
@@ -665,13 +969,14 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-							<th colspan="4">EVEN SEMESTER</th>
+							<th colspan="5">EVEN SEMESTER</th>
 						</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Type of Examination Duties</th>
 								<th class="text-center">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
 								<th class="text-center">Extent to which carried out (%) (Max.100%) (A)</th>
+								<th>Attachments</th>
 							</tr>
 						<tbody>
 							<tr id='addr10'>
@@ -683,6 +988,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eepstest1' id='eepstest1' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e1file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e1file1" name="e1file[]" value="" placeholder="">
+											    <input type="hidden" name="e1filelocation[]" id="e1filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e1viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
@@ -692,6 +1017,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='eepstest2' id='eepstest2' class="form-control"/>
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e2file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e2file1" name="e2file[]" value="" placeholder="">
+											    <input type="hidden" name="e2filelocation[]" id="e2filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e2viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
@@ -703,6 +1048,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eetest1in' id='eetest1in' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e3file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e3file1" name="e3file[]" value="" placeholder="">
+											    <input type="hidden" name="e3filelocation[]" id="e3filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e3viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
@@ -712,6 +1077,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='eetest2in' id='eetest2in' class="form-control"/>
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e4file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e4file1" name="e4file[]" value="" placeholder="">
+											    <input type="hidden" name="e4filelocation[]" id="e4filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e4viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
@@ -723,6 +1108,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e5file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e5file1" name="e5file[]" value="" placeholder="">
+											    <input type="hidden" name="e5filelocation[]" id="e5filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e5viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
@@ -732,6 +1137,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control"/>
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e6file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e6file1" name="e6file[]" value="" placeholder="">
+											    <input type="hidden" name="e6filelocation[]" id="e6filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e6viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
@@ -743,6 +1168,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eeeseps' id='eeeseps' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e7file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e7file1" name="e7file[]" value="" placeholder="">
+											    <input type="hidden" name="e7filelocation[]" id="e7filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e7viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr16'>
 		                    	<td>8</td>
@@ -752,6 +1197,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='eeesein' id='eeesein' class="form-control"/>
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e8file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e8file1" name="e8file[]" value="" placeholder="">
+											    <input type="hidden" name="e8filelocation[]" id="e8filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e8viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
@@ -763,6 +1228,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eeeseth' id='eeeseth' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e9file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e9file1" name="e9file[]" value="" placeholder="">
+											    <input type="hidden" name="e9filelocation[]" id="e9filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e9viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
@@ -772,6 +1257,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='eeesepo' id='eeesepo' class="form-control"/>
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e10file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e10file1" name="e10file[]" value="" placeholder="">
+											    <input type="hidden" name="e10filelocation[]" id="e10filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e10viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
@@ -783,6 +1288,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e11file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e11file1" name="e11file[]" value="" placeholder="">
+											    <input type="hidden" name="e11filelocation[]" id="e11filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e11viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
@@ -793,6 +1318,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='eeproofr' id='eeproofr' class="form-control"/>
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e12file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e12file1" name="e12file[]" value="" placeholder="">
+											    <input type="hidden" name="e12filelocation[]" id="e12filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e12viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
@@ -802,6 +1347,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								</td>
 								<td>
 								<input type="text" name='eeopenday' id='eeopenday' class="form-control"/>
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e13file1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e13file1" name="e13file[]" value="" placeholder="">
+											    <input type="hidden" name="e13filelocation[]" id="e13filelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e13viewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>	
 								</td>
 		                    </tr>
 						</tbody>
@@ -914,6 +1479,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 						<table class="table table-bordered table-hover" id="tab_logic3">
 							<thead>
 								<th colspan="3">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
+								<th>Attachments</th>
 							</thead>
 							 
 							<tbody>
@@ -924,6 +1490,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name='darb[]' id='b1' class="form-control"/>
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="darfile1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="darfile1" name="darfile[]" value="" placeholder="">
+												    <input type="hidden" name="darfilelocation[]" id="darfilelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="darviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
 									</td>
 									
 								</tr>
@@ -1028,6 +1614,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
 							<th colspan="3">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+							<th>Attachments</th>
 						</thead>
 						
 						<tbody>
@@ -1037,6 +1624,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='dpstest1' id='dpstest1' class="form-control" maxlength="200" />
 								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps1file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dps1file1" name="dps1file[]" value="" placeholder="">
+												    <input type="hidden" name="dps1filelocation[]" id="dps1filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps1viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+									</td>
 							</tr>
 		                    <tr id='addr41'>
 		                    	<td>2</td>
@@ -1044,12 +1651,52 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='dpstest2' id='dpstest2' class="form-control" maxlength="200" />
 								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps2file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dps2file1" name="dps2file[]" value="" placeholder="">
+												    <input type="hidden" name="dps2filelocation[]" id="dps2filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps2rviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+									</td>
 		                    </tr>
 		                    <tr id='addr42'>
 		                    	<td>3</td>
 								<td>Developing and imparting Remedial / Bridge Courses</td>
 								<td>
 								<input type="text" name='dtest1in' id='dtest1in' class="form-control" maxlength="200" />
+								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps3file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dps3file1" name="dps3file[]" value="" placeholder="">
+												    <input type="hidden" name="dps3filelocation[]" id="dps3filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps3viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr43'>
@@ -1058,12 +1705,52 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='dtest2in' id='dtest2in' class="form-control" maxlength="200" />
 								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps4file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dps4file1" name="dps4file[]" value="" placeholder="">
+												    <input type="hidden" name="dps4filelocation[]" id="dps4filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps4viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+									</td>
 		                    </tr>
 		                    <tr id='addr44'>
 		                    	<td>5</td>
 								<td>Developing and imparting specialized teaching-learning programmes in physical education, library; innovative compositions and creations in music, performing and visual arts and other tradition areas</td>
 								<td>
 								<input type="text" name='dtest1ass' id='dtest1ass' class="form-control"/>
+								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps5file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dp53file1" name="dps5file[]" value="" placeholder="">
+												    <input type="hidden" name="dps5filelocation[]" id="dps5filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps5viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
 								</td>
 		                    </tr>
 		                    <tr id='addr45'>
@@ -1072,12 +1759,52 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<td>
 								<input type="text" name='dtest2ass' id='dtest2ass' class="form-control"/>
 								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps6file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dps6file1" name="dps6file[]" value="" placeholder="">
+												    <input type="hidden" name="dps6filelocation[]" id="dps6filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps6viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+								</td>
 		                    </tr>
 		                    <tr id='addr46'>
 		                    	<td>7</td>
 								<td>Other:</td>
 								<td>
 								<input type="text" name='deseps' id='deseps' class="form-control"/>
+								</td>
+								<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dps7file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dps7file1" name="dps7file[]" value="" placeholder="">
+												    <input type="hidden" name="dps7filelocation[]" id="dps7filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="dps7viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
 								</td>
 		                    </tr>
 		                </tbody>
@@ -1269,13 +1996,14 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic4">
 							<thead>
-								<th colspan="3">Administrative Post</th>
+								<th colspan="4">Administrative Post</th>
 							</thead>
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD/<br>Type of Activity</th>
 								<th class="text-center"></th>
+								<th>Attachments</th>
 							</tr>
 						
 							 
@@ -1287,7 +2015,27 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name='hb[]' id='hb1' class="form-control" maxlength="200" />
-									</td>	
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="hfile1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="hfile1" name="hfile[]" value="" placeholder="">
+												    <input type="hidden" name="hfilelocation[]" id="hfilelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="hviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+								</td>	
 								</tr>
 			                    <tr id='addr51'></tr>
 							</tbody>
@@ -1388,13 +2136,14 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic5">
 							<thead>
-								<th colspan="3">Activities</th>
+								<th colspan="4">Activities</th>
 							</thead>
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Extension, Co-Curricular and Field based activities / internships in college<br> Type of Activity</th>
 								<th class="text-center"></th>
+								<th>Attachments</th>
 							</tr>
 							 
 							<tbody>
@@ -1405,7 +2154,27 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name='eb[]' id='eb1' class="form-control"/>
-									</td>	
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="efile1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="efile1" name="efile[]" value="" placeholder="">
+												    <input type="hidden" name="efilelocation[]" id="efilelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="eviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+								</td>	
 								</tr>
 			                    <tr id='addr61'></tr>
 							</tbody>
@@ -1511,6 +2280,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									<th class="text-center">Sr.No</th>
 									<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
 									<th class="text-center"></th>
+									<th>Attachments</th>
 								</tr>
 							</thead>
 							 
@@ -1522,7 +2292,27 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name="ecb[]" id="ecb1" class="form-control"/>
-									</td>	
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="ecfile1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="ecfile1" name="ecfile[]" value="" placeholder="">
+												    <input type="hidden" name="ecfilelocation[]" id="ecfilelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="ecviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+								</td>	
 								</tr>
 			                    <tr id='addr71'></tr>
 							</tbody>
@@ -1628,6 +2418,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">College administration/organization member/committee member/NBA/NAAC of college: <br> Type of Activity</th>
 								<th class="text-center"></th>
+								<th>Attachments</th>
 							</tr>
 						</thead>
 							 
@@ -1639,7 +2430,27 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name="cb[]" id="cb1" class="form-control"/>
-									</td>	
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="cfile1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="cfile1" name="cfile[]" value="" placeholder="">
+												    <input type="hidden" name="cfilelocation[]" id="cfilelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="cviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>	
+								</td>	
 								</tr>
 			                    <tr id='addr81'></tr>
 							</tbody>
@@ -1905,10 +2716,31 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
-				<div class="col-md-12 text-left">
+				<div class="col-md-10 text-left">
 					<p>20 marks for peer review journal first author and 10 marks for second author</p>
 				</div>
+				<div class="col-md-2">
+					<div class="filepartb-cat3">
+						<div class="row justify-content-center">
+							<div class="col-3 offset-md-3" style="padding:0;margin:0">
+								<div class="file-upload mx-auto" style="width:26px">
+								    <label for="ppfile1" style="cursor:pointer">
+								        <img src="https://img.icons8.com/material/26/000000/attach.png">
+								    </label>
+								    <input type="file" class="dynamic-four" id="ppfile1" name="ppfile[]" value="" placeholder="">
+								    <input type="hidden" name="ppfilelocation[]" id="ppfilelocation1" value="">
+								</div>
+							</div>
+							<div class="col-md-3" style="padding:0;margin:0">
+								<a href="viewfile.php?location=none" id="ppviewfile1" target="_blank">
+									<img src="https://img.icons8.com/ios/24/000000/document.png">
+								</a>										
+							</div>
+						</div>
+					</div>	
+				</div>
 			</div>
+
 		</div>
 
 		<br id="br2" style="display: none"><div class="container" style="border: 1px solid #c8c8c8;display:none" id="ppr2"></div>
@@ -2085,8 +2917,28 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
-				<div class="col-md-12 text-left">
+				<div class="col-md-10 text-left">
 					<p>15 marks for International conference for first author and 08 marks for second author</p>
+				</div>
+				<div class="col-md-2">
+					<div class="filepartb-cat3">
+						<div class="row justify-content-center">
+							<div class="col-3 offset-md-3" style="padding:0;margin:0">
+								<div class="file-upload mx-auto" style="width:26px">
+								    <label for="pp1file1" style="cursor:pointer">
+								        <img src="https://img.icons8.com/material/26/000000/attach.png">
+								    </label>
+								    <input type="file" class="dynamic-four" id="pp1file1" name="pp1file[]" value="" placeholder="">
+								    <input type="hidden" name="pp1filelocation[]" id="pp1filelocation1" value="">
+								</div>
+							</div>
+							<div class="col-md-3" style="padding:0;margin:0">
+								<a href="viewfile.php?location=none" id="pp1viewfile1" target="_blank">
+									<img src="https://img.icons8.com/ios/24/000000/document.png">
+								</a>										
+							</div>
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -2268,8 +3120,28 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
-				<div class="col-md-12 text-left">
+				<div class="col-md-10 text-left">
 					<p>10 marks for International conference for first author and 05 marks for second author</p>
+				</div>
+				<div class="col-md-2">
+					<div class="filepartb-cat3">
+						<div class="row justify-content-center">
+							<div class="col-3 offset-md-3" style="padding:0;margin:0">
+								<div class="file-upload mx-auto" style="width:26px">
+								    <label for="pp2file1" style="cursor:pointer">
+								        <img src="https://img.icons8.com/material/26/000000/attach.png">
+								    </label>
+								    <input type="file" class="dynamic-four" id="pp2file1" name="pp2file[]" value="" placeholder="">
+								    <input type="hidden" name="pp2filelocation[]" id="pp2filelocation1" value="">
+								</div>
+							</div>
+							<div class="col-md-3" style="padding:0;margin:0">
+								<a href="viewfile.php?location=none" id="pp2viewfile1" target="_blank">
+									<img src="https://img.icons8.com/ios/24/000000/document.png">
+								</a>										
+							</div>
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -2360,14 +3232,6 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 
 		<hr><br>
 
-
-
-
-
-
-
-
-
 		<div class="container" style="border: 1px solid #c8c8c8" id="pprbk1"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
@@ -2457,8 +3321,28 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 			<hr style="border: 0.5px solid #c8c8c8">
 
 			<div class="row">
-				<div class="col-md-12 text-left">
+				<div class="col-md-10 text-left">
 					<p>15 marks for first author and 08 marks for co-author</p>
+				</div>
+				<div class="col-md-2">
+					<div class="filepartb-cat3">
+						<div class="row justify-content-center">
+							<div class="col-3 offset-md-3" style="padding:0;margin:0">
+								<div class="file-upload mx-auto" style="width:26px">
+								    <label for="pp3file1" style="cursor:pointer">
+								        <img src="https://img.icons8.com/material/26/000000/attach.png">
+								    </label>
+								    <input type="file" class="dynamic-four" id="pp3file1" name="pp3file[]" value="" placeholder="">
+								    <input type="hidden" name="pp3filelocation[]" id="pp3filelocation1" value="">
+								</div>
+							</div>
+							<div class="col-md-3" style="padding:0;margin:0">
+								<a href="viewfile.php?location=none" id="pp3viewfile1" target="_blank">
+									<img src="https://img.icons8.com/ios/24/000000/document.png">
+								</a>										
+							</div>
+						</div>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -2549,10 +3433,6 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 		    </div>
 		</div>
 
-
-
-
-
 		<hr style="border: 0.5px solid #c8c8c8"><br>
 
 		<div class="container">
@@ -2561,7 +3441,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-							<th colspan="5">Research/thesis supervisor and project guide (Max.PI=40)</th>
+							<th colspan="6">Research/thesis supervisor and project guide (Max.PI=40)</th>
 						</thead>
 						     	
 							<tr>
@@ -2570,6 +3450,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Thesis submitted</th>
 								<th class="text-center">No. of Degree Awarded</th>
 								<th class="text-center">PI</th>
+								<th>Attachments</th>
 							</tr>
 						<tbody>
 							<tr id='addr90'>
@@ -2652,6 +3533,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											</div>
 										</div>
 									</div>  
+								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="phdfile1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="phdfile1" name="phdfile[]" value="" placeholder="">
+											    <input type="hidden" name="phdfilelocation[]" id="phdfilelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="phdviewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>
 								</td>
 							</tr>
 		                    <tr id='addr91'>
@@ -2741,6 +3642,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 										</div>
 									</div>  
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="mtechfile1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="mtechfile1" name="mtechfile[]" value="" placeholder="">
+											    <input type="hidden" name="mtechfilelocation[]" id="mtechfilelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="mtechviewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>
+								</td>
 		                    </tr>
 		                    <tr id='addr92'>
 		                    	<td>B.Tech</td>
@@ -2824,6 +3745,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 										</div>
 									</div>  
 								</td>
+								<td>
+								<div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="btechfile1" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="btechfile1" name="btechfile[]" value="" placeholder="">
+											    <input type="hidden" name="btechfilelocation[]" id="btechfilelocation1" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="btechviewfile1" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div>
+								</td>
 		                    </tr>
 						</tbody>
 						<!-- <thead>
@@ -2866,7 +3807,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 							</th>
 						</thead> -->
 						<thead>
-							<th colspan="5">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year. 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year. 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year. For co-guide the marks will be half.</th>
+							<th colspan="6">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year. 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year. 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year. For co-guide the marks will be half.</th>
 						</thead>
 					</table>
 					</div>
@@ -2887,7 +3828,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="5">Research/project/consultancy proposals submitted in academic year 20__/20__ but yet to get approval (Max. PI=15)</th>
+								<th colspan="6">Research/project/consultancy proposals submitted in academic year 20__/20__ but yet to get approval (Max. PI=15)</th>
 							</thead>
 						     	
 							<tr>
@@ -2896,6 +3837,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Agency</th>
 								<th class="text-center">Date of Submission</th>
 								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+								<th>Attachments</th>
 							</tr>
 							<tbody>
 								<tr id='addr100'>
@@ -2912,6 +3854,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									<td>
 									<input type="number" name="gd[]" id="gd1" class="form-control"/>
 									</td>	
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="research1file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="research1file1" name="research1file[]" value="" placeholder="">
+												    <input type="hidden" name="research1filelocation[]" id="research1filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="research1viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
+									</td>
 								</tr>
 			                    <tr id='addr101'></tr>
 							</tbody>
@@ -3004,20 +3966,13 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 			</div>		
 		</div><br><br>
 
-
-
-
-
-
-
-
 		<div class="container">
     		<div class="row clearfix">
 				<div class="col-md-12 column">
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic9">
 							<thead>
-								<th colspan="5">Ongoing Research/project/consultancy proposals approved/initiated in academic year 20__/20__ but yet to complete (Max. PI=15)</th>
+								<th colspan="6">Ongoing Research/project/consultancy proposals approved/initiated in academic year 20__/20__ but yet to complete (Max. PI=15)</th>
 							</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -3025,6 +3980,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Agency</th>
 								<th class="text-center">Period in years</th>
 								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+								<th>Attachments</th>
 							</tr>
 
 							 
@@ -3042,6 +3998,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="number" name="ggd[]" id="ggd1" class="form-control"/>
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="research2file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="research2file1" name="research2file[]" value="" placeholder="">
+												    <input type="hidden" name="research2filelocation[]" id="research2filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="research2viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
 									</td>	
 								</tr>
 			                    <tr id='addr111'></tr>
@@ -3148,7 +4124,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic10">
 							<thead>
-								<th colspan="5">Completed Research Project and Consultancies initiated in academic year 20__/20__ but completed in academic year 20__/20__ (Max. PI=20) (Max. PI=20)</th>
+								<th colspan="6">Completed Research Project and Consultancies initiated in academic year 20__/20__ but completed in academic year 20__/20__ (Max. PI=20) (Max. PI=20)</th>
 							</thead>
 							
 							<tr>
@@ -3157,6 +4133,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Agency</th>
 								<th class="text-center">Date of Completion</th>
 								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+								<th>Attachments</th>
 							</tr>
 							<tbody>
 								<tr id='addr120'>
@@ -3173,6 +4150,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									<td>
 									<input type="number" name="gcd[]" id="gcd1" class="form-control"/>
 									</td>	
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="research2file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="research2file1" name="research2file[]" value="" placeholder="">
+												    <input type="hidden" name="research2filelocation[]" id="research2filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id="research2viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
+									</td>
 								</tr>
 			                    <tr id='addr121'></tr>
 							</tbody>
@@ -3274,13 +4271,14 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic11">
 							<thead>
-								<th colspan="5">Patent/Intellectual property filed/received (Max.PI=25)</th>
+								<th colspan="6">Patent/Intellectual property filed/received (Max.PI=25)</th>
 							</thead>
 						     	
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Details of patent/intellectual property</th>
 								<th class="text-center">Date of received/filed</th>
+								<th>Attachments</th>
 							</tr>
 							
 							 
@@ -3292,6 +4290,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="date" name="drf[]" id="drf1" class="form-control"/>
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="dfile1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="dfile1" name="dfile[]" value="" placeholder="">
+												    <input type="hidden" name="dfilelocation[]" id="dfilelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id=dviewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
 									</td>
 								</tr>
 			                    <tr id='addr131'></tr>
@@ -3416,7 +4434,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic12">
 							<thead>
-								<th colspan="4">Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college (Max.PI=30)</th>
+								<th colspan="5">Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college (Max.PI=30)</th>
 							</thead>
 						     	
 							<tr>
@@ -3424,6 +4442,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Details of Programme</th>
 								<th class="text-center">Date</th>
 								<th class="text-center">Organized by</th>
+								<th>Attachments</th>
 							</tr>
 									 
 							<tbody>
@@ -3437,6 +4456,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control" maxlength="200"/>
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="cativ1file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="cativ1file1" name="cativ1file[]" value="" placeholder="">
+												    <input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id=cativ1viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
 									</td>
 								</tr>
 			                    <tr id='addr141'></tr>
@@ -3537,7 +4576,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic13">
 							<thead>
-								<th colspan="4">Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college (Max. PI=30)</th>
+								<th colspan="5">Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college (Max. PI=30)</th>
 							</thead>
 
 							<tr>
@@ -3545,6 +4584,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 								<th class="text-center">Details of Programme</th>
 								<th class="text-center">Date</th>
 								<th class="text-center">Organized by</th>
+								<th>Attachments</th>
 							</tr>
 							
 							 
@@ -3559,6 +4599,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control" maxlength="200"/>
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="cativ2file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="cativ2file1" name="cativ2file[]" value="" placeholder="">
+												    <input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id=cativ2viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
 									</td>
 								</tr>
 			                    <tr id='addr151'></tr>
@@ -3657,13 +4717,14 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic14">
 							<thead>
-								<th colspan="4">Please give details of any other credential, significant contributions, and awards received etc. Which are not mentioned. (Max. PI=15)</th>
+								<th colspan="5">Please give details of any other credential, significant contributions, and awards received etc. Which are not mentioned. (Max. PI=15)</th>
 							</thead>
 							
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Details</th>
 								<th class="text-center"></th>
+								<th>Attachments</th>
 							</tr>
 							 
 							<tbody>
@@ -3674,6 +4735,26 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 									</td>
 									<td>
 									<input type="text" name="cativ2[]" id="cativ21" class="form-control" maxlength="200"/>
+									</td>
+									<td>
+									<div class="filepartb">
+										<div class="row justify-content-center">
+											<div class="col-3 offset-md-3" style="padding:0;margin:0">
+												<div class="file-upload mx-auto" style="width:26px">
+												    <label for="cativ3file1" style="cursor:pointer">
+												        <img src="https://img.icons8.com/material/26/000000/attach.png">
+												    </label>
+												    <input type="file" class="dynamic-four" id="cativ3file1" name="cativ3file[]" value="" placeholder="">
+												    <input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation1" value="">
+												</div>
+											</div>
+											<div class="col-md-3" style="padding:0;margin:0">
+												<a href="viewfile.php?location=none" id=cativ3viewfile1" target="_blank">
+													<img src="https://img.icons8.com/ios/24/000000/document.png">
+												</a>										
+											</div>
+										</div>
+									</div>
 									</td>
 								</tr>
 			                    <tr id='addr161'></tr>
