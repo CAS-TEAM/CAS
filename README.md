@@ -11,3 +11,10 @@ Now create a database inside your phpmyadmin panel called "cas_db". Once this is
 
 <b>The website is now ready!</b>
 
+<h3>Faculty Member POV</h3>
+
+![](cas_faculty.gif)
+
+<h3>HOD Member POV</h3>
+
+![](cas_hod.gif)
