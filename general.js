@@ -306,7 +306,7 @@ function getPartBData(){
 					    if(key!="part_b_cat_1_cto" && key!="part_b_cat_1_cte" && key!="part_b_cat_1_dar" && key!="part_b_cat_2_ha" && key!="part_b_cat_2_act" && key!="part_b_cat_2_exc" && key!="part_b_cat_2_c" && key!="part_b_cat_3_pp" && key!="part_b_cat_3_ppic" && key!="part_b_cat_3_ppinc" && key!="part_b_cat_3_bk" && key!="part_b_cat_3_res" && key!="part_b_cat_3_ores" && key!="part_b_cat_3_cres" && key!="part_b_cat_3_pip" && key!="part_b_cat_4_sem" && key!="part_b_cat_4_inv" && key!="part_b_cat_4_creds")
 					    {
 					    	// alert("here");
-					    	// alert("k="+k+" v="+v);
+					    	alert("k="+k+" v="+v);
 					    	document.getElementById(key).value=v;
 					    	$("#"+key).prop("disabled", true);
 					    }
@@ -330,12 +330,13 @@ function getPartBData(){
 					    		var ctohrsengaged=JSON.stringify(v[5]['ctohrsengaged']).replace(/['"]+/g, '');
 					    		var ctomaxhrs=JSON.stringify(v[6]['ctomaxhrs']).replace(/['"]+/g, '');
 					    		var ctoc=JSON.stringify(v[7]['ctoc']).replace(/['"]+/g, '');
+					    		var ctofile=JSON.stringify(v[8]['ctofile']).replace(/['"]+/g, '');
 					    		i++;
 					    		if(i!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" value="'+ctocourse+'"/></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" value="'+ctotyprlpt+'"/></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" value="'+ctougpg+'"/></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoclasssemester+'"/></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsweek+'"/></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsengaged+'"/></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" value="'+ctomaxhrs+'"/></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoc+'"/></td>');
+					    			$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" value="'+ctocourse+'"/></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" value="'+ctotyprlpt+'"/></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" value="'+ctougpg+'"/></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoclasssemester+'"/></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsweek+'"/></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsengaged+'"/></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" value="'+ctomaxhrs+'"/></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoc+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ctofile+'" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							      	// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
 							      	$('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
@@ -352,6 +353,8 @@ function getPartBData(){
 					    			document.getElementById('ctohrsengaged'+(i+1)).value=ctohrsengaged;
 					    			document.getElementById('ctomaxhrs'+(i+1)).value=ctomaxhrs;
 					    			document.getElementById('ctoc'+(i+1)).value=ctoc;
+					    			document.getElementById('ctoviewfile'+(i+1)).href="viewfile.php?location="+ctofile;
+							    	document.getElementById('ctofilelocation'+(i+1)).value=ctofile;
 					    		}
 
 					    	}
@@ -370,12 +373,14 @@ function getPartBData(){
 					    		var ctehrsengaged=JSON.stringify(v[5]['ctehrsengaged']).replace(/['"]+/g, '');
 					    		var ctemaxhrs=JSON.stringify(v[6]['ctemaxhrs']).replace(/['"]+/g, '');
 					    		var ctec=JSON.stringify(v[7]['ctec']).replace(/['"]+/g, '');
+					    		var ctefile=JSON.stringify(v[8]['ctefile']).replace(/['"]+/g, '');
+
 					    		j++;
 					    		if(j!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200" value="'+ctecourse+'"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200" value="'+ctetyprlpt+'"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200" value="'+cteugpg+'"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200" value="'+cteclasssemester+'"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsweek+'"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsengaged+'"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200" value="'+ctemaxhrs+'"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200" value="'+ctec+'"/></td>');
+					    			$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200" value="'+ctecourse+'"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200" value="'+ctetyprlpt+'"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200" value="'+cteugpg+'"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200" value="'+cteclasssemester+'"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsweek+'"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsengaged+'"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200" value="'+ctemaxhrs+'"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200" value="'+ctec+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(j+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(j+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(j+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ctefile+'" id="cteviewfile'+(j+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 								    // $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
 								    $('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
@@ -392,6 +397,8 @@ function getPartBData(){
 					    			document.getElementById('ctehrsengaged'+(j+1)).value=ctehrsengaged;
 					    			document.getElementById('ctemaxhrs'+(j+1)).value=ctemaxhrs;
 					    			document.getElementById('ctec'+(j+1)).value=ctec;
+					    			document.getElementById('cteviewfile'+(j+1)).href="viewfile.php?location="+ctefile;
+							    	document.getElementById('ctefilelocation'+(j+1)).value=ctefile;
 					    		}
 
 					    	}
@@ -404,12 +411,14 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var dara=JSON.stringify(v[0]['dara']).replace(/['"]+/g, '');
 					    		var darb=JSON.stringify(v[1]['darb']).replace(/['"]+/g, '');
+					    		var darfile=JSON.stringify(v[2]['darfile']).replace(/['"]+/g, '');
+
 					    		k++;
 					    		if(k!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control" maxlength="200" value="'+dara+'"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control" maxlength="200" value="'+darb+'"/></td>');
+					    			$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control" maxlength="200" value="'+dara+'"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control" maxlength="200" value="'+darb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="darfile'+(k+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="darfile'+(k+1)+'" name="darfile[]" value="" placeholder=""><input type="hidden" name="darfilelocation[]" id="darfilelocation'+(k+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+darfile+'" id="darviewfile'+(k+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							       // $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
 							       $('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
@@ -420,6 +429,8 @@ function getPartBData(){
 					    			document.getElementById('dar'+(k+1)).value=k+1;
 					    			document.getElementById('a'+(k+1)).value=dara;
 					    			document.getElementById('b'+(k+1)).value=darb;
+					    			document.getElementById('darviewfile'+(k+1)).href="viewfile.php?location="+darfile;
+							    	document.getElementById('darfilelocation'+(k+1)).value=darfile;
 					    		}
 
 					    	}
@@ -432,12 +443,14 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var ha=JSON.stringify(v[0]['ha']).replace(/['"]+/g, '');
 					    		var hb=JSON.stringify(v[1]['hb']).replace(/['"]+/g, '');
+					    		var hfile=JSON.stringify(v[2]['hfile']).replace(/['"]+/g, '');
+
 					    		l++;
 					    		if(l!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control" maxlength="200" value="'+ha+'"/></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" value="'+hb+'"/></td>');
+					    			$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control" maxlength="200" value="'+ha+'"/></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" value="'+hb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="hfile'+(l+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="hfile'+(l+1)+'" name="hfile[]" value="" placeholder=""><input type="hidden" name="hfilelocation[]" id="hfilelocation'+(l+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+hviewfile+'" id="hviewfile'+(l+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							      	// $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
 							      	$('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
@@ -448,6 +461,8 @@ function getPartBData(){
 					    			document.getElementById('hasr'+(l+1)).value=l+1;
 					    			document.getElementById('ha'+(l+1)).value=ha;
 					    			document.getElementById('hb'+(l+1)).value=hb;
+					    			document.getElementById('hviewfile'+(l+1)).href="viewfile.php?location="+hfile;
+							    	document.getElementById('hfilelocation'+(l+1)).value=hfile;
 					    		}
 
 					    	}
@@ -460,12 +475,14 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var ea=JSON.stringify(v[0]['ea']).replace(/['"]+/g, '');
 					    		var eb=JSON.stringify(v[1]['eb']).replace(/['"]+/g, '');
+					    		var efile=JSON.stringify(v[2]['efile']).replace(/['"]+/g, '');
+
 					    		m++;
 					    		if(m!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control" value="'+ea+'"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control" value="'+eb+'"/></td>');
+					    			$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control" value="'+ea+'"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control" value="'+eb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="efile'+(m+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="efile'+(m+1)+'" name="efile[]" value="" placeholder=""><input type="hidden" name="efilelocation[]" id="efilelocation'+(m+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+efile+'" id="eviewfile'+(m+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 								    // $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
 								    $('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
@@ -476,6 +493,8 @@ function getPartBData(){
 					    			document.getElementById('actsr'+(m+1)).value=m+1;
 					    			document.getElementById('ea'+(m+1)).value=ea;
 					    			document.getElementById('eb'+(m+1)).value=eb;
+					    			document.getElementById('eviewfile'+(m+1)).href="viewfile.php?location="+efile;
+							    	document.getElementById('efilelocation'+(m+1)).value=efile;
 					    		}
 
 					    	}
@@ -488,11 +507,13 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var eca=JSON.stringify(v[0]['eca']).replace(/['"]+/g, '');
 					    		var ecb=JSON.stringify(v[1]['ecb']).replace(/['"]+/g, '');
+					    		var ecfile=JSON.stringify(v[2]['ecfile']).replace(/['"]+/g, '');
+
 					    		n++;
 					    		if(n!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control" value="'+eca+'"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control" value="'+ecb+'"/></td>');
+					    			$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control" value="'+eca+'"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control" value="'+ecb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ecfile'+(n+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ecfile'+(n+1)+'" name="ecfile[]" value="" placeholder=""><input type="hidden" name="ecfilelocation[]" id="ecfilelocation'+(n+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ecfile+'" id="ecviewfile'+(n+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td> ');
 
 							        // $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
 							        $('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
@@ -504,6 +525,8 @@ function getPartBData(){
 					    			document.getElementById('exca'+(n+1)).value=n+1;
 					    			document.getElementById('eca'+(n+1)).value=eca;
 					    			document.getElementById('ecb'+(n+1)).value=ecb;
+					    			document.getElementById('ecviewfile'+(n+1)).href="viewfile.php?location="+ecfile;
+							    	document.getElementById('ecfilelocation'+(n+1)).value=ecfile;
 					    		}
 
 					    	}
@@ -516,11 +539,12 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var ca=JSON.stringify(v[0]['ca']).replace(/['"]+/g, '');
 					    		var cb=JSON.stringify(v[1]['cb']).replace(/['"]+/g, '');
+					    		var cfile=JSON.stringify(v[2]['cfile']).replace(/['"]+/g, '');
 					    		o++;
 					    		if(o!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control" value="'+ca+'"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control" value="'+cb+'"/></td>');
+					    			$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control" value="'+ca+'"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control" value="'+cb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cfile'+(o+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cfile'+(o+1)+'" name="cfile[]" value="" placeholder=""><input type="hidden" name="cfilelocation[]" id="cfilelocation'+(o+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cfile+'" id="cviewfile'+(o+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>	');
 
 							      	// $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
 							      	$('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
@@ -532,6 +556,9 @@ function getPartBData(){
 					    			document.getElementById('csr'+(o+1)).value=o+1;
 					    			document.getElementById('ca'+(o+1)).value=ca;
 					    			document.getElementById('cb'+(o+1)).value=cb;
+					    			document.getElementById('cviewfile'+(o+1)).href="viewfile.php?location="+cfile;
+							    	document.getElementById('cfilelocation'+(o+1)).value=cfile;
+
 					    		}
 
 					    	}
@@ -548,11 +575,12 @@ function getPartBData(){
 					    		var ppif=JSON.stringify(v[3]['ppif']).replace(/['"]+/g, '');
 					    		var customRadioInline1=JSON.stringify(v[4]['customRadioInline1']).replace(/['"]+/g, '');
 					    		var ppnca=JSON.stringify(v[5]['ppnca']).replace(/['"]+/g, '');
+					    		var ppfile=JSON.stringify(v[6]['ppfile']).replace(/['"]+/g, '');
 					    		ppr++;
 					    		if(ppr!=0)
 					    		{
 					    			// alert(ppr);
-					    			$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitle+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnpr+'"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbn+'"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppif+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes"><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppnca+'"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div></div>');
+					    			$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitle+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnpr+'"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbn+'"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppif+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes"><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppnca+'"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ppfile'+ppr+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ppfile'+ppr+'" name="ppfile[]" value="" placeholder=""><input type="hidden" name="ppfilelocation[]" id="ppfilelocation'+ppr+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ppfile+'" id="ppviewfile'+ppr+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 								    // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 								    $('#ppr'+(ppr)).toggle();
@@ -578,6 +606,8 @@ function getPartBData(){
 					    			document.getElementById('ppif'+(ppr+1)).value=ppif;
 					    			// document.getElementById('customRadioInline1'+(ppr+1)).value=customRadioInline1;
 					    			document.getElementById('ppnca'+(ppr+1)).value=ppnca;
+					    			document.getElementById('ppviewfile'+(ppr+1)).href="viewfile.php?location="+ppfile;
+							    	document.getElementById('ppfilelocation'+(ppr+1)).value=ppfile;
 
 					    			// alert(customRadioInline1);
 					    			if(customRadioInline1=='Yes')
@@ -607,11 +637,12 @@ function getPartBData(){
 					    		var ppific=JSON.stringify(v[3]['ppific']).replace(/['"]+/g, '');
 					    		var customRadioInline1ic=JSON.stringify(v[4]['customRadioInline1ic']).replace(/['"]+/g, '');
 					    		var ppncaic=JSON.stringify(v[5]['ppncaic']).replace(/['"]+/g, '');
+					    		var pp1file=JSON.stringify(v[6]['pp1file']).replace(/['"]+/g, '');
 					    		ppric++;
 					    		if(ppric!=0)
 					    		{
 					    			// alert(ppr);
-					    			$('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitleic+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnpric+'"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbnic+'"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppific+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppncaic+'"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div></div>');
+					    			$('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitleic+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnpric+'"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbnic+'"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppific+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppncaic+'"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp1file'+ppric+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp1file'+ppric+'" name="pp1file[]" value="" placeholder=""><input type="hidden" name="pp1filelocation[]" id="pp1filelocation'+ppric+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+pp1file+'" id="pp1viewfile'+ppric+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 								    // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 								    
@@ -638,6 +669,8 @@ function getPartBData(){
 					    			document.getElementById('ppific'+(ppric+1)).value=ppific;
 					    			// document.getElementById('customRadioInline1'+(ppr+1)).value=customRadioInline1;
 					    			document.getElementById('ppncaic'+(ppric+1)).value=ppncaic;
+					    			document.getElementById('pp1viewfile'+(ppric+1)).href="viewfile.php?location="+pp1file;
+							    	document.getElementById('pp1filelocation'+(ppric+1)).value=pp1file;
 
 					    			// alert(customRadioInline1);
 					    			if(customRadioInline1ic=='Yes')
@@ -667,11 +700,12 @@ function getPartBData(){
 					    		var ppifinc=JSON.stringify(v[3]['ppifinc']).replace(/['"]+/g, '');
 					    		var customRadioInline1inc=JSON.stringify(v[4]['customRadioInline1inc']).replace(/['"]+/g, '');
 					    		var ppncainc=JSON.stringify(v[5]['ppncainc']).replace(/['"]+/g, '');
+					    		var pp2file=JSON.stringify(v[6]['pp2file']).replace(/['"]+/g, '');
 					    		pprinc++;
 					    		if(pprinc!=0)
 					    		{
 					    			// alert(ppr);
-					    			$('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitleinc+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnprinc+'"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbnpinc+'"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppifinc+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppncainc+'"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div></div>');
+					    			$('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitleinc+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnprinc+'"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbnpinc+'"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppifinc+'"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppncainc+'"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp2file'+pprinc+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp2file'+pprinc+'" name="pp2file[]" value="" placeholder=""><input type="hidden" name="pp2filelocation[]" id="pp2filelocation'+pprinc+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+pp2file+'" id="pp2viewfile'+pprinc+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 								    // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 								    
@@ -699,6 +733,8 @@ function getPartBData(){
 					    			document.getElementById('ppifinc'+(pprinc+1)).value=ppifinc;
 					    			// document.getElementById('customRadioInline1'+(ppr+1)).value=customRadioInline1;
 					    			document.getElementById('ppncainc'+(pprinc+1)).value=ppncainc;
+					    			document.getElementById('pp2viewfile'+(pprinc+1)).href="viewfile.php?location="+pp2file;
+							    	document.getElementById('pp2filelocation'+(pprinc+1)).value=pp2file;
 
 					    			// alert(customRadioInline1);
 					    			if(customRadioInline1inc=='Yes')
@@ -729,12 +765,12 @@ function getPartBData(){
 					    		var ppifbk=JSON.stringify(v[4]['ppifbk']).replace(/['"]+/g, '');
 					    		var customRadioInline1bk=JSON.stringify(v[5]['customRadioInline1bk']).replace(/['"]+/g, '');
 					    		var ppncabk=JSON.stringify(v[6]['ppncabk']).replace(/['"]+/g, '');
+					    		var pp3file1=JSON.stringify(v[7]['pp3file1']).replace(/['"]+/g, '');
 					    		pprbk++;
 					    		if(pprbk!=0)
 					    		{
 					    			// alert(ppnprbk);
-					    			$('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitlebk+'"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><input type="text" name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnprbk.trim()+'" /> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbnbk+'"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppdatebk+'"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppifbk+'"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppncabk+'"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div></div>'
-      									);
+					    			$('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+pptitlebk+'"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><input type="text" name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppnprbk.trim()+'" /> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppisbnbk+'"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppdatebk+'"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200" value="'+ppifbk+'"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200" value="'+ppncabk+'"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp3file'+pprbk+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp3file'+pprbk+'" name="pp3file[]" value="" placeholder=""><input type="hidden" name="pp3filelocation[]" id="pp3filelocation'+pprbk+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+pp3viewfile+'" id="pp3viewfile'+pprbk+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>' );
 
 								    // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 								    
@@ -761,6 +797,9 @@ function getPartBData(){
 					    			document.getElementById('ppdatebk'+(pprbk+1)).value=ppdatebk;
 					    			document.getElementById('ppifbk'+(pprbk+1)).value=ppifbk;
 					    			document.getElementById('ppncabk'+(pprbk+1)).value=ppncabk;
+					    			document.getElementById('pp3viewfile'+(pprbk+1)).href="viewfile.php?location="+pp3file1;
+							    	document.getElementById('pp3filelocation'+(pprbk+1)).value=pp3file1;
+
 
 					    			// alert(customRadioInline1);
 					    			if(customRadioInline1bk=='Yes')
@@ -789,11 +828,12 @@ function getPartBData(){
 					    		var ab=JSON.stringify(v[1]['ab']).replace(/['"]+/g, '');
 					    		var dc=JSON.stringify(v[2]['dc']).replace(/['"]+/g, '');
 					    		var gd=JSON.stringify(v[3]['gd']).replace(/['"]+/g, '');
+					    		var research1file=JSON.stringify(v[4]['research1file']).replace(/['"]+/g, '');
 					    		p++;
 					    		if(p!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200" value="'+ta+'"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200" value="'+ab+'"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control" value="'+dc+'"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control" value="'+gd+'"/></td></tr>');
+					    			$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200" value="'+ta+'"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200" value="'+ab+'"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control" value="'+dc+'"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control" value="'+gd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research1file'+(p+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research1file'+(p+1)+'" name="research1file[]" value="" placeholder=""><input type="hidden" name="research1filelocation[]" id="research1filelocation'+(p+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research1file+'" id="research1viewfile'+(p+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
 
 							        // $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
 							        $('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
@@ -807,6 +847,8 @@ function getPartBData(){
 					    			document.getElementById('ab'+(p+1)).value=ab;
 					    			document.getElementById('dc'+(p+1)).value=dc;
 					    			document.getElementById('gd'+(p+1)).value=gd;
+					    			document.getElementById('research1viewfile'+(p+1)).href="viewfile.php?location="+research1file;
+							    	document.getElementById('research1filelocation'+(p+1)).value=research1file;
 					    		}
 
 					    	}
@@ -821,11 +863,12 @@ function getPartBData(){
 					    		var aab=JSON.stringify(v[1]['aab']).replace(/['"]+/g, '');
 					    		var ddc=JSON.stringify(v[2]['ddc']).replace(/['"]+/g, '');
 					    		var ggd=JSON.stringify(v[3]['ggd']).replace(/['"]+/g, '');
+					    		var research2file=JSON.stringify(v[4]['research2file']).replace(/['"]+/g, '');
 					    		q++;
 					    		if(q!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200" value="'+tta+'"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200" value="'+aab+'"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control" value="'+ddc+'"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control" value="'+ggd+'"/></td></tr>');
+					    			$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200" value="'+tta+'"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200" value="'+aab+'"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control" value="'+ddc+'"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control" value="'+ggd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(q+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(q+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(q+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research2file+'" id="research2viewfile'+(q+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
 
 							        // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 							        $('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
@@ -839,6 +882,8 @@ function getPartBData(){
 					    			document.getElementById('aab'+(q+1)).value=aab;
 					    			document.getElementById('ddc'+(q+1)).value=ddc;
 					    			document.getElementById('ggd'+(q+1)).value=ggd;
+					    			document.getElementById('research2viewfile'+(q+1)).href="viewfile.php?location="+research2file;
+							    	document.getElementById('research2filelocation'+(q+1)).value=research2file;
 					    		}
 
 					    	}
@@ -853,10 +898,11 @@ function getPartBData(){
 					    		var acb=JSON.stringify(v[1]['acb']).replace(/['"]+/g, '');
 					    		var dcc=JSON.stringify(v[2]['dcc']).replace(/['"]+/g, '');
 					    		var gcd=JSON.stringify(v[3]['gcd']).replace(/['"]+/g, '');
+					    		var research3file=JSON.stringify(v[4]['research3file']).replace(/['"]+/g, '');
 					    		r++;
 					    		if(r!=0)
 					    		{
-					    			$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200" value="'+tca+'"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200" value="'+acb+'"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control" value="'+dcc+'"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control" value="'+gcd+'"/></td>');
+					    			$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200" value="'+tca+'"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200" value="'+acb+'"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control" value="'+dcc+'"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control" value="'+gcd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research3file'+(r+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research3file'+(r+1)+'" name="research3file[]" value="" placeholder=""><input type="hidden" name="research3filelocation[]" id="research3filelocation'+(r+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research3file+'" id="research3viewfile'+(r+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							        // $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
 							        $('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
@@ -870,6 +916,8 @@ function getPartBData(){
 					    			document.getElementById('acb'+(r+1)).value=acb;
 					    			document.getElementById('dcc'+(r+1)).value=dcc;
 					    			document.getElementById('gcd'+(r+1)).value=gcd;
+					    			document.getElementById('research3viewfile'+(r+1)).href="viewfile.php?location="+research3file;
+							    	document.getElementById('research3filelocation'+(r+1)).value=research3file;
 					    		}
 
 					    	}
@@ -882,10 +930,11 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var dpi=JSON.stringify(v[0]['dpi']).replace(/['"]+/g, '');
 					    		var drf=JSON.stringify(v[1]['drf']).replace(/['"]+/g, '');
+					    		var dfile=JSON.stringify(v[2]['dfile']).replace(/['"]+/g, '');
 					    		s++;
 					    		if(s!=0)
 					    		{
-					    			$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200" value="'+dpi+'"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control" value="'+drf+'"/></td>');
+					    			$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200" value="'+dpi+'"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control" value="'+drf+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+dfile+'" id=dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							      	// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
 							      	$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
@@ -897,6 +946,8 @@ function getPartBData(){
 					    			document.getElementById('pip'+(s+1)).value=s+1;
 					    			document.getElementById('dpi'+(s+1)).value=dpi;
 					    			document.getElementById('drf'+(s+1)).value=drf;
+					    			document.getElementById('dviewfile'+(s+1)).href="viewfile.php?location="+dfile;
+							    	document.getElementById('dfilelocation'+(s+1)).value=dfile;
 					    		}
 
 					    	}
@@ -910,10 +961,11 @@ function getPartBData(){
 					    		var cativ_dp=JSON.stringify(v[0]['cativ_dp']).replace(/['"]+/g, '');
 					    		var cativ_datee=JSON.stringify(v[1]['cativ_datee']).replace(/['"]+/g, '');
 					    		var cativ_o=JSON.stringify(v[2]['cativ_o']).replace(/['"]+/g, '');
+					    		var cativ1file=JSON.stringify(v[3]['cativ1file']).replace(/['"]+/g, '');
 					    		t++;
 					    		if(t!=0)
 					    		{
-					    			$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200" value="'+cativ_dp+'"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control" value="'+cativ_datee+'"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200" value="'+cativ_o+'"/></td>');
+					    			$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200" value="'+cativ_dp+'"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control" value="'+cativ_datee+'"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200" value="'+cativ_o+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ1file1+'" id=cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							        // $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
 							        $('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
@@ -926,6 +978,8 @@ function getPartBData(){
 					    			document.getElementById('cativ_dp'+(t+1)).value=cativ_dp;
 					    			document.getElementById('cativ_datee'+(t+1)).value=cativ_datee;
 					    			document.getElementById('cativ_o'+(t+1)).value=cativ_o;
+					    			document.getElementById('cativ1viewfile'+(t+1)).href="viewfile.php?location="+cativ1file;
+							    	document.getElementById('cativ1filelocation'+(t+1)).value=cativ1file;
 					    		}
 
 					    	}
@@ -939,10 +993,11 @@ function getPartBData(){
 					    		var cativ1_dp=JSON.stringify(v[0]['cativ1_dp']).replace(/['"]+/g, '');
 					    		var cativ1_datee=JSON.stringify(v[1]['cativ1_datee']).replace(/['"]+/g, '');
 					    		var cativ1_o=JSON.stringify(v[2]['cativ1_o']).replace(/['"]+/g, '');
+					    		var cativ2file=JSON.stringify(v[3]['cativ2file']).replace(/['"]+/g, '');
 					    		u++;
 					    		if(u!=0)
 					    		{
-					    			$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200" value="'+cativ1_dp+'"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control" value="'+cativ1_datee+'"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200" value="'+cativ1_o+'"/></td>');
+					    			$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200" value="'+cativ1_dp+'"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control" value="'+cativ1_datee+'"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200" value="'+cativ1_o+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ2file+'" id=cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 								    // $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
 								    $('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
@@ -955,6 +1010,8 @@ function getPartBData(){
 					    			document.getElementById('cativ1_dp'+(u+1)).value=cativ1_dp;
 					    			document.getElementById('cativ1_datee'+(u+1)).value=cativ1_datee;
 					    			document.getElementById('cativ1_o'+(u+1)).value=cativ1_o;
+					    			document.getElementById('cativ2viewfile'+(u+1)).href="viewfile.php?location="+cativ2file;
+							    	document.getElementById('cativ2filelocation'+(u+1)).value=cativ2file;
 					    		}
 
 					    	}
@@ -967,10 +1024,11 @@ function getPartBData(){
 					    		//replace applied to remove double quotes
 					    		var cativ2_dp=JSON.stringify(v[0]['cativ2_dp']).replace(/['"]+/g, '');
 					    		var cativ2=JSON.stringify(v[1]['cativ2']).replace(/['"]+/g, '');
+					    		var cativ3file=JSON.stringify(v[3]['cativ3file']).replace(/['"]+/g, '');
 					    		v1++;
 					    		if(v1!=0)
 					    		{
-					    			$('#addr16'+v1).html('<td id="creds'+(v1+1)+'">'+(v1+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v1+1)+'" class="form-control" maxlength="200" value="'+cativ2_dp+'"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v1+1)+'" class="form-control" maxlength="200" value="'+cativ2+'"/></td>');
+					    			$('#addr16'+v1).html('<td id="creds'+(v1+1)+'">'+(v1+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v1+1)+'" class="form-control" maxlength="200" value="'+cativ2_dp+'"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v1+1)+'" class="form-control" maxlength="200" value="'+cativ2+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v1+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v1+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v1+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ3file+'" id=cativ3viewfile'+(v1+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							        // $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
 							        $('#addr16'+v1).after('<tr id="addr16'+(v1+1)+'"></tr>');
@@ -982,6 +1040,8 @@ function getPartBData(){
 					    			document.getElementById('creds'+(v1+1)).value=v1+1;
 					    			document.getElementById('cativ2_dp'+(v1+1)).value=cativ2_dp;
 					    			document.getElementById('cativ2'+(v1+1)).value=cativ2;
+					    			document.getElementById('cativ3viewfile'+(v1+1)).href="viewfile.php?location="+cativ3file;
+							    	document.getElementById('cativ3filelocation'+(v1+1)).value=cativ3file;
 					    		}
 
 					    	}
