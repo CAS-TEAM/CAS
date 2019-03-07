@@ -582,8 +582,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o1file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o1file1" name="o1file[]" value="" placeholder="">
-											    <input type="hidden" name="o1filelocation[]" id="o1filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o1file1" name="o1file" value="" placeholder="">
+											    <input type="hidden" name="o1filelocation" id="o1filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -612,8 +612,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o2file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o2file1" name="o2file[]" value="" placeholder="">
-											    <input type="hidden" name="o2filelocation[]" id="o2filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o2file1" name="o2file" value="" placeholder="">
+											    <input type="hidden" name="o2filelocation" id="o2filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -642,8 +642,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o3file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o1file3" name="o3file[]" value="" placeholder="">
-											    <input type="hidden" name="o3filelocation[]" id="o3filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o1file3" name="o3file" value="" placeholder="">
+											    <input type="hidden" name="o3filelocation" id="o3filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -672,8 +672,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o4file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o4file1" name="o4file[]" value="" placeholder="">
-											    <input type="hidden" name="o4filelocation[]" id="o4filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o4file1" name="o4file" value="" placeholder="">
+											    <input type="hidden" name="o4filelocation" id="o4filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -702,8 +702,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o5file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o5file1" name="o5file[]" value="" placeholder="">
-											    <input type="hidden" name="o5filelocation[]" id="o5filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o5file1" name="o5file" value="" placeholder="">
+											    <input type="hidden" name="o5filelocation" id="o5filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -732,8 +732,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o6file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o6file1" name="o6file[]" value="" placeholder="">
-											    <input type="hidden" name="o6filelocation[]" id="o6filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o6file1" name="o6file" value="" placeholder="">
+											    <input type="hidden" name="o6filelocation" id="o6filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -762,8 +762,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o7file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o7file1" name="o7file[]" value="" placeholder="">
-											    <input type="hidden" name="o7filelocation[]" id="o7filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o7file1" name="o7file" value="" placeholder="">
+											    <input type="hidden" name="o7filelocation" id="o7filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -792,8 +792,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o8file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o8file1" name="o8file[]" value="" placeholder="">
-											    <input type="hidden" name="o8filelocation[]" id="o8filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o8file1" name="o8file" value="" placeholder="">
+											    <input type="hidden" name="o8filelocation" id="o8filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -822,8 +822,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o9file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o9file1" name="o9file[]" value="" placeholder="">
-											    <input type="hidden" name="o9filelocation[]" id="o9filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o9file1" name="o9file" value="" placeholder="">
+											    <input type="hidden" name="o9filelocation" id="o9filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -852,8 +852,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o10file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o10file1" name="o10file[]" value="" placeholder="">
-											    <input type="hidden" name="o10filelocation[]" id="o10filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o10file1" name="o10file" value="" placeholder="">
+											    <input type="hidden" name="o10filelocation" id="o10filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -882,8 +882,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o11file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o11file1" name="o11file[]" value="" placeholder="">
-											    <input type="hidden" name="o11filelocation[]" id="o11filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o11file1" name="o11file" value="" placeholder="">
+											    <input type="hidden" name="o11filelocation" id="o11filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -913,8 +913,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o12file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o12file1" name="o12file[]" value="" placeholder="">
-											    <input type="hidden" name="o12filelocation[]" id="o12filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o12file1" name="o12file" value="" placeholder="">
+											    <input type="hidden" name="o12filelocation" id="o12filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -943,8 +943,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="o13file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="o13file1" name="o13file[]" value="" placeholder="">
-											    <input type="hidden" name="o13filelocation[]" id="o13filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="o13file1" name="o13file" value="" placeholder="">
+											    <input type="hidden" name="o13filelocation" id="o13filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -996,8 +996,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e1file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e1file1" name="e1file[]" value="" placeholder="">
-											    <input type="hidden" name="e1filelocation[]" id="e1filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e1file1" name="e1file" value="" placeholder="">
+											    <input type="hidden" name="e1filelocation" id="e1filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1026,8 +1026,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e2file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e2file1" name="e2file[]" value="" placeholder="">
-											    <input type="hidden" name="e2filelocation[]" id="e2filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e2file1" name="e2file" value="" placeholder="">
+											    <input type="hidden" name="e2filelocation" id="e2filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1056,8 +1056,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e3file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e3file1" name="e3file[]" value="" placeholder="">
-											    <input type="hidden" name="e3filelocation[]" id="e3filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e3file1" name="e3file" value="" placeholder="">
+											    <input type="hidden" name="e3filelocation" id="e3filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1086,8 +1086,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e4file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e4file1" name="e4file[]" value="" placeholder="">
-											    <input type="hidden" name="e4filelocation[]" id="e4filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e4file1" name="e4file" value="" placeholder="">
+											    <input type="hidden" name="e4filelocation" id="e4filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1116,8 +1116,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e5file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e5file1" name="e5file[]" value="" placeholder="">
-											    <input type="hidden" name="e5filelocation[]" id="e5filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e5file1" name="e5file" value="" placeholder="">
+											    <input type="hidden" name="e5filelocation" id="e5filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1146,8 +1146,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e6file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e6file1" name="e6file[]" value="" placeholder="">
-											    <input type="hidden" name="e6filelocation[]" id="e6filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e6file1" name="e6file" value="" placeholder="">
+											    <input type="hidden" name="e6filelocation" id="e6filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1176,8 +1176,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e7file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e7file1" name="e7file[]" value="" placeholder="">
-											    <input type="hidden" name="e7filelocation[]" id="e7filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e7file1" name="e7file" value="" placeholder="">
+											    <input type="hidden" name="e7filelocation" id="e7filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1206,8 +1206,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e8file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e8file1" name="e8file[]" value="" placeholder="">
-											    <input type="hidden" name="e8filelocation[]" id="e8filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e8file1" name="e8file" value="" placeholder="">
+											    <input type="hidden" name="e8filelocation" id="e8filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1236,8 +1236,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e9file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e9file1" name="e9file[]" value="" placeholder="">
-											    <input type="hidden" name="e9filelocation[]" id="e9filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e9file1" name="e9file" value="" placeholder="">
+											    <input type="hidden" name="e9filelocation" id="e9filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1266,8 +1266,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e10file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e10file1" name="e10file[]" value="" placeholder="">
-											    <input type="hidden" name="e10filelocation[]" id="e10filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e10file1" name="e10file" value="" placeholder="">
+											    <input type="hidden" name="e10filelocation" id="e10filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1296,8 +1296,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e11file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e11file1" name="e11file[]" value="" placeholder="">
-											    <input type="hidden" name="e11filelocation[]" id="e11filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e11file1" name="e11file" value="" placeholder="">
+											    <input type="hidden" name="e11filelocation" id="e11filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1326,8 +1326,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e12file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e12file1" name="e12file[]" value="" placeholder="">
-											    <input type="hidden" name="e12filelocation[]" id="e12filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e12file1" name="e12file" value="" placeholder="">
+											    <input type="hidden" name="e12filelocation" id="e12filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1356,8 +1356,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="e13file1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="e13file1" name="e13file[]" value="" placeholder="">
-											    <input type="hidden" name="e13filelocation[]" id="e13filelocation1" value="">
+											    <input type="file" class="dynamic-four" id="e13file1" name="e13file" value="" placeholder="">
+											    <input type="hidden" name="e13filelocation" id="e13filelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -1632,8 +1632,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps1file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dps1file1" name="dps1file[]" value="" placeholder="">
-												    <input type="hidden" name="dps1filelocation[]" id="dps1filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dps1file1" name="dps1file" value="" placeholder="">
+												    <input type="hidden" name="dps1filelocation" id="dps1filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -1659,8 +1659,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps2file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dps2file1" name="dps2file[]" value="" placeholder="">
-												    <input type="hidden" name="dps2filelocation[]" id="dps2filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dps2file1" name="dps2file" value="" placeholder="">
+												    <input type="hidden" name="dps2filelocation" id="dps2filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -1686,8 +1686,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps3file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dps3file1" name="dps3file[]" value="" placeholder="">
-												    <input type="hidden" name="dps3filelocation[]" id="dps3filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dps3file1" name="dps3file" value="" placeholder="">
+												    <input type="hidden" name="dps3filelocation" id="dps3filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -1713,8 +1713,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps4file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dps4file1" name="dps4file[]" value="" placeholder="">
-												    <input type="hidden" name="dps4filelocation[]" id="dps4filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dps4file1" name="dps4file" value="" placeholder="">
+												    <input type="hidden" name="dps4filelocation" id="dps4filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -1740,8 +1740,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps5file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dp53file1" name="dps5file[]" value="" placeholder="">
-												    <input type="hidden" name="dps5filelocation[]" id="dps5filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dp53file1" name="dps5file" value="" placeholder="">
+												    <input type="hidden" name="dps5filelocation" id="dps5filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -1767,8 +1767,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps6file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dps6file1" name="dps6file[]" value="" placeholder="">
-												    <input type="hidden" name="dps6filelocation[]" id="dps6filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dps6file1" name="dps6file" value="" placeholder="">
+												    <input type="hidden" name="dps6filelocation" id="dps6filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -1794,8 +1794,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												    <label for="dps7file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="dps7file1" name="dps7file[]" value="" placeholder="">
-												    <input type="hidden" name="dps7filelocation[]" id="dps7filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="dps7file1" name="dps7file" value="" placeholder="">
+												    <input type="hidden" name="dps7filelocation" id="dps7filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
@@ -3542,8 +3542,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="phdfile1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="phdfile1" name="phdfile[]" value="" placeholder="">
-											    <input type="hidden" name="phdfilelocation[]" id="phdfilelocation1" value="">
+											    <input type="file" class="dynamic-four" id="phdfile1" name="phdfile" value="" placeholder="">
+											    <input type="hidden" name="phdfilelocation" id="phdfilelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -3650,8 +3650,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="mtechfile1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="mtechfile1" name="mtechfile[]" value="" placeholder="">
-											    <input type="hidden" name="mtechfilelocation[]" id="mtechfilelocation1" value="">
+											    <input type="file" class="dynamic-four" id="mtechfile1" name="mtechfile" value="" placeholder="">
+											    <input type="hidden" name="mtechfilelocation" id="mtechfilelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -3753,8 +3753,8 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 											    <label for="btechfile1" style="cursor:pointer">
 											        <img src="https://img.icons8.com/material/26/000000/attach.png">
 											    </label>
-											    <input type="file" class="dynamic-four" id="btechfile1" name="btechfile[]" value="" placeholder="">
-											    <input type="hidden" name="btechfilelocation[]" id="btechfilelocation1" value="">
+											    <input type="file" class="dynamic-four" id="btechfile1" name="btechfile" value="" placeholder="">
+											    <input type="hidden" name="btechfilelocation" id="btechfilelocation1" value="">
 											</div>
 										</div>
 										<div class="col-md-3" style="padding:0;margin:0">
@@ -4155,15 +4155,15 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 										<div class="row justify-content-center">
 											<div class="col-3 offset-md-3" style="padding:0;margin:0">
 												<div class="file-upload mx-auto" style="width:26px">
-												    <label for="research2file1" style="cursor:pointer">
+												    <label for="research3file1" style="cursor:pointer">
 												        <img src="https://img.icons8.com/material/26/000000/attach.png">
 												    </label>
-												    <input type="file" class="dynamic-four" id="research2file1" name="research2file[]" value="" placeholder="">
-												    <input type="hidden" name="research2filelocation[]" id="research2filelocation1" value="">
+												    <input type="file" class="dynamic-four" id="research3file1" name="research3file[]" value="" placeholder="">
+												    <input type="hidden" name="research3filelocation[]" id="research3filelocation1" value="">
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
-												<a href="viewfile.php?location=none" id="research2viewfile1" target="_blank">
+												<a href="viewfile.php?location=none" id="research3viewfile1" target="_blank">
 													<img src="https://img.icons8.com/ios/24/000000/document.png">
 												</a>										
 											</div>
