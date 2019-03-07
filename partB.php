@@ -5350,7 +5350,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
       		// $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
       		$('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
       		v++; 
-      		document.getElementById("v").value=v;
+      		document.getElementById("v1").value=v;
   		});
      	$("#delete_row14").click(function(){
      		var v=parseInt(document.getElementById('v1').value);
@@ -5358,7 +5358,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 		 		$("#addr16"+(v-1)).html('');
 		 		$("#addr16"+(v)).remove();
 		 		v--;
-		 		document.getElementById("v").value=v;
+		 		document.getElementById("v1").value=v;
 		 	}
 		});
 	});
