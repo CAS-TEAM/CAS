@@ -4304,7 +4304,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
-												<a href="viewfile.php?location=none" id=dviewfile1" target="_blank">
+												<a href="viewfile.php?location=none" id="dviewfile1" target="_blank">
 													<img src="https://img.icons8.com/ios/24/000000/document.png">
 												</a>										
 											</div>
@@ -4470,7 +4470,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
-												<a href="viewfile.php?location=none" id=cativ1viewfile1" target="_blank">
+												<a href="viewfile.php?location=none" id="cativ1viewfile1" target="_blank">
 													<img src="https://img.icons8.com/ios/24/000000/document.png">
 												</a>										
 											</div>
@@ -4613,7 +4613,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
-												<a href="viewfile.php?location=none" id=cativ2viewfile1" target="_blank">
+												<a href="viewfile.php?location=none" id="cativ2viewfile1" target="_blank">
 													<img src="https://img.icons8.com/ios/24/000000/document.png">
 												</a>										
 											</div>
@@ -4749,7 +4749,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
-												<a href="viewfile.php?location=none" id=cativ3viewfile1" target="_blank">
+												<a href="viewfile.php?location=none" id="cativ3viewfile1" target="_blank">
 													<img src="https://img.icons8.com/ios/24/000000/document.png">
 												</a>										
 											</div>
@@ -5266,7 +5266,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
       	// var s=1;      	
      	$("#add_row11").click(function(){
      		var s=parseInt(document.getElementById('s').value);
-      		$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id=dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
       		$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
@@ -5292,7 +5292,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
       	// var t=1;      
      	$("#add_row12").click(function(){
      		var t=parseInt(document.getElementById('t').value);
-     		$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id=cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+     		$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
       		$('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
@@ -5318,7 +5318,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
       	// var u=1;      
      	$("#add_row13").click(function(){
      		var u=parseInt(document.getElementById('u').value);
-      		$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id=cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
       		$('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
@@ -5345,7 +5345,7 @@ $cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
       	// var v=1;      
      	$("#add_row14").click(function(){
      		var v=parseInt(document.getElementById('v1').value);
-      		$('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id=cativ3viewfile'+(v+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ3viewfile'+(v+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
       		$('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
