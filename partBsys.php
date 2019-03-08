@@ -708,10 +708,9 @@ if($alreadybegun==1)
 		{
 			if($ctefilelocation[$j]!="")
 			{
-				if(move_uploaded_file($tmpFilePath, $dest)) {
-					$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','$ctefilelocation[$j]')";
-					$result2=mysqli_query($conn,$sql2);
-				}
+				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','$ctefilelocation[$j]')";
+				$result2=mysqli_query($conn,$sql2);
+				
 			}
 			else
 			{
@@ -742,10 +741,9 @@ if($alreadybegun==1)
 		{
 			if($darfilelocation[$k]!="")
 			{
-				if(move_uploaded_file($tmpFilePath, $dest)) {
-					$sql3="INSERT INTO part_b_cat_1_dar (formId, dara, darb, darfile) VALUES ('$formId','$dara[$k]', '$darb[$k]', '$darfilelocation[$k]')";
-					$result3=mysqli_query($conn,$sql3);
-				}
+				$sql3="INSERT INTO part_b_cat_1_dar (formId, dara, darb, darfile) VALUES ('$formId','$dara[$k]', '$darb[$k]', '$darfilelocation[$k]')";
+				$result3=mysqli_query($conn,$sql3);
+				
 			}
 			else
 			{

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2019 at 06:12 PM
+-- Generation Time: Mar 08, 2019 at 06:44 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -427,7 +427,7 @@ CREATE TABLE `part_b_cat_1` (
 --
 
 INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oepstest1`, `o1file`, `odpstest2`, `oepstest2`, `o2file`, `odtest1in`, `oetest1in`, `o3file`, `odtest2in`, `oetest2in`, `o4file`, `odtest1ass`, `oetest1ass`, `o5file`, `odtest2ass`, `oetest2ass`, `o6file`, `odeseps`, `oeeseps`, `o7file`, `odesein`, `oeesein`, `o8file`, `odeseth`, `oeeseth`, `o9file`, `odesepo`, `oeesepo`, `o10file`, `odesere_ass`, `oeesere_ass`, `o11file`, `odproofr`, `oeproofr`, `o12file`, `odopenday`, `oeopenday`, `o13file`, `edpstest1`, `eepstest1`, `e1file`, `edpstest2`, `eepstest2`, `e2file`, `edtest1in`, `eetest1in`, `e3file`, `edtest2in`, `eetest2in`, `e4file`, `edtest1ass`, `eetest1ass`, `e5file`, `edtest2ass`, `eetest2ass`, `e6file`, `edeseps`, `eeeseps`, `e7file`, `edesein`, `eeesein`, `e8file`, `edeseth`, `eeeseth`, `e9file`, `edesepo`, `eeesepo`, `e10file`, `edesere_ass`, `eeesere_ass`, `e11file`, `edproofr`, `eeproofr`, `e12file`, `edopenday`, `eeopenday`, `e13file`, `dpstest1`, `dps1file`, `dpstest2`, `dps2file`, `dtest1in`, `dps3file`, `dtest2in`, `dps4file`, `dtest1ass`, `dps5file`, `dtest2ass`, `dps6file`, `deseps`, `dps7file`, `avg_ap`) VALUES
-(1, 1, 0, 0, 'ffj', '89', '', 'uhi', '98', '', 'huy', '98', '', 'hb', '98', '', 'hb', '98', '', 'uhb', '09', '', 'uyb', '98', '', 'u98', '8', '', 'as', '5', '', 'ljk', '84', '', 'gjgj', '5', '', 'hjhb', '5454', '', 'bvhb', '5454', '', 'bbh', '51', '', 'vg', '5', '', 'vh', '45', '', 'bu', '9', '', 'hyv', '48', '', 'vgy', '8', '', 'hu', '375', '', 'hu', '537', '', 'jn', '46', '', 'k', '56', '', 'ok', '65', '', 'jh', '26', '', 'jb', '54', '', 'kjfj', '', 'hj', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 28),
+(1, 1, 0, 0, 'ffj', '89', 'users/manish.potey@somaiya.edu/13259643_1283674768370253_1197858746_n.jpg', 'uhi', '98', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg', 'huy', '98', 'users/manish.potey@somaiya.edu/download.jpg', 'hb', '98', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'hb', '98', 'users/manish.potey@somaiya.edu/CM2.jpg', 'uhb', '09', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 'uyb', '98', 'users/manish.potey@somaiya.edu/13259643_1283674768370253_1197858746_n.jpg', 'u98', '8', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg', 'as', '5', 'users/manish.potey@somaiya.edu/http-%2F%2Fhypebeast.com%2Fimage%2F2017%2F09%2Fpost-malone-apple-music-single-week-streaming-record-0.jpg', 'ljk', '84', 'users/manish.potey@somaiya.edu/ChxynyJVAAAGmt_.jpg', 'gjgj', '5', 'users/manish.potey@somaiya.edu/cristiano-ronaldo.jpg', 'hjhb', '5454', 'users/manish.potey@somaiya.edu/napoleon death quote.png', 'bvhb', '5454', 'users/manish.potey@somaiya.edu/zDo-gAo0_400x400.jpg', 'bbh', '51', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 'vg', '5', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg', 'vh', '45', 'users/manish.potey@somaiya.edu/Elon-Musk-Wallpapers-HD.jpg', 'bu', '9', 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 'hyv', '48', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'vgy', '8', 'users/manish.potey@somaiya.edu/13259643_1283674768370253_1197858746_n.jpg', 'hu', '375', 'users/manish.potey@somaiya.edu/http-%2F%2Fhypebeast.com%2Fimage%2F2017%2F09%2Fpost-malone-apple-music-single-week-streaming-record-0.jpg', 'hu', '537', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'jn', '46', 'users/manish.potey@somaiya.edu/cristiano-ronaldo.jpg', 'k', '56', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'ok', '65', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'jh', '26', 'users/manish.potey@somaiya.edu/fUsGyKV.jpg', 'jb', '54', 'users/manish.potey@somaiya.edu/infinito.jpg', 'kjfj', '', 'hj', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 28),
 (2, 2, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
 (3, 3, 0, 0, 'hjsdj', '6', '', 'jh', '54', '', 'hjb', '54', '', 'bhj', '5', '', 'se', '2', '', 'dsv', '5', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
 (4, 4, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0);
@@ -457,10 +457,9 @@ CREATE TABLE `part_b_cat_1_cte` (
 --
 
 INSERT INTO `part_b_cat_1_cte` (`id`, `formId`, `ctecourse`, `ctetyprlpt`, `cteugpg`, `cteclasssemester`, `ctehrsweek`, `ctehrsengaged`, `ctemaxhrs`, `ctec`, `ctefile`) VALUES
-(26, 1, 'jvjh', 'hg', 'hg', 'gh', 145, 58, 548, 5, ''),
-(27, 1, 'jh', 'jn', 'jn', 'jn', 48, 48, 5, 5, ''),
-(28, 1, 'jvjh', 'hg', 'hg', 'ghey', 145, 58, 548, 5, ''),
-(29, 1, 'hug', 'ieiu', 'uhu', 'uuhiu', 56, 43, 32, 35, '');
+(99, 1, 'jvjh', 'hg', 'hg', 'ghey', 145, 58, 548, 5, 'NAN'),
+(100, 1, 'hug', 'ieiu', 'uhu', 'uuhiu', 56, 43, 32, 35, 'NAN'),
+(101, 1, 'cte', '', '', '', 0, 0, 0, 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -491,9 +490,10 @@ INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctou
 (4, 2, 'asd', 'a', 'dw', 'w', 12, 21, 1, 2, ''),
 (25, 3, 'iuhf', 'iuh', 'iuh', 'iuh', 1, 3, 23, 43, ''),
 (26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1, ''),
-(27, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87, ''),
-(28, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76, ''),
-(29, 4, 'qw', 'eqw', 'w', 'qwe', 1, 12, -1, 2, '');
+(29, 4, 'qw', 'eqw', 'w', 'qwe', 1, 12, -1, 2, ''),
+(72, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87, 'NAN'),
+(73, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76, 'NAN'),
+(74, 1, 'cto', '', '', '', 0, 0, 0, 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -514,10 +514,8 @@ CREATE TABLE `part_b_cat_1_dar` (
 --
 
 INSERT INTO `part_b_cat_1_dar` (`id`, `formId`, `dara`, `darb`, `darfile`) VALUES
-(27, 1, 'asdasd', 'asdasd', ''),
-(28, 1, 'asdef', 'rb', ''),
-(29, 1, 'asdasd424', 'asdasd42', ''),
-(30, 1, 'yo', 'ou', '');
+(86, 1, 'asdasd424', 'asdasd42', 'NAN'),
+(87, 1, 'yo', 'ou', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -562,8 +560,11 @@ CREATE TABLE `part_b_cat_2_act` (
 --
 
 INSERT INTO `part_b_cat_2_act` (`id`, `formId`, `ea`, `eb`, `efile`) VALUES
-(23, 1, 'jn', 'ijn', ''),
-(24, 1, 'ijn', 'ijn', '');
+(80, 1, 'jn', 'ijn', 'NAN'),
+(81, 1, 'ijn', 'ijn', 'NAN'),
+(82, 1, 'act', 'ac', 'NAN'),
+(83, 1, 'act2', 'ac', 'NAN'),
+(84, 1, 'act3', 'acc', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -584,9 +585,9 @@ CREATE TABLE `part_b_cat_2_c` (
 --
 
 INSERT INTO `part_b_cat_2_c` (`id`, `formId`, `ca`, `cb`, `cfile`) VALUES
-(26, 1, 'kjn', 'jkn', ''),
-(27, 1, 'kjn', 'kjn', ''),
-(28, 1, '5323vsd', 'sfe2', '');
+(77, 1, 'kjn', 'jkn', 'NAN'),
+(78, 1, 'kjn', 'kjn', 'NAN'),
+(79, 1, 'nba', 'nb', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -607,9 +608,11 @@ CREATE TABLE `part_b_cat_2_exc` (
 --
 
 INSERT INTO `part_b_cat_2_exc` (`id`, `formId`, `eca`, `ecb`, `ecfile`) VALUES
-(34, 1, 'jn', 'ijn', ''),
-(35, 1, 'jb', 'hjb', ''),
-(36, 1, '53', '1daf', '');
+(97, 1, 'jn', 'ijn', 'NAN'),
+(98, 1, 'jb', 'hjb', 'NAN'),
+(99, 1, '53', '1daf', 'NAN'),
+(100, 1, 'exc', 'ac', 'NAN'),
+(101, 1, 'exc2', 'ss', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -630,9 +633,11 @@ CREATE TABLE `part_b_cat_2_ha` (
 --
 
 INSERT INTO `part_b_cat_2_ha` (`id`, `formId`, `ha`, `hb`, `hfile`) VALUES
-(26, 1, 'jnf', 'in', ''),
-(27, 1, 'ijn', 'ijn', ''),
-(28, 1, 'ter', 'qwe', '');
+(89, 1, 'jnf', 'in', 'NAN'),
+(90, 1, 'ijn', 'ijn', 'NAN'),
+(91, 1, 'ter', 'qwe', 'NAN'),
+(92, 1, 'admins', 'ams', 'NAN'),
+(93, 1, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -663,15 +668,28 @@ CREATE TABLE `part_b_cat_3` (
 
 INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `phdfile`, `mtechne`, `mtechts`, `mtechda`, `mtechfile`, `btechne`, `btechts`, `btechda`, `btechfile`) VALUES
 (1, 2, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(2, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(3, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(4, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(5, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(6, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(7, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(2, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(3, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(4, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(5, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(6, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(7, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
 (8, 3, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(9, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
-(10, 4, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, '');
+(9, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(10, 4, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(11, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(12, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(13, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(14, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(15, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(16, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(17, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(18, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(19, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(20, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(21, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(22, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png'),
+(23, 1, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 0, 0, 0, 'users/manish.potey@somaiya.edu/nice back.png');
 
 -- --------------------------------------------------------
 
@@ -697,8 +715,8 @@ CREATE TABLE `part_b_cat_3_bk` (
 --
 
 INSERT INTO `part_b_cat_3_bk` (`id`, `formId`, `pptitlebk`, `ppnprbk`, `ppisbnbk`, `ppdatebk`, `ppifbk`, `customRadioInline1bk`, `ppncabk`, `pp3file`) VALUES
-(11, 1, 'yeet', 'egr', 'erge', '2019-01-16', 'qwe', '', 'dqdw', ''),
-(12, 1, 'jeoe', 'ihiuh', 'jhg', '2019-01-16', 'kh', 'No', 'oihlijo', '');
+(41, 1, 'yeet', 'egr', 'erge', '2019-01-16', 'qwe', '', 'dqdw', 'users/manish.potey@somaiya.edu/13259643_1283674768370253_1197858746_n.jpg'),
+(42, 1, 'jeoe', 'ihiuh', 'jhg', '2019-01-16', 'kh', 'No', 'oihlijo', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -721,7 +739,8 @@ CREATE TABLE `part_b_cat_3_cres` (
 --
 
 INSERT INTO `part_b_cat_3_cres` (`id`, `formId`, `tca`, `acb`, `dcc`, `gcd`, `research3file`) VALUES
-(7, 1, 'er', 'ty', '2019-01-09', 56, '');
+(24, 1, 'er', 'ty', '2019-01-09', 56, 'users/manish.potey@somaiya.edu/MEAGL.png'),
+(25, 1, 'cres', '', '0000-00-00', 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -744,7 +763,7 @@ CREATE TABLE `part_b_cat_3_ores` (
 --
 
 INSERT INTO `part_b_cat_3_ores` (`id`, `formId`, `tta`, `aab`, `ddc`, `ggd`, `research2file`) VALUES
-(7, 1, 'yu', 'nm', '2019-01-02', 89, '');
+(22, 1, 'yu', 'nm', '2019-01-02', 89, 'users/manish.potey@somaiya.edu/7160610404_f57bd6db8f_n.jpg');
 
 -- --------------------------------------------------------
 
@@ -765,7 +784,7 @@ CREATE TABLE `part_b_cat_3_pip` (
 --
 
 INSERT INTO `part_b_cat_3_pip` (`id`, `formId`, `dpi`, `drf`, `dfile`) VALUES
-(7, 1, 'er', '2019-01-09', '');
+(22, 1, 'er', '2019-01-09', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg');
 
 -- --------------------------------------------------------
 
@@ -790,8 +809,8 @@ CREATE TABLE `part_b_cat_3_pp` (
 --
 
 INSERT INTO `part_b_cat_3_pp` (`id`, `formId`, `pptitle`, `ppnpr`, `ppisbn`, `ppif`, `customRadioInline1`, `ppnca`, `ppfile`) VALUES
-(10, 1, 'hey', '34', '123', 'sd', '', '12', ''),
-(11, 1, 'retu', 'wew', 'qwq', 'ree', 'No', '12', '');
+(40, 1, 'hey', '34', '123', 'sd', '', '12', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
+(41, 1, 'retu', 'wew', 'qwq', 'ree', 'No', '12', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -816,8 +835,8 @@ CREATE TABLE `part_b_cat_3_ppic` (
 --
 
 INSERT INTO `part_b_cat_3_ppic` (`id`, `formId`, `pptitleic`, `ppnpric`, `ppisbnic`, `ppific`, `customRadioInline1ic`, `ppncaic`, `pp1file`) VALUES
-(10, 1, 'ghi', '12', 'as', '34', '', '12', ''),
-(11, 1, 'HI', 'io', 'ojoi', 'jk', 'No', 'kln', '');
+(40, 1, 'ghi', '12', 'as', '34', '', '12', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
+(41, 1, 'HI', 'io', 'ojoi', 'jk', 'No', 'kln', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -842,9 +861,9 @@ CREATE TABLE `part_b_cat_3_ppinc` (
 --
 
 INSERT INTO `part_b_cat_3_ppinc` (`id`, `formId`, `pptitleinc`, `ppnprinc`, `ppisbnpinc`, `ppifinc`, `customRadioInline1inc`, `ppncainc`, `pp2file`) VALUES
-(13, 1, 'He3', 'NS2', '57021', 'byt', '', '23', ''),
-(14, 1, 'asd', 'asd', 'fe', 'we', 'No', '123', ''),
-(15, 1, 'hola', 'afwe', 'wew23', 'ewwewewe', 'No', '3', '');
+(58, 1, 'He3', 'NS2', '57021', 'byt', '', '23', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg'),
+(59, 1, 'asd', 'asd', 'fe', 'we', 'No', '123', 'NAN'),
+(60, 1, 'hola', 'afwe', 'wew23', 'ewwewewe', 'No', '3', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -867,8 +886,8 @@ CREATE TABLE `part_b_cat_3_res` (
 --
 
 INSERT INTO `part_b_cat_3_res` (`id`, `formId`, `ta`, `ab`, `dc`, `gd`, `research1file`) VALUES
-(10, 1, 'ewr', 're', '2019-01-10', 34, ''),
-(11, 1, 'ge', 'er', '2019-01-09', 5, '');
+(40, 1, 'ewr', 're', '2019-01-10', 34, 'users/manish.potey@somaiya.edu/591235.jpg'),
+(41, 1, 'ge', 'er', '2019-01-09', 5, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -895,7 +914,22 @@ INSERT INTO `part_b_cat_4` (`id`, `formId`) VALUES
 (7, 1),
 (8, 3),
 (9, 1),
-(10, 4);
+(10, 4),
+(11, 1),
+(12, 1),
+(13, 1),
+(14, 1),
+(15, 1),
+(16, 1),
+(17, 1),
+(18, 1),
+(19, 1),
+(20, 1),
+(21, 1),
+(22, 1),
+(23, 1),
+(24, 1),
+(25, 1);
 
 -- --------------------------------------------------------
 
@@ -916,7 +950,8 @@ CREATE TABLE `part_b_cat_4_creds` (
 --
 
 INSERT INTO `part_b_cat_4_creds` (`id`, `formId`, `cativ2_dp`, `cativ2`, `cativ3file`) VALUES
-(7, 1, '23', '34', '');
+(24, 1, '23', '34', 'users/manish.potey@somaiya.edu/1_2.jpg'),
+(25, 1, 'fef', '', 'users/manish.potey@somaiya.edu/2_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -938,7 +973,7 @@ CREATE TABLE `part_b_cat_4_inv` (
 --
 
 INSERT INTO `part_b_cat_4_inv` (`id`, `formId`, `cativ1_dp`, `cativ1_datee`, `cativ1_o`, `cativ2file`) VALUES
-(7, 1, '23', '2019-01-09', '234', '');
+(22, 1, '23', '2019-01-09', '234', 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg');
 
 -- --------------------------------------------------------
 
@@ -960,7 +995,7 @@ CREATE TABLE `part_b_cat_4_sem` (
 --
 
 INSERT INTO `part_b_cat_4_sem` (`id`, `formId`, `cativ_dp`, `cativ_datee`, `cativ_o`, `cativ1file`) VALUES
-(7, 1, '43', '2019-01-10', '45', '');
+(22, 1, '43', '2019-01-10', '45', 'users/manish.potey@somaiya.edu/christ-the-redeemer-rio-de-janeiro-brazil-south-america.jpg');
 
 -- --------------------------------------------------------
 
@@ -1391,17 +1426,17 @@ ALTER TABLE `part_b_cat_1`
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
 ALTER TABLE `part_b_cat_1_cte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cto`
 --
 ALTER TABLE `part_b_cat_1_cto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_dar`
 --
 ALTER TABLE `part_b_cat_1_dar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
@@ -1411,87 +1446,87 @@ ALTER TABLE `part_b_cat_2`
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
 ALTER TABLE `part_b_cat_2_act`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_c`
 --
 ALTER TABLE `part_b_cat_2_c`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_exc`
 --
 ALTER TABLE `part_b_cat_2_exc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_ha`
 --
 ALTER TABLE `part_b_cat_2_ha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
 ALTER TABLE `part_b_cat_3_bk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_cres`
 --
 ALTER TABLE `part_b_cat_3_cres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ores`
 --
 ALTER TABLE `part_b_cat_3_ores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pip`
 --
 ALTER TABLE `part_b_cat_3_pip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pp`
 --
 ALTER TABLE `part_b_cat_3_pp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppic`
 --
 ALTER TABLE `part_b_cat_3_ppic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppinc`
 --
 ALTER TABLE `part_b_cat_3_ppinc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_res`
 --
 ALTER TABLE `part_b_cat_3_res`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
 ALTER TABLE `part_b_cat_4_creds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_inv`
 --
 ALTER TABLE `part_b_cat_4_inv`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_sem`
 --
 ALTER TABLE `part_b_cat_4_sem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `part_b_table`
 --
