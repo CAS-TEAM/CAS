@@ -1102,7 +1102,10 @@ function getPartBData(){
 
 $(document).ready(function(){
 	$(".dynamic-four").change(function (){
-       	$("label[for='" + $(this).attr('id') + "']").addClass('border border-primary');;
+		// alert("he");
+		var pin=$("label[for='" + $(this).attr('id') + "']").children('img');
+       	pin.attr('src',"https://img.icons8.com/color/48/000000/attach.png");
+       	pin.css({"width":"26px","height":"26px"});
     });
 });
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FORM APPRAISAL ENABLE INPUTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
