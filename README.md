@@ -18,3 +18,9 @@ Now create a database inside your phpmyadmin panel called "cas_db". Once this is
 <h3>HOD Member POV</h3>
 
 ![](cas_hod.gif)
+
+<h3>Important Points to Note</h3>
+
+1. Configure your php.ini file as follows:
+
+	Edit the line that says `max_file_uploads = 20`(or any number) to `max_file_uploads = 500`

@@ -303,11 +303,19 @@ function getPartBData(){
 					$.each(res, function(key, v) {
 					    //display the key and value pair
 					    // alert("k="+k+" v="+v);
-					    if(key!="part_b_cat_1_cto" && key!="part_b_cat_1_cte" && key!="part_b_cat_1_dar" && key!="part_b_cat_2_ha" && key!="part_b_cat_2_act" && key!="part_b_cat_2_exc" && key!="part_b_cat_2_c" && key!="part_b_cat_3_pp" && key!="part_b_cat_3_ppic" && key!="part_b_cat_3_ppinc" && key!="part_b_cat_3_bk" && key!="part_b_cat_3_res" && key!="part_b_cat_3_ores" && key!="part_b_cat_3_cres" && key!="part_b_cat_3_pip" && key!="part_b_cat_4_sem" && key!="part_b_cat_4_inv" && key!="part_b_cat_4_creds")
+					    if(key!="part_b_cat_1_cto" && key!="part_b_cat_1_cte" && key!="part_b_cat_1_dar" && key!="part_b_cat_2_ha" && key!="part_b_cat_2_act" && key!="part_b_cat_2_exc" && key!="part_b_cat_2_c" && key!="part_b_cat_3_pp" && key!="part_b_cat_3_ppic" && key!="part_b_cat_3_ppinc" && key!="part_b_cat_3_bk" && key!="part_b_cat_3_res" && key!="part_b_cat_3_ores" && key!="part_b_cat_3_cres" && key!="part_b_cat_3_pip" && key!="part_b_cat_4_sem" && key!="part_b_cat_4_inv" && key!="part_b_cat_4_creds" && key!="o1file" && key!="o2file" && key!="o3file" && key!="o4file" && key!="o5file" && key!="o6file" && key!="o7file" && key!="o8file" && key!="o9file" && key!="o10file" && key!="o11file" && key!="o12file" && key!="o13file" && key!="e1file" && key!="e2file" && key!="e3file" && key!="e4file" && key!="e5file" && key!="e6file" && key!="e7file" && key!="e8file" && key!="e9file" && key!="e10file" && key!="e11file" && key!="e12file" && key!="e13file" && key!="dps1file" && key!="dps2file" && key!="dps3file" && key!="dps4file" && key!="dps5file" && key!="dps6file" && key!="dps7file" && key!="phdfile" && key!="mtechfile" && key!="btechfile")
 					    {
 					    	// alert("here");
-					    	// alert("k="+k+" v="+v);
+					    	// alert("k="+key+" v="+v);
 					    	document.getElementById(key).value=v;
+					    	$("#"+key).prop("disabled", true);
+					    }
+					    else if(key=="o1file" || key=="o2file" || key=="o3file" || key=="o4file" || key=="o5file" || key=="o6file" || key=="o7file" || key=="o8file" || key=="o9file" || key=="o10file" || key=="o11file" || key=="o12file" || key=="o13file" || key=="e1file" || key=="e2file" || key=="e3file" || key=="e4file" || key=="e5file" || key=="e6file" || key=="e7file" || key=="e8file" || key=="e9file" || key=="e10file" || key=="e11file" || key=="e12file" || key=="e13file" || key=="dps1file" || key=="dps2file" || key=="dps3file" || key=="dps4file" || key=="dps5file" || key=="dps6file" || key=="dps7file" || key=="phdfile" || key=="mtechfile" || key=="btechfile")
+					    {
+					    	// alert(key+","+v);
+					    	document.getElementById(key+"location").value=v;
+					    	var ss=key.substring(0, key.indexOf('f'));//gets the part before "file" in key
+					    	document.getElementById(ss+'viewfile').href="viewfile.php?location="+v;
 					    	$("#"+key).prop("disabled", true);
 					    }
 					    else

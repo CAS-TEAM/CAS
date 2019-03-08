@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2019 at 06:24 PM
+-- Generation Time: Mar 07, 2019 at 06:12 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -234,11 +234,11 @@ CREATE TABLE `part_a_doc` (
 INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `file`) VALUES
 (1, 1, 1, 'KJSCE', 3, 'Kj Agency', ''),
 (2, 1, 2, 'Open Ceremony', 5, 'Kj Agency 2', ''),
-(82, 2, 5, 'Hola', 4, 'KJOOO', 'users/manish.potey@somaiya.edu/2_1.jpg'),
-(83, 2, 4, 'KJOJ', 4, 'KJOJ', 'users/manish.potey@somaiya.edu/napoleon death quote.png'),
-(84, 2, 2, 'KJSCE 2', 2, 'SKSCOAC', 'users/manish.potey@somaiya.edu/CM2.jpg'),
-(85, 2, 1, 'KJSCE', 5, 'KJSCE', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
-(86, 2, 3, 'KJSCE 3', 3, 'KJSCOC', 'NAN');
+(87, 2, 3, 'KJSCE 3', 3, 'KJSCOC', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
+(88, 2, 1, 'KJSCE', 5, 'KJSCE', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
+(89, 2, 2, 'KJSCE 2', 2, 'SKSCOAC', 'users/manish.potey@somaiya.edu/2_1.jpg'),
+(90, 2, 4, 'KJOJ', 4, 'KJOJ', 'users/manish.potey@somaiya.edu/napoleon death quote.png'),
+(91, 2, 5, 'Hola', 4, 'KJOOO', 'users/manish.potey@somaiya.edu/2_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -329,63 +329,96 @@ CREATE TABLE `part_b_cat_1` (
   `total_c` float NOT NULL,
   `odpstest1` varchar(200) NOT NULL,
   `oepstest1` varchar(200) NOT NULL,
+  `o1file` varchar(200) NOT NULL,
   `odpstest2` varchar(200) NOT NULL,
   `oepstest2` varchar(200) NOT NULL,
+  `o2file` varchar(200) NOT NULL,
   `odtest1in` varchar(200) NOT NULL,
   `oetest1in` varchar(200) NOT NULL,
+  `o3file` varchar(200) NOT NULL,
   `odtest2in` varchar(200) NOT NULL,
   `oetest2in` varchar(200) NOT NULL,
+  `o4file` varchar(200) NOT NULL,
   `odtest1ass` varchar(200) NOT NULL,
   `oetest1ass` varchar(200) NOT NULL,
+  `o5file` varchar(200) NOT NULL,
   `odtest2ass` varchar(200) NOT NULL,
   `oetest2ass` varchar(200) NOT NULL,
+  `o6file` varchar(200) NOT NULL,
   `odeseps` varchar(200) NOT NULL,
   `oeeseps` varchar(200) NOT NULL,
+  `o7file` varchar(200) NOT NULL,
   `odesein` varchar(200) NOT NULL,
   `oeesein` varchar(200) NOT NULL,
+  `o8file` varchar(200) NOT NULL,
   `odeseth` varchar(200) NOT NULL,
   `oeeseth` varchar(200) NOT NULL,
+  `o9file` varchar(200) NOT NULL,
   `odesepo` varchar(200) NOT NULL,
   `oeesepo` varchar(200) NOT NULL,
+  `o10file` varchar(200) NOT NULL,
   `odesere_ass` varchar(200) NOT NULL,
   `oeesere_ass` varchar(200) NOT NULL,
+  `o11file` varchar(200) NOT NULL,
   `odproofr` varchar(200) NOT NULL,
   `oeproofr` varchar(200) NOT NULL,
+  `o12file` varchar(200) NOT NULL,
   `odopenday` varchar(200) NOT NULL,
   `oeopenday` varchar(200) NOT NULL,
+  `o13file` varchar(200) NOT NULL,
   `edpstest1` varchar(200) NOT NULL,
   `eepstest1` varchar(200) NOT NULL,
+  `e1file` varchar(200) NOT NULL,
   `edpstest2` varchar(200) NOT NULL,
   `eepstest2` varchar(200) NOT NULL,
+  `e2file` varchar(200) NOT NULL,
   `edtest1in` varchar(200) NOT NULL,
   `eetest1in` varchar(200) NOT NULL,
+  `e3file` varchar(200) NOT NULL,
   `edtest2in` varchar(200) NOT NULL,
   `eetest2in` varchar(200) NOT NULL,
+  `e4file` varchar(200) NOT NULL,
   `edtest1ass` varchar(200) NOT NULL,
   `eetest1ass` varchar(200) NOT NULL,
+  `e5file` varchar(200) NOT NULL,
   `edtest2ass` varchar(200) NOT NULL,
   `eetest2ass` varchar(200) NOT NULL,
+  `e6file` varchar(200) NOT NULL,
   `edeseps` varchar(200) NOT NULL,
   `eeeseps` varchar(200) NOT NULL,
+  `e7file` varchar(200) NOT NULL,
   `edesein` varchar(200) NOT NULL,
   `eeesein` varchar(200) NOT NULL,
+  `e8file` varchar(200) NOT NULL,
   `edeseth` varchar(200) NOT NULL,
   `eeeseth` varchar(200) NOT NULL,
+  `e9file` varchar(200) NOT NULL,
   `edesepo` varchar(200) NOT NULL,
   `eeesepo` varchar(200) NOT NULL,
+  `e10file` varchar(200) NOT NULL,
   `edesere_ass` varchar(200) NOT NULL,
   `eeesere_ass` varchar(200) NOT NULL,
+  `e11file` varchar(200) NOT NULL,
   `edproofr` varchar(200) NOT NULL,
   `eeproofr` varchar(200) NOT NULL,
+  `e12file` varchar(200) NOT NULL,
   `edopenday` varchar(200) NOT NULL,
   `eeopenday` varchar(200) NOT NULL,
+  `e13file` varchar(200) NOT NULL,
   `dpstest1` varchar(200) NOT NULL,
+  `dps1file` varchar(200) NOT NULL,
   `dpstest2` varchar(200) NOT NULL,
+  `dps2file` varchar(200) NOT NULL,
   `dtest1in` varchar(200) NOT NULL,
+  `dps3file` varchar(200) NOT NULL,
   `dtest2in` varchar(200) NOT NULL,
+  `dps4file` varchar(200) NOT NULL,
   `dtest1ass` varchar(200) NOT NULL,
+  `dps5file` varchar(200) NOT NULL,
   `dtest2ass` varchar(200) NOT NULL,
+  `dps6file` varchar(200) NOT NULL,
   `deseps` varchar(200) NOT NULL,
+  `dps7file` varchar(200) NOT NULL,
   `avg_ap` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -393,11 +426,11 @@ CREATE TABLE `part_b_cat_1` (
 -- Dumping data for table `part_b_cat_1`
 --
 
-INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oepstest1`, `odpstest2`, `oepstest2`, `odtest1in`, `oetest1in`, `odtest2in`, `oetest2in`, `odtest1ass`, `oetest1ass`, `odtest2ass`, `oetest2ass`, `odeseps`, `oeeseps`, `odesein`, `oeesein`, `odeseth`, `oeeseth`, `odesepo`, `oeesepo`, `odesere_ass`, `oeesere_ass`, `odproofr`, `oeproofr`, `odopenday`, `oeopenday`, `edpstest1`, `eepstest1`, `edpstest2`, `eepstest2`, `edtest1in`, `eetest1in`, `edtest2in`, `eetest2in`, `edtest1ass`, `eetest1ass`, `edtest2ass`, `eetest2ass`, `edeseps`, `eeeseps`, `edesein`, `eeesein`, `edeseth`, `eeeseth`, `edesepo`, `eeesepo`, `edesere_ass`, `eeesere_ass`, `edproofr`, `eeproofr`, `edopenday`, `eeopenday`, `dpstest1`, `dpstest2`, `dtest1in`, `dtest2in`, `dtest1ass`, `dtest2ass`, `deseps`, `avg_ap`) VALUES
-(1, 1, 0, 0, 'ffj', '89', 'uhi', '98', 'huy', '98', 'hb', '98', 'hb', '98', 'uhb', '09', 'uyb', '98', 'u98', '8', 'as', '5', 'ljk', '84', 'gjgj', '5', 'hjhb', '5454', 'bvhb', '5454', 'bbh', '51', 'vg', '5', 'vh', '45', 'bu', '9', 'hyv', '48', 'vgy', '8', 'hu', '375', 'hu', '537', 'jn', '46', 'k', '56', 'ok', '65', 'jh', '26', 'jb', '54', 'kjfj', 'hj', 'hg', 'hg', 'hg', 'hg', 'hg', 28),
-(2, 2, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(3, 3, 0, 0, 'hjsdj', '6', 'jh', '54', 'hjb', '54', 'bhj', '5', 'se', '2', 'dsv', '5', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(4, 4, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0);
+INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oepstest1`, `o1file`, `odpstest2`, `oepstest2`, `o2file`, `odtest1in`, `oetest1in`, `o3file`, `odtest2in`, `oetest2in`, `o4file`, `odtest1ass`, `oetest1ass`, `o5file`, `odtest2ass`, `oetest2ass`, `o6file`, `odeseps`, `oeeseps`, `o7file`, `odesein`, `oeesein`, `o8file`, `odeseth`, `oeeseth`, `o9file`, `odesepo`, `oeesepo`, `o10file`, `odesere_ass`, `oeesere_ass`, `o11file`, `odproofr`, `oeproofr`, `o12file`, `odopenday`, `oeopenday`, `o13file`, `edpstest1`, `eepstest1`, `e1file`, `edpstest2`, `eepstest2`, `e2file`, `edtest1in`, `eetest1in`, `e3file`, `edtest2in`, `eetest2in`, `e4file`, `edtest1ass`, `eetest1ass`, `e5file`, `edtest2ass`, `eetest2ass`, `e6file`, `edeseps`, `eeeseps`, `e7file`, `edesein`, `eeesein`, `e8file`, `edeseth`, `eeeseth`, `e9file`, `edesepo`, `eeesepo`, `e10file`, `edesere_ass`, `eeesere_ass`, `e11file`, `edproofr`, `eeproofr`, `e12file`, `edopenday`, `eeopenday`, `e13file`, `dpstest1`, `dps1file`, `dpstest2`, `dps2file`, `dtest1in`, `dps3file`, `dtest2in`, `dps4file`, `dtest1ass`, `dps5file`, `dtest2ass`, `dps6file`, `deseps`, `dps7file`, `avg_ap`) VALUES
+(1, 1, 0, 0, 'ffj', '89', '', 'uhi', '98', '', 'huy', '98', '', 'hb', '98', '', 'hb', '98', '', 'uhb', '09', '', 'uyb', '98', '', 'u98', '8', '', 'as', '5', '', 'ljk', '84', '', 'gjgj', '5', '', 'hjhb', '5454', '', 'bvhb', '5454', '', 'bbh', '51', '', 'vg', '5', '', 'vh', '45', '', 'bu', '9', '', 'hyv', '48', '', 'vgy', '8', '', 'hu', '375', '', 'hu', '537', '', 'jn', '46', '', 'k', '56', '', 'ok', '65', '', 'jh', '26', '', 'jb', '54', '', 'kjfj', '', 'hj', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 28),
+(2, 2, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(3, 3, 0, 0, 'hjsdj', '6', '', 'jh', '54', '', 'hjb', '54', '', 'bhj', '5', '', 'se', '2', '', 'dsv', '5', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(4, 4, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -415,18 +448,19 @@ CREATE TABLE `part_b_cat_1_cte` (
   `ctehrsweek` float NOT NULL,
   `ctehrsengaged` float NOT NULL,
   `ctemaxhrs` float NOT NULL,
-  `ctec` float NOT NULL
+  `ctec` float NOT NULL,
+  `ctefile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_1_cte`
 --
 
-INSERT INTO `part_b_cat_1_cte` (`id`, `formId`, `ctecourse`, `ctetyprlpt`, `cteugpg`, `cteclasssemester`, `ctehrsweek`, `ctehrsengaged`, `ctemaxhrs`, `ctec`) VALUES
-(26, 1, 'jvjh', 'hg', 'hg', 'gh', 145, 58, 548, 5),
-(27, 1, 'jh', 'jn', 'jn', 'jn', 48, 48, 5, 5),
-(28, 1, 'jvjh', 'hg', 'hg', 'ghey', 145, 58, 548, 5),
-(29, 1, 'hug', 'ieiu', 'uhu', 'uuhiu', 56, 43, 32, 35);
+INSERT INTO `part_b_cat_1_cte` (`id`, `formId`, `ctecourse`, `ctetyprlpt`, `cteugpg`, `cteclasssemester`, `ctehrsweek`, `ctehrsengaged`, `ctemaxhrs`, `ctec`, `ctefile`) VALUES
+(26, 1, 'jvjh', 'hg', 'hg', 'gh', 145, 58, 548, 5, ''),
+(27, 1, 'jh', 'jn', 'jn', 'jn', 48, 48, 5, 5, ''),
+(28, 1, 'jvjh', 'hg', 'hg', 'ghey', 145, 58, 548, 5, ''),
+(29, 1, 'hug', 'ieiu', 'uhu', 'uuhiu', 56, 43, 32, 35, '');
 
 -- --------------------------------------------------------
 
@@ -444,21 +478,22 @@ CREATE TABLE `part_b_cat_1_cto` (
   `ctohrsweek` float NOT NULL,
   `ctohrsengaged` float NOT NULL,
   `ctomaxhrs` float NOT NULL,
-  `ctoc` float NOT NULL
+  `ctoc` float NOT NULL,
+  `ctofile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_1_cto`
 --
 
-INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctougpg`, `ctoclasssemester`, `ctohrsweek`, `ctohrsengaged`, `ctomaxhrs`, `ctoc`) VALUES
-(3, 2, 'asd', 'sd', 'wd', 'wd', 12, 3, 2, 3),
-(4, 2, 'asd', 'a', 'dw', 'w', 12, 21, 1, 2),
-(25, 3, 'iuhf', 'iuh', 'iuh', 'iuh', 1, 3, 23, 43),
-(26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1),
-(27, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87),
-(28, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76),
-(29, 4, 'qw', 'eqw', 'w', 'qwe', 1, 12, -1, 2);
+INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctougpg`, `ctoclasssemester`, `ctohrsweek`, `ctohrsengaged`, `ctomaxhrs`, `ctoc`, `ctofile`) VALUES
+(3, 2, 'asd', 'sd', 'wd', 'wd', 12, 3, 2, 3, ''),
+(4, 2, 'asd', 'a', 'dw', 'w', 12, 21, 1, 2, ''),
+(25, 3, 'iuhf', 'iuh', 'iuh', 'iuh', 1, 3, 23, 43, ''),
+(26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1, ''),
+(27, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87, ''),
+(28, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76, ''),
+(29, 4, 'qw', 'eqw', 'w', 'qwe', 1, 12, -1, 2, '');
 
 -- --------------------------------------------------------
 
@@ -470,18 +505,19 @@ CREATE TABLE `part_b_cat_1_dar` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `dara` varchar(200) NOT NULL,
-  `darb` varchar(200) NOT NULL
+  `darb` varchar(200) NOT NULL,
+  `darfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_1_dar`
 --
 
-INSERT INTO `part_b_cat_1_dar` (`id`, `formId`, `dara`, `darb`) VALUES
-(27, 1, 'asdasd', 'asdasd'),
-(28, 1, 'asdef', 'rb'),
-(29, 1, 'asdasd424', 'asdasd42'),
-(30, 1, 'yo', 'ou');
+INSERT INTO `part_b_cat_1_dar` (`id`, `formId`, `dara`, `darb`, `darfile`) VALUES
+(27, 1, 'asdasd', 'asdasd', ''),
+(28, 1, 'asdef', 'rb', ''),
+(29, 1, 'asdasd424', 'asdasd42', ''),
+(30, 1, 'yo', 'ou', '');
 
 -- --------------------------------------------------------
 
@@ -517,16 +553,17 @@ CREATE TABLE `part_b_cat_2_act` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `ea` varchar(200) NOT NULL,
-  `eb` varchar(200) NOT NULL
+  `eb` varchar(200) NOT NULL,
+  `efile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_2_act`
 --
 
-INSERT INTO `part_b_cat_2_act` (`id`, `formId`, `ea`, `eb`) VALUES
-(23, 1, 'jn', 'ijn'),
-(24, 1, 'ijn', 'ijn');
+INSERT INTO `part_b_cat_2_act` (`id`, `formId`, `ea`, `eb`, `efile`) VALUES
+(23, 1, 'jn', 'ijn', ''),
+(24, 1, 'ijn', 'ijn', '');
 
 -- --------------------------------------------------------
 
@@ -538,17 +575,18 @@ CREATE TABLE `part_b_cat_2_c` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `ca` varchar(200) NOT NULL,
-  `cb` varchar(200) NOT NULL
+  `cb` varchar(200) NOT NULL,
+  `cfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_2_c`
 --
 
-INSERT INTO `part_b_cat_2_c` (`id`, `formId`, `ca`, `cb`) VALUES
-(26, 1, 'kjn', 'jkn'),
-(27, 1, 'kjn', 'kjn'),
-(28, 1, '5323vsd', 'sfe2');
+INSERT INTO `part_b_cat_2_c` (`id`, `formId`, `ca`, `cb`, `cfile`) VALUES
+(26, 1, 'kjn', 'jkn', ''),
+(27, 1, 'kjn', 'kjn', ''),
+(28, 1, '5323vsd', 'sfe2', '');
 
 -- --------------------------------------------------------
 
@@ -560,17 +598,18 @@ CREATE TABLE `part_b_cat_2_exc` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `eca` varchar(200) NOT NULL,
-  `ecb` varchar(200) NOT NULL
+  `ecb` varchar(200) NOT NULL,
+  `ecfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_2_exc`
 --
 
-INSERT INTO `part_b_cat_2_exc` (`id`, `formId`, `eca`, `ecb`) VALUES
-(34, 1, 'jn', 'ijn'),
-(35, 1, 'jb', 'hjb'),
-(36, 1, '53', '1daf');
+INSERT INTO `part_b_cat_2_exc` (`id`, `formId`, `eca`, `ecb`, `ecfile`) VALUES
+(34, 1, 'jn', 'ijn', ''),
+(35, 1, 'jb', 'hjb', ''),
+(36, 1, '53', '1daf', '');
 
 -- --------------------------------------------------------
 
@@ -582,17 +621,18 @@ CREATE TABLE `part_b_cat_2_ha` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `ha` varchar(200) NOT NULL,
-  `hb` varchar(200) NOT NULL
+  `hb` varchar(200) NOT NULL,
+  `hfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_2_ha`
 --
 
-INSERT INTO `part_b_cat_2_ha` (`id`, `formId`, `ha`, `hb`) VALUES
-(26, 1, 'jnf', 'in'),
-(27, 1, 'ijn', 'ijn'),
-(28, 1, 'ter', 'qwe');
+INSERT INTO `part_b_cat_2_ha` (`id`, `formId`, `ha`, `hb`, `hfile`) VALUES
+(26, 1, 'jnf', 'in', ''),
+(27, 1, 'ijn', 'ijn', ''),
+(28, 1, 'ter', 'qwe', '');
 
 -- --------------------------------------------------------
 
@@ -606,29 +646,32 @@ CREATE TABLE `part_b_cat_3` (
   `phdne` int(11) NOT NULL,
   `phdts` int(11) NOT NULL,
   `phdda` int(11) NOT NULL,
+  `phdfile` varchar(200) NOT NULL,
   `mtechne` int(11) NOT NULL,
   `mtechts` int(11) NOT NULL,
   `mtechda` int(11) NOT NULL,
+  `mtechfile` varchar(200) NOT NULL,
   `btechne` int(11) NOT NULL,
   `btechts` int(11) NOT NULL,
-  `btechda` int(11) NOT NULL
+  `btechda` int(11) NOT NULL,
+  `btechfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3`
 --
 
-INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `mtechne`, `mtechts`, `mtechda`, `btechne`, `btechts`, `btechda`) VALUES
-(1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(4, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(6, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(7, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(8, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(9, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(10, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `phdfile`, `mtechne`, `mtechts`, `mtechda`, `mtechfile`, `btechne`, `btechts`, `btechda`, `btechfile`) VALUES
+(1, 2, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(2, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(3, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(4, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(5, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(6, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(7, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(8, 3, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(9, 1, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, ''),
+(10, 4, 0, 0, 0, '', 0, 0, 0, '', 0, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -645,16 +688,17 @@ CREATE TABLE `part_b_cat_3_bk` (
   `ppdatebk` date NOT NULL,
   `ppifbk` varchar(200) NOT NULL,
   `customRadioInline1bk` varchar(200) NOT NULL,
-  `ppncabk` varchar(200) NOT NULL
+  `ppncabk` varchar(200) NOT NULL,
+  `pp3file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_bk`
 --
 
-INSERT INTO `part_b_cat_3_bk` (`id`, `formId`, `pptitlebk`, `ppnprbk`, `ppisbnbk`, `ppdatebk`, `ppifbk`, `customRadioInline1bk`, `ppncabk`) VALUES
-(11, 1, 'yeet', 'egr', 'erge', '2019-01-16', 'qwe', '', 'dqdw'),
-(12, 1, 'jeoe', 'ihiuh', 'jhg', '2019-01-16', 'kh', 'No', 'oihlijo');
+INSERT INTO `part_b_cat_3_bk` (`id`, `formId`, `pptitlebk`, `ppnprbk`, `ppisbnbk`, `ppdatebk`, `ppifbk`, `customRadioInline1bk`, `ppncabk`, `pp3file`) VALUES
+(11, 1, 'yeet', 'egr', 'erge', '2019-01-16', 'qwe', '', 'dqdw', ''),
+(12, 1, 'jeoe', 'ihiuh', 'jhg', '2019-01-16', 'kh', 'No', 'oihlijo', '');
 
 -- --------------------------------------------------------
 
@@ -668,15 +712,16 @@ CREATE TABLE `part_b_cat_3_cres` (
   `tca` varchar(200) NOT NULL,
   `acb` varchar(200) NOT NULL,
   `dcc` date NOT NULL,
-  `gcd` int(11) NOT NULL
+  `gcd` int(11) NOT NULL,
+  `research3file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_cres`
 --
 
-INSERT INTO `part_b_cat_3_cres` (`id`, `formId`, `tca`, `acb`, `dcc`, `gcd`) VALUES
-(7, 1, 'er', 'ty', '2019-01-09', 56);
+INSERT INTO `part_b_cat_3_cres` (`id`, `formId`, `tca`, `acb`, `dcc`, `gcd`, `research3file`) VALUES
+(7, 1, 'er', 'ty', '2019-01-09', 56, '');
 
 -- --------------------------------------------------------
 
@@ -690,15 +735,16 @@ CREATE TABLE `part_b_cat_3_ores` (
   `tta` varchar(200) NOT NULL,
   `aab` varchar(200) NOT NULL,
   `ddc` date NOT NULL,
-  `ggd` int(11) NOT NULL
+  `ggd` int(11) NOT NULL,
+  `research2file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_ores`
 --
 
-INSERT INTO `part_b_cat_3_ores` (`id`, `formId`, `tta`, `aab`, `ddc`, `ggd`) VALUES
-(7, 1, 'yu', 'nm', '2019-01-02', 89);
+INSERT INTO `part_b_cat_3_ores` (`id`, `formId`, `tta`, `aab`, `ddc`, `ggd`, `research2file`) VALUES
+(7, 1, 'yu', 'nm', '2019-01-02', 89, '');
 
 -- --------------------------------------------------------
 
@@ -710,15 +756,16 @@ CREATE TABLE `part_b_cat_3_pip` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `dpi` varchar(200) NOT NULL,
-  `drf` date NOT NULL
+  `drf` date NOT NULL,
+  `dfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_pip`
 --
 
-INSERT INTO `part_b_cat_3_pip` (`id`, `formId`, `dpi`, `drf`) VALUES
-(7, 1, 'er', '2019-01-09');
+INSERT INTO `part_b_cat_3_pip` (`id`, `formId`, `dpi`, `drf`, `dfile`) VALUES
+(7, 1, 'er', '2019-01-09', '');
 
 -- --------------------------------------------------------
 
@@ -734,16 +781,17 @@ CREATE TABLE `part_b_cat_3_pp` (
   `ppisbn` varchar(200) NOT NULL,
   `ppif` varchar(200) NOT NULL,
   `customRadioInline1` varchar(200) NOT NULL,
-  `ppnca` varchar(200) NOT NULL
+  `ppnca` varchar(200) NOT NULL,
+  `ppfile` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_pp`
 --
 
-INSERT INTO `part_b_cat_3_pp` (`id`, `formId`, `pptitle`, `ppnpr`, `ppisbn`, `ppif`, `customRadioInline1`, `ppnca`) VALUES
-(10, 1, 'hey', '34', '123', 'sd', '', '12'),
-(11, 1, 'retu', 'wew', 'qwq', 'ree', 'No', '12');
+INSERT INTO `part_b_cat_3_pp` (`id`, `formId`, `pptitle`, `ppnpr`, `ppisbn`, `ppif`, `customRadioInline1`, `ppnca`, `ppfile`) VALUES
+(10, 1, 'hey', '34', '123', 'sd', '', '12', ''),
+(11, 1, 'retu', 'wew', 'qwq', 'ree', 'No', '12', '');
 
 -- --------------------------------------------------------
 
@@ -759,16 +807,17 @@ CREATE TABLE `part_b_cat_3_ppic` (
   `ppisbnic` varchar(200) NOT NULL,
   `ppific` varchar(200) NOT NULL,
   `customRadioInline1ic` varchar(200) NOT NULL,
-  `ppncaic` varchar(200) NOT NULL
+  `ppncaic` varchar(200) NOT NULL,
+  `pp1file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_ppic`
 --
 
-INSERT INTO `part_b_cat_3_ppic` (`id`, `formId`, `pptitleic`, `ppnpric`, `ppisbnic`, `ppific`, `customRadioInline1ic`, `ppncaic`) VALUES
-(10, 1, 'ghi', '12', 'as', '34', '', '12'),
-(11, 1, 'HI', 'io', 'ojoi', 'jk', 'No', 'kln');
+INSERT INTO `part_b_cat_3_ppic` (`id`, `formId`, `pptitleic`, `ppnpric`, `ppisbnic`, `ppific`, `customRadioInline1ic`, `ppncaic`, `pp1file`) VALUES
+(10, 1, 'ghi', '12', 'as', '34', '', '12', ''),
+(11, 1, 'HI', 'io', 'ojoi', 'jk', 'No', 'kln', '');
 
 -- --------------------------------------------------------
 
@@ -784,17 +833,18 @@ CREATE TABLE `part_b_cat_3_ppinc` (
   `ppisbnpinc` varchar(200) NOT NULL,
   `ppifinc` varchar(200) NOT NULL,
   `customRadioInline1inc` varchar(200) NOT NULL,
-  `ppncainc` varchar(200) NOT NULL
+  `ppncainc` varchar(200) NOT NULL,
+  `pp2file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_ppinc`
 --
 
-INSERT INTO `part_b_cat_3_ppinc` (`id`, `formId`, `pptitleinc`, `ppnprinc`, `ppisbnpinc`, `ppifinc`, `customRadioInline1inc`, `ppncainc`) VALUES
-(13, 1, 'He3', 'NS2', '57021', 'byt', '', '23'),
-(14, 1, 'asd', 'asd', 'fe', 'we', 'No', '123'),
-(15, 1, 'hola', 'afwe', 'wew23', 'ewwewewe', 'No', '3');
+INSERT INTO `part_b_cat_3_ppinc` (`id`, `formId`, `pptitleinc`, `ppnprinc`, `ppisbnpinc`, `ppifinc`, `customRadioInline1inc`, `ppncainc`, `pp2file`) VALUES
+(13, 1, 'He3', 'NS2', '57021', 'byt', '', '23', ''),
+(14, 1, 'asd', 'asd', 'fe', 'we', 'No', '123', ''),
+(15, 1, 'hola', 'afwe', 'wew23', 'ewwewewe', 'No', '3', '');
 
 -- --------------------------------------------------------
 
@@ -808,16 +858,17 @@ CREATE TABLE `part_b_cat_3_res` (
   `ta` varchar(200) NOT NULL,
   `ab` varchar(200) NOT NULL,
   `dc` date NOT NULL,
-  `gd` int(11) NOT NULL
+  `gd` int(11) NOT NULL,
+  `research1file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_3_res`
 --
 
-INSERT INTO `part_b_cat_3_res` (`id`, `formId`, `ta`, `ab`, `dc`, `gd`) VALUES
-(10, 1, 'ewr', 're', '2019-01-10', 34),
-(11, 1, 'ge', 'er', '2019-01-09', 5);
+INSERT INTO `part_b_cat_3_res` (`id`, `formId`, `ta`, `ab`, `dc`, `gd`, `research1file`) VALUES
+(10, 1, 'ewr', 're', '2019-01-10', 34, ''),
+(11, 1, 'ge', 'er', '2019-01-09', 5, '');
 
 -- --------------------------------------------------------
 
@@ -856,15 +907,16 @@ CREATE TABLE `part_b_cat_4_creds` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
   `cativ2_dp` varchar(200) NOT NULL,
-  `cativ2` varchar(200) NOT NULL
+  `cativ2` varchar(200) NOT NULL,
+  `cativ3file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_4_creds`
 --
 
-INSERT INTO `part_b_cat_4_creds` (`id`, `formId`, `cativ2_dp`, `cativ2`) VALUES
-(7, 1, '23', '34');
+INSERT INTO `part_b_cat_4_creds` (`id`, `formId`, `cativ2_dp`, `cativ2`, `cativ3file`) VALUES
+(7, 1, '23', '34', '');
 
 -- --------------------------------------------------------
 
@@ -877,15 +929,16 @@ CREATE TABLE `part_b_cat_4_inv` (
   `formId` int(11) NOT NULL,
   `cativ1_dp` varchar(200) NOT NULL,
   `cativ1_datee` date NOT NULL,
-  `cativ1_o` varchar(200) NOT NULL
+  `cativ1_o` varchar(200) NOT NULL,
+  `cativ2file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_4_inv`
 --
 
-INSERT INTO `part_b_cat_4_inv` (`id`, `formId`, `cativ1_dp`, `cativ1_datee`, `cativ1_o`) VALUES
-(7, 1, '23', '2019-01-09', '234');
+INSERT INTO `part_b_cat_4_inv` (`id`, `formId`, `cativ1_dp`, `cativ1_datee`, `cativ1_o`, `cativ2file`) VALUES
+(7, 1, '23', '2019-01-09', '234', '');
 
 -- --------------------------------------------------------
 
@@ -898,15 +951,16 @@ CREATE TABLE `part_b_cat_4_sem` (
   `formId` int(11) NOT NULL,
   `cativ_dp` varchar(200) NOT NULL,
   `cativ_datee` date NOT NULL,
-  `cativ_o` varchar(200) NOT NULL
+  `cativ_o` varchar(200) NOT NULL,
+  `cativ1file` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `part_b_cat_4_sem`
 --
 
-INSERT INTO `part_b_cat_4_sem` (`id`, `formId`, `cativ_dp`, `cativ_datee`, `cativ_o`) VALUES
-(7, 1, '43', '2019-01-10', '45');
+INSERT INTO `part_b_cat_4_sem` (`id`, `formId`, `cativ_dp`, `cativ_datee`, `cativ_o`, `cativ1file`) VALUES
+(7, 1, '43', '2019-01-10', '45', '');
 
 -- --------------------------------------------------------
 
@@ -1317,7 +1371,7 @@ ALTER TABLE `partb_cat4_pi`
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
