@@ -2466,6 +2466,66 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+    $('body').on('click','#partb_cat3_piii11_btn',function(e){
+    	e.preventDefault();
+        // alert("as");
+        //alert(sessionId);
+        var cat3_piii11_self_a = document.getElementById('cat3_piii11_self_a').value;
+
+	    var cat3_piii11_hod_a=-1;
+	    if($("#cat3_piii11_hod_a").length)
+	    {
+	     	cat3_piii11_hod_a=document.getElementById('cat3_piii11_hod_a').value;
+	    }
+	   	var cat3_piii11_committee_a=-1;
+	   	if($("#cat3_piii11_committee_a").length)
+	    {
+			cat3_piii11_committee_a=document.getElementById('cat3_piii11_committee_a').value;
+	   	}
+
+	   	var year=document.getElementById('year').value;
+	   	var userId=document.getElementById('formFacultyId').value;
+
+	   	// alert(parta_gpi_hod_a);
+
+	    $.ajax   
+	    ({
+	        type: 'POST',
+	        url: 'partb_cat3_piii11_sys.php',       
+	        data:{
+	        	cat3_piii11_self_a:cat3_piii11_self_a,
+	        	cat3_piii11_hod_a:cat3_piii11_hod_a,
+	        	cat3_piii11_committee_a:cat3_piii11_committee_a,
+	        	year:year,
+	        	userId:userId
+	        },                        
+	        success: function (response) 
+	        {
+	        	// alert(response);
+	            if(response.trim()=="success")
+	            {
+	            	document.getElementById("partb_cat3_piii11_msg").innerHTML="Saved!";
+	            	// alert("sucessgful");
+	                // $('.notif').css('background-color', '#EAEAEA');
+	                // document.getElementById("notificationsNumber").innerHTML=0;
+	                
+	                // if(window.location.pathname=='/meagl.com/userprofile.php'document.getElementById("notificationsNumberUP")){
+	                //     document.getElementById("notificationsNumberUP").innerHTML="unseen: "+0;
+	                // }
+	            }
+	            
+	        },                
+	        error: function(xhr, status, error) {
+	        	alert("error");
+	            alert(xhr.responseText);
+	        }              
+	    });        
+
+    });
+});
+
+
+$(document).ready(function(){
     $('body').on('click','#partb_cat3_piiitotal_btn',function(e){
     	e.preventDefault();
         // alert("as");
