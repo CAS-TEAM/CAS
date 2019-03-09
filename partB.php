@@ -114,6 +114,9 @@ $cat3_piii9_committee_a=$rowzz['cat3_piii9_committee_a'];
 $cat3_piii10_self_a=$rowzz['cat3_piii10_self_a'];
 $cat3_piii10_hod_a=$rowzz['cat3_piii10_hod_a'];
 $cat3_piii10_committee_a=$rowzz['cat3_piii10_committee_a'];
+$cat3_piii11_self_a=$rowzz['cat3_piii11_self_a'];
+$cat3_piii11_hod_a=$rowzz['cat3_piii11_hod_a'];
+$cat3_piii11_committee_a=$rowzz['cat3_piii11_committee_a'];
 $cat3_piiitotal_self_a=$rowzz['cat3_piiitotal_self_a'];
 $cat3_piiitotal_hod_a=$rowzz['cat3_piiitotal_hod_a'];
 $cat3_piiitotal_committee_a=$rowzz['cat3_piiitotal_committee_a'];
@@ -4280,6 +4283,86 @@ include 'left-nav.php';
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p>25 Marks each for patent/intellectual property received and 10 each for filed in the academic year</p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-4 offset-md-9">
+					<label class="col-form-label"><b>PI =
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop1-cat3-d" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+					</b>
+					</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop1-cat3-d" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control selfapp" id="cat3_piii11_self_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_self_a; ?>"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control hodapp" id="cat3_piii11_hod_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_hod_a; ?>"></td>
+
+												<?php
+									      	}
+
+									 
+									      	
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<td><input class="form-control commapp" id="cat3_piii11_committee_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_committee_a; ?>"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+									      
+									    </tr>
+									 </tbody>
+									</table>
+									<p id="partb_cat3_piii11_msg"></p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="partb_cat3_piii11_btn" class="btn btn-primary">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
