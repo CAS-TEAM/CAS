@@ -1,8 +1,8 @@
 <?php
 
-$userId=mysqli_real_escape_string($conn,$_SESSION['id']);
+$uid=mysqli_real_escape_string($conn,$_SESSION['id']);
 
-$sqlp="SELECT profilePicLocation, faculty_name, hod, committee FROM faculty_table WHERE id='$userId'";
+$sqlp="SELECT profilePicLocation, faculty_name, hod, committee FROM faculty_table WHERE id='$uid'";
 $resultp=mysqli_query($conn,$sqlp);
 
 $rowp=mysqli_fetch_assoc($resultp);

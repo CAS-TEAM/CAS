@@ -10,10 +10,10 @@ if(isset($_SESSION['id']))
 	$userId=mysqli_real_escape_string($conn,$_POST['userId']);
 	$year=mysqli_real_escape_string($conn,$_POST['year']);
 
-	// $sqle="SELECT email FROM faculty_table WHERE id='$userId'";
-	// $resulte=mysqli_query($conn,$sqle);
-	// $rowe=mysqli_fetch_assoc($resulte);
-	// $email=mysqli_real_escape_string($conn,$rowe['email']);
+	$sqle="SELECT email FROM faculty_table WHERE id='$userId'";
+	$resulte=mysqli_query($conn,$sqle);
+	$rowe=mysqli_fetch_assoc($resulte);
+	$email=mysqli_real_escape_string($conn,$rowe['email']);
 
 	// $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
 	$correct_parta=mysqli_real_escape_string($conn,$_POST['correct_parta']);
@@ -48,6 +48,22 @@ if(isset($_SESSION['id']))
 
 	$sql="INSERT INTO summary_comm_table (year, facultyId, correct_parta, exaggerated_parta, remarks_parta, current_academicA, pi_academicA, correct_partbi, exaggerated_partbi, remarks_partbi, current_academicBI, pi_academicBI, correct_partbii, exaggerated_partbii, remarks_partbii, current_academicBII, pi_academicBII, correct_partbiii, exaggerated_partbiii, remarks_partbiii, current_academicBIII, pi_academicBIII, correct_partbiv, exaggerated_partbiv, remarks_partbiv, current_academicBIV, pi_academicBIV, last_academicBIV_avg_comm, pi_academicBIV_avg_comm, last_academicBIV_avgpi_comm, final_recomm) VALUES ('$year', '$userId', '$correct_parta', '$exaggerated_parta', '$remarks_parta', '$current_academicA', '$pi_academicA', '$correct_partbi', '$exaggerated_partbi', '$remarks_partbi', '$current_academicBI', '$pi_academicBI', '$correct_partbii', '$exaggerated_partbii', '$remarks_partbii', '$current_academicBII', '$pi_academicBII', '$correct_partbiii', '$exaggerated_partbiii', '$remarks_partbiii', '$current_academicBIII', '$pi_academicBIII', '$correct_partbiv', '$exaggerated_partbiv', '$remarks_partbiv', '$current_academicBIV', '$pi_academicBIV', '$last_academicBIV_avg_comm', '$pi_academicBIV_avg_comm', '$last_academicBIV_avgpi_comm', '$final_recomm')";
 	$result=mysqli_query($conn,$sql);
+
+	$pyear=$year-1;
+
+	$cas_approved=mysqli_real_escape_string($conn,$_POST['casapproval']);
+	$sqlx="INSERT INTO cas_approval_table (facultyId, cas_approved, currentyear, previousyear) VALUES ('$userId', '$cas_approved', '$year', '$pyear')";
+	$resultx=mysqli_query($conn,$sqlx);
+
+	$to      = 'sharvai_spqr@yahoo.com';
+	// $to 	 =  $email;
+	$subject = 'CAS Application status';
+	$message = 'Your Application for CAS has been '.$cas_approved;
+	$headers = 'From: pandu@gmail.com' . "\r\n" .
+	    'Reply-To: sharvai101@gmail.com' . "\r\n" .
+	    'X-Mailer: PHP/' . phpversion();
+
+	mail($to, $subject, $message, $headers);
 
 	header("LOCATION: summary.php?id=".$userId."&updated=1");
 

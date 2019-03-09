@@ -156,7 +156,39 @@ include 'left-nav.php';
 			        	
 			      	</div>
 			    </div>
+			    <?php
+			    $currentyear=date("Y");
+				$previousyear=$currentyear-1;
+				// echo $currentyear;
+			    $sqlx="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$userId' AND currentyear='$currentyear' AND previousyear='$previousyear'";
+			    $resultx=mysqli_query($conn,$sqlx);
+			    if(mysqli_num_rows($resultx)>0)
+			    {
+			    	$rowx=mysqli_fetch_assoc($resultx);
+			    	$approval=$rowx['cas_approved'];
 
+			    	?>
+			    	<div class="card userprofile-card">
+			    		<div class="card-body">
+			    			<?php
+				    		if($approval=='Approved')
+				    		{
+					    		?>
+						       	<p class="card-text"><img src="checked.png" style="width:32px"> Your CAS application has been approved.</p>			    
+					    		<?php
+						    }
+						    else
+						    {
+						    	?>
+					    		<p class="card-text"><img src="error.png" style="width:32px"> Your CAS application has not been approved.</p>
+						   		<?php
+					    	}
+					   		?>
+				    	</div>
+				    </div>
+				    <?php 
+				}
+			    ?>
 			    <div class="card userprofile-card">
 			      	<div class="card-body">
 			        	<h5 class="card-title">MY PROFILE</h5>

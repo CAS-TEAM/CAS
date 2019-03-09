@@ -21,6 +21,7 @@ $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);
 $userId=mysqli_real_escape_string($conn,$_GET['id']);
 // $year=mysqli_real_escape_string($conn,$_GET['year']);
 
+
 if($userId==$viewerId)
 {
 	$same_user=1;
@@ -45,6 +46,8 @@ $previousyear=$currentyear-1;
 
 include 'top.php';
 include 'left-nav.php';
+
+// echo $userId;
 
 ?>
 
@@ -541,7 +544,7 @@ include 'left-nav.php';
 
 									$counter=1;
 
-									// echo $formId;
+									
 									// Part A
 									$sql="SELECT file FROM part_a_doc WHERE formId='$formId'";
 									$result=mysqli_query($conn,$sql);
@@ -571,7 +574,9 @@ include 'left-nav.php';
 									$sqlxxx="SELECT id FROM part_b_table WHERE facultyId='$userId' AND year='$xx'";
 									$resultxxx=mysqli_query($conn,$sqlxxx);
 									$rowxxx=mysqli_fetch_assoc($resultxxx);
-									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);								
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);	
+
+									// echo $userId.','.$formId.','.$xx.'<br>';							
 
 									// Part B
 									$sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
@@ -1464,13 +1469,13 @@ include 'left-nav.php';
 			<div class="col-md-5">
 				<div class="row" style="border:1px solid #cccccc; border-radius:5px; padding-top: 10px;padding-bottom: 10px">
 					<div class="col-md-6 custom-control custom-radio">
-						<input class="custom-control-input casapprovalradio" type="radio" name="casapproval" id="casapproved" value="approved" checked>
+						<input class="custom-control-input casapprovalradio" type="radio" name="casapproval" id="casapproved" value="Approved" checked>
 						<label class="custom-control-label" for="casapproved">
 						    Approve for CAS
 						</label>
 					</div>
 					<div class="col-md-6 custom-control custom-radio">
-						<input class="custom-control-input casapprovalradio" type="radio" name="casapproval" id="casdisapproved" value="disapproved">
+						<input class="custom-control-input casapprovalradio" type="radio" name="casapproval" id="casdisapproved" value="Disapproved">
 						<label class="custom-control-label" for="casdisapproved">
 						    Disapprove for CAS
 						</label>

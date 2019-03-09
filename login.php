@@ -12,17 +12,7 @@ else
 include 'top.php';
 
 ?>	
-
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.php">CAS</a>
-		<!-- <div class="navbar-nav ml-auto">
-			<a href="index.php">
-				<button type="button" class="btn btn-outline-primary signin-link">Sign-Up</button>
-			</a>
-		</div>	 -->
-	</nav>
-
-	
+		
   	<div class="container">
 	    <div class="row">
 	      	<div class="col-sm-12 col-md-7 col-lg-5 mx-auto">
@@ -53,11 +43,7 @@ include 'top.php';
 	              			<button class="btn btn-lg btn-primary btn-block text-uppercase signin-btnn" type="submit">Sign in</button>
 	              		</form><br>
 	              		<div class="row">
-	              			<div class="col-md-6 text-left">
-		              			<div class="custom-control custom-checkbox mb-3">
-		                			<input type="checkbox" class="custom-control-input" id="customCheck1">
-		                			<label class="custom-control-label remember" for="customCheck1" style="color: #44a0b3">Remember password</label>
-		              			</div> 
+	              			<div class="col-md-6 text-left">		              			
 		              		</div>
 		              		<div class="col-md-6 text-right">
 	              				<a href="" style="color: #44a0b3">Forgot Password?</a>
