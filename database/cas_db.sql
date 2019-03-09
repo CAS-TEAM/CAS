@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2019 at 08:27 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Mar 09, 2019 at 04:19 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -87,7 +89,7 @@ CREATE TABLE `partb_cat1_pi` (
 --
 
 INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1_pi1_hod_a`, `cat1_pi1_committee_a`, `cat1_pi2_self_a`, `cat1_pi2_hod_a`, `cat1_pi2_committee_a`, `cat1_pi3_self_a`, `cat1_pi3_hod_a`, `cat1_pi3_committee_a`, `cat1_pi4_self_a`, `cat1_pi4_hod_a`, `cat1_pi4_committee_a`, `cat1_pitotal_self_a`, `cat1_pitotal_hod_a`, `cat1_pitotal_committee_a`) VALUES
-(1, 2019, 2, 20, 10, 45, 7878, 879, 56, 589, 45, 56, 0, 0, 0, 77, 75, 50),
+(1, 2019, 2, 20, 10, 45, 7878, 879, 56, 589, 45, 56, 11, 11, 0, 77, 75, 50),
 (2, 2018, 2, 20, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 65, 60),
 (3, 2019, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 75, 0);
 
@@ -179,7 +181,7 @@ CREATE TABLE `partb_cat3_pi` (
 --
 
 INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `cat3_piii1_hod_a`, `cat3_piii1_committee_a`, `cat3_piii2_self_a`, `cat3_piii2_hod_a`, `cat3_piii2_committee_a`, `cat3_piii3_self_a`, `cat3_piii3_hod_a`, `cat3_piii3_committee_a`, `cat3_piii4_self_a`, `cat3_piii4_hod_a`, `cat3_piii4_committee_a`, `cat3_piii5_self_a`, `cat3_piii5_hod_a`, `cat3_piii5_committee_a`, `cat3_piii6_self_a`, `cat3_piii6_hod_a`, `cat3_piii6_committee_a`, `cat3_piii7_self_a`, `cat3_piii7_hod_a`, `cat3_piii7_committee_a`, `cat3_piii8_self_a`, `cat3_piii8_hod_a`, `cat3_piii8_committee_a`, `cat3_piii9_self_a`, `cat3_piii9_hod_a`, `cat3_piii9_committee_a`, `cat3_piii10_self_a`, `cat3_piii10_hod_a`, `cat3_piii10_committee_a`, `cat3_piii11_self_a`, `cat3_piii11_hod_a`, `cat3_piii11_committee_a`, `cat3_piiitotal_self_a`, `cat3_piiitotal_hod_a`, `cat3_piiitotal_committee_a`) VALUES
-(1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 0, 0, 0, 150, 145, 140),
+(1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 25, 23, 0, 150, 145, 140),
 (2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100);
 
 -- --------------------------------------------------------
@@ -235,8 +237,8 @@ CREATE TABLE `part_a_doc` (
 --
 
 INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `file`) VALUES
-(1, 1, 1, 'KJSCE', 3, 'Kj Agency', ''),
-(2, 1, 2, 'Open Ceremony', 5, 'Kj Agency 2', ''),
+(1, 1, 1, 'KJSCE', 3, 'Kj Agency', 'NAN'),
+(2, 1, 2, 'Open Ceremony', 5, 'Kj Agency 2', 'NAN'),
 (87, 2, 3, 'KJSCE 3', 3, 'KJSCOC', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
 (88, 2, 1, 'KJSCE', 5, 'KJSCE', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
 (89, 2, 2, 'KJSCE 2', 2, 'SKSCOAC', 'users/manish.potey@somaiya.edu/2_1.jpg'),
@@ -332,96 +334,96 @@ CREATE TABLE `part_b_cat_1` (
   `total_c` float NOT NULL,
   `odpstest1` varchar(200) NOT NULL,
   `oepstest1` varchar(200) NOT NULL,
-  `o1file` varchar(200) NOT NULL,
+  `o1file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odpstest2` varchar(200) NOT NULL,
   `oepstest2` varchar(200) NOT NULL,
-  `o2file` varchar(200) NOT NULL,
+  `o2file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odtest1in` varchar(200) NOT NULL,
   `oetest1in` varchar(200) NOT NULL,
-  `o3file` varchar(200) NOT NULL,
+  `o3file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odtest2in` varchar(200) NOT NULL,
   `oetest2in` varchar(200) NOT NULL,
-  `o4file` varchar(200) NOT NULL,
+  `o4file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odtest1ass` varchar(200) NOT NULL,
   `oetest1ass` varchar(200) NOT NULL,
-  `o5file` varchar(200) NOT NULL,
+  `o5file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odtest2ass` varchar(200) NOT NULL,
   `oetest2ass` varchar(200) NOT NULL,
-  `o6file` varchar(200) NOT NULL,
+  `o6file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odeseps` varchar(200) NOT NULL,
   `oeeseps` varchar(200) NOT NULL,
-  `o7file` varchar(200) NOT NULL,
+  `o7file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odesein` varchar(200) NOT NULL,
   `oeesein` varchar(200) NOT NULL,
-  `o8file` varchar(200) NOT NULL,
+  `o8file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odeseth` varchar(200) NOT NULL,
   `oeeseth` varchar(200) NOT NULL,
-  `o9file` varchar(200) NOT NULL,
+  `o9file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odesepo` varchar(200) NOT NULL,
   `oeesepo` varchar(200) NOT NULL,
-  `o10file` varchar(200) NOT NULL,
+  `o10file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odesere_ass` varchar(200) NOT NULL,
   `oeesere_ass` varchar(200) NOT NULL,
-  `o11file` varchar(200) NOT NULL,
+  `o11file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odproofr` varchar(200) NOT NULL,
   `oeproofr` varchar(200) NOT NULL,
-  `o12file` varchar(200) NOT NULL,
+  `o12file` varchar(200) NOT NULL DEFAULT 'NAN',
   `odopenday` varchar(200) NOT NULL,
   `oeopenday` varchar(200) NOT NULL,
-  `o13file` varchar(200) NOT NULL,
+  `o13file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edpstest1` varchar(200) NOT NULL,
   `eepstest1` varchar(200) NOT NULL,
-  `e1file` varchar(200) NOT NULL,
+  `e1file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edpstest2` varchar(200) NOT NULL,
   `eepstest2` varchar(200) NOT NULL,
-  `e2file` varchar(200) NOT NULL,
+  `e2file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edtest1in` varchar(200) NOT NULL,
   `eetest1in` varchar(200) NOT NULL,
-  `e3file` varchar(200) NOT NULL,
+  `e3file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edtest2in` varchar(200) NOT NULL,
   `eetest2in` varchar(200) NOT NULL,
-  `e4file` varchar(200) NOT NULL,
+  `e4file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edtest1ass` varchar(200) NOT NULL,
   `eetest1ass` varchar(200) NOT NULL,
-  `e5file` varchar(200) NOT NULL,
+  `e5file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edtest2ass` varchar(200) NOT NULL,
   `eetest2ass` varchar(200) NOT NULL,
-  `e6file` varchar(200) NOT NULL,
+  `e6file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edeseps` varchar(200) NOT NULL,
   `eeeseps` varchar(200) NOT NULL,
-  `e7file` varchar(200) NOT NULL,
+  `e7file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edesein` varchar(200) NOT NULL,
   `eeesein` varchar(200) NOT NULL,
-  `e8file` varchar(200) NOT NULL,
+  `e8file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edeseth` varchar(200) NOT NULL,
   `eeeseth` varchar(200) NOT NULL,
-  `e9file` varchar(200) NOT NULL,
+  `e9file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edesepo` varchar(200) NOT NULL,
   `eeesepo` varchar(200) NOT NULL,
-  `e10file` varchar(200) NOT NULL,
+  `e10file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edesere_ass` varchar(200) NOT NULL,
   `eeesere_ass` varchar(200) NOT NULL,
-  `e11file` varchar(200) NOT NULL,
+  `e11file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edproofr` varchar(200) NOT NULL,
   `eeproofr` varchar(200) NOT NULL,
-  `e12file` varchar(200) NOT NULL,
+  `e12file` varchar(200) NOT NULL DEFAULT 'NAN',
   `edopenday` varchar(200) NOT NULL,
   `eeopenday` varchar(200) NOT NULL,
-  `e13file` varchar(200) NOT NULL,
+  `e13file` varchar(200) NOT NULL DEFAULT 'NAN',
   `dpstest1` varchar(200) NOT NULL,
-  `dps1file` varchar(200) NOT NULL,
+  `dps1file` varchar(200) NOT NULL DEFAULT 'NAN',
   `dpstest2` varchar(200) NOT NULL,
-  `dps2file` varchar(200) NOT NULL,
+  `dps2file` varchar(200) NOT NULL DEFAULT 'NAN',
   `dtest1in` varchar(200) NOT NULL,
-  `dps3file` varchar(200) NOT NULL,
+  `dps3file` varchar(200) NOT NULL DEFAULT 'NAN',
   `dtest2in` varchar(200) NOT NULL,
-  `dps4file` varchar(200) NOT NULL,
+  `dps4file` varchar(200) NOT NULL DEFAULT 'NAN',
   `dtest1ass` varchar(200) NOT NULL,
-  `dps5file` varchar(200) NOT NULL,
+  `dps5file` varchar(200) NOT NULL DEFAULT 'NAN',
   `dtest2ass` varchar(200) NOT NULL,
-  `dps6file` varchar(200) NOT NULL,
+  `dps6file` varchar(200) NOT NULL DEFAULT 'NAN',
   `deseps` varchar(200) NOT NULL,
-  `dps7file` varchar(200) NOT NULL,
+  `dps7file` varchar(200) NOT NULL DEFAULT 'NAN',
   `avg_ap` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -431,7 +433,7 @@ CREATE TABLE `part_b_cat_1` (
 
 INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oepstest1`, `o1file`, `odpstest2`, `oepstest2`, `o2file`, `odtest1in`, `oetest1in`, `o3file`, `odtest2in`, `oetest2in`, `o4file`, `odtest1ass`, `oetest1ass`, `o5file`, `odtest2ass`, `oetest2ass`, `o6file`, `odeseps`, `oeeseps`, `o7file`, `odesein`, `oeesein`, `o8file`, `odeseth`, `oeeseth`, `o9file`, `odesepo`, `oeesepo`, `o10file`, `odesere_ass`, `oeesere_ass`, `o11file`, `odproofr`, `oeproofr`, `o12file`, `odopenday`, `oeopenday`, `o13file`, `edpstest1`, `eepstest1`, `e1file`, `edpstest2`, `eepstest2`, `e2file`, `edtest1in`, `eetest1in`, `e3file`, `edtest2in`, `eetest2in`, `e4file`, `edtest1ass`, `eetest1ass`, `e5file`, `edtest2ass`, `eetest2ass`, `e6file`, `edeseps`, `eeeseps`, `e7file`, `edesein`, `eeesein`, `e8file`, `edeseth`, `eeeseth`, `e9file`, `edesepo`, `eeesepo`, `e10file`, `edesere_ass`, `eeesere_ass`, `e11file`, `edproofr`, `eeproofr`, `e12file`, `edopenday`, `eeopenday`, `e13file`, `dpstest1`, `dps1file`, `dpstest2`, `dps2file`, `dtest1in`, `dps3file`, `dtest2in`, `dps4file`, `dtest1ass`, `dps5file`, `dtest2ass`, `dps6file`, `deseps`, `dps7file`, `avg_ap`) VALUES
 (1, 1, 0, 0, 'ffj', '89', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 'uhi', '98', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg', 'huy', '98', 'users/manish.potey@somaiya.edu/download.jpg', 'hb', '98', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'hb', '98', 'users/manish.potey@somaiya.edu/CM2.jpg', 'uhb', '09', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 'uyb', '98', 'users/manish.potey@somaiya.edu/13259643_1283674768370253_1197858746_n.jpg', 'u98', '8', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg', 'as', '5', 'users/manish.potey@somaiya.edu/http-%2F%2Fhypebeast.com%2Fimage%2F2017%2F09%2Fpost-malone-apple-music-single-week-streaming-record-0.jpg', 'ljk', '84', 'users/manish.potey@somaiya.edu/ChxynyJVAAAGmt_.jpg', 'gjgj', '5', 'users/manish.potey@somaiya.edu/cristiano-ronaldo.jpg', 'hjhb', '5454', 'users/manish.potey@somaiya.edu/napoleon death quote.png', 'bvhb', '5454', 'users/manish.potey@somaiya.edu/zDo-gAo0_400x400.jpg', 'bbh', '51', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg', 'vg', '5', 'users/manish.potey@somaiya.edu/C5CXYlHUoAUPGwX.jpg', 'vh', '45', 'users/manish.potey@somaiya.edu/Elon-Musk-Wallpapers-HD.jpg', 'bu', '9', 'users/manish.potey@somaiya.edu/Falcon-9-Rocket-in-the-Hangar.jpg', 'hyv', '48', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'vgy', '8', 'users/manish.potey@somaiya.edu/13259643_1283674768370253_1197858746_n.jpg', 'hu', '375', 'users/manish.potey@somaiya.edu/http-%2F%2Fhypebeast.com%2Fimage%2F2017%2F09%2Fpost-malone-apple-music-single-week-streaming-record-0.jpg', 'hu', '537', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'jn', '46', 'users/manish.potey@somaiya.edu/cristiano-ronaldo.jpg', 'k', '56', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'ok', '65', 'users/manish.potey@somaiya.edu/e4a0b4a657040c64c017fe07957cf9a1.jpg', 'jh', '26', 'users/manish.potey@somaiya.edu/fUsGyKV.jpg', 'jb', '54', 'users/manish.potey@somaiya.edu/infinito.jpg', 'kjfj', '', 'hj', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 'hg', '', 28),
-(2, 2, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(2, 2, 0, 0, '', '', 'NAN', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
 (3, 3, 0, 0, 'hjsdj', '6', '', 'jh', '54', '', 'hjb', '54', '', 'bhj', '5', '', 'se', '2', '', 'dsv', '5', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
 (4, 4, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0);
 
@@ -452,7 +454,7 @@ CREATE TABLE `part_b_cat_1_cte` (
   `ctehrsengaged` float NOT NULL,
   `ctemaxhrs` float NOT NULL,
   `ctec` float NOT NULL,
-  `ctefile` varchar(200) NOT NULL
+  `ctefile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -482,7 +484,7 @@ CREATE TABLE `part_b_cat_1_cto` (
   `ctohrsengaged` float NOT NULL,
   `ctomaxhrs` float NOT NULL,
   `ctoc` float NOT NULL,
-  `ctofile` varchar(200) NOT NULL
+  `ctofile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -510,7 +512,7 @@ CREATE TABLE `part_b_cat_1_dar` (
   `formId` int(11) NOT NULL,
   `dara` varchar(200) NOT NULL,
   `darb` varchar(200) NOT NULL,
-  `darfile` varchar(200) NOT NULL
+  `darfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -555,7 +557,7 @@ CREATE TABLE `part_b_cat_2_act` (
   `formId` int(11) NOT NULL,
   `ea` varchar(200) NOT NULL,
   `eb` varchar(200) NOT NULL,
-  `efile` varchar(200) NOT NULL
+  `efile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -580,7 +582,7 @@ CREATE TABLE `part_b_cat_2_c` (
   `formId` int(11) NOT NULL,
   `ca` varchar(200) NOT NULL,
   `cb` varchar(200) NOT NULL,
-  `cfile` varchar(200) NOT NULL
+  `cfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -603,7 +605,7 @@ CREATE TABLE `part_b_cat_2_exc` (
   `formId` int(11) NOT NULL,
   `eca` varchar(200) NOT NULL,
   `ecb` varchar(200) NOT NULL,
-  `ecfile` varchar(200) NOT NULL
+  `ecfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -628,7 +630,7 @@ CREATE TABLE `part_b_cat_2_ha` (
   `formId` int(11) NOT NULL,
   `ha` varchar(200) NOT NULL,
   `hb` varchar(200) NOT NULL,
-  `hfile` varchar(200) NOT NULL
+  `hfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -654,15 +656,15 @@ CREATE TABLE `part_b_cat_3` (
   `phdne` int(11) NOT NULL,
   `phdts` int(11) NOT NULL,
   `phdda` int(11) NOT NULL,
-  `phdfile` varchar(200) NOT NULL,
+  `phdfile` varchar(200) NOT NULL DEFAULT 'NAN',
   `mtechne` int(11) NOT NULL,
   `mtechts` int(11) NOT NULL,
   `mtechda` int(11) NOT NULL,
-  `mtechfile` varchar(200) NOT NULL,
+  `mtechfile` varchar(200) NOT NULL DEFAULT 'NAN',
   `btechne` int(11) NOT NULL,
   `btechts` int(11) NOT NULL,
   `btechda` int(11) NOT NULL,
-  `btechfile` varchar(200) NOT NULL
+  `btechfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -710,7 +712,7 @@ CREATE TABLE `part_b_cat_3_bk` (
   `ppifbk` varchar(200) NOT NULL,
   `customRadioInline1bk` varchar(200) NOT NULL,
   `ppncabk` varchar(200) NOT NULL,
-  `pp3file` varchar(200) NOT NULL
+  `pp3file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -734,7 +736,7 @@ CREATE TABLE `part_b_cat_3_cres` (
   `acb` varchar(200) NOT NULL,
   `dcc` date NOT NULL,
   `gcd` int(11) NOT NULL,
-  `research3file` varchar(200) NOT NULL
+  `research3file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -758,7 +760,7 @@ CREATE TABLE `part_b_cat_3_ores` (
   `aab` varchar(200) NOT NULL,
   `ddc` date NOT NULL,
   `ggd` int(11) NOT NULL,
-  `research2file` varchar(200) NOT NULL
+  `research2file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -779,7 +781,7 @@ CREATE TABLE `part_b_cat_3_pip` (
   `formId` int(11) NOT NULL,
   `dpi` varchar(200) NOT NULL,
   `drf` date NOT NULL,
-  `dfile` varchar(200) NOT NULL
+  `dfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -804,7 +806,7 @@ CREATE TABLE `part_b_cat_3_pp` (
   `ppif` varchar(200) NOT NULL,
   `customRadioInline1` varchar(200) NOT NULL,
   `ppnca` varchar(200) NOT NULL,
-  `ppfile` varchar(200) NOT NULL
+  `ppfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -830,7 +832,7 @@ CREATE TABLE `part_b_cat_3_ppic` (
   `ppific` varchar(200) NOT NULL,
   `customRadioInline1ic` varchar(200) NOT NULL,
   `ppncaic` varchar(200) NOT NULL,
-  `pp1file` varchar(200) NOT NULL
+  `pp1file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -856,7 +858,7 @@ CREATE TABLE `part_b_cat_3_ppinc` (
   `ppifinc` varchar(200) NOT NULL,
   `customRadioInline1inc` varchar(200) NOT NULL,
   `ppncainc` varchar(200) NOT NULL,
-  `pp2file` varchar(200) NOT NULL
+  `pp2file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -881,7 +883,7 @@ CREATE TABLE `part_b_cat_3_res` (
   `ab` varchar(200) NOT NULL,
   `dc` date NOT NULL,
   `gd` int(11) NOT NULL,
-  `research1file` varchar(200) NOT NULL
+  `research1file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -955,7 +957,7 @@ CREATE TABLE `part_b_cat_4_creds` (
   `formId` int(11) NOT NULL,
   `cativ2_dp` varchar(200) NOT NULL,
   `cativ2` varchar(200) NOT NULL,
-  `cativ3file` varchar(200) NOT NULL
+  `cativ3file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -978,7 +980,7 @@ CREATE TABLE `part_b_cat_4_inv` (
   `cativ1_dp` varchar(200) NOT NULL,
   `cativ1_datee` date NOT NULL,
   `cativ1_o` varchar(200) NOT NULL,
-  `cativ2file` varchar(200) NOT NULL
+  `cativ2file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1000,7 +1002,7 @@ CREATE TABLE `part_b_cat_4_sem` (
   `cativ_dp` varchar(200) NOT NULL,
   `cativ_datee` date NOT NULL,
   `cativ_o` varchar(200) NOT NULL,
-  `cativ1file` varchar(200) NOT NULL
+  `cativ1file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1395,176 +1397,212 @@ ALTER TABLE `summary_table`
 --
 ALTER TABLE `faculty_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `partb_cat4_pi`
 --
 ALTER TABLE `partb_cat4_pi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
 ALTER TABLE `part_a_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1`
 --
 ALTER TABLE `part_b_cat_1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
 ALTER TABLE `part_b_cat_1_cte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cto`
 --
 ALTER TABLE `part_b_cat_1_cto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_dar`
 --
 ALTER TABLE `part_b_cat_1_dar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
 ALTER TABLE `part_b_cat_2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
 ALTER TABLE `part_b_cat_2_act`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_c`
 --
 ALTER TABLE `part_b_cat_2_c`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_exc`
 --
 ALTER TABLE `part_b_cat_2_exc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_ha`
 --
 ALTER TABLE `part_b_cat_2_ha`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
 ALTER TABLE `part_b_cat_3_bk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_cres`
 --
 ALTER TABLE `part_b_cat_3_cres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ores`
 --
 ALTER TABLE `part_b_cat_3_ores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pip`
 --
 ALTER TABLE `part_b_cat_3_pip`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pp`
 --
 ALTER TABLE `part_b_cat_3_pp`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppic`
 --
 ALTER TABLE `part_b_cat_3_ppic`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppinc`
 --
 ALTER TABLE `part_b_cat_3_ppinc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_res`
 --
 ALTER TABLE `part_b_cat_3_res`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
 ALTER TABLE `part_b_cat_4_creds`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_inv`
 --
 ALTER TABLE `part_b_cat_4_inv`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_sem`
 --
 ALTER TABLE `part_b_cat_4_sem`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_table`
 --
 ALTER TABLE `part_b_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `summary_comm_table`
 --
 ALTER TABLE `summary_comm_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `summary_hasr`
 --
 ALTER TABLE `summary_hasr`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `summary_table`
 --
 ALTER TABLE `summary_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -509,14 +509,531 @@ include 'left-nav.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic4">
 						    <tr>
-								<th class="text-center">Sr.No</th>
+								<th class="text-center">Sr. No.</th>
 								<th class="text-center">Description</th>
-								<th class="text-center">Attach File</th>
+								<th class="text-center">Attached File</th>
 							</tr>				
 							 
-							<tbody>								
-								<?php 
+							<tbody>
 
+								<?php
+
+								for($xx=$currentyear;$xx>=($currentyear-1);$xx--)
+								{
+
+								?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b><?php echo $xx.'-'.($xx-1); ?></b></td>
+										<td><b>~</b></td>
+									</tr>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part A</b></td>
+										<td><b>~</b></td>
+									</tr>
+									<?php
+
+									$sqlxxx="SELECT id FROM part_a_table WHERE faculty_id='$userId' AND year='$xx'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+
+									$counter=1;
+
+									// echo $formId;
+									// Part A
+									$sql="SELECT file FROM part_a_doc WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										if($row['file']!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($row['file']); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $row['file']; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 1</b></td>
+										<td><b>~</b></td>
+									</tr>
+									<?php
+
+									$sqlxxx="SELECT id FROM part_b_table WHERE facultyId='$userId' AND year='$xx'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);								
+
+									// Part B
+									$sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$o1file=mysqli_real_escape_string($conn,$rowxxx['o1file']);
+									$o2file=mysqli_real_escape_string($conn,$rowxxx['o2file']);
+									$o3file=mysqli_real_escape_string($conn,$rowxxx['o3file']);
+									$o4file=mysqli_real_escape_string($conn,$rowxxx['o4file']);
+									$o5file=mysqli_real_escape_string($conn,$rowxxx['o5file']);
+									$o6file=mysqli_real_escape_string($conn,$rowxxx['o6file']);
+									$o7file=mysqli_real_escape_string($conn,$rowxxx['o7file']);
+									$o8file=mysqli_real_escape_string($conn,$rowxxx['o8file']);
+									$o9file=mysqli_real_escape_string($conn,$rowxxx['o9file']);
+									$o10file=mysqli_real_escape_string($conn,$rowxxx['o10file']);
+									$o11file=mysqli_real_escape_string($conn,$rowxxx['o11file']);
+									$o12file=mysqli_real_escape_string($conn,$rowxxx['o12file']);
+									$o13file=mysqli_real_escape_string($conn,$rowxxx['o13file']);
+
+									$e1file=mysqli_real_escape_string($conn,$rowxxx['e1file']);
+									$e2file=mysqli_real_escape_string($conn,$rowxxx['e2file']);
+									$e3file=mysqli_real_escape_string($conn,$rowxxx['e3file']);
+									$e4file=mysqli_real_escape_string($conn,$rowxxx['e4file']);
+									$e5file=mysqli_real_escape_string($conn,$rowxxx['e5file']);
+									$e6file=mysqli_real_escape_string($conn,$rowxxx['e6file']);
+									$e7file=mysqli_real_escape_string($conn,$rowxxx['e7file']);
+									$e8file=mysqli_real_escape_string($conn,$rowxxx['e8file']);
+									$e9file=mysqli_real_escape_string($conn,$rowxxx['e9file']);
+									$e10file=mysqli_real_escape_string($conn,$rowxxx['e10file']);
+									$e11file=mysqli_real_escape_string($conn,$rowxxx['e11file']);
+									$e12file=mysqli_real_escape_string($conn,$rowxxx['e12file']);
+									$e13file=mysqli_real_escape_string($conn,$rowxxx['e13file']);
+
+									for ($x = 1; $x <= 13; $x++) {
+										$file='o'.$x.'file';
+										if($$file!='NAN')
+										{
+										    ?>
+										    <tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($$file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td>
+											</tr>
+										    <?php
+										    $counter+=1;
+										}
+									} 
+
+									for ($x = 1; $x <= 13; $x++) {
+										$file='e'.$x.'file';
+										if($$file!='NAN')
+										{
+										    ?>
+										    <tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($$file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td>
+											</tr>
+										    <?php
+										    $counter+=1;
+										}
+									} 
+
+									// part_b_cat_1_cte
+									$sql="SELECT ctefile FROM part_b_cat_1_cte WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ctefile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_1_cto
+									$sql="SELECT ctofile FROM part_b_cat_1_cto WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ctofile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_1_dar
+									$sql="SELECT darfile FROM part_b_cat_1_dar WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['darfile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 2</b></td>
+										<td><b>~</b></td>
+									</tr>
+									<?php
+
+									// part_b_cat_2_act
+									$sql="SELECT efile FROM part_b_cat_2_act WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['efile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_2_c
+									$sql="SELECT cfile FROM part_b_cat_2_c WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cfile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_2_exc
+									$sql="SELECT ecfile FROM part_b_cat_2_exc WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ecfile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_2_ha
+									$sql="SELECT hfile FROM part_b_cat_2_ha WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['hfile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 3</b></td>
+										<td><b>~</b></td>
+									</tr>
+									<?php
+
+									$sqlxxx="SELECT phdfile,mtechfile,btechfile FROM part_b_cat_3 WHERE formId='$formId'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$phdfile=mysqli_real_escape_string($conn,$rowxxx['phdfile']);
+									$mtechfile=mysqli_real_escape_string($conn,$rowxxx['mtechfile']);
+									$btechfile=mysqli_real_escape_string($conn,$rowxxx['btechfile']);
+
+									?>
+									<tr>
+										<td><?php echo $counter; ?></td>
+										<td><?php echo basename($phdfile); ?></td>
+										<td><a href="viewfile.php?location=<?php echo $phdfile; ?>" target="_blank">View File</a></td>
+									</tr>
+									<tr>
+										<td><?php echo $counter; ?></td>
+										<td><?php echo basename($mtechfile); ?></td>
+										<td><a href="viewfile.php?location=<?php echo $mtechfile; ?>" target="_blank">View File</a></td>
+									</tr>
+									<tr>
+										<td><?php echo $counter; ?></td>
+										<td><?php echo basename($btechfile); ?></td>
+										<td><a href="viewfile.php?location=<?php echo $btechfile; ?>" target="_blank">View File</a></td>
+									</tr>
+
+									<?php
+
+									// part_b_cat_3_pp
+									$sql="SELECT ppfile FROM part_b_cat_3_pp WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ppfile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_ppic
+									$sql="SELECT pp1file FROM part_b_cat_3_ppic WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['pp1file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_ppinc
+									$sql="SELECT pp2file FROM part_b_cat_3_ppinc WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['pp2file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_bk
+									$sql="SELECT pp3file FROM part_b_cat_3_bk WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['pp3file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_res
+									$sql="SELECT research1file FROM part_b_cat_3_res WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['research1file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_ores
+									$sql="SELECT research2file FROM part_b_cat_3_ores WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['research2file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_cres
+									$sql="SELECT research3file FROM part_b_cat_3_cres WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['research3file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_pip
+									$sql="SELECT dfile FROM part_b_cat_3_pip WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['dfile'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 4</b></td>
+										<td><b>~</b></td>
+									</tr>
+									<?php
+
+									// part_b_cat_4_sem
+									$sql="SELECT cativ1file FROM part_b_cat_4_sem WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cativ1file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_4_inv
+									$sql="SELECT cativ2file FROM part_b_cat_4_inv WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cativ2file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_4_creds
+									$sql="SELECT cativ3file FROM part_b_cat_4_creds WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cativ3file'];
+										if($file!='NAN')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+
+
+								}//for loop ends
+
+								?>
+								<?php 
+								/*
 								$l=1;
 								$flag=true;//flag to check if atleast one file has been previous;y uploaded or not..true means uploaded false means not uploaded
 
@@ -585,12 +1102,15 @@ include 'left-nav.php';
 			                	}
 			                	?>
 			                	<input type="hidden" name="l" id="l" value="<?php echo $l-1; ?>">
+			                	*/
+			                	?>
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
 			<?php
+			/*
 			if($flag==false)
 			{
 			?>
@@ -598,6 +1118,7 @@ include 'left-nav.php';
 				<a id='delete_row4' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<?php
 			}
+			*/
 			?>
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -606,7 +1127,16 @@ include 'left-nav.php';
 			</div>
 		</div>
 
-		<hr style="border: 0.5px solid #c8c8c8">
+		<?php		
+		if($committee!=1)
+		{
+		?>
+			<hr style="border: 0.5px solid #c8c8c8">
+		<?php
+		}
+		?>
+		
+
 
 		<div class="row form-inline justify-content-center">
 
@@ -614,10 +1144,16 @@ include 'left-nav.php';
 				<!-- <button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
 				</button> -->
-
+				<?php		
+				if($committee!=1)
+				{
+				?>	
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
+				<?php
+				}
+				?>
 			</div>
 		</div><br>
 		<!-- </form> -->
