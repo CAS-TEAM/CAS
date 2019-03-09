@@ -1,13 +1,27 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['id']))
+{
+	header("LOCATION: index.php");
+}
+else
+{
+
+include 'dbh.php';
+
+$userId=mysqli_real_escape_string($conn,$_SESSION['id']);
+
+$sqlx="SELECT profilePicLocation, admin FROM faculty_table WHERE id='$userId'";
+$resultx=mysqli_query($conn,$sqlx);
+$rowx=mysqli_fetch_assoc($resultx);
+$profilePicLocation=$rowx['profilePicLocation'];
+$admin=$rowx['admin'];
+
 include 'top.php';
-include'dbh.php'
 
 ?>
-
-	<nav class="navbar bg-dark">
-		<p class="navbar-brand" style="color:white;width:100%;text-align:center"></p>
-	</nav>
 
 	<div class="container">
 		<div class="row justify-content-center">
@@ -214,6 +228,12 @@ include'dbh.php'
     	<!-- </div> -->
    </div>
 </div>
-
+<br><br>
 </body>
 </html>
+
+<?php
+
+}
+
+?>
