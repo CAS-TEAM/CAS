@@ -81,10 +81,10 @@ $committee=$rowp['committee'];
 						<div class="sidebar-submenu">
 							<ul>
 								<li>
-									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear; ?></a>
+									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear.'-'.$previousyear; ?></a>
 								</li>
 								<li>
-									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear; ?></a>
+									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
 								</li>
 							</ul>
 						</div>
@@ -97,10 +97,10 @@ $committee=$rowp['committee'];
 						<div class="sidebar-submenu">
 							<ul>
 								<li>
-									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear; ?></a>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear.'-'.$previousyear; ?></a>
 								</li>
 								<li>
-									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear; ?></a>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
 								</li>
 							</ul>
 						</div>

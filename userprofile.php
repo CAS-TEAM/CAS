@@ -274,10 +274,10 @@ $admin=$row['admin'];
 														{	
 
 														?>
-														<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-															<a href="summary.php?id=<?php echo $userId; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
+														<div class="col-md-2 col-sm-6" style="margin-left:-15px;padding-right:0px;margin-bottom: 8px">
+															<a href="summary.php?id=<?php echo $userId; ?>" class="btn btn-info" style="width:100%">Summary</a>
 														</div>
-														<br>
+														
 														<?php
 														}
 													}
@@ -286,7 +286,7 @@ $admin=$row['admin'];
 
 									    		
 									  		?>
-									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
+									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear.'-'.$previousyear; ?></b></p>
 									    	<div class="row">							    		
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
 									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
@@ -298,7 +298,7 @@ $admin=$row['admin'];
 
 									    	</div>
 									    	<hr>
-									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
+									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear.'-'.($previousyear-1); ?></b></p>
 									    	<div class="row">							    		
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
 									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>

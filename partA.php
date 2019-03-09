@@ -51,6 +51,8 @@ $parta_gpi_pi_self_a=$rowy['parta_gpi_pi_self_a'];
 $parta_gpi_pi_hod_a=$rowy['parta_gpi_pi_hod_a'];
 $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
+$submitted_for_review=false;
+
 ?>
 
 	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="height: 50px">
@@ -137,6 +139,7 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 					}
 					else
 					{
+						$submitted_for_review=true;
 						?>
 						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
 						<?php
@@ -788,6 +791,11 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 		<div class="row form-inline justify-content-center">
 
 			<div class="col se-btn">
+				<?php
+				if($submitted_for_review==false)
+				{
+				?>
+
 				<button type="button" class="btn btn-success" id="part-a-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SAVE 
 				</button>
@@ -795,6 +803,10 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 				<button type="button" class="btn btn-primary mx-2" id="part-a-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
 	  			EDIT 
 				</button>
+
+				<?php				
+				}
+				?>
 
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 

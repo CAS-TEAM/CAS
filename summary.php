@@ -965,6 +965,26 @@ $previousyear=$currentyear-1;
 			</div>
 		</div><br>
 
+		<div class="row justify-content-center">
+			<div class="col-md-5">
+				<div class="row" style="border:1px solid #cccccc; border-radius:5px; padding-top: 10px;padding-bottom: 10px">
+					<div class="col-md-6 custom-control custom-radio">
+						<input class="custom-control-input casapprovalradio" type="radio" name="casapproval" id="casapproved" value="approved" checked>
+						<label class="custom-control-label" for="casapproved">
+						    Approve for CAS
+						</label>
+					</div>
+					<div class="col-md-6 custom-control custom-radio">
+						<input class="custom-control-input casapprovalradio" type="radio" name="casapproval" id="casdisapproved" value="disapproved">
+						<label class="custom-control-label" for="casdisapproved">
+						    Disapprove for CAS
+						</label>
+					</div>
+				</div>
+			</div>
+			
+		</div><br>
+
 		<div class="row form-inline justify-content-center">
 
 			<div class="col">
