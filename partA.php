@@ -14,8 +14,6 @@ else
 {
 
 include 'dbh.php';
-include 'top.php';
-include 'left-nav.php';
 
 $viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);//the one who is viewing the form
 
@@ -32,12 +30,13 @@ else
 	
 }
 
-$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$viewerId'";
+$sqlx="SELECT profilePicLocation, hod, committee FROM faculty_table WHERE id='$viewerId'";
 $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
 
 $hod=$rowx['hod'];
 $committee=$rowx['committee'];
+$profilePicLocation=$rowx['profilePicLocation'];
 
 $sqly="SELECT parta_gpi_self_a, parta_gpi_hod_a, parta_gpi_committee_a, parta_gpi_pi_self_a, parta_gpi_pi_hod_a, parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$year'";
 $resulty=mysqli_query($conn,$sqly);
@@ -53,51 +52,10 @@ $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
 $submitted_for_review=false;
 
+include 'top.php';
+include 'left-nav.php';
 ?>
-
-	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="height: 50px">
-	  	<a class="navbar-brand" href="#">CAS</a>
-	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    	<span class="navbar-toggler-icon"></span>
-	  	</button>
-
-	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		    <ul class="navbar-nav ml-auto">
-		      	<!-- <li class="nav-item active">
-		        	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-		      	</li> -->
-		      	<?php
-		      	if(!isset($_SESSION['id']))
-		      	{
-			      	?>
-			      	<li class="nav-item">
-			        	<a class="nav-link" href="index.php">Sign Up | Sign In</a>
-			      	</li>
-			      	<?php
-			    }			      	
-			    else
-			    {
-			    	?>
-			      	<li class="nav-item dropdown">
-				        <img class="nav-link dropdown-toggle" src="defaults/default_userprofile_pic.png" width="50px" style="cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
-				        <!-- </a> -->
-				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-				        	<h6 class="dropdown-header"><?php echo $_SESSION['faculty_name']; ?></h6>
-				          	<a class="dropdown-item" href="userprofile.php">My Profile</a>
-				          	<a class="dropdown-item" href="#">Upload Profile Picture</a>
-				          	<div class="dropdown-divider"></div>
-				          	<a class="dropdown-item" href="logout.php">Log out</a>
-				        </div>
-			      	</li>
-			      	<?php
-		      	}
-		      	?>
-		    </ul>
-	  	</div>
-	</nav>
-   
-  	
+	  	
     <div class="container">
     <div class="row">    		
     <div class="col offset-md-2 parta">
