@@ -42,6 +42,10 @@ $profilePicLocation=$rowx['profilePicLocation'];
 // echo "committee=".$committee;
 
 $currentyear=date("Y");
+if(date("m")>=7)
+{
+	$currentyear+=1;
+}
 $previousyear=$currentyear-1;
 
 include 'top.php';

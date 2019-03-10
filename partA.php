@@ -26,8 +26,7 @@ if($userId==$viewerId)
 }
 else
 {
-	$same_user=0;
-	
+	$same_user=0;	
 }
 
 $sqlx="SELECT profilePicLocation, hod, committee FROM faculty_table WHERE id='$viewerId'";

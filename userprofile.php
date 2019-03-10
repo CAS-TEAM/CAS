@@ -158,6 +158,10 @@ include 'left-nav.php';
 			    </div>
 			    <?php
 			    $currentyear=date("Y");
+			    if(date("m")>=7)
+			    {
+			    	$currentyear+=1;
+			    }
 				$previousyear=$currentyear-1;
 				// echo $currentyear;
 			    $sqlx="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$userId' AND currentyear='$currentyear' AND previousyear='$previousyear'";
@@ -283,8 +287,8 @@ include 'left-nav.php';
 									  	<div class="card card-body">
 									  		<?php
 									  		// echo date("Y");
-									  		$currentyear=date("Y");
-									  		$previousyear=$currentyear-1;
+									  		// $currentyear=date("Y");
+									  		// $previousyear=$currentyear-1;
 
 									    		if($_SESSION['id']==$userId)
 												{
@@ -405,8 +409,8 @@ include 'left-nav.php';
 													  	</button>
 													  	<?php
 
-													  	$currentyear=date("Y");
-												  		$previousyear=$currentyear-1;
+													  	// $currentyear=date("Y");
+												  		// $previousyear=$currentyear-1;
 
 											    		if($_SESSION['id']==$userId)
 														{
@@ -436,8 +440,8 @@ include 'left-nav.php';
 													  	<div class="card card-body">
 													  		<?php
 													  		// echo date("Y");
-													  		$currentyear=date("Y");
-													  		$previousyear=$currentyear-1;
+													  		// $currentyear=date("Y");
+													  		// $previousyear=$currentyear-1;
 
 													  		?>
 													    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
@@ -605,8 +609,8 @@ include 'left-nav.php';
 															  	</button>
 															  	<?php
 
-															  	$currentyear=date("Y");
-														  		$previousyear=$currentyear-1;
+															  	// $currentyear=date("Y");
+														  		// $previousyear=$currentyear-1;
 
 													    		if($_SESSION['id']==$userId)
 																{
@@ -639,8 +643,8 @@ include 'left-nav.php';
 															  	<div class="card card-body">
 															  		<?php
 															  		// echo date("Y");
-															  		$currentyear=date("Y");
-															  		$previousyear=$currentyear-1;
+															  		// $currentyear=date("Y");
+															  		// $previousyear=$currentyear-1;
 
 															  		?>
 															    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>

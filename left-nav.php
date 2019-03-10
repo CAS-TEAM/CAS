@@ -59,6 +59,10 @@ $committee=$rowp['committee'];
 			<?php
 
 			$currentyear=date("Y");
+			if(date("m")>=7)
+		    {
+		    	$currentyear+=1;
+		    }
 			$previousyear=$currentyear-1;
 
 			?>
