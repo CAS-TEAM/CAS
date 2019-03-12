@@ -59,7 +59,7 @@ if(isset($_SESSION['id']))
 	// $to 	 =  $email;
 	$subject = 'CAS Application status';
 	$message = 'Your Application for CAS has been '.$cas_approved;
-	$headers = 'From: pandu@gmail.com' . "\r\n" .
+	$headers = 'From: sharvai@gmail.com' . "\r\n" .
 	    'Reply-To: sharvai101@gmail.com' . "\r\n" .
 	    'X-Mailer: PHP/' . phpversion();
 

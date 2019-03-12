@@ -85,7 +85,7 @@ include 'left-nav.php';
  						</div>
  						
 						<hr style="border: 0.5px solid #c8c8c8">
-			        	<div class="row justify-content-center">
+			        	<div class="row justify-content-center" id="changepassword">
  							<div class="col-12">
  								<h4 class="text-center" style="color: #44a0b3">Change Password</h4><br>
 								<!-- <hr style="border: 0.3px solid #c8c8c8"><br>-->

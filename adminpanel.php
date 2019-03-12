@@ -48,23 +48,26 @@ include 'left-nav.php';
 				<table class="table table-bordered" style="background-color: white">
 				  	<thead style="color: white">
 					    <tr>
-					      	<th scope="col" style="background-color: #343a40">#</th>
-					      	<th scope="col" style="background-color: #343a40">Faculty Name</th>
-					      	<th scope="col" style="background-color: #343a40">Email</th>
-					      	<th scope="col" style="background-color: #343a40">Department</th>
-					      	<th scope="col" style="background-color: #343a40">Date of Joining</th>
-					      	<th scope="col" style="background-color: #343a40">Eligibility for CAS</th>
-					      	<th scope="col" style="background-color: #343a40">H.O.D.</th>
-					      	<th scope="col" style="background-color: #343a40">Committee</th>
-					      	<th scope="col" style="background-color: #343a40">Principal</th>
-					      	<th scope="col" style="background-color: #343a40">Admin</th>
-					      	<th scope="col" style="background-color: #343a40">Update</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Sr.No</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Faculty Name</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Email</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Department</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Date of Joining</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Eligibility for CAS</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Faculty</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">H.O.D.</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Committee</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Principal</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Admin</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Update</th>
+					 		<th scope="col" style="background-color: #343a40;text-align: center">Delete User</th>
+
 					    </tr>
 				  	</thead>
 				  	<tbody>
 				  		<?php
 
-				  		$sql="SELECT id, faculty_name, email, date_of_joining, department, hod, committee, principal, admin FROM faculty_table";
+				  		$sql="SELECT id, faculty_name, email, date_of_joining, department, faculty, hod, committee, principal, admin FROM faculty_table";
 				  		$result=mysqli_query($conn,$sql);
 
 				  		while($row=mysqli_fetch_assoc($result))
@@ -75,6 +78,7 @@ include 'left-nav.php';
 				  			$email=$row['email'];
 				  			$date_of_joining=$row['date_of_joining'];
 				  			$department=$row['department'];
+				  			$faculty=$row['faculty'];
 				  			$hod=$row['hod'];
 				  			$committee=$row['committee'];
 				  			$principal=$row['principal'];
@@ -109,6 +113,25 @@ include 'left-nav.php';
 
 						    ?>
 						      	<form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
+						      		<td class="table-center">
+		  								<?php
+
+		  								if($faculty==1)
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="faculty" id="faculty<?php echo $id; ?>" value="faculty" checked>
+		  									<?php
+		  								}
+		  								else
+		  								{
+		  									?>
+		  									<input type="checkbox" class="admin-table-checkbox" name="faculty" id="faculty<?php echo $id; ?>" value="faculty">
+		  									<?php
+		  								}
+
+		  								?>							      		
+		  							</td>
+
 						      		<td class="table-center">
 						      			<?php
 
@@ -185,6 +208,12 @@ include 'left-nav.php';
 		  								<input type="hidden" name="userId" value="<?php echo $id; ?>">
 		  								<button type="submit" name="submit" class="btn btn-default" id="update<?php echo $id; ?>" disabled>Update</button>
 		  							</td>
+
+		  							<td class="table-center">
+		  								<input type="hidden" name="userId" value="<?php echo $id; ?>">
+		  								<button type="submit" name="submit" class="btn btn-primary" id="delete<?php echo $id; ?>">Delete</button>
+		  							</td>
+
 						      	</form>
 						      	
 						    </tr>						   

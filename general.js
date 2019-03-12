@@ -1,3 +1,91 @@
+// send OTP form system
+$(document).ready(function(){
+
+	$(".send-otp-form").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
+
+		document.getElementById('send-otp').innerHTML="Sending..";
+		$("#send-otp").prop("disabled",true);
+		$(".loader").toggle();
+		
+		$.ajax
+		({
+			type: 'POST',
+			url: 'otp-system.php',
+			data:formData,
+			//dataType: 'text',  // what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,                
+			success: function (response) 
+			{
+				// alert(response);
+
+				if(response.trim()=="success")
+				{           
+					$("#otpsent-message").toggle();
+				}      
+				document.getElementById('send-otp').innerHTML="Send OTP";
+				$("#send-otp").prop("disabled",false);
+				$(".loader").toggle();
+			},                
+			error: function(xhr, status, error) {
+				alert(xhr.responseText);
+			}              
+		});
+		
+		return false;
+	})
+});
+
+// login through OTP system
+$(document).ready(function(){
+
+	$(".verify-otp-form").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
+
+		document.getElementById('verify-otp').innerHTML="Verifying";
+		$("#verify-otp").prop("disabled",true);
+		$(".loader").toggle();
+		document.getElementById("otpsent-message").style.display="none";
+		
+		$.ajax
+		({
+			type: 'POST',
+			url: 'verify-otp-system.php',
+			data:formData,
+			//dataType: 'text',  // what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,                
+			success: function (response) 
+			{
+				// alert(response);
+
+				if(response.trim()!="failure")
+				{           
+					// $("#otpsent-message").toggle();
+					window.location.href="http://localhost/cas/"+response.trim();
+				}      
+				else
+				{
+					document.getElementById("verifyotp-message").style.display="block";
+				}
+				document.getElementById('verify-otp').innerHTML="Verify";
+				$("#verify-otp").prop("disabled",false);
+				$(".loader").toggle();
+			},                
+			error: function(xhr, status, error) {
+				alert(xhr.responseText);
+			}              
+		});
+		
+		return false;
+	})
+});
+
 $(document).ready(function(){
 
 	$('.admin-table-checkbox').click(function(){
