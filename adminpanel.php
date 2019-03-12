@@ -11,12 +11,15 @@ date_default_timezone_set('Asia/Kolkata');
 
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
-$sqlp="SELECT profilePicLocation FROM faculty_table WHERE id='$userId'";
+$sqlp="SELECT profilePicLocation,admin FROM faculty_table WHERE id='$userId'";
 $resultp=mysqli_query($conn,$sqlp);
 
 $rowp=mysqli_fetch_assoc($resultp);
 
 $profilePicLocation=$rowp['profilePicLocation'];
+$admin=$rowp['admin'];
+if($admin==1)
+{
 
 include 'top.php';
 include 'left-nav.php';
@@ -70,6 +73,8 @@ include 'left-nav.php';
 				  		$sql="SELECT id, faculty_name, email, date_of_joining, department, faculty, hod, committee, principal, admin FROM faculty_table";
 				  		$result=mysqli_query($conn,$sql);
 
+				  		$counter=1;
+
 				  		while($row=mysqli_fetch_assoc($result))
 				  		{
 
@@ -85,8 +90,8 @@ include 'left-nav.php';
 				  			$admin=$row['admin'];
 
 					  		?>
-						    <tr>
-						      	<th scope="row"><?php echo $id; ?></th>
+						    <tr id="user<?php echo $id; ?>">
+						      	<th scope="row"><?php echo $counter; ?></th>
 						      	<td><?php echo $faculty_name; ?></td>
 						      	<td><?php echo $email; ?></td>
 						      	<td><?php echo $department; ?></td>
@@ -207,18 +212,21 @@ include 'left-nav.php';
 		  							<td class="table-center">
 		  								<input type="hidden" name="userId" value="<?php echo $id; ?>">
 		  								<button type="submit" name="submit" class="btn btn-default" id="update<?php echo $id; ?>" disabled>Update</button>
-		  							</td>
+		  							</td>	  							
 
-		  							<td class="table-center">
+						      	</form>
+
+						      	<form class="delete-user-form" action="" method="POST">
+						      		<td class="table-center">
 		  								<input type="hidden" name="userId" value="<?php echo $id; ?>">
 		  								<button type="submit" name="submit" class="btn btn-primary" id="delete<?php echo $id; ?>">Delete</button>
 		  							</td>
-
 						      	</form>
 						      	
 						    </tr>						   
 						    
 						    <?php
+						    $counter+=1;
 						}
 
 					    ?>
@@ -255,3 +263,11 @@ include 'left-nav.php';
 
 </body>
 </html>
+
+<?php
+
+}
+else
+{
+	header("LOCATION: index.php");
+}

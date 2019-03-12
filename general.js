@@ -86,6 +86,7 @@ $(document).ready(function(){
 	})
 });
 
+//admin panel stuff
 $(document).ready(function(){
 
 	$('.admin-table-checkbox').click(function(){
@@ -139,6 +140,43 @@ $(document).ready(function(){
 		return false;
 	})
 });
+
+$(document).ready(function(){
+
+	$(".delete-user-form").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
+		var duconfirm=confirm("Delete this user?");
+		if(duconfirm==true)
+		{
+			$.ajax
+			({
+				type: 'POST',
+				url: 'delete-user-system.php',
+				data:formData,
+				//dataType: 'text',  // what to expect back from the PHP script, if anything
+				cache: false,
+				contentType: false,
+				processData: false,                
+				success: function (response) 
+				{
+					// alert(response);
+					          
+					// var trid=document.getElementById("user"+response.trim());
+					$("#user"+response.trim()).remove();
+					      
+				},                
+				error: function(xhr, status, error) {
+					alert(xhr.responseText);
+				}              
+			});
+			
+			return false;
+		}
+	})
+});
+
+//part A stuff
 
 function disableAinput(){
 	// alert("disabling");
@@ -300,7 +338,7 @@ function getPartAData(){
 	return false;
 }
 
-//PART B 
+//PART B stuff
 
 $(document).ready(function(){
 
@@ -1196,6 +1234,7 @@ $(document).ready(function(){
        	pin.css({"width":"26px","height":"26px"});
     });
 });
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FORM APPRAISAL ENABLE INPUTS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 function enableinputs()
 {

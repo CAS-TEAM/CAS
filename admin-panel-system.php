@@ -2,12 +2,6 @@
 
 include 'dbh.php';
 
-// echo $_POST['hod'];
-// echo $_POST['committee'];
-// echo $_POST['principal'];
-// echo $_POST['admin'];
-// echo $_POST['userId'];
-
 $faculty_id=mysqli_real_escape_string($conn,$_POST['userId']);
 
 if(isset($_POST['hod']))
