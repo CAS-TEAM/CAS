@@ -108,6 +108,11 @@ include 'top.php';
 					<div class="col-md-10">
 
 						<div class="custom-control custom-checkbox">
+						  <input type="checkbox" class="custom-control-input" id="defaultCheckedFaculty" name="faculty">
+						  <label class="custom-control-label" for="defaultCheckedFaculty" style="color: #a6a6a6">Faculty</label>
+						</div>
+
+						<div class="custom-control custom-checkbox">
 						  <input type="checkbox" class="custom-control-input" id="defaultCheckedH.O.D" name="hod">
 						  <label class="custom-control-label" for="defaultCheckedH.O.D" style="color: #a6a6a6">H.O.D</label>
 						</div>
