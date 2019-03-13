@@ -27,6 +27,7 @@ $admin=$rowp['admin'];
 					<i class="fas fa-times"></i>
 				</div>
 			</div>
+
 			<div class="sidebar-header">
 				<div class="user-pic">
 					<img class="img-responsive img-rounded" src="<?php echo $profilePicLocation; ?>"
@@ -70,6 +71,16 @@ $admin=$rowp['admin'];
 
 			<div class="sidebar-menu">
 				<ul>
+
+					<?php
+
+					if($admin==1)
+					{
+						?>
+							<a href="createuser.php"><input type="submit" name="submit" value="Create User" class="btn create-user-admin" /></a>
+						<?php
+					}
+					?>
 					
 					<li class="sidebar-dropdown active">
 						<a href="userprofile.php">
