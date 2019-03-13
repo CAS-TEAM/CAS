@@ -39,9 +39,7 @@ include 'left-nav.php';
 						   <p style="color: white;font-size: 30px">Admin Panel</p>
 				        </div>
 				        <div class="col-md-6 text-right">
-				        	<form class="" method="POST" action="createuser.php">
-							 	<button type="submit" class="btn btn-info custom-button-width .navbar-right" style="font-size: 17px">Create User</button>
-					    	</form>
+						 	<a href="createuser.php" class="btn btn-info custom-button-width .navbar-right" style="font-size: 17px">Create User</a>
 						</div>
 				  	</div>
 				</div>

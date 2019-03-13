@@ -108,7 +108,7 @@ include 'top.php';
 					<div class="col-md-10">
 
 						<div class="custom-control custom-checkbox">
-						  <input type="checkbox" class="custom-control-input" id="defaultCheckedFaculty" name="faculty">
+						  <input type="checkbox" class="custom-control-input" id="defaultCheckedFaculty" name="faculty" checked>
 						  <label class="custom-control-label" for="defaultCheckedFaculty" style="color: #a6a6a6">Faculty</label>
 						</div>
 
@@ -195,38 +195,36 @@ include 'top.php';
 			{
 				?>
 					<div class="alert alert-success">File Uploaded Successfully</div>
-			<?php  
+				<?php  
 			}
 		}
 	}
-?>
+	?>
     	<div class="col-md-2" style="height: 100%;color:#44a0b3">
     		<div class="row justify-content-center" style="height:100%">
     			<div class="col align-items-center"><p class="text-center" style="height:100%;font-size: 25px">OR</p></div>
     		</div>
-    		
-    		
     	</div>
 		<!-- <div class="container"> -->
 			<!-- <div class="row justify-content-center"> -->
 		    	<div class="col-md-5 upload-form-div"><br>
 	    			<form action="" method="POST" enctype="multipart/form-data">
-		    		<h3 class="text-center" style="color: #44a0b3">Upload your file</h3>
-		    		<hr style="border: 0.5px solid #44a0b3">
-		    		<div class="row justify-content-center">
-		    			<div class="col-md-12 text">
-		    				<div class="form-group">
-		    					<input type="file" name="myFile" class="form-control upload-form-input">
-		    				</div>
-		    			</div>
-		    		</div>
-		    		<div class="row justify-content-center">
-		    			<div class="col-md-3">
-		    				<div class="form-group">
-		    					<input type="submit" name="uploadBtn" class="btn btn-info submit-user-btn">
-		    				</div>
-		    			</div>
-		    		</div>	
+			    		<h3 class="text-center" style="color: #44a0b3">Upload your file</h3>
+			    		<hr style="border: 0.5px solid #44a0b3">
+			    		<div class="row justify-content-center">
+			    			<div class="col-md-12 text">
+			    				<div class="form-group">
+			    					<input type="file" name="myFile" class="form-control upload-form-input">
+			    				</div>
+			    			</div>
+			    		</div>
+			    		<div class="row justify-content-center">
+			    			<div class="col-md-3">
+			    				<div class="form-group">
+			    					<input type="submit" name="uploadBtn" class="btn btn-info submit-user-btn">
+			    				</div>
+			    			</div>
+			    		</div>	
     				</form>
     			</div>
     		<!-- </div> -->
@@ -234,6 +232,69 @@ include 'top.php';
    </div>
 </div>
 <br><br>
+
+<?php 
+
+	if (isset($_GET['error']))
+	{
+		if($_GET['error']=='none')
+		{
+			?>
+		    <script type="text/javascript">
+		    $(document).ready(function(){
+		    	document.getElementById("signin-error").innerHTML="User created Successfully!";
+		        $('#myModal').modal('show');
+		    });
+		    </script>
+			<?php 
+		}
+		else if($_GET['error']=='already_exists')
+		{
+			?>
+		    <script type="text/javascript">
+		    $(document).ready(function(){
+		    	document.getElementById("signin-error").innerHTML="This user already exists.";
+		        $('#myModal').modal('show');
+		    });
+		    </script>
+			<?php 
+		}
+		if($_GET['error']=='password_not_matching')
+		{
+			?>
+		    <script type="text/javascript">
+		    $(document).ready(function(){
+		    	document.getElementById("signin-error").innerHTML="The passwords do not match.";
+		        $('#myModal').modal('show');
+		    });
+		    </script>
+			<?php 
+		}
+	}
+	?>
+
+	<div class="modal fade" id="myModal">
+	  	<div class="modal-dialog">
+		    <div class="modal-content">
+
+		      	<!-- Modal Header -->
+		      	<div class="modal-header">
+			        <h4 class="modal-title">Error</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      	</div>
+
+		      	<div class="modal-body">
+			        <p id="signin-error"></p>
+			    </div>
+
+		      	<!-- Modal footer -->
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		      	</div>
+
+		    </div>
+	  	</div>
+	</div>
 </body>
 </html>
 

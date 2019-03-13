@@ -1589,13 +1589,13 @@ include 'left-nav.php';
 	function myFunction() {
 		$("#summary-comm-submit-form").toggle();
 		$("#part-a-print-form").toggle();
-		$(".page-wrapper").toggle();
+		$("#sidebar").toggle();
 		
 	  	window.print();
 
 	  	$("#summary-comm-submit-form").toggle();
 		$("#part-a-print-form").toggle();
-		$(".page-wrapper").toggle();
+		$("#sidebar").toggle();
 	}
 	</script>
 

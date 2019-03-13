@@ -16,7 +16,14 @@ $date_of_joining=$_POST['date_of_joining'];
 $department=$_POST['department'];
 // echo $_POST['department'];
 
-
+if(isset($_POST['faculty']))
+{
+	$faculty=1;
+}
+else
+{
+	$faculty=0;
+}
 
 if(isset($_POST['hod']))
 {
@@ -57,27 +64,27 @@ if($password==$cpassword)
 	{
 		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 		// echo "Password matches";
-		$sql="INSERT INTO faculty_table (faculty_name, email, password, date_of_joining, department, hod, committee, principal) VALUES ('$faculty_name','$email','$hashed_password','$date_of_joining','$department','$hod', '$committee', '$principal')";
+		$sql="INSERT INTO faculty_table (faculty_name, email, password, date_of_joining, department, faculty, hod, committee, principal) VALUES ('$faculty_name','$email','$hashed_password','$date_of_joining','$department', '$faculty', '$hod', '$committee', '$principal')";
 	    $result=mysqli_query($conn, $sql);
 
 		// echo "Successfully ADded new User";
 
-		$_SESSION['id']=$conn->insert_id;
+		// $_SESSION['id']=$conn->insert_id;
 
-		$_SESSION['faculty_name']=$faculty_name;
+		// $_SESSION['faculty_name']=$faculty_name;
 
 		mkdir('users/'.$email, 0777, true);
 
-		header("LOCATION: adminpanel.php");
+		header("LOCATION: createuser.php?error=none");
 	}
 	else
 	{
-		header("LOCATION: index.php?error=already_exists");
+		header("LOCATION: createuser.php?error=already_exists");
 	}
 	
 }
 else
 {
-	header("LOCATION: index.php?error=password_not_matching");
+	header("LOCATION: createuser.php?error=password_not_matching");
 }
 

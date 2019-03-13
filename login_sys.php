@@ -27,6 +27,10 @@ if(mysqli_num_rows($result)==1)
        	$_SESSION['id']=$id;
 	   	$_SESSION['faculty_name']=$faculty_name;
 
+	   	//deleting any otps for this user
+	   	$sqlx="DELETE FROM otp_table WHERE facultyId='$id'";
+		$resultx=mysqli_query($conn,$sqlx);
+
 	   if (!file_exists('users/'.$email)) {
 		    mkdir('users/'.$email, 0777, true);
 		}

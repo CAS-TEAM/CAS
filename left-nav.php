@@ -2,7 +2,7 @@
 
 $uid=mysqli_real_escape_string($conn,$_SESSION['id']);
 
-$sqlp="SELECT profilePicLocation, faculty_name, hod, committee FROM faculty_table WHERE id='$uid'";
+$sqlp="SELECT profilePicLocation, faculty_name, admin, hod, committee FROM faculty_table WHERE id='$uid'";
 $resultp=mysqli_query($conn,$sqlp);
 
 $rowp=mysqli_fetch_assoc($resultp);
@@ -11,6 +11,7 @@ $profilePicLocation=$rowp['profilePicLocation'];
 $faculty_name=$rowp['faculty_name'];
 $hod=$rowp['hod'];
 $committee=$rowp['committee'];
+$admin=$rowp['admin'];
 
 ?>
 
@@ -80,32 +81,52 @@ $committee=$rowp['committee'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">PartA form</span>
+							<span style="font-size: 15px;cursor:pointer">Part A forms</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
-								<li>
-									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear.'-'.$previousyear; ?></a>
-								</li>
+								<?php
+
+								for($a=$currentyear; $a>=2017; $a--)
+								{
+									?>
+									<li>
+										<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo $a.'-'.($a-1); ?></a>
+									</li>
+									<?php
+								}
+								/*
 								<li>
 									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
 								</li>
+								*/
+								?>
 							</ul>
 						</div>
 					</li>
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">PartB form</span>
+							<span style="font-size: 15px;cursor:pointer">Part B forms</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
-								<li>
-									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $currentyear; ?>"><?php echo $currentyear.'-'.$previousyear; ?></a>
-								</li>
+								<?php
+
+								for($a=$currentyear; $a>=2017; $a--)
+								{
+									?>
+									<li>
+										<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo $a.'-'.($a-1); ?></a>
+									</li>
+									<?php
+								}
+								/*
 								<li>
 									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
 								</li>
+								*/
+								?>
 							</ul>
 						</div>
 					</li>
@@ -114,24 +135,22 @@ $committee=$rowp['committee'];
 							<i class="fas fa-info" style="font-size: 15px"></i>
 							<span style="font-size: 15px">CAS Guidelines</span>
 						</a>
-						
 					</li>
-					<!-- <li class="sidebar-dropdown">
-						<a href="#">
-							<i class="fa fa-globe"></i>
-							<span>Maps</span>
-						</a>
-						<div class="sidebar-submenu">
-							<ul>
-								<li>
-									<a href="#">Google maps</a>
-								</li>
-								<li>
-									<a href="#">Open street map</a>
-								</li>
-							</ul>
-						</div>
-					</li> -->
+					<?php
+
+					if($admin==1)
+					{
+						?>
+						<li class="sidebar-dropdown">
+							<a href="adminpanel.php">
+								<i class="fas fa-hammer" style="font-size: 15px"></i>
+								<span style="font-size: 15px">Admin Panel</span>
+							</a>
+						</li>
+						<?php
+					}
+					?>
+					
 				 
 				</ul>
 			</div>
