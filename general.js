@@ -3171,3 +3171,62 @@ function getSummaryData(){
 	
 	return false;
 }
+
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADMIN PANEL FILTERING SYSTEM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+var filter="0";
+function adminfilters(filter)
+{
+	filter=filter.value;
+
+	window.location.href="adminpanel.php?filter="+filter;
+
+	// alert(filter);
+
+	// $.ajax
+	// ({
+	// 	type: 'POST',
+	// 	url: 'admin-panel-fetch-data.php',
+	// 	data :{filter:filter},
+	// 	// dataType: 'text',
+	// 	// contentType: "application/json; charset=utf-8",
+	// 	// dataType: "json",            
+	// 	success: function (response) 
+	// 	{
+			
+	// 		// response=JSON.parse(response);alert(response[1]);
+	// 		// alert(response);
+
+	// 		// document.getElementById("jhat").innerHTML=JSON.parse(response);
+
+	// 		// $('#categories-div').toggle();
+
+	// 		// document.getElementById('categories-div').innerHTML="hi"; 
+	// 		if(response.trim()!="")
+	// 		{ 
+	// 			$('#admin-panel-tbody').html(response);
+	// 		}
+	// 		else
+	// 		{
+	// 			$('#admin-panel-tbody').html("<p>No Results</p>");
+	// 		}
+	// 	},                
+	// 	error: function(xhr, status, error) {
+	// 		// alert("hi");
+	// 		// alert(xhr.responseText);
+	// 		if(xhr.responseText.trim()!="</div>")
+	// 		{
+	// 			$('#admin-panel-tbody').html(xhr.responseText);
+	// 		}
+	// 		else
+	// 		{
+	// 			$('#admin-panel-tbody').html("<p>No Results</p>");
+	// 		}
+			
+
+	// 		// alert(error);
+	// 	}              
+	// });
+
+	// return false;
+}

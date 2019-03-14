@@ -969,3 +969,10 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* ADMIN PANEL */
+.admin-filter-box{
+	border: 2px solid #cccccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}

@@ -21,6 +21,11 @@ $admin=$rowp['admin'];
 if($admin==1)
 {
 
+if(isset($_GET['filter']))
+{
+	$filter=mysqli_real_escape_string($conn, $_GET['filter']);
+}
+
 include 'top.php';
 include 'left-nav.php';
 
@@ -38,9 +43,37 @@ include 'left-nav.php';
 				  		<div class="col-md-6 text-left"> 
 						   <p style="color: white;font-size: 30px">Admin Panel</p>
 				        </div>
+				        
 				        <div class="col-md-6 text-right">
-						 	<a href="createuser.php" class="btn btn-info custom-button-width .navbar-right" style="font-size: 17px">Create User</a>
+						 	<a href="createuser.php" class="btn btn-info custom-button-width navbar-right my-auto" style="font-size: 17px">Create User</a>
 						</div>
+				  	</div>
+				  	<div class="row justify-content-center">
+				  		<div class="col-md-12 text-center admin-filter-box"> 
+				        	<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px">
+				        		<div class="col-md-2">
+				        			<p style="color: white;font-size: 15px" class="my-auto text-right">Filter by:</p>
+				        		</div>
+				        		<div class="col-md-3 align-items-center">
+				        			<select id="filter" name="filter" class="form-control" onchange="adminfilters(this);">
+				        				<option value="0">Choose</option>
+				        				<option value="faculty_name">Faculty Name</option>
+				        				<option value="department">Department</option>
+				        				<option value="date_of_joining">Date of Joining</option>
+				        			</select>
+				        		</div>
+				        		<div class="col-md-4 align-items-center">
+				        			<form method="POST" action="admin-panel-fetch-data.php">
+				        				<div class="input-group">
+										  	<input type="text" class="form-control" name="query" placeholder="Search faculty name" aria-label="Search faculty name" aria-describedby="basic-addon2">
+										  	<div class="input-group-append">
+										    	<button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+										  	</div>
+										</div>
+				        			</form>				        			
+				        		</div>
+				        	</div>
+				        </div>
 				  	</div>
 				</div>
 
@@ -65,10 +98,23 @@ include 'left-nav.php';
 
 					    </tr>
 				  	</thead>
-				  	<tbody>
+				  	<tbody id="admin-panel-tbody">
 				  		<?php
 
-				  		$sql="SELECT id, faculty_name, email, date_of_joining, department, faculty, hod, committee, principal, admin FROM faculty_table";
+				  		if(isset($_GET['filter']) && $_GET['filter']!="search")
+				  		{
+				  			$sql="SELECT id, faculty_name, email, date_of_joining, department, faculty, hod, committee, principal, admin FROM faculty_table ORDER BY $filter ASC";
+				  		}
+				  		else if(isset($_GET['filter']) && $_GET['filter']=="search")
+				  		{
+				  			$query=mysqli_real_escape_string($conn,$_GET['q']);
+				  			$sql="SELECT id, faculty_name, email, date_of_joining, department, faculty, hod, committee, principal, admin FROM faculty_table WHERE faculty_name LIKE '%$query%'";
+				  		}
+				  		else
+				  		{
+				  			$sql="SELECT id, faculty_name, email, date_of_joining, department, faculty, hod, committee, principal, admin FROM faculty_table";
+				  		}
+				  		
 				  		$result=mysqli_query($conn,$sql);
 
 				  		$counter=1;
