@@ -74,7 +74,7 @@ include 'top.php';
 								         	</div>
 							         	</form>
 
-							         	<p class="text-center my-0" id="otpsent-message" style="display:none">The OTP has been sent to your email address. Please enter the OTP in the field below and press "Verify" to log-in.</p>
+							         	<p class="text-center my-0" id="otpsent-message" style="display:none"><br>The OTP has been sent to your email address. Please enter the <br>OTP in the field below and press "Verify" to log-in.</p>
 
 							         	<!-- LOGIN THROUGH OTP FORM -->
 							         	<form class="verify-otp-form" action="" method="POST">
@@ -89,8 +89,9 @@ include 'top.php';
 	  											<button type="submit" id="verify-otp" class="btn btn-primary">Verify</button>
 								         	</div>
 								         </form>
+								         <br>
 
-								         <p class="text-center my-0" id="verifyotp-message" style="display:none">The OTP you entered was wrong. Please try again or resend the OTP.</p>
+								         <p class="text-center my-0" id="verifyotp-message" style="display:none">The OTP you entered was wrong. Please try again or resend the<br> OTP.</p>
 
 
 							        </div>

@@ -20,123 +20,154 @@ $profilePicLocation=$rowx['profilePicLocation'];
 $admin=$rowx['admin'];
 
 include 'top.php';
+include 'left-nav.php';
+
 
 ?>
 
-	<div class="container">
-		<div class="row justify-content-center">
-		    <div class="col-md-5 regist-form-div">
-				<div class="row">
-					<div class="col-md-12"><br>
-						<h3 class="text-center" style="font-size: 25px;color:#44a0b3">Create User</h3>
-					</div>
-				</div>
-				<hr style="border: 1px solid #44a0b3">
+<div class="container" style="background-color: #343a40">
+    <div class="row">    		
+	    <div class="col offset-md-2" style="background-color: #343a40">
 
-				<form action="regist_sys.php" method="POST">
-				<div class="row">
-					<label class="label-user col-md-2 control-label">Name</label>
-					<div class="col-md-10">
-						<input type="text" class="form-control register-form-input" name="faculty_name" placeholder="Full Name" required>
-					</div>
-				</div>
+			<ul class="nav nav-pills mb-3 justify-content-center nav-fill" id="pills-tab" role="tablist" style="background-color: #44a0b3;border: 1px solid #44a0b3;height: 50px;">
+			  	<li class="nav-item">
+			    	<a class="nav-link active" id="pills-apply-tab" data-toggle="pill" href="#pills-apply" role="tab" aria-controls="pills-apply" aria-selected="true" style="color: white;font-size: 20px">Create User</a>
+			  	</li>
+			  	<li class="nav-item">
+			    	<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false" style="color: white;font-size: 20px">Upload CSV</a>
+			  	</li>				
+			</ul>
 
-				<div class="row">
-					<label class="label-user col-md-2 control-label">Email</label>
-					<div class="col-md-10">
-						<input type="email" class="form-control register-form-input" name="email" placeholder="E-mail" required>
-					</div>
-				</div>
+			<div class="tab-content" id="pills-tabContent" style="background-color: #343a40">	
+				<div class="tab-pane fade show active" id="pills-apply" role="tabpanel" aria-labelledby="pills-apply-tab">		
+					<div class="row">
+					    <div class="col-md-12 regist-form-div">
+							<form action="regist_sys.php" method="POST">
+							<div class="row">
+								<label class="label-user col-md-2 control-label text-right">Name</label>
+								<div class="col-md-4">
+									<input type="text" class="form-control register-form-input" name="faculty_name" placeholder="Full Name" style="width:90%" required>
+								</div>
+								<label class="label-user col-md-2 control-label text-right">Email</label>
+								<div class="col-md-4">
+									<input type="email" class="form-control register-form-input" name="email" placeholder="E-mail" style="width:90%" required>
+								</div>
+							</div><br>
 
-				<div class="row">
-					<label class="label-user col-md-2 control-label">Password</label>
-					<div class="col-md-10">
-						<input type="password" class="form-control register-form-input" name="password" placeholder="Password" required>
-					</div>
-				</div>
+							<div class="row">
+								<label class="label-user col-md-2 control-label text-right">Password</label>
+								<div class="col-md-4">
+									<input type="password" class="form-control register-form-input" name="password" placeholder="Password" style="width:90%" required>
+								</div>
+								<label class="label-user col-md-2 control-label text-right">Confirm Password</label>
+								<div class="col-md-4">
+									<input type="password" class="form-control register-form-input" name="cpassword" placeholder="Retype-Password" style="width:90%" required>
+								</div>
+							</div>
 
-				<div class="row">
-					<label class="label-user col-md-2 control-label">Confirm Password</label>
-					<div class="col-md-10">
-						<input type="password" class="form-control register-form-input" name="cpassword" placeholder="Retype-Password" required>
-					</div>
-				</div>
-				
-				<div class="row">
-					<label class="label-user col-md-3 control-label">Date of Joining</label>
-					<div class="col-md-7">
-						<input type="date" class="form-control register-form-input" style="margin-left: -17px" name="date_of_joining" placeholder="" required>
-					</div>
-				</div>
+							
+							
+							<div class="row">
+								<label class="label-user col-md-2 control-label text-right">Date of Joining</label>
+								<div class="col-md-10">
+									<input type="date" class="form-control register-form-input" name="date_of_joining" placeholder=""  style="width:34%" required>
+								</div>
+							</div><br>
 
-				<div class="row">
-					<div class="col-md-3 col-sm-2" style="margin:0">
-						<label class="label-user control-label">Department</label>
-					</div>
-					
-					<div class="col-md-9 col-sm-10" style="margin:0;padding:0">
+							<div class="row">
+								<div class="col-md-3 col-sm-2 text-center" style="margin:0">
+									<label class="label-user control-label">Department</label>
+								</div>
+								
+								<div class="col-md-7 col-sm-10" style="margin:0;padding:0;margin-top: 15px">
 
-						<div class="custom-control custom-radio custom-control-inline">
-						  <input type="radio" class="custom-control-input" id="defaultInlineComputer" name="department" value="Computer" checked>
-						  <label class="custom-control-label" for="defaultInlineComputer" style="color: #a6a6a6">Computer</label>
+									<div class="custom-control custom-radio custom-control-inline">
+									  <input type="radio" class="custom-control-input" id="defaultInlineComputer" name="department" value="Computer" checked>
+									  <label class="custom-control-label" for="defaultInlineComputer" style="color: #a6a6a6">Computer</label>
+									</div>
+
+									<div class="custom-control custom-radio custom-control-inline">
+									  <input type="radio" class="custom-control-input" id="defaultInlineExtc" name="department" value="Extc">
+									  <label class="custom-control-label" for="defaultInlineExtc" style="color: #a6a6a6">Extc</label>
+									</div>
+
+									<div class="custom-control custom-radio custom-control-inline">
+									  <input type="radio" class="custom-control-input" id="defaultInlineEtrx" name="department" value="Etrx">
+									  <label class="custom-control-label" for="defaultInlineEtrx" style="color: #a6a6a6">Etrx</label>
+									</div>
+
+									<div class="custom-control custom-radio custom-control-inline">
+									  <input type="radio" class="custom-control-input" id="defaultInlineIT" name="department" value="IT">
+									  <label class="custom-control-label" for="defaultInlineIT" style="color: #a6a6a6">IT</label>
+									</div>
+
+									<div class="custom-control custom-radio custom-control-inline">
+									  	<input type="radio" class="custom-control-input" id="defaultInlineMechanical" name="department" value="Mechanical">
+									  	<label class="custom-control-label" for="defaultInlineMechanical" style="color: #a6a6a6">Mechanical</label>
+									</div>
+								</div>
+							</div><br>
+
+							<div class="row">
+								<label class="label-user col-md-3 control-label text-center">Role</label>
+								
+								<div class="col-md-9">
+
+									<div class="custom-control custom-checkbox">
+									  <input type="checkbox" class="custom-control-input" id="defaultCheckedFaculty" name="faculty" checked>
+									  <label class="custom-control-label" for="defaultCheckedFaculty" style="color: #a6a6a6">Faculty</label>
+									</div>
+
+									<div class="custom-control custom-checkbox">
+									  <input type="checkbox" class="custom-control-input" id="defaultCheckedH.O.D" name="hod">
+									  <label class="custom-control-label" for="defaultCheckedH.O.D" style="color: #a6a6a6">H.O.D</label>
+									</div>
+
+									<div class="custom-control custom-checkbox">
+									  <input type="checkbox" class="custom-control-input" id="defaultCheckedCommittee" name="committee">
+									  <label class="custom-control-label" for="defaultCheckedCommittee" style="color: #a6a6a6">Committee</label>
+									</div>
+
+									<div class="custom-control custom-checkbox">
+									  <input type="checkbox" class="custom-control-input" id="defaultCheckedPrincipal" name="principal">
+									  <label class="custom-control-label" for="defaultCheckedPrincipal" style="color: #a6a6a6">Principal</label>
+									</div>
+								</div>
+							</div>
+
+							<input type="submit" name="submit" value="Create" class="btn create-user-btn" />
+							<!-- <a href="#"><div class="btn btn-warning">cancel</div></a> -->
+
+							</form>
 						</div>
-
-						<div class="custom-control custom-radio custom-control-inline">
-						  <input type="radio" class="custom-control-input" id="defaultInlineExtc" name="department" value="Extc">
-						  <label class="custom-control-label" for="defaultInlineExtc" style="color: #a6a6a6">Extc</label>
-						</div>
-
-						<div class="custom-control custom-radio custom-control-inline">
-						  <input type="radio" class="custom-control-input" id="defaultInlineEtrx" name="department" value="Etrx">
-						  <label class="custom-control-label" for="defaultInlineEtrx" style="color: #a6a6a6">Etrx</label>
-						</div>
-
-						<div class="custom-control custom-radio custom-control-inline">
-						  <input type="radio" class="custom-control-input" id="defaultInlineIT" name="department" value="IT">
-						  <label class="custom-control-label" for="defaultInlineIT" style="color: #a6a6a6">IT</label>
-						</div>
-
-						<div class="custom-control custom-radio custom-control-inline">
-						  	<input type="radio" class="custom-control-input" id="defaultInlineMechanical" name="department" value="Mechanical">
-						  	<label class="custom-control-label" for="defaultInlineMechanical" style="color: #a6a6a6">Mechanical</label>
-						</div>
 					</div>
-				</div><br>
-
-				<div class="row">
-					<label class="label-user col-md-2 control-label">Role</label>
-					<div class="col-md-10">
-
-						<div class="custom-control custom-checkbox">
-						  <input type="checkbox" class="custom-control-input" id="defaultCheckedFaculty" name="faculty" checked>
-						  <label class="custom-control-label" for="defaultCheckedFaculty" style="color: #a6a6a6">Faculty</label>
-						</div>
-
-						<div class="custom-control custom-checkbox">
-						  <input type="checkbox" class="custom-control-input" id="defaultCheckedH.O.D" name="hod">
-						  <label class="custom-control-label" for="defaultCheckedH.O.D" style="color: #a6a6a6">H.O.D</label>
-						</div>
-
-						<div class="custom-control custom-checkbox">
-						  <input type="checkbox" class="custom-control-input" id="defaultCheckedCommittee" name="committee">
-						  <label class="custom-control-label" for="defaultCheckedCommittee" style="color: #a6a6a6">Committee</label>
-						</div>
-
-						<div class="custom-control custom-checkbox">
-						  <input type="checkbox" class="custom-control-input" id="defaultCheckedPrincipal" name="principal">
-						  <label class="custom-control-label" for="defaultCheckedPrincipal" style="color: #a6a6a6">Principal</label>
-						</div>
 					</div>
-				</div>
+				<br>
+			<!-- </div> -->
 
-				<input type="submit" name="submit" value="Create" class="btn create-user-btn" />
-				<!-- <a href="#"><div class="btn btn-warning">cancel</div></a> -->
+				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">    	
+			    	<form action="" method="POST" enctype="multipart/form-data">
+				    	<div class="row upload-form-div justify-content-right"><br>
+				    		<div class="col-md-12">
+				    			<input type="file" name="myFile" class="form-control upload-form-input" style="margin-left: 180px">
+				    		</div>
+				    	</div>
+				    	<br>
+					    	
+			    		<div class="row justify-content-center">
+			    			<div class="col-md-3">
+			    				<div class="form-group">
+			    					<input type="submit" name="uploadBtn" value="Submit" class="btn btn-info submit-user-btn" style="margin-left: 60px">
+			    				</div>
+			    			</div>
+			    		</div>	
+					</form>
+	  			</div>
+	  		</div>
+		</div>
+	</div>
 
-				</form>
-			</div>
-		<!-- </div> -->
-		<br>
-	<!-- </div> -->
+
 
 	<?php
 
@@ -200,36 +231,8 @@ include 'top.php';
 		}
 	}
 	?>
-    	<div class="col-md-2" style="height: 100%;color:#44a0b3">
-    		<div class="row justify-content-center" style="height:100%">
-    			<div class="col align-items-center"><p class="text-center" style="height:100%;font-size: 25px">OR</p></div>
-    		</div>
-    	</div>
-		<!-- <div class="container"> -->
-			<!-- <div class="row justify-content-center"> -->
-		    	<div class="col-md-5 upload-form-div"><br>
-	    			<form action="" method="POST" enctype="multipart/form-data">
-			    		<h3 class="text-center" style="color: #44a0b3">Upload your file</h3>
-			    		<hr style="border: 0.5px solid #44a0b3">
-			    		<div class="row justify-content-center">
-			    			<div class="col-md-12 text">
-			    				<div class="form-group">
-			    					<input type="file" name="myFile" class="form-control upload-form-input">
-			    				</div>
-			    			</div>
-			    		</div>
-			    		<div class="row justify-content-center">
-			    			<div class="col-md-3">
-			    				<div class="form-group">
-			    					<input type="submit" name="uploadBtn" class="btn btn-info submit-user-btn">
-			    				</div>
-			    			</div>
-			    		</div>	
-    				</form>
-    			</div>
-    		<!-- </div> -->
-    	<!-- </div> -->
-   </div>
+
+	
 </div>
 <br><br>
 
@@ -242,7 +245,8 @@ include 'top.php';
 			?>
 		    <script type="text/javascript">
 		    $(document).ready(function(){
-		    	document.getElementById("signin-error").innerHTML="User created Successfully!";
+		    	document.getElementById("modal-title").innerHTML="Success";
+		    	document.getElementById("signin-error").innerHTML="User created successfully!";
 		        $('#myModal').modal('show');
 		    });
 		    </script>
@@ -279,7 +283,7 @@ include 'top.php';
 
 		      	<!-- Modal Header -->
 		      	<div class="modal-header">
-			        <h4 class="modal-title">Error</h4>
+			        <h4 class="modal-title" id="modal-title">Error</h4>
 			        <button type="button" class="close" data-dismiss="modal">&times;</button>
 		      	</div>
 

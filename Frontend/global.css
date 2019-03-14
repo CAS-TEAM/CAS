@@ -83,16 +83,16 @@ h3{
 /*Create user*/
 
 .regist-form-div{
-	margin-top: 45px;
-	width: 500px;
+/*	margin-top: 45px;
+*/	width: 100px;
 	background: transparent;
-	border: 1px solid  #44a0b3;
-}
+	/*border: 1px solid  #44a0b3;
+*/}
 
 .upload-form-div{
-	margin-top: 45px;
+	margin-top: -10px;
 	background: transparent;
-	border: 1px solid  #44a0b3;
+	/*border: 1px solid  #44a0b3;*/
 }
 
 .label-user{
@@ -116,25 +116,39 @@ h3{
 .upload-form-input{
 	background: transparent;
 	font-size: 18px;
-	height:48px;
+	height:45px;
 	color: #a6a6a6;
 	font-family: 'Roboto', sans-serif;
+	width: 60%;
 }
 
 .create-user-btn{
-	margin-top: 20px;
-	font-size: 20px;
+	margin-top: 30px;
+	font-size: 15px;
 	width:  100px;
-	margin-left: 170px;
-	margin-bottom: 20px;
+	margin-left: 390px;
+	margin-bottom: -10px;
 	align-content: center;
-	background-color: transparent; 
-	border: 1px solid #44a0b3;
-	color: white;
+	background-color: #44a0b3;; 
+/*	border: 1px solid #44a0b3;
+*/	color: white;
 	font-family: 'Roboto', sans-serif;
 
 }
 
+.create-user-admin{
+	margin-top: 10px;
+	font-size: 14px;
+	width:  80%;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	align-content: center;
+	background-color: #44a0b3;; 
+/*	border: 1px solid #44a0b3;
+*/	color: white;
+	font-family: 'Roboto', sans-serif;
+
+}
 .submit-user-btn{
 	margin-top: 20px;
 	font-size: 20px;
@@ -142,7 +156,7 @@ h3{
 	margin-left: -10px;
 	margin-bottom: 20px;
 	align-content: center;
-	background-color: transparent; 
+	background-color:  #44a0b3; 
 	border: 1px solid #44a0b3;
 	color: white;
 	font-family: 'Roboto', sans-serif;
