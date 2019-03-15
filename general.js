@@ -176,6 +176,41 @@ $(document).ready(function(){
 	})
 });
 
+$(document).ready(function(){
+
+	$(".delete-field-form").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
+		var duconfirm=confirm("Delete this field?");
+		if(duconfirm==true)
+		{
+			$.ajax
+			({
+				type: 'POST',
+				url: 'delete-field-system.php',
+				data:formData,
+				//dataType: 'text',  // what to expect back from the PHP script, if anything
+				cache: false,
+				contentType: false,
+				processData: false,                
+				success: function (response) 
+				{
+					// alert(response);
+					          
+					// var trid=document.getElementById("user"+response.trim());
+					$("#field"+response.trim()).remove();
+					      
+				},                
+				error: function(xhr, status, error) {
+					alert(xhr.responseText);
+				}              
+			});
+			
+			return false;
+		}
+	})
+});
+
 //part A stuff
 
 function disableAinput(){

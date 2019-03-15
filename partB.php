@@ -164,7 +164,7 @@ include 'left-nav.php';
 					?>
 					<form method="POST" action="sfrB_sys.php">
 						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
+						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review" onsubmit="return confirm('Do you want to submit the form for review?');">
 					</form><br>
 					<?php
 
@@ -178,7 +178,7 @@ include 'left-nav.php';
 						?>
 						<form method="POST" action="sfrB_sys.php">
 							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
+							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review" onsubmit="return confirm('Do you want to submit the form for review?');">
 						</form>	<br>
 						<?php
 					}

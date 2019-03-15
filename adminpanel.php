@@ -41,17 +41,16 @@ include 'left-nav.php';
 				<div class="container-fluid">
 				  	<div class="row">
 				  		<div class="col-md-6 text-left"> 
-						   <p style="color: white;font-size: 30px">Admin Panel</p>
-				        </div>
-				        
-				        <div class="col-md-6 text-right">
+						   <p style="color: white;font-size: 30px"><i class="fas fa-hammer" style="font-size: 28px"></i> Admin Panel</p>
+				        </div>				        
+				        <div class="col-md-6 text-right" style="height:100%">
 						 	<a href="createuser.php" class="btn btn-info custom-button-width navbar-right my-auto" style="font-size: 17px">Create User</a>
 						</div>
 				  	</div>
 				  	<div class="row justify-content-center">
 				  		<div class="col-md-12 text-center admin-filter-box"> 
 				        	<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px">
-				        		<div class="col-md-2">
+				        		<div class="col-md-2 offset-md-1">
 				        			<p style="color: white;font-size: 15px" class="my-auto text-right">Filter by:</p>
 				        		</div>
 				        		<div class="col-md-3 align-items-center">
@@ -78,7 +77,7 @@ include 'left-nav.php';
 				</div>
 
 
-				<div class="admin-table">
+				<div class="admin-table" style="max-height:500px">
 				<table class="table table-bordered" style="background-color: white">
 				  	<thead style="color: white">
 					    <tr>
@@ -95,7 +94,6 @@ include 'left-nav.php';
 					      	<th scope="col" style="background-color: #343a40;text-align: center">Admin</th>
 					      	<th scope="col" style="background-color: #343a40;text-align: center">Update</th>
 					 		<th scope="col" style="background-color: #343a40;text-align: center">Delete User</th>
-
 					    </tr>
 				  	</thead>
 				  	<tbody id="admin-panel-tbody">
@@ -279,6 +277,139 @@ include 'left-nav.php';
 				</div>
 
 				<br>
+				<hr style="border: 0.5px solid #c8c8c8">
+
+				<?php
+				/*
+				<div class="col-md-12">
+					<div class="container-fluid">
+					  	<div class="row">
+					  		<div class="col-md-6 text-left"> 
+							   <p style="color: white;font-size: 20px">Add New Field</p>
+					        </div>
+					  	</div>
+					  	<div class="row justify-content-center">
+					  		<div class="col-md-12 text-center admin-filter-box"> 
+					  			<form method="POST" action="add-field-sys.php" onsubmit="return confirm('Do you want to create a new field?');">
+
+						        	<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px">
+						        		<div class="col-md-4">
+						        			<input type="text" class="form-control" name="fieldtitle" id="fieldtitle" placeholder="Enter the title of the field">
+						        		</div>
+						        		<div class="col-md-4 align-items-center">
+						        			<input type="number" class="form-control" name="maxpi" id="maxpi" placeholder="Enter the max PI for the field">
+						        		</div>
+						        		<div class="col-md-4 align-items-center">						        			
+					        				<select id="inputtype" name="inputtype" class="form-control">
+						        				<option value="0">Choose Input Type</option>
+						        				<option value="text">Text</option>
+						        				<option value="number">Number</option>
+						        				<option value="date">Date</option>
+						        			</select>					        					        			
+						        		</div>
+						        	</div>
+						        	<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px">
+						        		<div class="col-md-4">
+						        			<input type="text" class="form-control" name="fieldname" id="fieldname" placeholder="Enter the name of the field">
+						        		</div>
+						        		<div class="col-md-4 align-items-center">
+						        			<input type="text" class="form-control" name="fieldid" id="fieldid" placeholder="Enter the id for the field">
+						        		</div>
+						        		<div class="col-md-4 align-items-center">
+						        			<input type="text" class="form-control" name="fieldplaceholder" id="fieldplaceholder" placeholder="Enter the placeholder for the field">
+						        		</div> 
+						        	</div>
+						        	<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px">
+						        		<div class="col-md-4">
+						        			<select id="fieldform" name="fieldform" class="form-control">
+						        				<option value="0">Choose The Form</option>
+						        				<option value="A">Form A</option>
+						        				<option value="B cat 1">Form B Category 1</option>
+						        				<option value="B cat 2">Form B Category 2</option>
+						        				<option value="B cat 3">Form B Category 3</option>
+						        				<option value="B cat 4">Form B Category 4</option>
+						        			</select>	
+						        		</div>
+						        		<div class="col-md-4 align-items-center">
+						        			<input type="date" class="form-control" name="fielddate" id="fielddate" placeholder="Enter the start date for the field">
+						        		</div>
+						        		<div class="col-md-4 align-items-center">
+						        			<button type="submit" class="btn btn-success h-100 w-100">Create Field</button>
+						        		</div>
+						        	</div>
+
+					        	</form>		
+					        </div>
+					  	</div>
+					</div>
+				</div>
+
+				<div class="admin-table" style="max-height:500px">
+				<table class="table table-bordered" style="background-color: white">
+				  	<thead style="color: white">
+					    <tr>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Sr.No</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Field Title</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Max PI</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Input Type</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Field HTML Name</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Field HTML ID</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Field Placehlder</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Field Form</th>
+					      	<th scope="col" style="background-color: #343a40;text-align: center">Field Date</th>
+					 		<th scope="col" style="background-color: #343a40;text-align: center">Delete Field</th>
+					    </tr>
+				  	</thead>
+				  	<tbody id="admin-panel-tbody">
+				  		<?php
+
+				  		
+				  		$sql="SELECT id, fieldtitle, maxpi, inputtype, fieldname, fieldid, fieldplaceholder, fieldform, fielddate FROM fields_table";
+				  		$result=mysqli_query($conn,$sql);
+				  		$counter=1;
+
+				  		while($row=mysqli_fetch_assoc($result))
+				  		{
+				  			$id=$row['id'];
+				  			$fieldtitle=$row['fieldtitle'];
+				  			$maxpi=$row['maxpi'];
+				  			$inputtype=$row['inputtype'];
+				  			$fieldname=$row['fieldname'];
+				  			$fieldid=$row['fieldid'];
+				  			$fieldplaceholder=$row['fieldplaceholder'];
+				  			$fieldform=$row['fieldform'];
+				  			$fielddate=$row['fielddate'];
+
+					  		?>
+						    <tr id="field<?php echo $id; ?>">
+						      	<th scope="row"><?php echo $counter; ?></th>
+						      	<td><?php echo $fieldtitle; ?></td>
+						      	<td><?php echo $maxpi; ?></td>
+						      	<td><?php echo $inputtype; ?></td>
+						      	<td><?php echo $fieldname; ?></td>	
+						      	<td><?php echo $fieldid; ?></td>
+						      	<td><?php echo $fieldplaceholder; ?></td>
+						      	<td><?php echo $fieldform; ?></td>
+						      	<td><?php echo $fielddate; ?></td>
+
+						      	<form class="delete-field-form" action="" method="POST">
+						      		<td class="table-center">
+		  								<input type="hidden" name="fieldidvalue" value="<?php echo $id; ?>">
+		  								<button type="submit" name="submit" class="btn btn-primary" id="deletefield<?php echo $id; ?>">Delete</button>
+		  							</td>
+						      	</form>			
+							</tr>						   
+						    
+						    <?php
+						    $counter+=1;
+						}
+
+					    ?>
+				  </tbody>
+				</table>
+				</div>
+				*/
+				?>
 
 			</div>
 		</div>

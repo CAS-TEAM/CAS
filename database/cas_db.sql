@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2019 at 03:26 PM
+-- Generation Time: Mar 15, 2019 at 03:35 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -67,7 +67,7 @@ CREATE TABLE `faculty_table` (
 --
 
 INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `date_of_joining`, `department`, `profilePicLocation`, `faculty`, `hod`, `committee`, `principal`, `admin`) VALUES
-(1, 'Prof. Babaso Aldar', 'babasoaldar@somaiya.edu', '$2y$10$bd4GNgydExAbWXbrf8P1SuVtVBdwxJ2oM66S.j1G/T5utSB1IeSCS', '2018-05-12', 'Computer', 'users/babasoaldar@somaiya.edu/profilepic.jpg', 1, 0, 1, 1, 1),
+(1, 'Prof. Babaso Aldar', 'babasoaldar@somaiya.edu', '$2y$10$bd4GNgydExAbWXbrf8P1SuVtVBdwxJ2oM66S.j1G/T5utSB1IeSCS', '2018-05-12', 'Computer', 'users/babasoaldar@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 1),
 (2, 'Prof. Manish Potey', 'manish.potey@somaiya.edu', '$2y$10$mRi97USluJQZPZtwSgS3ZOk1yybigUHHRhAJJ/yVPS8rF/DFRTGmK', '2010-08-17', 'Computer', 'users/manish.potey@somaiya.edu/profilepic.jpg', 1, 1, 0, 0, 0),
 (3, 'Jyoti Trymbake', 'jyoti.trymbake@somaiya.edu', '$2y$10$f06wIJ29VeGf1oGfh2P95uHgYPXIPuPwC4NxE/xYolwy2tn3H0O1q', '2011-06-14', 'Computer', 'users/jyoti.trymbake@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 0),
 (4, 'Prof. Poonam Bhogale', 'poonambhogale@somaiya.edu', '$2y$10$W6lbNYTxCAgG2GjeJ8xHuuV/BJg6NCMBifF5pvBJ7aDIiV2bIMTzC', '2008-11-11', 'Etrx', 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
@@ -76,6 +76,31 @@ INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `date_of
 (8, 'Head of Department', 'hod@gmail.com', '$2y$10$NHWvY2CloU7yObO0/Wan/OoneEmpkpG1ohx2tJrmxLu0HACIZLVuG', '2005-02-08', 'Computer', 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
 (9, 'Committee Member', 'committee@gmail.com', '$2y$10$v92ml9eUQRUtc5ENO2zfBe9pCtlmisvJXCQZdLxvtAyI.FpqmBR7u', '2000-02-08', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 0, 0),
 (10, 'Faculty Man', 'faculty@gmail.com', '$2y$10$jyK2JAE/82Af2Gnw2sxfgehh2ySM/L0lgzFW9rSq.BgcR6N6ZHLAm', '2019-03-20', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fields_table`
+--
+
+CREATE TABLE `fields_table` (
+  `id` int(11) NOT NULL,
+  `fieldtitle` varchar(200) NOT NULL,
+  `maxpi` int(11) NOT NULL,
+  `inputtype` varchar(200) NOT NULL,
+  `fieldname` varchar(200) NOT NULL,
+  `fieldid` varchar(200) NOT NULL,
+  `fieldplaceholder` varchar(400) NOT NULL,
+  `fieldform` varchar(10) NOT NULL,
+  `fielddate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fields_table`
+--
+
+INSERT INTO `fields_table` (`id`, `fieldtitle`, `maxpi`, `inputtype`, `fieldname`, `fieldid`, `fieldplaceholder`, `fieldform`, `fielddate`) VALUES
+(2, 'Marks Awarded', 100, 'number', 'marksawarded', 'marksawarded', 'Enter the marks awarded by you to students', 'A', '2019-03-15');
 
 -- --------------------------------------------------------
 
@@ -1233,6 +1258,12 @@ ALTER TABLE `faculty_table`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `fields_table`
+--
+ALTER TABLE `fields_table`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `otp_table`
 --
 ALTER TABLE `otp_table`
@@ -1457,10 +1488,15 @@ ALTER TABLE `cas_approval_table`
 ALTER TABLE `faculty_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
+-- AUTO_INCREMENT for table `fields_table`
+--
+ALTER TABLE `fields_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `otp_table`
 --
 ALTER TABLE `otp_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --

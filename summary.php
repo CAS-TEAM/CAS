@@ -149,7 +149,7 @@ include 'left-nav.php';
 
 		?>
 		
-		<header class="heading"><b>Summary of PI Scores(to be filled by applicant)</b></header><br>
+		<header class="heading"><b>Summary of PI Scores (to be filled by applicant)</b></header><br>
 		<!-- <form class="summary_self_form.php" action="summary_sys.php" enctype="multipart/form-data" method="POST"> -->
 
 		<input type="hidden" name="year" id="year" value="<?php echo $currentyear; ?>">
@@ -1492,7 +1492,7 @@ include 'left-nav.php';
 		<div class="row form-inline justify-content-center">
 
 			<div class="col">
-				<button type="submit" class="btn btn-success" id="summary-comm-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+				<button type="submit" class="btn btn-success" id="summary-comm-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far."  onsubmit="return confirm('Do you want to submit the summary?');">
 	  			SUBMIT 
 				</button>
 
