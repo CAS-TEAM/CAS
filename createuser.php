@@ -146,10 +146,10 @@ include 'left-nav.php';
 			<!-- </div> -->
 
 				<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">    	
-			    	<form action="" method="POST" enctype="multipart/form-data">
+			    	<!-- <form action="" method="POST" enctype="multipart/form-data">
 				    	<div class="row upload-form-div justify-content-right"><br>
 				    		<div class="col-md-12">
-				    			<input type="file" name="myFile" class="form-control upload-form-input" style="margin-left: 180px">
+				    			<input type="file" name="myFile" class="form-control upload-form-input" style="margin-left: 180px;margin-bottom: 6px">
 				    		</div>
 				    	</div>
 				    	<br>
@@ -157,17 +157,37 @@ include 'left-nav.php';
 			    		<div class="row justify-content-center">
 			    			<div class="col-md-3">
 			    				<div class="form-group">
-			    					<input type="submit" name="uploadBtn" value="Submit" class="btn btn-info submit-user-btn" style="margin-left: 60px">
+			    					<input type="submit" name="uploadBtn" value="Upload" class="btn btn-info submit-user-btn" style="margin-left: 60px">
 			    				</div>
 			    			</div>
 			    		</div>	
-					</form>
+					</form> -->
+					 <!-- <form action="" method="post" enctype="multipart/form-data" id="js-upload-form"> -->
+				 	<form action="" method="POST" enctype="multipart/form-data">
+		           		<div class="row">
+		           			<div class="col-md-12 text-center">
+				             	<span class="btn btn-success fileinput-button" style="background-color: #343a40;border: 1px solid #44a0b3">
+			                   <!--  <i class="glyphicon glyphicon-plus"></i> -->
+			                    <span style="color: #b8bfce">Add files</span>
+			                    <input type="file" name="myFile" style="background-color: #343a40;color: #b8bfce">
+				                </span>
+				            </div>
+				        </div><br>
+
+				        <div class="row">
+				        	<div class="col-md-12 text-center">
+				         		<button type="submit" class="btn btn-primary start" name="uploadBtn" style="background-color: #44a0b3;;border: 1px solid #44a0b3">
+				                  <!--   <i class="glyphicon glyphicon-upload"></i> -->
+				                    <span>Upload</span>
+				                </button>
+			           		</div>
+			           	</div>
+		         	</form>
+
+
 	  			</div>
 	  		</div>
-		</div>
-	</div>
-
-
+	
 
 	<?php
 
@@ -200,10 +220,11 @@ include 'left-nav.php';
 				$date_of_joining = date('Y-m-d',strtotime(str_replace('-','/', $doj)));
 
 				$department = $myData[4];
-				$hod = $myData[5];
-				$committee = $myData[6];
-				$principal = $myData[7];
-				$admin = $myData[8];	
+				$faculty = $myData[5];
+				$hod = $myData[6];
+				$committee = $myData[7];
+				$principal = $myData[8];
+				$admin = $myData[9];	
 
 				$sqle="SELECT email FROM faculty_table WHERE email='$email'";
 				$resulte=mysqli_query($conn,$sqle);
@@ -211,7 +232,7 @@ include 'left-nav.php';
 				if(mysqli_num_rows($resulte)==0)
 				{
 
-					$sql="INSERT INTO faculty_table (faculty_name, email, password, date_of_joining, department, hod, committee, principal,admin) VALUES ('$faculty_name','$email', '$hashed_password','$date_of_joining','$department','$hod', '$committee', '$principal','$admin')";
+					$sql="INSERT INTO faculty_table (faculty_name, email, password, date_of_joining, department, faculty, hod, committee, principal,admin) VALUES ('$faculty_name','$email', '$hashed_password','$date_of_joining','$department','$faculty','$hod', '$committee', '$principal','$admin')";
 		   			$result=mysqli_query($conn, $sql);
 
 		   		}
@@ -220,7 +241,9 @@ include 'left-nav.php';
 		
 			if(!$result)
 			{
-				die("error in uploading file");
+				?>
+					<div class="alert alert-danger">Error in Uploading File</div>
+				<?php  
 			} 
 			else
 			{
@@ -232,9 +255,79 @@ include 'left-nav.php';
 	}
 	?>
 
-	
+			<br>
+	  		<div class="row">
+	  			<div class="col-md-6">
+	  				<button type="button" id="myBtn" class="btn btn-info">Info CSV</button>
+	  				<div id="myModal" class="modal1">
+					  	<div class="modal-content1">
+					  	<span class="close1">&times;</span>
+					  	<p style="font-size: 15px"><b>Column names to be filled accordingly in .csv file</b></p>
+					  		 <table class="table table-bordered">
+							    <thead>
+							      <tr>
+							        <th style="text-align: center">Faculty Name</th>
+							        <th style="text-align: center">Email</th>
+							        <th style="text-align: center">Password</th>
+							        <th style="text-align: center">Date of Joining</th>
+							        <th style="text-align: center">Department</th>
+							        <th style="text-align: center">Faculty</th>
+							        <th style="text-align: center">Hod</th>
+							        <th style="text-align: center">Committee</th>
+							        <th style="text-align: center">Principal</th>
+							        <th style="text-align: center">Admin</th>
+							      </tr>
+							    </thead>
+  							</table>
+				  		</div>
+				  	</div>
+				</div>
+				<div class="col-md-6">
+<!-- 	  				<button type="button" id="myBtn" class="btn btn-info" style="margin-left: -370px">Download Example CSV</button>
+ -->	  				<?php
+					$filename = "read.csv"; //Let say If I put the file name Bang.png
+					echo "<a href='download.php?name=".$filename."' class='btn btn-info' style='margin-left: -370px'>Download Example CSV</a> ";
+					?>
+
+	  			</div>
+	  	
+			</div>
+
+			
+	  			
+		</div>
+	</div>
 </div>
-<br><br>
+
+
+<script type="text/javascript">
+	// Get the modal
+	var modal1 = document.getElementById('myModal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close1")[0];
+
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+	  modal1.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	  modal1.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal1) {
+	    modal1.style.display = "none";
+	  }
+	}
+</script>
+
 
 <?php 
 
@@ -299,6 +392,8 @@ include 'left-nav.php';
 		    </div>
 	  	</div>
 	</div>
+
+
 </body>
 </html>
 
