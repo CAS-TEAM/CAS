@@ -30,6 +30,12 @@
 
 	<!-- font awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+	<!-- Print.js files -->
+	<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+	<script src="https://printjs-4de6.kxcdn.com/print.min.css"></script>
+
+	<link rel="stylesheet" href="Frontend/print.css" type="text/css" media="print"/>
 </head>
 
 <body>
