@@ -277,7 +277,7 @@ include 'left-nav.php';
 				</div>
 
 				<br>
-				<hr style="border: 0.5px solid #c8c8c8">
+				<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
 
 				<?php
 				/*

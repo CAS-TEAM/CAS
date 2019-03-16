@@ -57,7 +57,7 @@ include 'left-nav.php';
 
 	<div class="container">
     <div class="row justify-content-center">    		
-    <div class="col offset-md-2 parta">
+    <div class="col offset-md-2 parta" id="summary-container">
 
 		<?php 
 
@@ -1496,9 +1496,13 @@ include 'left-nav.php';
 	  			SUBMIT 
 				</button>
 
-				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<!-- <button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
-				</button>
+				</button> -->
+
+				<button type="button" class="btn btn-primary" onclick="printJS('summary-container', 'html')" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				    Print Form
+				 </button>
 			</div>
 		</div><br>
 
