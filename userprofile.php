@@ -306,7 +306,7 @@ include 'left-nav.php';
 
 														?>
 														<div class="col-md-2 col-sm-6" style="margin-left:-15px;padding-right:0px;margin-bottom: 8px">
-															<a href="summary.php?id=<?php echo $userId; ?>" class="btn btn-info" style="width:100%">Summary</a>
+															<a href="summary.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="width:100%">Summary</a>
 														</div>
 														
 														<?php

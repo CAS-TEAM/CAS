@@ -41,16 +41,17 @@ $committee=$rowx['committee'];
 $profilePicLocation=$rowx['profilePicLocation'];
 // echo "committee=".$committee;
 
-$currentyear=date("Y");
+// $currentyear=date("Y");
+
+include 'top.php';
+include 'left-nav.php';
+
+$currentyear=mysqli_real_escape_string($conn,$_GET['year']);
 if(date("m")>=7)
 {
 	$currentyear+=1;
 }
 $previousyear=$currentyear-1;
-
-include 'top.php';
-include 'left-nav.php';
-
 // echo $userId;
 
 ?>
@@ -76,7 +77,7 @@ include 'left-nav.php';
 
 		$pparta_gpi_pi_self_a=$rowpartA['parta_gpi_pi_self_a'];
 
-		// echo "current=".$cparta_gpi_pi_self_a.",".$pparta_gpi_pi_self_a;
+		// echo "current=".$sqlpartA.",".$pparta_gpi_pi_self_a;
 
 		$sqlpartA="SELECT cat1_pitotal_self_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$currentyear'";
 		$resultpartA=mysqli_query($conn,$sqlpartA);

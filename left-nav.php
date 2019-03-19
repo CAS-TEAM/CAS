@@ -150,7 +150,6 @@ $admin=$rowp['admin'];
 						<div class="sidebar-submenu">
 							<ul>
 								<?php
-
 								for($a=$currentyear; $a>=2017; $a--)
 								{
 									?>
@@ -159,11 +158,6 @@ $admin=$rowp['admin'];
 									</li>
 									<?php
 								}
-								/*
-								<li>
-									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
-								</li>
-								*/
 								?>
 							</ul>
 						</div>
