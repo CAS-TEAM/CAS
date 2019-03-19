@@ -42,7 +42,7 @@ include 'left-nav.php';
 				<div class="tab-pane fade show active" id="pills-apply" role="tabpanel" aria-labelledby="pills-apply-tab">		
 					<div class="row">
 					    <div class="col-md-12 regist-form-div">
-							<form action="regist_sys.php" method="POST">
+							<form action="regist_sys.php" method="POST" onsubmit="return confirm('Do you want to create a new user?');">
 							<div class="row">
 								<label class="label-user col-md-2 control-label text-right">Name</label>
 								<div class="col-md-4">

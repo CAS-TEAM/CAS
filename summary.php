@@ -1157,7 +1157,7 @@ include 'left-nav.php';
 				if($committee!=1)
 				{
 				?>	
-				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<button type="button" class="btn btn-primary part-a-print-form" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
 				<?php
@@ -1186,7 +1186,7 @@ include 'left-nav.php';
 
 		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ EVALUATION BY THE COMMITTEE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-		<form class="summary_comm_form" action="summary_comm_sys.php" method="POST">
+		<form class="summary_comm_form" action="summary_comm_sys.php" method="POST" onsubmit="return confirm('Do you want to submit the summary?');">
 		<input type="hidden" name="year" id="year" value="<?php echo $currentyear; ?>">
 		<input type="hidden" name="userId" id="userId" value="<?php echo $userId; ?>">
 		<input type="hidden" name="alreadybegun" id="alreadybegun" value="0">
@@ -1492,17 +1492,17 @@ include 'left-nav.php';
 		<div class="row form-inline justify-content-center">
 
 			<div class="col">
-				<button type="submit" class="btn btn-success" id="summary-comm-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far."  onsubmit="return confirm('Do you want to submit the summary?');">
+				<button type="submit" class="btn btn-success" id="summary-comm-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
 				</button>
 
-				<!-- <button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<button type="button" class="btn btn-primary part-a-print-form" onclick="myFunction()" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
-				</button> -->
+				</button>
 
-				<button type="button" class="btn btn-primary" onclick="printJS('summary-container', 'html')" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<!-- <button type="button" class="btn btn-primary" onclick="printJS('summary-container', 'html')" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 				    Print Form
-				 </button>
+				 </button> -->
 			</div>
 		</div><br>
 
@@ -1592,13 +1592,14 @@ include 'left-nav.php';
     <script type="text/javascript">
 	function myFunction() {
 		$("#summary-comm-submit-form").toggle();
-		$("#part-a-print-form").toggle();
+		$(".part-a-print-form").toggle();
 		$("#sidebar").toggle();
 		
-	  	window.print();
+	  	// window.print();
+	  	$("#summary-container").printThis();
 
 	  	$("#summary-comm-submit-form").toggle();
-		$("#part-a-print-form").toggle();
+		$(".part-a-print-form").toggle();
 		$("#sidebar").toggle();
 	}
 	</script>

@@ -57,7 +57,7 @@ include 'left-nav.php';
 	  	
     <div class="container">
     <div class="row">    		
-    <div class="col offset-md-2 parta">
+    <div class="col offset-md-2 parta" id="part-a-container">
 
     	
     	<header>
@@ -74,9 +74,9 @@ include 'left-nav.php';
 				{
 
 					?>
-					<form method="POST" action="sfrA_sys.php">
+					<form method="POST" action="sfrA_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-						<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review" onsubmit="return confirm('Do you want to submit the form for review?');">
+						<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review">
 					</form><br>
 					<?php
 
@@ -88,9 +88,9 @@ include 'left-nav.php';
 					if($rowsfr['partA']==0)
 					{
 						?>
-						<form method="POST" action="sfrA_sys.php">
+						<form method="POST" action="sfrA_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-							<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review" onsubmit="return confirm('Do you want to submit the form for review?');">
+							<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review" >
 						</form>	<br>
 						<?php
 					}
@@ -848,7 +848,9 @@ include 'left-nav.php';
 		$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
 		$("#part-a-print-form").toggle();
-	  	window.print();
+	  	
+	  	// window.print();
+	  	$("#part-a-container").printThis();
 
 	  	$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
