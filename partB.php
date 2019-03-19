@@ -217,7 +217,8 @@ include 'left-nav.php';
     <input type="hidden" name="viewerId" id="viewerId" value="<?php echo $viewerId; ?>">
     <input type="hidden" name="hod" id="hod" value="<?php echo $hod; ?>">
     <input type="hidden" name="committee" id="committee" value="<?php echo $committee; ?>">
-		
+    <input type="hidden" name="submitted_for_review" id="submitted_for_review" value="<?php echo $submitted_for_review; ?>">
+
 		<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-cat1" role="tabpanel" aria-labelledby="nav-cat1-tab"><br>
 		
@@ -492,7 +493,7 @@ include 'left-nav.php';
 
 								</div>
 								<div class="modal-footer">
-									<button id="partb_cat1_pi1_btn" class="btn btn-primary">Save</button>
+									<button id="partb_cat1_pi1_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -1427,7 +1428,7 @@ include 'left-nav.php';
 								<p id="partb_cat1_pi2_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" id="partb_cat1_pi2_btn" class="btn btn-primary">Save</button>
+								<button type="button" id="partb_cat1_pi2_btn" class="btn btn-primary pisave">Save</button>
 							</div>
 						</div>
 					</div>
@@ -1556,7 +1557,7 @@ include 'left-nav.php';
 							<p id="partb_cat1_pi3_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="partb_cat1_pi3_btn" class="btn btn-primary">Save</button>
+							<button type="button" id="partb_cat1_pi3_btn" class="btn btn-primary pisave">Save</button>
 						</div>
 					</div>
 				</div>
@@ -1849,7 +1850,7 @@ include 'left-nav.php';
 							<p id="partb_cat1_pi4_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="partb_cat1_pi4_btn" class="btn btn-primary">Save</button>
+							<button type="button" id="partb_cat1_pi4_btn" class="btn btn-primary pisave">Save</button>
 						</div>
 					</div>
 				</div>
@@ -1932,7 +1933,7 @@ include 'left-nav.php';
 							<p id="partb_cat1_pitotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="partb_cat1_pitotal_btn" class="btn btn-primary">Save</button>
+							<button type="button" id="partb_cat1_pitotal_btn" class="btn btn-primary pisave">Save</button>
 						</div>
 					</div>
 				</div>
@@ -2085,7 +2086,7 @@ include 'left-nav.php';
 									<p id="partb_cat2_pii1_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat2_pii1_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat2_pii1_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2093,8 +2094,6 @@ include 'left-nav.php';
 				</div>
 			</div>			
 		</div><br><br>
-
-		
 
 		<div class="container">
     		<div class="row clearfix">
@@ -2225,7 +2224,7 @@ include 'left-nav.php';
 									<p id="partb_cat2_pii2_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat2_pii2_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat2_pii2_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2363,7 +2362,7 @@ include 'left-nav.php';
 									<p id="partb_cat2_pii3_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat2_pii3_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat2_pii3_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2499,7 +2498,7 @@ include 'left-nav.php';
 									<p id="partb_cat2_pii4_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat2_pii4_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat2_pii4_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2577,7 +2576,7 @@ include 'left-nav.php';
 							<p id="partb_cat2_piitotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="partb_cat2_piitotal_btn" class="btn btn-primary">Save</button>
+							<button type="button" id="partb_cat2_piitotal_btn" class="btn btn-primary pisave">Save</button>
 						</div>
 					</div>
 				</div>
@@ -2788,7 +2787,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii1_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii1_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii1_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -2988,7 +2987,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii2_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii2_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii2_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -3188,7 +3187,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii3_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii3_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii3_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -3391,7 +3390,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii4_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii4_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii4_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -3494,7 +3493,7 @@ include 'left-nav.php';
 													<p id="partb_cat3_piii5_msg"></p>
 												</div>
 												<div class="modal-footer">
-													<button type="button" id="partb_cat3_piii5_btn" class="btn btn-primary" >Save</button>
+													<button type="button" id="partb_cat3_piii5_btn" class="btn btn-primary pisave">Save</button>
 												</div>
 											</div>
 										</div>
@@ -3602,7 +3601,7 @@ include 'left-nav.php';
 													<p id="partb_cat3_piii6_msg"></p>
 												</div>
 												<div class="modal-footer">
-													<button type="button" id="partb_cat3_piii6_btn" class="btn btn-primary">Save</button>
+													<button type="button" id="partb_cat3_piii6_btn" class="btn btn-primary pisave">Save</button>
 												</div>
 											</div>
 										</div>
@@ -3705,7 +3704,7 @@ include 'left-nav.php';
 													<p id="partb_cat3_piii7_msg"></p>
 												</div>
 												<div class="modal-footer">
-													<button type="button" id="partb_cat3_piii7_btn" class="btn btn-primary">Save</button>
+													<button type="button" id="partb_cat3_piii7_btn" class="btn btn-primary pisave">Save</button>
 												</div>
 											</div>
 										</div>
@@ -3917,7 +3916,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii8_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii8_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii8_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -4068,7 +4067,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii9_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii9_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii9_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -4216,7 +4215,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii10_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii10_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii10_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -4358,7 +4357,7 @@ include 'left-nav.php';
 									<p id="partb_cat3_piii11_msg"></p>
 								</div>
 								<div class="modal-footer">
-									<button type="button" id="partb_cat3_piii11_btn" class="btn btn-primary">Save</button>
+									<button type="button" id="partb_cat3_piii11_btn" class="btn btn-primary pisave">Save</button>
 								</div>
 							</div>
 						</div>
@@ -4445,7 +4444,7 @@ include 'left-nav.php';
 							<p id="partb_cat3_piiitotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="partb_cat3_piiitotal_btn" class="btn btn-primary">Save</button>
+							<button type="button" id="partb_cat3_piiitotal_btn" class="btn btn-primary pisave">Save</button>
 						</div>
 					</div>
 				</div>
@@ -4600,7 +4599,7 @@ include 'left-nav.php';
 								<p id="partb_cat4_piv1_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" id="partb_cat4_piv1_btn" class="btn btn-primary">Save</button>
+								<button type="button" id="partb_cat4_piv1_btn" class="btn btn-primary pisave">Save</button>
 							</div>
 						</div>
 					</div>
@@ -4743,7 +4742,7 @@ include 'left-nav.php';
 								<p id="partb_cat4_piv2_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" id="partb_cat4_piv2_btn" class="btn btn-primary">Save</button>
+								<button type="button" id="partb_cat4_piv2_btn" class="btn btn-primary pisave">Save</button>
 							</div>
 						</div>
 					</div>
@@ -4882,7 +4881,7 @@ include 'left-nav.php';
 								<p id="partb_cat4_piv3_msg"></p>
 							</div>
 							<div class="modal-footer">
-								<button type="button" id="partb_cat4_piv3_btn" class="btn btn-primary">Save</button>
+								<button type="button" id="partb_cat4_piv3_btn" class="btn btn-primary pisave">Save</button>
 							</div>
 						</div>
 					</div>
@@ -4960,7 +4959,7 @@ include 'left-nav.php';
 							<p id="partb_cat4_pivtotal_msg"></p>
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="partb_cat4_pivtotal_btn" class="btn btn-primary">Save</button>
+							<button type="button" id="partb_cat4_pivtotal_btn" class="btn btn-primary pisave">Save</button>
 						</div>
 					</div>
 				</div>
@@ -4984,7 +4983,7 @@ include 'left-nav.php';
 		?>
 	
 		<div class="row form-inline justify-content-center">
-			<div class="col se-btn">
+			<div class="col se-btn offset-md-1">
 				<?php
 				if($submitted_for_review==false)
 				{

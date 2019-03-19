@@ -643,7 +643,7 @@ include 'left-nav.php';
 										</div>
 
 										<div class="modal-footer">
-											<button  id="parta_gpi_btn" class="btn btn-primary">Save</button>
+											<button  id="parta_gpi_btn" class="btn btn-primary pisave">Save</button>
 										</div>
 									</div>
 								</div>
@@ -722,7 +722,7 @@ include 'left-nav.php';
 
 										</div>
 										<div class="modal-footer">
-											<button type="button" id="parta_gpi_pi_btn" class="btn btn-primary">Save</button>
+											<button type="button" id="parta_gpi_pi_btn" class="btn btn-primary pisave">Save</button>
 										</div>
 										<!-- </form> -->
 									</div>
@@ -903,6 +903,15 @@ include 'left-nav.php';
 	</script>
 
 	<?php
+
+	if($submitted_for_review==true && $viewerId==$userId)
+	{
+		?>
+		<script type="text/javascript">
+			$('.pisave').toggle();
+		</script>
+		<?php
+	}
 
 	if($userId==$viewerId)
 	{

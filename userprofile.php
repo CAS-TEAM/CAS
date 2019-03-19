@@ -427,7 +427,7 @@ include 'left-nav.php';
 																{	
 
 																?>
-																	<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info">Summary</a>	
+																	<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info">Summary</a>	
 																<?php
 																}
 															}
@@ -628,7 +628,7 @@ include 'left-nav.php';
 
 																		?>
 																		<!-- <div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px"> -->
-																			<a href="summary.php?id=<?php echo $facultyId1; ?>" class="btn btn-info">Summary</a>	
+																			<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info">Summary</a>	
 																		<!-- </div> -->
 																		<!-- <br> -->
 																		<?php

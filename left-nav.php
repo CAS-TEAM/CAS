@@ -102,7 +102,7 @@ $admin=$rowp['admin'];
 								{
 									?>
 									<li>
-										<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo $a.'-'.($a-1); ?></a>
+										<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
 								}
@@ -128,7 +128,7 @@ $admin=$rowp['admin'];
 								{
 									?>
 									<li>
-										<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo $a.'-'.($a-1); ?></a>
+										<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
 								}
@@ -150,11 +150,11 @@ $admin=$rowp['admin'];
 						<div class="sidebar-submenu">
 							<ul>
 								<?php
-								for($a=$currentyear; $a>=2017; $a--)
+								for($a=$currentyear; $a>=2018; $a--)
 								{
 									?>
 									<li>
-										<a href="summary.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo $a.'-'.($a-1); ?></a>
+										<a href="summary.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
 								}

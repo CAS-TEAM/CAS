@@ -1282,6 +1282,13 @@ function enableinputs()
 	var viewerId=parseInt(document.getElementById("viewerId").value);
 	var hod=parseInt(document.getElementById("hod").value);
 	var committee=parseInt(document.getElementById("committee").value);
+	var submitted_for_review=parseInt(document.getElementById("submitted_for_review").value);
+
+
+    if (submitted_for_review == true && viewerId == userId)
+    {
+    	$('.pisave').toggle();
+	} 
 	// alert(userId);
 	// alert(viewerId);
 	// alert(hod);
