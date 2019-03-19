@@ -146,7 +146,7 @@ include 'left-nav.php';
 
 	<div class="container">
     <div class="row">       
-    <div class="col offset-md-2 parta">
+    <div class="col offset-md-2 parta" id="part-b-container">
 
 		<header>
 			<h2 class="heading"><b>'Part B'</b></h2>
@@ -163,8 +163,8 @@ include 'left-nav.php';
 
 					?>
 					<form method="POST" action="sfrB_sys.php">
-						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review" onsubmit="return confirm('Do you want to submit the form for review?');">
+						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>" onsubmit="return confirm('Do you want to submit the form for review?');">
+						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
 					</form><br>
 					<?php
 
@@ -177,8 +177,8 @@ include 'left-nav.php';
 					{
 						?>
 						<form method="POST" action="sfrB_sys.php">
-							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review" onsubmit="return confirm('Do you want to submit the form for review?');">
+							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>" onsubmit="return confirm('Do you want to submit the form for review?');">
+							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
 						</form>	<br>
 						<?php
 					}
@@ -5565,11 +5565,15 @@ include 'left-nav.php';
 		$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
 		$("#part-a-print-form").toggle();
-	  	window.print();
+		$(".filepartb").toggle();
+	  	
+	  	// window.print();
+	  	$("#part-b-container").printThis();
 
 	  	$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
 		$("#part-a-print-form").toggle();
+		$(".filepartb").toggle();
 	}
 	</script>
 
