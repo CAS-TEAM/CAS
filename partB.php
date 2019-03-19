@@ -1941,7 +1941,7 @@ include 'left-nav.php';
 
 	
 
-		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px"></a>
+		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px"></a> -->
 
 
 		</div>
@@ -2586,8 +2586,8 @@ include 'left-nav.php';
 
 	
 
-		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
-		</a>
+		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
+		</a> -->
 
 		</div>	
 		<!-- <br> -->
@@ -4454,9 +4454,9 @@ include 'left-nav.php';
 
 	
 
-		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
+		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
-
+ -->
 		</div>
 		<br>
 		<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
@@ -4968,8 +4968,8 @@ include 'left-nav.php';
 		</div>	
 
 
-		<a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
-		</a><br>
+		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
+		</a><br> -->
 
 		
 	</div>

@@ -141,6 +141,33 @@ $admin=$rowp['admin'];
 							</ul>
 						</div>
 					</li>
+
+					<li class="sidebar-dropdown dropdown-arrow">
+						<a>
+							<i class="fa fa-check-circle" aria-hidden="true" style="font-size: 15px"></i>
+							<span style="font-size: 15px;cursor:pointer">Summary</span>
+						</a>
+						<div class="sidebar-submenu">
+							<ul>
+								<?php
+
+								for($a=$currentyear; $a>=2017; $a--)
+								{
+									?>
+									<li>
+										<a href="summary.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo $a.'-'.($a-1); ?></a>
+									</li>
+									<?php
+								}
+								/*
+								<li>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
+								</li>
+								*/
+								?>
+							</ul>
+						</div>
+					</li>
 					<li class="sidebar-dropdown">
 						<a href="guidelines.php">
 							<i class="fas fa-info" style="font-size: 15px"></i>

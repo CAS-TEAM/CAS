@@ -733,9 +733,10 @@ include 'left-nav.php';
 	    		</div>			
 			</div>
 		</div>
-
+<!-- 
 		<hr style="border: 0.5px solid #c8c8c8">
-		<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 840px">
+ -->
+		<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">
 		</a>
 
 		<?php
