@@ -62,7 +62,7 @@ $previousyear=$currentyear-1;
 
 		<?php 
 
-		if($viewerId==$userId || $committee==1)
+		if($viewerId==$userId || $committee==1 || $hod==1)
 		{
 
 		$sqlpartA="SELECT parta_gpi_pi_self_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$currentyear'";
@@ -1178,7 +1178,7 @@ $previousyear=$currentyear-1;
 		<hr>
 		<?php
 		
-		if($committee==1)
+		if($committee==1 || $hod==1)
 		{
 
 		?>	
@@ -1215,11 +1215,23 @@ $previousyear=$currentyear-1;
 					<table class="table table-bordered table-hover" id="tab-evaluation">
 						<tr>
 							<th class="text-center">Item</th>
-							<th class="text-center">Correct</th>
-							<th class="text-center">Exaggerated</th>
-							<th class="text-center">Reasons/Remarks if any</th>
-							<th class="text-center">Current Academic Year <?php echo $currentyear; ?>-<?php echo $previousyear; ?></th>
+							<th class="text-center" colspan="2">API given by Faculty Member</th>
+							<th class="text-center" colspan="2">API after verfication by HOD</th>
+							<th>Remarks by HOD</th>
+							<th class="text-center" colspan="2">Final Score by Screening Cum Evaluation/Selection Committee</th>
+							<th>Remarks by Committee</th>
+						</tr>
 
+						<tr> 
+						<th></th>
+						<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
+						<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+						<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
+						<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+						<th></th>
+						<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
+						<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+						<th></th>
 						</tr>
 						<tbody>
 							<tr id='eval10'>
@@ -1240,25 +1252,28 @@ $previousyear=$currentyear-1;
 									</div>
 								</td>
 								<td>
-									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">(</label>
-										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicA' id='current_academicA' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
-										<div class="col-md-4 number-left" style="margin:0;padding:0">
-											<label class="col-form-label">/50)*100</label>
-										</div>
-									</div><br>
-
-									<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">%PI =</label>
-										</div>
-										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicA' id='pi_academicA' class="form-control" style="width: 100%" />
-										</div>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 							</tr>
@@ -1280,25 +1295,28 @@ $previousyear=$currentyear-1;
 									</div>
 								</td>
 								<td>
-									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">(</label>
-										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBI' id='current_academicBI' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
-											<label class="col-form-label">/100)*100</label>
-										</div>
-									</div><br>
-
-									<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">%PI =</label>
-										</div>
-										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBI' id='pi_academicBI' class="form-control" style="width: 100%" />
-										</div>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 		                    </tr>
@@ -1320,25 +1338,28 @@ $previousyear=$currentyear-1;
 									</div>
 								</td>
 								<td>
-									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">(</label>
-										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBII' id='current_academicBII' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
-											<label class="col-form-label">/100)*100</label>
-										</div>
-									</div><br>
-
-									<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">%PI =</label>
-										</div>
-										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBII' id='pi_academicBII' class="form-control" style="width: 100%" />
-										</div>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 		                    </tr>
@@ -1360,25 +1381,28 @@ $previousyear=$currentyear-1;
 									</div>
 								</td>
 								<td>
-									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">(</label>
-										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBIII' id='current_academicBIII' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
-											<label class="col-form-label">/175)*100</label>
-										</div>
-									</div><br>
-
-									<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">%PI =</label>
-										</div>
-										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIII' id='pi_academicBIII' class="form-control" style="width: 100%" />
-										</div>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 		                    </tr>
@@ -1400,57 +1424,122 @@ $previousyear=$currentyear-1;
 									</div>
 								</td>
 								<td>
-									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">(</label>
-										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBIV' id='current_academicBIV' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
-											<label class="col-form-label">/75)*100</label>
-										</div>
-									</div><br>
-
-									<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">%PI =</label>
-										</div>
-										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV' id='pi_academicBIV' class="form-control" style="width: 100%" />
-										</div>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 		                    </tr>
 		                    <tr id='eval14'>
-		                    	<td colspan="5">
+		                    	<td colspan="1">
 			                    	<div class="row justify-content-center">
-			                    		<div class="col-md-5 text-left">
-			                    			<label class="col-form-label">Average PI for total out of 500 (Committee):</label>
-			                    		</div>
-
-				                    	<div class="col-md-2" style="margin:0;padding:0">
-											<input type="number" step="0.01" name='last_academicBIV_avg_comm' id='last_academicBIV_avg_comm' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
-										<div class="col-md-1 text-center" style="margin:0;padding:0;padding-left: 5px">
-											<label class="col-form-label">% /5  =</label>
-										</div>
-										<div class="col-md-2" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_avg_comm' id='pi_academicBIV_avg_comm' class="form-control" style="width: 100%" />
-										</div>
+			                    		<label class="col-form-label">Average PI</label>
+			                    	</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 		                    </tr>
 
 		                    <tr id='eval15'>
-		                    	<td colspan="5">
+		                    	<td colspan="1">
 									<div class="row justify-content-center">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">Grade of Average PI (Committee):</label>
-										</div>
-										<div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
-											<input type="text" name='last_academicBIV_avgpi_comm' id='last_academicBIV_avgpi_comm' class="form-control" style="width: 100%;margin: 0;padding: 0" />
-										</div>
+										<label class="col-form-label">Cumulated Score=0.25%<br>of API of 2016-17+<br>0.75% of API of 2017-18</label>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td><div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12">
+										<input type="text" name='remarks_parta' id='remarks_parta' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
 								</td>
 		                    </tr>
