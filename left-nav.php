@@ -152,11 +152,25 @@ $admin=$rowp['admin'];
 								<?php
 								for($a=$currentyear; $a>=2018; $a--)
 								{
-									?>
-									<li>
-										<a href="summary.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
-									</li>
-									<?php
+
+									$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$uid' AND year='$a' AND partA=1 AND partB=1";
+									$resultsfr=mysqli_query($conn,$sqlsfr);
+
+									if(mysqli_num_rows($resultsfr)!=0)
+									{	
+										$py=$a-1;
+										$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$uid' AND year='$py' AND partA=1 AND partB=1";
+										$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+										if(mysqli_num_rows($resultsfrp)!=0)
+										{	
+											?>
+											<li>
+												<a href="summary.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
+											</li>
+											<?php
+										}
+									}
 								}
 								?>
 							</ul>

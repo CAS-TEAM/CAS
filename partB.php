@@ -162,8 +162,8 @@ include 'left-nav.php';
 				{
 
 					?>
-					<form method="POST" action="sfrB_sys.php">
-						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>" onsubmit="return confirm('Do you want to submit the form for review?');">
+					<form method="POST" action="sfrB_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
+						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
 						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
 					</form><br>
 					<?php
@@ -176,8 +176,8 @@ include 'left-nav.php';
 					if($rowsfr['partB']==0)
 					{
 						?>
-						<form method="POST" action="sfrB_sys.php">
-							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>" onsubmit="return confirm('Do you want to submit the form for review?');">
+						<form method="POST" action="sfrB_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
+							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
 							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
 						</form>	<br>
 						<?php
@@ -4975,46 +4975,35 @@ include 'left-nav.php';
 </div>
 </div>
 
-	<?php
-
-	if($same_user==1)
-	{
-
-		?>
 	
-		<div class="row form-inline justify-content-center">
-			<div class="col se-btn offset-md-1">
-				<?php
-				if($submitted_for_review==false)
-				{
-				?>
-				<button type="button" class="btn btn-success" id="part-b-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
-	  			SAVE 
-				</button>
+	<div class="row form-inline justify-content-center">
+		<div class="col se-btn offset-md-1">
+			<?php
+			if($submitted_for_review==false && $same_user==1)
+			{
+			?>
+			<button type="button" class="btn btn-success" id="part-b-save-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+  			SAVE 
+			</button>
 
-				<button type="button" class="btn btn-primary mx-2" id="part-b-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
-	  			EDIT 
-				</button>
-				<?php
-				}
-				?>
+			<button type="button" class="btn btn-primary mx-2" id="part-b-edit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will allow you to edit the form data that you might have previously filled.">
+  			EDIT 
+			</button>
+			<?php
+			}
+			?>
 
-				<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
-	  			PRINT 
-				</button>
-			</div>
+			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+  			PRINT 
+			</button>
 		</div>
+	</div>
 
-		<?php
-
-	}
-
-	?> 
 
 
 	</div>
 	</div>
-	</form>
+	</form><br><br>
 
 	<input type="hidden" id="i" name="i" value="1" />
 	<input type="hidden" id="j" name="j" value="1" />
@@ -5551,6 +5540,58 @@ include 'left-nav.php';
 		<?php
 	}
 
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//show PI save button or not
+	if(($submitted_for_review==true && $viewerId==$userId) || (($currentyear-$year)>1))
+	{
+		?>
+		<script type="text/javascript">
+			$('.pisave').remove();
+		</script>
+		<?php
+	}
+
+	$nyear=$year+1;
+	$cyear=$year;
+	$pyear=$year-1;
+	$sqll="SELECT recommend FROM recommend_for_cas WHERE (currentyear='$cyear' AND facultyId='$userId') OR (currentyear='$nyear' AND facultyId='$userId')";
+	$resultl=mysqli_query($conn, $sqll);
+	if(mysqli_num_rows($resultl)>0)
+	{
+		$rowl=mysqli_fetch_assoc($resultl);
+		if($rowl['recommend']==0 && $committee==1)
+		{
+			?>
+			<script type="text/javascript">
+				$('.pisave').remove();
+			</script>
+			<?php
+		}
+	}
+	else
+	{
+		if($committee==1 && $hod==0)
+		{
+			?>
+			<script type="text/javascript">
+				$('.pisave').remove();
+			</script>
+			<?php
+		}		
+	}
+
+	$sqlx="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$userId' AND ((currentyear='$cyear' AND previousyear='$pyear') OR (currentyear='$nyear' AND previousyear='$cyear'))";
+    $resultx=mysqli_query($conn,$sqlx);
+    if(mysqli_num_rows($resultx)>0)
+    {
+    	?>
+		<script type="text/javascript">
+			$('.pisave').remove();
+		</script>
+		<?php
+    }	
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	?>
 
 	<!-- GET DATA OF FORM -->
@@ -5561,18 +5602,31 @@ include 'left-nav.php';
 
     <script type="text/javascript">
 	function myFunction() {
-		$("#part-a-save-form").toggle();
-		$("#part-a-edit-form").toggle();
-		$("#part-a-print-form").toggle();
+
+		// $("#part-a-save-form").toggle();
+		// $("#part-a-edit-form").toggle();
+		// $("#part-a-print-form").toggle();
 		$(".filepartb").toggle();
+		// $(".modal").hide();
+		$('.nav-tabs').hide();
+	    // $headings = $('.nav-tabs li a');
+	    $('.tab-content .tab-pane').each(function(i, el){
+	        $(this).addClass('active')
+	    });
+
 	  	
 	  	// window.print();
-	  	$("#part-b-container").printThis();
+	  	$("#part-b-container").printThis({
+	  		importStyle: true
+	  	});
 
-	  	$("#part-a-save-form").toggle();
-		$("#part-a-edit-form").toggle();
-		$("#part-a-print-form").toggle();
-		$(".filepartb").toggle();
+	  	setTimeout(function () { 
+	  		$("#part-a-save-form").toggle();
+			$("#part-a-edit-form").toggle();
+			$("#part-a-print-form").toggle();
+			$(".filepartb").toggle();
+		}, 700);
+
 	}
 	</script>
 
@@ -5580,7 +5634,7 @@ include 'left-nav.php';
 	<script type="text/javascript">
 		// $("#part-a-form :input").prop("disabled", true);//disabling all inputs
 		// $(':button').prop('disabled', false);//but enabling all buttons because the above line disables all buttons also
-		
+		enableinputs();
 	</script>
 
 

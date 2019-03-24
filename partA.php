@@ -337,7 +337,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="promowef" id="promowef" maxlength="50"/>
+						<input class="form-control partalabel" type="date" name="promowef" id="promowef"/>
 					</div>
 				</div>
 			</div>
@@ -394,7 +394,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="promowefcas" id="promowefcas" maxlength="50"/>
+						<input class="form-control partalabel" type="date" name="promowefcas" id="promowefcas"/>
 					</div>
 				</div>
 			</div>
@@ -732,25 +732,28 @@ include 'left-nav.php';
 					
 	    		</div>			
 			</div>
+			<?php
+
+			if($userId!=$viewerId)
+			{
+				?>
+				<a class="btn btn-info" href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">View Form B for this faculty for year <?php echo $year; ?></a>
+				<?php
+			}
+
+			?>
 		</div>
 <!-- 
 		<hr style="border: 0.5px solid #c8c8c8">
  -->
-		<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">
-		</a>
 
-		<?php
-
-		if($same_user==1)
-		{
-
-		?>
+		
 
 		<div class="row form-inline justify-content-center">
 
 			<div class="col se-btn">
 				<?php
-				if($submitted_for_review==false)
+				if($submitted_for_review==false && $same_user==1)
 				{
 				?>
 
@@ -769,14 +772,9 @@ include 'left-nav.php';
 				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button>
+
 			</div>
-		</div>
-
-		<?php
-
-		}
-
-		?>
+		</div>	
 
 		<br>
 
@@ -785,7 +783,7 @@ include 'left-nav.php';
 	</div>
 	</div>
 
-	<br>
+	<br><br>
 
 	<script type="text/javascript">
 
@@ -849,13 +847,25 @@ include 'left-nav.php';
 		$("#part-a-save-form").toggle();
 		$("#part-a-edit-form").toggle();
 		$("#part-a-print-form").toggle();
+		$(".filepart").hide();
+		$(".part-a-plus-btn").hide();
+		$(".part-a-minus-btn").hide();
 	  	
 	  	// window.print();
-	  	$("#part-a-container").printThis();
+	  	$("#part-a-container").printThis({
+	  		beforePrint: bp(),
+	  		afterPrint: ap()
+	  	});
 
-	  	$("#part-a-save-form").toggle();
-		$("#part-a-edit-form").toggle();
-		$("#part-a-print-form").toggle();
+	  	setTimeout(function () { 
+	  		$("#part-a-save-form").toggle();
+			$("#part-a-edit-form").toggle();
+			$("#part-a-print-form").toggle();
+			$(".filepart").show();
+			$(".part-a-plus-btn").show();
+			$(".part-a-minus-btn").show(); 
+		}, 700);
+		
 	}
 	</script>
 
@@ -902,16 +912,56 @@ include 'left-nav.php';
 		
 	</script>
 
-	<?php
+	<?php	
 
-	if($submitted_for_review==true && $viewerId==$userId)
+	if(($submitted_for_review==true && $viewerId==$userId) || (($currentyear-$year)>1))
 	{
 		?>
 		<script type="text/javascript">
-			$('.pisave').toggle();
+			$('.pisave').remove();
 		</script>
 		<?php
 	}
+
+	$nyear=$year+1;
+	$cyear=$year;
+	$pyear=$year-1;
+	$sqll="SELECT recommend FROM recommend_for_cas WHERE (currentyear='$cyear' AND facultyId='$userId') OR (currentyear='$nyear' AND facultyId='$userId')";
+	$resultl=mysqli_query($conn, $sqll);
+	if(mysqli_num_rows($resultl)>0)
+	{
+		$rowl=mysqli_fetch_assoc($resultl);
+		if($rowl['recommend']==0 && $committee==1)
+		{
+			?>
+			<script type="text/javascript">
+				$('.pisave').remove();
+			</script>
+			<?php
+		}
+	}
+	else
+	{
+		if($committee==1 && $hod==0)
+		{
+			?>
+			<script type="text/javascript">
+				$('.pisave').remove();
+			</script>
+			<?php
+		}		
+	}
+
+	$sqlx="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$userId' AND ((currentyear='$cyear' AND previousyear='$pyear') OR (currentyear='$nyear' AND previousyear='$cyear'))";
+    $resultx=mysqli_query($conn,$sqlx);
+    if(mysqli_num_rows($resultx)>0)
+    {
+    	?>
+		<script type="text/javascript">
+			$('.pisave').remove();
+		</script>
+		<?php
+    }	
 
 	if($userId==$viewerId)
 	{

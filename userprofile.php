@@ -403,108 +403,55 @@ include 'left-nav.php';
 											    {
 											    	?>
 											    	<p class="card-text"><img src="checked.png" style="width:32px"> Eligible for CAS</p>
-											    	<p>
-													  	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormMenuUnderHOD<?php echo $facultyId1; ?>" aria-expanded="false" aria-controls="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
-													    VIEW FORMS
-													  	</button>
-													  	<?php
-
-													  	// $currentyear=date("Y");
-												  		// $previousyear=$currentyear-1;
-
-											    		if($_SESSION['id']==$userId)
-														{
-
-															$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
-															$resultsfr=mysqli_query($conn,$sqlsfr);
-
-															if(mysqli_num_rows($resultsfr)!=0)
-															{	
-																$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
-																$resultsfrp=mysqli_query($conn,$sqlsfrp);
-
-																if(mysqli_num_rows($resultsfrp)!=0)
-																{	
-
-																?>
-																	<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info">Summary</a>	
-																<?php
-																}
-															}
-
-														}
-
-													  	?>
-													</p>
-												  	<div class="collapse" id="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
-													  	<div class="card card-body">
-													  		<?php
-													  		// echo date("Y");
-													  		// $currentyear=date("Y");
-													  		// $previousyear=$currentyear-1;
-
-													  		?>
-													    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
-													    	<div class="row">							    		
-													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-													    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
-													    		</div>
-													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-													    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
-													    		</div>
-													    		<?php
-
-												    			/*
-																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
-																$resultsfr=mysqli_query($conn,$sqlsfr);
-
-																if(mysqli_num_rows($resultsfr)!=0)
-																{	
-																	?>
-																	<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-																		<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
-																	</div>
-																	<?php
-																}
-																*/
-
-												    			?>
-													    	</div>
-													    	<hr>
-													    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
-													    	<div class="row">							    		
-													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-													    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
-													    		</div>
-													    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-													    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
-													    		</div>
-													    		<?php
-
-												    			/*
-																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
-																$resultsfr=mysqli_query($conn,$sqlsfr);
-
-																if(mysqli_num_rows($resultsfr)!=0)
-																{	
-																	?>
-																	<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-																		<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
-																	</div>
-																	<?php
-																}
-																*/
-
-												    			?>
-													    	</div>
-
-													    	<?php
-
-													    	?>
-													  	</div>
-													</div>
-
 											    	<?php
+
+										    		if($_SESSION['id']==$userId)
+													{
+
+														$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+														$resultsfr=mysqli_query($conn,$sqlsfr);
+
+														if(mysqli_num_rows($resultsfr)!=0)
+														{	
+															$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
+															$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+															if(mysqli_num_rows($resultsfrp)!=0)
+															{	
+																?>
+														    	<p style="margin:0">
+																  	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormMenuUnderHOD<?php echo $facultyId1; ?>" aria-expanded="false" aria-controls="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
+																    VIEW FORMS
+																  	</button>
+																	<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info">Summary</a>	
+																</p>
+															  	<div class="collapse" id="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
+																  	<div class="card card-body">
+																    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
+																    	<div class="row">							    		
+																    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+																    		</div>
+																    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+																    		</div>
+																    	</div>
+																    	<hr>
+																    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
+																    	<div class="row">							    		
+																    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
+																    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+																    		</div>
+																    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
+																    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+																    		</div>
+																    	</div>
+																  	</div>
+																</div>
+																<?php
+															}
+														}
+													}
 											    }
 											    else
 											    {
@@ -603,109 +550,57 @@ include 'left-nav.php';
 													    {
 													    	?>
 													    	<p class="card-text"><img src="checked.png" style="width:32px"> Eligible for CAS</p>
-													    	<p>
-															  	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormMenuUnderHOD<?php echo $facultyId1; ?>" aria-expanded="false" aria-controls="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
-															    VIEW FORMS
-															  	</button>
-															  	<?php
-
-															  	// $currentyear=date("Y");
-														  		// $previousyear=$currentyear-1;
-
-													    		if($_SESSION['id']==$userId)
-																{
-
-																	$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
-																	$resultsfr=mysqli_query($conn,$sqlsfr);
-
-																	if(mysqli_num_rows($resultsfr)!=0)
-																	{	
-																		$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
-																		$resultsfrp=mysqli_query($conn,$sqlsfrp);
-
-																		if(mysqli_num_rows($resultsfrp)!=0)
-																		{	
-
-																		?>
-																		<!-- <div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px"> -->
-																			<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info">Summary</a>	
-																		<!-- </div> -->
-																		<!-- <br> -->
-																		<?php
-																		}
-																	}
-
-																}
-
-															  	?>
-															</p>
-														  	<div class="collapse" id="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
-															  	<div class="card card-body">
-															  		<?php
-															  		// echo date("Y");
-															  		// $currentyear=date("Y");
-															  		// $previousyear=$currentyear-1;
-
-															  		?>
-															    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
-															    	<div class="row">							    		
-															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-															    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
-															    		</div>
-															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-															    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
-															    		</div>
-															    		<?php
-
-															    		/*
-																		$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
-																		$resultsfr=mysqli_query($conn,$sqlsfr);
-
-																		if(mysqli_num_rows($resultsfr)!=0)
-																		{	
-																			?>
-																			<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-																				<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
-																			</div>
-																			<?php
-																		}
-																		*/
-
-														    			?>
-															    	</div>
-															    	<hr>
-															    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
-															    	<div class="row">							    		
-															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-															    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
-															    		</div>
-															    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-															    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
-															    		</div>
-															    		<?php
-
-												    					/*
-																		$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
-																		$resultsfr=mysqli_query($conn,$sqlsfr);
-
-																		if(mysqli_num_rows($resultsfr)!=0)
-																		{	
-																			?>
-																			<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-																				<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info" style="margin-top: 10px;width:100%">Summary</a>	
-																			</div>
-																			<?php
-																		}
-																		*/
-
-														    			?>
-															    	</div>
-
-															  	</div>
-															</div>
-
 													    	<?php
 
+												    		if($_SESSION['id']==$userId)
+															{
+
+																$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$currentyear' AND partA=1 AND partB=1";
+																$resultsfr=mysqli_query($conn,$sqlsfr);
+
+																if(mysqli_num_rows($resultsfr)!=0)
+																{	
+																	$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$facultyId1' AND year='$previousyear' AND partA=1 AND partB=1";
+																	$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+																	if(mysqli_num_rows($resultsfrp)!=0)
+																	{	
+																		?>
+													    				<p style="margin:0">
+															  				<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseFormMenuUnderHOD<?php echo $facultyId1; ?>" aria-expanded="false" aria-controls="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
+																	    	VIEW FORMS
+																	  		</button>
+																			<a href="summary.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-info">Summary</a>	
+																		</p>
+																	  	<div class="collapse" id="collapseFormMenuUnderHOD<?php echo $facultyId1; ?>">
+																		  	<div class="card card-body">
+																		    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear; ?></b></p>
+																		    	<div class="row">							    		
+																		    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																		    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+																		    		</div>
+																		    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
+																		    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+																		    		</div>
+																		    	</div>
+																		    	<hr>
+																		    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear; ?></b></p>
+																		    	<div class="row">							    		
+																		    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
+																		    			<a href="partA.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM A</a>
+																		    		</div>
+																		    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
+																		    			<a href="partB.php?id=<?php echo $facultyId1; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%">FORM B</a>
+																		    		</div>
+																		    	</div>
+
+																		  	</div>
+																		</div>
+																		<?php																		
+																	}
+																}
+
+															}
 
 													    }
 													    else

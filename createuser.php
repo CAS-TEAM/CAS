@@ -340,7 +340,7 @@ include 'left-nav.php';
 		    $(document).ready(function(){
 		    	document.getElementById("modal-title").innerHTML="Success";
 		    	document.getElementById("signin-error").innerHTML="User created successfully!";
-		        $('#myModal').modal('show');
+		        $('#myModal1').modal('show');
 		    });
 		    </script>
 			<?php 
@@ -351,7 +351,7 @@ include 'left-nav.php';
 		    <script type="text/javascript">
 		    $(document).ready(function(){
 		    	document.getElementById("signin-error").innerHTML="This user already exists.";
-		        $('#myModal').modal('show');
+		        $('#myModal1').modal('show');
 		    });
 		    </script>
 			<?php 
@@ -362,7 +362,7 @@ include 'left-nav.php';
 		    <script type="text/javascript">
 		    $(document).ready(function(){
 		    	document.getElementById("signin-error").innerHTML="The passwords do not match.";
-		        $('#myModal').modal('show');
+		        $('#myModal1').modal('show');
 		    });
 		    </script>
 			<?php 
@@ -370,7 +370,7 @@ include 'left-nav.php';
 	}
 	?>
 
-	<div class="modal fade" id="myModal">
+	<div class="modal fade" id="myModal1">
 	  	<div class="modal-dialog">
 		    <div class="modal-content">
 
