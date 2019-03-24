@@ -77,7 +77,7 @@ $previousyear=$currentyear-1;
 
 		$pparta_gpi_pi_self_a=$rowpartA['parta_gpi_pi_self_a'];
 
-		// echo "current=".$sqlpartA.",".$pparta_gpi_pi_self_a;
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		$sqlpartA="SELECT cat1_pitotal_self_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$currentyear'";
 		$resultpartA=mysqli_query($conn,$sqlpartA);

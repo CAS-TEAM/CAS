@@ -3329,7 +3329,7 @@ $(document).ready(function(){
 				processData: false,                
 				success: function (response) 
 				{
-					alert(response);
+					// alert(response);
 					window.location.href=response.trim();
 					// $(".summary_comm_sys.php").remove();
 					// if(parseInt(response)==1)

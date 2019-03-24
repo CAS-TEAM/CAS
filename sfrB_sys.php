@@ -23,4 +23,13 @@ else
 	$result2=mysqli_query($conn,$sql2);
 }
 
+//making entry into summary table
+$sql="SELECT id FROM summary_table WHERE year='$year' AND facultyId='$facultyId'";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)==0)
+{
+	$sqlx="INSERT INTO summary_table (year, facultyId) VALUES ('$year', '$facultyId')";
+	$resultx=mysqli_query($conn, $sqlx);
+}
+
 header("LOCATION: partB.php?id=".$facultyId."&year=".$year);

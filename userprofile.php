@@ -487,6 +487,7 @@ include 'left-nav.php';
 								    View Forms of Faculty
 								  	</button>
 								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
+								  	<a class="btn btn-primary" href="finalsummary.php">View Final Summary</a>
 								</p>
 								<div class="collapse" id="collapseAllFaculty">
 								  	<div class="card card-body">
