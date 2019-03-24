@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2019 at 03:35 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Mar 22, 2019 at 04:52 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -73,9 +75,15 @@ INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `date_of
 (4, 'Prof. Poonam Bhogale', 'poonambhogale@somaiya.edu', '$2y$10$W6lbNYTxCAgG2GjeJ8xHuuV/BJg6NCMBifF5pvBJ7aDIiV2bIMTzC', '2008-11-11', 'Etrx', 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
 (5, 'Anjali', 'anjali@gmail.com', '$2y$10$2hpkZa7tqA98LAhOiqq1ieaByObfDo..bwzSLbZCKJRVvhQTziwkW', '1999-07-26', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 1, 0),
 (6, 'Sharvai Patil', 'sharvai.p@somaiya.edu', '$2y$10$lTBgAr587gnLyzoZYR0UB.oS0jywazLATQdJNrRhdw5ltyvWiAlIu', '2001-01-13', 'Computer', 'users/sharvai.p@somaiya.edu/profilepic.jpg', 1, 0, 0, 1, 0),
-(8, 'Head of Department', 'hod@gmail.com', '$2y$10$NHWvY2CloU7yObO0/Wan/OoneEmpkpG1ohx2tJrmxLu0HACIZLVuG', '2005-02-08', 'Computer', 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
-(9, 'Committee Member', 'committee@gmail.com', '$2y$10$v92ml9eUQRUtc5ENO2zfBe9pCtlmisvJXCQZdLxvtAyI.FpqmBR7u', '2000-02-08', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 0, 0),
-(10, 'Faculty Man', 'faculty@gmail.com', '$2y$10$jyK2JAE/82Af2Gnw2sxfgehh2ySM/L0lgzFW9rSq.BgcR6N6ZHLAm', '2019-03-20', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 0, 0);
+(11, 'ï»¿faculty_name', 'email', '$2y$10$LDi9krgwN5CPQAZj31/tdeD/VkvBkkFeHeYWBSgIBUYWSrOHCOK8G', '1970-01-01', 'department', 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
+(12, 'Anjvai', 'anjvai@somaiya.edu', '$2y$10$xwU8.JQXFVdylSGmzRu6sOAI6LwBA6RCSkIfFaN5oH1aOzbAAXJ2.', '1999-12-01', 'Computer', 'defaults/default_userprofile_pic.png', 0, 1, 0, 1, 0),
+(13, 'gfg', 'uhiud@gmail.com', '$2y$10$T7J7Zp7kzXwuzW21FHUI0ekl4RrbFPf2tgEjY3vY508W6nIPM.29a', '1999-12-12', 'Computer', 'defaults/default_userprofile_pic.png', 0, 1, 0, 0, 0),
+(14, 'gfyeu', 'uidhu@gmail.com', '$2y$10$.NZE8URcEbGMEbXTNEupsuOYUXerLNdcH6ChciZb8rg3XJvdioiA.', '2000-04-04', 'Extc', 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
+(15, 'nsiuhfu', 'hiufwh@gmail.com', '$2y$10$OzibKeM11giBfC7x3BMcXeFWmBSEs9tg8x6CCVYfRkSSBrruK0YPq', '1999-03-03', 'Etrx', 'defaults/default_userprofile_pic.png', 1, 1, 1, 1, 1),
+(16, 'jrgjie', 'jjtijo@gmail.com', '$2y$10$hacUv.WPNrPgfcJAi7zxhO2higW9r3Ty/Miq1DFdJ2mf3vAs3/EbK', '2000-04-04', 'Extc', 'defaults/default_userprofile_pic.png', 0, 0, 0, 1, 1),
+(17, 'Faculty', 'faculty@gmail.com', '$2y$10$NSFC/6s5VLwAnIsBLFsKuOGlN9CdOQUK0XxHP0rT0JPDEWDyjP7Mu', '2000-02-02', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
+(18, 'HOD', 'hod@gmail.com', '$2y$10$hLP/NqG2tCMqYQD2u45jD.WSW6lCW2Tj5DYhd6UjBKi7rzPbSa./a', '2000-01-01', 'Computer', 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
+(19, 'Committee', 'committee@gmail.com', '$2y$10$3Xs1WOGAgilOe0Tzdr8AUeUGLhbIp18FogxmRP3NF5DozwQ0qmfWi', '2000-02-02', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -100,7 +108,8 @@ CREATE TABLE `fields_table` (
 --
 
 INSERT INTO `fields_table` (`id`, `fieldtitle`, `maxpi`, `inputtype`, `fieldname`, `fieldid`, `fieldplaceholder`, `fieldform`, `fielddate`) VALUES
-(2, 'Marks Awarded', 100, 'number', 'marksawarded', 'marksawarded', 'Enter the marks awarded by you to students', 'A', '2019-03-15');
+(2, 'Marks Awarded', 100, 'number', 'marksawarded', 'marksawarded', 'Enter the marks awarded by you to students', 'A', '2019-03-15'),
+(3, '', 0, 'number', '', '', '', 'A', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -149,7 +158,10 @@ CREATE TABLE `partb_cat1_pi` (
 INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1_pi1_hod_a`, `cat1_pi1_committee_a`, `cat1_pi2_self_a`, `cat1_pi2_hod_a`, `cat1_pi2_committee_a`, `cat1_pi3_self_a`, `cat1_pi3_hod_a`, `cat1_pi3_committee_a`, `cat1_pi4_self_a`, `cat1_pi4_hod_a`, `cat1_pi4_committee_a`, `cat1_pitotal_self_a`, `cat1_pitotal_hod_a`, `cat1_pitotal_committee_a`) VALUES
 (1, 2019, 2, 20, 10, 45, 7878, 879, 56, 589, 45, 56, 11, 11, 0, 77, 75, 50),
 (2, 2018, 2, 20, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 65, 60),
-(3, 2019, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 75, 0);
+(3, 2019, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 75, 0),
+(4, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(5, 2019, 17, 40, 40, 0, 40, 40, 0, 10, 10, 0, 10, 10, 0, 100, 100, 0),
+(6, 2018, 17, 40, 0, 0, 40, 0, 0, 10, 0, 0, 10, 0, 0, 100, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -184,7 +196,9 @@ CREATE TABLE `partb_cat2_pi` (
 
 INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat2_pii1_hod_a`, `cat2_pii1_committee_a`, `cat2_pii2_self_a`, `cat2_pii2_hod_a`, `cat2_pii2_committee_a`, `cat2_pii3_self_a`, `cat2_pii3_hod_a`, `cat2_pii3_committee_a`, `cat2_pii4_self_a`, `cat2_pii4_hod_a`, `cat2_pii4_committee_a`, `cat2_piitotal_self_a`, `cat2_piitotal_hod_a`, `cat2_piitotal_committee_a`) VALUES
 (1, 2019, 2, 78, 78, 70, 877, 7777, 100, 23, 45, 40, 23, 32, 23, 23, 43, 20),
-(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 43, 0);
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 43, 0),
+(3, 2019, 17, 0, 0, 0, 20, 20, 0, 20, 20, 0, 20, 20, 0, 60, 60, 0),
+(4, 2018, 17, 20, 0, 0, 20, 0, 0, 20, 0, 0, 0, 0, 0, 60, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -240,7 +254,9 @@ CREATE TABLE `partb_cat3_pi` (
 
 INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `cat3_piii1_hod_a`, `cat3_piii1_committee_a`, `cat3_piii2_self_a`, `cat3_piii2_hod_a`, `cat3_piii2_committee_a`, `cat3_piii3_self_a`, `cat3_piii3_hod_a`, `cat3_piii3_committee_a`, `cat3_piii4_self_a`, `cat3_piii4_hod_a`, `cat3_piii4_committee_a`, `cat3_piii5_self_a`, `cat3_piii5_hod_a`, `cat3_piii5_committee_a`, `cat3_piii6_self_a`, `cat3_piii6_hod_a`, `cat3_piii6_committee_a`, `cat3_piii7_self_a`, `cat3_piii7_hod_a`, `cat3_piii7_committee_a`, `cat3_piii8_self_a`, `cat3_piii8_hod_a`, `cat3_piii8_committee_a`, `cat3_piii9_self_a`, `cat3_piii9_hod_a`, `cat3_piii9_committee_a`, `cat3_piii10_self_a`, `cat3_piii10_hod_a`, `cat3_piii10_committee_a`, `cat3_piii11_self_a`, `cat3_piii11_hod_a`, `cat3_piii11_committee_a`, `cat3_piiitotal_self_a`, `cat3_piiitotal_hod_a`, `cat3_piiitotal_committee_a`) VALUES
 (1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 25, 23, 0, 150, 145, 140),
-(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100);
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100),
+(3, 2019, 17, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0, 24, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 34, 0),
+(4, 2018, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -272,7 +288,9 @@ CREATE TABLE `partb_cat4_pi` (
 
 INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat4_piv1_hod_a`, `cat4_piv1_committee_a`, `cat4_piv2_self_a`, `cat4_piv2_hod_a`, `cat4_piv2_committee_a`, `cat4_piv3_self_a`, `cat4_piv3_hod_a`, `cat4_piv3_committee_a`, `cat4_pivtotal_self_a`, `cat4_pivtotal_hod_a`, `cat4_pivtotal_committee_a`) VALUES
 (1, 2019, 2, 45, 44, 20, 23, 23, 20, 56, 56, 30, 65, 50, 60),
-(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 65, 0);
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 65, 0),
+(3, 2019, 17, 5, 0, 0, 10, 10, 0, 15, 15, 0, 30, 25, 0),
+(4, 2018, 17, 10, 0, 0, 10, 0, 0, 10, 0, 0, 30, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -302,7 +320,9 @@ INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `f
 (89, 2, 2, 'KJSCE 2', 2, 'SKSCOAC', 'users/manish.potey@somaiya.edu/2_1.jpg'),
 (90, 2, 4, 'KJOJ', 4, 'KJOJ', 'users/manish.potey@somaiya.edu/napoleon death quote.png'),
 (91, 2, 5, 'Hola', 4, 'KJOOO', 'users/manish.potey@somaiya.edu/2_1.jpg'),
-(92, 6, 0, '', 0, '', 'NAN');
+(92, 6, 0, '', 0, '', 'NAN'),
+(93, 7, 0, '', 0, '', 'NAN'),
+(94, 7, 0, '', 0, '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -327,9 +347,12 @@ CREATE TABLE `part_a_gpi` (
 --
 
 INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_gpi_self_a`, `parta_gpi_hod_a`, `parta_gpi_committee_a`, `parta_gpi_pi_self_a`, `parta_gpi_pi_hod_a`, `parta_gpi_pi_committee_a`) VALUES
-(3, 2019, 2, 22, 51, 20, 45, 45, 40),
+(3, 2019, 2, 47, 67, 20, 45, 45, 40),
 (4, 2018, 2, 0, 0, 0, 45, 45, 0),
-(5, 2019, 7, 30, 25, 0, 50, 45, 0);
+(5, 2019, 7, 30, 25, 0, 50, 45, 0),
+(6, 2017, 2, 44, 54, 0, 0, 0, 0),
+(7, 2019, 17, 30, 30, 0, 30, 30, 0),
+(8, 2018, 17, 30, 0, 0, 30, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -379,7 +402,8 @@ INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `faculty_name`, `ecode`,
 (3, 2019, 3, 'Jyoti Trymbake', 5476, 'Ghatkopar', 'Ghatkopar', 'jyoti.trymbake@somaiya.edu', 883957483, 'PHD', '1982-01-27', 'Professor', 'SPIT', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', ''),
 (4, 2019, 7, 'Faculty', 123, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', ''),
 (5, 0, 2, '', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, '', '', '', ''),
-(6, 2017, 1, 'Babaso Aldar', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', '');
+(6, 2017, 1, 'Babaso Aldar', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '', 0, 0, '', '', 0, 0, 'Yes', '', '', ''),
+(7, 2019, 17, 'abc', 3487, 'kjsce', 'kjsce', 'faculty@gmail.com', 2147483647, 'M.Tech', '1989-03-18', 'Ap', 'kjsce', 'Ap', '2000-03-07', 7000, 16930, 'Ap', '1-07-2016', 7000, 16930, 'Ap', '1-07-2016', 7000, 16930, 'No', '', '', 'No');
 
 -- --------------------------------------------------------
 
@@ -1121,7 +1145,9 @@ INSERT INTO `submitted_for_review_table` (`id`, `year`, `facultyId`, `partA`, `p
 (2, 2018, 2, 1, 1),
 (3, 2019, 7, 1, 1),
 (4, 2018, 7, 1, 1),
-(5, 2018, 3, 0, 1);
+(5, 2018, 3, 0, 1),
+(6, 2019, 17, 1, 1),
+(7, 2018, 17, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1482,191 +1508,230 @@ ALTER TABLE `summary_table`
 --
 ALTER TABLE `cas_approval_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `faculty_table`
 --
 ALTER TABLE `faculty_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `fields_table`
 --
 ALTER TABLE `fields_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `otp_table`
 --
 ALTER TABLE `otp_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `partb_cat4_pi`
 --
 ALTER TABLE `partb_cat4_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
 ALTER TABLE `part_a_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1`
 --
 ALTER TABLE `part_b_cat_1`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
 ALTER TABLE `part_b_cat_1_cte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cto`
 --
 ALTER TABLE `part_b_cat_1_cto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_dar`
 --
 ALTER TABLE `part_b_cat_1_dar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
 ALTER TABLE `part_b_cat_2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
 ALTER TABLE `part_b_cat_2_act`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_c`
 --
 ALTER TABLE `part_b_cat_2_c`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_exc`
 --
 ALTER TABLE `part_b_cat_2_exc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_ha`
 --
 ALTER TABLE `part_b_cat_2_ha`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
 ALTER TABLE `part_b_cat_3_bk`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_cres`
 --
 ALTER TABLE `part_b_cat_3_cres`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ores`
 --
 ALTER TABLE `part_b_cat_3_ores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pip`
 --
 ALTER TABLE `part_b_cat_3_pip`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pp`
 --
 ALTER TABLE `part_b_cat_3_pp`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppic`
 --
 ALTER TABLE `part_b_cat_3_ppic`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppinc`
 --
 ALTER TABLE `part_b_cat_3_ppinc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_res`
 --
 ALTER TABLE `part_b_cat_3_res`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
 ALTER TABLE `part_b_cat_4_creds`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_inv`
 --
 ALTER TABLE `part_b_cat_4_inv`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_sem`
 --
 ALTER TABLE `part_b_cat_4_sem`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
 --
 -- AUTO_INCREMENT for table `part_b_table`
 --
 ALTER TABLE `part_b_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `summary_comm_table`
 --
 ALTER TABLE `summary_comm_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `summary_hasr`
 --
 ALTER TABLE `summary_hasr`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `summary_table`
 --
 ALTER TABLE `summary_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -76,7 +76,6 @@ include 'left-nav.php';
 				  	</div>
 				</div>
 
-
 				<div class="admin-table" style="max-height:500px">
 				<table class="table table-bordered" style="background-color: white">
 				  	<thead style="color: white">
@@ -274,7 +273,6 @@ include 'left-nav.php';
 					    ?>
 				  </tbody>
 				</table>
-				</div>
 
 				<br>
 				<!-- <hr style="border: 0.5px solid #c8c8c8"> -->
@@ -413,6 +411,23 @@ include 'left-nav.php';
 
 			</div>
 		</div>
+		</div>
+		<br>
+		
+		<div class="row justify-content-center">
+			<div class="col-md-5">
+				 <input class="form-control" type="number" name="v1forcurryear" id="vforcurryear" maxlength="200"/>
+			</div>
+			<div class="col-md-5">
+				 <input class="form-control" type="number" name="v2forcurryear" id="vforcurryear" maxlength="200"/>
+			</div>
+			<div class="col-md-2">
+				 <button type="button" class="btn btn-success" id="saveforv" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
+	  			SAVE 
+				</button>
+			</div>
+		</div>
+
 	</div>
 	</div>
 	</div>
