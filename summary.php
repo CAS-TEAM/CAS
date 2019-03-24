@@ -1492,13 +1492,13 @@ $previousyear=$currentyear-1;
 							<th class="text-center" rowspan="2">Item</th>
 							<th class="text-center" colspan="2">API given by Faculty Member</th>
 							<th class="text-center" colspan="2">API after verfication by HOD</th>
-							<th class="text-center" rowspan="2">Remarks by HOD</th>
+							<th class="text-center" rowspan="2" width="15%">Remarks by HOD</th>
 							<?php
 							if($committee==1 && $recommended==1)
 							{
 								?>
 								<th class="text-center" colspan="2">Final Score by Screening Cum Evaluation/Selection Committee</th>
-								<th class="text-center" rowspan="2">Remarks by Committee</th>
+								<th class="text-center" rowspan="2" width="15%">Remarks by Committee</th>
 								<?php
 							}
 							?>
@@ -1829,7 +1829,7 @@ $previousyear=$currentyear-1;
 		                    <tr>
 		                    	<td colspan="1">
 									<div class="row justify-content-center">
-										<label class="col-form-label">Cumulated Score=0.25%<br>of API of 2016-17+<br>0.75% of API of 2017-18</label>
+										<label class="col-form-label">Cumulated Score=0.25% of<br> API of 2016-17+<br>0.75% of API of 2017-18</label>
 									</div>
 								</td>
 								<td colspan="2">
