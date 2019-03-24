@@ -1287,7 +1287,7 @@ function enableinputs()
 
     if (submitted_for_review == true && viewerId == userId)
     {
-    	$('.pisave').toggle();
+    	$('.pisave').remove();
 	} 
 	// alert(userId);
 	// alert(viewerId);
@@ -1314,6 +1314,7 @@ function enableself()
 
 function enablehod()
 {
+	alert("here");
 	$(".hodapp:input").prop("disabled", false);
 }
 
@@ -1959,7 +1960,7 @@ $(document).ready(function(){
 	        },                        
 	        success: function (response) 
 	        {
-	        	alert(response);
+	        	// alert(response);
 	            if(response.trim()=="success")
 	            {
 	            	document.getElementById("partb_cat2_pii4_msg").innerHTML="Saved!";
@@ -3051,7 +3052,7 @@ $("#show-sidebar").click(function() {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SUMMARY COMMITTEE PART AUTOMATIC PERCENT CALCULATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	var pa=0;
 	var pbc1=0;
@@ -3156,7 +3157,7 @@ $(document).ready(function(){
 	}
 
 
-});
+});*/
 
 
 function getSummaryData(){
@@ -3213,6 +3214,149 @@ function getSummaryData(){
 	
 	return false;
 }
+
+
+$(document).ready(function(){
+
+	$(".summary-recommend-form").submit(function(e){ 
+		e.preventDefault();        
+		// alert("here");
+
+		var formData = new FormData(this);  		
+		
+		var hodremarksA= document.getElementById("hodremarksA").value;
+		var hodremarksBcat1= document.getElementById("hodremarksBcat1").value;
+		var hodremarksBcat2= document.getElementById("hodremarksBcat2").value;
+		var hodremarksBcat3= document.getElementById("hodremarksBcat3").value;
+		var hodremarksBcat4= document.getElementById("hodremarksBcat4").value;
+		var hodremarksavgpi= document.getElementById("hodremarksavgpi").value;
+		var hodremarkscum= document.getElementById("hodremarkscum").value;
+
+		var year=document.getElementById("year").value;
+		var userId=document.getElementById("userId").value;
+
+		formData.append("hodremarksA",hodremarksA);
+		formData.append("hodremarksBcat1",hodremarksBcat1);
+		formData.append("hodremarksBcat2",hodremarksBcat2);
+		formData.append("hodremarksBcat3",hodremarksBcat3);
+		formData.append("hodremarksBcat4",hodremarksBcat4);
+		formData.append("hodremarksavgpi",hodremarksavgpi);
+		formData.append("hodremarkscum",hodremarkscum);
+
+		formData.append("year",year);
+		formData.append("userId",userId);
+
+		$.ajax
+		({
+			type: 'POST',
+			url: 'summary-recommend-sys.php',
+			data:formData,
+			//dataType: 'text',  // what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,                
+			success: function (response) 
+			{
+				// alert(response);
+				$(".summary-recommend-form").remove();
+				if(parseInt(response)==1)
+				{
+					// $("hodrecommendationdiv").html();
+					document.getElementById("hodrecommendationdiv").innerHTML='<p id="recommendedforcasp" class="card-text"><img src="checked.png" style="width:32px"> This faculty member has been recommended for CAS.</p><br>'
+				}
+				else if(parseInt(response)==0)
+				{
+					// $("hodrecommendationdiv").html('<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px">This faculty member has not been recommended for CAS by the HOD.</p>');
+					document.getElementById("hodrecommendationdiv").innerHTML='<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px"> This faculty member has not been recommended for CAS.</p><br>';
+				}
+				else
+				{
+					alert("There was an error!");
+				}
+				
+			},                
+			error: function(xhr, status, error) {
+				alert(xhr.responseText);
+			}              
+		});
+		
+		return false;
+	})
+});
+
+$(document).ready(function(){
+
+	$(".summary_comm_form").submit(function(e){ 
+		e.preventDefault();    
+		if(confirm("Do you want to submit the summary?")) 
+		{
+			// alert("here");			
+			$("#summary-comm-submit-form").prop("disabled",true);
+			$(".loader").toggle();
+			
+			var formData = new FormData(this);  		
+			
+			var committeeremarksA= document.getElementById("committeeremarksA").value;
+			var committeeremarksBcat1= document.getElementById("committeeremarksBcat1").value;
+			var committeeremarksBcat2= document.getElementById("committeeremarksBcat2").value;
+			var committeeremarksBcat3= document.getElementById("committeeremarksBcat3").value;
+			var committeeremarksBcat4= document.getElementById("committeeremarksBcat4").value;
+			var committeeremarksavgpi= document.getElementById("committeeremarksavgpi").value;
+			var committeeremarkscum= document.getElementById("committeeremarkscum").value;
+
+			var year=document.getElementById("year").value;
+			var userId=document.getElementById("userId").value;
+
+			formData.append("committeeremarksA",committeeremarksA);
+			formData.append("committeeremarksBcat1",committeeremarksBcat1);
+			formData.append("committeeremarksBcat2",committeeremarksBcat2);
+			formData.append("committeeremarksBcat3",committeeremarksBcat3);
+			formData.append("committeeremarksBcat4",committeeremarksBcat4);
+			formData.append("committeeremarksavgpi",committeeremarksavgpi);
+			formData.append("committeeremarkscum",committeeremarkscum);
+
+			formData.append("year",year);
+			formData.append("userId",userId);
+
+			$.ajax
+			({
+				type: 'POST',
+				url: 'summary_comm_sys.php',
+				data:formData,
+				//dataType: 'text',  // what to expect back from the PHP script, if anything
+				cache: false,
+				contentType: false,
+				processData: false,                
+				success: function (response) 
+				{
+					alert(response);
+					window.location.href=response.trim();
+					// $(".summary_comm_sys.php").remove();
+					// if(parseInt(response)==1)
+					// {
+					// 	// $("hodrecommendationdiv").html();
+					// 	document.getElementById("hodrecommendationdiv").innerHTML='<p id="recommendedforcasp" class="card-text"><img src="checked.png" style="width:32px"> This faculty member has been recommended for CAS.</p><br>'
+					// }
+					// else if(parseInt(response)==0)
+					// {
+					// 	// $("hodrecommendationdiv").html('<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px">This faculty member has not been recommended for CAS by the HOD.</p>');
+					// 	document.getElementById("hodrecommendationdiv").innerHTML='<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px"> This faculty member has not been recommended for CAS.</p><br>';
+					// }
+					// else
+					// {
+					// 	alert("There was an error!");
+					// }
+					
+				},                
+				error: function(xhr, status, error) {
+					alert(xhr.responseText);
+				}              
+			});
+			
+			return false;
+		}
+	})
+});
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ADMIN PANEL FILTERING SYSTEM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
