@@ -413,39 +413,52 @@ include 'left-nav.php';
 		</div>
 		</div>
 		<br>
+
+		<?php
+
+		$sqlmf="SELECT currentyear, previousyear FROM multiplication_factor_table";
+		$resultmf=mysqli_query($conn, $sqlmf);
+		$rowmf=mysqli_fetch_assoc($resultmf);
+		$currentyearmf=$rowmf['currentyear'];
+		$previousyearmf=$rowmf['previousyear'];
+
+		?>
 		
+		<form action="multiplication_factor_sys.php" method="POST">
+			<div class="row justify-content-center">
+	  			<div class="col-md-10 text-center admin-filter-box">
 
-		<div class="row justify-content-center">
-  			<div class="col-md-10 text-center admin-filter-box">
+	  				<div class="row justify-content-center">
+	  					<div class="col-md-10 text-center">
+	  						<label class="col-form-label text-center" style="font-size: 23px;color: white;">Multiplication Factor</label>
+	  					</div>
 
-  				<div class="row justify-content-center">
-  					<div class="col-md-10 text-center">
-  						<label class="col-form-label text-center" style="font-size: 23px;color: white;">Multiplication Factor</label>
-  					</div>
+	  				</div> 
 
-  				</div> 
-
-  				<div class="row">
-  					<div class="col-md-4">
-  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -41px">Current Year</label>
-  					</div>
-  					<div class="col-md-4 offset-md-1">
-  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -35px">Previous Year</label>
-  					</div>
-  				</div>
-        		<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px;padding-left: 7px">
-					<div class="col-md-4 offset-md-1">
-    					<input class="form-control" type="number" style="width: 120%;margin-left: -25px" name="v1forcurryear" id="vforcurryear" maxlength="200"/>
-    				</div>
-		    		<div class="col-md-4 offset-md-1">
-		    			<input class="form-control" type="number" style="width: 120%;margin-left: -25px" name="v2forcurryear" id="vforcurryear" maxlength="200"/>
-		    		</div>
-		    		<div class="col-md-2">
-						<button type="button" class="btn btn-success" id="saveforv" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">SAVE</button>
-					</div>
-				</div><br>
+	  				<div class="row">
+	  					<div class="col-md-4">
+	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -41px">Current Year</label>
+	  					</div>
+	  					<div class="col-md-4 offset-md-1">
+	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -35px">Previous Year</label>
+	  					</div>
+	  				</div>
+	        		<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px;padding-left: 7px">
+						<div class="col-md-4 offset-md-1">
+	    					<input class="form-control" type="number" step="0.01" style="width: 120%;margin-left: -25px" value="<?php echo $currentyearmf; ?>" name="v1forcurryear" id="v1forcurryear"/>
+	    				</div>
+			    		<div class="col-md-4 offset-md-1">
+			    			<input class="form-control" type="number" step="0.01" style="width: 120%;margin-left: -25px" value="<?php echo $previousyearmf; ?>" name="v2forcurryear" id="v2forcurryear"/>
+			    		</div>
+			    		<div class="col-md-2">
+							<button type="submit" class="btn btn-success" id="saveforv" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">SAVE</button>
+						</div>
+					</div><br>
+				</div>
 			</div>
-		</div>
+		</form>
+
+
 	</div>
 	</div>
 	</div>

@@ -942,7 +942,7 @@ include 'left-nav.php';
 	}
 	else
 	{
-		if($committee==1 && $hod==0)
+		if($committee==1 && $hod==0 && $submitted_for_review==false && $viewerId!=$userId)
 		{
 			?>
 			<script type="text/javascript">
@@ -971,7 +971,7 @@ include 'left-nav.php';
 		</script>
 		<?php
 	}
-	if($hod==1)
+	if($hod==1 && $submitted_for_review==true)
 	{
 		?>
 		<script type="text/javascript">
@@ -979,7 +979,7 @@ include 'left-nav.php';
 		</script>
 		<?php
 	}
-	if($committee==1)
+	if($committee==1 && $submitted_for_review==true)
 	{
 		?>
 		<script type="text/javascript">

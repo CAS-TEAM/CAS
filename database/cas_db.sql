@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 24, 2019 at 07:33 PM
+-- Generation Time: Mar 25, 2019 at 03:02 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -113,6 +113,25 @@ INSERT INTO `fields_table` (`id`, `fieldtitle`, `maxpi`, `inputtype`, `fieldname
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `multiplication_factor_table`
+--
+
+CREATE TABLE `multiplication_factor_table` (
+  `id` int(11) NOT NULL,
+  `currentyear` float NOT NULL,
+  `previousyear` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `multiplication_factor_table`
+--
+
+INSERT INTO `multiplication_factor_table` (`id`, `currentyear`, `previousyear`) VALUES
+(1, 0.75, 0.25);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `otp_table`
 --
 
@@ -160,7 +179,8 @@ INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1
 (3, 2019, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 75, 0),
 (4, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (5, 2019, 17, 40, 40, 40, 40, 40, 35, 10, 10, 5, 10, 10, 10, 100, 100, 90),
-(6, 2018, 17, 40, 0, 0, 40, 0, 0, 10, 0, 0, 10, 0, 0, 100, 0, 0);
+(6, 2018, 17, 40, 0, 0, 40, 0, 0, 10, 0, 0, 10, 0, 0, 100, 0, 0),
+(7, 2019, 1, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -351,7 +371,8 @@ INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_gpi_self_a`, `parta_
 (5, 2019, 7, 30, 25, 0, 50, 45, 0),
 (6, 2017, 2, 44, 54, 0, 0, 0, 0),
 (7, 2019, 17, 30, 30, 25, 30, 30, 25),
-(8, 2018, 17, 30, 0, 30, 30, 0, 30);
+(8, 2018, 17, 30, 0, 30, 30, 0, 30),
+(9, 2019, 1, 20, 0, 0, 20, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1235,6 +1256,12 @@ ALTER TABLE `fields_table`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `multiplication_factor_table`
+--
+ALTER TABLE `multiplication_factor_table`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `otp_table`
 --
 ALTER TABLE `otp_table`
@@ -1458,6 +1485,11 @@ ALTER TABLE `faculty_table`
 ALTER TABLE `fields_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT for table `multiplication_factor_table`
+--
+ALTER TABLE `multiplication_factor_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `otp_table`
 --
 ALTER TABLE `otp_table`
@@ -1466,7 +1498,7 @@ ALTER TABLE `otp_table`
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
@@ -1491,7 +1523,7 @@ ALTER TABLE `part_a_doc`
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --

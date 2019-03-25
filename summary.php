@@ -54,6 +54,12 @@ if(date("m")>=7)
 $previousyear=$currentyear-1;
 // echo $userId;
 
+$sqlmf="SELECT currentyear, previousyear FROM multiplication_factor_table";
+$resultmf=mysqli_query($conn, $sqlmf);
+$rowmf=mysqli_fetch_assoc($resultmf);
+$currentyearmf=$rowmf['currentyear'];
+$previousyearmf=$rowmf['previousyear'];
+
 ?>
 
 	<div class="container">
@@ -157,7 +163,9 @@ $previousyear=$currentyear-1;
 
 		$B=number_format($Btotal/5, 2);
 
-		$avgpi=number_format(0.25*$A + 0.75*$B, 2);
+		// $avgpi=number_format(0.25*$A + 0.75*$B, 2);
+		
+		$avgpi=number_format($previousyearmf*$A + $currentyearmf*$B, 2);
 
 		// $sqls="SELECT self_avgpi,selfA,selfB FROM summary_table WHERE facultyId='$userId' AND year='$currentyear'";
 		// $results=mysqli_query($conn,$sqls);
@@ -489,7 +497,7 @@ $previousyear=$currentyear-1;
 		                    	<td colspan="5">
 									<div class="row justify-content-center">
 										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">Average PI = [ (0.25 * A) + (0.75 * B) ] = </label>
+											<label class="col-form-label">Average PI = [ (<?php echo $previousyearmf; ?> * A) + (<?php echo $currentyearmf; ?> * B) ] = </label>
 										</div>
 										<div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIV_avgpi_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
@@ -1332,7 +1340,8 @@ $previousyear=$currentyear-1;
 
 		$Bhod=number_format($Btotal/5, 2);
 
-		$avgpihod=number_format(0.25*$Ahod + 0.75*$Bhod, 2);
+		// $avgpihod=number_format(0.25*$Ahod + 0.75*$Bhod, 2);
+		$avgpihod=number_format($previousyearmf*$Ahod + $currentyearmf*$Bhod, 2);
 
 		$sqlss="SELECT hodremarksA, hodremarksBcat1, hodremarksBcat2, hodremarksBcat3, hodremarksBcat4, hodremarksavgpi, hodremarkscum FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 		$resultss=mysqli_query($conn,$sqlss);
@@ -1443,7 +1452,8 @@ $previousyear=$currentyear-1;
 
 			$Bcommittee=number_format($Btotal/5, 2);
 
-			$avgpicommittee=number_format(0.25*$Acommittee + 0.75*$Bcommittee, 2);
+			// $avgpicommittee=number_format(0.25*$Acommittee + 0.75*$Bcommittee, 2);
+			$avgpicommittee=number_format($previousyearmf*$Acommittee + $currentyearmf*$Bcommittee, 2);
 
 			$sqlss="SELECT committeeremarksA, committeeremarksBcat1, committeeremarksBcat2, committeeremarksBcat3, committeeremarksBcat4, committeeremarksavgpi, committeeremarkscum, final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 			$resultss=mysqli_query($conn,$sqlss);
@@ -1829,7 +1839,7 @@ $previousyear=$currentyear-1;
 		                    <tr>
 		                    	<td colspan="1">
 									<div class="row justify-content-center">
-										<label class="col-form-label">Cumulated Score=0.25% of<br> API of 2016-17+<br>0.75% of API of 2017-18</label>
+										<label class="col-form-label">Cumulated Score=<?php echo $previousyearmf; ?>% of<br> API of 2016-17+<br><?php echo $currentyearmf; ?>% of API of 2017-18</label>
 									</div>
 								</td>
 								<td colspan="2">

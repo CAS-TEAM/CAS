@@ -40,6 +40,7 @@ $profilePicLocation=$rowx['profilePicLocation'];
 // echo "committee=".$committee;
 
 $submitted_for_review=false;
+$sfr_forjs=0; // this variable is for passing to js...if 0 means submitted_for_Review is false else, 1
 
 $sqly="SELECT * FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$year'";
 $resulty=mysqli_query($conn,$sqly);
@@ -185,6 +186,7 @@ include 'left-nav.php';
 					else
 					{
 						$submitted_for_review=true;
+						$sfr_forjs=1;
 						?>
 						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
 						<?php
@@ -217,7 +219,7 @@ include 'left-nav.php';
     <input type="hidden" name="viewerId" id="viewerId" value="<?php echo $viewerId; ?>">
     <input type="hidden" name="hod" id="hod" value="<?php echo $hod; ?>">
     <input type="hidden" name="committee" id="committee" value="<?php echo $committee; ?>">
-    <input type="hidden" name="submitted_for_review" id="submitted_for_review" value="<?php echo $submitted_for_review; ?>">
+    <input type="hidden" name="submitted_for_review" id="submitted_for_review" value="<?php echo $sfr_forjs; ?>">
 
 		<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-cat1" role="tabpanel" aria-labelledby="nav-cat1-tab"><br>
@@ -5570,7 +5572,7 @@ include 'left-nav.php';
 	}
 	else
 	{
-		if($committee==1 && $hod==0)
+		if($committee==1 && $hod==0 && $submitted_for_review==false && $viewerId!=$userId)
 		{
 			?>
 			<script type="text/javascript">
