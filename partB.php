@@ -1633,7 +1633,7 @@ include 'left-nav.php';
 												</div>
 											</div>
 											<div class="col-md-3" style="padding:0;margin:0">
-												<a href="viewfile.php?location=none" id="dps2rviewfile" target="_blank">
+												<a href="viewfile.php?location=none" id="dps2viewfile" target="_blank">
 													<img src="https://img.icons8.com/ios/24/000000/document.png">
 												</a>										
 											</div>
