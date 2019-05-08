@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2019 at 03:02 PM
+-- Generation Time: May 08, 2019 at 10:42 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -82,7 +82,11 @@ INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `date_of
 (16, 'jrgjie', 'jjtijo@gmail.com', '$2y$10$hacUv.WPNrPgfcJAi7zxhO2higW9r3Ty/Miq1DFdJ2mf3vAs3/EbK', '2000-04-04', 'Extc', 'defaults/default_userprofile_pic.png', 0, 0, 0, 1, 1),
 (17, 'Faculty', 'faculty@gmail.com', '$2y$10$NSFC/6s5VLwAnIsBLFsKuOGlN9CdOQUK0XxHP0rT0JPDEWDyjP7Mu', '2000-02-02', 'Computer', 'users/faculty@gmail.com/profilepic.png', 1, 0, 0, 0, 0),
 (18, 'HOD', 'hod@gmail.com', '$2y$10$hLP/NqG2tCMqYQD2u45jD.WSW6lCW2Tj5DYhd6UjBKi7rzPbSa./a', '2000-01-01', 'Computer', 'users/hod@gmail.com/profilepic.jpg', 1, 1, 0, 0, 0),
-(19, 'Committee', 'committee@gmail.com', '$2y$10$3Xs1WOGAgilOe0Tzdr8AUeUGLhbIp18FogxmRP3NF5DozwQ0qmfWi', '2000-02-02', 'Computer', 'users/committee@gmail.com/profilepic.jpg', 1, 0, 1, 0, 0);
+(19, 'Committee', 'committee@gmail.com', '$2y$10$3Xs1WOGAgilOe0Tzdr8AUeUGLhbIp18FogxmRP3NF5DozwQ0qmfWi', '2000-02-02', 'Computer', 'users/committee@gmail.com/profilepic.jpg', 1, 0, 1, 0, 0),
+(20, 'Admin', 'admin@gmail.com', '$2y$10$5Brkhy3gepjGmawgavhXNe.LfVEFNkiN83WLRNr584wiAteiIiGeW', '2005-06-23', 'Computer', 'users/admin@gmail.com/profilepic.jpg', 1, 0, 0, 0, 1),
+(21, 'Faculty1', 'faculty1@gmail.com', '$2y$10$.2I6BlmzS2/rHufDtJEB6eyCamzWyf5ywl5iFaEkLDgqrLxM3Pbr.', '2000-03-07', 'Computer', 'users/faculty1@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
+(22, 'HOD1', 'hod1@gmail.com', '$2y$10$600i/OfFMlcf0/JJXjh/4OM63tLD0xKyqh.DGazG4UzGcakjvCWNW', '2000-02-20', 'Computer', 'users/hod1@gmail.com/profilepic.jpg', 1, 1, 0, 0, 0),
+(23, 'Committee1', 'committee1@gmail.com', '$2y$10$0aoxxcL6oKEcGu/JRUMnoeFHoEwfcteAbl4bIFO1Z1vQ1LSq5lqVW', '2000-02-05', 'Computer', 'users/committee1@gmail.com/profilepic.png', 1, 0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -341,7 +345,11 @@ INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `f
 (91, 2, 5, 'Hola', 4, 'KJOOO', 'users/manish.potey@somaiya.edu/2_1.jpg'),
 (92, 6, 0, '', 0, '', 'NAN'),
 (93, 7, 0, '', 0, '', 'NAN'),
-(94, 7, 0, '', 0, '', 'NAN');
+(94, 7, 0, '', 0, '', 'NAN'),
+(95, 8, 2, 'PCC2', 4, 'SDC', 'users/faculty1@gmail.com/2_3.jpg'),
+(96, 8, 1, 'OCC', 5, 'KJSCE', 'users/faculty1@gmail.com/1_1.jpg'),
+(97, 9, 2, 'OCS2', 4, 'KJSDC', 'users//2_1.jpg'),
+(98, 9, 1, 'OCS', 5, 'KJSCE', 'users//1_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -372,7 +380,9 @@ INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_gpi_self_a`, `parta_
 (6, 2017, 2, 44, 54, 0, 0, 0, 0),
 (7, 2019, 17, 30, 30, 25, 30, 30, 25),
 (8, 2018, 17, 30, 0, 30, 30, 0, 30),
-(9, 2019, 1, 20, 0, 0, 20, 0, 0);
+(9, 2019, 1, 20, 0, 0, 20, 0, 0),
+(10, 2019, 21, 25, 0, 0, 45, 0, 0),
+(11, 2018, 21, 30, 0, 0, 40, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -423,7 +433,9 @@ INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `faculty_name`, `ecode`,
 (4, 2019, 7, 'Faculty', 123, '', '', '', 0, '', '2017-05-03', '', '', '', '2018-07-09', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '', ''),
 (5, 0, 2, '', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '', '', ''),
 (6, 2017, 1, 'Babaso Aldar', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '', ''),
-(7, 2019, 17, 'abc', 3487, 'kjsce', 'kjsce', 'faculty@gmail.com', 2147483647, 'M.Tech', '1989-03-18', 'Ap', 'kjsce', 'Ap', '2000-03-07', 7000, 16930, 'Ap', '2016-10-11', 7000, 16930, 'Ap', '2015-08-04', 7000, 16930, 'No', '', '', 'No');
+(7, 2019, 17, 'abc', 3487, 'kjsce', 'kjsce', 'faculty@gmail.com', 2147483647, 'M.Tech', '1989-03-18', 'Ap', 'kjsce', 'Ap', '2000-03-07', 7000, 16930, 'Ap', '2016-10-11', 7000, 16930, 'Ap', '2015-08-04', 7000, 16930, 'No', '', '', 'No'),
+(8, 2019, 21, 'Faculty1', 90223, 'Addr1', 'Addr2', 'faculty1@gmail.com', 2147483647, 'PHD', '2000-02-02', 'Asst. Prof.', 'VJTI', 'Asst. Prof.', '2003-07-02', 7000, 8000, 'Prof.', '2004-02-04', 7000, 8500, 'Prof Prof', '2007-09-29', 70830, 2000, 'Yes', 'PHD', 'Gorakhpur Institute of Gorkhas', '20'),
+(9, 2018, 21, 'Faculty1', 90332, 'Addr1', 'Addr2', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '', '10');
 
 -- --------------------------------------------------------
 
@@ -1187,7 +1199,9 @@ INSERT INTO `submitted_for_review_table` (`id`, `year`, `facultyId`, `partA`, `p
 (4, 2018, 7, 1, 1),
 (5, 2018, 3, 0, 1),
 (6, 2019, 17, 1, 1),
-(7, 2018, 17, 1, 1);
+(7, 2018, 17, 1, 1),
+(8, 2019, 21, 1, 0),
+(9, 2018, 21, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1231,7 +1245,9 @@ CREATE TABLE `summary_table` (
 
 INSERT INTO `summary_table` (`id`, `year`, `facultyId`, `selfA`, `selfB`, `self_avgpi`, `hodA`, `hodB`, `hod_avgpi`, `committeeA`, `committeeB`, `committee_avgpi`, `hodremarksA`, `hodremarksBcat1`, `hodremarksBcat2`, `hodremarksBcat3`, `hodremarksBcat4`, `hodremarksavgpi`, `hodremarkscum`, `committeeremarksA`, `committeeremarksBcat1`, `committeeremarksBcat2`, `committeeremarksBcat3`, `committeeremarksBcat4`, `committeeremarksavgpi`, `committeeremarkscum`, `final_recomm`) VALUES
 (1, 2019, 2, 64.03, 72.48, 70.37, 68.36, 71.51, 70.72, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(2, 2019, 17, 55.89, 56.46, 56.32, 0, 54.55, 40.91, 32.09, 45.42, 42.09, 'well', 'done', 'lads', 'today', 'we', 'have', 'won', 'well', 'done', 'lads', 'today', 'we', 'have', 'won', 'nice teacher');
+(2, 2019, 17, 55.89, 56.46, 56.32, 0, 54.55, 40.91, 32.09, 45.42, 42.09, 'well', 'done', 'lads', 'today', 'we', 'have', 'won', 'well', 'done', 'lads', 'today', 'we', 'have', 'won', 'nice teacher'),
+(3, 2019, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(4, 2018, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -1478,7 +1494,7 @@ ALTER TABLE `cas_approval_table`
 -- AUTO_INCREMENT for table `faculty_table`
 --
 ALTER TABLE `faculty_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `fields_table`
 --
@@ -1518,17 +1534,17 @@ ALTER TABLE `partb_cat4_pi`
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
 ALTER TABLE `part_a_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1`
 --
@@ -1653,12 +1669,12 @@ ALTER TABLE `recommend_for_cas`
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `summary_table`
 --
 ALTER TABLE `summary_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

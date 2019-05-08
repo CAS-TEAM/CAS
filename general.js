@@ -388,7 +388,7 @@ $(document).ready(function(){
 
 	$('#part-b-edit-form').click(function(){
 
-		alert("edit here");
+		// alert("edit here");
 
 		$("#part-b-form input").not(".selfapp, .hodapp, .commapp").prop("disabled", false);//disablig all inputs
 		// $(".part-a-plus-btn").prop("onclick", parta_dynamic_form()).off("click");//diabling on-click on dynamic form plus button
