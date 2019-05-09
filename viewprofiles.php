@@ -11,6 +11,7 @@ else
 
 include 'dbh.php';
 
+
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 $sqlx="SELECT profilePicLocation FROM faculty_table WHERE id='$userId'";
@@ -19,14 +20,15 @@ $rowx=mysqli_fetch_assoc($resultx);
 $profilePicLocation=$rowx['profilePicLocation'];
 
 include 'top.php';
+include 'left-nav.php';
 
 ?>
   	
    	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-12">
+			<div class="col offset-md-2" id="part-b-container">
 
-				<h1 class="text-center" style="color:white">VIEW PROFILES</h1>
+				<h2 class="text-center" style="color:white">VIEW PROFILES</h2><br>
 
 				<div class="admin-table">
 				<table class="table table-bordered" style="background-color: white">

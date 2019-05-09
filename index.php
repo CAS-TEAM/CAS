@@ -52,9 +52,12 @@ else
 		<div class="row">
 			<div class="col">
 				<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark bg-transparent">
-					<a class="navbar-brand" href="index.php">CAS</a>
-					<div class="navbar-nav ml-auto">
-						<a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a>
+					<a class="navbar-brand" href="index.php"><img src="img\logo1.jpg" style="width: 70px;height: 65px;margin-left: -15px;border-radius:50%"></a>
+					<div class="navbar-nav">
+						<!-- <a href="login.php"><button type="button" class="btn btn-outline-primary signin-link">Sign-In</button></a> -->
+						<h3 class="text-left index-h1" style="font-size: 25px">Somaiya Vidyavihar</h3>
+						<!-- <a class="navbar-brand" href="index.php"><img src="img\logo2.jpg" style="width: 80px;height: 68px;margin-left: -15px"></a> -->
+
 					</div>
 				</nav>
 			</div>

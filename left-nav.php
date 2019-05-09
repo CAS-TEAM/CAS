@@ -26,7 +26,7 @@ $admin=$rowp['admin'];
 				<div id="close-sidebar">
 					<i class="fas fa-times"></i>
 				</div>
-			</div>
+			</div><br>
 
 			<div class="sidebar-header">
 				<div class="user-pic">
