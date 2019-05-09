@@ -22,7 +22,7 @@ include 'top.php';
 include 'left-nav.php';
 
 ?>
-
+	<br>
 	<div class="container">
     	<div class="row justify-content-center">       
     		<div class="col-md-6 col-sm-12 parta" style="margin-top: 5px">

@@ -36,8 +36,9 @@
 </head>
 
 <body>
-		<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark"  style="height: 50px">
-	  	<a class="navbar-brand" href="index.php">CAS</a>
+		<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="height: 50px">
+	  	<a class="navbar-brand" href="index.php"><img src="img\logo1.jpg" style="width: 56px;height: 52px;margin-left: -6px;border-radius: 50%;margin-top: 26px"></a>
+	  	<h3 class="text-left index-h1" style="font-size: 20px;margin-top: 27px">Somaiya Vidyavihar</h3>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 	  	</button>
@@ -60,7 +61,7 @@
 			    {
 			    	?>			    	
 			      	<li class="nav-item dropdown">
-				        <img class="nav-link dropdown-toggle" src="<?php echo $profilePicLocation; ?>" width="50px" height="50px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto;object-fit: cover;cursor: pointer" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        <img class="nav-link dropdown-toggle" src="<?php echo $profilePicLocation; ?>" width="50px" height="50px" style="overflow: hidden;border-radius: 50%;display:block;margin:0 auto;object-fit: cover;cursor: pointer;margin-top: 13px" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				          	<!-- <img src="defaults/default_userprofile_pic.png" width="30px" style="display:block;margin:0 auto"> -->
 				        <!-- </a> -->
 				        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

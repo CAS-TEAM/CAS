@@ -145,7 +145,7 @@ include 'left-nav.php';
 ?>
 	
 
-	<div class="container">
+	<div class="container" style="margin-top: 8px">
     <div class="row">       
     <div class="col offset-md-2 parta" id="part-b-container">
 
