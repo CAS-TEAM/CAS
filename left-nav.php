@@ -163,6 +163,12 @@ $admin=$rowp['admin'];
 						</div>
 					</li>
 					<li class="sidebar-dropdown">
+						<a href="self-appraisals.php?id=<?php echo $_SESSION['id']; ?>">
+							<i class="fas fa-fighter-jet" style="font-size: 15px"></i>
+							<span style="font-size: 15px">My Self Appraisals</span>
+						</a>
+					</li>
+					<li class="sidebar-dropdown">
 						<a href="guidelines.php">
 							<i class="fas fa-info" style="font-size: 15px"></i>
 							<span style="font-size: 15px">CAS Guidelines</span>
