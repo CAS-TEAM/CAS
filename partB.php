@@ -4975,11 +4975,11 @@ include 'left-nav.php';
 		
 	</div>
 </div>
-</div>
+
 
 	
 	<div class="row form-inline justify-content-center">
-		<div class="col se-btn offset-md-1">
+		<div class="col se-btn">
 			<?php
 			if($submitted_for_review==false && $same_user==1)
 			{
@@ -4993,6 +4993,12 @@ include 'left-nav.php';
 			</button>
 			<?php
 			}
+			else if($submitted_for_review==true && $same_user==1)
+			{
+			?>
+			<button type="button" class="btn btn-info" id="part-b-req-edit-access">Request Edit Access</button>
+			<?php
+			}
 			?>
 
 			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
@@ -5002,7 +5008,7 @@ include 'left-nav.php';
 	</div>
 
 
-
+</div>
 	</div>
 	</div>
 	</form><br><br>

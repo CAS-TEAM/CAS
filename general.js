@@ -336,8 +336,11 @@ function getPartAData(){
 							    	document.getElementById('agency'+room).value=agency;
 							    	document.getElementById('viewfile'+room).href="viewfile.php?location="+file;
 
-
-
+							    	// alert(window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1));
+							    	if(window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1).trim()=='self-appraisal-partA.php')
+							    	{
+							    		$('.part-a-minus-button').remove();	
+							    	}
 							    }
 							    else
 							    {
