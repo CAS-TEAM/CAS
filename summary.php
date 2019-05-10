@@ -180,7 +180,7 @@ $previousyearmf=$rowmf['previousyear'];
 
 		?>
 		
-		<header class="heading"><b>Summary of PI Scores (to be filled by applicant)</b></header><br>
+		<header class="heading"><b>Summary of PI Scores of Applicant</b></header><br>
 		<!-- <form class="summary_self_form.php" action="summary_sys.php" enctype="multipart/form-data" method="POST"> -->
 
 		<input type="hidden" name="year" id="year" value="<?php echo $currentyear; ?>">

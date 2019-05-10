@@ -39,8 +39,48 @@ $committee=$rowx['committee'];
 $profilePicLocation=$rowx['profilePicLocation'];
 // echo "committee=".$committee;
 
+//making entry of this form in the PIs of all tables
+$sql="SELECT id from partb_cat1_pi WHERE year='$year' and facultyId='$userId'";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)==0)
+{
+	$sql1="INSERT INTO partb_cat1_pi(facultyId,year) VALUES('$userId','$year')";
+	$result1=mysqli_query($conn,$sql1);
+}
+$sql="SELECT id from partb_cat2_pi WHERE year='$year' and facultyId='$userId'";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)==0)
+{
+	$sql1="INSERT INTO partb_cat2_pi(facultyId,year) VALUES('$userId','$year')";
+	$result1=mysqli_query($conn,$sql1);
+}
+$sql="SELECT id from partb_cat3_pi WHERE year='$year' and facultyId='$userId'";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)==0)
+{
+	$sql1="INSERT INTO partb_cat3_pi(facultyId,year) VALUES('$userId','$year')";
+	$result1=mysqli_query($conn,$sql1);
+}
+$sql="SELECT id from partb_cat4_pi WHERE year='$year' and facultyId='$userId'";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)==0)
+{
+	$sql1="INSERT INTO partb_cat4_pi(facultyId,year) VALUES('$userId','$year')";
+	$result1=mysqli_query($conn,$sql1);
+}
+
 $submitted_for_review=false;
-$sfr_forjs=0; // this variable is for passing to js...if 0 means submitted_for_Review is false else, 1
+$sfr_forjs=0;
+
+$sqlsfr="SELECT partB FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$year'";
+$resultsfr=mysqli_query($conn,$sqlsfr);
+if(mysqli_num_rows($resultsfr)==1)
+{
+	$submitted_for_review=true;
+	$sfr_forjs=1;
+}
+
+ // this variable is for passing to js...if 0 means submitted_for_Review is false else, 1
 
 $sqly="SELECT * FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$year'";
 $resulty=mysqli_query($conn,$sqly);
@@ -4993,12 +5033,12 @@ include 'left-nav.php';
 			</button>
 			<?php
 			}
-			else if($submitted_for_review==true && $same_user==1)
+			/*else if($submitted_for_review==true && $same_user==1)
 			{
 			?>
 			<button type="button" class="btn btn-info" id="part-b-req-edit-access">Request Edit Access</button>
 			<?php
-			}
+			}*/
 			?>
 
 			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
@@ -5550,7 +5590,7 @@ include 'left-nav.php';
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//show PI save button or not
-	if(($submitted_for_review==true && $viewerId==$userId) || (($currentyear-$year)>1))
+	if(($submitted_for_review==true && $viewerId==$userId && $hod==0 && $committee==0) /*|| (($currentyear-$year)>1)*/)
 	{
 		?>
 		<script type="text/javascript">
@@ -5568,6 +5608,14 @@ include 'left-nav.php';
 	{
 		$rowl=mysqli_fetch_assoc($resultl);
 		if($rowl['recommend']==0 && $committee==1)
+		{
+			?>
+			<script type="text/javascript">
+				$('.pisave').remove();
+			</script>
+			<?php
+		}
+		else if($rowl['recommend']==1 && $hod==1)
 		{
 			?>
 			<script type="text/javascript">

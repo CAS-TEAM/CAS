@@ -34,25 +34,25 @@ else
 	$id=$row['id'];
 }
 
-if(isset($_POST['parta_gpi_self_a']) && $viewerId==$userId)
+if(isset($_POST['parta_ugpggpi_self_a']) && $viewerId==$userId)
 {
-	$parta_gpi_self_a=mysqli_real_escape_string($conn,$_POST['parta_gpi_self_a']);
-	$sql2="UPDATE part_a_gpi SET parta_gpi_self_a='$parta_gpi_self_a' WHERE id='$id'";
+	$parta_ugpggpi_self_a=mysqli_real_escape_string($conn,$_POST['parta_ugpggpi_self_a']);
+	$sql2="UPDATE part_a_gpi SET parta_ugpggpi_self_a='$parta_ugpggpi_self_a' WHERE id='$id'";
 	$result2=mysqli_query($conn,$sql2);
 }
 
-if(isset($_POST['parta_gpi_hod_a']) && $_POST['parta_gpi_hod_a']!=-1 && $hod==1)
+if(isset($_POST['parta_ugpggpi_hod_a']) && $_POST['parta_ugpggpi_hod_a']!=-1 && $hod==1)
 {
-	$parta_gpi_hod_a=mysqli_real_escape_string($conn,$_POST['parta_gpi_hod_a']);
-	$sql2="UPDATE part_a_gpi SET parta_gpi_hod_a='$parta_gpi_hod_a' WHERE id='$id'";
+	$parta_ugpggpi_hod_a=mysqli_real_escape_string($conn,$_POST['parta_ugpggpi_hod_a']);
+	$sql2="UPDATE part_a_gpi SET parta_ugpggpi_hod_a='$parta_ugpggpi_hod_a' WHERE id='$id'";
 	$result2=mysqli_query($conn,$sql2);
 }
 
-if(isset($_POST['parta_gpi_committee_a']) && $_POST['parta_gpi_committee_a']!=-1 && $committee==1)
+if(isset($_POST['parta_ugpggpi_committee_a']) && $_POST['parta_ugpggpi_committee_a']!=-1 && $committee==1)
 {
 	// echo "set";
-	$parta_gpi_committee_a=mysqli_real_escape_string($conn,$_POST['parta_gpi_committee_a']);
-	$sql2="UPDATE part_a_gpi SET parta_gpi_committee_a='$parta_gpi_committee_a' WHERE id='$id'";
+	$parta_ugpggpi_committee_a=mysqli_real_escape_string($conn,$_POST['parta_ugpggpi_committee_a']);
+	$sql2="UPDATE part_a_gpi SET parta_ugpggpi_committee_a='$parta_ugpggpi_committee_a' WHERE id='$id'";
 	$result2=mysqli_query($conn,$sql2);
 }
 

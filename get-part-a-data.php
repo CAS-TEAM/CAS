@@ -172,15 +172,9 @@ else
 		$data[]=array('institute'=>$institute);
 	}
 
-	if($row['ugpg']!='')
-	{
-		$ugpg=$row['ugpg'];
-		$data[]=array('ugpg'=>$ugpg);
-	}	
-
 	$formId=$row['id'];
 
-	$sql1="SELECT * FROM part_a_doc WHERE formId='$formId'";
+	$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
 	$result1=mysqli_query($conn,$sql1);
 	if(mysqli_num_rows($result1)>1)
 	{
@@ -204,6 +198,5 @@ else
 	$jsonData=json_encode($data);
 
 	echo $jsonData;
-
 
 }

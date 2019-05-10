@@ -29,6 +29,15 @@ else
 	$same_user=0;	
 }
 
+//making entry of this form in the PIs of all tables
+$sql="SELECT id from part_a_gpi WHERE year='$year' and facultyId='$userId'";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)==0)
+{
+	$sql1="INSERT INTO part_a_gpi(facultyId,year) VALUES('$userId','$year')";
+	$result1=mysqli_query($conn,$sql1);
+}
+
 $sqlx="SELECT profilePicLocation, hod, committee FROM faculty_table WHERE id='$viewerId'";
 $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
@@ -37,12 +46,14 @@ $hod=$rowx['hod'];
 $committee=$rowx['committee'];
 $profilePicLocation=$rowx['profilePicLocation'];
 
-$sqly="SELECT parta_gpi_self_a, parta_gpi_hod_a, parta_gpi_committee_a, parta_gpi_pi_self_a, parta_gpi_pi_hod_a, parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$year'";
+$sqly="SELECT parta_ugpggpi_self_a, parta_ugpggpi_hod_a, parta_ugpggpi_committee_a, parta_gpi_self_a, parta_gpi_hod_a, parta_gpi_committee_a, parta_gpi_pi_self_a, parta_gpi_pi_hod_a, parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$year'";
 $resulty=mysqli_query($conn,$sqly);
 $rowy=mysqli_fetch_assoc($resulty);
 
+$parta_ugpggpi_self_a=$rowy['parta_ugpggpi_self_a'];
+$parta_ugpggpi_hod_a=$rowy['parta_ugpggpi_hod_a'];
+$parta_ugpggpi_committee_a=$rowy['parta_ugpggpi_committee_a'];
 $parta_gpi_self_a=$rowy['parta_gpi_self_a'];
-// echo "gpi=".$parta_gpi_self_a;
 $parta_gpi_hod_a=$rowy['parta_gpi_hod_a'];
 $parta_gpi_committee_a=$rowy['parta_gpi_committee_a'];
 $parta_gpi_pi_self_a=$rowy['parta_gpi_pi_self_a'];
@@ -50,6 +61,14 @@ $parta_gpi_pi_hod_a=$rowy['parta_gpi_pi_hod_a'];
 $parta_gpi_pi_committee_a=$rowy['parta_gpi_pi_committee_a'];
 
 $submitted_for_review=false;
+
+$sqlsfr="SELECT partA FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$year'";
+$resultsfr=mysqli_query($conn,$sqlsfr);
+
+if(mysqli_num_rows($resultsfr)==1)
+{
+	$submitted_for_review=true;
+}
 
 include 'top.php';
 include 'left-nav.php';
@@ -477,15 +496,97 @@ include 'left-nav.php';
 		</div>
 		<hr style="border: 0.5px solid #c8c8c8">
 
-	    		<div class="form-group row">
-					<div class="col-md-6 text-left">
-	    				<label for="ugpg" class="col-form-label">20 PI for Ph.D and M.Phil. 10 PI for other UG/PG Degree/Diploma/Certificate Courses/</label>
-	    			</div>
-						  
-					<div class="col-md-5" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="ugpg" id="ugpg"  />
-					</div>
-				</div>
+		<div class="form-group row">
+			<div class="col-md-6 text-left">
+				<label for="ugpg" class="col-form-label">20 PI for Ph.D and M.Phil. 10 PI for other UG/PG Degree/Diploma/Certificate Courses/</label>
+			</div>
+				  
+			<div class="col-md-5" style="padding-left: 0">
+				<div class="col-md-3">
+	    			<div class="form-group row justify-content-center">
+	    				<div class="col-6">
+	    					<label for="ugpggpi-parta" class="col-form-label"><b>GPI:</b></label>
+	    				</div>
+
+						<div class="col-6" style="padding-left: 0">
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop_partA_ugpggpi" title="Clicking this button will allow you to appraise this entry"><img src="img/appraisals.png" class="parta-self-img"></button>
+
+							<!-- The modal -->
+							<div class="modal fade" id="flipFlop_partA_ugpggpi" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+								<div class="modal-dialog  modal-lg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<table class="table table-bordered">
+											  	<thead>
+												    <tr>
+												      	<th scope="col">Self</th>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">H.O.D</th>
+															<?php
+												      	}
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<th scope="col">Committee</th>
+															<?php
+												      	}
+												      	?>
+
+												    </tr>
+											  	</thead>
+											  	<tbody>
+												    <tr>
+												      	<td><input class="form-control selfapp" id="parta_ugpggpi_self_a" type="number" value="<?php echo $parta_ugpggpi_self_a; ?>"></td>
+
+												      	<?php
+
+												      	if($hod==1 || $committee==1)
+												      	{
+												      		?>
+															<td><input class="form-control hodapp" id="parta_ugpggpi_hod_a" type="number" value="<?php echo $parta_ugpggpi_hod_a; ?>"></td>
+															<?php
+												      	}
+
+												 
+												      	
+												      	if($committee==1)
+												      	{
+												      		?>
+												      		<td><input class="form-control commapp" id="parta_ugpggpi_committee_a" type="number" value="<?php echo $parta_ugpggpi_committee_a; ?>"></td>
+															<?php
+												      	}
+
+												      	?>
+												      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+
+												    </tr>
+											 	</tbody>
+											</table>
+											<p id="parta_ugpggpi_msg"></p>
+										</div>
+
+										<div class="modal-footer">
+											<button  id="parta_ugpggpi_btn" class="btn btn-primary pisave">Save</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>							
+		    	</div>
+			</div>
+		</div>
 		<hr style="border: 0.5px solid #c8c8c8">
 
 		<div class="row">
@@ -500,7 +601,7 @@ include 'left-nav.php';
 
 		  		<input type="hidden" name="room" value="1" id="room">
 		  
-		  		<div id="parta_dynamic_form"></div>
+		  		<!-- <div id="parta_dynamic_form"></div> -->
 
 		  		<div class="row form-inline justify-content-center">
 		  			<div class="nopadding">
@@ -562,6 +663,9 @@ include 'left-nav.php';
 
 					<div class="clear"></div>		
 				</div>
+
+				<div id="parta_dynamic_form"></div>
+
 			</div><br>
 			<div class="row">
 				<div class="col-md-4 text-left">
@@ -799,7 +903,7 @@ include 'left-nav.php';
 	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="nopadding"><div class="form-group dynamic-four"><div class="filepart"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="file'+room+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="file'+room+'" name="file[]" value="" placeholder=""><input type="hidden" name="filelocation[]" id="filelocation'+room+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="viewfile'+room+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"></div></div><div class="clear"></div></div>';
 	    
 	    // objTo.appendChild(divtest);
-	    $("#parta_dynamic_form").prepend(divtest);
+	    $("#parta_dynamic_form").append(divtest);
 	    document.getElementById("room").value=room;
 	}
 	function remove_education_fields(rid) {
@@ -908,13 +1012,12 @@ include 'left-nav.php';
 	<!-- DISABLING ALL INPUTS -->
 	<script type="text/javascript">
 		$("#part-a-form :input").prop("disabled", true);//disabling all inputs
-		$(':button').prop('disabled', false);//but enabling all buttons because the above line disables all buttons also
-		
+		$(':button').prop('disabled', false);//but enabling all buttons because the above line disables all buttons also		
 	</script>
 
 	<?php	
 
-	if(($submitted_for_review==true && $viewerId==$userId) || (($currentyear-$year)>1))
+	if(($submitted_for_review==true && $viewerId==$userId && $hod==0 && $committee==0)/* || (($currentyear-$year)>1)*/)
 	{
 		?>
 		<script type="text/javascript">
@@ -932,6 +1035,14 @@ include 'left-nav.php';
 	{
 		$rowl=mysqli_fetch_assoc($resultl);
 		if($rowl['recommend']==0 && $committee==1)
+		{
+			?>
+			<script type="text/javascript">
+				$('.pisave').remove();
+			</script>
+			<?php
+		}
+		else if($rowl['recommend']==1 && $hod==1)
 		{
 			?>
 			<script type="text/javascript">
@@ -963,7 +1074,7 @@ include 'left-nav.php';
 		<?php
     }	
 
-	if($userId==$viewerId)
+	if($userId==$viewerId && $submitted_for_review==false)
 	{
 		?>
 		<script type="text/javascript">
