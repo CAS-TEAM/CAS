@@ -418,7 +418,7 @@ include 'left-nav.php';
 		</div>
 		<hr style="border: 0.5px solid #c8c8c8">
 
-	    		<div class="form-group row">
+	    		<!-- <div class="form-group row">
 					<div class="col-md-6 text-left">
 	    				<label for="ugpg" class="col-form-label">20 PI for Ph.D and M.Phil. 10 PI for other UG/PG Degree/Diploma/Certificate Courses/</label>
 	    			</div>
@@ -427,7 +427,7 @@ include 'left-nav.php';
 						<input class="form-control partalabel" type="text" name="ugpg" id="ugpg"  />
 					</div>
 				</div>
-		<hr style="border: 0.5px solid #c8c8c8">
+		<hr style="border: 0.5px solid #c8c8c8"> -->
 
 		<div class="row">
     		<div class="col-md-12">

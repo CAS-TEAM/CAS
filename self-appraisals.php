@@ -46,17 +46,18 @@ include 'left-nav.php';
 
     	
     	<header>
-    		<h2 class="heading"><b>My Self Appraisals</b></h2>    		
+    		<h2 class="heading" style="font-size: 22px;text-align: left"><b>My Self Appraisals</b></h2>    		
     	</header>
+    	<hr style="border: 0.5px solid #c8c8c8">
 
-    	<ul style="padding:10px">
+    	<ul style="padding:8px;margin-top: 12px">
 			<?php
 
 			for($a=$currentyear; $a>=2017; $a--)
 			{
 				?>
 				<div class="row justify-content-center">
-					<div class="col-md-12 border border-dark rounded">
+					<div class="col-md-12">
 						<p style="font-size: 20px">YEAR: <?php echo ($a-1).'-'.$a; ?></p>
 						<a href="self-appraisal-partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>" class="btn btn-success" style="background-color: #DCEDC8;border: 1px solid #DCEDC8;color:black">
 			  			Part A Self Appraisal 
@@ -64,10 +65,11 @@ include 'left-nav.php';
 						<a href="self-appraisal-partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>" class="btn btn-success" style="background-color: #DCEDC8;border: 1px solid #DCEDC8;color:black">
 			  			Part B Self Appraisal 
 						</a>
-						<br><br>
+						<br>
+						<hr style="border: 0.5px solid #c8c8c8">
 					</div>
 				</div>
-				<br>
+				
 				<?php
 			}
 			/*
