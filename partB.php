@@ -292,7 +292,7 @@ include 'left-nav.php';
 							<th class="text-center">UG/PG</th>
 							<th class="text-center">Class/Semester</th>
 							<th class="text-center">Hrs./Week</th>
-							<th class="text-center">Total no. of Hours engagaed(A)</th>
+							<th class="text-center">Total no. of Hours engaged(A)</th>
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
 							<th class="text-center">Attachments</th>
@@ -372,7 +372,7 @@ include 'left-nav.php';
 							<th class="text-center">UG/PG</th>
 							<th class="text-center">Class/Semester</th>
 							<th class="text-center">Hrs./Week</th>
-							<th class="text-center">Total no. of Hours engagaed(A)</th>
+							<th class="text-center">Total no. of Hours engaged(A)</th>
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
 							<th class="text-center">Attachments</th>
@@ -437,7 +437,7 @@ include 'left-nav.php';
 
 		<div class="row">
 			<div class="col-md-4">
-				<label class="col-form-label"><b>*Max hours(B)=(Hrs./week)*(13)</b></label>
+				<label class="col-form-label"><b>*Max hours(B)=(Hrs./week)*(15)</b></label>
 			</div>
 			<div class="col-md-5" >
     			<div class="form-group row justify-content-center">
@@ -3671,7 +3671,7 @@ include 'left-nav.php';
 								</td>
 		                    </tr>
 		                    <tr id='addr92'>
-		                    	<td>B.Tech</td>
+		                    	<td>B.Tech <br>(Number of groups)</td>
 								<td>
 									<input type="number" id='btechne' name='btechne' class="form-control"/>
 								</td>
@@ -3814,7 +3814,7 @@ include 'left-nav.php';
 							</th>
 						</thead> -->
 						<thead>
-							<th colspan="6">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year. 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year. 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year. For co-guide the marks will be half.</th>
+							<th colspan="6">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year.<br> 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year.<br> 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year.<br> For co-guide the marks will be half.</th>
 						</thead>
 					</table>
 					</div>
