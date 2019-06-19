@@ -1349,7 +1349,7 @@ $(document).ready(function(){
 	if(document.getElementById('parta_ugpggpi_committee_a'))
 	{
 		c=document.getElementById('parta_ugpggpi_committee_a').value;
-	}	
+	}
 	$('body').on('click','#parta_ugpggpi_btn',function(e){
     	e.preventDefault();
         // alert("as");
@@ -1438,7 +1438,7 @@ $(document).ready(function(){
 	}	
 	if(document.getElementById('parta_gpi_hod_a'))
 	{
-		e=document.getElementById('parta_gpi_hod_a').value;
+		ee=document.getElementById('parta_gpi_hod_a').value;
 	}	
 	if(document.getElementById('parta_gpi_committee_a'))
 	{
@@ -1505,8 +1505,8 @@ $(document).ready(function(){
 	            	}
 	            	if(document.getElementById("parta_gpi_pi_hod_a"))
 	            	{
-	            		document.getElementById("parta_gpi_pi_hod_a").value=parseInt(document.getElementById("parta_gpi_pi_hod_a").value)+parseInt(document.getElementById('parta_gpi_hod_a').value)-e;
-	            		e=document.getElementById('parta_gpi_hod_a').value;
+	            		document.getElementById("parta_gpi_pi_hod_a").value=parseInt(document.getElementById("parta_gpi_pi_hod_a").value)+parseInt(document.getElementById('parta_gpi_hod_a').value)-ee;
+	            		ee=document.getElementById('parta_gpi_hod_a').value;
 	            	}
 	            	if(document.getElementById("parta_gpi_pi_committee_a"))
 	            	{
@@ -1600,20 +1600,44 @@ $(document).ready(function(){
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Category-I~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $(document).ready(function(){
+	if(document.getElementById('cat1_pi1_self_a'))
+	{
+		xa=document.getElementById('cat1_pi1_self_a').value;
+	}
+	if(document.getElementById('cat1_pi1_hod_a'))
+	{
+		xb=document.getElementById('cat1_pi1_hod_a').value;
+	}
+	if(document.getElementById('cat1_pi1_committee_a'))
+	{
+		xc=document.getElementById('cat1_pi1_committee_a').value;
+	}
     $('body').on('click','#partb_cat1_pi1_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat1_pi1_self_a').value>40)
+        {
+        	document.getElementById('cat1_pi1_self_a').value=40;
+        }
         var cat1_pi1_self_a = document.getElementById('cat1_pi1_self_a').value;
 
 	    var cat1_pi1_hod_a =-1;
 	    if($("#cat1_pi1_hod_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi1_hod_a').value>40)
+	    	{
+	    		document.getElementById('cat1_pi1_hod_a').value=40;
+	    	}
 	     	cat1_pi1_hod_a=document.getElementById('cat1_pi1_hod_a').value;
 	    }
 	   	var cat1_pi1_committee_a=-1;
 	   	if($("#cat1_pi1_committee_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi1_committee_a').value>40)
+	    	{
+	    		document.getElementById('cat1_pi1_committee_a').value=40;
+	    	}
 			cat1_pi1_committee_a=document.getElementById('cat1_pi1_committee_a').value;
 	   	}
 
@@ -1641,15 +1665,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat1_pi1_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat1_pitotal_self_a"))
 	            	{
-	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi1_self_a').value);
+	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi1_self_a').value)-xa;
+	            		xa=document.getElementById('cat1_pi1_self_a').value;
 	            	}
 					if(document.getElementById("cat1_pitotal_hod_a"))
 					{
-						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi1_hod_a').value);
+						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi1_hod_a').value)-xb;
+						xb=document.getElementById('cat1_pi1_hod_a').value;
 					}
 					if(document.getElementById("cat1_pitotal_committee_a"))
 					{
-						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi1_committee_a').value);
+						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi1_committee_a').value)-xc;
+						xc=document.getElementById('cat1_pi1_committee_a').value;
 					}
 					$("#partb_cat1_pitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -1672,20 +1699,45 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	if(document.getElementById('cat1_pi2_self_a'))
+	{
+		xd=document.getElementById('cat1_pi2_self_a').value;
+	}
+	if(document.getElementById('cat1_pi2_hod_a'))
+	{
+		xe=document.getElementById('cat1_pi2_hod_a').value;
+	}
+	if(document.getElementById('cat1_pi2_committee_a'))
+	{
+		xf=document.getElementById('cat1_pi2_committee_a').value;
+	}
+
     $('body').on('click','#partb_cat1_pi2_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat1_pi2_self_a').value>40)
+        {
+        	document.getElementById('cat1_pi2_self_a').value=40;
+        }
         var cat1_pi2_self_a = document.getElementById('cat1_pi2_self_a').value;
 
 	    var cat1_pi2_hod_a =-1;
 	    if($("#cat1_pi2_hod_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi2_hod_a').value>40)
+	    	{
+	    		document.getElementById('cat1_pi2_hod_a').value=40;
+	    	}
 	     	cat1_pi2_hod_a=document.getElementById('cat1_pi2_hod_a').value;
 	    }
 	   	var cat1_pi2_committee_a=-1;
 	   	if($("#cat1_pi2_committee_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi2_committee_a').value>40)
+	    	{
+	    		document.getElementById('cat1_pi2_committee_a').value=40;
+	    	}
 			cat1_pi2_committee_a=document.getElementById('cat1_pi2_committee_a').value;
 	   	}
 
@@ -1713,15 +1765,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat1_pi2_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat1_pitotal_self_a"))
 	            	{
-	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi2_self_a').value);
+	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi2_self_a').value)-xd;
+	            		xd=document.getElementById('cat1_pi2_self_a').value;
 	            	}
 					if(document.getElementById("cat1_pitotal_hod_a"))
 					{
-						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi2_hod_a').value);
+						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi2_hod_a').value)-xe;
+						xe=document.getElementById('cat1_pi2_hod_a').value;
 					}
 					if(document.getElementById("cat1_pitotal_committee_a"))
 					{
-						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi2_committee_a').value);
+						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi2_committee_a').value)-xf;
+						xf=document.getElementById('cat1_pi2_committee_a').value;
 					}
 					$("#partb_cat1_pitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -1745,20 +1800,44 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+	if(document.getElementById('cat1_pi3_self_a'))
+	{
+		xg=document.getElementById('cat1_pi3_self_a').value;
+	}
+	if(document.getElementById('cat1_pi3_hod_a'))
+	{
+		xh=document.getElementById('cat1_pi3_hod_a').value;
+	}
+	if(document.getElementById('cat1_pi3_committee_a'))
+	{
+		xi=document.getElementById('cat1_pi3_committee_a').value;
+	}
     $('body').on('click','#partb_cat1_pi3_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat1_pi3_self_a').value>10)
+        {
+        	document.getElementById('cat1_pi3_self_a').value=10;
+        }
         var cat1_pi3_self_a = document.getElementById('cat1_pi3_self_a').value;
 
 	    var cat1_pi3_hod_a =-1;
 	    if($("#cat1_pi3_hod_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi3_hod_a').value>10)
+	    	{
+	    		document.getElementById('cat1_pi3_hod_a').value=10;
+	    	}
 	     	cat1_pi3_hod_a=document.getElementById('cat1_pi3_hod_a').value;
 	    }
 	   	var cat1_pi3_committee_a=-1;
 	   	if($("#cat1_pi3_committee_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi3_committee_a').value>10)
+	    	{
+	    		document.getElementById('cat1_pi3_committee_a').value=10;
+	    	}
 			cat1_pi3_committee_a=document.getElementById('cat1_pi3_committee_a').value;
 	   	}
 
@@ -1786,15 +1865,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat1_pi3_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat1_pitotal_self_a"))
 	            	{
-	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi3_self_a').value);
+	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi3_self_a').value)-xg;
+	            		xg=document.getElementById('cat1_pi3_self_a').value;
 	            	}
 					if(document.getElementById("cat1_pitotal_hod_a"))
 					{
-						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi3_hod_a').value);
+						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi3_hod_a').value)-xh;
+						xh=document.getElementById('cat1_pi3_hod_a').value;
 					}
 					if(document.getElementById("cat1_pitotal_committee_a"))
 					{
-						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi3_committee_a').value);
+						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi3_committee_a').value)-xi;
+						xi=document.getElementById('cat1_pi3_committee_a').value;
 					}
 					$("#partb_cat1_pitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -1817,20 +1899,44 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	if(document.getElementById('cat1_pi4_self_a'))
+	{
+		xj=document.getElementById('cat1_pi4_self_a').value;
+	}
+	if(document.getElementById('cat1_pi4_hod_a'))
+	{
+		xk=document.getElementById('cat1_pi4_hod_a').value;
+	}
+	if(document.getElementById('cat1_pi4_committee_a'))
+	{
+		xl=document.getElementById('cat1_pi4_committee_a').value;
+	}
     $('body').on('click','#partb_cat1_pi4_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat1_pi4_self_a').value>10)
+        {
+        	document.getElementById('cat1_pi4_self_a').value=10;
+        }
         var cat1_pi4_self_a = document.getElementById('cat1_pi4_self_a').value;
 
 	    var cat1_pi4_hod_a =-1;
 	    if($("#cat1_pi4_hod_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi4_hod_a').value>10)
+	    	{
+	    		document.getElementById('cat1_pi4_hod_a').value=10;
+	    	}
 	     	cat1_pi4_hod_a=document.getElementById('cat1_pi4_hod_a').value;
 	    }
 	   	var cat1_pi4_committee_a=-1;
 	   	if($("#cat1_pi4_committee_a").length)
 	    {
+	    	if(document.getElementById('cat1_pi4_committee_a').value>10)
+	    	{
+	    		document.getElementById('cat1_pi4_committee_a').value=10;
+	    	}
 			cat1_pi4_committee_a=document.getElementById('cat1_pi4_committee_a').value;
 	   	}
 
@@ -1858,15 +1964,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat1_pi4_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat1_pitotal_self_a"))
 	            	{
-	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi4_self_a').value);
+	            		document.getElementById("cat1_pitotal_self_a").value=parseInt(document.getElementById("cat1_pitotal_self_a").value)+parseInt(document.getElementById('cat1_pi4_self_a').value)-xj;
+	            		xj=document.getElementById('cat1_pi4_self_a').value;
 	            	}
 					if(document.getElementById("cat1_pitotal_hod_a"))
 					{
-						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi4_hod_a').value);
+						document.getElementById("cat1_pitotal_hod_a").value=parseInt(document.getElementById("cat1_pitotal_hod_a").value)+parseInt(document.getElementById('cat1_pi4_hod_a').value)-xk;
+						xk=document.getElementById('cat1_pi4_hod_a').value;
 					}
 					if(document.getElementById("cat1_pitotal_committee_a"))
 					{
-						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi4_committee_a').value);
+						document.getElementById("cat1_pitotal_committee_a").value=parseInt(document.getElementById("cat1_pitotal_committee_a").value)+parseInt(document.getElementById('cat1_pi4_committee_a').value)-xl;
+						xl=document.getElementById('cat1_pi4_committee_a').value;
 					}
 					$("#partb_cat1_pitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -1893,16 +2002,28 @@ $(document).ready(function(){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat1_pitotal_self_a').value>100)
+        {
+        	document.getElementById('cat1_pitotal_self_a').value=100;
+        }
         var cat1_pitotal_self_a = document.getElementById('cat1_pitotal_self_a').value;
 
 	    var cat1_pitotal_hod_a=-1;
 	    if($("#cat1_pitotal_hod_a").length)
 	    {
+	    	if(document.getElementById('cat1_pitotal_hod_a').value>100)
+	    	{
+	    		document.getElementById('cat1_pitotal_hod_a').value=100;
+	    	}
 	     	cat1_pitotal_hod_a=document.getElementById('cat1_pitotal_hod_a').value;
 	    }
 	   	var cat1_pitotal_committee_a=-1;
 	   	if($("#cat1_pitotal_committee_a").length)
 	    {
+	    	if(document.getElementById('cat1_pitotal_committee_a').value>100)
+	    	{
+	    		document.getElementById('cat1_pitotal_committee_a').value=100;
+	    	}
 			cat1_pitotal_committee_a=document.getElementById('cat1_pitotal_committee_a').value;
 	   	}
 
@@ -1952,20 +2073,44 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+	if(document.getElementById('cat2_pii1_self_a'))
+	{
+		xm=document.getElementById('cat2_pii1_self_a').value;
+	}
+	if(document.getElementById('cat2_pii1_hod_a'))
+	{
+		xn=document.getElementById('cat2_pii1_hod_a').value;
+	}
+	if(document.getElementById('cat2_pii1_committee_a'))
+	{
+		xo=document.getElementById('cat2_pii1_committee_a').value;
+	}
     $('body').on('click','#partb_cat2_pii1_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat2_pii1_self_a').value>40)
+        {
+        	document.getElementById('cat2_pii1_self_a').value=40;
+        }
         var cat2_pii1_self_a = document.getElementById('cat2_pii1_self_a').value;
 
 	    var cat2_pii1_hod_a=-1;
 	    if($("#cat2_pii1_hod_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii1_hod_a').value>40)
+	    	{
+	    		document.getElementById('cat2_pii1_hod_a').value=40;
+	    	}
 	     	cat2_pii1_hod_a=document.getElementById('cat2_pii1_hod_a').value;
 	    }
 	   	var cat2_pii1_committee_a=-1;
 	   	if($("#cat2_pii1_committee_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii1_committee_a').value>40)
+	    	{
+	    		document.getElementById('cat2_pii1_committee_a').value=40;
+	    	}
 			cat2_pii1_committee_a=document.getElementById('cat2_pii1_committee_a').value;
 	   	}
 
@@ -1993,15 +2138,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat2_pii1_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat2_piitotal_self_a"))
 	            	{
-	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii1_self_a').value);
+	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii1_self_a').value)-xm;
+	            		xm=document.getElementById('cat2_pii1_self_a').value;
 	            	}
 					if(document.getElementById("cat2_piitotal_hod_a"))
 					{
-						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii1_hod_a').value);
+						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii1_hod_a').value)-xn;
+						xn=document.getElementById('cat2_pii1_hod_a').value;
 					}
 					if(document.getElementById("cat2_piitotal_committee_a"))
 					{
-						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii1_committee_a').value);
+						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii1_committee_a').value)-xo;
+						xo=document.getElementById('cat2_pii1_committee_a').value;
 					}
 					$("#partb_cat2_piitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -2024,20 +2172,44 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+if(document.getElementById('cat2_pii2_self_a'))
+{
+	xp=document.getElementById('cat2_pii2_self_a').value;
+}
+if(document.getElementById('cat2_pii2_hod_a'))
+{
+	xq=document.getElementById('cat2_pii2_hod_a').value;
+}
+if(document.getElementById('cat2_pii2_committee_a'))
+{
+	xr=document.getElementById('cat2_pii2_committee_a').value;
+}
     $('body').on('click','#partb_cat2_pii2_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat2_pii2_self_a').value>20)
+        {
+        	document.getElementById('cat2_pii2_self_a').value=20;
+        }
         var cat2_pii2_self_a = document.getElementById('cat2_pii2_self_a').value;
 
 	    var cat2_pii2_hod_a=-1;
 	    if($("#cat2_pii2_hod_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii2_hod_a').value>20)
+	    	{
+	    		document.getElementById('cat2_pii2_hod_a').value=20;
+	    	}
 	     	cat2_pii2_hod_a=document.getElementById('cat2_pii2_hod_a').value;
 	    }
 	   	var cat2_pii2_committee_a=-1;
 	   	if($("#cat2_pii2_committee_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii2_committee_a').value>20)
+	    	{
+	    		document.getElementById('cat2_pii2_committee_a').value=20;
+	    	}
 			cat2_pii2_committee_a=document.getElementById('cat2_pii2_committee_a').value;
 	   	}
 
@@ -2065,15 +2237,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat2_pii2_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat2_piitotal_self_a"))
 	            	{
-	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii2_self_a').value);
+	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii2_self_a').value)-xp;
+	            		xp=document.getElementById('cat2_pii2_self_a').value;
 	            	}
 					if(document.getElementById("cat2_piitotal_hod_a"))
 					{
-						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii2_hod_a').value);
+						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii2_hod_a').value)-xq;
+						xq=document.getElementById('cat2_pii2_hod_a').value;
 					}
 					if(document.getElementById("cat2_piitotal_committee_a"))
 					{
-						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii2_committee_a').value);
+						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii2_committee_a').value)-xr;
+						xr=document.getElementById('cat2_pii2_committee_a').value;
 					}
 					$("#partb_cat2_piitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -2096,20 +2271,44 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	if(document.getElementById('cat2_pii3_self_a'))
+	{
+		xs=document.getElementById('cat2_pii3_self_a').value;
+	}
+	if(document.getElementById('cat2_pii3_hod_a'))
+	{
+		xt=document.getElementById('cat2_pii3_hod_a').value;
+	}
+	if(document.getElementById('cat2_pii3_committee_a'))
+	{
+		xu=document.getElementById('cat2_pii3_committee_a').value;
+	}
     $('body').on('click','#partb_cat2_pii3_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat2_pii3_self_a').value>20)
+        {
+        	document.getElementById('cat2_pii3_self_a').value=20;
+        }
         var cat2_pii3_self_a = document.getElementById('cat2_pii3_self_a').value;
 
 	    var cat2_pii3_hod_a=-1;
 	    if($("#cat2_pii3_hod_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii3_hod_a').value>20)
+	    	{
+	    		document.getElementById('cat2_pii3_hod_a').value=20;
+	    	}
 	     	cat2_pii3_hod_a=document.getElementById('cat2_pii3_hod_a').value;
 	    }
 	   	var cat2_pii3_committee_a=-1;
 	   	if($("#cat2_pii3_committee_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii3_committee_a').value>20)
+	    	{
+	    		document.getElementById('cat2_pii3_committee_a').value=20;
+	    	}
 			cat2_pii3_committee_a=document.getElementById('cat2_pii3_committee_a').value;
 	   	}
 
@@ -2137,15 +2336,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat2_pii3_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat2_piitotal_self_a"))
 	            	{
-	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii3_self_a').value);
+	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii3_self_a').value)-xs;
+	            		xs=document.getElementById('cat2_pii3_self_a').value;
 	            	}
 					if(document.getElementById("cat2_piitotal_hod_a"))
 					{
-						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii3_hod_a').value);
+						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii3_hod_a').value)-xt;
+						xt=document.getElementById('cat2_pii3_hod_a').value;
 					}
 					if(document.getElementById("cat2_piitotal_committee_a"))
 					{
-						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii3_committee_a').value);
+						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii3_committee_a').value)-xu;
+						xu=document.getElementById('cat2_pii3_committee_a').value;
 					}
 					$("#partb_cat2_piitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -2168,20 +2370,44 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	if(document.getElementById('cat2_pii4_self_a'))
+	{
+		xv=document.getElementById('cat2_pii4_self_a').value;
+	}
+	if(document.getElementById('cat2_pii4_hod_a'))
+	{
+		xw=document.getElementById('cat2_pii4_hod_a').value;
+	}
+	if(document.getElementById('cat2_pii4_committee_a'))
+	{
+		xx=document.getElementById('cat2_pii4_committee_a').value;
+	}
     $('body').on('click','#partb_cat2_pii4_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat2_pii4_self_a').value>20)
+        {
+        	document.getElementById('cat2_pii4_self_a').value=20;
+        }
         var cat2_pii4_self_a = document.getElementById('cat2_pii4_self_a').value;
 
 	    var cat2_pii4_hod_a=-1;
 	    if($("#cat2_pii4_hod_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii4_hod_a').value>20)
+	    	{
+	    		document.getElementById('cat2_pii4_hod_a').value=20;
+	    	}
 	     	cat2_pii4_hod_a=document.getElementById('cat2_pii4_hod_a').value;
 	    }
 	   	var cat2_pii4_committee_a=-1;
 	   	if($("#cat2_pii4_committee_a").length)
 	    {
+	    	if(document.getElementById('cat2_pii4_committee_a').value>20)
+	    	{
+	    		document.getElementById('cat2_pii4_committee_a').value=20;
+	    	}
 			cat2_pii4_committee_a=document.getElementById('cat2_pii4_committee_a').value;
 	   	}
 
@@ -2209,15 +2435,18 @@ $(document).ready(function(){
 	            	document.getElementById("partb_cat2_pii4_msg").innerHTML="Saved!";
 	            	if(document.getElementById("cat2_piitotal_self_a"))
 	            	{
-	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii4_self_a').value);
+	            		document.getElementById("cat2_piitotal_self_a").value=parseInt(document.getElementById("cat2_piitotal_self_a").value)+parseInt(document.getElementById('cat2_pii4_self_a').value)-xv;
+	            		xv=document.getElementById('cat2_pii4_self_a').value;
 	            	}
 					if(document.getElementById("cat2_piitotal_hod_a"))
 					{
-						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii4_hod_a').value);
+						document.getElementById("cat2_piitotal_hod_a").value=parseInt(document.getElementById("cat2_piitotal_hod_a").value)+parseInt(document.getElementById('cat2_pii4_hod_a').value)-xw;
+						xw=document.getElementById('cat2_pii4_hod_a').value;
 					}
 					if(document.getElementById("cat2_piitotal_committee_a"))
 					{
-						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii4_committee_a').value);
+						document.getElementById("cat2_piitotal_committee_a").value=parseInt(document.getElementById("cat2_piitotal_committee_a").value)+parseInt(document.getElementById('cat2_pii4_committee_a').value)-xx;
+						xx=document.getElementById('cat2_pii4_committee_a').value;
 					}
 					$("#partb_cat2_piitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -2244,16 +2473,28 @@ $(document).ready(function(){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat2_piitotal_self_a').value>100)
+        {
+        	document.getElementById('cat2_piitotal_self_a').value=100;
+        }
         var cat2_piitotal_self_a = document.getElementById('cat2_piitotal_self_a').value;
 
 	    var cat2_piitotal_hod_a=-1;
 	    if($("#cat2_piitotal_hod_a").length)
 	    {
+	    	if(document.getElementById('cat2_piitotal_hod_a').value>100)
+	    	{
+	    		document.getElementById('cat2_piitotal_hod_a').value=100;
+	    	}
 	     	cat2_piitotal_hod_a=document.getElementById('cat2_piitotal_hod_a').value;
 	    }
 	   	var cat2_piitotal_committee_a=-1;
 	   	if($("#cat2_piitotal_committee_a").length)
 	    {
+	    	if(document.getElementById('cat2_piitotal_committee_a').value>100)
+	    	{
+	    		document.getElementById('cat2_piitotal_committee_a').value=100;
+	    	}
 			cat2_piitotal_committee_a=document.getElementById('cat2_piitotal_committee_a').value;
 	   	}
 
@@ -2301,20 +2542,44 @@ $(document).ready(function(){
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Category-III~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $(document).ready(function(){
+if(document.getElementById('cat3_piii1_self_a'))
+{
+	xy=document.getElementById('cat3_piii1_self_a').value;
+}
+if(document.getElementById('cat3_piii1_hod_a'))
+{
+	xz=document.getElementById('cat3_piii1_hod_a').value;
+}
+if(document.getElementById('cat3_piii1_committee_a'))
+{
+	xxa=document.getElementById('cat3_piii1_committee_a').value;
+}
     $('body').on('click','#partb_cat3_piii1_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat3_piii1_self_a').value>100)
+        {
+        	document.getElementById('cat3_piii1_self_a').value=100;
+        }
         var cat3_piii1_self_a = document.getElementById('cat3_piii1_self_a').value;
 
 	    var cat3_piii1_hod_a=-1;
 	    if($("#cat3_piii1_hod_a").length)
 	    {
+	    	if(document.getElementById('cat3_piii1_hod_a').value>100)
+	    	{
+	    		document.getElementById('cat3_piii1_hod_a').value=100;
+	    	}
 	     	cat3_piii1_hod_a=document.getElementById('cat3_piii1_hod_a').value;
 	    }
 	   	var cat3_piii1_committee_a=-1;
 	   	if($("#cat3_piii1_committee_a").length)
 	    {
+	    	if(document.getElementById('cat3_piii1_committee_a').value>100)
+	    	{
+	    		document.getElementById('cat3_piii1_committee_a').value=100;
+	    	}
 			cat3_piii1_committee_a=document.getElementById('cat3_piii1_committee_a').value;
 	   	}
 
@@ -2339,19 +2604,22 @@ $(document).ready(function(){
 	        	// alert(response);
 	            if(response.trim()=="success")
 	            {
-	            	document.getElementById("partb_cat3_piii1_msg").innerHTML="Saved!";
-	            	if(document.getElementById("cat3_piiitotal_committee_a"))
-	            	{
-	            		document.getElementById("cat3_piiitotal_committee_a").value=parseInt(document.getElementById("cat3_piiitotal_committee_a").value)+parseInt(document.getElementById('cat3_piii1_committee_a').value);
-	            	}
+	            	document.getElementById("partb_cat3_piii1_msg").innerHTML="Saved!";	            	
 					if(document.getElementById("cat3_piiitotal_self_a"))
 					{
-						document.getElementById("cat3_piiitotal_self_a").value=parseInt(document.getElementById("cat3_piiitotal_self_a").value)+parseInt(document.getElementById('cat3_piii1_self_a').value);
+						document.getElementById("cat3_piiitotal_self_a").value=parseInt(document.getElementById("cat3_piiitotal_self_a").value)+parseInt(document.getElementById('cat3_piii1_self_a').value)-xy;
+						xy=document.getElementById('cat3_piii1_self_a').value;
 					}
 					if(document.getElementById("cat3_piiitotal_hod_a"))
 					{
-						document.getElementById("cat3_piiitotal_hod_a").value=parseInt(document.getElementById("cat3_piiitotal_hod_a").value)+parseInt(document.getElementById('cat3_piii1_hod_a').value);
+						document.getElementById("cat3_piiitotal_hod_a").value=parseInt(document.getElementById("cat3_piiitotal_hod_a").value)+parseInt(document.getElementById('cat3_piii1_hod_a').value)-xz;
+						xz=document.getElementById('cat3_piii1_hod_a').value;
 					}
+					if(document.getElementById("cat3_piiitotal_committee_a"))
+	            	{
+	            		document.getElementById("cat3_piiitotal_committee_a").value=parseInt(document.getElementById("cat3_piiitotal_committee_a").value)+parseInt(document.getElementById('cat3_piii1_committee_a').value)-xxa;
+	            		xxa=document.getElementById('cat3_piii1_committee_a').value;
+	            	}
 					$("#partb_cat3_piiitotal_btn").trigger("click");
 	            	// alert("sucessgful");
 	                // $('.notif').css('background-color', '#EAEAEA');
@@ -2373,20 +2641,44 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+if(document.getElementById('cat3_piii2_self_a'))
+{
+	xxb=document.getElementById('cat3_piii2_self_a').value;
+}
+if(document.getElementById('cat3_piii2_hod_a'))
+{
+	xxc=document.getElementById('cat3_piii2_hod_a').value;
+}
+if(document.getElementById('cat3_piii2_committee_a'))
+{
+	xxd=document.getElementById('cat3_piii2_committee_a').value;
+}
     $('body').on('click','#partb_cat3_piii2_btn',function(e){
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
+        if(document.getElementById('cat3_piii2_self_a').value>15)
+        {
+        	document.getElementById('cat3_piii2_self_a').value=15;
+        }
         var cat3_piii2_self_a = document.getElementById('cat3_piii2_self_a').value;
 
 	    var cat3_piii2_hod_a=-1;
 	    if($("#cat3_piii2_hod_a").length)
 	    {
+	    	if(document.getElementById('cat3_piii2_hod_a').value>15)
+	    	{
+	    		document.getElementById('cat3_piii2_hod_a').value=15;
+	    	}
 	     	cat3_piii2_hod_a=document.getElementById('cat3_piii2_hod_a').value;
 	    }
 	   	var cat3_piii2_committee_a=-1;
 	   	if($("#cat3_piii2_committee_a").length)
 	    {
+	    	if(document.getElementById('cat3_piii2_committee_a').value>15)
+	    	{
+	    		document.getElementById('cat3_piii2_committee_a').value=15;
+	    	}
 			cat3_piii2_committee_a=document.getElementById('cat3_piii2_committee_a').value;
 	   	}
 
@@ -2411,19 +2703,22 @@ $(document).ready(function(){
 	        	// alert(response);
 	            if(response.trim()=="success")
 	            {
-	            	document.getElementById("partb_cat3_piii2_msg").innerHTML="Saved!";
-	            	if(document.getElementById("cat3_piiitotal_committee_a"))
-	            	{
-	            		document.getElementById("cat3_piiitotal_committee_a").value=parseInt(document.getElementById("cat3_piiitotal_committee_a").value)+parseInt(document.getElementById('cat3_piii2_committee_a').value);
-	            	}
+	            	document.getElementById("partb_cat3_piii2_msg").innerHTML="Saved!";	            	
 					if(document.getElementById("cat3_piiitotal_self_a"))
 					{
-						document.getElementById("cat3_piiitotal_self_a").value=parseInt(document.getElementById("cat3_piiitotal_self_a").value)+parseInt(document.getElementById('cat3_piii2_self_a').value);
+						document.getElementById("cat3_piiitotal_self_a").value=parseInt(document.getElementById("cat3_piiitotal_self_a").value)+parseInt(document.getElementById('cat3_piii2_self_a').value)-xxb;
+						xxb=document.getElementById('cat3_piii2_self_a').value;
 					}
 					if(document.getElementById("cat3_piiitotal_hod_a"))
 					{
-						document.getElementById("cat3_piiitotal_hod_a").value=parseInt(document.getElementById("cat3_piiitotal_hod_a").value)+parseInt(document.getElementById('cat3_piii2_hod_a').value);
+						document.getElementById("cat3_piiitotal_hod_a").value=parseInt(document.getElementById("cat3_piiitotal_hod_a").value)+parseInt(document.getElementById('cat3_piii2_hod_a').value)-xxc;
+						xxc=document.getElementById('cat3_piii2_hod_a').value;
 					}
+					if(document.getElementById("cat3_piiitotal_committee_a"))
+	            	{
+	            		document.getElementById("cat3_piiitotal_committee_a").value=parseInt(document.getElementById("cat3_piiitotal_committee_a").value)+parseInt(document.getElementById('cat3_piii2_committee_a').value)-xxd;
+	            		xxd=document.getElementById('cat3_piii2_committee_a').value;
+	            	}
 					$("#partb_cat3_piiitotal_btn").trigger("click");
 	            	// alert("sucessgful");
 	                // $('.notif').css('background-color', '#EAEAEA');
