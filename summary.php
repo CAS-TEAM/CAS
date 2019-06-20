@@ -52,13 +52,19 @@ if(date("m")>=7)
 	$currentyear+=1;
 }
 $previousyear=$currentyear-1;
+$lasttolastyear=$previousyear-1;
+
 // echo $userId;
 
-$sqlmf="SELECT currentyear, previousyear FROM multiplication_factor_table";
-$resultmf=mysqli_query($conn, $sqlmf);
-$rowmf=mysqli_fetch_assoc($resultmf);
-$currentyearmf=$rowmf['currentyear'];
-$previousyearmf=$rowmf['previousyear'];
+// $sqlmf="SELECT currentyear, previousyear FROM multiplication_factor_table";
+// $resultmf=mysqli_query($conn, $sqlmf);
+// $rowmf=mysqli_fetch_assoc($resultmf);
+// $currentyearmf=$rowmf['currentyear'];
+// $previousyearmf=$rowmf['previousyear'];
+
+$currentyearmf=0.33;
+$previousyearmf=0.33;
+$lasttolastyearmf=0.33;
 
 ?>
 
@@ -83,6 +89,12 @@ $previousyearmf=$rowmf['previousyear'];
 
 		$pparta_gpi_pi_self_a=$rowpartA['parta_gpi_pi_self_a'];
 
+		$sqlpartA="SELECT parta_gpi_pi_self_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lparta_gpi_pi_self_a=$rowpartA['parta_gpi_pi_self_a'];
+
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		$sqlpartA="SELECT cat1_pitotal_self_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$currentyear'";
@@ -96,6 +108,12 @@ $previousyearmf=$rowmf['previousyear'];
 		$rowpartA=mysqli_fetch_assoc($resultpartA);
 
 		$pcat1_pitotal_self_a=$rowpartA['cat1_pitotal_self_a'];
+
+		$sqlpartA="SELECT cat1_pitotal_self_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat1_pitotal_self_a=$rowpartA['cat1_pitotal_self_a'];
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -111,6 +129,12 @@ $previousyearmf=$rowmf['previousyear'];
 
 		$pcat2_piitotal_self_a=$rowpartA['cat2_piitotal_self_a'];
 
+		$sqlpartA="SELECT cat2_piitotal_self_a FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat2_piitotal_self_a=$rowpartA['cat2_piitotal_self_a'];
+
 		////////////////////////////////////////////////////////////
 
 		$sqlpartA="SELECT cat3_piiitotal_self_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$currentyear'";
@@ -124,6 +148,12 @@ $previousyearmf=$rowmf['previousyear'];
 		$rowpartA=mysqli_fetch_assoc($resultpartA);
 
 		$pcat3_piiitotal_self_a=$rowpartA['cat3_piiitotal_self_a'];
+
+		$sqlpartA="SELECT cat3_piiitotal_self_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat3_piiitotal_self_a=$rowpartA['cat3_piiitotal_self_a'];
 
 
 		/////////////////////////////////////////////////////////////////
@@ -141,9 +171,24 @@ $previousyearmf=$rowmf['previousyear'];
 
 		$pcat4_pivtotal_self_a=$rowpartA['cat4_pivtotal_self_a'];
 
+		$sqlpartA="SELECT cat4_pivtotal_self_a FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat4_pivtotal_self_a=$rowpartA['cat4_pivtotal_self_a'];
+
 
 		///////////////////////////////////////////////////////////////
 		//calculating percentages
+		$PPpartAself=number_format($lparta_gpi_pi_self_a/50*100,2);
+		$PPpartBcat1self=number_format(($lcat1_pitotal_self_a/100)*100,2);
+		$PPpartBcat2self=number_format($lcat2_piitotal_self_a,2);
+		$PPpartBcat3self=number_format($lcat3_piiitotal_self_a/175*100,2);
+		$PPpartBcat4self=number_format($lcat4_pivtotal_self_a/75*100,2);
+
+		$PPtotal= ($PPpartAself + $PPpartBcat1self + $PPpartBcat2self + $PPpartBcat3self + $PPpartBcat4self);
+		$PP=number_format($PPtotal/5, 2);
+
 		$PpartAself=number_format($pparta_gpi_pi_self_a/50*100,2);
 		$PpartBcat1self=number_format(($pcat1_pitotal_self_a/100)*100,2);
 		$PpartBcat2self=number_format($pcat2_piitotal_self_a,2);
@@ -160,12 +205,13 @@ $previousyearmf=$rowmf['previousyear'];
 		$CpartBcat4self=number_format($ccat4_pivtotal_self_a/75*100,2);
 
 		$Btotal = ($CpartAself +	$CpartBcat1self +	$CpartBcat2self + $CpartBcat3self +	$CpartBcat4self);
-
 		$B=number_format($Btotal/5, 2);
+
+
 
 		// $avgpi=number_format(0.25*$A + 0.75*$B, 2);
 		
-		$avgpi=number_format($previousyearmf*$A + $currentyearmf*$B, 2);
+		$avgpi=number_format($lasttolastyearmf*$PP + $previousyearmf*$A + $currentyearmf*$B, 2);
 
 		// $sqls="SELECT self_avgpi,selfA,selfB FROM summary_table WHERE facultyId='$userId' AND year='$currentyear'";
 		// $results=mysqli_query($conn,$sqls);
@@ -212,7 +258,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $lparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
@@ -224,7 +270,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academic_lasttolast' value="<?php echo $pparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academic_lasttolast' value="<?php echo $lparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -283,7 +329,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $lcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -295,7 +341,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBI_lasttolast' value="<?php echo ($pcat1_pitotal_self_a/100)*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBI_lasttolast' value="<?php echo ($lcat1_pitotal_self_a/100)*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -354,7 +400,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -366,7 +412,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBII_lasttolast' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -425,7 +471,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
@@ -437,7 +483,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIII_lasttolast' value="<?php echo $pcat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -496,7 +542,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
@@ -508,7 +554,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_lasttolast' value="<?php echo $pcat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -565,7 +611,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $PPtotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
@@ -577,7 +623,7 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_avgA_lasttolast' value="<?php echo $A; ?>" class="form-control" style="width: 100%"  disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_avgA_lasttolast' value="<?php echo $PP; ?>" class="form-control" style="width: 100%"  disabled/>
 										</div>
 									</div>
 								</td>
