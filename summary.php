@@ -196,8 +196,9 @@ $previousyearmf=$rowmf['previousyear'];
 							<th class="text-center">Category</th>
 							<th class="text-center">Max.<br> Marks for PI</th>
 							<th class="text-center">Criteria</th>
-							<th class="text-center">A<br> Last Academic Year <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-							<th class="text-center">B<br> Current Academic Year <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+							<th class="text-center">A<br> Last to Last Academic Year<br> <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
+							<th class="text-center">B<br> Last Academic Year<br> <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
+							<th class="text-center">C<br> Current Academic Year<br> <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
 
 						</tr>
 						<tbody>
@@ -205,6 +206,28 @@ $previousyearmf=$rowmf['previousyear'];
 								<td>Part A</td>
 								<td>50</td>
 								<td>General</td>
+								<td>
+									<div class="row">
+										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+											<label class="col-form-label">(</label>
+										</div>
+										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+										</div>
+										<div class="col-md-4 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">/50)*100</label>
+										</div>
+									</div><br>
+
+									<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0">
+											<label class="col-form-label">%PI =</label>
+										</div>
+										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
+											<input type="number" step="0.01" name='pi_academic_lasttolast' value="<?php echo $pparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
+										</div>
+									</div>
+								</td>
 								<td>
 									<div class="row">
 										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
@@ -260,6 +283,28 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+										</div>
+										<div class="col-md-4 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">/100)*100</label>
+										</div>
+									</div><br>
+
+									<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0">
+											<label class="col-form-label">%PI =</label>
+										</div>
+										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
+											<input type="number" step="0.01" name='pi_academicBI_lasttolast' value="<?php echo ($pcat1_pitotal_self_a/100)*100; ?>" class="form-control" style="width: 100%" disabled/>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="row">
+										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+											<label class="col-form-label">(</label>
+										</div>
+										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBI_last' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
@@ -303,6 +348,28 @@ $previousyearmf=$rowmf['previousyear'];
 		                    	<td>Part B: II</td>
 								<td>100</td>
 								<td>Co-Curricular and administrative activities in college</td>
+								<td>
+									<div class="row">
+										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+											<label class="col-form-label">(</label>
+										</div>
+										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+										</div>
+										<div class="col-md-4 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">/100)*100</label>
+										</div>
+									</div><br>
+
+									<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0">
+											<label class="col-form-label">%PI =</label>
+										</div>
+										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
+											<input type="number" step="0.01" name='pi_academicBII_lasttolast' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
+										</div>
+									</div>
+								</td>
 								<td>
 									<div class="row">
 										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
@@ -358,6 +425,28 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+										</div>
+										<div class="col-md-4 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">/175)*100</label>
+										</div>
+									</div><br>
+
+									<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0">
+											<label class="col-form-label">%PI =</label>
+										</div>
+										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
+											<input type="number" step="0.01" name='pi_academicBIII_lasttolast' value="<?php echo $pcat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="row">
+										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+											<label class="col-form-label">(</label>
+										</div>
+										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
@@ -401,6 +490,28 @@ $previousyearmf=$rowmf['previousyear'];
 		                    	<td>Part B: IV</td>
 								<td>75</td>
 								<td>Co-Curricular and administrative activities outside college</td>
+								<td>
+									<div class="row">
+										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+											<label class="col-form-label">(</label>
+										</div>
+										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+										</div>
+										<div class="col-md-4 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">/75)*100</label>
+										</div>
+									</div><br>
+
+									<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0">
+											<label class="col-form-label">%PI =</label>
+										</div>
+										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
+											<input type="number" step="0.01" name='pi_academicBIV_lasttolast' value="<?php echo $pcat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
+										</div>
+									</div>
+								</td>
 								<td>
 									<div class="row">
 										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
@@ -454,6 +565,28 @@ $previousyearmf=$rowmf['previousyear'];
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
+										</div>
+										<div class="col-md-3 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">% /5</label>
+										</div>
+									</div><br>
+
+									<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0">
+											<label class="col-form-label">A =</label>
+										</div>
+										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
+											<input type="number" step="0.01" name='pi_academicBIV_avgA_lasttolast' value="<?php echo $A; ?>" class="form-control" style="width: 100%"  disabled/>
+										</div>
+									</div>
+								</td>
+								<td>
+		                    		<div class="row">
+										<div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+											<label class="col-form-label">A =</label>
+										</div>
+										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIV_avgA_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
@@ -492,9 +625,10 @@ $previousyearmf=$rowmf['previousyear'];
 										</div>
 									</div>
 								</td>
+
 							</tr>
 		                    <tr id='summ15'>
-		                    	<td colspan="5">
+		                    	<td colspan="6">
 									<div class="row justify-content-center">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">Average PI = [ (<?php echo $previousyearmf; ?> * A) + (<?php echo $currentyearmf; ?> * B) ] = </label>
@@ -1500,8 +1634,8 @@ $previousyearmf=$rowmf['previousyear'];
 					<table class="table table-bordered table-hover" id="tab-evaluation">
 						<tr>
 							<th class="text-center" rowspan="2">Item</th>
-							<th class="text-center" colspan="2">API given by Faculty Member</th>
-							<th class="text-center" colspan="2">API after verfication by HOD</th>
+							<th class="text-center" colspan="3">API given by Faculty Member</th>
+							<th class="text-center" colspan="3">API after verfication by HOD</th>
 							<th class="text-center" rowspan="2" width="15%">Remarks by HOD</th>
 							<?php
 							if($committee==1 && $recommended==1)
@@ -1514,9 +1648,11 @@ $previousyearmf=$rowmf['previousyear'];
 							?>
 						</tr>
 
-						<tr> 
+						<tr>
+						<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th> 
 						<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
 						<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+						<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th> 
 						<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
 						<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
 						
@@ -1524,6 +1660,7 @@ $previousyearmf=$rowmf['previousyear'];
 						if($committee==1 && $recommended==1)
 						{
 							?>
+							<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 							<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
 							<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
 							<?php
@@ -1535,12 +1672,22 @@ $previousyearmf=$rowmf['previousyear'];
 								<td>Part A</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartAself; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $PpartAself; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $CpartAself; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartAhod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
@@ -1564,6 +1711,11 @@ $previousyearmf=$rowmf['previousyear'];
 									?>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo $PPpartAcommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
+									<td>
+										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $PpartAcommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
@@ -1585,12 +1737,22 @@ $previousyearmf=$rowmf['previousyear'];
 		                    	<td>Part B: I</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat1self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $PpartBcat1self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $CpartBcat1self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat1hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
@@ -1614,6 +1776,11 @@ $previousyearmf=$rowmf['previousyear'];
 									?>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo $PPpartBcat1committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
+									<td>
+										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $PpartBcat1committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
@@ -1633,6 +1800,11 @@ $previousyearmf=$rowmf['previousyear'];
 		                    </tr>
 		                    <tr>
 		                    	<td>Part B: II</td>
+		                    	<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat2self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $PpartBcat2self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
@@ -1641,6 +1813,11 @@ $previousyearmf=$rowmf['previousyear'];
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $CpartBcat2self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat2hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
@@ -1664,6 +1841,11 @@ $previousyearmf=$rowmf['previousyear'];
 									?>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo $PPpartBcat2committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
+									<td>
+										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $PpartBcat2committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
@@ -1683,6 +1865,11 @@ $previousyearmf=$rowmf['previousyear'];
 		                    </tr>
 		                    <tr>
 		                    	<td>Part B: III</td>
+		                    	<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat3self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $PpartBcat3self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
@@ -1691,6 +1878,11 @@ $previousyearmf=$rowmf['previousyear'];
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $CpartBcat3self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat3hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
@@ -1714,6 +1906,11 @@ $previousyearmf=$rowmf['previousyear'];
 									?>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo $PPpartBcat3committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
+									<td>
+										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $PpartBcat3committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
@@ -1733,6 +1930,11 @@ $previousyearmf=$rowmf['previousyear'];
 		                    </tr>
 		                    <tr>
 		                    	<td>Part B: IV</td>
+		                    	<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat4self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $PpartBcat4self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
@@ -1741,6 +1943,11 @@ $previousyearmf=$rowmf['previousyear'];
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $CpartBcat4self; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $PPpartBcat4hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
 								<td>
@@ -1761,7 +1968,11 @@ $previousyearmf=$rowmf['previousyear'];
 								<?php
 								if($committee==1 && $recommended==1)
 								{
-									?>
+									?><td>
+										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo $PPpartBcat4committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $PpartBcat4committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
@@ -1794,7 +2005,17 @@ $previousyearmf=$rowmf['previousyear'];
 								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $A; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $B; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+									</div>
+								</td>
+								<td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo $Ahod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<td>
@@ -1823,6 +2044,11 @@ $previousyearmf=$rowmf['previousyear'];
 									</td>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo $Acommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
+									<td>
+										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $Bcommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
@@ -1842,12 +2068,12 @@ $previousyearmf=$rowmf['previousyear'];
 										<label class="col-form-label">Cumulated Score=<?php echo $previousyearmf; ?>% of<br> API of 2016-17+<br><?php echo $currentyearmf; ?>% of API of 2017-18</label>
 									</div>
 								</td>
-								<td colspan="2">
+								<td colspan="3">
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $avgpi; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
-								<td colspan="2">
+								<td colspan="3">
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="number" value="<?php echo $avgpihod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>

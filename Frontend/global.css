@@ -24,6 +24,10 @@ body{
 	/*height:100%;*/
 }
 
+.form-control{
+	width: 200px !important;
+}
+
  .bg-overlay  {
 		height: 550px;
 		background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),url('../defaults/indexback.jpg') center center no-repeat scroll;

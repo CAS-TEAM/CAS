@@ -282,19 +282,22 @@ include 'left-nav.php';
 			<div class="col-md-12 column">
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic1">
+					
+					
 					<thead>
-						<th colspan="10">ODD SEMESTER</th>
+						<th colspan="10">ODD SEMESTER</th>					
 					</thead>
+
 						<tr>
-							<th class="text-center">Sr.No</th>
-							<th class="text-center">Course</th>
-							<th class="text-center">Type L/P/T</th>
-							<th class="text-center">UG/PG</th>
-							<th class="text-center">Class/Semester</th>
-							<th class="text-center">Hrs./Week</th>
+							<th class="text-center" style="width:40px">Sr.No</th>
+							<th class="text-center" style="width:1400px">Course</th>
+							<th class="text-center" style="width:80px">Type L/P/T</th>
+							<th class="text-center" style="width:150px">UG/PG</th>
+							<th class="text-center" style="width:150px">Class/<br>Semester</th>
+							<th class="text-center" style="width:800px">Hrs./<br>Week</th>
 							<th class="text-center">Total no. of Hours engaged(A)</th>
-							<th class="text-center">*Max. Hrs.(B)</th>
-							<th class="text-center">C=(A/B)*100</th>
+							<th class="text-center" style="width:680px">*Max. Hrs.(B)</th>
+							<th class="text-center" style="width:640px">C=(A/B)*100</th>
 							<th class="text-center">Attachments</th>
 						</tr>
 					<tbody>
@@ -381,7 +384,7 @@ include 'left-nav.php';
 						<tr id='addr20'>
 							<td id="ctesrno1">1</td>
 							<td>
-							<input type="text" name='ctecourse[]' id="ctecourse1" class="form-control" maxlength="200"/>
+							<input type="text" name='ctecourse[]' id="ctecourse1" class="form-control" style="width:100" maxlength="200"/>
 							</td>
 							<td>
 							<input type="text" name='ctetyprlpt[]' id="ctetyprlpt1" class="form-control" maxlength="200"/>
@@ -584,7 +587,7 @@ include 'left-nav.php';
 								<input type="text" name='oepstest1' id='oepstest1' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -601,7 +604,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div>	 -->
 								</td>
 							</tr>
 		                    <tr id='addr11'>
@@ -614,7 +617,7 @@ include 'left-nav.php';
 								<input type="text" name='oepstest2' id='oepstest2' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -631,7 +634,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div>-->
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
@@ -644,7 +647,7 @@ include 'left-nav.php';
 								<input type="text" name='oetest1in' id='oetest1in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -661,7 +664,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
@@ -674,7 +677,7 @@ include 'left-nav.php';
 								<input type="text" name='oetest2in' id='oetest2in' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -691,7 +694,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
@@ -704,7 +707,7 @@ include 'left-nav.php';
 								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -721,7 +724,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
@@ -734,7 +737,7 @@ include 'left-nav.php';
 								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -751,11 +754,41 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
+								<td>ESE Supervisor</td>
+								<td>
+								<input type="text" name='odesesup' id='odesesup' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<input type="text" name='odesesup' id='odesesup' class="form-control" maxlength="200" />
+								</td>
+								<td>
+								<!-- <div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="o7file" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="o7file" name="o7file" value="" placeholder="">
+											    <input type="hidden" name="o7filelocation" id="o7filelocation" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="o7viewfile" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div> -->	
+								</td>
+		                    </tr>
+		                    <tr id='addr15'>
+		                    	<td>8</td>
 								<td>ESE paper setting</td>
 								<td>
 								<input type="text" name='odeseps' id='odeseps' class="form-control" maxlength="200" />
@@ -785,7 +818,7 @@ include 'left-nav.php';
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
-		                    	<td>8</td>
+		                    	<td>9</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
 								<input type="text" name='odesein' id='odesein' class="form-control" maxlength="200" />
@@ -794,7 +827,7 @@ include 'left-nav.php';
 								<input type="text" name='oeesein' id='oeesein' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -811,11 +844,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
-		                    	<td>9</td>
+		                    	<td>10</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
 								<input type="text" name='odeseth' id='odeseth' class="form-control" maxlength="200" />
@@ -824,7 +857,7 @@ include 'left-nav.php';
 								<input type="text" name='oeeseth' id='oeeseth' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -841,11 +874,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
-		                    	<td>10</td>
+		                    	<td>11</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
 								<input type="text" name='odesepo' id='odesepo' class="form-control" maxlength="200" />
@@ -854,7 +887,7 @@ include 'left-nav.php';
 								<input type="text" name='oeesepo' id='oeesepo' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -871,11 +904,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
-		                    	<td>11</td>
+		                    	<td>12</td>
 								<td>ESE re-assessment</td>
 								<td>
 								<input type="text" name='odesere_ass' id='odesere_ass' class="form-control" maxlength="200" />
@@ -884,7 +917,7 @@ include 'left-nav.php';
 								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -901,12 +934,12 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 
 		                    </tr>
 		                    <tr id='addr21'>
-		                    	<td>12</td>
+		                    	<td>13</td>
 								<td>Proof reading</td>
 								<td>
 								<input type="text" name='odproofr' id='odproofr' class="form-control" maxlength="200" />
@@ -915,7 +948,7 @@ include 'left-nav.php';
 								<input type="text" name='oeproofr' id='oeproofr' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -932,11 +965,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
-		                    	<td>13</td>
+		                    	<td>14</td>
 								<td>Open day</td>
 								<td>
 								<input type="text" name='odopenday' id='odopenday' class="form-control" maxlength="200" />
@@ -945,7 +978,7 @@ include 'left-nav.php';
 								<input type="text" name='oeopenday' id='oeopenday' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -962,7 +995,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 						</tbody>
@@ -998,7 +1031,7 @@ include 'left-nav.php';
 								<input type="text" name='eepstest1' id='eepstest1' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1015,7 +1048,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 							</tr>
 		                    <tr id='addr11'>
@@ -1028,7 +1061,7 @@ include 'left-nav.php';
 								<input type="text" name='eepstest2' id='eepstest2' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1045,7 +1078,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr12'>
@@ -1058,7 +1091,7 @@ include 'left-nav.php';
 								<input type="text" name='eetest1in' id='eetest1in' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1075,7 +1108,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr13'>
@@ -1088,7 +1121,7 @@ include 'left-nav.php';
 								<input type="text" name='eetest2in' id='eetest2in' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1105,7 +1138,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
@@ -1118,7 +1151,7 @@ include 'left-nav.php';
 								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1135,7 +1168,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr14'>
@@ -1148,7 +1181,7 @@ include 'left-nav.php';
 								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1165,11 +1198,41 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
+								<td>ESE Supervisor</td>
+								<td>
+								<input type="text" name='edesesup' id='edesesup' class="form-control"/>
+								</td>
+								<td>
+								<input type="text" name='eeesesup' id='eeesesup' class="form-control"/>
+								</td>
+								<td>
+								<!-- <div class="filepartb">
+									<div class="row justify-content-center">
+										<div class="col-3 offset-md-3" style="padding:0;margin:0">
+											<div class="file-upload mx-auto" style="width:26px">
+											    <label for="e7file" style="cursor:pointer">
+											        <img src="https://img.icons8.com/material/26/000000/attach.png">
+											    </label>
+											    <input type="file" class="dynamic-four" id="e7file" name="e7file" value="" placeholder="">
+											    <input type="hidden" name="e7filelocation" id="e7filelocation" value="">
+											</div>
+										</div>
+										<div class="col-md-3" style="padding:0;margin:0">
+											<a href="viewfile.php?location=none" id="e7viewfile" target="_blank">
+												<img src="https://img.icons8.com/ios/24/000000/document.png">
+											</a>										
+										</div>
+									</div>
+								</div> -->	
+								</td>
+		                    </tr>
+		                    <tr id='addr15'>
+		                    	<td>8</td>
 								<td>ESE paper setting</td>
 								<td>
 								<input type="text" name='edeseps' id='edeseps' class="form-control"/>
@@ -1199,7 +1262,7 @@ include 'left-nav.php';
 								</td>
 		                    </tr>
 		                    <tr id='addr16'>
-		                    	<td>8</td>
+		                    	<td>9</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
 								<input type="text" name='edesein' id='edesein' class="form-control"/>
@@ -1208,7 +1271,7 @@ include 'left-nav.php';
 								<input type="text" name='eeesein' id='eeesein' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1225,11 +1288,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr18'>
-		                    	<td>9</td>
+		                    	<td>10</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
 								<input type="text" name='edeseth' id='edeseth' class="form-control"/>
@@ -1238,7 +1301,7 @@ include 'left-nav.php';
 								<input type="text" name='eeeseth' id='eeeseth' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1255,11 +1318,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr19'>
-		                    	<td>10</td>
+		                    	<td>11</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
 								<input type="text" name='edesepo' id='edesepo' class="form-control"/>
@@ -1268,7 +1331,7 @@ include 'left-nav.php';
 								<input type="text" name='eeesepo' id='eeesepo' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1285,11 +1348,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr20'>
-		                    	<td>11</td>
+		                    	<td>12</td>
 								<td>ESE re-assessment</td>
 								<td>
 								<input type="text" name='edesere_ass' id='edesere_ass' class="form-control"/>
@@ -1298,7 +1361,7 @@ include 'left-nav.php';
 								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1315,11 +1378,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr21'>
-		                    	<td>12</td>
+		                    	<td>13</td>
 								<td>Proof reading</td>
 								<td>
 								<input type="text" name='edproofr' id='edproofr' class="form-control"/>
@@ -1328,7 +1391,7 @@ include 'left-nav.php';
 								<input type="text" name='eeproofr' id='eeproofr' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1345,11 +1408,11 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 		                    <tr id='addr22'>
-		                    	<td>13</td>
+		                    	<td>14</td>
 								<td>Open day</td>
 								<td>
 								<input type="text" name='edopenday' id='edopenday' class="form-control"/>
@@ -1358,7 +1421,7 @@ include 'left-nav.php';
 								<input type="text" name='eeopenday' id='eeopenday' class="form-control"/>
 								</td>
 								<td>
-								<div class="filepartb">
+								<!-- <div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
 											<div class="file-upload mx-auto" style="width:26px">
@@ -1375,7 +1438,7 @@ include 'left-nav.php';
 											</a>										
 										</div>
 									</div>
-								</div>	
+								</div> -->	
 								</td>
 		                    </tr>
 						</tbody>
