@@ -11,7 +11,7 @@ $year=mysqli_real_escape_string($conn,$_POST['year']);
 echo $year.",".$userId;
 //checking if this user has already begun filling the form before
 $alreadybegun=mysqli_real_escape_string($conn,$_POST['alreadybegun']);
-
+echo $alreadybegun;
 
 $faculty_name=mysqli_real_escape_string($conn,$_POST['faculty_name']);
 $ecode=mysqli_real_escape_string($conn,$_POST['ecode']);
@@ -110,6 +110,7 @@ if($alreadybegun==1)
 }
 else
 {
+	echo 'already begun='.$alreadybegun;
 	$sql="INSERT INTO part_a_table (year,faculty_id,faculty_name,ecode,praddr,peaddr,email,mobileno,highq,dob,desi,nameo,pdesi,dojkjsce,pscale,pbg,lastdesisel,promowef,cscales,cbasics,lastdesicas,promowefcas,cscalecas,cbasiccas,customRadioInline1,nameofdegree,institute) VALUES ('$year','$userId','$faculty_name','$ecode','$praddr','$peaddr','$email','$mobileno','$highq','$dob','$desi','$nameo','$pdesi','$dojkjsce','$pscale','$pbg','$lastdesisel','$promowef','$cscales','$cbasics','$lastdesicas','$promowefcas','$cscalecas','$cbasiccas','$customRadioInline1','$nameofdegree','$institute')";
 	$result=mysqli_query($conn,$sql);
 

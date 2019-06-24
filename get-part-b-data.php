@@ -62,11 +62,11 @@ else
 		$data[]=array('oepstest1'=>$oepstest1);
 	}
 
-	if($row['o1file']!='')
-	{
-		$o1file=$row['o1file'];
-		$data[]=array('o1file'=>$o1file);
-	}
+	// if($row['o1file']!='')
+	// {
+	// 	$o1file=$row['o1file'];
+	// 	$data[]=array('o1file'=>$o1file);
+	// }
 
 	if($row['odpstest2']!='')
 	{
@@ -80,11 +80,11 @@ else
 		$data[]=array('oepstest2'=>$oepstest2);
 	}
 
-	if($row['o2file']!='')
-	{
-		$o2file=$row['o2file'];
-		$data[]=array('o2file'=>$o2file);
-	}
+	// if($row['o2file']!='')
+	// {
+	// 	$o2file=$row['o2file'];
+	// 	$data[]=array('o2file'=>$o2file);
+	// }
 
 	if($row['odtest1in']!='')
 	{
@@ -98,11 +98,11 @@ else
 		$data[]=array('oetest1in'=>$oetest1in);
 	}
 
-	if($row['o3file']!='')
-	{
-		$o3file=$row['o3file'];
-		$data[]=array('o3file'=>$o3file);
-	}
+	// if($row['o3file']!='')
+	// {
+	// 	$o3file=$row['o3file'];
+	// 	$data[]=array('o3file'=>$o3file);
+	// }
 
 	if($row['odtest2in']!='')
 	{
@@ -116,11 +116,11 @@ else
 		$data[]=array('oetest2in'=>$oetest2in);
 	}
 
-	if($row['o4file']!='')
-	{
-		$o4file=$row['o4file'];
-		$data[]=array('o4file'=>$o4file);
-	}
+	// if($row['o4file']!='')
+	// {
+	// 	$o4file=$row['o4file'];
+	// 	$data[]=array('o4file'=>$o4file);
+	// }
 
 	if($row['odtest1ass']!='')
 	{
@@ -134,11 +134,11 @@ else
 		$data[]=array('oetest1ass'=>$oetest1ass);
 	}
 
-	if($row['o5file']!='')
-	{
-		$o5file=$row['o5file'];
-		$data[]=array('o5file'=>$o5file);
-	}
+	// if($row['o5file']!='')
+	// {
+	// 	$o5file=$row['o5file'];
+	// 	$data[]=array('o5file'=>$o5file);
+	// }
 
 	if($row['odtest2ass']!='')
 	{
@@ -152,10 +152,22 @@ else
 		$data[]=array('oetest2ass'=>$oetest2ass);
 	}
 
-	if($row['o6file']!='')
+	// if($row['o6file']!='')
+	// {
+	// 	$o6file=$row['o6file'];
+	// 	$data[]=array('o6file'=>$o6file);
+	// }
+
+	if($row['odesesup']!='')
 	{
-		$o6file=$row['o6file'];
-		$data[]=array('o6file'=>$o6file);
+		$odesesup=$row['odesesup'];
+		$data[]=array('odesesup'=>$odesesup);
+	}
+
+	if($row['oeesesup']!='')
+	{
+		$oeesesup=$row['oeesesup'];
+		$data[]=array('oeesesup'=>$oeesesup);
 	}
 
 	if($row['odeseps']!='')
@@ -188,11 +200,11 @@ else
 		$data[]=array('oeesein'=>$oeesein);
 	}
 
-	if($row['o8file']!='')
-	{
-		$o8file=$row['o8file'];
-		$data[]=array('o8file'=>$o8file);
-	}
+	// if($row['o8file']!='')
+	// {
+	// 	$o8file=$row['o8file'];
+	// 	$data[]=array('o8file'=>$o8file);
+	// }
 
 	if($row['odeseth']!='')
 	{
@@ -206,11 +218,11 @@ else
 		$data[]=array('oeeseth'=>$oeeseth);
 	}
 
-	if($row['o9file']!='')
-	{
-		$o9file=$row['o9file'];
-		$data[]=array('o9file'=>$o9file);
-	}
+	// if($row['o9file']!='')
+	// {
+	// 	$o9file=$row['o9file'];
+	// 	$data[]=array('o9file'=>$o9file);
+	// }
 
 	if($row['odesepo']!='')
 	{
@@ -224,11 +236,11 @@ else
 		$data[]=array('oeesepo'=>$oeesepo);
 	}
 
-	if($row['o10file']!='')
-	{
-		$o10file=$row['o10file'];
-		$data[]=array('o10file'=>$o10file);
-	}
+	// if($row['o10file']!='')
+	// {
+	// 	$o10file=$row['o10file'];
+	// 	$data[]=array('o10file'=>$o10file);
+	// }
 
 	if($row['odesere_ass']!='')
 	{
@@ -242,11 +254,11 @@ else
 		$data[]=array('oeesere_ass'=>$oeesere_ass);
 	}
 
-	if($row['o11file']!='')
-	{
-		$o11file=$row['o11file'];
-		$data[]=array('o11file'=>$o11file);
-	}
+	// if($row['o11file']!='')
+	// {
+	// 	$o11file=$row['o11file'];
+	// 	$data[]=array('o11file'=>$o11file);
+	// }
 
 	if($row['odproofr']!='')
 	{
@@ -260,11 +272,11 @@ else
 		$data[]=array('oeproofr'=>$oeproofr);
 	}
 
-	if($row['o12file']!='')
-	{
-		$o12file=$row['o12file'];
-		$data[]=array('o12file'=>$o12file);
-	}
+	// if($row['o12file']!='')
+	// {
+	// 	$o12file=$row['o12file'];
+	// 	$data[]=array('o12file'=>$o12file);
+	// }
 
 	if($row['odopenday']!='')
 	{
@@ -278,11 +290,11 @@ else
 		$data[]=array('oeopenday'=>$oeopenday);
 	}
 
-	if($row['o13file']!='')
-	{
-		$o13file=$row['o13file'];
-		$data[]=array('o13file'=>$o13file);
-	}
+	// if($row['o13file']!='')
+	// {
+	// 	$o13file=$row['o13file'];
+	// 	$data[]=array('o13file'=>$o13file);
+	// }
 
 	if($row['edpstest1']!='')
 	{
@@ -296,11 +308,11 @@ else
 		$data[]=array('eepstest1'=>$eepstest1);
 	}
 
-	if($row['e1file']!='')
-	{
-		$e1file=$row['e1file'];
-		$data[]=array('e1file'=>$e1file);
-	}
+	// if($row['e1file']!='')
+	// {
+	// 	$e1file=$row['e1file'];
+	// 	$data[]=array('e1file'=>$e1file);
+	// }
 
 	if($row['edpstest2']!='')
 	{
@@ -314,11 +326,11 @@ else
 		$data[]=array('eepstest2'=>$eepstest2);
 	}
 
-	if($row['e2file']!='')
-	{
-		$e2file=$row['e2file'];
-		$data[]=array('e2file'=>$e2file);
-	}
+	// if($row['e2file']!='')
+	// {
+	// 	$e2file=$row['e2file'];
+	// 	$data[]=array('e2file'=>$e2file);
+	// }
 
 	if($row['edtest1in']!='')
 	{
@@ -332,11 +344,11 @@ else
 		$data[]=array('eetest1in'=>$eetest1in);
 	}
 
-	if($row['e3file']!='')
-	{
-		$e3file=$row['e3file'];
-		$data[]=array('e3file'=>$e3file);
-	}
+	// if($row['e3file']!='')
+	// {
+	// 	$e3file=$row['e3file'];
+	// 	$data[]=array('e3file'=>$e3file);
+	// }
 
 	if($row['edtest2in']!='')
 	{
@@ -350,11 +362,11 @@ else
 		$data[]=array('eetest2in'=>$eetest2in);
 	}
 
-	if($row['e4file']!='')
-	{
-		$e4file=$row['e4file'];
-		$data[]=array('e4file'=>$e4file);
-	}
+	// if($row['e4file']!='')
+	// {
+	// 	$e4file=$row['e4file'];
+	// 	$data[]=array('e4file'=>$e4file);
+	// }
 
 	if($row['edtest1ass']!='')
 	{
@@ -368,11 +380,11 @@ else
 		$data[]=array('eetest1ass'=>$eetest1ass);
 	}
 
-	if($row['e5file']!='')
-	{
-		$e5file=$row['e5file'];
-		$data[]=array('e5file'=>$e5file);
-	}
+	// if($row['e5file']!='')
+	// {
+	// 	$e5file=$row['e5file'];
+	// 	$data[]=array('e5file'=>$e5file);
+	// }
 
 	if($row['edtest2ass']!='')
 	{
@@ -386,10 +398,22 @@ else
 		$data[]=array('eetest2ass'=>$eetest2ass);
 	}
 
-	if($row['e6file']!='')
+	// if($row['e6file']!='')
+	// {
+	// 	$e6file=$row['e6file'];
+	// 	$data[]=array('e6file'=>$e6file);
+	// }
+
+	if($row['edesesup']!='')
 	{
-		$e6file=$row['e6file'];
-		$data[]=array('e6file'=>$e6file);
+		$edesesup=$row['edesesup'];
+		$data[]=array('edesesup'=>$edesesup);
+	}
+
+	if($row['eeesesup']!='')
+	{
+		$eeesesup=$row['eeesesup'];
+		$data[]=array('eeesesup'=>$eeesesup);
 	}
 
 	if($row['edeseps']!='')
@@ -422,11 +446,11 @@ else
 		$data[]=array('eeesein'=>$eeesein);
 	}
 
-	if($row['e8file']!='')
-	{
-		$e8file=$row['e8file'];
-		$data[]=array('e8file'=>$e8file);
-	}
+	// if($row['e8file']!='')
+	// {
+	// 	$e8file=$row['e8file'];
+	// 	$data[]=array('e8file'=>$e8file);
+	// }
 
 	if($row['edeseth']!='')
 	{
@@ -440,11 +464,11 @@ else
 		$data[]=array('eeeseth'=>$eeeseth);
 	}
 
-	if($row['e9file']!='')
-	{
-		$e9file=$row['e9file'];
-		$data[]=array('e9file'=>$e9file);
-	}
+	// if($row['e9file']!='')
+	// {
+	// 	$e9file=$row['e9file'];
+	// 	$data[]=array('e9file'=>$e9file);
+	// }
 
 	if($row['edesepo']!='')
 	{
@@ -458,11 +482,11 @@ else
 		$data[]=array('eeesepo'=>$eeesepo);
 	}
 
-	if($row['e10file']!='')
-	{
-		$e10file=$row['e10file'];
-		$data[]=array('e10file'=>$e10file);
-	}
+	// if($row['e10file']!='')
+	// {
+	// 	$e10file=$row['e10file'];
+	// 	$data[]=array('e10file'=>$e10file);
+	// }
 
 	if($row['edesere_ass']!='')
 	{
@@ -476,11 +500,11 @@ else
 		$data[]=array('eeesere_ass'=>$eeesere_ass);
 	}
 
-	if($row['e11file']!='')
-	{
-		$e11file=$row['e11file'];
-		$data[]=array('e11file'=>$e11file);
-	}
+	// if($row['e11file']!='')
+	// {
+	// 	$e11file=$row['e11file'];
+	// 	$data[]=array('e11file'=>$e11file);
+	// }
 
 	if($row['edproofr']!='')
 	{
@@ -494,11 +518,11 @@ else
 		$data[]=array('eeproofr'=>$eeproofr);
 	}
 
-	if($row['e12file']!='')
-	{
-		$e12file=$row['e12file'];
-		$data[]=array('e12file'=>$e12file);
-	}
+	// if($row['e12file']!='')
+	// {
+	// 	$e12file=$row['e12file'];
+	// 	$data[]=array('e12file'=>$e12file);
+	// }
 
 	if($row['edopenday']!='')
 	{
@@ -512,11 +536,11 @@ else
 		$data[]=array('eeopenday'=>$eeopenday);
 	}
 
-	if($row['e13file']!='')
-	{
-		$e13file=$row['e13file'];
-		$data[]=array('e13file'=>$e13file);
-	}
+	// if($row['e13file']!='')
+	// {
+	// 	$e13file=$row['e13file'];
+	// 	$data[]=array('e13file'=>$e13file);
+	// }
 
 	if($row['avg_ap']!='')
 	{

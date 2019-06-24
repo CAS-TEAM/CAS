@@ -59,6 +59,10 @@ $odtest1ass=mysqli_real_escape_string($conn,$_POST['odtest1ass']);
 $oetest1ass=mysqli_real_escape_string($conn,$_POST['oetest1ass']);
 $odtest2ass=mysqli_real_escape_string($conn,$_POST['odtest2ass']);
 $oetest2ass=mysqli_real_escape_string($conn,$_POST['oetest2ass']);
+
+$odesesup=mysqli_real_escape_string($conn,$_POST['odesesup']);
+$oeesesup=mysqli_real_escape_string($conn,$_POST['oeesesup']);
+
 $odeseps=mysqli_real_escape_string($conn,$_POST['odeseps']);
 $oeeseps=mysqli_real_escape_string($conn,$_POST['oeeseps']);
 $odesein=mysqli_real_escape_string($conn,$_POST['odesein']);
@@ -86,6 +90,10 @@ $edtest1ass=mysqli_real_escape_string($conn,$_POST['edtest1ass']);
 $eetest1ass=mysqli_real_escape_string($conn,$_POST['eetest1ass']);
 $edtest2ass=mysqli_real_escape_string($conn,$_POST['edtest2ass']);
 $eetest2ass=mysqli_real_escape_string($conn,$_POST['eetest2ass']);
+
+$edesesup=mysqli_real_escape_string($conn,$_POST['edesesup']);
+$eeesesup=mysqli_real_escape_string($conn,$_POST['eeesesup']);
+
 $edeseps=mysqli_real_escape_string($conn,$_POST['edeseps']);
 $eeeseps=mysqli_real_escape_string($conn,$_POST['eeeseps']);
 $edesein=mysqli_real_escape_string($conn,$_POST['edesein']);
@@ -283,75 +291,75 @@ if($alreadybegun==1)
 	$row=mysqli_fetch_assoc($result);
 	$formId=mysqli_real_escape_string($conn,$row['id']);
 
-	$sqlcat1="UPDATE part_b_cat_1 SET avg_c = '$avg_c', total_c = '$total_c', odpstest1 = '$odpstest1', oepstest1 = '$oepstest1', odpstest2 = '$odpstest2', oepstest2 = '$oepstest2', odtest1in = '$odtest1in', oetest1in = '$oetest1in', odtest2in = '$odtest2in', oetest2in = '$oetest2in', odtest1ass = '$odtest1ass', oetest1ass = '$oetest1ass', odtest2ass = '$odtest2ass', oetest2ass = '$oetest2ass', odeseps = '$odeseps', oeeseps = '$oeeseps', odesein = '$odesein', oeesein = '$oeesein', odeseth = '$odeseth', oeeseth = '$oeeseth', odesepo = '$odesepo', oeesepo = '$oeesepo', odesere_ass = '$odesere_ass', oeesere_ass = '$oeesere_ass', odproofr = '$odproofr', oeproofr = '$oeproofr', odopenday = '$odopenday', oeopenday = '$oeopenday', edpstest1 = '$edpstest1', eepstest1 = '$eepstest1', edpstest2 = '$edpstest2', eepstest2 = '$eepstest2', edtest1in = '$edtest1in', eetest1in = '$eetest1in', edtest2in = '$edtest2in', eetest2in = '$eetest2in', edtest1ass = '$edtest1ass', eetest1ass = '$eetest1ass', edtest2ass = '$edtest2ass', eetest2ass = '$eetest2ass', edeseps = '$edeseps', eeeseps = '$eeeseps', edesein = '$edesein', eeesein = '$eeesein', edeseth = '$edeseth', eeeseth = '$eeeseth', edesepo = '$edesepo', eeesepo = '$eeesepo', edesere_ass = '$edesere_ass', eeesere_ass = '$eeesere_ass', edproofr = '$edproofr', eeproofr = '$eeproofr', edopenday = '$edopenday', eeopenday = '$eeopenday', avg_ap = '$avg_ap', dpstest1 = '$dpstest1', dpstest2 = '$dpstest2', dtest1in = '$dtest1in', dtest2in = '$dtest2in', dtest1ass = '$dtest1ass', dtest2ass = '$dtest2ass', deseps = '$deseps' WHERE formId='$formId'";
+	$sqlcat1="UPDATE part_b_cat_1 SET avg_c = '$avg_c', total_c = '$total_c', odpstest1 = '$odpstest1', oepstest1 = '$oepstest1', odpstest2 = '$odpstest2', oepstest2 = '$oepstest2', odtest1in = '$odtest1in', oetest1in = '$oetest1in', odtest2in = '$odtest2in', oetest2in = '$oetest2in', odtest1ass = '$odtest1ass', oetest1ass = '$oetest1ass', odtest2ass = '$odtest2ass', oetest2ass = '$oetest2ass', odesesup = '$odesesup', oeesesup = '$oeesesup', odeseps = '$odeseps', oeeseps = '$oeeseps', odesein = '$odesein', oeesein = '$oeesein', odeseth = '$odeseth', oeeseth = '$oeeseth', odesepo = '$odesepo', oeesepo = '$oeesepo', odesere_ass = '$odesere_ass', oeesere_ass = '$oeesere_ass', odproofr = '$odproofr', oeproofr = '$oeproofr', odopenday = '$odopenday', oeopenday = '$oeopenday', edpstest1 = '$edpstest1', eepstest1 = '$eepstest1', edpstest2 = '$edpstest2', eepstest2 = '$eepstest2', edtest1in = '$edtest1in', eetest1in = '$eetest1in', edtest2in = '$edtest2in', eetest2in = '$eetest2in', edtest1ass = '$edtest1ass', eetest1ass = '$eetest1ass', edtest2ass = '$edtest2ass', eetest2ass = '$eetest2ass', edesesup = '$edesesup', eeesesup = '$eeesesup' , edeseps = '$edeseps', eeeseps = '$eeeseps', edesein = '$edesein', eeesein = '$eeesein', edeseth = '$edeseth', eeeseth = '$eeeseth', edesepo = '$edesepo', eeesepo = '$eeesepo', edesere_ass = '$edesere_ass', eeesere_ass = '$eeesere_ass', edproofr = '$edproofr', eeproofr = '$eeproofr', edopenday = '$edopenday', eeopenday = '$eeopenday', avg_ap = '$avg_ap', dpstest1 = '$dpstest1', dpstest2 = '$dpstest2', dtest1in = '$dtest1in', dtest2in = '$dtest2in', dtest1ass = '$dtest1ass', dtest2ass = '$dtest2ass', deseps = '$deseps' WHERE formId='$formId'";
 	$resultcat1=mysqli_query($conn,$sqlcat1);
 
-	$tmpFilePath = $_FILES['o1file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o1file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o1file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o2file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o2file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o2file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o3file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o3file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o3file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o4file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o4file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o4file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o5file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o5file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o5file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o6file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o6file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o6file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
+	// $tmpFilePath = $_FILES['o1file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o1file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o1file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o2file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o2file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o2file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o3file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o3file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o3file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o4file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o4file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o4file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o5file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o5file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o5file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o6file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o6file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o6file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
 	$tmpFilePath = $_FILES['o7file']['tmp_name'];		
 	if ($tmpFilePath != "")
 	{
@@ -363,139 +371,139 @@ if($alreadybegun==1)
 	    	$resultf=mysqli_query($conn,$sqlf);
 	    }
 	}
-	$tmpFilePath = $_FILES['o8file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o8file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o8file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o9file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o9file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o9file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o10file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o10file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o10file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o11file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o11file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o11file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o12file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o12file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o12file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['o13file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['o13file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET o13file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
+	// $tmpFilePath = $_FILES['o8file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o8file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o8file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o9file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o9file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o9file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o10file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o10file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o10file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o11file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o11file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o11file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o12file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o12file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o12file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['o13file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['o13file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET o13file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
 
-	$tmpFilePath = $_FILES['e1file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e1file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e1file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e2file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e2file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e2file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e3file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e3file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e3file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e4file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e4file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e4file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e5file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e5file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e5file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e6file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e6file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e6file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
+	// $tmpFilePath = $_FILES['e1file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e1file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e1file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e2file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e2file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e2file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e3file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e3file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e3file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e4file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e4file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e4file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e5file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e5file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e5file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e6file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e6file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e6file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
 	$tmpFilePath = $_FILES['e7file']['tmp_name'];		
 	if ($tmpFilePath != "")
 	{
@@ -507,72 +515,72 @@ if($alreadybegun==1)
 	    	$resultf=mysqli_query($conn,$sqlf);
 	    }
 	}
-	$tmpFilePath = $_FILES['e8file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e8file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e8file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e9file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e9file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e9file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e10file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e10file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e10file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e11file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e11file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e11file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e12file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e12file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e12file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
-	$tmpFilePath = $_FILES['e13file']['tmp_name'];		
-	if ($tmpFilePath != "")
-	{
-	    //Setup our new file path
-	    $dest = "users/".$email. "/".$_FILES['e13file']['name'];
-	    if(move_uploaded_file($tmpFilePath, $dest))
-	    {
-	    	$sqlf="UPDATE part_b_cat_1 SET e13file='$dest' WHERE formId='$formId'";
-	    	$resultf=mysqli_query($conn,$sqlf);
-	    }
-	}
+	// $tmpFilePath = $_FILES['e8file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e8file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e8file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e9file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e9file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e9file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e10file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e10file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e10file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e11file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e11file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e11file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e12file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e12file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e12file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
+	// $tmpFilePath = $_FILES['e13file']['tmp_name'];		
+	// if ($tmpFilePath != "")
+	// {
+	//     //Setup our new file path
+	//     $dest = "users/".$email. "/".$_FILES['e13file']['name'];
+	//     if(move_uploaded_file($tmpFilePath, $dest))
+	//     {
+	//     	$sqlf="UPDATE part_b_cat_1 SET e13file='$dest' WHERE formId='$formId'";
+	//     	$resultf=mysqli_query($conn,$sqlf);
+	//     }
+	// }
 
 	$tmpFilePath = $_FILES['dps1file']['tmp_name'];		
 	if ($tmpFilePath != "")

@@ -922,8 +922,22 @@ include 'left-nav.php';
 	<!-- GET DATA OF FORM -->
 
 	<script type="text/javascript">
-		getPartAData();
+		getPartAData();		
 	</script>
+
+	<?php
+
+	if($same_user==1 && $submitted_for_review==false && $year!=2017 && !isset($_GET['updated']))
+	{
+		// 2017 since our forms from the year 2017
+		?>
+		<script type="text/javascript">
+			getDataChange();
+		</script>
+		<?php
+	}
+
+	?>
 
 	<!-- DISABLING INPUT WHEREVER NECESSARY -->
 

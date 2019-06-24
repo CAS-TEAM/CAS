@@ -57,7 +57,7 @@ include 'left-nav.php';
 
 		 							<div class="form-inline">
 									  	<label for="email" class="col-form-label mr-sm-3">Email:</label>
-									  	<input type="email" class="form-control d-inline mb-3" id="email" name="email" style="width: 280px;margin-left: 60px" value="<?php echo $email; ?>">
+									  	<input type="email" class="form-control d-inline mb-3" id="email" name="email" style="width: 280px;margin-left: 60px" value="<?php echo $email; ?>" disabled>
 									</div>
 
 									<div class="form-inline">
@@ -72,7 +72,7 @@ include 'left-nav.php';
 									
 									<div class="form-inline">
 									  	<label for="date_of_joining" class="mr-sm-3">Date of Joining:</label>
-									  	<input class="form-control partalabel mb-3" type="date" name="date_of_joining" style="width: 280px;margin-left: 1px" id="date_of_joining" value="<?php echo $date_of_joining; ?>"/>
+									  	<input class="form-control partalabel mb-3" type="date" name="date_of_joining" style="width: 280px;margin-left: 1px" id="date_of_joining" value="<?php echo $date_of_joining; ?>" disabled/>
 									</div><br> 
 								  	
 								  	<div class="row justify-content-center">
