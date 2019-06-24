@@ -49,13 +49,13 @@ if(isset($_SESSION['id']))
 	// $sql="INSERT INTO summary_comm_table (year, facultyId, correct_parta, exaggerated_parta, remarks_parta, current_academicA, pi_academicA, correct_partbi, exaggerated_partbi, remarks_partbi, current_academicBI, pi_academicBI, correct_partbii, exaggerated_partbii, remarks_partbii, current_academicBII, pi_academicBII, correct_partbiii, exaggerated_partbiii, remarks_partbiii, current_academicBIII, pi_academicBIII, correct_partbiv, exaggerated_partbiv, remarks_partbiv, current_academicBIV, pi_academicBIV, last_academicBIV_avg_comm, pi_academicBIV_avg_comm, last_academicBIV_avgpi_comm, final_recomm) VALUES ('$year', '$userId', '$correct_parta', '$exaggerated_parta', '$remarks_parta', '$current_academicA', '$pi_academicA', '$correct_partbi', '$exaggerated_partbi', '$remarks_partbi', '$current_academicBI', '$pi_academicBI', '$correct_partbii', '$exaggerated_partbii', '$remarks_partbii', '$current_academicBII', '$pi_academicBII', '$correct_partbiii', '$exaggerated_partbiii', '$remarks_partbiii', '$current_academicBIII', '$pi_academicBIII', '$correct_partbiv', '$exaggerated_partbiv', '$remarks_partbiv', '$current_academicBIV', '$pi_academicBIV', '$last_academicBIV_avg_comm', '$pi_academicBIV_avg_comm', '$last_academicBIV_avgpi_comm', '$final_recomm')";
 	// $result=mysqli_query($conn,$sql);
 
-	$committeeremarksA= mysqli_real_escape_string($conn, $_POST['committeeremarksA']);
-	$committeeremarksBcat1= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat1']);
-	$committeeremarksBcat2= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat2']);
-	$committeeremarksBcat3= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat3']);
-	$committeeremarksBcat4= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat4']);
-	$committeeremarksavgpi= mysqli_real_escape_string($conn, $_POST['committeeremarksavgpi']);
-	$committeeremarkscum= mysqli_real_escape_string($conn, $_POST['committeeremarkscum']);
+	// $committeeremarksA= mysqli_real_escape_string($conn, $_POST['committeeremarksA']);
+	// $committeeremarksBcat1= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat1']);
+	// $committeeremarksBcat2= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat2']);
+	// $committeeremarksBcat3= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat3']);
+	// $committeeremarksBcat4= mysqli_real_escape_string($conn, $_POST['committeeremarksBcat4']);
+	// $committeeremarksavgpi= mysqli_real_escape_string($conn, $_POST['committeeremarksavgpi']);
+	// $committeeremarkscum= mysqli_real_escape_string($conn, $_POST['committeeremarkscum']);
 	$final_recomm= mysqli_real_escape_string($conn, $_POST['final_recomm']);
 
 	// echo $committeeremarksA;
@@ -66,7 +66,8 @@ if(isset($_SESSION['id']))
 	// echo $committeeremarksavgpi;
 	// echo $committeeremarkscum;
 
-	$sql="UPDATE summary_table SET committeeremarksA='$committeeremarksA', committeeremarksBcat1='$committeeremarksBcat1', committeeremarksBcat2='$committeeremarksBcat2', committeeremarksBcat3='$committeeremarksBcat3', committeeremarksBcat4='$committeeremarksBcat4', committeeremarksavgpi='$committeeremarksavgpi', committeeremarkscum='$committeeremarkscum', final_recomm='$final_recomm' WHERE year='$year' AND facultyId='$userId'";
+	// $sql="UPDATE summary_table SET committeeremarksA='$committeeremarksA', committeeremarksBcat1='$committeeremarksBcat1', committeeremarksBcat2='$committeeremarksBcat2', committeeremarksBcat3='$committeeremarksBcat3', committeeremarksBcat4='$committeeremarksBcat4', committeeremarksavgpi='$committeeremarksavgpi', committeeremarkscum='$committeeremarkscum', final_recomm='$final_recomm' WHERE year='$year' AND facultyId='$userId'";
+	$sql="UPDATE summary_table SET final_recomm='$final_recomm' WHERE year='$year' AND facultyId='$userId'";
 	$result=mysqli_query($conn, $sql);
 
 	$pyear=$year-1;

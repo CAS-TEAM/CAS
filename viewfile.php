@@ -44,6 +44,18 @@ include 'left-nav.php';
 								<img src="<?php echo $filepath; ?>" alt="file" style="width:100%;height:auto">
 								<?php
 							}
+							else if($ext=="doc")
+							{
+								// $docObj = new DocxConversion($filepath);
+								//$docObj = new DocxConversion("test.docx");
+								//$docObj = new DocxConversion("test.xlsx");
+								//$docObj = new DocxConversion("test.pptx");
+								// echo $docText= $docObj->convertToText();
+
+								?>
+								<iframe src="https://docs.google.com/gview?url=http://lms-kjsce.somaiya.edu/cas/<?php echo $filepath; ?>&embedded=true"></iframe>
+								<?php
+							}
 							else
 							{
 								?>

@@ -757,14 +757,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
 								<input type="text" name='odesesup' id='odesesup' class="form-control" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control" maxlength="200" />
+								<input type="text" name='oeesesup' id='oeesesup' class="form-control" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1201,7 +1201,7 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
@@ -5146,7 +5146,7 @@ include 'left-nav.php';
 
      	$("#add_row1").click(function(){
      		var i=parseInt(document.getElementById('i').value);
-      		// alert("i="+i);
+      		alert("i="+i);
       		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');

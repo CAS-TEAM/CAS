@@ -630,7 +630,7 @@ $lasttolastyearmf=0.33;
 								<td>
 		                    		<div class="row">
 										<div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">A =</label>
+											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIV_avgA_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
@@ -642,7 +642,7 @@ $lasttolastyearmf=0.33;
 
 									<div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">A =</label>
+											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_avgA_last' value="<?php echo $A; ?>" class="form-control" style="width: 100%"  disabled/>
@@ -652,7 +652,7 @@ $lasttolastyearmf=0.33;
 								<td>
 									<div class="row">
 										<div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
-											<label class="col-form-label">B =</label>
+											<label class="col-form-label">C =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIV_avgB_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Btotal; ?>" disabled/>
@@ -664,7 +664,7 @@ $lasttolastyearmf=0.33;
 
 									<div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">B =</label>
+											<label class="col-form-label">C =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_avgB_last' value="<?php echo number_format((float)$B, 2, '.', ''); ?>" class="form-control" style="width: 100%"  disabled/>
@@ -676,8 +676,8 @@ $lasttolastyearmf=0.33;
 		                    <tr id='summ15'>
 		                    	<td colspan="6">
 									<div class="row justify-content-center">
-										<div class="col-md-4" style="margin:0;padding:0">
-											<label class="col-form-label">Average PI = [ (<?php echo $previousyearmf; ?> * A) + (<?php echo $currentyearmf; ?> * B) ] = </label>
+										<div class="col-md-5" style="margin:0;padding:0">
+											<label class="col-form-label">Average PI = [ (<?php echo $lasttolastyearmf; ?> * A) + (<?php echo $previousyearmf; ?> * B) + (<?php echo $currentyearmf; ?> * C) ] = </label>
 										</div>
 										<div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIV_avgpi_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
@@ -794,6 +794,7 @@ $lasttolastyearmf=0.33;
 									// echo $userId.','.$formId.','.$xx.'<br>';							
 
 									// Part B
+									// $sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
 									$sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
 									$resultxxx=mysqli_query($conn,$sqlxxx);
 									$rowxxx=mysqli_fetch_assoc($resultxxx);
@@ -1440,7 +1441,14 @@ $lasttolastyearmf=0.33;
 
 		$pparta_gpi_pi_hod_a=$rowpartA['parta_gpi_pi_hod_a'];
 
+		$sqlpartA="SELECT parta_gpi_pi_hod_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lparta_gpi_pi_hod_a=$rowpartA['parta_gpi_pi_hod_a'];
+
 		// echo "current=".$sqlpartA.",".$pparta_gpi_pi_self_a;
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		$sqlpartA="SELECT cat1_pitotal_hod_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$currentyear'";
 		$resultpartA=mysqli_query($conn,$sqlpartA);
@@ -1453,6 +1461,12 @@ $lasttolastyearmf=0.33;
 		$rowpartA=mysqli_fetch_assoc($resultpartA);
 
 		$pcat1_pitotal_hod_a=$rowpartA['cat1_pitotal_hod_a'];
+
+		$sqlpartA="SELECT cat1_pitotal_hod_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat1_pitotal_hod_a=$rowpartA['cat1_pitotal_hod_a'];
 
 		///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1468,6 +1482,12 @@ $lasttolastyearmf=0.33;
 
 		$pcat2_piitotal_hod_a=$rowpartA['cat2_piitotal_hod_a'];
 
+		$sqlpartA="SELECT cat2_piitotal_hod_a FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat2_piitotal_hod_a=$rowpartA['cat2_piitotal_hod_a'];
+
 		////////////////////////////////////////////////////////////
 
 		$sqlpartA="SELECT cat3_piiitotal_hod_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$currentyear'";
@@ -1481,6 +1501,12 @@ $lasttolastyearmf=0.33;
 		$rowpartA=mysqli_fetch_assoc($resultpartA);
 
 		$pcat3_piiitotal_hod_a=$rowpartA['cat3_piiitotal_hod_a'];
+
+		$sqlpartA="SELECT cat3_piiitotal_hod_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat3_piiitotal_hod_a=$rowpartA['cat3_piiitotal_hod_a'];
 
 
 		/////////////////////////////////////////////////////////////////
@@ -1498,9 +1524,24 @@ $lasttolastyearmf=0.33;
 
 		$pcat4_pivtotal_hod_a=$rowpartA['cat4_pivtotal_hod_a'];
 
+		$sqlpartA="SELECT cat4_pivtotal_hod_a FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+		$resultpartA=mysqli_query($conn,$sqlpartA);
+		$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+		$lcat4_pivtotal_hod_a=$rowpartA['cat4_pivtotal_hod_a'];
+
 
 		///////////////////////////////////////////////////////////////
 		//calculating percentages
+		$PPpartAhod=number_format($lparta_gpi_pi_hod_a/50*100,2);
+		$PPpartBcat1hod=number_format(($lcat1_pitotal_hod_a/100)*100,2);
+		$PPpartBcat2hod=number_format($lcat2_piitotal_hod_a,2);
+		$PPpartBcat3hod=number_format($lcat3_piiitotal_hod_a/175*100,2);
+		$PPpartBcat4hod=number_format($lcat4_pivtotal_hod_a/75*100,2);
+
+		$PPtotal= ($PPpartAhod + $PPpartBcat1hod + $PPpartBcat2hod + $PPpartBcat3hod + $PPpartBcat4hod);
+		$PPhod=number_format($PPtotal/5, 2);
+
 		$PpartAhod=number_format($pparta_gpi_pi_hod_a/50*100,2);
 		$PpartBcat1hod=number_format(($pcat1_pitotal_hod_a/100)*100,2);
 		$PpartBcat2hod=number_format($pcat2_piitotal_hod_a,2);
@@ -1517,21 +1558,21 @@ $lasttolastyearmf=0.33;
 		$CpartBcat4hod=number_format($ccat4_pivtotal_hod_a/75*100,2);
 
 		$Btotal = ($CpartAhod +	$CpartBcat1hod +	$CpartBcat2hod + $CpartBcat3hod +	$CpartBcat4hod);
-
 		$Bhod=number_format($Btotal/5, 2);
 
 		// $avgpihod=number_format(0.25*$Ahod + 0.75*$Bhod, 2);
-		$avgpihod=number_format($previousyearmf*$Ahod + $currentyearmf*$Bhod, 2);
+		$avgpihod=number_format($lasttolastyearmf*$PPhod + $previousyearmf*$Ahod + $currentyearmf*$Bhod, 2);
 
-		$sqlss="SELECT hodremarksA, hodremarksBcat1, hodremarksBcat2, hodremarksBcat3, hodremarksBcat4, hodremarksavgpi, hodremarkscum FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
+		// $sqlss="SELECT hodremarksA, hodremarksBcat1, hodremarksBcat2, hodremarksBcat3, hodremarksBcat4, hodremarksavgpi, hodremarkscum FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
+		$sqlss="SELECT hodremarkscum FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 		$resultss=mysqli_query($conn,$sqlss);
 		$rowss=mysqli_fetch_assoc($resultss);
-		$hodremarksA=$rowss['hodremarksA'];
-		$hodremarksBcat1=$rowss['hodremarksBcat1'];
-		$hodremarksBcat2=$rowss['hodremarksBcat2'];
-		$hodremarksBcat3=$rowss['hodremarksBcat3'];
-		$hodremarksBcat4=$rowss['hodremarksBcat4'];
-		$hodremarksavgpi=$rowss['hodremarksavgpi'];
+		// $hodremarksA=$rowss['hodremarksA'];
+		// $hodremarksBcat1=$rowss['hodremarksBcat1'];
+		// $hodremarksBcat2=$rowss['hodremarksBcat2'];
+		// $hodremarksBcat3=$rowss['hodremarksBcat3'];
+		// $hodremarksBcat4=$rowss['hodremarksBcat4'];
+		// $hodremarksavgpi=$rowss['hodremarksavgpi'];
 		$hodremarkscum=$rowss['hodremarkscum'];
 
 		$sqlsx="UPDATE summary_table SET hodA='$Ahod', hodB='$Bhod', hod_avgpi='$avgpihod' WHERE facultyId='$userId' AND year='$currentyear'";
@@ -1552,7 +1593,14 @@ $lasttolastyearmf=0.33;
 
 			$pparta_gpi_pi_committee_a=$rowpartA['parta_gpi_pi_committee_a'];
 
+			$sqlpartA="SELECT parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+			$resultpartA=mysqli_query($conn,$sqlpartA);
+			$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+			$lparta_gpi_pi_committee_a=$rowpartA['parta_gpi_pi_committee_a'];
+
 			// echo "current=".$sqlpartA.",".$pparta_gpi_pi_self_a;
+			///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 			$sqlpartA="SELECT cat1_pitotal_committee_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$currentyear'";
 			$resultpartA=mysqli_query($conn,$sqlpartA);
@@ -1565,6 +1613,12 @@ $lasttolastyearmf=0.33;
 			$rowpartA=mysqli_fetch_assoc($resultpartA);
 
 			$pcat1_pitotal_committee_a=$rowpartA['cat1_pitotal_committee_a'];
+
+			$sqlpartA="SELECT cat1_pitotal_committee_a FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+			$resultpartA=mysqli_query($conn,$sqlpartA);
+			$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+			$lcat1_pitotal_committee_a=$rowpartA['cat1_pitotal_committee_a'];
 
 			///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1580,6 +1634,12 @@ $lasttolastyearmf=0.33;
 
 			$pcat2_piitotal_committee_a=$rowpartA['cat2_piitotal_committee_a'];
 
+			$sqlpartA="SELECT cat2_piitotal_committee_a FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+			$resultpartA=mysqli_query($conn,$sqlpartA);
+			$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+			$lcat2_piitotal_committee_a=$rowpartA['cat2_piitotal_committee_a'];
+
 			////////////////////////////////////////////////////////////
 
 			$sqlpartA="SELECT cat3_piiitotal_committee_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$currentyear'";
@@ -1594,6 +1654,11 @@ $lasttolastyearmf=0.33;
 
 			$pcat3_piiitotal_committee_a=$rowpartA['cat3_piiitotal_committee_a'];
 
+			$sqlpartA="SELECT cat3_piiitotal_committee_a FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+			$resultpartA=mysqli_query($conn,$sqlpartA);
+			$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+			$lcat3_piiitotal_committee_a=$rowpartA['cat3_piiitotal_committee_a'];
 
 			/////////////////////////////////////////////////////////////////
 
@@ -1610,9 +1675,23 @@ $lasttolastyearmf=0.33;
 
 			$pcat4_pivtotal_committee_a=$rowpartA['cat4_pivtotal_committee_a'];
 
+			$sqlpartA="SELECT cat4_pivtotal_committee_a FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$lasttolastyear'";
+			$resultpartA=mysqli_query($conn,$sqlpartA);
+			$rowpartA=mysqli_fetch_assoc($resultpartA);
+
+			$lcat4_pivtotal_committee_a=$rowpartA['cat4_pivtotal_committee_a'];
 
 			///////////////////////////////////////////////////////////////
 			//calculating percentages
+			$PPpartAcommittee=number_format($lparta_gpi_pi_committee_a/50*100,2);
+			$PPpartBcat1committee=number_format(($lcat1_pitotal_committee_a/100)*100,2);
+			$PPpartBcat2committee=number_format($lcat2_piitotal_committee_a,2);
+			$PPpartBcat3committee=number_format($lcat3_piiitotal_committee_a/175*100,2);
+			$PPpartBcat4committee=number_format($lcat4_pivtotal_committee_a/75*100,2);
+
+			$PPtotal= ($PPpartAcommittee + $PPpartBcat1committee + $PPpartBcat2committee + $PPpartBcat3committee + $PPpartBcat4committee);
+			$PPcommittee=number_format($PPtotal/5, 2);
+
 			$PpartAcommittee=number_format($pparta_gpi_pi_committee_a/50*100,2);
 			$PpartBcat1committee=number_format(($pcat1_pitotal_committee_a/100)*100,2);
 			$PpartBcat2committee=number_format($pcat2_piitotal_committee_a,2);
@@ -1629,22 +1708,21 @@ $lasttolastyearmf=0.33;
 			$CpartBcat4committee=number_format($ccat4_pivtotal_committee_a/75*100,2);
 
 			$Btotal = ($CpartAcommittee +	$CpartBcat1committee +	$CpartBcat2committee + $CpartBcat3committee +	$CpartBcat4committee);
-
 			$Bcommittee=number_format($Btotal/5, 2);
 
 			// $avgpicommittee=number_format(0.25*$Acommittee + 0.75*$Bcommittee, 2);
-			$avgpicommittee=number_format($previousyearmf*$Acommittee + $currentyearmf*$Bcommittee, 2);
+			$avgpicommittee=number_format($lasttolastyearmf*$PPcommittee + $previousyearmf*$Acommittee + $currentyearmf*$Bcommittee, 2);
 
 			$sqlss="SELECT committeeremarksA, committeeremarksBcat1, committeeremarksBcat2, committeeremarksBcat3, committeeremarksBcat4, committeeremarksavgpi, committeeremarkscum, final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 			$resultss=mysqli_query($conn,$sqlss);
 			$rowss=mysqli_fetch_assoc($resultss);
-			$committeeremarksA=$rowss['committeeremarksA'];
-			$committeeremarksBcat1=$rowss['committeeremarksBcat1'];
-			$committeeremarksBcat2=$rowss['committeeremarksBcat2'];
-			$committeeremarksBcat3=$rowss['committeeremarksBcat3'];
-			$committeeremarksBcat4=$rowss['committeeremarksBcat4'];
-			$committeeremarksavgpi=$rowss['committeeremarksavgpi'];
-			$committeeremarkscum=$rowss['committeeremarkscum'];
+			// $committeeremarksA=$rowss['committeeremarksA'];
+			// $committeeremarksBcat1=$rowss['committeeremarksBcat1'];
+			// $committeeremarksBcat2=$rowss['committeeremarksBcat2'];
+			// $committeeremarksBcat3=$rowss['committeeremarksBcat3'];
+			// $committeeremarksBcat4=$rowss['committeeremarksBcat4'];
+			// $committeeremarksavgpi=$rowss['committeeremarksavgpi'];
+			// $committeeremarkscum=$rowss['committeeremarkscum'];
 			$final_recomm=$rowss['final_recomm'];
 
 			$sqlsx="UPDATE summary_table SET committeeA='$Acommittee', committeeB='$Bcommittee', committee_avgpi='$avgpicommittee' WHERE facultyId='$userId' AND year='$currentyear'";
@@ -1682,13 +1760,13 @@ $lasttolastyearmf=0.33;
 							<th class="text-center" rowspan="2">Item</th>
 							<th class="text-center" colspan="3">API given by Faculty Member</th>
 							<th class="text-center" colspan="3">API after verfication by HOD</th>
-							<th class="text-center" rowspan="2" width="15%">Remarks by HOD</th>
+							<!-- <th class="text-center" rowspan="2" width="15%">Remarks by HOD</th> -->
 							<?php
 							if($committee==1 && $recommended==1)
 							{
 								?>
-								<th class="text-center" colspan="2">Final Score by Screening Cum Evaluation/Selection Committee</th>
-								<th class="text-center" rowspan="2" width="15%">Remarks by Committee</th>
+								<th class="text-center" colspan="3">Final Score by Screening Cum Evaluation/Selection Committee</th>
+								<!-- <th class="text-center" rowspan="2" width="15%">Remarks by Committee</th> -->
 								<?php
 							}
 							?>
@@ -1743,14 +1821,14 @@ $lasttolastyearmf=0.33;
 								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $PpartBcat1hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+										<input type="number" value="<?php echo $CpartAhod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarksA; ?>" id="hodremarksA" name="hodremarksA" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
@@ -1770,11 +1848,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $CpartAcommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarksA; ?>" id="committeeremarksA" name="committeeremarksA" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -1811,11 +1889,11 @@ $lasttolastyearmf=0.33;
 										<input type="number" value="<?php echo $CpartBcat1hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarksBcat1; ?>" id="hodremarksBcat1" name="hodremarksBcat1" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
@@ -1835,11 +1913,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $CpartBcat1committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarksBcat1; ?>" id="committeeremarksBcat1" name="committeeremarksBcat1" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -1876,11 +1954,11 @@ $lasttolastyearmf=0.33;
 										<input type="number" value="<?php echo $CpartBcat2hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarksBcat2; ?>" id="hodremarksBcat2" name="hodremarksBcat2" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
@@ -1900,11 +1978,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $CpartBcat2committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarksBcat2; ?>" id="committeeremarksBcat2" name="committeeremarksBcat2" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -1941,11 +2019,11 @@ $lasttolastyearmf=0.33;
 										<input type="number" value="<?php echo $CpartBcat3hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarksBcat3; ?>" id="hodremarksBcat3" name="hodremarksBcat3" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
@@ -1965,11 +2043,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $CpartBcat3committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarksBcat3; ?>" id="committeeremarksBcat3" name="committeeremarksBcat3" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -2006,15 +2084,16 @@ $lasttolastyearmf=0.33;
 										<input type="number" value="<?php echo $CpartBcat4hod; ?>" step="0.01" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarksBcat4; ?>" id="hodremarksBcat4" name="hodremarksBcat4" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
-									?><td>
+									?>
+									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $PPpartBcat4committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
@@ -2029,11 +2108,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $CpartBcat4committee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarksBcat4; ?>" id="committeeremarksBcat4" name="committeeremarksBcat4" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -2046,7 +2125,7 @@ $lasttolastyearmf=0.33;
 								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $A; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										<input type="number" value="<?php echo $PP; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<td>
@@ -2061,7 +2140,7 @@ $lasttolastyearmf=0.33;
 								</td>
 								<td>
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $Ahod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										<input type="number" value="<?php echo $PPhod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<td>
@@ -2074,18 +2153,18 @@ $lasttolastyearmf=0.33;
 										<input type="number" value="<?php echo $Bhod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarksavgpi; ?>" id="hodremarksavgpi" name="hodremarksavgpi" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
 									?>
 									<td>
 										<div class="col-md-12" style="margin:0;padding:0">
-											<input type="number" value="<?php echo $Acommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+											<input type="number" value="<?php echo $PPcommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
 									<td>
@@ -2098,11 +2177,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $Bcommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarksavgpi; ?>" id="committeeremarksavgpi" name="committeeremarksavgpi" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -2111,7 +2190,7 @@ $lasttolastyearmf=0.33;
 		                    <tr>
 		                    	<td colspan="1">
 									<div class="row justify-content-center">
-										<label class="col-form-label">Cumulated Score=<?php echo $previousyearmf; ?>% of<br> API of 2016-17+<br><?php echo $currentyearmf; ?>% of API of 2017-18</label>
+										<label class="col-form-label">Cumulated Score=<?php echo $lasttolastyearmf; ?>% of<br> API of <?php echo ($lasttolastyear-1).'-'.$lasttolastyear; ?>+<br><?php echo $previousyearmf; ?>% of<br> API of <?php echo ($previousyear-1).'-'.$previousyear; ?>+<br><?php echo $currentyearmf; ?>% of API of <?php echo ($currentyear-1).'-'.$currentyear; ?></label>
 									</div>
 								</td>
 								<td colspan="3">
@@ -2124,11 +2203,11 @@ $lasttolastyearmf=0.33;
 										<input type="number" value="<?php echo $avgpihod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
-								<td>
+								<!-- <td>
 									<div class="col-md-12" style="margin:0;padding:0">
 										<input type="text" value="<?php echo $hodremarkscum; ?>" id="hodremarkscum" name="hodremarkscum" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 									</div>
-								</td>
+								</td> -->
 								<?php
 								if($committee==1 && $recommended==1)
 								{
@@ -2138,11 +2217,11 @@ $lasttolastyearmf=0.33;
 											<input type="number" value="<?php echo $avgpicommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
-									<td>
+									<!-- <td>
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="text" value="<?php echo $committeeremarkscum; ?>" id="committeeremarkscum" name="committeeremarkscum" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
 										</div>
-									</td>
+									</td> -->
 									<?php
 								}
 								?>
@@ -2157,6 +2236,14 @@ $lasttolastyearmf=0.33;
 		<br>
 
 		<div class="hodrecommendationdiv" id="hodrecommendationdiv">
+			<div class="row justify-content-center">
+				<div class="col-md-3 text-right">
+					<label class="col-form-label"><b>HOD Recommendation:</b></label>
+				</div>
+				<div class="col-md-7">
+					<textarea class="form-control mx-auto" id="hodremarkscum" name="hodremarkscum" maxlength="200"><?php echo $hodremarkscum; ?></textarea><br>
+				</div>
+			</div>
 			<?php
 
 			if($hod==1)
@@ -2230,7 +2317,8 @@ $lasttolastyearmf=0.33;
 						<label class="col-form-label"><b>Final Recommendation:</b></label>
 					</div>
 					<div class="col-md-7">
-						<input type="text" value="<?php echo $final_recomm; ?>" name='final_recomm' id='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+						<!-- <input type="text" value="<?php echo $final_recomm; ?>" name='final_recomm' id='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" /> -->
+						<textarea type="text" name='final_recomm' id='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200"><?php echo $final_recomm; ?></textarea> 
 					</div>
 				</div><br>
 
