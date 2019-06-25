@@ -64,10 +64,13 @@ $submitted_for_review=false;
 
 $sqlsfr="SELECT partA FROM submitted_for_review_table WHERE facultyId='$userId' AND year='$year'";
 $resultsfr=mysqli_query($conn,$sqlsfr);
-
 if(mysqli_num_rows($resultsfr)==1)
 {
-	$submitted_for_review=true;
+	$rowsfr=mysqli_fetch_assoc($resultsfr);
+	if($rowsfr['partA']==1)
+	{
+		$submitted_for_review=true;
+	}	
 }
 
 include 'top.php';
@@ -930,11 +933,16 @@ include 'left-nav.php';
 	if($same_user==1 && $submitted_for_review==false && $year!=2017 && !isset($_GET['updated']))
 	{
 		// 2017 since our forms from the year 2017
-		?>
-		<script type="text/javascript">
-			getDataChange();
-		</script>
-		<?php
+		$sqldc="SELECT id FROM part_a_table WHERE year='$year' AND faculty_id='$userId'";
+		$resultdc=mysqli_query($conn,$sqldc);
+		if(mysqli_num_rows($resultdc)==0)
+		{		
+			?>
+			<script type="text/javascript">
+				getDataChange();
+			</script>
+			<?php
+		}
 	}
 
 	?>
@@ -1050,11 +1058,13 @@ include 'left-nav.php';
 		$rowl=mysqli_fetch_assoc($resultl);
 		if($rowl['recommend']==0 && $committee==1)
 		{
+			/*
 			?>
 			<script type="text/javascript">
 				$('.pisave').remove();
 			</script>
 			<?php
+			*/
 		}
 		else if($rowl['recommend']==1 && $hod==1)
 		{

@@ -76,8 +76,12 @@ $sqlsfr="SELECT partB FROM submitted_for_review_table WHERE facultyId='$userId' 
 $resultsfr=mysqli_query($conn,$sqlsfr);
 if(mysqli_num_rows($resultsfr)==1)
 {
-	$submitted_for_review=true;
-	$sfr_forjs=1;
+	$rowsfr=mysqli_fetch_assoc($resultsfr);
+	if($rowsfr['partB']==1)
+	{
+		$submitted_for_review=true;
+		$sfr_forjs=1;
+	}	
 }
 
  // this variable is for passing to js...if 0 means submitted_for_Review is false else, 1
@@ -5672,11 +5676,13 @@ include 'left-nav.php';
 		$rowl=mysqli_fetch_assoc($resultl);
 		if($rowl['recommend']==0 && $committee==1)
 		{
+			/*
 			?>
 			<script type="text/javascript">
 				$('.pisave').remove();
 			</script>
 			<?php
+			*/
 		}
 		else if($rowl['recommend']==1 && $hod==1)
 		{

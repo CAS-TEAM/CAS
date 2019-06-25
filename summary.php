@@ -219,7 +219,7 @@ $lasttolastyearmf=0.33;
 		// if($rows['selfB']!=$A || $rows['selfB']!=$B || $rows['self_avgpi']!=$avgpi)
 		// {
 			// $sqlsx="UPDATE summary_table SET PpartAself='$PpartAself', PpartBcat1self='$PpartBcat1self', PpartBcat2self='$PpartBcat2self', PpartBcat3self='$PpartBcat3self', PpartBcat4self='$PpartBcat4self', CpartAself='$CpartAself', CpartBcat1self='$CpartBcat1self', CpartBcat2self='$CpartBcat2self', CpartBcat3self='$CpartBcat3self', CpartBcat4self='$CpartBcat4self', selfA='$A', selfB='$B', self_avgpi='$avgpi' WHERE facultyId='$userId' AND year='$currentyear'";
-			$sqlsx="UPDATE summary_table SET selfA='$A', selfB='$B', self_avgpi='$avgpi' WHERE facultyId='$userId' AND year='$currentyear'";
+			$sqlsx="UPDATE summary_table SET selfPP='$PP', selfA='$A', selfB='$B', self_avgpi='$avgpi' WHERE facultyId='$userId' AND year='$currentyear'";
 			$resultx=mysqli_query($conn, $sqlsx);
 		// }
 
@@ -1575,11 +1575,12 @@ $lasttolastyearmf=0.33;
 		// $hodremarksavgpi=$rowss['hodremarksavgpi'];
 		$hodremarkscum=$rowss['hodremarkscum'];
 
-		$sqlsx="UPDATE summary_table SET hodA='$Ahod', hodB='$Bhod', hod_avgpi='$avgpihod' WHERE facultyId='$userId' AND year='$currentyear'";
+		$sqlsx="UPDATE summary_table SET hodPP='$PPhod', hodA='$Ahod', hodB='$Bhod', hod_avgpi='$avgpihod' WHERE facultyId='$userId' AND year='$currentyear'";
 		$resultx=mysqli_query($conn, $sqlsx);
 
 		//if recommended by the committee then do this
-		if($committee==1 && $recommended==1)
+		// if($committee==1 && $recommended==1)
+		if($committee==1)
 		{
 			$sqlpartA="SELECT parta_gpi_pi_committee_a FROM part_a_gpi WHERE facultyId='$userId' AND year='$currentyear'";
 			$resultpartA=mysqli_query($conn,$sqlpartA);
@@ -1713,7 +1714,8 @@ $lasttolastyearmf=0.33;
 			// $avgpicommittee=number_format(0.25*$Acommittee + 0.75*$Bcommittee, 2);
 			$avgpicommittee=number_format($lasttolastyearmf*$PPcommittee + $previousyearmf*$Acommittee + $currentyearmf*$Bcommittee, 2);
 
-			$sqlss="SELECT committeeremarksA, committeeremarksBcat1, committeeremarksBcat2, committeeremarksBcat3, committeeremarksBcat4, committeeremarksavgpi, committeeremarkscum, final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
+			// $sqlss="SELECT committeeremarksA, committeeremarksBcat1, committeeremarksBcat2, committeeremarksBcat3, committeeremarksBcat4, committeeremarksavgpi, committeeremarkscum, final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
+			$sqlss="SELECT final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 			$resultss=mysqli_query($conn,$sqlss);
 			$rowss=mysqli_fetch_assoc($resultss);
 			// $committeeremarksA=$rowss['committeeremarksA'];
@@ -1725,7 +1727,7 @@ $lasttolastyearmf=0.33;
 			// $committeeremarkscum=$rowss['committeeremarkscum'];
 			$final_recomm=$rowss['final_recomm'];
 
-			$sqlsx="UPDATE summary_table SET committeeA='$Acommittee', committeeB='$Bcommittee', committee_avgpi='$avgpicommittee' WHERE facultyId='$userId' AND year='$currentyear'";
+			$sqlsx="UPDATE summary_table SET committeePP='$PPcommittee', committeeA='$Acommittee', committeeB='$Bcommittee', committee_avgpi='$avgpicommittee' WHERE facultyId='$userId' AND year='$currentyear'";
 			$resultx=mysqli_query($conn, $sqlsx);
 		}
 
@@ -1762,7 +1764,8 @@ $lasttolastyearmf=0.33;
 							<th class="text-center" colspan="3">API after verfication by HOD</th>
 							<!-- <th class="text-center" rowspan="2" width="15%">Remarks by HOD</th> -->
 							<?php
-							if($committee==1 && $recommended==1)
+							// if($committee==1 && $recommended==1)
+							if($committee==1)
 							{
 								?>
 								<th class="text-center" colspan="3">Final Score by Screening Cum Evaluation/Selection Committee</th>
@@ -1781,7 +1784,8 @@ $lasttolastyearmf=0.33;
 						<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
 						
 						<?php
-						if($committee==1 && $recommended==1)
+						// if($committee==1 && $recommended==1)
+						if($committee==1)
 						{
 							?>
 							<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
@@ -1830,7 +1834,8 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
 									<td>
@@ -1895,7 +1900,8 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
 									<td>
@@ -1960,7 +1966,8 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
 									<td>
@@ -2025,7 +2032,8 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
 									<td>
@@ -2090,7 +2098,8 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
 									<td>
@@ -2159,7 +2168,8 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
 									<td>
@@ -2209,10 +2219,11 @@ $lasttolastyearmf=0.33;
 									</div>
 								</td> -->
 								<?php
-								if($committee==1 && $recommended==1)
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
 								{
 									?>
-									<td colspan="2">
+									<td colspan="3">
 										<div class="col-md-12" style="margin:0;padding:0">
 											<input type="number" value="<?php echo $avgpicommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
@@ -2305,13 +2316,16 @@ $lasttolastyearmf=0.33;
 
 		if($committee==1)
 		{
-
+			/*
 			if($recommended==1)
 			{
+
 				?>
 				<form class="summary_comm_form" action="" method="POST">
 				<p id="recommendedforcasp" class="card-text"><img src="checked.png" style="width:32px"> This faculty member has been recommended for CAS by the HOD.</p><br>	
-				
+				*/
+				?>
+				<form class="summary_comm_form" action="" method="POST">
 				<div class="row justify-content-center">
 					<div class="col-md-3 text-right">
 						<label class="col-form-label"><b>Final Recommendation:</b></label>
@@ -2369,6 +2383,7 @@ $lasttolastyearmf=0.33;
 						<?php
 					}
 				}
+			/*
 			}
 			else
 			{
@@ -2376,7 +2391,7 @@ $lasttolastyearmf=0.33;
 				<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px"> This faculty member has not been recommended for CAS by the HOD.</p><br>
 				<?php
 			}
-
+			*/
 			
 		}
 		?>
@@ -2387,7 +2402,8 @@ $lasttolastyearmf=0.33;
 				<?php
 				if($committee==1)
 				{
-					if($recommended==1 && $casapprovalsubmit==0)
+					// if($recommended==1 && $casapprovalsubmit==0)
+					if($casapprovalsubmit==0)
 					{
 						?>
 						<div class="loader" style="margin:0px auto 15px auto;display: none"></div>
@@ -2465,7 +2481,7 @@ $lasttolastyearmf=0.33;
 	<br><br>
 
 	<script type="text/javascript">
-		getSummaryData();
+		// getSummaryData();
 	</script>
 
 

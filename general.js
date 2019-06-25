@@ -3016,17 +3016,17 @@ $(document).ready(function(){
 					if(document.getElementById("cat3_piiitotal_self_a"))
 					{
 						document.getElementById("cat3_piiitotal_self_a").value=parseInt(document.getElementById("cat3_piiitotal_self_a").value)+parseInt(document.getElementById('cat3_piii4_self_a').value)-xxh;
-						xxi=document.getElementById('cat3_piii4_self_a').value;
+						xxh=document.getElementById('cat3_piii4_self_a').value;
 					}
 					if(document.getElementById("cat3_piiitotal_hod_a"))
 					{
 						document.getElementById("cat3_piiitotal_hod_a").value=parseInt(document.getElementById("cat3_piiitotal_hod_a").value)+parseInt(document.getElementById('cat3_piii4_hod_a').value)-xxi;
-						xxj=document.getElementById('cat3_piii4_hod_a').value;
+						xxi=document.getElementById('cat3_piii4_hod_a').value;
 					}
 					if(document.getElementById("cat3_piiitotal_committee_a"))
 	            	{
 	            		document.getElementById("cat3_piiitotal_committee_a").value=parseInt(document.getElementById("cat3_piiitotal_committee_a").value)+parseInt(document.getElementById('cat3_piii4_committee_a').value)-xxj;
-	            		xxk=document.getElementById('cat3_piii4_committee_a').value;
+	            		xxj=document.getElementById('cat3_piii4_committee_a').value;
 	            	}
 					$("#partb_cat3_piiitotal_btn").trigger("click");
 	            	// alert("sucessgful");
@@ -3052,6 +3052,7 @@ $(document).ready(function(){
 	if(document.getElementById('cat3_piii5_self_a'))
 	{
 		xxl=document.getElementById('cat3_piii5_self_a').value;
+
 	}
 	if(document.getElementById('cat3_piii5_hod_a'))
 	{
@@ -3148,18 +3149,18 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-if(document.getElementById('cat3_piii6_self_a'))
-{
-	xxo=document.getElementById('cat3_piii6_self_a');
-}
-if(document.getElementById('cat3_piii6_hod_a'))
-{
-	xxp=document.getElementById('cat3_piii6_hod_a');
-}
-if(document.getElementById('cat3_piii6_committee_a'))
-{
-	xxq=document.getElementById('cat3_piii6_committee_a');
-}
+	if(document.getElementById('cat3_piii6_self_a'))
+	{
+		xxo=document.getElementById('cat3_piii6_self_a').value;
+	}
+	if(document.getElementById('cat3_piii6_hod_a'))
+	{
+		xxp=document.getElementById('cat3_piii6_hod_a').value;
+	}
+	if(document.getElementById('cat3_piii6_committee_a'))
+	{
+		xxq=document.getElementById('cat3_piii6_committee_a').value;
+	}
     $('body').on('click','#partb_cat3_piii6_btn',function(e){
     	e.preventDefault();
         // alert("as");
@@ -4324,6 +4325,10 @@ $(document).ready(function(){
     	if(document.getElementById('phdne').value.trim()!='' && !isNaN(document.getElementById('phdne').value.trim()))
     	{
     		// alert(phdne);
+    		if(isNaN(phdne))
+    		{
+    			phdne=0;
+    		}
     		document.getElementById('cat3_piii5_self_a').value=parseInt(document.getElementById('cat3_piii5_self_a').value)+document.getElementById('phdne').value*10-phdne;
     		if(document.getElementById('cat3_piii5_self_a').value>40)
     		{
@@ -4338,6 +4343,10 @@ $(document).ready(function(){
     	if(document.getElementById('phdts').value.trim()!='' && !isNaN(document.getElementById('phdts').value.trim()))
     	{
     		// alert(phdts);
+    		if(isNaN(phdts))
+    		{
+    			phdts=0;
+    		}
     		document.getElementById('cat3_piii5_self_a').value=parseInt(document.getElementById('cat3_piii5_self_a').value)+document.getElementById('phdts').value*8-phdts;
     		if(document.getElementById('cat3_piii5_self_a').value>40)
     		{
@@ -4352,6 +4361,10 @@ $(document).ready(function(){
     	if(document.getElementById('phdda').value.trim()!='' && !isNaN(document.getElementById('phdda').value.trim()))
     	{
     		// alert(phdda);
+    		if(isNaN(phdda))
+    		{
+    			phdda=0;
+    		}
     		document.getElementById('cat3_piii5_self_a').value=parseInt(document.getElementById('cat3_piii5_self_a').value)+document.getElementById('phdda').value*6-phdda;
     		if(document.getElementById('cat3_piii5_self_a').value>40)
     		{
@@ -4380,6 +4393,10 @@ $(document).ready(function(){
     $("#mtechne").focusout(function(){
     	if(document.getElementById('mtechne').value.trim()!='' && !isNaN(document.getElementById('mtechne').value.trim()))
     	{
+    		if(isNaN(mtechne))
+    		{
+    			mtechne=0;
+    		}
     		document.getElementById('cat3_piii6_self_a').value=parseInt(document.getElementById('cat3_piii6_self_a').value)+document.getElementById('mtechne').value*8-mtechne;
     		if(document.getElementById('cat3_piii6_self_a').value>40)
     		{
@@ -4393,6 +4410,10 @@ $(document).ready(function(){
   	$("#mtechts").focusout(function(){
     	if(document.getElementById('mtechts').value.trim()!='' && !isNaN(document.getElementById('mtechts').value.trim()))
     	{
+    		if(isNaN(mtechts))
+    		{
+    			mtechts=0;
+    		}
     		document.getElementById('cat3_piii6_self_a').value=parseInt(document.getElementById('cat3_piii6_self_a').value)+document.getElementById('mtechts').value*6-mtechts;
     		if(document.getElementById('cat3_piii6_self_a').value>40)
     		{
@@ -4406,6 +4427,10 @@ $(document).ready(function(){
   	$("#mtechda").focusout(function(){
     	if(document.getElementById('mtechda').value.trim()!='' && !isNaN(document.getElementById('mtechda').value.trim()))
     	{
+    		if(isNaN(mtechda))
+    		{
+    			mtechda=0;
+    		}
     		document.getElementById('cat3_piii6_self_a').value=parseInt(document.getElementById('cat3_piii6_self_a').value)+document.getElementById('mtechda').value*4-mtechda;
     		if(document.getElementById('cat3_piii6_self_a').value>40)
     		{
@@ -4439,6 +4464,10 @@ $(document).ready(function(){
     $("#btechne").focusout(function(){
     	if(document.getElementById('btechne').value.trim()!='' && !isNaN(document.getElementById('btechne').value.trim()))
     	{
+    		if(isNaN(btechne))
+    		{
+    			btechne=0;
+    		}
     		document.getElementById('cat3_piii7_self_a').value=parseInt(document.getElementById('cat3_piii7_self_a').value)+document.getElementById('btechne').value*6-btechne;
     		if(document.getElementById('cat3_piii7_self_a').value>40)
     		{
@@ -4452,6 +4481,10 @@ $(document).ready(function(){
   	$("#btechts").focusout(function(){
     	if(document.getElementById('btechts').value.trim()!='' && !isNaN(document.getElementById('btechts').value.trim()))
     	{
+    		if(isNaN(btechts))
+    		{
+    			btechts=0;
+    		}
     		document.getElementById('cat3_piii7_self_a').value=parseInt(document.getElementById('cat3_piii7_self_a').value)+document.getElementById('btechts').value*4-btechts;
     		if(document.getElementById('cat3_piii7_self_a').value>40)
     		{
@@ -4465,6 +4498,10 @@ $(document).ready(function(){
   	$("#btechda").focusout(function(){
     	if(document.getElementById('btechda').value.trim()!='' && !isNaN(document.getElementById('btechda').value.trim()))
     	{
+    		if(isNaN(btechda))
+    		{
+    			btechda=0;
+    		}
     		document.getElementById('cat3_piii7_self_a').value=parseInt(document.getElementById('cat3_piii7_self_a').value)+document.getElementById('btechda').value*2-btechda;
     		if(document.getElementById('cat3_piii7_self_a').value>40)
     		{
@@ -4608,7 +4645,7 @@ function getSummaryData(){
 		//dataType: 'text',  // what to expect back from the PHP script, if anything               
 		success: function (response) 
 		{
-			// alert(response);
+			alert(response);
 
 			if(response.trim()=="not begun")
 			{           
@@ -4653,23 +4690,23 @@ $(document).ready(function(){
 
 		var formData = new FormData(this);  		
 		
-		var hodremarksA= document.getElementById("hodremarksA").value;
-		var hodremarksBcat1= document.getElementById("hodremarksBcat1").value;
-		var hodremarksBcat2= document.getElementById("hodremarksBcat2").value;
-		var hodremarksBcat3= document.getElementById("hodremarksBcat3").value;
-		var hodremarksBcat4= document.getElementById("hodremarksBcat4").value;
-		var hodremarksavgpi= document.getElementById("hodremarksavgpi").value;
+		// var hodremarksA= document.getElementById("hodremarksA").value;
+		// var hodremarksBcat1= document.getElementById("hodremarksBcat1").value;
+		// var hodremarksBcat2= document.getElementById("hodremarksBcat2").value;
+		// var hodremarksBcat3= document.getElementById("hodremarksBcat3").value;
+		// var hodremarksBcat4= document.getElementById("hodremarksBcat4").value;
+		// var hodremarksavgpi= document.getElementById("hodremarksavgpi").value;
 		var hodremarkscum= document.getElementById("hodremarkscum").value;
 
 		var year=document.getElementById("year").value;
 		var userId=document.getElementById("userId").value;
 
-		formData.append("hodremarksA",hodremarksA);
-		formData.append("hodremarksBcat1",hodremarksBcat1);
-		formData.append("hodremarksBcat2",hodremarksBcat2);
-		formData.append("hodremarksBcat3",hodremarksBcat3);
-		formData.append("hodremarksBcat4",hodremarksBcat4);
-		formData.append("hodremarksavgpi",hodremarksavgpi);
+		// formData.append("hodremarksA",hodremarksA);
+		// formData.append("hodremarksBcat1",hodremarksBcat1);
+		// formData.append("hodremarksBcat2",hodremarksBcat2);
+		// formData.append("hodremarksBcat3",hodremarksBcat3);
+		// formData.append("hodremarksBcat4",hodremarksBcat4);
+		// formData.append("hodremarksavgpi",hodremarksavgpi);
 		formData.append("hodremarkscum",hodremarkscum);
 
 		formData.append("year",year);
@@ -4691,12 +4728,12 @@ $(document).ready(function(){
 				if(parseInt(response)==1)
 				{
 					// $("hodrecommendationdiv").html();
-					document.getElementById("hodrecommendationdiv").innerHTML='<p id="recommendedforcasp" class="card-text"><img src="checked.png" style="width:32px"> This faculty member has been recommended for CAS.</p><br>'
+					document.getElementById("hodrecommendationdiv").innerHTML=document.getElementById("hodrecommendationdiv").innerHTML+'<p id="recommendedforcasp" class="card-text"><img src="checked.png" style="width:32px"> This faculty member has been recommended for CAS by the HOD.</p><br>'
 				}
 				else if(parseInt(response)==0)
 				{
 					// $("hodrecommendationdiv").html('<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px">This faculty member has not been recommended for CAS by the HOD.</p>');
-					document.getElementById("hodrecommendationdiv").innerHTML='<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px"> This faculty member has not been recommended for CAS.</p><br>';
+					document.getElementById("hodrecommendationdiv").innerHTML=document.getElementById("hodrecommendationdiv").innerHTML+'<p id="notrecommendedforcasp" class="card-text"><img src="error.png" style="width:32px"> This faculty member has not been recommended for CAS by the HOD.</p><br>';
 				}
 				else
 				{
@@ -4725,24 +4762,24 @@ $(document).ready(function(){
 
 			var formData = new FormData(this);  		
 			
-			var committeeremarksA= document.getElementById("committeeremarksA").value;
-			var committeeremarksBcat1= document.getElementById("committeeremarksBcat1").value;
-			var committeeremarksBcat2= document.getElementById("committeeremarksBcat2").value;
-			var committeeremarksBcat3= document.getElementById("committeeremarksBcat3").value;
-			var committeeremarksBcat4= document.getElementById("committeeremarksBcat4").value;
-			var committeeremarksavgpi= document.getElementById("committeeremarksavgpi").value;
-			var committeeremarkscum= document.getElementById("committeeremarkscum").value;
+			// var committeeremarksA= document.getElementById("committeeremarksA").value;
+			// var committeeremarksBcat1= document.getElementById("committeeremarksBcat1").value;
+			// var committeeremarksBcat2= document.getElementById("committeeremarksBcat2").value;
+			// var committeeremarksBcat3= document.getElementById("committeeremarksBcat3").value;
+			// var committeeremarksBcat4= document.getElementById("committeeremarksBcat4").value;
+			// var committeeremarksavgpi= document.getElementById("committeeremarksavgpi").value;
+			// var committeeremarkscum= document.getElementById("committeeremarkscum").value;
 
 			var year=document.getElementById("year").value;
 			var userId=document.getElementById("userId").value;
 
-			formData.append("committeeremarksA",committeeremarksA);
-			formData.append("committeeremarksBcat1",committeeremarksBcat1);
-			formData.append("committeeremarksBcat2",committeeremarksBcat2);
-			formData.append("committeeremarksBcat3",committeeremarksBcat3);
-			formData.append("committeeremarksBcat4",committeeremarksBcat4);
-			formData.append("committeeremarksavgpi",committeeremarksavgpi);
-			formData.append("committeeremarkscum",committeeremarkscum);
+			// formData.append("committeeremarksA",committeeremarksA);
+			// formData.append("committeeremarksBcat1",committeeremarksBcat1);
+			// formData.append("committeeremarksBcat2",committeeremarksBcat2);
+			// formData.append("committeeremarksBcat3",committeeremarksBcat3);
+			// formData.append("committeeremarksBcat4",committeeremarksBcat4);
+			// formData.append("committeeremarksavgpi",committeeremarksavgpi);
+			// formData.append("committeeremarkscum",committeeremarkscum);
 
 			formData.append("year",year);
 			formData.append("userId",userId);
