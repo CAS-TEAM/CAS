@@ -429,28 +429,34 @@ include 'left-nav.php';
 	  			<div class="col-md-10 text-center admin-filter-box">
 
 	  				<div class="row justify-content-center">
-	  					<div class="col-md-10 text-center">
+	  					<div class="col-md-12 text-center">
 	  						<label class="col-form-label text-center" style="font-size: 23px;color: white;">Multiplication Factor</label>
 	  					</div>
-
 	  				</div> 
+	  				<hr style="border: 0.5px solid #c8c8c8">
 
 	  				<div class="row">
-	  					<div class="col-md-4">
-	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -41px">Current Year</label>
+	  					<div class="col-md-3 offset-md-1">
+	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -101px">Current Year</label>
 	  					</div>
-	  					<div class="col-md-4 offset-md-1">
-	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -35px">Previous Year</label>
+	  					<div class="col-md-3 offset-md-1">
+	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -240px">Previous Year</label>
+	  					</div>
+	  					<div class="col-md-3 offset-md-1">
+	  						<label for="" class="col-form-label" style="font-size: 18px;color: white;margin-left: -395px">Last to last Year</label>
 	  					</div>
 	  				</div>
 	        		<div class="row align-items-center" style="padding-bottom: 10px;padding-top: 10px;padding-left: 7px">
-						<div class="col-md-4 offset-md-1">
+						<div class="col-md-2 offset-md-1">
 	    					<input class="form-control" type="number" step="0.01" style="width: 120%;margin-left: -25px" value="<?php echo $currentyearmf; ?>" name="v1forcurryear" id="v1forcurryear"/>
 	    				</div>
-			    		<div class="col-md-4 offset-md-1">
-			    			<input class="form-control" type="number" step="0.01" style="width: 120%;margin-left: -25px" value="<?php echo $previousyearmf; ?>" name="v2forcurryear" id="v2forcurryear"/>
+			    		<div class="col-md-2 offset-md-1">
+			    			<input class="form-control" type="number" step="0.01" style="width: 120%;margin-left: -30px" value="<?php echo $previousyearmf; ?>" name="v2forcurryear" id="v2forcurryear"/>
 			    		</div>
-			    		<div class="col-md-2">
+			    		<div class="col-md-2 offset-md-1">
+			    			<input class="form-control" type="number" step="0.01" style="width: 120%;margin-left: -50px" value="<?php echo $previousyearmf; ?>" name="v3forcurryear" id="v3forcurryear"/>
+			    		</div>
+			    		<div class="col-md-3">
 							<button type="submit" class="btn btn-success" id="saveforv" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">SAVE</button>
 						</div>
 					</div><br>

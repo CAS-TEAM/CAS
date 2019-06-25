@@ -24,18 +24,110 @@ body{
 	/*height:100%;*/
 }
 
-/*.form-control{
+.form-control{
 	width: 120px !important;
 }
-*/
+
+.totalcpartb{
+	width: 70px !important;
+}
+
+.examdutiespartb{
+	width: 250px !important;
+}
+
+.detailspartb{
+	width: 320px !important;
+}
+
+.pipartb{
+	width: 355px !important;
+}
+
+.adminpost{
+	width: 490px !important;
+}
+
+.degreeawarded{
+	width: 180px !important;
+}
+
+.dos{
+	width: 150px !important;
+}
+
+.grantamount{
+	width: 200px !important;
+}
+
+.patent{
+	width: 405px !important;
+}
+
+.patentdate{
+	width: 205px !important;
+}
+
+.seminarscat4{
+	width: 385px !important;
+}
+
+.ogbycat4{
+	width: 180px !important;
+}
+
+.partaformcontrol{
+	width: 295px !important;
+}
+
+.usersettingsformcontrol{
+	width: 295px !important;
+}
+
+.usersettingspswformcontrol{
+	width: 480px !important;
+}
+
+.loginformcontrol{
+	width: 390px !important;
+}
+
+
+.forgotpswformcontrol{
+	width: 310px !important;
+}
+
+.summaryyears{
+	width: 50px !important;
+}
+
+.summaryyearspi{
+	width: 90px !important;
+}
+
+.summaryyearsaverage{
+	width: 210px !important;
+}
+
+.summaryyearscum{
+	width: 410px !important;
+}
+
+.summaryhodrecommend{
+	width: 380px !important;
+}
+
+.createuserformcontrol{
+	width: 240px !important;
+}
 
 .bg-overlay  {
-		height: 550px;
-		background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),url('../defaults/indexback.jpg') center center no-repeat scroll;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		background-size: cover;
-		-o-background-size: cover;
+	height: 550px;
+	background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),url('../defaults/indexback.jpg') center center no-repeat scroll;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
  
 }
 

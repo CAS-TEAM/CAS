@@ -242,9 +242,9 @@ $lasttolastyearmf=0.33;
 							<th class="text-center">Category</th>
 							<th class="text-center">Max.<br> Marks for PI</th>
 							<th class="text-center">Criteria</th>
-							<th class="text-center">A<br> Last to Last Academic Year<br> <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
-							<th class="text-center">B<br> Last Academic Year<br> <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-							<th class="text-center">C<br> Current Academic Year<br> <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+							<th class="text-center" style="column-width: 260px">A<br> Last to Last Academic Year<br> <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
+							<th class="text-center" style="column-width: 260px">B<br> Last Academic Year<br> <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
+							<th class="text-center" style="column-width: 260px">C<br> Current Academic Year<br> <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
 
 						</tr>
 						<tbody>
@@ -258,7 +258,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $lparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $lparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
@@ -270,7 +270,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academic_lasttolast' value="<?php echo $lparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academic_lasttolast' value="<?php echo $lparta_gpi_pi_self_a/50*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -280,7 +280,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicA_last' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='last_academicA_last' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
@@ -292,7 +292,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academic_last' value="<?php echo $pparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academic_last' value="<?php echo $pparta_gpi_pi_self_a/50*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -302,7 +302,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicA_current' value="<?php echo $cparta_gpi_pi_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='current_academicA_current' value="<?php echo $cparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
@@ -314,7 +314,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicA_current' value="<?php echo $cparta_gpi_pi_self_a/50*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicA_current' value="<?php echo $cparta_gpi_pi_self_a/50*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -329,7 +329,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $lcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $lcat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -341,7 +341,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBI_lasttolast' value="<?php echo ($lcat1_pitotal_self_a/100)*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBI_lasttolast' value="<?php echo ($lcat1_pitotal_self_a/100)*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -351,7 +351,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBI_last' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='last_academicBI_last' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -363,7 +363,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBI_last' value="<?php echo ($pcat1_pitotal_self_a/100)*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBI_last' value="<?php echo ($pcat1_pitotal_self_a/100)*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -373,7 +373,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='current_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -385,7 +385,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -400,7 +400,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -412,7 +412,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -422,7 +422,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='last_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -434,7 +434,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -444,7 +444,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='current_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
@@ -456,7 +456,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -471,7 +471,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
@@ -483,7 +483,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a/175*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -493,7 +493,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='last_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
@@ -505,7 +505,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a/175*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -515,7 +515,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='current_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
@@ -527,7 +527,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a/175*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a/175*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -542,7 +542,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
@@ -554,7 +554,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a/75*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -564,7 +564,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='last_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
@@ -576,7 +576,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a/75*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -586,7 +586,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">(</label>
 										</div>
 										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" disabled/>
+											<input type="number" step="0.01" name='current_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
 										</div>
 										<div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
@@ -598,7 +598,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a/75*100; ?>" class="form-control" style="width: 100%" disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a/75*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
 									</div>
 								</td>
@@ -611,7 +611,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $PPtotal; ?>" disabled/>
+											<input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $PPtotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
@@ -623,7 +623,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_avgA_lasttolast' value="<?php echo $PP; ?>" class="form-control" style="width: 100%"  disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_avgA_lasttolast' value="<?php echo $PP; ?>" class="form-control summaryyearspi" style="width: 100%"  disabled/>
 										</div>
 									</div>
 								</td>
@@ -633,7 +633,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_avgA_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
+											<input type="number" step="0.01" name='last_academicBIV_avgA_last' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
@@ -645,7 +645,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_avgA_last' value="<?php echo $A; ?>" class="form-control" style="width: 100%"  disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_avgA_last' value="<?php echo $A; ?>" class="form-control summaryyearspi" style="width: 100%"  disabled/>
 										</div>
 									</div>
 								</td>
@@ -655,7 +655,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">C =</label>
 										</div>
 										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_avgB_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Btotal; ?>" disabled/>
+											<input type="number" step="0.01" name='last_academicBIV_avgB_last' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Btotal; ?>" disabled/>
 										</div>
 										<div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
@@ -667,7 +667,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">C =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
-											<input type="number" step="0.01" name='pi_academicBIV_avgB_last' value="<?php echo number_format((float)$B, 2, '.', ''); ?>" class="form-control" style="width: 100%"  disabled/>
+											<input type="number" step="0.01" name='pi_academicBIV_avgB_last' value="<?php echo number_format((float)$B, 2, '.', ''); ?>" class="form-control summaryyearspi" style="width: 100%"  disabled/>
 										</div>
 									</div>
 								</td>
@@ -680,7 +680,7 @@ $lasttolastyearmf=0.33;
 											<label class="col-form-label">Average PI = [ (<?php echo $lasttolastyearmf; ?> * A) + (<?php echo $previousyearmf; ?> * B) + (<?php echo $currentyearmf; ?> * C) ] = </label>
 										</div>
 										<div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_avgpi_last' class="form-control" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
+											<input type="number" step="0.01" name='last_academicBIV_avgpi_last' class="form-control summaryyearsaverage" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
 										</div>
 										<div class="col-md-1 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">%</label>
@@ -2195,12 +2195,12 @@ $lasttolastyearmf=0.33;
 								</td>
 								<td colspan="3">
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $avgpi; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										<input type="number" value="<?php echo $avgpi; ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<td colspan="3">
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $avgpihod; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										<input type="number" value="<?php echo $avgpihod; ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<!-- <td>
@@ -2212,9 +2212,9 @@ $lasttolastyearmf=0.33;
 								if($committee==1 && $recommended==1)
 								{
 									?>
-									<td colspan="2">
+									<td colspan="3">
 										<div class="col-md-12" style="margin:0;padding:0">
-											<input type="number" value="<?php echo $avgpicommittee; ?>" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+											<input type="number" value="<?php echo $avgpicommittee; ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
 									<!-- <td>
@@ -2241,7 +2241,7 @@ $lasttolastyearmf=0.33;
 					<label class="col-form-label"><b>HOD Recommendation:</b></label>
 				</div>
 				<div class="col-md-7">
-					<textarea class="form-control mx-auto" id="hodremarkscum" name="hodremarkscum" maxlength="200"><?php echo $hodremarkscum; ?></textarea><br>
+					<textarea class="form-control mx-auto summaryhodrecommend" id="hodremarkscum" name="hodremarkscum" maxlength="200"><?php echo $hodremarkscum; ?></textarea><br>
 				</div>
 			</div>
 			<?php

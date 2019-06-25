@@ -33,11 +33,11 @@ include 'top.php';
 	                <!--<h5 class="card-title text-center signin-headr">Sign In</h5>-->
 	            	<form class="form-signin" method="POST" action="login_sys.php">
         	      		<div class="form-label-group">
-        	      		 	<input type="email" id="inputEmail" name="email" class="form-control signin-form-input fontAwesome-signin" placeholder="&#xf0e0;  Email address" required autofocus>
+        	      		 	<input type="email" id="inputEmail" name="email" class="form-control signin-form-input fontAwesome-signin loginformcontrol" placeholder="&#xf0e0;  Email address" required autofocus>
           				</div><br>
 
               			<div class="form-label-group">
-                			<input type="password" id="inputPassword" name="password" class="form-control signin-form-input fontAwesome-signin" placeholder="&#xf13e;   Password" required autofocus>
+                			<input type="password" id="inputPassword" name="password" class="form-control signin-form-input fontAwesome-signin loginformcontrol" placeholder="&#xf13e;   Password" required autofocus>
                 		</div>
 	              			
               			<br>
@@ -67,7 +67,7 @@ include 'top.php';
 							        	<form class="send-otp-form" action="" method="POST">
 								        	<div class="row">
 								        		<div class="col-md-8 text-left">
-								         			<input type="text" class="form-control register-form-input" name="email" placeholder="Enter E-mail" required>
+								         			<input type="text" class="form-control register-form-input forgotpswformcontrol" name="email" placeholder="Enter E-mail" required>
 								         		</div>
 								         		<div class="col-md-4 text-center">
 								         			<button type="submit" id="send-otp" class="btn btn-success" style="margin-top: 15px">Send OTP</button>
@@ -81,7 +81,7 @@ include 'top.php';
 							         	<form class="verify-otp-form" action="" method="POST">
 								         	<div class="row">
 								         		<div class="col-md-12 text-left">
-								         			<input type="number" class="form-control register-form-input" name="otp" placeholder="Enter OTP" required>
+								         			<input type="number" class="form-control register-form-input forgotpswformcontrol" name="otp" placeholder="Enter OTP" required>
 								         		</div>
 								         	</div><br>
 

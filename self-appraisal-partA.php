@@ -66,7 +66,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="text" name="faculty_name" id="faculty_name" maxlength="100"/>
+							   <input class="form-control partalabel partaformcontrol" type="text" name="faculty_name" id="faculty_name" maxlength="100"/>
 							</div>
 						</div>							
 		    		</div>
@@ -77,7 +77,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							    <input class="form-control partalabel" type="text" name="ecode" id="ecode"/>
+							    <input class="form-control partalabel partaformcontrol" type="text" name="ecode" id="ecode"/>
 							</div>
 						</div>
 		    		</div>
@@ -93,7 +93,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="text" name="praddr" id="praddr" maxlength="200"/>
+							   <input class="form-control partalabel partaformcontrol" type="text" name="praddr" id="praddr" maxlength="200"/>
 							</div>
 						</div>							
 		    		</div>
@@ -104,7 +104,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="text" name="peaddr" id="peaddr" maxlength="200"/>
+							   <input class="form-control partalabel partaformcontrol" type="text" name="peaddr" id="peaddr" maxlength="200"/>
 							</div>
 						</div>
 		    		</div>
@@ -118,7 +118,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="email" name="email" id="email" maxlength="50"/>
+							   <input class="form-control partalabel partaformcontrol" type="email" name="email" id="email" maxlength="50"/>
 							</div>
 						</div>					
 		    		</div>
@@ -129,7 +129,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="text" name="mobileno" id="mobileno" maxlength="15"/>
+							   <input class="form-control partalabel partaformcontrol" type="text" name="mobileno" id="mobileno" maxlength="15"/>
 							</div>	  
 						</div>
 		    		</div>
@@ -145,7 +145,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="text" name="highq" id="highq" maxlength="50"/>
+							   <input class="form-control partalabel partaformcontrol" type="text" name="highq" id="highq" maxlength="50"/>
 							</div>
 						</div>
 
@@ -158,7 +158,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel" type="date" name="dob" id="dob"  />
+							   <input class="form-control partalabel partaformcontrol" type="date" name="dob" id="dob"  />
 							</div>
 						</div>
 		    		</div>
@@ -183,7 +183,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="desi" id="desi" maxlength="50"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="desi" id="desi" maxlength="50"/>
 					</div>
 				</div>
 			</div>
@@ -195,7 +195,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="nameo" id="nameo" maxlength="50"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="nameo" id="nameo" maxlength="50"/>
 					</div>
 				</div>
 			</div>		
@@ -210,7 +210,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="pdesi" id="pdesi"  maxlength="50"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="pdesi" id="pdesi"  maxlength="50"/>
 					</div>
 				</div>
 			</div>
@@ -222,7 +222,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="date" name="dojkjsce" id="dojkjsce" />
+						<input class="form-control partalabel partaformcontrol" type="date" name="dojkjsce" id="dojkjsce" />
 					</div>
 				</div>
 			</div>		
@@ -234,7 +234,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="number" name="pscale" id="pscale"  />
+						<input class="form-control partalabel partaformcontrol" type="number" name="pscale" id="pscale"  />
 					</div>
 				</div>
 			</div>
@@ -246,7 +246,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="number" name="pbg" id="pbg"  />
+						<input class="form-control partalabel partaformcontrol" type="number" name="pbg" id="pbg"  />
 					</div>
 				</div>
 			</div>		
@@ -266,7 +266,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="lastdesisel" id="lastdesisel" maxlength="50"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="lastdesisel" id="lastdesisel" maxlength="50"/>
 					</div>
 				</div>
 			</div>
@@ -278,7 +278,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="date" name="promowef" id="promowef"/>
+						<input class="form-control partalabel partaformcontrol" type="date" name="promowef" id="promowef"/>
 					</div>
 				</div>
 			</div>
@@ -290,7 +290,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="number" name="cscales" id="cscales"  />
+						<input class="form-control partalabel partaformcontrol" type="number" name="cscales" id="cscales"  />
 					</div>
 				</div>
 			</div>
@@ -302,7 +302,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="number" name="cbasics" id="cbasics"  />
+						<input class="form-control partalabel partaformcontrol" type="number" name="cbasics" id="cbasics"  />
 					</div>
 				</div>
 			</div>
@@ -323,7 +323,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="lastdesicas" id="lastdesicas" maxlength="50"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="lastdesicas" id="lastdesicas" maxlength="50"/>
 					</div>
 				</div>
 			</div>
@@ -335,7 +335,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="date" name="promowefcas" id="promowefcas"/>
+						<input class="form-control partalabel partaformcontrol" type="date" name="promowefcas" id="promowefcas"/>
 					</div>
 				</div>
 			</div>
@@ -347,7 +347,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control" type="number" name="cscalecas" id="cscalecas" />
+						<input class="form-control partaformcontrol" type="number" name="cscalecas" id="cscalecas" />
 					</div>
 				</div>
 			</div>
@@ -359,7 +359,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control" type="number" name="cbasiccas" id="cbasiccas"  />
+						<input class="form-control partaformcontrol" type="number" name="cbasiccas" id="cbasiccas"  />
 					</div>
 				</div>
 			</div>
@@ -399,7 +399,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="nameofdegree" id="nameofdegree" maxlength="100"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="nameofdegree" id="nameofdegree" maxlength="100"/>
 					</div>
 				</div>
 			</div>
@@ -411,7 +411,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel" type="text" name="institute" id="institute" maxlength="100" />
+						<input class="form-control partalabel partaformcontrol" type="text" name="institute" id="institute" maxlength="100" />
 					</div>
 				</div>
 			</div>

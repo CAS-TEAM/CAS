@@ -460,7 +460,7 @@ include 'left-nav.php';
     				</div>
 					  
 					<div class="col-4" style="margin:0;padding:0;padding-right:10px">
-					   <input class="form-control" type="text" name="total_c" id="total_c" maxlength="200"/>
+					   <input class="form-control totalcpartb" type="text" name="total_c" id="total_c" maxlength="200"/>
 					</div>
 				</div>							
     		</div>
@@ -511,14 +511,14 @@ include 'left-nav.php';
 									  	<tbody>
 									    	<tr>
 
-									      		<td><input class="form-control selfapp" id="cat1_pi1_self_a" type="number"  min="0" max="40" value="<?php echo $cat1_pi1_self_a; ?>"></td>
+									      		<td><input class="form-control selfapp pipartb " id="cat1_pi1_self_a" type="number"  min="0" max="40" value="<?php echo $cat1_pi1_self_a; ?>"></td>
 
 												<?php
 
 										      	if($hod==1 || $committee==1)
 										      	{
 										      		?>
-													<td><input class="form-control hodapp" id="cat1_pi1_hod_a" type="number" min="0" max="40" value="<?php echo $cat1_pi1_hod_a; ?>"></td>
+													<td><input class="form-control hodapp pipartb" id="cat1_pi1_hod_a" type="number" min="0" max="40" value="<?php echo $cat1_pi1_hod_a; ?>"></td>
 													<?php
 										      	}
 										      	
@@ -526,7 +526,7 @@ include 'left-nav.php';
 										      	if($committee==1)
 										      	{
 										      		?>
-													 <td><input class="form-control commapp" id="cat1_pi1_committee_a" type="number" min="0" max="40" value="<?php echo $cat1_pi1_committee_a; ?>"></td>
+													 <td><input class="form-control commapp pipartb" id="cat1_pi1_committee_a" type="number" min="0" max="40" value="<?php echo $cat1_pi1_committee_a; ?>"></td>
 													<?php
 										      	}
 										      	?>
@@ -581,10 +581,10 @@ include 'left-nav.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='odpstest1' id='odpstest1' class="form-control" maxlength="200" />
+								<input type="text" name='odpstest1' id='odpstest1' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oepstest1' id='oepstest1' class="form-control" maxlength="200" />
+								<input type="text" name='oepstest1' id='oepstest1' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -611,10 +611,10 @@ include 'left-nav.php';
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='odpstest2' id='odpstest2' class="form-control" maxlength="200" />
+								<input type="text" name='odpstest2' id='odpstest2' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oepstest2' id='oepstest2' class="form-control" maxlength="200" />
+								<input type="text" name='oepstest2' id='oepstest2' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -641,10 +641,10 @@ include 'left-nav.php';
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='odtest1in' id='odtest1in' class="form-control" maxlength="200" />
+								<input type="text" name='odtest1in' id='odtest1in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest1in' id='oetest1in' class="form-control" maxlength="200" />
+								<input type="text" name='oetest1in' id='oetest1in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -671,10 +671,10 @@ include 'left-nav.php';
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='odtest2in' id='odtest2in' class="form-control" maxlength="200" />
+								<input type="text" name='odtest2in' id='odtest2in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest2in' id='oetest2in' class="form-control" maxlength="200" />
+								<input type="text" name='oetest2in' id='oetest2in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -701,10 +701,10 @@ include 'left-nav.php';
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='odtest1ass' id='odtest1ass' class="form-control" maxlength="200" />
+								<input type="text" name='odtest1ass' id='odtest1ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control" maxlength="200" />
+								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -731,10 +731,10 @@ include 'left-nav.php';
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='odtest2ass' id='odtest2ass' class="form-control" maxlength="200" />
+								<input type="text" name='odtest2ass' id='odtest2ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control" maxlength="200" />
+								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -757,14 +757,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addrese'>
+		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control" maxlength="200" />
+								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesesup' id='oeesesup' class="form-control" maxlength="200" />
+								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -791,10 +791,10 @@ include 'left-nav.php';
 		                    	<td>8</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='odeseps' id='odeseps' class="form-control" maxlength="200" />
+								<input type="text" name='odeseps' id='odeseps' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeeseps' id='oeeseps' class="form-control" maxlength="200" />
+								<input type="text" name='oeeseps' id='oeeseps' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<div class="filepartb">
@@ -821,10 +821,10 @@ include 'left-nav.php';
 		                    	<td>9</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='odesein' id='odesein' class="form-control" maxlength="200" />
+								<input type="text" name='odesein' id='odesein' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesein' id='oeesein' class="form-control" maxlength="200" />
+								<input type="text" name='oeesein' id='oeesein' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -851,10 +851,10 @@ include 'left-nav.php';
 		                    	<td>10</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='odeseth' id='odeseth' class="form-control" maxlength="200" />
+								<input type="text" name='odeseth' id='odeseth' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeeseth' id='oeeseth' class="form-control" maxlength="200" />
+								<input type="text" name='oeeseth' id='oeeseth' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -881,10 +881,10 @@ include 'left-nav.php';
 		                    	<td>11</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='odesepo' id='odesepo' class="form-control" maxlength="200" />
+								<input type="text" name='odesepo' id='odesepo' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesepo' id='oeesepo' class="form-control" maxlength="200" />
+								<input type="text" name='oeesepo' id='oeesepo' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -911,10 +911,10 @@ include 'left-nav.php';
 		                    	<td>12</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='odesere_ass' id='odesere_ass' class="form-control" maxlength="200" />
+								<input type="text" name='odesere_ass' id='odesere_ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control" maxlength="200" />
+								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -942,10 +942,10 @@ include 'left-nav.php';
 		                    	<td>13</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='odproofr' id='odproofr' class="form-control" maxlength="200" />
+								<input type="text" name='odproofr' id='odproofr' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeproofr' id='oeproofr' class="form-control" maxlength="200" />
+								<input type="text" name='oeproofr' id='oeproofr' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -972,10 +972,10 @@ include 'left-nav.php';
 		                    	<td>14</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='odopenday' id='odopenday' class="form-control" maxlength="200" />
+								<input type="text" name='odopenday' id='odopenday' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeopenday' id='oeopenday' class="form-control" maxlength="200" />
+								<input type="text" name='oeopenday' id='oeopenday' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1025,10 +1025,10 @@ include 'left-nav.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='edpstest1' id='edpstest1' class="form-control"/>
+								<input type="text" name='edpstest1' id='edpstest1' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eepstest1' id='eepstest1' class="form-control"/>
+								<input type="text" name='eepstest1' id='eepstest1' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1055,10 +1055,10 @@ include 'left-nav.php';
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='edpstest2' id='edpstest2' class="form-control"/>
+								<input type="text" name='edpstest2' id='edpstest2' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eepstest2' id='eepstest2' class="form-control"/>
+								<input type="text" name='eepstest2' id='eepstest2' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1085,10 +1085,10 @@ include 'left-nav.php';
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='edtest1in' id='edtest1in' class="form-control"/>
+								<input type="text" name='edtest1in' id='edtest1in' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest1in' id='eetest1in' class="form-control"/>
+								<input type="text" name='eetest1in' id='eetest1in' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1115,10 +1115,10 @@ include 'left-nav.php';
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='edtest2in' id='edtest2in' class="form-control"/>
+								<input type="text" name='edtest2in' id='edtest2in' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest2in' id='eetest2in' class="form-control"/>
+								<input type="text" name='eetest2in' id='eetest2in' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1145,10 +1145,10 @@ include 'left-nav.php';
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='edtest1ass' id='edtest1ass' class="form-control"/>
+								<input type="text" name='edtest1ass' id='edtest1ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control"/>
+								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1175,10 +1175,10 @@ include 'left-nav.php';
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='edtest2ass' id='edtest2ass' class="form-control"/>
+								<input type="text" name='edtest2ass' id='edtest2ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control"/>
+								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1201,14 +1201,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addrese'>
+		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
-								<input type="text" name='edesesup' id='edesesup' class="form-control"/>
+								<input type="text" name='edesesup' id='edesesup' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesesup' id='eeesesup' class="form-control"/>
+								<input type="text" name='eeesesup' id='eeesesup' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1235,10 +1235,10 @@ include 'left-nav.php';
 		                    	<td>8</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='edeseps' id='edeseps' class="form-control"/>
+								<input type="text" name='edeseps' id='edeseps' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeeseps' id='eeeseps' class="form-control"/>
+								<input type="text" name='eeeseps' id='eeeseps' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<div class="filepartb">
@@ -1265,10 +1265,10 @@ include 'left-nav.php';
 		                    	<td>9</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='edesein' id='edesein' class="form-control"/>
+								<input type="text" name='edesein' id='edesein' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesein' id='eeesein' class="form-control"/>
+								<input type="text" name='eeesein' id='eeesein' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1295,10 +1295,10 @@ include 'left-nav.php';
 		                    	<td>10</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='edeseth' id='edeseth' class="form-control"/>
+								<input type="text" name='edeseth' id='edeseth' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeeseth' id='eeeseth' class="form-control"/>
+								<input type="text" name='eeeseth' id='eeeseth' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1325,10 +1325,10 @@ include 'left-nav.php';
 		                    	<td>11</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='edesepo' id='edesepo' class="form-control"/>
+								<input type="text" name='edesepo' id='edesepo' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesepo' id='eeesepo' class="form-control"/>
+								<input type="text" name='eeesepo' id='eeesepo' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1355,10 +1355,10 @@ include 'left-nav.php';
 		                    	<td>12</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='edesere_ass' id='edesere_ass' class="form-control"/>
+								<input type="text" name='edesere_ass' id='edesere_ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control"/>
+								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1385,10 +1385,10 @@ include 'left-nav.php';
 		                    	<td>13</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='edproofr' id='edproofr' class="form-control"/>
+								<input type="text" name='edproofr' id='edproofr' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeproofr' id='eeproofr' class="form-control"/>
+								<input type="text" name='eeproofr' id='eeproofr' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1415,10 +1415,10 @@ include 'left-nav.php';
 		                    	<td>14</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='edopenday' id='edopenday' class="form-control"/>
+								<input type="text" name='edopenday' id='edopenday' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeopenday' id='eeopenday' class="form-control"/>
+								<input type="text" name='eeopenday' id='eeopenday' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1446,7 +1446,7 @@ include 'left-nav.php';
 					</div>
 				</div>
 			</div>	
-		</div>
+		</div><br>
 
 		<div class="row">
 			<div class="col-md-8">
@@ -1505,14 +1505,14 @@ include 'left-nav.php';
 								  	</thead>
 								  	<tbody>
 									    <tr>
-									      	<td><input class="form-control selfapp" id="cat1_pi2_self_a" type="number"  min="0" max="40" value="<?php echo $cat1_pi2_self_a; ?>"></td>
+									      	<td><input class="form-control selfapp pipartb" id="cat1_pi2_self_a" type="number"  min="0" max="40" value="<?php echo $cat1_pi2_self_a; ?>"></td>
 
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								      			<td><input class="form-control hodapp" id="cat1_pi2_hod_a" type="number" min="0" max="40" value="<?php echo $cat1_pi2_hod_a; ?>"></td>
+								      			<td><input class="form-control hodapp pipartb" id="cat1_pi2_hod_a" type="number" min="0" max="40" value="<?php echo $cat1_pi2_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -1520,7 +1520,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-								      			<td><input class="form-control commapp" id="cat1_pi2_committee_a" type="number" min="0" max="40" value="<?php echo $cat1_pi2_committee_a; ?>"></td>
+								      			<td><input class="form-control commapp pipartb" id="cat1_pi2_committee_a" type="number" min="0" max="40" value="<?php echo $cat1_pi2_committee_a; ?>"></td>
 												<?php
 									      	}
 											
@@ -1558,10 +1558,10 @@ include 'left-nav.php';
 								<tr id='addr30'>
 									<td id='dar1'>1</td>
 									<td>
-									<input type="text" name='dara[]' id='a1' class="form-control"/>
+									<input type="text" name='dara[]' id='a1' class="form-control detailspartb"/>
 									</td>
 									<td>
-									<input type="text" name='darb[]' id='b1' class="form-control"/>
+									<input type="text" name='darb[]' id='b1' class="form-control detailspartb"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -1637,20 +1637,20 @@ include 'left-nav.php';
 							  	</thead>
 							  	<tbody>
 							    	<tr>
-								      	<td><input class="form-control selfapp" id="cat1_pi3_self_a" type="number" min="0" max="10" value="<?php echo $cat1_pi3_self_a; ?>"></td>
+								      	<td><input class="form-control selfapp pipartb" id="cat1_pi3_self_a" type="number" min="0" max="10" value="<?php echo $cat1_pi3_self_a; ?>"></td>
 								      	<?php
 
 								      	if($hod==1 || $committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control hodapp" id="cat1_pi3_hod_a" type="number" min="0" max="10"  value="<?php echo $cat1_pi3_hod_a; ?>"></td>
+							      			<td><input class="form-control hodapp pipartb" id="cat1_pi3_hod_a" type="number" min="0" max="10"  value="<?php echo $cat1_pi3_hod_a; ?>"></td>
 											<?php
 								      	}
 
 								      	if($committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control commapp" id="cat1_pi3_committee_a" type="number" min="0" max="10" value="<?php echo $cat1_pi3_committee_a; ?>"></td>
+							      			<td><input class="form-control commapp pipartb" id="cat1_pi3_committee_a" type="number" min="0" max="10" value="<?php echo $cat1_pi3_committee_a; ?>"></td>
 											<?php
 								      	}
 
@@ -1928,20 +1928,20 @@ include 'left-nav.php';
 							  </thead>
 							  <tbody>
 							    	<tr>
-								      	<td><input class="form-control selfapp" id="cat1_pi4_self_a" type="number" min="0" max="10" value="<?php echo $cat1_pi4_self_a; ?>"></td>
+								      	<td><input class="form-control selfapp pipartb" id="cat1_pi4_self_a" type="number" min="0" max="10" value="<?php echo $cat1_pi4_self_a; ?>"></td>
 								      	<?php
 
 								      	if($hod==1 || $committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control hodapp" id="cat1_pi4_hod_a" type="number" min="0" max="10" value="<?php echo $cat1_pi4_hod_a; ?>"></td>
+							      			<td><input class="form-control hodapp pipartb" id="cat1_pi4_hod_a" type="number" min="0" max="10" value="<?php echo $cat1_pi4_hod_a; ?>"></td>
 											<?php
 								      	}
 
 								      	if($committee==1)
 								      	{
 								      		?>
-							      			<td><input class="form-control commapp" id="cat1_pi4_committee_a" type="number" min="0" max="10"  value="<?php echo $cat1_pi4_committee_a; ?>"></td>
+							      			<td><input class="form-control commapp pipartb" id="cat1_pi4_committee_a" type="number" min="0" max="10"  value="<?php echo $cat1_pi4_committee_a; ?>"></td>
 							      			<?php
 
 								      	}
@@ -2011,13 +2011,13 @@ include 'left-nav.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control selfapp" id="cat1_pitotal_self_a" type="number" min="0" max="100" value="<?php echo $cat1_pitotal_self_a; ?>"></td>
+							      <td><input class="form-control selfapp pipartb" id="cat1_pitotal_self_a" type="number" min="0" max="100" value="<?php echo $cat1_pitotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control hodapp" id="cat1_pitotal_hod_a" type="number" min="0" max="100" value="<?php echo $cat1_pitotal_hod_a; ?>"></td>
+							      		<td><input class="form-control hodapp pipartb" id="cat1_pitotal_hod_a" type="number" min="0" max="100" value="<?php echo $cat1_pitotal_hod_a; ?>"></td>
 										<?php
 							      	}
 							      	
@@ -2025,7 +2025,7 @@ include 'left-nav.php';
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control commapp" id="cat1_pitotal_committee_a" type="number" min="0" max="100" value="<?php echo $cat1_pitotal_committee_a; ?>"></td>
+							      		<td><input class="form-control commapp pipartb" id="cat1_pitotal_committee_a" type="number" min="0" max="100" value="<?php echo $cat1_pitotal_committee_a; ?>"></td>
 										<?php
 							      	}
 							      	?>
@@ -2083,7 +2083,7 @@ include 'left-nav.php';
 								<tr id='addr50'>
 									<td id='hasr1'>1</td>
 									<td>
-									<input type="text" name='ha[]' id='ha1' class="form-control" maxlength="200" />
+									<input type="text" name='ha[]' id='ha1' class="form-control adminpost" maxlength="200" />
 									</td>
 									<td>
 									<input type="text" name='hb[]' id='hb1' class="form-control" maxlength="200" />
@@ -2166,20 +2166,20 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat2_pii1_self_a" type="number" min="0" max="40" value="<?php echo $cat2_pii1_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat2_pii1_self_a" type="number" min="0" max="40" value="<?php echo $cat2_pii1_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control hodapp" id="cat2_pii1_hod_a" type="number" min="0" max="40" value="<?php echo $cat2_pii1_hod_a; ?>"></td>
+									      		<td><input class="form-control hodapp pipartb" id="cat2_pii1_hod_a" type="number" min="0" max="40" value="<?php echo $cat2_pii1_hod_a; ?>"></td>
 												<?php
 									      	}
 
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat2_pii1_committee_a" type="number" min="0" max="40" value="<?php echo $cat2_pii1_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat2_pii1_committee_a" type="number" min="0" max="40" value="<?php echo $cat2_pii1_committee_a; ?>"></td>
 												<?php
 									      	}
 									      	?>
@@ -2220,7 +2220,7 @@ include 'left-nav.php';
 								<tr id='addr60'>
 									<td id='actsr1'>1</td>
 									<td>
-									<input type="text" name='ea[]' id='ea1' class="form-control"/>
+									<input type="text" name='ea[]' id='ea1' class="form-control adminpost"/>
 									</td>
 									<td>
 									<input type="text" name='eb[]' id='eb1' class="form-control"/>
@@ -2302,13 +2302,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat2_pii2_self_a" type="number" min="0" max="20" value="<?php echo $cat2_pii2_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat2_pii2_self_a" type="number" min="0" max="20" value="<?php echo $cat2_pii2_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control hodapp" id="cat2_pii2_hod_a" type="number" min="0" max="20" value="<?php echo $cat2_pii2_hod_a; ?>"></td>
+								     			<td><input class="form-control hodapp pipartb" id="cat2_pii2_hod_a" type="number" min="0" max="20" value="<?php echo $cat2_pii2_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2316,7 +2316,7 @@ include 'left-nav.php';
 								      		if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat2_pii2_committee_a" type="number" min="0" max="20" value="<?php echo $cat2_pii2_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat2_pii2_committee_a" type="number" min="0" max="20" value="<?php echo $cat2_pii2_committee_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2358,7 +2358,7 @@ include 'left-nav.php';
 								<tr id='addr70'>
 									<td id="exca1">1</td>
 									<td>
-									<input type="text" name="eca[]" id="eca1" class="form-control"/>
+									<input type="text" name="eca[]" id="eca1" class="form-control adminpost"/>
 									</td>
 									<td>
 									<input type="text" name="ecb[]" id="ecb1" class="form-control"/>
@@ -2440,13 +2440,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat2_pii3_self_a" type="number" min="0" max="20" value="<?php echo $cat2_pii3_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat2_pii3_self_a" type="number" min="0" max="20" value="<?php echo $cat2_pii3_self_a; ?>"></td>
 									      	<?php
 
 											if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control hodapp" id="cat2_pii3_hod_a" type="number" min="0" max="20" value="<?php echo $cat2_pii3_hod_a; ?>"></td>
+								     			<td><input class="form-control hodapp pipartb" id="cat2_pii3_hod_a" type="number" min="0" max="20" value="<?php echo $cat2_pii3_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2454,7 +2454,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control commapp" id="cat2_pii3_committee_a" type="number" min="0" max="20" value="<?php echo $cat2_pii3_committee_a; ?>"></td>
+								     			<td><input class="form-control commapp pipartb" id="cat2_pii3_committee_a" type="number" min="0" max="20" value="<?php echo $cat2_pii3_committee_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2496,7 +2496,7 @@ include 'left-nav.php';
 								<tr id='addr80'>
 									<td id="csr1">1</td>
 									<td>
-									<input type="text" name="ca[]" id="ca1" class="form-control"/>
+									<input type="text" name="ca[]" id="ca1" class="form-control adminpost"/>
 									</td>
 									<td>
 									<input type="text" name="cb[]" id="cb1" class="form-control"/>
@@ -2578,20 +2578,20 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat2_pii4_self_a" type="number" min="0" max=20" value="<?php echo $cat2_pii4_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat2_pii4_self_a" type="number" min="0" max=20" value="<?php echo $cat2_pii4_self_a; ?>"></td>
 
 									      	<?php
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control hodapp" id="cat2_pii4_hod_a" type="number" min="0" max=20" value="<?php echo $cat2_pii4_hod_a; ?>"></td>
+								     			<td><input class="form-control hodapp pipartb" id="cat2_pii4_hod_a" type="number" min="0" max=20" value="<?php echo $cat2_pii4_hod_a; ?>"></td>
 
 												<?php
 									      	}
 									      	if($committee==1)
 									      	{
 									      		?>
-								     			<td><input class="form-control commapp" id="cat2_pii4_committee_a" type="number" min="0" max=20" value="<?php echo $cat2_pii4_committee_a; ?>"></td>
+								     			<td><input class="form-control commapp pipartb" id="cat2_pii4_committee_a" type="number" min="0" max=20" value="<?php echo $cat2_pii4_committee_a; ?>"></td>
 
 												<?php
 									      	}
@@ -2655,13 +2655,13 @@ include 'left-nav.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control selfapp" id="cat2_piitotal_self_a" type="number" min="0" max="100" value="<?php echo $cat2_piitotal_self_a; ?>"></td>
+							      <td><input class="form-control selfapp pipartb" id="cat2_piitotal_self_a" type="number" min="0" max="100" value="<?php echo $cat2_piitotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control hodapp" id="cat2_piitotal_hod_a" type="number" min="0" max="100" value="<?php echo $cat2_piitotal_hod_a; ?>"></td>
+							      		<td><input class="form-control hodapp pipartb" id="cat2_piitotal_hod_a" type="number" min="0" max="100" value="<?php echo $cat2_piitotal_hod_a; ?>"></td>
 
 										<?php
 							      	}
@@ -2669,7 +2669,7 @@ include 'left-nav.php';
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control commapp" id="cat2_piitotal_committee_a" type="number" min="0" max="100" value="<?php echo $cat2_piitotal_committee_a; ?>"></td>
+							      		<td><input class="form-control commapp pipartb" id="cat2_piitotal_committee_a" type="number" min="0" max="100" value="<?php echo $cat2_piitotal_committee_a; ?>"></td>
 
 										<?php
 							      	}
@@ -2862,13 +2862,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii1_self_a" type="number"  min="0" max="100" value="<?php echo $cat3_piii1_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii1_self_a" type="number"  min="0" max="100" value="<?php echo $cat3_piii1_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control hodapp" id="cat3_piii1_hod_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_hod_a; ?>"></td>
+									      		<td><input class="form-control hodapp pipartb" id="cat3_piii1_hod_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2877,7 +2877,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat3_piii1_committee_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii1_committee_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3063,13 +3063,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii2_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii2_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii2_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii2_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii2_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii2_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii2_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii2_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3078,7 +3078,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat3_piii2_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii2_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii2_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii2_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3265,13 +3265,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii3_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii3_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii3_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii3_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii3_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii3_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii3_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii3_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3280,7 +3280,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat3_piii3_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii3_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii3_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii3_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -3468,20 +3468,20 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii4_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii4_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii4_self_a" type="number"  min="0" max="15" value="<?php echo $cat3_piii4_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii4_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii4_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii4_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii4_hod_a; ?>"></td>
 												<?php
 									      	}
 
 									      	if($committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control commapp" id="cat3_piii4_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii4_committee_a; ?>"></td>
+												<td><input class="form-control commapp pipartb" id="cat3_piii4_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii4_committee_a; ?>"></td>
 												<?php
 									      	}
 									      	?>
@@ -3532,7 +3532,7 @@ include 'left-nav.php';
 									<input type="number" id='phdts' name='phdts' class="form-control"/>
 								</td>
 								<td>
-									<input type="number" id='phdda' name='phdda' class="form-control"/>
+									<input type="number" id='phdda' name='phdda' class="form-control degreeawarded"/>
 								</td>
 								<td>
 									<!-- <input type="number" name='phdpi' class="form-control"/> -->
@@ -3573,20 +3573,20 @@ include 'left-nav.php';
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control selfapp" id="cat3_piii5_self_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_self_a; ?>"></td>
+													      <td><input class="form-control selfapp pipartb" id="cat3_piii5_self_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_self_a; ?>"></td>
 													      <?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control hodapp" id="cat3_piii5_hod_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_hod_a; ?>"></td>
+															<td><input class="form-control hodapp pipartb" id="cat3_piii5_hod_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_hod_a; ?>"></td>
 															<?php
 												      	}
 
 												      	if($committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control commapp" id="cat3_piii5_committee_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_committee_a; ?>"></td>
+															<td><input class="form-control commapp pipartb" id="cat3_piii5_committee_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_committee_a; ?>"></td>
 															<?php
 												      	}
 													      
@@ -3634,7 +3634,7 @@ include 'left-nav.php';
 									<input type="number" id='mtechts' name='mtechts' class="form-control"/>
 								</td>
 								<td>
-									<input type="number" id='mtechda' name='mtechda' class="form-control"/>
+									<input type="number" id='mtechda' name='mtechda' class="form-control degreeawarded"/>
 								</td>
 								<td>
 									<!-- <input type="number" name='mtechpi' class="form-control"/> -->
@@ -3675,14 +3675,14 @@ include 'left-nav.php';
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control selfapp" id="cat3_piii6_self_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_self_a; ?>"></td>
+													      <td><input class="form-control selfapp pipartb" id="cat3_piii6_self_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_self_a; ?>"></td>
 
 													      <?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control hodapp" id="cat3_piii6_hod_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_hod_a; ?>"></td>
+															<td><input class="form-control hodapp pipartb" id="cat3_piii6_hod_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_hod_a; ?>"></td>
 															<?php
 												      	}
 
@@ -3691,7 +3691,7 @@ include 'left-nav.php';
 												      	if($committee==1)
 												      	{
 												      		?>
-												      		<td><input class="form-control commapp" id="cat3_piii6_committee_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_committee_a; ?>"></td>
+												      		<td><input class="form-control commapp pipartb" id="cat3_piii6_committee_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_committee_a; ?>"></td>
 															<?php
 												      	}
 
@@ -3742,7 +3742,7 @@ include 'left-nav.php';
 									<input type="number" id='btechts' name='btechts' class="form-control"/>
 								</td>
 								<td>
-									<input type="number" id='btechda' name='btechda' class="form-control"/>
+									<input type="number" id='btechda' name='btechda' class="form-control degreeawarded"/>
 								</td>
 								<td>
 									<!-- <input type="number" name='btechpi' class="form-control"/> -->
@@ -3783,20 +3783,20 @@ include 'left-nav.php';
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control selfapp" id="cat3_piii7_self_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_self_a; ?>"></td>
+													      <td><input class="form-control selfapp pipartb" id="cat3_piii7_self_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_self_a; ?>"></td>
 													      <?php
 
 													      	if($hod==1 || $committee==1)
 													      	{
 													      		?>
-																<td><input class="form-control hodapp" id="cat3_piii7_hod_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_hod_a; ?>"></td>
+																<td><input class="form-control hodapp pipartb" id="cat3_piii7_hod_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_hod_a; ?>"></td>
 																<?php
 													      	}
 
 													      	if($committee==1)
 													      	{
 													      		?>
-																<td><input class="form-control commapp" id="cat3_piii7_committee_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_committee_a; ?>"></td>
+																<td><input class="form-control commapp pipartb" id="cat3_piii7_committee_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_committee_a; ?>"></td>
 																<?php
 													      	}
 													      	?>
@@ -3913,10 +3913,10 @@ include 'left-nav.php';
 									<input type="text" name="ab[]" id="ab1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="dc[]" id="dc1" class="form-control"/>
+									<input type="date" name="dc[]" id="dc1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="number" name="gd[]" id="gd1" class="form-control"/>
+									<input type="number" name="gd[]" id="gd1" class="form-control grantamount"/>
 									</td>	
 									<td>
 									<div class="filepartb">
@@ -3995,13 +3995,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii8_self_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii8_self_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii8_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii8_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -4009,7 +4009,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control commapp" id="cat3_piii8_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_committee_a; ?>"></td>
+												<td><input class="form-control commap pipartb" id="cat3_piii8_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -4058,10 +4058,10 @@ include 'left-nav.php';
 									<input type="text" name="aab[]" id="aab1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="ddc[]" id="ddc1" class="form-control"/>
+									<input type="date" name="ddc[]" id="ddc1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="number" name="ggd[]" id="ggd1" class="form-control"/>
+									<input type="number" name="ggd[]" id="ggd1" class="form-control grantamount"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4142,13 +4142,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii9_self_a" type="number" min="0" max="15" value="<?php echo $cat3_piii9_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii9_self_a" type="number" min="0" max="15" value="<?php echo $cat3_piii9_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii9_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii9_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii9_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piii9_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -4158,7 +4158,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat3_piii9_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii9_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii9_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii9_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -4209,10 +4209,10 @@ include 'left-nav.php';
 									<input type="text" name="acb[]" id="acb1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="dcc[]" id="dcc1" class="form-control"/>
+									<input type="date" name="dcc[]" id="dcc1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="number" name="gcd[]" id="gcd1" class="form-control"/>
+									<input type="number" name="gcd[]" id="gcd1" class="form-control grantamount"/>
 									</td>	
 									<td>
 									<div class="filepartb">
@@ -4291,13 +4291,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii10_self_a" type="number" min="0" max="20" value="<?php echo $cat3_piii10_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii10_self_a" type="number" min="0" max="20" value="<?php echo $cat3_piii10_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii10_hod_a" type="number" min="0" max="20" value="<?php echo $cat3_piii10_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii10_hod_a" type="number" min="0" max="20" value="<?php echo $cat3_piii10_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -4307,7 +4307,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat3_piii10_committee_a" type="number" min="0" max="20" value="<?php echo $cat3_piii10_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii10_committee_a" type="number" min="0" max="20" value="<?php echo $cat3_piii10_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -4350,10 +4350,10 @@ include 'left-nav.php';
 								<tr id='addr130'>
 									<td id="pip1">1</td>
 									<td>
-									<input type="text" name="dpi[]" id="dpi1" class="form-control" maxlength="200"/>
+									<input type="text" name="dpi[]" id="dpi1" class="form-control patent" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="drf[]" id="drf1" class="form-control"/>
+									<input type="date" name="drf[]" id="drf1" class="form-control patentdate"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4433,13 +4433,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp" id="cat3_piii11_self_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii11_self_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_self_a; ?>"></td>
 									      <?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control hodapp" id="cat3_piii11_hod_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_hod_a; ?>"></td>
+												<td><input class="form-control hodapp pipartb" id="cat3_piii11_hod_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_hod_a; ?>"></td>
 
 												<?php
 									      	}
@@ -4449,7 +4449,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat3_piii11_committee_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii11_committee_a" type="number" min="0" max="25" value="<?php echo $cat3_piii11_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -4521,13 +4521,13 @@ include 'left-nav.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control selfapp" id="cat3_piiitotal_self_a" type="number" min="0" max="175" value="<?php echo $cat3_piiitotal_self_a; ?>"></td>
+							      <td><input class="form-control selfapp pipartb" id="cat3_piiitotal_self_a" type="number" min="0" max="175" value="<?php echo $cat3_piiitotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-										<td><input class="form-control hodapp" id="cat3_piiitotal_hod_a" type="number" min="0" max="175" value="<?php echo $cat3_piiitotal_hod_a; ?>"></td>
+										<td><input class="form-control hodapp pipartb" id="cat3_piiitotal_hod_a" type="number" min="0" max="175" value="<?php echo $cat3_piiitotal_hod_a; ?>"></td>
 										<?php
 							      	}
 
@@ -4536,7 +4536,7 @@ include 'left-nav.php';
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control commapp" id="cat3_piiitotal_committee_a" type="number" min="0" max="175" value="<?php echo $cat3_piiitotal_committee_a; ?>"></td>
+							      		<td><input class="form-control commapp pipartb" id="cat3_piiitotal_committee_a" type="number" min="0" max="175" value="<?php echo $cat3_piiitotal_committee_a; ?>"></td>
 										<?php
 							      	}
 
@@ -4593,13 +4593,13 @@ include 'left-nav.php';
 								<tr id='addr140'>
 									<td id="sem1">1</td>
 									<td>
-									<input type="text" name="cativ_dp[]" id="cativ_dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ_dp[]" id="cativ_dp1" class="form-control seminarscat4" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="cativ_datee[]" id="cativ_datee1" class="form-control"/>
+									<input type="date" name="cativ_datee[]" id="cativ_datee1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control ogbycat4" maxlength="200"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4679,20 +4679,20 @@ include 'left-nav.php';
 							  		</thead>
 							  		<tbody>
 								    	<tr>
-								      		<td><input class="form-control selfapp" id="cat4_piv1_self_a" type="number" min="0" max="30" value="<?php echo $cat4_piv1_self_a; ?>"></td>
+								      		<td><input class="form-control selfapp pipartb" id="cat4_piv1_self_a" type="number" min="0" max="30" value="<?php echo $cat4_piv1_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control hodapp" id="cat4_piv1_hod_a" type="number" min="0" max="30" value="<?php echo $cat4_piv1_hod_a; ?>"></td>
+									      		<td><input class="form-control hodapp pipartb" id="cat4_piv1_hod_a" type="number" min="0" max="30" value="<?php echo $cat4_piv1_hod_a; ?>"></td>
 												<?php
 									      	}
 
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp" id="cat4_piv1_committee_a" type="number" min="0" max="30" value="<?php echo $cat4_piv1_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat4_piv1_committee_a" type="number" min="0" max="30" value="<?php echo $cat4_piv1_committee_a; ?>"></td>
 												<?php
 									      	}
 									      	?>
@@ -4736,13 +4736,13 @@ include 'left-nav.php';
 								<tr id='addr150'>
 									<td id="inv1">1</td>
 									<td>
-									<input type="text" name="cativ1_dp[]" id="cativ1_dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1_dp[]" id="cativ1_dp1" class="form-control seminarscat4" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="cativ1_datee[]" id="cativ1_datee1" class="form-control"/>
+									<input type="date" name="cativ1_datee[]" id="cativ1_datee1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control ogbycat4" maxlength="200"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4822,20 +4822,20 @@ include 'left-nav.php';
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control selfapp" id="cat4_piv2_self_a" type="number" min="0" max="30" value="<?php echo $cat4_piv2_self_a; ?>"></td>
+								      <td><input class="form-control selfapp pipartb" id="cat4_piv2_self_a" type="number" min="0" max="30" value="<?php echo $cat4_piv2_self_a; ?>"></td>
 								      <?php
 
 								      	if($hod==1 || $committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control hodapp" id="cat4_piv2_hod_a" type="number" min="0" max="30" value="<?php echo $cat4_piv2_hod_a; ?>"></td>
+								      		<td><input class="form-control hodapp pipartb" id="cat4_piv2_hod_a" type="number" min="0" max="30" value="<?php echo $cat4_piv2_hod_a; ?>"></td>
 											<?php
 								      	}
 
 								      	if($committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control commapp" id="cat4_piv2_committee_a" type="number" min="0" max="30" value="<?php echo $cat4_piv2_committee_a; ?>"></td>
+								      		<td><input class="form-control commapp pipartb" id="cat4_piv2_committee_a" type="number" min="0" max="30" value="<?php echo $cat4_piv2_committee_a; ?>"></td>
 											<?php
 								      	}
 								      	
@@ -4875,10 +4875,10 @@ include 'left-nav.php';
 								<tr id='addr160'>
 									<td id="creds1">1</td>
 									<td>
-									<input type="text" name="cativ2_dp[]" id="cativ2_dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2_dp[]" id="cativ2_dp1" class="form-control seminarscat4" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name="cativ2[]" id="cativ21" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2[]" id="cativ21" class="form-control ogbycat4" maxlength="200"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4959,13 +4959,13 @@ include 'left-nav.php';
 								  </thead>
 								  <tbody>
 								    <tr>
-								      <td><input class="form-control selfapp" id="cat4_piv3_self_a" type="number" min="0" max="15" value="<?php echo $cat4_piv3_self_a; ?>"></td>
+								      <td><input class="form-control selfapp pipartb" id="cat4_piv3_self_a" type="number" min="0" max="15" value="<?php echo $cat4_piv3_self_a; ?>"></td>
 
 								      <?php
 								      if($hod==1 || $committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control hodapp" id="cat4_piv3_hod_a" type="number" min="0" max="15" value="<?php echo $cat4_piv3_hod_a; ?>"></td>
+								      		<td><input class="form-control hodapp pipartb" id="cat4_piv3_hod_a" type="number" min="0" max="15" value="<?php echo $cat4_piv3_hod_a; ?>"></td>
 
 											<?php
 								      	}
@@ -4973,7 +4973,7 @@ include 'left-nav.php';
 							      		if($committee==1)
 								      	{
 								      		?>
-								      		<td><input class="form-control commapp" id="cat4_piv3_committee_a" type="number" min="0" max="15" value="<?php echo $cat4_piv3_committee_a; ?>"></td>
+								      		<td><input class="form-control commapp pipartb" id="cat4_piv3_committee_a" type="number" min="0" max="15" value="<?php echo $cat4_piv3_committee_a; ?>"></td>
 
 											<?php
 								      	}
@@ -5039,20 +5039,20 @@ include 'left-nav.php';
 							  </thead>
 							  <tbody>
 							    <tr>
-							      <td><input class="form-control selfapp" id="cat4_pivtotal_self_a" type="number" min="0" max="75" value="<?php echo $cat4_pivtotal_self_a; ?>"></td>
+							      <td><input class="form-control selfapp pipartb" id="cat4_pivtotal_self_a" type="number" min="0" max="75" value="<?php echo $cat4_pivtotal_self_a; ?>"></td>
 							      <?php
 
 							      	if($hod==1 || $committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control hodapp" id="cat4_pivtotal_hod_a" type="number" min="0" max="75" value="<?php echo $cat4_pivtotal_hod_a; ?>"></td>
+							      		<td><input class="form-control hodapp pipartb" id="cat4_pivtotal_hod_a" type="number" min="0" max="75" value="<?php echo $cat4_pivtotal_hod_a; ?>"></td>
 										<?php
 							      	}
 
 							      	if($committee==1)
 							      	{
 							      		?>
-							      		<td><input class="form-control commapp" id="cat4_pivtotal_committee_a" type="number" min="0" max="75" value="<?php echo $cat4_pivtotal_committee_a; ?>"></td>
+							      		<td><input class="form-control commapp pipartb" id="cat4_pivtotal_committee_a" type="number" min="0" max="75" value="<?php echo $cat4_pivtotal_committee_a; ?>"></td>
 										<?php
 							      	}
 							      	?>
@@ -5146,7 +5146,7 @@ include 'left-nav.php';
 
      	$("#add_row1").click(function(){
      		var i=parseInt(document.getElementById('i').value);
-      		alert("i="+i);
+      		// alert("i="+i);
       		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');

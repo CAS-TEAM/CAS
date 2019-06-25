@@ -269,7 +269,7 @@ include 'left-nav.php';
     				</div>
 					  
 					<div class="col-4" style="margin:0;padding:0;padding-right:10px">
-					   <input class="form-control" type="text" name="total_c" id="total_c" maxlength="200"/>
+					   <input class="form-control totalcpartb" type="text" name="total_c" id="total_c" maxlength="200"/>
 					</div>
 				</div>							
     		</div>
@@ -301,12 +301,12 @@ include 'left-nav.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='odpstest1' id='odpstest1' class="form-control" maxlength="200" />
+								<input type="text" name='odpstest1' id='odpstest1' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oepstest1' id='oepstest1' class="form-control" maxlength="200" />
+								<input type="text" name='oepstest1' id='oepstest1' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -325,18 +325,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='odpstest2' id='odpstest2' class="form-control" maxlength="200" />
+								<input type="text" name='odpstest2' id='odpstest2' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oepstest2' id='oepstest2' class="form-control" maxlength="200" />
+								<input type="text" name='oepstest2' id='oepstest2' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -355,18 +355,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='odtest1in' id='odtest1in' class="form-control" maxlength="200" />
+								<input type="text" name='odtest1in' id='odtest1in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest1in' id='oetest1in' class="form-control" maxlength="200" />
+								<input type="text" name='oetest1in' id='oetest1in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -385,18 +385,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='odtest2in' id='odtest2in' class="form-control" maxlength="200" />
+								<input type="text" name='odtest2in' id='odtest2in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest2in' id='oetest2in' class="form-control" maxlength="200" />
+								<input type="text" name='oetest2in' id='oetest2in' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -415,18 +415,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='odtest1ass' id='odtest1ass' class="form-control" maxlength="200" />
+								<input type="text" name='odtest1ass' id='odtest1ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control" maxlength="200" />
+								<input type="text" name='oetest1ass' id='oetest1ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -445,18 +445,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='odtest2ass' id='odtest2ass' class="form-control" maxlength="200" />
+								<input type="text" name='odtest2ass' id='odtest2ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control" maxlength="200" />
+								<input type="text" name='oetest2ass' id='oetest2ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -475,16 +475,16 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='odeseps' id='odeseps' class="form-control" maxlength="200" />
+								<input type="text" name='odeseps' id='odeseps' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeeseps' id='oeeseps' class="form-control" maxlength="200" />
+								<input type="text" name='oeeseps' id='oeeseps' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<div class="filepartb">
@@ -511,12 +511,12 @@ include 'left-nav.php';
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='odesein' id='odesein' class="form-control" maxlength="200" />
+								<input type="text" name='odesein' id='odesein' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesein' id='oeesein' class="form-control" maxlength="200" />
+								<input type="text" name='oeesein' id='oeesein' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -535,18 +535,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='odeseth' id='odeseth' class="form-control" maxlength="200" />
+								<input type="text" name='odeseth' id='odeseth' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeeseth' id='oeeseth' class="form-control" maxlength="200" />
+								<input type="text" name='oeeseth' id='oeeseth' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -565,18 +565,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='odesepo' id='odesepo' class="form-control" maxlength="200" />
+								<input type="text" name='odesepo' id='odesepo' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesepo' id='oeesepo' class="form-control" maxlength="200" />
+								<input type="text" name='oeesepo' id='oeesepo' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -595,18 +595,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='odesere_ass' id='odesere_ass' class="form-control" maxlength="200" />
+								<input type="text" name='odesere_ass' id='odesere_ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control" maxlength="200" />
+								<input type="text" name='oeesere_ass' id='oeesere_ass' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -625,19 +625,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
-
-		                    </tr>
+								</td> -->
+							</tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='odproofr' id='odproofr' class="form-control" maxlength="200" />
+								<input type="text" name='odproofr' id='odproofr' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeproofr' id='oeproofr' class="form-control" maxlength="200" />
+								<input type="text" name='oeproofr' id='oeproofr' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -656,18 +655,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='odopenday' id='odopenday' class="form-control" maxlength="200" />
+								<input type="text" name='odopenday' id='odopenday' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeopenday' id='oeopenday' class="form-control" maxlength="200" />
+								<input type="text" name='oeopenday' id='oeopenday' class="form-control examdutiespartb" maxlength="200" />
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -686,7 +685,7 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 						</tbody>
 					</table>
@@ -715,12 +714,12 @@ include 'left-nav.php';
 								<td>1</td>
 								<td>Paper setting Test 1</td>
 								<td>
-								<input type="text" name='edpstest1' id='edpstest1' class="form-control"/>
+								<input type="text" name='edpstest1' id='edpstest1' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eepstest1' id='eepstest1' class="form-control"/>
+								<input type="text" name='eepstest1' id='eepstest1' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -739,18 +738,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 							</tr>
 		                    <tr id='addr11'>
 		                    	<td>2</td>
 								<td>Paper setting Test 2</td>
 								<td>
-								<input type="text" name='edpstest2' id='edpstest2' class="form-control"/>
+								<input type="text" name='edpstest2' id='edpstest2' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eepstest2' id='eepstest2' class="form-control"/>
+								<input type="text" name='eepstest2' id='eepstest2' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -769,18 +768,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr12'>
 		                    	<td>3</td>
 								<td>Test 1 invigilation</td>
 								<td>
-								<input type="text" name='edtest1in' id='edtest1in' class="form-control"/>
+								<input type="text" name='edtest1in' id='edtest1in' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest1in' id='eetest1in' class="form-control"/>
+								<input type="text" name='eetest1in' id='eetest1in' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -799,18 +798,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr13'>
 		                    	<td>4</td>
 								<td>Test 2 invigilation</td>
 								<td>
-								<input type="text" name='edtest2in' id='edtest2in' class="form-control"/>
+								<input type="text" name='edtest2in' id='edtest2in' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest2in' id='eetest2in' class="form-control"/>
+								<input type="text" name='eetest2in' id='eetest2in' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -829,18 +828,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>5</td>
 								<td>Test 1 paper assessment</td>
 								<td>
-								<input type="text" name='edtest1ass' id='edtest1ass' class="form-control"/>
+								<input type="text" name='edtest1ass' id='edtest1ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control"/>
+								<input type="text" name='eetest1ass' id='eetest1ass' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -859,18 +858,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr14'>
 		                    	<td>6</td>
 								<td>Test 2 paper assessment</td>
 								<td>
-								<input type="text" name='edtest2ass' id='edtest2ass' class="form-control"/>
+								<input type="text" name='edtest2ass' id='edtest2ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control"/>
+								<input type="text" name='eetest2ass' id='eetest2ass' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -889,16 +888,16 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE paper setting</td>
 								<td>
-								<input type="text" name='edeseps' id='edeseps' class="form-control"/>
+								<input type="text" name='edeseps' id='edeseps' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeeseps' id='eeeseps' class="form-control"/>
+								<input type="text" name='eeeseps' id='eeeseps' class="form-control examdutiespartb"/>
 								</td>
 								<td>
 								<div class="filepartb">
@@ -925,12 +924,12 @@ include 'left-nav.php';
 		                    	<td>8</td>
 								<td>ESE invigilation/Squad team member</td>
 								<td>
-								<input type="text" name='edesein' id='edesein' class="form-control"/>
+								<input type="text" name='edesein' id='edesein' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesein' id='eeesein' class="form-control"/>
+								<input type="text" name='eeesein' id='eeesein' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -949,18 +948,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr18'>
 		                    	<td>9</td>
 								<td>ESE Theory paper assessment</td>
 								<td>
-								<input type="text" name='edeseth' id='edeseth' class="form-control"/>
+								<input type="text" name='edeseth' id='edeseth' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeeseth' id='eeeseth' class="form-control"/>
+								<input type="text" name='eeeseth' id='eeeseth' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -979,18 +978,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr19'>
 		                    	<td>10</td>
 								<td>ESE Practical/oral examination</td>
 								<td>
-								<input type="text" name='edesepo' id='edesepo' class="form-control"/>
+								<input type="text" name='edesepo' id='edesepo' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesepo' id='eeesepo' class="form-control"/>
+								<input type="text" name='eeesepo' id='eeesepo' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -1009,18 +1008,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr20'>
 		                    	<td>11</td>
 								<td>ESE re-assessment</td>
 								<td>
-								<input type="text" name='edesere_ass' id='edesere_ass' class="form-control"/>
+								<input type="text" name='edesere_ass' id='edesere_ass' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control"/>
+								<input type="text" name='eeesere_ass' id='eeesere_ass' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -1039,18 +1038,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr21'>
 		                    	<td>12</td>
 								<td>Proof reading</td>
 								<td>
-								<input type="text" name='edproofr' id='edproofr' class="form-control"/>
+								<input type="text" name='edproofr' id='edproofr' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeproofr' id='eeproofr' class="form-control"/>
+								<input type="text" name='eeproofr' id='eeproofr' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -1069,18 +1068,18 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 		                    <tr id='addr22'>
 		                    	<td>13</td>
 								<td>Open day</td>
 								<td>
-								<input type="text" name='edopenday' id='edopenday' class="form-control"/>
+								<input type="text" name='edopenday' id='edopenday' class="form-control examdutiespartb"/>
 								</td>
 								<td>
-								<input type="text" name='eeopenday' id='eeopenday' class="form-control"/>
+								<input type="text" name='eeopenday' id='eeopenday' class="form-control examdutiespartb"/>
 								</td>
-								<td>
+								<!-- <td>
 								<div class="filepartb">
 									<div class="row justify-content-center">
 										<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -1099,7 +1098,7 @@ include 'left-nav.php';
 										</div>
 									</div>
 								</div>	
-								</td>
+								</td> -->
 		                    </tr>
 						</tbody>
 					</table>
@@ -1120,7 +1119,8 @@ include 'left-nav.php';
 					</div>
 				</div>							
     		</div>
-		</div>		
+		</div>
+		<br>
 
 		<hr style="border: 0.5px solid #c8c8c8"><br>
 
@@ -1138,10 +1138,10 @@ include 'left-nav.php';
 								<tr id='addr30'>
 									<td id='dar1'>1</td>
 									<td>
-									<input type="text" name='dara[]' id='a1' class="form-control"/>
+									<input type="text" name='dara[]' id='a1' class="form-control detailspartb"/>
 									</td>
 									<td>
-									<input type="text" name='darb[]' id='b1' class="form-control"/>
+									<input type="text" name='darb[]' id='b1' class="form-control detailspartb"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -1430,7 +1430,7 @@ include 'left-nav.php';
 								<tr id='addr50'>
 									<td id='hasr1'>1</td>
 									<td>
-									<input type="text" name='ha[]' id='ha1' class="form-control" maxlength="200" />
+									<input type="text" name='ha[]' id='ha1' class="form-control adminpost" maxlength="200" />
 									</td>
 									<td>
 									<input type="text" name='hb[]' id='hb1' class="form-control" maxlength="200" />
@@ -1491,7 +1491,7 @@ include 'left-nav.php';
 								<tr id='addr60'>
 									<td id='actsr1'>1</td>
 									<td>
-									<input type="text" name='ea[]' id='ea1' class="form-control"/>
+									<input type="text" name='ea[]' id='ea1' class="form-control adminpost"/>
 									</td>
 									<td>
 									<input type="text" name='eb[]' id='eb1' class="form-control"/>
@@ -1550,7 +1550,7 @@ include 'left-nav.php';
 								<tr id='addr70'>
 									<td id="exca1">1</td>
 									<td>
-									<input type="text" name="eca[]" id="eca1" class="form-control"/>
+									<input type="text" name="eca[]" id="eca1" class="form-control adminpost"/>
 									</td>
 									<td>
 									<input type="text" name="ecb[]" id="ecb1" class="form-control"/>
@@ -1610,7 +1610,7 @@ include 'left-nav.php';
 								<tr id='addr80'>
 									<td id="csr1">1</td>
 									<td>
-									<input type="text" name="ca[]" id="ca1" class="form-control"/>
+									<input type="text" name="ca[]" id="ca1" class="form-control adminpost"/>
 									</td>
 									<td>
 									<input type="text" name="cb[]" id="cb1" class="form-control"/>
@@ -2164,7 +2164,7 @@ include 'left-nav.php';
 									<input type="number" id='phdts' name='phdts' class="form-control"/>
 								</td>
 								<td>
-									<input type="number" id='phdda' name='phdda' class="form-control"/>
+									<input type="number" id='phdda' name='phdda' class="form-control degreeawarded"/>
 								</td>
 								<td>
 								<div class="filepartb">
@@ -2196,7 +2196,7 @@ include 'left-nav.php';
 									<input type="number" id='mtechts' name='mtechts' class="form-control"/>
 								</td>
 								<td>
-									<input type="number" id='mtechda' name='mtechda' class="form-control"/>
+									<input type="number" id='mtechda' name='mtechda' class="form-control degreeawarded"/>
 								</td>
 								<td>
 								<div class="filepartb">
@@ -2220,7 +2220,7 @@ include 'left-nav.php';
 								</td>
 		                    </tr>
 		                    <tr id='addr92'>
-		                    	<td>B.Tech</td>
+		                    	<td>B.Tech<br>(Number of groups)</td>
 								<td>
 									<input type="number" id='btechne' name='btechne' class="form-control"/>
 								</td>
@@ -2228,7 +2228,7 @@ include 'left-nav.php';
 									<input type="number" id='btechts' name='btechts' class="form-control"/>
 								</td>
 								<td>
-									<input type="number" id='btechda' name='btechda' class="form-control"/>
+									<input type="number" id='btechda' name='btechda' class="form-control degreeawarded"/>
 								</td>
 								<td>
 								<div class="filepartb">
@@ -2328,10 +2328,10 @@ include 'left-nav.php';
 									<input type="text" name="ab[]" id="ab1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="dc[]" id="dc1" class="form-control"/>
+									<input type="date" name="dc[]" id="dc1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="number" name="gd[]" id="gd1" class="form-control"/>
+									<input type="number" name="gd[]" id="gd1" class="form-control grantamount"/>
 									</td>	
 									<td>
 									<div class="filepartb">
@@ -2397,10 +2397,10 @@ include 'left-nav.php';
 									<input type="text" name="aab[]" id="aab1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="ddc[]" id="ddc1" class="form-control"/>
+									<input type="date" name="ddc[]" id="ddc1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="number" name="ggd[]" id="ggd1" class="form-control"/>
+									<input type="number" name="ggd[]" id="ggd1" class="form-control grantamount"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2465,10 +2465,10 @@ include 'left-nav.php';
 									<input type="text" name="acb[]" id="acb1" class="form-control" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="dcc[]" id="dcc1" class="form-control"/>
+									<input type="date" name="dcc[]" id="dcc1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="number" name="gcd[]" id="gcd1" class="form-control"/>
+									<input type="number" name="gcd[]" id="gcd1" class="form-control grantamount"/>
 									</td>	
 									<td>
 									<div class="filepartb">
@@ -2527,10 +2527,10 @@ include 'left-nav.php';
 								<tr id='addr130'>
 									<td id="pip1">1</td>
 									<td>
-									<input type="text" name="dpi[]" id="dpi1" class="form-control" maxlength="200"/>
+									<input type="text" name="dpi[]" id="dpi1" class="form-control patent" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="drf[]" id="drf1" class="form-control"/>
+									<input type="date" name="drf[]" id="drf1" class="form-control patentdate"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2613,13 +2613,13 @@ include 'left-nav.php';
 								<tr id='addr140'>
 									<td id="sem1">1</td>
 									<td>
-									<input type="text" name="cativ_dp[]" id="cativ_dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ_dp[]" id="cativ_dp1" class="form-control seminarscat4" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="cativ_datee[]" id="cativ_datee1" class="form-control"/>
+									<input type="date" name="cativ_datee[]" id="cativ_datee1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control ogbycat4" maxlength="200"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2681,13 +2681,13 @@ include 'left-nav.php';
 								<tr id='addr150'>
 									<td id="inv1">1</td>
 									<td>
-									<input type="text" name="cativ1_dp[]" id="cativ1_dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1_dp[]" id="cativ1_dp1" class="form-control seminarscat4" maxlength="200"/>
 									</td>
 									<td>
-									<input type="date" name="cativ1_datee[]" id="cativ1_datee1" class="form-control"/>
+									<input type="date" name="cativ1_datee[]" id="cativ1_datee1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control ogbycat4" maxlength="200"/>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2745,10 +2745,10 @@ include 'left-nav.php';
 								<tr id='addr160'>
 									<td id="creds1">1</td>
 									<td>
-									<input type="text" name="cativ2_dp[]" id="cativ2_dp1" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2_dp[]" id="cativ2_dp1" class="form-control seminarscat4" maxlength="200"/>
 									</td>
 									<td>
-									<input type="text" name="cativ2[]" id="cativ21" class="form-control" maxlength="200"/>
+									<input type="text" name="cativ2[]" id="cativ21" class="form-control ogbycat4" maxlength="200"/>
 									</td>
 									<td>
 									<div class="filepartb">

@@ -57,22 +57,22 @@ include 'left-nav.php';
 
 		 							<div class="form-inline">
 									  	<label for="email" class="col-form-label mr-sm-3">Email:</label>
-									  	<input type="email" class="form-control d-inline mb-3" id="email" name="email" style="width: 280px;margin-left: 60px" value="<?php echo $email; ?>" disabled>
+									  	<input type="email" class="form-control d-inline mb-3 usersettingsformcontrol" id="email" name="email" style="width: 280px;margin-left: 60px" value="<?php echo $email; ?>" disabled>
 									</div>
 
 									<div class="form-inline">
 									  	<label for="faculty_name" class="mr-sm-3">Name:</label>
-									  	<input class="form-control partalabel mb-3" type="text" name="faculty_name" style="width: 280px;margin-left: 58px" id="faculty_name" value="<?php echo $faculty_name; ?>"/>
+									  	<input class="form-control partalabel mb-3 usersettingsformcontrol" type="text" name="faculty_name" style="width: 280px;margin-left: 58px" id="faculty_name" value="<?php echo $faculty_name; ?>"/>
 									</div> 
 
 									<div class="form-inline">
 									  	<label for="department" class="mr-sm-3">Department:</label>
-									  	<input class="form-control partalabel mb-3" type="text" name="department" style="width: 280px;margin-left: 20px" id="department" value="<?php echo $department; ?>"/>
+									  	<input class="form-control partalabel mb-3 usersettingsformcontrol" type="text" name="department" style="width: 280px;margin-left: 20px" id="department" value="<?php echo $department; ?>"/>
 									</div> 
 									
 									<div class="form-inline">
 									  	<label for="date_of_joining" class="mr-sm-3">Date of Joining:</label>
-									  	<input class="form-control partalabel mb-3" type="date" name="date_of_joining" style="width: 280px;margin-left: 1px" id="date_of_joining" value="<?php echo $date_of_joining; ?>" disabled/>
+									  	<input class="form-control partalabel mb-3 usersettingsformcontrol" type="date" name="date_of_joining" style="width: 280px;margin-left: 1px" id="date_of_joining" value="<?php echo $date_of_joining; ?>" disabled/>
 									</div><br> 
 								  	
 								  	<div class="row justify-content-center">
@@ -93,12 +93,12 @@ include 'left-nav.php';
 
 		 							<div class="form-inline">
 									  	<!-- <label for="password" class="mr-sm-3">Password:</label> -->
-									  	<input type="password" class="form-control d-inline mb-3 w-100" id="password" name="password" placeholder="New Password"/>
+									  	<input type="password" class="form-control d-inline mb-3 w-100 usersettingspswformcontrol" id="password" name="password" placeholder="New Password"/>
 									</div>
 
 									<div class="form-inline">
 									  	<!-- <label for="cpassword" class="mr-sm-3">Confirm Password:</label> -->
-									  	<input class="form-control partalabel mb-3 w-100" type="password" name="cpassword" id="cpassword" placeholder="Confirm Password"/>
+									  	<input class="form-control partalabel mb-3 w-100 usersettingspswformcontrol" type="password" name="cpassword" id="cpassword" placeholder="Confirm Password"/>
 									</div> 
 								  	
 								  	<div class="row justify-content-center">
