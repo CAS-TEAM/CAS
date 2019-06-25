@@ -760,14 +760,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
 								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
+								<input type="text" name='oeesesup' id='oeesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1204,7 +1204,7 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>

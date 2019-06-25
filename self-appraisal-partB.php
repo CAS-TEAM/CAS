@@ -483,7 +483,7 @@ include 'left-nav.php';
 								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
+								<input type="text" name='oeesesup' id='oeesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!--<div class="filepartb">
