@@ -285,7 +285,7 @@ include 'left-nav.php';
 					
 					
 					<thead>
-						<th colspan="10">ODD SEMESTER</th>					
+						<th colspan="10" style="text-align: left">ODD SEMESTER :</th>					
 					</thead>
 
 						<tr>
@@ -365,7 +365,7 @@ include 'left-nav.php';
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic2">
 					<thead>
-						<th colspan="10">EVEN SEMESTER</th>
+						<th colspan="10" style="text-align: left">EVEN SEMESTER : </th>
 					</thead>
 					     	
 						<tr>
