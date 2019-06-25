@@ -41,7 +41,15 @@ body{
 }
 
 .pipartb{
+	width: 740px !important;
+}
+
+.pipartbhod{
 	width: 355px !important;
+}
+
+.pipartbcomm{
+	width: 230px !important;
 }
 
 .adminpost{

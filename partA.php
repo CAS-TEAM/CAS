@@ -264,7 +264,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel partaformcontrol type="text" name="desi" id="desi" maxlength="50"/>
+						<input class="form-control partalabel partaformcontrol" type="text" name="desi" id="desi" maxlength="50"/>
 					</div>
 				</div>
 			</div>
@@ -1119,6 +1119,33 @@ include 'left-nav.php';
 		?>
 		<script type="text/javascript">
 			enablecomm();
+		</script>
+		<?php
+	}
+
+
+	// Controls width of PI inputs
+	if($userId==$viewerId)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").width(700);
+		</script>
+		<?php
+	}
+	if($hod==1)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").addClass('pipartbhod');
+		</script>
+		<?php
+	}
+	if($committee==1)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").addClass('pipartbcomm');
 		</script>
 		<?php
 	}

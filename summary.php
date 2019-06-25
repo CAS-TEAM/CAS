@@ -2332,7 +2332,7 @@ $lasttolastyearmf=0.33;
 					</div>
 					<div class="col-md-7">
 						<!-- <input type="text" value="<?php echo $final_recomm; ?>" name='final_recomm' id='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" /> -->
-						<textarea type="text" name='final_recomm' id='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200"><?php echo $final_recomm; ?></textarea> 
+						<textarea cols="50" name='final_recomm' id='final_recomm' class="form-control summaryhodrecommend" style="margin: 0;padding: 0" maxlength="200"><?php echo $final_recomm; ?></textarea> 
 					</div>
 				</div><br>
 

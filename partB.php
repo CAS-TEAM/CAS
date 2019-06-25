@@ -492,7 +492,6 @@ include 'left-nav.php';
 									  	<thead>
 									    	<tr>
 										    	<th scope="col">Self</th>
-
 										      	<?php
 
 										      	if($hod==1 || $committee==1)
@@ -5788,8 +5787,35 @@ include 'left-nav.php';
 			enablecomm();
 		</script>
 		<?php
+	}*/
+
+
+	// Controls width of PI inputs
+	if($userId==$viewerId)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").width(700);
+		</script>
+		<?php
 	}
-	*/
+	if($hod==1)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").addClass('pipartbhod');
+		</script>
+		<?php
+	}
+	if($committee==1)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").addClass('pipartbcomm');
+		</script>
+		<?php
+	}
+	
 	?>
 
 </body>
