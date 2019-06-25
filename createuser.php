@@ -46,22 +46,22 @@ include 'left-nav.php';
 							<div class="row">
 								<label class="label-user col-md-2 control-label text-right">Name</label>
 								<div class="col-md-4">
-									<input type="text" class="form-control register-form-input" name="faculty_name" placeholder="Full Name" style="width:90%" required>
+									<input type="text" class="form-control register-form-input createuserformcontrol" name="faculty_name" placeholder="Full Name" style="width:90%" required>
 								</div>
 								<label class="label-user col-md-2 control-label text-right">Email</label>
 								<div class="col-md-4">
-									<input type="email" class="form-control register-form-input" name="email" placeholder="E-mail" style="width:90%" required>
+									<input type="email" class="form-control register-form-input createuserformcontrol" name="email" placeholder="E-mail" style="width:90%" required>
 								</div>
 							</div><br>
 
 							<div class="row">
 								<label class="label-user col-md-2 control-label text-right">Password</label>
 								<div class="col-md-4">
-									<input type="password" class="form-control register-form-input" name="password" placeholder="Password" style="width:90%" required>
+									<input type="password" class="form-control register-form-input createuserformcontrol" name="password" placeholder="Password" style="width:90%" required>
 								</div>
 								<label class="label-user col-md-2 control-label text-right">Confirm Password</label>
 								<div class="col-md-4">
-									<input type="password" class="form-control register-form-input" name="cpassword" placeholder="Retype-Password" style="width:90%" required>
+									<input type="password" class="form-control register-form-input createuserformcontrol" name="cpassword" placeholder="Retype-Password" style="width:90%" required>
 								</div>
 							</div>
 
@@ -70,7 +70,7 @@ include 'left-nav.php';
 							<div class="row">
 								<label class="label-user col-md-2 control-label text-right">Date of Joining</label>
 								<div class="col-md-10">
-									<input type="date" class="form-control register-form-input" name="date_of_joining" placeholder=""  style="width:34%" required>
+									<input type="date" class="form-control register-form-input createuserformcontrol" name="date_of_joining" placeholder=""  style="width:34%" required>
 								</div>
 							</div><br>
 
