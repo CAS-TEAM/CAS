@@ -760,14 +760,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
 								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
+								<input type="text" name='oeesesup' id='oeesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1204,7 +1204,7 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
@@ -5748,13 +5748,15 @@ include 'left-nav.php';
 		$rowl=mysqli_fetch_assoc($resultl);
 		if($rowl['recommend']==0 && $committee==1)
 		{
+			/*
 			?>
 			<script type="text/javascript">
 				$('.pisave').remove();
 			</script>
 			<?php
+			*/
 		}
-		else if($rowl['recommend']==1 && $hod==1)
+		else if(/*$rowl['recommend']==1 && */$hod==1)
 		{
 			?>
 			<script type="text/javascript">
@@ -5860,6 +5862,32 @@ include 'left-nav.php';
 		<?php
 	}
 	*/
+
+	// Controls width of PI inputs
+	if($userId==$viewerId)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").width(700);
+		</script>
+		<?php
+	}
+	if($hod==1)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").addClass('pipartbhod');
+		</script>
+		<?php
+	}
+	if($committee==1)
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipartb").addClass('pipartbcomm');
+		</script>
+		<?php
+	}
 	?>
 
 </body>

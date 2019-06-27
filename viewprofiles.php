@@ -30,7 +30,7 @@ include 'left-nav.php';
 
 				<h2 class="text-center" style="color:white">VIEW PROFILES</h2><br>
 
-				<div class="admin-table">
+				<div class="admin-table" style="margin-left:70px;max-height:500px">
 				<table class="table table-bordered" style="background-color: white">
 				  	<thead style="color: white">
 					    <tr>
@@ -134,12 +134,21 @@ include 'left-nav.php';
 
 						    ?>
 
-						    <td><a href="self-appraisals.php" class="btn btn-info" style="margin-top: 25px">View</a></td>
-						    <td><a href="" class="btn btn-info">Part A</a><a href="" class="btn btn-info" style="margin-top: 10px">Part B</a></td>
-						    <td><a href="" class="btn btn-info">Part A</a><a href="" class="btn btn-info" style="margin-top: 10px">Part B</a></td>
-						    <td><a href="" class="btn btn-info">Part A</a><a href="" class="btn btn-info" style="margin-top: 10px">Part B</a></td>
+						    <td><a href="self-appraisals.php?id=<?php echo $id; ?>" class="btn btn-info" style="margin-top: 25px">View</a></td>
+						    <td>
+						    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-1); ?>" class="btn btn-info">Part A</a>
+						    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-1); ?>" class="btn btn-info" style="margin-top: 10px">Part B</a>
+						    </td>
+						    <td>
+						    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear); ?>" class="btn btn-info">Part A</a>
+						    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear); ?>" class="btn btn-info" style="margin-top: 10px">Part B</a>
+						    </td>
+						    <td>
+						    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear); ?>" class="btn btn-info">Part A</a>
+						    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear); ?>" class="btn btn-info" style="margin-top: 10px">Part B</a>
+						    </td>
 
-						    <td><a href="" class="btn btn-success" style="margin-top: 25px">Summary</a></td>
+						    <td><a href="summary.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear); ?>" class="btn btn-success" style="margin-top: 25px">Summary</a></td>
 
 						      	<!-- <form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
 						      		<td class="table-center">

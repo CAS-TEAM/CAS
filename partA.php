@@ -1072,7 +1072,7 @@ include 'left-nav.php';
 			<?php
 			*/
 		}
-		else if($rowl['recommend']==1 && $hod==1)
+		else if(/*$rowl['recommend']==1 && */$hod==1)
 		{
 			?>
 			<script type="text/javascript">

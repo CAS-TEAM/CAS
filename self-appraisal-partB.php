@@ -476,7 +476,7 @@ include 'left-nav.php';
 									</div>
 								</div> -->	
 								</td>
-							<tr id='addr15'>
+							<tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
@@ -919,14 +919,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addr15'>
+		                    <tr id='addrese'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
+								<input type="text" name='edesesup' id='edesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
+								<input type="text" name='eeesesup' id='eeesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">

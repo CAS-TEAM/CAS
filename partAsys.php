@@ -44,6 +44,7 @@ $srno=$_POST['srno'];
 $course=$_POST['course'];
 $days=$_POST['days'];
 $agency=$_POST['agency'];
+$rolee=$_POST['rolee'];
 $filelocation=$_POST['filelocation'];
 
 // echo $institute.','.$ugpg.','.$customRadioInline1.','.$nameofdegree;
@@ -81,7 +82,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['file']['name'][$i];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$dest')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','$dest')";
 				$result1=mysqli_query($conn,$sql1);
 			}	
 
@@ -91,12 +92,12 @@ if($alreadybegun==1)
 			if($filelocation[$i]!="")
 			{
 				//that means if file was previously attached but now form has been edited and user hasnt manually attached it
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$filelocation[$i]')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','$filelocation[$i]')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 			else
 			{
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','NAN')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','NAN')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 			
@@ -126,14 +127,14 @@ else
 		    $dest = "users/".$email. "/".$_FILES['file']['name'][$i];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$dest')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','$dest')";
 				$result1=mysqli_query($conn,$sql1);
 			}	
 
 		}
 		else
 		{
-			$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','NAN')";
+			$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','NAN')";
 			$result1=mysqli_query($conn,$sql1);
 		}		
 
