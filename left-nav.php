@@ -91,75 +91,56 @@ $admin=$rowp['admin'];
 
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
-							<i class="fab fa-wpforms" aria-hidden="true" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">My CAS forms</span>
+							<i class="fab fa-wpforms" style="font-size: 15px"></i>
+							<span style="font-size: 15px;cursor:pointer">My Part A CAS forms</span>
 						</a>
-
 						<div class="sidebar-submenu">
 							<ul>
-								<li class="sidebar-dropdown dropdown-arrow">
-								<a>
-									<i class="fab fa-wpforms" style="font-size: 15px"></i>
-									<span style="font-size: 15px;cursor:pointer">My Part A forms</span>
-								</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<?php
+								<?php
 
-										for($a=$currentyear; $a>=2017; $a--)
-										{
-											?>
-											<li>
-												<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
-											</li>
-											<?php
-										}
-										/*
-										<li>
-											<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
-										</li>
-										*/
-										?>
-									</ul>
-								</div>
+								for($a=$currentyear; $a>=2017; $a--)
+								{
+									?>
+									<li>
+										<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
+									</li>
+									<?php
+								}
+								/*
+								<li>
+									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
 								</li>
-
-								<li class="sidebar-dropdown dropdown-arrow">
-								<a>
-									<i class="fab fa-wpforms" style="font-size: 15px"></i>
-									<span style="font-size: 15px;cursor:pointer">My Part B forms</span>
-								</a>
-								<div class="sidebar-submenu">
-									<ul>
-										<?php
-
-										for($a=$currentyear; $a>=2017; $a--)
-										{
-											?>
-											<li>
-												<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
-											</li>
-											<?php
-										}
-										/*
-										<li>
-											<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
-										</li>
-										*/
-										?>
-									</ul>
-								</div>
-								</li>
+								*/
+								?>
 							</ul>
 						</div>
 					</li>
+					<li class="sidebar-dropdown dropdown-arrow">
+						<a>
+							<i class="fab fa-wpforms" style="font-size: 15px"></i>
+							<span style="font-size: 15px;cursor:pointer">My Part B CAS forms</span>
+						</a>
+						<div class="sidebar-submenu">
+							<ul>
+								<?php
 
-						
-
-						
-
-
-					
+								for($a=$currentyear; $a>=2017; $a--)
+								{
+									?>
+									<li>
+										<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
+									</li>
+									<?php
+								}
+								/*
+								<li>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
+								</li>
+								*/
+								?>
+							</ul>
+						</div>
+					</li>
 
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
