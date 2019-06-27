@@ -76,12 +76,8 @@ $sqlsfr="SELECT partB FROM submitted_for_review_table WHERE facultyId='$userId' 
 $resultsfr=mysqli_query($conn,$sqlsfr);
 if(mysqli_num_rows($resultsfr)==1)
 {
-	$rowsfr=mysqli_fetch_assoc($resultsfr);
-	if($rowsfr['partB']==1)
-	{
-		$submitted_for_review=true;
-		$sfr_forjs=1;
-	}	
+	$submitted_for_review=true;
+	$sfr_forjs=1;
 }
 
  // this variable is for passing to js...if 0 means submitted_for_Review is false else, 1
@@ -372,7 +368,7 @@ include 'left-nav.php';
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic2">
 					<thead>
-						<th colspan="10" style="text-align: left">EVEN SEMESTER : </th>
+						<th colspan="10" style="text-align: left">EVEN SEMESTER :</th>
 					</thead>
 					     	
 						<tr>
@@ -495,6 +491,7 @@ include 'left-nav.php';
 									  	<thead>
 									    	<tr>
 										    	<th scope="col">Self</th>
+
 										      	<?php
 
 										      	if($hod==1 || $committee==1)
@@ -763,14 +760,14 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addrese'>
+		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
 								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
-								<input type="text" name='oeesesup' id='oeesesup' class="form-control examdutiespartb" maxlength="200" />
+								<input type="text" name='odesesup' id='odesesup' class="form-control examdutiespartb" maxlength="200" />
 								</td>
 								<td>
 								<!-- <div class="filepartb">
@@ -1207,7 +1204,7 @@ include 'left-nav.php';
 								</div> -->	
 								</td>
 		                    </tr>
-		                    <tr id='addrese'>
+		                    <tr id='addr15'>
 		                    	<td>7</td>
 								<td>ESE Supervisor</td>
 								<td>
@@ -5751,13 +5748,11 @@ include 'left-nav.php';
 		$rowl=mysqli_fetch_assoc($resultl);
 		if($rowl['recommend']==0 && $committee==1)
 		{
-			/*
 			?>
 			<script type="text/javascript">
 				$('.pisave').remove();
 			</script>
 			<?php
-			*/
 		}
 		else if($rowl['recommend']==1 && $hod==1)
 		{
@@ -5863,35 +5858,8 @@ include 'left-nav.php';
 			enablecomm();
 		</script>
 		<?php
-	}*/
-
-
-	// Controls width of PI inputs
-	if($userId==$viewerId)
-	{
-		?>
-		<script type="text/javascript">
-			$(".pipartb").width(700);
-		</script>
-		<?php
 	}
-	if($hod==1)
-	{
-		?>
-		<script type="text/javascript">
-			$(".pipartb").addClass('pipartbhod');
-		</script>
-		<?php
-	}
-	if($committee==1)
-	{
-		?>
-		<script type="text/javascript">
-			$(".pipartb").addClass('pipartbcomm');
-		</script>
-		<?php
-	}
-	
+	*/
 	?>
 
 </body>

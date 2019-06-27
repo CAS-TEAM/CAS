@@ -34,17 +34,27 @@ include 'left-nav.php';
 				<table class="table table-bordered" style="background-color: white">
 				  	<thead style="color: white">
 					    <tr>
-					      	<th scope="col" style="background-color: #343a40">#</th>
-					      	<th scope="col" style="background-color: #343a40">Faculty Name</th>
-					      	<th scope="col" style="background-color: #343a40">Email</th>
-					      	<th scope="col" style="background-color: #343a40">Department</th>
-					      	<th scope="col" style="background-color: #343a40">Date of Joining</th>
-					      	<th scope="col" style="background-color: #343a40">Eligibility for CAS</th>
-					      	<th scope="col" style="background-color: #343a40">H.O.D.</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">#</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Faculty Name</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Email</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Department</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Date of Joining</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Eligibility<br> for CAS</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Self Appraisal Forms</th>
+					      	<th scope="col" colspan="3" style="background-color: #343a40;text-align: center">CAS Forms</th>
+					      	<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Faculty Summary</th>
+
+					      	<!-- <th scope="col" style="background-color: #343a40">H.O.D.</th>
 					      	<th scope="col" style="background-color: #343a40">Committee</th>
 					      	<th scope="col" style="background-color: #343a40">Principal</th>
-					      	<th scope="col" style="background-color: #343a40">Admin</th>
+					      	<th scope="col" style="background-color: #343a40">Admin</th> -->
 					    </tr>
+					    <tr>
+					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-2).'-'.($previousyear-1); ?></th>
+					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-1).'-'.($previousyear) ?></th>
+					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear).'-'.($currentyear) ?></th>
+					    </tr>
+
 				  	</thead>
 				  	<tbody>
 				  		<?php
@@ -90,10 +100,10 @@ include 'left-nav.php';
 				  			$email=$row['email'];
 				  			$date_of_joining=$row['date_of_joining'];
 				  			$department=$row['department'];
-				  			$hod=$row['hod'];
-				  			$committee=$row['committee'];
-				  			$principal=$row['principal'];
-				  			$admin=$row['admin'];
+				  			// $hod=$row['hod'];
+				  			// $committee=$row['committee'];
+				  			// $principal=$row['principal'];
+				  			// $admin=$row['admin'];
 
 					  		?>
 						    <tr>
@@ -101,8 +111,8 @@ include 'left-nav.php';
 						      	<td><?php echo $faculty_name; ?></td>
 						      	<td><?php echo $email; ?></td>
 						      	<td><?php echo $department; ?></td>
-						      	<td><?php echo $date_of_joining; ?></td>					      	
-
+						      	<td><?php echo $date_of_joining; ?></td>	
+							
 						    <?php
 							$now = time();
 							$your_date = strtotime($date_of_joining);
@@ -112,18 +122,26 @@ include 'left-nav.php';
 						    if($years>=5)
 						    {
 						    	?>
-						    	<td>Eligible</td>	
+						    	<td><img src="checked.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto"></td>	
 						    	<?php
 						    }
 						    else
 						    {
 						    	?>
-						    	<td>Not Eligible</td>
+						    	<td><img src="error.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto"></td>
 						    	<?php
 						    }
 
 						    ?>
-						      	<form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
+
+						    <td><a href="self-appraisals.php" class="btn btn-info" style="margin-top: 25px">View</a></td>
+						    <td><a href="" class="btn btn-info">Part A</a><a href="" class="btn btn-info" style="margin-top: 10px">Part B</a></td>
+						    <td><a href="" class="btn btn-info">Part A</a><a href="" class="btn btn-info" style="margin-top: 10px">Part B</a></td>
+						    <td><a href="" class="btn btn-info">Part A</a><a href="" class="btn btn-info" style="margin-top: 10px">Part B</a></td>
+
+						    <td><a href="" class="btn btn-success" style="margin-top: 25px">Summary</a></td>
+
+						      	<!-- <form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
 						      		<td class="table-center">
 						      			<?php
 
@@ -195,8 +213,10 @@ include 'left-nav.php';
 		  								}
 
 		  								?>							      		
-		  							</td>		  							
-						      	</form>
+
+		  							</td>
+
+						      	</form> -->
 						      	
 						    </tr>						   
 						    

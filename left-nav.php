@@ -92,7 +92,7 @@ $admin=$rowp['admin'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">My Part A forms</span>
+							<span style="font-size: 15px;cursor:pointer">My Part A CAS forms</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
@@ -118,7 +118,7 @@ $admin=$rowp['admin'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">My Part B forms</span>
+							<span style="font-size: 15px;cursor:pointer">My Part B CAS forms</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>

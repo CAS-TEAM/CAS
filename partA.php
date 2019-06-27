@@ -609,25 +609,31 @@ include 'left-nav.php';
 		  		<div class="row form-inline justify-content-center">
 		  			<div class="nopadding">
 				  		<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="srno1" name="srno[]" value="" placeholder="Sr.no">
+				    		<input type="text" class="dynamic-four sttppartasrno" id="srno1" name="srno[]" value="" data-toggle="tooltip" title="SrNo." placeholder="Sr.no">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 				  		<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="course1" name="course[]" value="" maxlength="100" placeholder="Name of summer school/course">
+				    		<input type="text" class="dynamic-four" id="course1" name="course[]" value="" data-toggle="tooltip" title="Name of summer school/course" maxlength="100" placeholder="Name of summer school/course">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 				  		<div class="form-group">
-				   			<input type="text" class="dynamic-four" id="days1" name="days[]" value="" placeholder="Duration(Days)">
+				   			<input type="text" class="dynamic-four sttppartaduration" id="days1" name="days[]" value="" data-toggle="tooltip" title="Duration(Days)" placeholder="Duration(Days)">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 						<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="agency1" name="agency[]" value="" placeholder="Organising Agency">
+				    		<input type="text" class="dynamic-four sttppartaog" id="agency1" name="agency[]" value="" data-toggle="tooltip" title="Organising Agency" placeholder="Organising Agency">
+				  		</div>
+					</div>
+
+					<div class="nopadding">
+						<div class="form-group">
+				    		<input type="text" class="dynamic-four" id="rolee1" name="rolee[]" value="" data-toggle="tooltip" title="If organised in KJSCE, mention the role played" placeholder="If organised in KJSCE, mention the role played">
 				  		</div>
 					</div>
 					
@@ -903,7 +909,7 @@ include 'left-nav.php';
 	    var divtest = document.createElement("div");
 		divtest.setAttribute("class", "form-group removeclass"+room);
 		var rdiv = 'removeclass'+room;
-	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="srno'+room+'" name="srno[]" value="" placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="days'+room+'" name="days[]" value="" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="agency'+room+'" name="agency[]" value="" placeholder="Organising Agency"></div></div><div class="nopadding"><div class="form-group dynamic-four"><div class="filepart"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="file'+room+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="file'+room+'" name="file[]" value="" placeholder=""><input type="hidden" name="filelocation[]" id="filelocation'+room+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="viewfile'+room+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"></div></div><div class="clear"></div></div>';
+	    divtest.innerHTML = '<div class="row form-inline justify-content-center"><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four sttppartasrno" id="srno'+room+'" name="srno[]" value="" data-toggle="tooltip" title="SrNo." placeholder="Sr.no"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="course'+room+'" name="course[]" value="" data-toggle="tooltip" title="Name of summer school/course" placeholder="Name of summer school/course"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four sttppartaduration" id="days'+room+'" name="days[]" value="" data-toggle="tooltip" title="Duration(days)" placeholder="Duration(days)"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four sttppartaog" id="agency'+room+'" name="agency[]" value="" data-toggle="tooltip" title="Organising Agency" placeholder="Organising Agency"></div></div><div class="nopadding"><div class="form-group"><input type="text" class="dynamic-four" id="rolee'+room+'" name="rolee[]" value="" data-toggle="tooltip" title="If organised in KJSCE, mention the role played" placeholder="If organised in KJSCE, mention the role played"></div></div><div class="nopadding"><div class="form-group dynamic-four"><div class="filepart"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="file'+room+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="file'+room+'" name="file[]" value="" placeholder=""><input type="hidden" name="filelocation[]" id="filelocation'+room+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="viewfile'+room+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div><div class="input-group-btn"> <img class="part-a-minus-button" src="https://img.icons8.com/color/48/000000/minus.png" onclick="remove_education_fields('+ room +');" style="cursor:pointer"></div></div><div class="clear"></div></div>';
 	    
 	    // objTo.appendChild(divtest);
 	    $("#parta_dynamic_form").append(divtest);
