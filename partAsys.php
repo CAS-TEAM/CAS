@@ -13,18 +13,18 @@ echo $year.",".$userId;
 $alreadybegun=mysqli_real_escape_string($conn,$_POST['alreadybegun']);
 echo $alreadybegun;
 
-$faculty_name=mysqli_real_escape_string($conn,$_POST['faculty_name']);
-$ecode=mysqli_real_escape_string($conn,$_POST['ecode']);
+// $faculty_name=mysqli_real_escape_string($conn,$_POST['faculty_name']);
+// $ecode=mysqli_real_escape_string($conn,$_POST['ecode']);
 $praddr=mysqli_real_escape_string($conn,$_POST['praddr']);
 $peaddr=mysqli_real_escape_string($conn,$_POST['peaddr']);
-$email=mysqli_real_escape_string($conn,$_POST['email']);
-$mobileno=mysqli_real_escape_string($conn,$_POST['mobileno']);
+// $email=mysqli_real_escape_string($conn,$_POST['email']);
+// $mobileno=mysqli_real_escape_string($conn,$_POST['mobileno']);
 $highq=mysqli_real_escape_string($conn,$_POST['highq']);
 $dob=mysqli_real_escape_string($conn,$_POST['dob']);
 $desi=mysqli_real_escape_string($conn,$_POST['desi']);
 $nameo=mysqli_real_escape_string($conn,$_POST['nameo']);
 $pdesi=mysqli_real_escape_string($conn,$_POST['pdesi']);
-$dojkjsce=mysqli_real_escape_string($conn,$_POST['dojkjsce']);
+// $dojkjsce=mysqli_real_escape_string($conn,$_POST['dojkjsce']);
 $pscale=mysqli_real_escape_string($conn,$_POST['pscale']);
 $pbg=mysqli_real_escape_string($conn,$_POST['pbg']);
 $lastdesisel=mysqli_real_escape_string($conn,$_POST['lastdesisel']);
@@ -51,7 +51,7 @@ $echo=null;
 if($alreadybegun==1)
 {
 	//if already begun then update data
-	$sql="UPDATE part_a_table SET faculty_name='$faculty_name',ecode='$ecode',praddr='$praddr',peaddr='$peaddr',email='$email',mobileno='$mobileno',highq='$highq',dob='$dob',desi='$desi',nameo='$nameo',pdesi='$pdesi',dojkjsce='$dojkjsce',pscale='$pscale',pbg='$pbg',lastdesisel='$lastdesisel',promowef='$promowef',cscales='$cscales',cbasics='$cbasics',lastdesicas='$lastdesicas',promowefcas='$promowefcas',cscalecas='$cscalecas',cbasiccas='$cbasiccas',customRadioInline1='$customRadioInline1',nameofdegree='$nameofdegree',institute='$institute' WHERE year='$year' AND faculty_id='$userId'";
+	$sql="UPDATE part_a_table SET praddr='$praddr',peaddr='$peaddr',highq='$highq',dob='$dob',desi='$desi',nameo='$nameo',pdesi='$pdesi',pscale='$pscale',pbg='$pbg',lastdesisel='$lastdesisel',promowef='$promowef',cscales='$cscales',cbasics='$cbasics',lastdesicas='$lastdesicas',promowefcas='$promowefcas',cscalecas='$cscalecas',cbasiccas='$cbasiccas',customRadioInline1='$customRadioInline1',nameofdegree='$nameofdegree',institute='$institute' WHERE year='$year' AND faculty_id='$userId'";
 	$result=mysqli_query($conn,$sql);
 
 	$sql3="SELECT id FROM part_a_table WHERE year='$year' AND faculty_id='$userId'";
@@ -111,7 +111,7 @@ if($alreadybegun==1)
 else
 {
 	echo 'already begun='.$alreadybegun;
-	$sql="INSERT INTO part_a_table (year,faculty_id,faculty_name,ecode,praddr,peaddr,email,mobileno,highq,dob,desi,nameo,pdesi,dojkjsce,pscale,pbg,lastdesisel,promowef,cscales,cbasics,lastdesicas,promowefcas,cscalecas,cbasiccas,customRadioInline1,nameofdegree,institute) VALUES ('$year','$userId','$faculty_name','$ecode','$praddr','$peaddr','$email','$mobileno','$highq','$dob','$desi','$nameo','$pdesi','$dojkjsce','$pscale','$pbg','$lastdesisel','$promowef','$cscales','$cbasics','$lastdesicas','$promowefcas','$cscalecas','$cbasiccas','$customRadioInline1','$nameofdegree','$institute')";
+	$sql="INSERT INTO part_a_table (year,faculty_id,praddr,peaddr,highq,dob,desi,nameo,pdesi,pscale,pbg,lastdesisel,promowef,cscales,cbasics,lastdesicas,promowefcas,cscalecas,cbasiccas,customRadioInline1,nameofdegree,institute) VALUES ('$year','$userId','$praddr','$peaddr','$highq','$dob','$desi','$nameo','$pdesi','$pscale','$pbg','$lastdesisel','$promowef','$cscales','$cbasics','$lastdesicas','$promowefcas','$cscalecas','$cbasiccas','$customRadioInline1','$nameofdegree','$institute')";
 	$result=mysqli_query($conn,$sql);
 
 	$formId=mysqli_insert_id($conn);

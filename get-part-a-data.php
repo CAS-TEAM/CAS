@@ -14,6 +14,15 @@ if($year!=2017)
 	$year=$year-1;
 }
 
+$sqlx="SELECT faculty_name, email, date_of_joining, ecode, mobileno FROM faculty_table WHERE id='$userId'";
+$resultx=mysqli_query($conn,$sqlx);
+$rowx=mysqli_fetch_assoc($resultx);
+$faculty_name=$rowx['faculty_name'];
+$email=$rowx['email'];
+$dojkjsce=$rowx['date_of_joining'];
+$ecode=$rowx['ecode'];
+$mobileno=$rowx['mobileno'];
+
 //checking if user has already begun filling the form
 // checking if there is an entry in the database for the current year
 $sql="SELECT id FROM part_a_table WHERE year='$cyear' AND faculty_id='$userId'";
@@ -23,10 +32,27 @@ if(mysqli_num_rows($result)==0)
 {
 	if($cyear==2017)
 	{
-		echo 'not begun';
+		// echo 'not begun';
+		$data=array();
+
+		$data[]=array('notalreadybegun'=>0); //this field will tell general.js to not set the already begun variable in partA.php 
+		
+		$data[]=array('faculty_name'=>$faculty_name);
+
+		$data[]=array('ecode'=>$ecode);
+		
+		$data[]=array('email'=>$email);		
+
+		$data[]=array('mobileno'=>$mobileno);
+		$data[]=array('dojkjsce'=>$dojkjsce);
+
+		$jsonData=json_encode($data);
+
+		echo $jsonData;
 	}
 	else
-	{
+	{	
+
 		$sql="SELECT * FROM part_a_table WHERE year='$year' AND faculty_id='$userId'";
 		$result=mysqli_query($conn,$sql);
 		
@@ -36,17 +62,21 @@ if(mysqli_num_rows($result)==0)
 
 		$data[]=array('notalreadybegun'=>0); //this field will tell general.js to not set the already begun variable in partA.php 
 
-		if($row['faculty_name']!='')
-		{
-			$faculty_name=$row['faculty_name'];
-			$data[]=array('faculty_name'=>$faculty_name);
-		}
+		// if($row['faculty_name']!='')
+		// {
+		// 	$faculty_name=$row['faculty_name'];
+		// 	$data[]=array('faculty_name'=>$faculty_name);
+		// }
+		
+		$data[]=array('faculty_name'=>$faculty_name);
 
-		if($row['ecode']!='')
-		{
-			$ecode=$row['ecode'];
-			$data[]=array('ecode'=>$ecode);
-		}
+		// if($row['ecode']!='')
+		// {
+		// 	$ecode=$row['ecode'];
+		// 	$data[]=array('ecode'=>$ecode);
+		// }
+
+		$data[]=array('ecode'=>$ecode);
 
 		if($row['praddr']!='')
 		{
@@ -60,17 +90,21 @@ if(mysqli_num_rows($result)==0)
 			$data[]=array('peaddr'=>$peaddr);
 		}
 
-		if($row['email']!='')
-		{
-			$email=$row['email'];
-			$data[]=array('email'=>$email);
-		}
+		// if($row['email']!='')
+		// {
+		// 	$email=$row['email'];
+		// 	$data[]=array('email'=>$email);
+		// }
+		
+		$data[]=array('email'=>$email);		
 
-		if($row['mobileno']!='')
-		{
-			$mobileno=$row['mobileno'];
-			$data[]=array('mobileno'=>$mobileno);
-		}
+		// if($row['mobileno']!='')
+		// {
+		// 	$mobileno=$row['mobileno'];
+		// 	$data[]=array('mobileno'=>$mobileno);
+		// }
+
+		$data[]=array('mobileno'=>$mobileno);
 		
 		if($row['highq']!='')
 		{
@@ -102,11 +136,13 @@ if(mysqli_num_rows($result)==0)
 			$data[]=array('pdesi'=>$pdesi);
 		}
 
-		if($row['dojkjsce']!='')
-		{
-			$dojkjsce=$row['dojkjsce'];
-			$data[]=array('dojkjsce'=>$dojkjsce);
-		}	
+		// if($row['dojkjsce']!='')
+		// {
+		// 	$dojkjsce=$row['dojkjsce'];
+		// 	$data[]=array('dojkjsce'=>$dojkjsce);
+		// }	
+
+		$data[]=array('dojkjsce'=>$dojkjsce);
 
 		if($row['pscale']!='')
 		{
@@ -225,17 +261,21 @@ else
 
 	$data=array();
 
-	if($row['faculty_name']!='')
-	{
-		$faculty_name=$row['faculty_name'];
-		$data[]=array('faculty_name'=>$faculty_name);
-	}
+	// if($row['faculty_name']!='')
+	// {
+	// 	$faculty_name=$row['faculty_name'];
+	// 	$data[]=array('faculty_name'=>$faculty_name);
+	// }
 
-	if($row['ecode']!='')
-	{
-		$ecode=$row['ecode'];
-		$data[]=array('ecode'=>$ecode);
-	}
+	$data[]=array('faculty_name'=>$faculty_name);
+
+	// if($row['ecode']!='')
+	// {
+	// 	$ecode=$row['ecode'];
+	// 	$data[]=array('ecode'=>$ecode);
+	// }
+
+	$data[]=array('ecode'=>$ecode);
 
 	if($row['praddr']!='')
 	{
@@ -249,17 +289,21 @@ else
 		$data[]=array('peaddr'=>$peaddr);
 	}
 
-	if($row['email']!='')
-	{
-		$email=$row['email'];
-		$data[]=array('email'=>$email);
-	}
+	// if($row['email']!='')
+	// {
+	// 	$email=$row['email'];
+	// 	$data[]=array('email'=>$email);
+	// }
 
-	if($row['mobileno']!='')
-	{
-		$mobileno=$row['mobileno'];
-		$data[]=array('mobileno'=>$mobileno);
-	}
+	$data[]=array('email'=>$email);
+
+	// if($row['mobileno']!='')
+	// {
+	// 	$mobileno=$row['mobileno'];
+	// 	$data[]=array('mobileno'=>$mobileno);
+	// }
+
+	$data[]=array('mobileno'=>$mobileno);
 	
 	if($row['highq']!='')
 	{
@@ -291,11 +335,13 @@ else
 		$data[]=array('pdesi'=>$pdesi);
 	}
 
-	if($row['dojkjsce']!='')
-	{
-		$dojkjsce=$row['dojkjsce'];
-		$data[]=array('dojkjsce'=>$dojkjsce);
-	}	
+	// if($row['dojkjsce']!='')
+	// {
+	// 	$dojkjsce=$row['dojkjsce'];
+	// 	$data[]=array('dojkjsce'=>$dojkjsce);
+	// }	
+
+	$data[]=array('dojkjsce'=>$dojkjsce);
 
 	if($row['pscale']!='')
 	{

@@ -69,8 +69,19 @@ include 'left-nav.php';
 							
 							<div class="row">
 								<label class="label-user col-md-2 control-label text-right">Date of Joining</label>
-								<div class="col-md-10">
+								<div class="col-md-4">
 									<input type="date" class="form-control register-form-input createuserformcontrol" name="date_of_joining" placeholder=""  style="width:34%" required>
+								</div>
+								<label class="label-user col-md-2 control-label text-right">Mobile No.</label>
+								<div class="col-md-4">
+									<input type="number" class="form-control register-form-input createuserformcontrol" name="mobileno" placeholder=""  style="width:34%" required>
+								</div>
+							</div>
+
+							<div class="row">
+								<label class="label-user col-md-2 control-label text-right">Employee Code</label>
+								<div class="col-md-10">
+									<input type="text" class="form-control register-form-input createuserformcontrol" name="ecode" placeholder=""  style="width:34%" required>
 								</div>
 							</div><br>
 

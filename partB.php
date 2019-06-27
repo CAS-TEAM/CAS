@@ -150,6 +150,9 @@ $cat3_piii6_committee_a=$rowzz['cat3_piii6_committee_a'];
 $cat3_piii7_self_a=$rowzz['cat3_piii7_self_a'];
 $cat3_piii7_hod_a=$rowzz['cat3_piii7_hod_a'];
 $cat3_piii7_committee_a=$rowzz['cat3_piii7_committee_a'];
+$cat3_piiires_self_a=$rowzz['cat3_piiires_self_a'];
+$cat3_piiires_hod_a=$rowzz['cat3_piiires_hod_a'];
+$cat3_piiires_committee_a=$rowzz['cat3_piiires_committee_a'];
 $cat3_piii8_self_a=$rowzz['cat3_piii8_self_a'];
 $cat3_piii8_hod_a=$rowzz['cat3_piii8_hod_a'];
 $cat3_piii8_committee_a=$rowzz['cat3_piii8_committee_a'];
@@ -3576,20 +3579,20 @@ include 'left-nav.php';
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control selfapp pipartb" id="cat3_piii5_self_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_self_a; ?>"></td>
+													      <td><input class="form-control selfapp pipartb" id="cat3_piii5_self_a" type="number" min="0" value="<?php echo $cat3_piii5_self_a; ?>"></td>
 													      <?php
 
 												      	if($hod==1 || $committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control hodapp pipartb" id="cat3_piii5_hod_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_hod_a; ?>"></td>
+															<td><input class="form-control hodapp pipartb" id="cat3_piii5_hod_a" type="number" min="0" value="<?php echo $cat3_piii5_hod_a; ?>"></td>
 															<?php
 												      	}
 
 												      	if($committee==1)
 												      	{
 												      		?>
-															<td><input class="form-control commapp pipartb" id="cat3_piii5_committee_a" type="number" min="0" max="40" value="<?php echo $cat3_piii5_committee_a; ?>"></td>
+															<td><input class="form-control commapp pipartb" id="cat3_piii5_committee_a" type="number" min="0" value="<?php echo $cat3_piii5_committee_a; ?>"></td>
 															<?php
 												      	}
 													      
@@ -3678,7 +3681,7 @@ include 'left-nav.php';
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control selfapp pipartb" id="cat3_piii6_self_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_self_a; ?>"></td>
+													      <td><input class="form-control selfapp pipartb" id="cat3_piii6_self_a" type="text" min="0" value="<?php echo $cat3_piii6_self_a; ?>"></td>
 
 													      <?php
 
@@ -3694,7 +3697,7 @@ include 'left-nav.php';
 												      	if($committee==1)
 												      	{
 												      		?>
-												      		<td><input class="form-control commapp pipartb" id="cat3_piii6_committee_a" type="text" min="0" max="40" value="<?php echo $cat3_piii6_committee_a; ?>"></td>
+												      		<td><input class="form-control commapp pipartb" id="cat3_piii6_committee_a" type="text" min="0" value="<?php echo $cat3_piii6_committee_a; ?>"></td>
 															<?php
 												      	}
 
@@ -3786,20 +3789,20 @@ include 'left-nav.php';
 													  </thead>
 													  <tbody>
 													    <tr>
-													      <td><input class="form-control selfapp pipartb" id="cat3_piii7_self_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_self_a; ?>"></td>
+													      <td><input class="form-control selfapp pipartb" id="cat3_piii7_self_a" type="number" min="0" value="<?php echo $cat3_piii7_self_a; ?>"></td>
 													      <?php
 
 													      	if($hod==1 || $committee==1)
 													      	{
 													      		?>
-																<td><input class="form-control hodapp pipartb" id="cat3_piii7_hod_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_hod_a; ?>"></td>
+																<td><input class="form-control hodapp pipartb" id="cat3_piii7_hod_a" type="number" min="0" value="<?php echo $cat3_piii7_hod_a; ?>"></td>
 																<?php
 													      	}
 
 													      	if($committee==1)
 													      	{
 													      		?>
-																<td><input class="form-control commapp pipartb" id="cat3_piii7_committee_a" type="number" min="0" max="40" value="<?php echo $cat3_piii7_committee_a; ?>"></td>
+																<td><input class="form-control commapp pipartb" id="cat3_piii7_committee_a" type="number" min="0" value="<?php echo $cat3_piii7_committee_a; ?>"></td>
 																<?php
 													      	}
 													      	?>
@@ -3880,9 +3883,82 @@ include 'left-nav.php';
 							</th>
 						</thead> -->
 						<thead>
-							<th colspan="6">10 marks awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year.<br> 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year.<br> 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year.<br> For co-guide the marks will be half.</th>
-						</thead>
+							<th colspan="6">10 marks for awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year.<br> 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year.<br> 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year.<br> For co-guide the marks will be half.</th>
+						</thead>					
 					</table>
+
+					<label class="col-form-label"><b>PI =
+							<button type="button" class="btn btn-primary btn-lg parta-self-btn" data-toggle="modal" data-target="#flipFlop1-cat3res" title="Clicking this button will allow you to appraise this entry" style="height: 60px;width: 60px"><img src="img/appraisals.png" class="parta-self-img" style="height: 30px;width: 30px"></button>
+					</b>
+					</label>
+
+						<!-- The modal -->
+					<div class="modal fade" id="flipFlop1-cat3res" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+						<div class="modal-dialog  modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title" id="modalLabel">Appraisals</h4>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<table class="table table-bordered">
+									  <thead>
+									    <tr>
+									      <th scope="col">Self</th>
+
+									      	<?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">H.O.D</th>
+												<?php
+									      	}
+									      	if($committee==1)
+									      	{
+									      		?>
+									      		<th scope="col">Committee</th>
+												<?php
+									      	}
+									      	?>
+									    </tr>
+									  </thead>
+									  <tbody>
+									    <tr>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piiires_self_a" type="number" min="0" max="15" value="<?php echo $cat3_piiires_self_a; ?>"></td>
+									      <?php
+
+									      	if($hod==1 || $committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control hodapp pipartb" id="cat3_piiires_hod_a" type="number" min="0" max="15" value="<?php echo $cat3_piiires_hod_a; ?>"></td>
+
+												<?php
+									      	}
+
+									      	if($committee==1)
+									      	{
+									      		?>
+												<td><input class="form-control commapp pipartb" id="cat3_piiires_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piiires_committee_a; ?>"></td>
+												<?php
+									      	}
+
+									      	?>
+									      	<input type="hidden" name="year" id="year" value="<?php echo $_GET['year']; ?>">
+									    </tr>
+									 </tbody>
+									</table>
+									<p id="partb_cat3_piiires_msg"></p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="partb_cat3_piiires_btn" class="btn btn-primary pisave">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					</div>
 				</div>
 			</div>
@@ -4012,7 +4088,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-												<td><input class="form-control commap pipartb" id="cat3_piii8_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_committee_a; ?>"></td>
+												<td><input class="form-control commapp pipartb" id="cat3_piii8_committee_a" type="number" min="0" max="15" value="<?php echo $cat3_piii8_committee_a; ?>"></td>
 												<?php
 									      	}
 

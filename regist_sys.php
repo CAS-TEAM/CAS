@@ -10,7 +10,8 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 $cpassword=$_POST['cpassword'];
 $date_of_joining=$_POST['date_of_joining'];
-
+$mobileno=$_POST['mobileno'];
+$ecode=$_POST['ecode'];
 // echo $faculty_name.','.$email;
 
 $department=$_POST['department'];
@@ -64,7 +65,7 @@ if($password==$cpassword)
 	{
 		$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 		// echo "Password matches";
-		$sql="INSERT INTO faculty_table (faculty_name, email, password, date_of_joining, department, faculty, hod, committee, principal) VALUES ('$faculty_name','$email','$hashed_password','$date_of_joining','$department', '$faculty', '$hod', '$committee', '$principal')";
+		$sql="INSERT INTO faculty_table (faculty_name, email, password, ecode, date_of_joining, department, mobileno, faculty, hod, committee, principal) VALUES ('$faculty_name','$email','$hashed_password','$ecode','$date_of_joining','$department','$mobileno','$faculty', '$hod', '$committee', '$principal')";
 	    $result=mysqli_query($conn, $sql);
 
 		// echo "Successfully ADded new User";

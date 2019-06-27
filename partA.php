@@ -1152,6 +1152,22 @@ include 'left-nav.php';
 
 	?>
 
+	<script type="text/javascript">
+		if(localStorage.getItem("change")!=null)
+		{
+			// alert("inner->"+localStorage.getItem("change"));
+			// alert(parseInt(localStorage.getItem("change"))==0);
+			if(parseInt(localStorage.getItem("change"))==0)
+			{
+				// alert('inner->nikaldo');
+				$('#part-a-save-form').remove();
+				$('#part-a-edit-form').remove();
+				change=1;
+				localStorage.setItem("change", change);
+			}
+		}
+	</script>
+
 </div>
 </body>
 </html>
