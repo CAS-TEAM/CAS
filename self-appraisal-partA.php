@@ -446,28 +446,33 @@ include 'left-nav.php';
 		  		<div class="row form-inline justify-content-center">
 		  			<div class="nopadding">
 				  		<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="srno1" name="srno[]" value="" placeholder="Sr.no">
+				    		<input type="text" class="dynamic-four sttppartasrno" id="srno1" name="srno[]" value="" data-toggle="tooltip" title="SrNo." placeholder="Sr.no">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 				  		<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="course1" name="course[]" value="" maxlength="100" placeholder="Name of summer school/course">
+				    		<input type="text" class="dynamic-four" id="course1" name="course[]" value="" data-toggle="tooltip" title="Name of summer school/course" maxlength="100" placeholder="Name of summer school/course">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 				  		<div class="form-group">
-				   			<input type="text" class="dynamic-four" id="days1" name="days[]" value="" placeholder="Duration(Days)">
+				   			<input type="text" class="dynamic-four sttppartaduration" id="days1" name="days[]" value="" data-toggle="tooltip" title="Duration(Days)" placeholder="Duration(Days)">
 				  		</div>
 					</div>
 
 					<div class="nopadding">
 						<div class="form-group">
-				    		<input type="text" class="dynamic-four" id="agency1" name="agency[]" value="" placeholder="Organising Agency">
+				    		<input type="text" class="dynamic-four sttppartaog" id="agency1" name="agency[]" value="" data-toggle="tooltip" title="Organising Agency" placeholder="Organising Agency">
 				  		</div>
 					</div>
-					
+
+					<div class="nopadding">
+						<div class="form-group">
+				    		<input type="text" class="dynamic-four" id="rolee1" name="rolee[]" value="" data-toggle="tooltip" title="If organised in KJSCE, mention the role played" placeholder="If organised in KJSCE, mention the role played">
+				  		</div>
+					</div>
 					<!-- <div class="nopadding">
 						<div class="form-group">
 				    		<input type="file" class="dynamic-four" id="file1" name="file[]" value="" placeholder="">

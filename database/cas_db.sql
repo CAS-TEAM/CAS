@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2019 at 10:48 PM
+-- Generation Time: Jun 28, 2019 at 03:24 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -56,8 +56,10 @@ CREATE TABLE `faculty_table` (
   `faculty_name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(256) NOT NULL,
+  `ecode` varchar(200) NOT NULL,
   `date_of_joining` date NOT NULL,
   `department` varchar(50) NOT NULL,
+  `mobileno` bigint(11) NOT NULL,
   `profilePicLocation` varchar(100) NOT NULL DEFAULT 'defaults/default_userprofile_pic.png',
   `faculty` int(11) NOT NULL,
   `hod` int(11) NOT NULL,
@@ -70,30 +72,31 @@ CREATE TABLE `faculty_table` (
 -- Dumping data for table `faculty_table`
 --
 
-INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `date_of_joining`, `department`, `profilePicLocation`, `faculty`, `hod`, `committee`, `principal`, `admin`) VALUES
-(1, 'Prof. Babaso Aldar', 'babasoaldar@somaiya.edu', '$2y$10$bd4GNgydExAbWXbrf8P1SuVtVBdwxJ2oM66S.j1G/T5utSB1IeSCS', '2018-05-12', 'Computer', 'users/babasoaldar@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 1),
-(2, 'Prof. Manish Potey', 'manish.potey@somaiya.edu', '$2y$10$mRi97USluJQZPZtwSgS3ZOk1yybigUHHRhAJJ/yVPS8rF/DFRTGmK', '2010-08-17', 'Computer', 'users/manish.potey@somaiya.edu/profilepic.jpg', 1, 1, 0, 0, 0),
-(3, 'Jyoti Trymbake', 'jyoti.trymbake@somaiya.edu', '$2y$10$f06wIJ29VeGf1oGfh2P95uHgYPXIPuPwC4NxE/xYolwy2tn3H0O1q', '2011-06-14', 'Computer', 'users/jyoti.trymbake@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 0),
-(4, 'Prof. Poonam Bhogale', 'poonambhogale@somaiya.edu', '$2y$10$W6lbNYTxCAgG2GjeJ8xHuuV/BJg6NCMBifF5pvBJ7aDIiV2bIMTzC', '2008-11-11', 'Etrx', 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
-(5, 'Anjali', 'anjali@gmail.com', '$2y$10$2hpkZa7tqA98LAhOiqq1ieaByObfDo..bwzSLbZCKJRVvhQTziwkW', '1999-07-26', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 1, 1, 0),
-(6, 'Sharvai Patil', 'sharvai.p@somaiya.edu', '$2y$10$lTBgAr587gnLyzoZYR0UB.oS0jywazLATQdJNrRhdw5ltyvWiAlIu', '2001-01-13', 'Computer', 'users/sharvai.p@somaiya.edu/profilepic.jpg', 1, 0, 0, 1, 0),
-(11, 'ï»¿faculty_name', 'email', '$2y$10$LDi9krgwN5CPQAZj31/tdeD/VkvBkkFeHeYWBSgIBUYWSrOHCOK8G', '1970-01-01', 'department', 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
-(12, 'Anjvai', 'anjvai@somaiya.edu', '$2y$10$xwU8.JQXFVdylSGmzRu6sOAI6LwBA6RCSkIfFaN5oH1aOzbAAXJ2.', '1999-12-01', 'Computer', 'defaults/default_userprofile_pic.png', 0, 1, 0, 1, 0),
-(13, 'gfg', 'uhiud@gmail.com', '$2y$10$T7J7Zp7kzXwuzW21FHUI0ekl4RrbFPf2tgEjY3vY508W6nIPM.29a', '1999-12-12', 'Computer', 'defaults/default_userprofile_pic.png', 0, 1, 0, 0, 0),
-(14, 'gfyeu', 'uidhu@gmail.com', '$2y$10$.NZE8URcEbGMEbXTNEupsuOYUXerLNdcH6ChciZb8rg3XJvdioiA.', '2000-04-04', 'Extc', 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
-(15, 'nsiuhfu', 'hiufwh@gmail.com', '$2y$10$OzibKeM11giBfC7x3BMcXeFWmBSEs9tg8x6CCVYfRkSSBrruK0YPq', '1999-03-03', 'Etrx', 'defaults/default_userprofile_pic.png', 1, 1, 1, 1, 1),
-(16, 'jrgjie', 'jjtijo@gmail.com', '$2y$10$hacUv.WPNrPgfcJAi7zxhO2higW9r3Ty/Miq1DFdJ2mf3vAs3/EbK', '2000-04-04', 'Extc', 'defaults/default_userprofile_pic.png', 0, 0, 0, 1, 1),
-(17, 'Faculty', 'faculty@gmail.com', '$2y$10$NSFC/6s5VLwAnIsBLFsKuOGlN9CdOQUK0XxHP0rT0JPDEWDyjP7Mu', '2000-02-02', 'Computer', 'users/faculty@gmail.com/profilepic.png', 1, 0, 0, 0, 0),
-(18, 'HOD', 'hod@gmail.com', '$2y$10$hLP/NqG2tCMqYQD2u45jD.WSW6lCW2Tj5DYhd6UjBKi7rzPbSa./a', '2000-01-01', 'Computer', 'users/hod@gmail.com/profilepic.jpg', 1, 1, 0, 0, 0),
-(19, 'Committee', 'committee@gmail.com', '$2y$10$3Xs1WOGAgilOe0Tzdr8AUeUGLhbIp18FogxmRP3NF5DozwQ0qmfWi', '2000-02-02', 'Computer', 'users/committee@gmail.com/profilepic.jpg', 1, 0, 1, 0, 0),
-(20, 'Admin', 'admin@gmail.com', '$2y$10$5Brkhy3gepjGmawgavhXNe.LfVEFNkiN83WLRNr584wiAteiIiGeW', '2005-06-23', 'Computer', 'users/admin@gmail.com/profilepic.jpg', 1, 0, 0, 0, 1),
-(21, 'Faculty1', 'faculty1@gmail.com', '$2y$10$.2I6BlmzS2/rHufDtJEB6eyCamzWyf5ywl5iFaEkLDgqrLxM3Pbr.', '2000-03-07', 'Computer', 'users/faculty1@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
-(22, 'HOD1', 'hod1@gmail.com', '$2y$10$600i/OfFMlcf0/JJXjh/4OM63tLD0xKyqh.DGazG4UzGcakjvCWNW', '2000-02-20', 'Computer', 'users/hod1@gmail.com/profilepic.jpg', 1, 1, 0, 0, 0),
-(23, 'Committee1', 'committee1@gmail.com', '$2y$10$0aoxxcL6oKEcGu/JRUMnoeFHoEwfcteAbl4bIFO1Z1vQ1LSq5lqVW', '2000-02-05', 'Computer', 'users/committee1@gmail.com/profilepic.png', 1, 0, 1, 0, 0),
-(24, 'faculty 4', 'faculty4@somaiya.edu', '$2y$10$yCjYOlQY43lEU/MECApRjuzJRiaC0es72nAsCzbvDQJYxRnPtCkHi', '2000-02-02', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
-(25, 'Faculty 2', 'faculty2@gmail.com', '$2y$10$ogTIHOwgIkRt.8wjrU0MWuO6Qg3WjVUXZ8mk.Buky32HRUZjR3MJO', '1998-04-14', 'Computer', 'users/faculty2@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
-(26, 'Faculty22', 'faculty22@gmail.com', '$2y$10$kwTGeyVdAA20leAuiSXVCO1wrNoz6Mvzubl5AEmLLkU6geYRzy68u', '1996-04-10', 'Computer', 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
-(27, 'faculty69', 'faculty69@gmail.com', '$2y$10$AuxbU3YSOCXnnsOEBCFERu5CqPlCTrpjCjEG03kqi8Dp3fbvj8QEm', '1998-04-22', 'Computer', 'users/faculty69@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0);
+INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `ecode`, `date_of_joining`, `department`, `mobileno`, `profilePicLocation`, `faculty`, `hod`, `committee`, `principal`, `admin`) VALUES
+(1, 'Prof. Babaso Aldar', 'babasoaldar@somaiya.edu', '$2y$10$bd4GNgydExAbWXbrf8P1SuVtVBdwxJ2oM66S.j1G/T5utSB1IeSCS', '0', '2018-05-12', 'Computer', 0, 'users/babasoaldar@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 1),
+(2, 'Prof. Manish Potey', 'manish.potey@somaiya.edu', '$2y$10$mRi97USluJQZPZtwSgS3ZOk1yybigUHHRhAJJ/yVPS8rF/DFRTGmK', '0', '2010-08-17', 'Computer', 0, 'users/manish.potey@somaiya.edu/profilepic.jpg', 1, 1, 0, 0, 0),
+(3, 'Jyoti Trymbake', 'jyoti.trymbake@somaiya.edu', '$2y$10$f06wIJ29VeGf1oGfh2P95uHgYPXIPuPwC4NxE/xYolwy2tn3H0O1q', '0', '2011-06-14', 'Computer', 0, 'users/jyoti.trymbake@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 0),
+(4, 'Prof. Poonam Bhogale', 'poonambhogale@somaiya.edu', '$2y$10$W6lbNYTxCAgG2GjeJ8xHuuV/BJg6NCMBifF5pvBJ7aDIiV2bIMTzC', '0', '2008-11-11', 'Etrx', 0, 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
+(5, 'Anjali', 'anjali@gmail.com', '$2y$10$2hpkZa7tqA98LAhOiqq1ieaByObfDo..bwzSLbZCKJRVvhQTziwkW', '0', '1999-07-26', 'Computer', 0, 'defaults/default_userprofile_pic.png', 1, 0, 1, 1, 0),
+(6, 'Sharvai Patil', 'sharvai.p@somaiya.edu', '$2y$10$lTBgAr587gnLyzoZYR0UB.oS0jywazLATQdJNrRhdw5ltyvWiAlIu', '0', '2001-01-13', 'Computer', 0, 'users/sharvai.p@somaiya.edu/profilepic.jpg', 1, 0, 0, 1, 0),
+(11, 'ï»¿faculty_name', 'email', '$2y$10$LDi9krgwN5CPQAZj31/tdeD/VkvBkkFeHeYWBSgIBUYWSrOHCOK8G', '0', '1970-01-01', 'department', 0, 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
+(12, 'Anjvai', 'anjvai@somaiya.edu', '$2y$10$xwU8.JQXFVdylSGmzRu6sOAI6LwBA6RCSkIfFaN5oH1aOzbAAXJ2.', '0', '1999-12-01', 'Computer', 0, 'defaults/default_userprofile_pic.png', 0, 1, 0, 1, 0),
+(13, 'gfg', 'uhiud@gmail.com', '$2y$10$T7J7Zp7kzXwuzW21FHUI0ekl4RrbFPf2tgEjY3vY508W6nIPM.29a', '0', '1999-12-12', 'Computer', 0, 'defaults/default_userprofile_pic.png', 0, 1, 0, 0, 0),
+(14, 'gfyeu', 'uidhu@gmail.com', '$2y$10$.NZE8URcEbGMEbXTNEupsuOYUXerLNdcH6ChciZb8rg3XJvdioiA.', '0', '2000-04-04', 'Extc', 0, 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
+(15, 'nsiuhfu', 'hiufwh@gmail.com', '$2y$10$OzibKeM11giBfC7x3BMcXeFWmBSEs9tg8x6CCVYfRkSSBrruK0YPq', '0', '1999-03-03', 'Etrx', 0, 'defaults/default_userprofile_pic.png', 1, 1, 1, 1, 1),
+(16, 'jrgjie', 'jjtijo@gmail.com', '$2y$10$hacUv.WPNrPgfcJAi7zxhO2higW9r3Ty/Miq1DFdJ2mf3vAs3/EbK', '0', '2000-04-04', 'Extc', 0, 'defaults/default_userprofile_pic.png', 0, 0, 0, 1, 1),
+(17, 'Faculty', 'faculty@gmail.com', '$2y$10$NSFC/6s5VLwAnIsBLFsKuOGlN9CdOQUK0XxHP0rT0JPDEWDyjP7Mu', '0', '2000-02-02', 'Computer', 0, 'users/faculty@gmail.com/profilepic.png', 1, 0, 0, 0, 0),
+(18, 'HOD', 'hod@gmail.com', '$2y$10$hLP/NqG2tCMqYQD2u45jD.WSW6lCW2Tj5DYhd6UjBKi7rzPbSa./a', '0', '2000-01-01', 'Computer', 0, 'users/hod@gmail.com/profilepic.jpg', 1, 1, 0, 0, 0),
+(19, 'Committee', 'committee@gmail.com', '$2y$10$3Xs1WOGAgilOe0Tzdr8AUeUGLhbIp18FogxmRP3NF5DozwQ0qmfWi', '0', '2000-02-02', 'Computer', 0, 'users/committee@gmail.com/profilepic.jpg', 1, 0, 1, 0, 0),
+(20, 'Admin', 'admin@gmail.com', '$2y$10$5Brkhy3gepjGmawgavhXNe.LfVEFNkiN83WLRNr584wiAteiIiGeW', '0', '2005-06-23', 'Computer', 0, 'users/admin@gmail.com/profilepic.jpg', 1, 0, 0, 0, 1),
+(21, 'Faculty1', 'faculty1@gmail.com', '$2y$10$.2I6BlmzS2/rHufDtJEB6eyCamzWyf5ywl5iFaEkLDgqrLxM3Pbr.', '0', '2000-03-07', 'Computer', 0, 'users/faculty1@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
+(22, 'HOD1', 'hod1@gmail.com', '$2y$10$600i/OfFMlcf0/JJXjh/4OM63tLD0xKyqh.DGazG4UzGcakjvCWNW', '0', '2000-02-20', 'Computer', 0, 'users/hod1@gmail.com/profilepic.jpg', 1, 1, 0, 0, 0),
+(23, 'Committee1', 'committee1@gmail.com', '$2y$10$0aoxxcL6oKEcGu/JRUMnoeFHoEwfcteAbl4bIFO1Z1vQ1LSq5lqVW', '0', '2000-02-05', 'Computer', 0, 'users/committee1@gmail.com/profilepic.png', 1, 0, 1, 0, 0),
+(24, 'faculty 4', 'faculty4@somaiya.edu', '$2y$10$yCjYOlQY43lEU/MECApRjuzJRiaC0es72nAsCzbvDQJYxRnPtCkHi', '0', '2000-02-02', 'Computer', 0, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
+(25, 'Faculty 2', 'faculty2@gmail.com', '$2y$10$ogTIHOwgIkRt.8wjrU0MWuO6Qg3WjVUXZ8mk.Buky32HRUZjR3MJO', '0', '1998-04-14', 'Computer', 0, 'users/faculty2@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
+(26, 'Faculty22', 'faculty22@gmail.com', '$2y$10$kwTGeyVdAA20leAuiSXVCO1wrNoz6Mvzubl5AEmLLkU6geYRzy68u', '0', '1996-04-10', 'Computer', 0, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
+(28, 'faculty99', 'faculty99@gmail.com', '$2y$10$a6wFTQEyxniHoJpUbiQJs.mvZEI7wsDQDpDTJWM1bmI1vAG8kzQ72', '13005', '1999-02-20', 'Computer', 9969512230, 'users/faculty99@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
+(29, 'Dijon', 'dijon@gmail.com', '$2y$10$6BeD6uJWvTG5appyfCnx2u8hTEEDxiVX7Wy8.xoEF5xSjy.qJucta', '144553', '2004-05-22', 'Computer', 9899657578, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -199,7 +202,7 @@ INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1
 (12, 2018, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (13, 2019, 6, 30, 25, 20, 30, 25, 20, 5, 5, 5, 10, 5, 5, 75, 60, 50),
 (14, 2018, 6, 30, 0, 0, 30, 0, 0, 10, 0, 0, 10, 0, 0, 80, 0, 0),
-(15, 2017, 21, 40, 0, 0, 40, 0, 0, 10, 0, 0, 10, 0, 0, 100, 0, 0),
+(15, 2017, 21, 40, 0, 0, 40, 0, 0, 10, 0, 0, 0, 0, 0, 90, 0, 0),
 (16, 2019, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (17, 2017, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (18, 2019, 25, 20, 20, 15, 30, 25, 20, 5, 5, 5, 10, 5, 5, 65, 55, 45),
@@ -207,7 +210,13 @@ INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1
 (20, 2017, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 60, 50),
 (21, 2017, 27, 20, 15, 10, 0, 0, 0, 0, 0, 0, 10, 5, 10, 50, 20, 20),
 (22, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
-(23, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40);
+(23, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
+(24, 2019, 28, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0),
+(25, 2017, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(26, 2018, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(27, 2019, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(28, 2017, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(29, 2019, 29, 15, 0, 0, 40, 0, 0, 10, 0, 0, 10, 0, 0, 75, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -261,7 +270,13 @@ INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat
 (18, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (19, 2017, 27, 20, 15, 10, 20, 15, 10, 20, 15, 10, 20, 15, 10, 80, 60, 40),
 (20, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
-(21, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40);
+(21, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
+(22, 2019, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(23, 2017, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(24, 2018, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(25, 2019, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(26, 2017, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(27, 2019, 29, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -294,6 +309,9 @@ CREATE TABLE `partb_cat3_pi` (
   `cat3_piii7_self_a` float NOT NULL,
   `cat3_piii7_hod_a` float NOT NULL,
   `cat3_piii7_committee_a` float NOT NULL,
+  `cat3_piiires_self_a` float NOT NULL,
+  `cat3_piiires_hod_a` float NOT NULL,
+  `cat3_piiires_committee_a` float NOT NULL,
   `cat3_piii8_self_a` float NOT NULL,
   `cat3_piii8_hod_a` float NOT NULL,
   `cat3_piii8_committee_a` float NOT NULL,
@@ -315,28 +333,34 @@ CREATE TABLE `partb_cat3_pi` (
 -- Dumping data for table `partb_cat3_pi`
 --
 
-INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `cat3_piii1_hod_a`, `cat3_piii1_committee_a`, `cat3_piii2_self_a`, `cat3_piii2_hod_a`, `cat3_piii2_committee_a`, `cat3_piii3_self_a`, `cat3_piii3_hod_a`, `cat3_piii3_committee_a`, `cat3_piii4_self_a`, `cat3_piii4_hod_a`, `cat3_piii4_committee_a`, `cat3_piii5_self_a`, `cat3_piii5_hod_a`, `cat3_piii5_committee_a`, `cat3_piii6_self_a`, `cat3_piii6_hod_a`, `cat3_piii6_committee_a`, `cat3_piii7_self_a`, `cat3_piii7_hod_a`, `cat3_piii7_committee_a`, `cat3_piii8_self_a`, `cat3_piii8_hod_a`, `cat3_piii8_committee_a`, `cat3_piii9_self_a`, `cat3_piii9_hod_a`, `cat3_piii9_committee_a`, `cat3_piii10_self_a`, `cat3_piii10_hod_a`, `cat3_piii10_committee_a`, `cat3_piii11_self_a`, `cat3_piii11_hod_a`, `cat3_piii11_committee_a`, `cat3_piiitotal_self_a`, `cat3_piiitotal_hod_a`, `cat3_piiitotal_committee_a`) VALUES
-(1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 25, 23, 0, 150, 145, 140),
-(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100),
-(3, 2019, 17, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 7, 24, 24, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 34, 27),
-(4, 2018, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 30),
-(5, 2019, 21, 70, 0, 0, 10, 0, 0, 9, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 15, 0, 0, 15, 0, 0, 21, 0, 0, 150, 0, 0),
-(6, 2018, 21, 50, 0, 0, 11, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 15, 0, 0, 10, 0, 0, 20, 0, 0, 150, 0, 0),
-(7, 2017, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(8, 2019, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(9, 2018, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(10, 2019, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(11, 2018, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(12, 2017, 21, 50, 0, 0, 15, 0, 0, 0, 0, 0, 15, 0, 0, 28, 0, 0, 28, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 75, 0, 0),
-(13, 2019, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(14, 2017, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(15, 2019, 25, 20, 20, 15, 10, 5, 5, 10, 5, 5, 15, 10, 10, 40, 40, 30, 20, 20, 20, 24, 20, 20, 15, 10, 5, 15, 10, 10, 15, 20, 20, 10, 10, 10, 100, 140, 150),
-(16, 2018, 25, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0, 40, 0, 0, 28, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 175, 100, 90),
-(17, 2017, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 150, 100),
-(18, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 50, 0, 0),
-(19, 2017, 27, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0, 40, 0, 0, 34, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 175, 150, 100),
-(20, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
-(21, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 125, 100);
+INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `cat3_piii1_hod_a`, `cat3_piii1_committee_a`, `cat3_piii2_self_a`, `cat3_piii2_hod_a`, `cat3_piii2_committee_a`, `cat3_piii3_self_a`, `cat3_piii3_hod_a`, `cat3_piii3_committee_a`, `cat3_piii4_self_a`, `cat3_piii4_hod_a`, `cat3_piii4_committee_a`, `cat3_piii5_self_a`, `cat3_piii5_hod_a`, `cat3_piii5_committee_a`, `cat3_piii6_self_a`, `cat3_piii6_hod_a`, `cat3_piii6_committee_a`, `cat3_piii7_self_a`, `cat3_piii7_hod_a`, `cat3_piii7_committee_a`, `cat3_piiires_self_a`, `cat3_piiires_hod_a`, `cat3_piiires_committee_a`, `cat3_piii8_self_a`, `cat3_piii8_hod_a`, `cat3_piii8_committee_a`, `cat3_piii9_self_a`, `cat3_piii9_hod_a`, `cat3_piii9_committee_a`, `cat3_piii10_self_a`, `cat3_piii10_hod_a`, `cat3_piii10_committee_a`, `cat3_piii11_self_a`, `cat3_piii11_hod_a`, `cat3_piii11_committee_a`, `cat3_piiitotal_self_a`, `cat3_piiitotal_hod_a`, `cat3_piiitotal_committee_a`) VALUES
+(1, 2019, 2, 78, 78, 70, 41, 11, 10, 44, 755, 40, 56, 56, 50, 5588, 213, 100, 89, 78, 50, 77, 88, 50, 0, 0, 0, 333, 44, 20, 878, 7878, 30, 2300, 11, 10, 25, 23, 0, 150, 145, 140),
+(2, 2018, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 100, 100),
+(3, 2019, 17, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 7, 24, 24, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 34, 27),
+(4, 2018, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 30),
+(5, 2019, 21, 70, 0, 0, 10, 0, 0, 9, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 0, 0, 0, 10, 0, 0, 15, 0, 0, 15, 0, 0, 21, 0, 0, 150, 0, 0),
+(6, 2018, 21, 50, 0, 0, 11, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 0, 0, 0, 10, 0, 0, 15, 0, 0, 10, 0, 0, 20, 0, 0, 150, 0, 0),
+(7, 2017, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(8, 2019, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(9, 2018, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(10, 2019, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(11, 2018, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(12, 2017, 21, 50, 0, 0, 15, 0, 0, 0, 0, 0, 15, 0, 0, 28, 0, 0, 36, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 83, 0, 0),
+(13, 2019, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(14, 2017, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(15, 2019, 25, 20, 20, 15, 10, 5, 5, 10, 5, 5, 15, 10, 10, 40, 40, 30, 20, 20, 20, 24, 20, 20, 0, 0, 0, 15, 10, 5, 15, 10, 10, 15, 20, 20, 10, 10, 10, 100, 140, 150),
+(16, 2018, 25, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0, 40, 0, 0, 28, 0, 0, 0, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 175, 100, 90),
+(17, 2017, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 150, 100),
+(18, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 50, 0, 0),
+(19, 2017, 27, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0, 40, 0, 0, 34, 0, 0, 0, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 175, 150, 100),
+(20, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
+(21, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 150, 125, 100),
+(22, 2019, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 15, 10, 8, 7, 10, 6, 3, 10, 34, 25, 30, 15, 0, 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 34, 25, 30),
+(23, 2017, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 8, 0, 0, 6, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0),
+(24, 2018, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 12, 0, 0, 4, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 0, 0),
+(25, 2019, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 10, 0, 0, 46, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0),
+(26, 2017, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(27, 2019, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -387,7 +411,13 @@ INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat
 (18, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (19, 2017, 27, 10, 5, 10, 10, 5, 10, 10, 5, 10, 30, 15, 30),
 (20, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
-(21, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40);
+(21, 2019, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 45, 40),
+(22, 2019, 28, 0, 0, 0, 15, 0, 0, 0, 0, 0, 15, 0, 0),
+(23, 2017, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(24, 2018, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(25, 2019, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(26, 2017, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(27, 2019, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -402,6 +432,7 @@ CREATE TABLE `part_a_doc` (
   `course` varchar(100) NOT NULL,
   `days` int(11) NOT NULL,
   `agency` varchar(100) NOT NULL,
+  `rolee` varchar(200) NOT NULL,
   `file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -409,56 +440,109 @@ CREATE TABLE `part_a_doc` (
 -- Dumping data for table `part_a_doc`
 --
 
-INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `file`) VALUES
-(1, 1, 1, 'KJSCE', 3, 'Kj Agency', 'NAN'),
-(2, 1, 2, 'Open Ceremony', 5, 'Kj Agency 2', 'NAN'),
-(87, 2, 3, 'KJSCE 3', 3, 'KJSCOC', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
-(88, 2, 1, 'KJSCE', 5, 'KJSCE', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
-(89, 2, 2, 'KJSCE 2', 2, 'SKSCOAC', 'users/manish.potey@somaiya.edu/2_1.jpg'),
-(90, 2, 4, 'KJOJ', 4, 'KJOJ', 'users/manish.potey@somaiya.edu/napoleon death quote.png'),
-(91, 2, 5, 'Hola', 4, 'KJOOO', 'users/manish.potey@somaiya.edu/2_1.jpg'),
-(92, 6, 0, '', 0, '', 'NAN'),
-(93, 7, 0, '', 0, '', 'NAN'),
-(94, 7, 0, '', 0, '', 'NAN'),
-(95, 8, 2, 'PCC2', 4, 'SDC', 'users/faculty1@gmail.com/2_3.jpg'),
-(96, 8, 1, 'OCC', 5, 'KJSCE', 'users/faculty1@gmail.com/1_1.jpg'),
-(97, 9, 2, 'OCS2', 4, 'KJSDC', 'users//2_1.jpg'),
-(98, 9, 1, 'OCS', 5, 'KJSCE', 'users//1_1.jpg'),
-(122, 10, 1, '', 0, '', 'NAN'),
-(123, 10, 2, '', 0, '', 'NAN'),
-(124, 10, 3, '', 0, '', 'NAN'),
-(125, 10, 4, '', 0, '', 'NAN'),
-(126, 10, 5, '', 0, '', 'NAN'),
-(127, 10, 6, 'hey', 0, '', 'NAN'),
-(128, 11, 0, '', 0, '', 'NAN'),
-(129, 13, 0, '', 0, '', 'NAN'),
-(139, 15, 0, '', 0, '', 'NAN'),
-(140, 14, 0, '', 0, '', 'NAN'),
-(142, 16, 0, '', 0, '', 'NAN'),
-(144, 17, 0, '', 0, '', 'NAN'),
-(146, 19, 0, '', 0, '', 'NAN'),
-(147, 20, 0, '', 0, '', 'NAN'),
-(148, 14, 0, '', 0, '', 'NAN'),
-(149, 15, 0, '', 0, '', 'NAN'),
-(150, 16, 0, '', 0, '', 'NAN'),
-(151, 17, 0, '', 0, '', 'NAN'),
-(153, 18, 0, '', 0, '', 'NAN'),
-(154, 19, 0, '', 0, '', 'NAN'),
-(155, 20, 0, '', 0, '', 'NAN'),
-(156, 21, 0, '', 0, '', 'NAN'),
-(157, 22, 0, '', 0, '', 'NAN'),
-(158, 23, 0, '', 0, '', 'NAN'),
-(174, 0, 0, '', 0, '', 'NAN'),
-(175, 24, 0, '', 0, '', 'NAN'),
-(176, 25, 0, '', 0, '', 'NAN'),
-(181, 26, 0, '', 0, '', 'NAN'),
-(187, 27, 0, '', 0, '', 'NAN'),
-(191, 28, 0, '', 0, '', 'NAN'),
-(195, 29, 0, '', 0, '', 'NAN'),
-(199, 30, 0, '', 0, '', 'NAN'),
-(200, 31, 0, '', 0, '', 'NAN'),
-(201, 32, 0, '', 0, '', 'NAN'),
-(202, 33, 0, '', 0, '', 'NAN');
+INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `rolee`, `file`) VALUES
+(1, 1, 1, 'KJSCE', 3, 'Kj Agency', '', 'NAN'),
+(2, 1, 2, 'Open Ceremony', 5, 'Kj Agency 2', '', 'NAN'),
+(87, 2, 3, 'KJSCE 3', 3, 'KJSCOC', '', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
+(88, 2, 1, 'KJSCE', 5, 'KJSCE', '', 'users/manish.potey@somaiya.edu/spedicey.jpg'),
+(89, 2, 2, 'KJSCE 2', 2, 'SKSCOAC', '', 'users/manish.potey@somaiya.edu/2_1.jpg'),
+(90, 2, 4, 'KJOJ', 4, 'KJOJ', '', 'users/manish.potey@somaiya.edu/napoleon death quote.png'),
+(91, 2, 5, 'Hola', 4, 'KJOOO', '', 'users/manish.potey@somaiya.edu/2_1.jpg'),
+(92, 6, 0, '', 0, '', '', 'NAN'),
+(93, 7, 0, '', 0, '', '', 'NAN'),
+(94, 7, 0, '', 0, '', '', 'NAN'),
+(95, 8, 2, 'PCC2', 4, 'SDC', '', 'users/faculty1@gmail.com/2_3.jpg'),
+(96, 8, 1, 'OCC', 5, 'KJSCE', '', 'users/faculty1@gmail.com/1_1.jpg'),
+(97, 9, 2, 'OCS2', 4, 'KJSDC', '', 'users//2_1.jpg'),
+(98, 9, 1, 'OCS', 5, 'KJSCE', '', 'users//1_1.jpg'),
+(122, 10, 1, '', 0, '', '', 'NAN'),
+(123, 10, 2, '', 0, '', '', 'NAN'),
+(124, 10, 3, '', 0, '', '', 'NAN'),
+(125, 10, 4, '', 0, '', '', 'NAN'),
+(126, 10, 5, '', 0, '', '', 'NAN'),
+(127, 10, 6, 'hey', 0, '', '', 'NAN'),
+(128, 11, 0, '', 0, '', '', 'NAN'),
+(129, 13, 0, '', 0, '', '', 'NAN'),
+(139, 15, 0, '', 0, '', '', 'NAN'),
+(140, 14, 0, '', 0, '', '', 'NAN'),
+(142, 16, 0, '', 0, '', '', 'NAN'),
+(144, 17, 0, '', 0, '', '', 'NAN'),
+(146, 19, 0, '', 0, '', '', 'NAN'),
+(147, 20, 0, '', 0, '', '', 'NAN'),
+(148, 14, 0, '', 0, '', '', 'NAN'),
+(149, 15, 0, '', 0, '', '', 'NAN'),
+(150, 16, 0, '', 0, '', '', 'NAN'),
+(151, 17, 0, '', 0, '', '', 'NAN'),
+(153, 18, 0, '', 0, '', '', 'NAN'),
+(154, 19, 0, '', 0, '', '', 'NAN'),
+(155, 20, 0, '', 0, '', '', 'NAN'),
+(156, 21, 0, '', 0, '', '', 'NAN'),
+(157, 22, 0, '', 0, '', '', 'NAN'),
+(158, 23, 0, '', 0, '', '', 'NAN'),
+(174, 0, 0, '', 0, '', '', 'NAN'),
+(175, 24, 0, '', 0, '', '', 'NAN'),
+(176, 25, 0, '', 0, '', '', 'NAN'),
+(181, 26, 0, '', 0, '', '', 'NAN'),
+(187, 27, 0, '', 0, '', '', 'NAN'),
+(191, 28, 0, '', 0, '', '', 'NAN'),
+(195, 29, 0, '', 0, '', '', 'NAN'),
+(199, 30, 0, '', 0, '', '', 'NAN'),
+(200, 31, 0, '', 0, '', '', 'NAN'),
+(201, 32, 0, '', 0, '', '', 'NAN'),
+(202, 33, 0, '', 0, '', '', 'NAN'),
+(204, 34, 0, '', 0, '', '', 'NAN'),
+(206, 36, 0, '', 0, '', '', 'NAN'),
+(207, 37, 0, '', 0, '', '', 'NAN'),
+(209, 38, 0, '', 0, '', '', 'NAN'),
+(210, 39, 0, '', 0, '', '', 'NAN'),
+(211, 35, 0, '', 0, '', '', 'NAN'),
+(212, 40, 0, '', 0, '', '', 'NAN'),
+(213, 41, 0, '', 0, '', '', 'NAN'),
+(214, 42, 0, '', 0, '', '', 'NAN'),
+(215, 43, 0, '', 0, '', '', 'NAN'),
+(216, 44, 0, '', 0, '', '', 'NAN'),
+(217, 45, 0, '', 0, '', '', 'NAN'),
+(218, 46, 0, '', 0, '', '', 'NAN'),
+(219, 47, 0, '', 0, '', '', 'NAN'),
+(220, 48, 0, '', 0, '', '', 'NAN'),
+(221, 49, 0, '', 0, '', '', 'NAN'),
+(222, 50, 0, '', 0, '', '', 'NAN'),
+(223, 51, 0, '', 0, '', '', 'NAN'),
+(224, 52, 0, '', 0, '', '', 'NAN'),
+(225, 53, 0, '', 0, '', '', 'NAN'),
+(226, 54, 0, '', 0, '', '', 'NAN'),
+(227, 55, 0, '', 0, '', '', 'NAN'),
+(228, 56, 0, '', 0, '', '', 'NAN'),
+(229, 57, 0, '', 0, '', '', 'NAN'),
+(230, 58, 0, '', 0, '', '', 'NAN'),
+(231, 59, 0, '', 0, '', '', 'NAN'),
+(232, 60, 0, '', 0, '', '', 'NAN'),
+(233, 61, 0, '', 0, '', '', 'NAN'),
+(234, 62, 0, '', 0, '', '', 'NAN'),
+(235, 63, 0, '', 0, '', '', 'NAN'),
+(236, 64, 0, '', 0, '', '', 'NAN'),
+(237, 65, 0, '', 0, '', '', 'NAN'),
+(238, 66, 0, '', 0, '', '', 'NAN'),
+(239, 67, 0, '', 0, '', '', 'NAN'),
+(240, 68, 0, '', 0, '', '', 'NAN'),
+(241, 69, 0, '', 0, '', '', 'NAN'),
+(242, 70, 0, '', 0, '', '', 'NAN'),
+(243, 71, 0, '', 0, '', '', 'NAN'),
+(246, 72, 1, 'hey', 23, 'KJSCE', 'Organiser', 'users//2_1.jpg'),
+(247, 72, 2, 'HEy', 2, 'KJSCE', 'Committee', 'users//1_2.jpg'),
+(248, 73, 1, 'hey', 23, 'KJSCE', 'Organiser', 'NAN'),
+(249, 73, 2, 'HEy', 2, 'KJSCE', 'Committee', 'NAN'),
+(250, 74, 1, 'hey', 23, 'KJSCE', 'Organiser', 'NAN'),
+(251, 74, 2, 'HEy', 2, 'KJSCE', 'Committee', 'NAN'),
+(252, 75, 1, 'hey', 23, 'KJSCE', 'Organiser', 'NAN'),
+(253, 75, 2, 'HEy', 2, 'KJSCE', 'Committee', 'NAN'),
+(254, 76, 1, 'hey', 23, 'KJSCE', 'Organiser', 'NAN'),
+(255, 76, 2, 'HEy', 2, 'KJSCE', 'Committee', 'NAN'),
+(256, 77, 1, 'hey', 23, 'KJSCE', 'Organiser', 'NAN'),
+(257, 77, 2, 'HEy', 2, 'KJSCE', 'Committee', 'NAN'),
+(259, 78, 0, '', 0, '', '', 'NAN'),
+(262, 79, 1, 'hey', 23, 'KJSCE', 'Organiser', 'NAN'),
+(263, 79, 2, 'HEy', 2, 'KJSCE', 'Committee', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -510,7 +594,21 @@ INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_ugpggpi_self_a`, `pa
 (24, 2018, 25, 20, 0, 0, 30, 0, 0, 50, 40, 35),
 (25, 2019, 27, 0, 0, 0, 0, 0, 0, 40, 30, 20),
 (26, 2017, 27, 10, 5, 5, 20, 15, 10, 30, 20, 15),
-(27, 2018, 27, 0, 0, 0, 0, 0, 0, 40, 30, 20);
+(27, 2018, 27, 0, 0, 0, 0, 0, 0, 40, 30, 20),
+(28, 2017, 28, 10, 0, 0, 20, 0, 0, 30, 0, 0),
+(29, 2018, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(30, 2019, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(31, 2019, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(32, 2017, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(33, 2018, 22, 5, 0, 0, 0, 0, 0, 5, 0, 0),
+(34, 2019, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(35, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(36, 2017, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(37, 2019, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(38, 2018, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(39, 2017, 29, 20, 0, 0, 20, 0, 0, 40, 0, 0),
+(40, 2019, 29, 18, 0, 0, 20, 0, 0, 38, 0, 0),
+(41, 2018, 29, 20, 0, 0, 30, 0, 0, 50, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -522,18 +620,13 @@ CREATE TABLE `part_a_table` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `faculty_id` int(11) NOT NULL,
-  `faculty_name` varchar(100) NOT NULL,
-  `ecode` int(11) NOT NULL,
   `praddr` varchar(200) NOT NULL,
   `peaddr` varchar(200) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `mobileno` int(15) NOT NULL,
   `highq` varchar(50) NOT NULL,
   `dob` date NOT NULL,
   `desi` varchar(50) NOT NULL,
   `nameo` varchar(50) NOT NULL,
   `pdesi` varchar(50) NOT NULL,
-  `dojkjsce` date NOT NULL,
   `pscale` int(11) NOT NULL,
   `pbg` int(11) NOT NULL,
   `lastdesisel` varchar(50) NOT NULL,
@@ -553,25 +646,35 @@ CREATE TABLE `part_a_table` (
 -- Dumping data for table `part_a_table`
 --
 
-INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `faculty_name`, `ecode`, `praddr`, `peaddr`, `email`, `mobileno`, `highq`, `dob`, `desi`, `nameo`, `pdesi`, `dojkjsce`, `pscale`, `pbg`, `lastdesisel`, `promowef`, `cscales`, `cbasics`, `lastdesicas`, `promowefcas`, `cscalecas`, `cbasiccas`, `customRadioInline1`, `nameofdegree`, `institute`) VALUES
-(1, 2017, 2, 'Manish Potey', 120039, '', '', 'manish.potey@somaiya.edu', 0, '', '2018-12-11', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(2, 2019, 2, 'Manish Potey', 29163, '', '', 'manish.potey@somaiya.edu', 2147483647, 'PHD', '2019-03-18', 'HOD', '', 'Head of Department', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 5, 'Yes', 'PHD', ''),
-(3, 2019, 3, 'Jyoti Trymbake', 5476, 'Ghatkopar', 'Ghatkopar', 'jyoti.trymbake@somaiya.edu', 883957483, 'PHD', '1982-01-27', 'Professor', 'SPIT', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(4, 2019, 7, 'Faculty', 123, '', '', '', 0, '', '2017-05-03', '', '', '', '2018-07-09', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(5, 0, 2, '', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '', ''),
-(6, 2017, 1, 'Babaso Aldar', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(7, 2019, 17, 'abc', 3487, 'kjsce', 'kjsce', 'faculty@gmail.com', 2147483647, 'M.Tech', '1989-03-18', 'Ap', 'kjsce', 'Ap', '2000-03-07', 7000, 16930, 'Ap', '2016-10-11', 7000, 16930, 'Ap', '2015-08-04', 7000, 16930, 'No', '', ''),
-(8, 2019, 21, 'Faculty1', 90223, 'Addr1', 'Addr2', 'faculty1@gmail.com', 2147483647, 'PHD', '2000-02-02', 'Asst. Prof.', 'VJTI', 'Asst. Prof.', '2003-07-02', 7000, 8000, 'Prof.', '2004-02-04', 7000, 8500, 'Prof Prof', '2007-09-29', 70830, 2000, 'Yes', 'PHD', 'Gorakhpur Institute of Gorkhas'),
-(9, 2018, 21, 'Faculty1', 90332, 'Addr1', 'Addr2', '', 0, '', '0000-00-00', '', '', 'Assistant Professor', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(10, 2017, 19, 'Committee', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(11, 2019, 24, 'faculty 4', 1234, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(12, 0, 21, '', 0, '', '', '', 0, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '', ''),
-(13, 2017, 25, 'Faculty 2', 92839, 'ghodbundar', 'road', 'faculty2@gmail.com', 2147483647, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(29, 2018, 25, 'Faculty 2', 92839, 'ghodbundar', 'road', 'faculty2@gmail.com', 2147483647, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(30, 2019, 25, 'Faculty 2', 92839, 'ghodbundar', 'road', 'faculty2@gmail.com', 2147483647, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(31, 2017, 27, 'Faculty 69', 12345, 'Thane', 'thane', 'faculty69@gmail.com', 1122233, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(32, 2018, 27, 'Faculty 69', 12345, 'Thane', 'thane', 'faculty69@gmail.com', 1122233, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(33, 2019, 27, 'Faculty 69', 12345, 'Thane', 'thane', 'faculty69@gmail.com', 1122233, '', '0000-00-00', '', '', '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '');
+INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `praddr`, `peaddr`, `highq`, `dob`, `desi`, `nameo`, `pdesi`, `pscale`, `pbg`, `lastdesisel`, `promowef`, `cscales`, `cbasics`, `lastdesicas`, `promowefcas`, `cscalecas`, `cbasiccas`, `customRadioInline1`, `nameofdegree`, `institute`) VALUES
+(1, 2017, 2, '', '', '', '2018-12-11', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(2, 2019, 2, '', '', 'PHD', '2019-03-18', 'HOD', '', 'Head of Department', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 5, 'Yes', 'PHD', ''),
+(3, 2019, 3, 'Ghatkopar', 'Ghatkopar', 'PHD', '1982-01-27', 'Professor', 'SPIT', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(4, 2019, 7, '', '', '', '2017-05-03', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(5, 0, 2, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '', ''),
+(6, 2017, 1, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(7, 2019, 17, 'kjsce', 'kjsce', 'M.Tech', '1989-03-18', 'Ap', 'kjsce', 'Ap', 7000, 16930, 'Ap', '2016-10-11', 7000, 16930, 'Ap', '2015-08-04', 7000, 16930, 'No', '', ''),
+(8, 2019, 21, 'Addr1', 'Addr2', 'PHD', '2000-02-02', 'Asst. Prof.', 'VJTI', 'Asst. Prof.', 7000, 8000, 'Prof.', '2004-02-04', 7000, 8500, 'Prof Prof', '2007-09-29', 70830, 2000, 'Yes', 'PHD', 'Gorakhpur Institute of Gorkhas'),
+(9, 2018, 21, 'Addr1', 'Addr2', '', '0000-00-00', '', '', 'Assistant Professor', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(10, 2017, 19, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(11, 2019, 24, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(12, 0, 21, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, '', '', ''),
+(13, 2017, 25, 'ghodbundar', 'road', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(29, 2018, 25, 'ghodbundar', 'road', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(30, 2019, 25, 'ghodbundar', 'road', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(31, 2017, 27, 'Thane', 'thane', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(32, 2018, 27, 'Thane', 'thane', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(33, 2019, 27, 'Thane', 'thane', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(34, 2017, 21, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(35, 2017, 28, 'Thane', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(38, 2018, 28, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(39, 2019, 28, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(68, 2018, 22, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(69, 2019, 22, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(70, 2018, 26, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(72, 2017, 29, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(78, 2019, 29, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(79, 2018, 29, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '');
 
 -- --------------------------------------------------------
 
@@ -701,7 +804,9 @@ INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oe
 (11, 11, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', 'hi', 'hi', '', '', 'users/faculty1@gmail.com/2_3.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', 'hi', 'hi', '', '', 'users/faculty1@gmail.com/7c54565b19691d55cca97714b77aa2dae44ee264-shutterstock_83672455.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
 (12, 12, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'users/committee@gmail.com/AOA_NOTEs-Chapter-No-1.doc', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
 (13, 13, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '123', '123', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '333', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
-(14, 14, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0);
+(14, 14, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
+(15, 15, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
+(16, 16, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0);
 
 -- --------------------------------------------------------
 
@@ -841,7 +946,9 @@ INSERT INTO `part_b_cat_2` (`id`, `formId`) VALUES
 (14, 11),
 (15, 12),
 (16, 13),
-(17, 14);
+(17, 14),
+(18, 15),
+(19, 16);
 
 -- --------------------------------------------------------
 
@@ -1022,7 +1129,9 @@ INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `phdfile`
 (30, 11, 2, 4, 1, 'NAN', 1, 2, 1, 'NAN', 2, 3, 2, 'NAN'),
 (31, 12, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN'),
 (32, 13, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN'),
-(33, 14, 5, 2, 3, 'NAN', 4, 2, 1, 'NAN', 3, 3, 2, 'NAN');
+(33, 14, 5, 2, 3, 'NAN', 4, 2, 1, 'NAN', 3, 3, 2, 'NAN'),
+(34, 15, 2, 0, 0, 'NAN', 1, 0, 0, 'NAN', 1, 0, 0, 'NAN'),
+(35, 16, 2, 1, 0, 'NAN', 1, 0, 1, 'NAN', 2, 0, 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1345,7 +1454,9 @@ INSERT INTO `part_b_cat_4` (`id`, `formId`) VALUES
 (64, 11),
 (65, 11),
 (66, 14),
-(67, 14);
+(67, 14),
+(68, 15),
+(69, 16);
 
 -- --------------------------------------------------------
 
@@ -1457,7 +1568,9 @@ INSERT INTO `part_b_table` (`id`, `year`, `facultyId`) VALUES
 (11, 2017, 21),
 (12, 2017, 19),
 (13, 2017, 2),
-(14, 2017, 27);
+(14, 2017, 27),
+(15, 2019, 28),
+(16, 2018, 28);
 
 -- --------------------------------------------------------
 
@@ -1480,7 +1593,8 @@ INSERT INTO `recommend_for_cas` (`id`, `facultyId`, `recommend`, `currentyear`) 
 (2, 17, 1, 2019),
 (3, 6, 1, 2019),
 (5, 25, 0, 2019),
-(6, 27, 0, 2019);
+(6, 27, 0, 2019),
+(7, 28, 1, 2019);
 
 -- --------------------------------------------------------
 
@@ -1520,7 +1634,13 @@ INSERT INTO `submitted_for_review_table` (`id`, `year`, `facultyId`, `partA`, `p
 (17, 2019, 25, 1, 1),
 (18, 2017, 27, 1, 1),
 (19, 2019, 27, 1, 1),
-(20, 2018, 27, 1, 1);
+(20, 2018, 27, 1, 1),
+(21, 2019, 28, 1, 1),
+(22, 2018, 28, 1, 1),
+(23, 2017, 28, 1, 1),
+(24, 2017, 29, 1, 0),
+(25, 2019, 29, 1, 0),
+(26, 2018, 29, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -1566,7 +1686,7 @@ CREATE TABLE `summary_table` (
 --
 
 INSERT INTO `summary_table` (`id`, `year`, `facultyId`, `selfPP`, `selfA`, `selfB`, `self_avgpi`, `hodPP`, `hodA`, `hodB`, `hod_avgpi`, `committeePP`, `committeeA`, `committeeB`, `committee_avgpi`, `hodremarksA`, `hodremarksBcat1`, `hodremarksBcat2`, `hodremarksBcat3`, `hodremarksBcat4`, `hodremarksavgpi`, `hodremarkscum`, `committeeremarksA`, `committeeremarksBcat1`, `committeeremarksBcat2`, `committeeremarksBcat3`, `committeeremarksBcat4`, `committeeremarksavgpi`, `committeeremarkscum`, `final_recomm`) VALUES
-(1, 2019, 2, 0, 64.03, 72.48, 45.05, 0, 68.36, 71.51, 46.16, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(1, 2019, 2, 5.71, 64.03, 72.48, 46.93, 0, 68.36, 71.51, 46.16, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (2, 2019, 17, 0, 55.89, 56.46, 55.12, 0, 0, 54.55, 18, 0, 32.09, 45.42, 25.58, 'well', 'done', 'lads', 'today', 'we', 'have', 'won', 'well', 'done', 'lads', 'today', 'we', 'have', 'won', 'nice teacher'),
 (3, 2019, 21, 0, 44.48, 35.14, 52.64, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (4, 2018, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
@@ -1580,7 +1700,16 @@ INSERT INTO `summary_table` (`id`, `year`, `facultyId`, `selfPP`, `selfA`, `self
 (12, 2019, 25, 71.05, 76, 68.09, 71, 63.14, 58.76, 60.33, 60.14, 50.76, 50.95, 55.14, 51.76, '', '', '', '', '', '', 'This teacher is recommended for CAS', '', '', '', '', '', '', '', 'This teacher is approved for CAS'),
 (13, 2017, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (14, 2019, 27, 66, 55.05, 66.48, 61.88, 45.14, 47.14, 56.29, 49.03, 37.43, 39.24, 46.09, 40.51, '', '', '', '', '', '', 'I dont recommend this faculty', '', '', '', '', '', '', '', 'I recommend this faculty for CAS'),
-(15, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(15, 2018, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(16, 2019, 28, 15.89, 4.11, 13.89, 11.18, 0, 0, 2.86, 0.94, 0, 0, 0, 0, '', '', '', '', '', '', 'Good teacher', '', '', '', '', '', '', '', ''),
+(17, 2018, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(18, 2017, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(19, 2019, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(20, 2018, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(21, 2017, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(22, 2017, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(23, 2019, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
+(24, 2018, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -1827,7 +1956,7 @@ ALTER TABLE `cas_approval_table`
 -- AUTO_INCREMENT for table `faculty_table`
 --
 ALTER TABLE `faculty_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `fields_table`
 --
@@ -1847,42 +1976,42 @@ ALTER TABLE `otp_table`
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `partb_cat4_pi`
 --
 ALTER TABLE `partb_cat4_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
 ALTER TABLE `part_a_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1`
 --
 ALTER TABLE `part_b_cat_1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
@@ -1902,7 +2031,7 @@ ALTER TABLE `part_b_cat_1_dar`
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
 ALTER TABLE `part_b_cat_2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
@@ -1927,7 +2056,7 @@ ALTER TABLE `part_b_cat_2_ha`
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
@@ -1972,7 +2101,7 @@ ALTER TABLE `part_b_cat_3_res`
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
@@ -1992,22 +2121,22 @@ ALTER TABLE `part_b_cat_4_sem`
 -- AUTO_INCREMENT for table `part_b_table`
 --
 ALTER TABLE `part_b_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `recommend_for_cas`
 --
 ALTER TABLE `recommend_for_cas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `summary_table`
 --
 ALTER TABLE `summary_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

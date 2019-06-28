@@ -1163,6 +1163,7 @@ include 'left-nav.php';
 		{
 			// alert("inner->"+localStorage.getItem("change"));
 			// alert(parseInt(localStorage.getItem("change"))==0);
+			// alert('Checking viewing conditions')
 			if(parseInt(localStorage.getItem("change"))==0)
 			{
 				// alert('inner->nikaldo');
