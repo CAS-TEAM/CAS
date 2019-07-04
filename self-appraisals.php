@@ -59,10 +59,10 @@ include 'left-nav.php';
 				<div class="row justify-content-center">
 					<div class="col-md-12">
 						<p style="font-size: 20px">YEAR: <?php echo ($a-1).'-'.$a; ?></p>
-						<a href="self-appraisal-partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>" class="btn btn-success" style="background-color: #DCEDC8;border: 1px solid #DCEDC8;color:black">
+						<a href="self-appraisal-partA.php?id=<?php echo $userId; ?>&year=<?php echo $a; ?>" class="btn btn-success" style="background-color: #DCEDC8;border: 1px solid #DCEDC8;color:black">
 			  			Part A Self Appraisal 
 						</a>
-						<a href="self-appraisal-partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>" class="btn btn-success" style="background-color: #DCEDC8;border: 1px solid #DCEDC8;color:black">
+						<a href="self-appraisal-partB.php?id=<?php echo $userId; ?>&year=<?php echo $a; ?>" class="btn btn-success" style="background-color: #DCEDC8;border: 1px solid #DCEDC8;color:black">
 			  			Part B Self Appraisal 
 						</a>
 						<br>

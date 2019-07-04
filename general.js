@@ -639,7 +639,7 @@ function getPartBData(){
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control" maxlength="200" value="'+dara+'"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control" maxlength="200" value="'+darb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="darfile'+(k+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="darfile'+(k+1)+'" name="darfile[]" value="" placeholder=""><input type="hidden" name="darfilelocation[]" id="darfilelocation'+(k+1)+'" value="'+darfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+darfile+'" id="darviewfile'+(k+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control detailspartb" maxlength="200" value="'+dara+'"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control detailspartb" maxlength="200" value="'+darb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="darfile'+(k+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="darfile'+(k+1)+'" name="darfile[]" value="" placeholder=""><input type="hidden" name="darfilelocation[]" id="darfilelocation'+(k+1)+'" value="'+darfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+darfile+'" id="darviewfile'+(k+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							       // $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
 							       $('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
@@ -671,7 +671,7 @@ function getPartBData(){
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control" maxlength="200" value="'+ha+'"/></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" value="'+hb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="hfile'+(l+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="hfile'+(l+1)+'" name="hfile[]" value="" placeholder=""><input type="hidden" name="hfilelocation[]" id="hfilelocation'+(l+1)+'" value="'+hfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+hfile+'" id="hviewfile'+(l+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control adminpost" maxlength="200" value="'+ha+'"/></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" value="'+hb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="hfile'+(l+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="hfile'+(l+1)+'" name="hfile[]" value="" placeholder=""><input type="hidden" name="hfilelocation[]" id="hfilelocation'+(l+1)+'" value="'+hfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+hfile+'" id="hviewfile'+(l+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							      	// $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
 							      	$('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
@@ -703,7 +703,7 @@ function getPartBData(){
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control" value="'+ea+'"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control" value="'+eb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="efile'+(m+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="efile'+(m+1)+'" name="efile[]" value="" placeholder=""><input type="hidden" name="efilelocation[]" id="efilelocation'+(m+1)+'" value="'+efile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+efile+'" id="eviewfile'+(m+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control adminpost" value="'+ea+'"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control" value="'+eb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="efile'+(m+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="efile'+(m+1)+'" name="efile[]" value="" placeholder=""><input type="hidden" name="efilelocation[]" id="efilelocation'+(m+1)+'" value="'+efile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+efile+'" id="eviewfile'+(m+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 								    // $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
 								    $('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
@@ -734,7 +734,7 @@ function getPartBData(){
 					    		if(n!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control" value="'+eca+'"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control" value="'+ecb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ecfile'+(n+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ecfile'+(n+1)+'" name="ecfile[]" value="" placeholder=""><input type="hidden" name="ecfilelocation[]" id="ecfilelocation'+(n+1)+'" value="'+ecfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ecfile+'" id="ecviewfile'+(n+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td> ');
+					    			$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control adminpost" value="'+eca+'"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control" value="'+ecb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ecfile'+(n+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ecfile'+(n+1)+'" name="ecfile[]" value="" placeholder=""><input type="hidden" name="ecfilelocation[]" id="ecfilelocation'+(n+1)+'" value="'+ecfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ecfile+'" id="ecviewfile'+(n+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td> ');
 
 							        // $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
 							        $('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
@@ -765,7 +765,7 @@ function getPartBData(){
 					    		if(o!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control" value="'+ca+'"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control" value="'+cb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cfile'+(o+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cfile'+(o+1)+'" name="cfile[]" value="" placeholder=""><input type="hidden" name="cfilelocation[]" id="cfilelocation'+(o+1)+'" value="'+cfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cfile+'" id="cviewfile'+(o+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>	');
+					    			$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control adminpost" value="'+ca+'"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control" value="'+cb+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cfile'+(o+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cfile'+(o+1)+'" name="cfile[]" value="" placeholder=""><input type="hidden" name="cfilelocation[]" id="cfilelocation'+(o+1)+'" value="'+cfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cfile+'" id="cviewfile'+(o+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>	');
 
 							      	// $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
 							      	$('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
@@ -1054,7 +1054,7 @@ function getPartBData(){
 					    		if(p!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200" value="'+ta+'"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200" value="'+ab+'"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control" value="'+dc+'"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control" value="'+gd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research1file'+(p+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research1file'+(p+1)+'" name="research1file[]" value="" placeholder=""><input type="hidden" name="research1filelocation[]" id="research1filelocation'+(p+1)+'" value="'+research1file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research1file+'" id="research1viewfile'+(p+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
+					    			$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200" value="'+ta+'"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200" value="'+ab+'"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control dos" value="'+dc+'"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control grantamount" value="'+gd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research1file'+(p+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research1file'+(p+1)+'" name="research1file[]" value="" placeholder=""><input type="hidden" name="research1filelocation[]" id="research1filelocation'+(p+1)+'" value="'+research1file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research1file+'" id="research1viewfile'+(p+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
 
 							        // $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
 							        $('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
@@ -1089,7 +1089,7 @@ function getPartBData(){
 					    		if(q!=0)
 					    		{
 					    			// alert("i not 0");
-					    			$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200" value="'+tta+'"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200" value="'+aab+'"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control" value="'+ddc+'"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control" value="'+ggd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(q+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(q+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(q+1)+'" value="'+research2file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research2file+'" id="research2viewfile'+(q+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
+					    			$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200" value="'+tta+'"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200" value="'+aab+'"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control dos" value="'+ddc+'"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control grantamount" value="'+ggd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(q+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(q+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(q+1)+'" value="'+research2file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research2file+'" id="research2viewfile'+(q+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
 
 							        // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 							        $('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
@@ -1123,7 +1123,7 @@ function getPartBData(){
 					    		r++;
 					    		if(r!=0)
 					    		{
-					    			$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200" value="'+tca+'"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200" value="'+acb+'"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control" value="'+dcc+'"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control" value="'+gcd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research3file'+(r+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research3file'+(r+1)+'" name="research3file[]" value="" placeholder=""><input type="hidden" name="research3filelocation[]" id="research3filelocation'+(r+1)+'" value="'+research3file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research3file+'" id="research3viewfile'+(r+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200" value="'+tca+'"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200" value="'+acb+'"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control dos" value="'+dcc+'"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control grantamount" value="'+gcd+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research3file'+(r+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research3file'+(r+1)+'" name="research3file[]" value="" placeholder=""><input type="hidden" name="research3filelocation[]" id="research3filelocation'+(r+1)+'" value="'+research3file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+research3file+'" id="research3viewfile'+(r+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							        // $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
 							        $('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
@@ -1155,7 +1155,7 @@ function getPartBData(){
 					    		s++;
 					    		if(s!=0)
 					    		{
-					    			$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control" maxlength="200" value="'+dpi+'"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control" value="'+drf+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value="'+dfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+dfile+'" id="dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control patent" maxlength="200" value="'+dpi+'"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control patentdate" value="'+drf+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value="'+dfile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+dfile+'" id="dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							      	// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
 							      	$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
@@ -1186,7 +1186,7 @@ function getPartBData(){
 					    		t++;
 					    		if(t!=0)
 					    		{
-					    			$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control" maxlength="200" value="'+cativ_dp+'"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control" value="'+cativ_datee+'"/></td><td><input type="text" name="cativ-o[]" id="cativ-o'+(t+1)+'" class="form-control" maxlength="200" value="'+cativ_o+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value="'+cativ1file1+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ1file1+'" id="cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control seminarscat4" maxlength="200" value="'+cativ_dp+'"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control dos" value="'+cativ_datee+'"/></td><td><input type="text" name="cativ_o[]" id="cativ_o'+(t+1)+'" class="form-control ogbycat4" maxlength="200" value="'+cativ_o+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value="'+cativ1file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ1file+'" id="cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							        // $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
 							        $('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
@@ -1218,7 +1218,7 @@ function getPartBData(){
 					    		u++;
 					    		if(u!=0)
 					    		{
-					    			$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control" maxlength="200" value="'+cativ1_dp+'"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control" value="'+cativ1_datee+'"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control" maxlength="200" value="'+cativ1_o+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value="'+cativ2file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ2file+'" id="cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control seminarscat4" maxlength="200" value="'+cativ1_dp+'"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control dos" value="'+cativ1_datee+'"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control ogbycat4" maxlength="200" value="'+cativ1_o+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value="'+cativ2file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ2file+'" id="cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 								    // $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
 								    $('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
@@ -1249,7 +1249,7 @@ function getPartBData(){
 					    		v1++;
 					    		if(v1!=0)
 					    		{
-					    			$('#addr16'+v1).html('<td id="creds'+(v1+1)+'">'+(v1+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v1+1)+'" class="form-control" maxlength="200" value="'+cativ2_dp+'"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v1+1)+'" class="form-control" maxlength="200" value="'+cativ2+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v1+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v1+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v1+1)+'" value="'+cativ3file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ3file+'" id="cativ3viewfile'+(v1+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr16'+v1).html('<td id="creds'+(v1+1)+'">'+(v1+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v1+1)+'" class="form-control seminarscat4" maxlength="200" value="'+cativ2_dp+'"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v1+1)+'" class="form-control ogbycat4" maxlength="200" value="'+cativ2+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v1+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v1+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v1+1)+'" value="'+cativ3file+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+cativ3file+'" id="cativ3viewfile'+(v1+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							        // $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
 							        $('#addr16'+v1).after('<tr id="addr16'+(v1+1)+'"></tr>');
@@ -4374,6 +4374,21 @@ $("#show-sidebar").click(function() {
 
 $(document).ready(function(){	
 	var focusIdodd=0;
+	$(document).on('focus','[name="ctohrsweek[]"]',function(){
+		focusIdodd=this.id;
+		// alert(focusIdodd);
+	});
+    $(document).on('focusout','[name="ctohrsweek[]"]',function(){
+    	if(document.getElementById(focusIdodd).value.trim()!='' && !isNaN(document.getElementById(focusIdodd).value.trim()))
+    	{
+    		// alert(phdne);
+    		idnumber=focusIdodd.match(/\d+$/);
+			// alert(idnumber);
+    		document.getElementById('ctomaxhrs'+idnumber).value=parseInt(document.getElementById('ctohrsweek'+idnumber).value)*15;
+    		focusIdodd=null;
+    	}
+  	}); 
+
 	$(document).on('focus','[name="ctohrsengaged[]"]',function(){
 		focusIdodd=this.id;
 		// alert(focusIdodd);
@@ -4404,6 +4419,21 @@ $(document).ready(function(){
   	});  	
 
   	var focusIdeven=0;
+  	$(document).on('focus','[name="ctehrsweek[]"]',function(){
+		focusIdodd=this.id;
+		// alert(focusIdodd);
+	});
+    $(document).on('focusout','[name="ctehrsweek[]"]',function(){
+    	if(document.getElementById(focusIdodd).value.trim()!='' && !isNaN(document.getElementById(focusIdodd).value.trim()))
+    	{
+    		// alert(phdne);
+    		idnumber=focusIdodd.match(/\d+$/);
+			// alert(idnumber);
+    		document.getElementById('ctemaxhrs'+idnumber).value=parseInt(document.getElementById('ctehrsweek'+idnumber).value)*15;
+    		focusIdodd=null;
+    	}
+  	}); 
+
 	$(document).on('focus','[name="ctehrsengaged[]"]',function(){
 		focusIdeven=this.id;
 		// alert(focusIdeven);
@@ -4414,7 +4444,7 @@ $(document).ready(function(){
     		// alert(phdne);
     		idnumber=focusIdeven.match(/\d+$/);
 			// alert(idnumber);
-    		document.getElementById('ctoc'+idnumber).value=parseInt(document.getElementById('ctehrsengaged'+idnumber).value)/parseInt(document.getElementById('ctemaxhrs'+idnumber).value)*100;
+    		document.getElementById('ctec'+idnumber).value=parseInt(document.getElementById('ctehrsengaged'+idnumber).value)/parseInt(document.getElementById('ctemaxhrs'+idnumber).value)*100;
     		focusIdeven=null;
     	}
   	});  	

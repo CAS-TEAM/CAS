@@ -19,9 +19,12 @@ $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
 $profilePicLocation=$rowx['profilePicLocation'];
 
+
 include 'top.php';
 include 'left-nav.php';
 
+$lasttolastyear=$currentyear-2;
+$lasttolastyear2=$currentyear-3;
 ?>
   	
    	<div class="container">
@@ -50,9 +53,9 @@ include 'left-nav.php';
 					      	<th scope="col" style="background-color: #343a40">Admin</th> -->
 					    </tr>
 					    <tr>
-					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-2).'-'.($previousyear-1); ?></th>
-					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-1).'-'.($previousyear) ?></th>
-					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear).'-'.($currentyear) ?></th>
+					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-3).'-'.($previousyear-2); ?></th>
+					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-2).'-'.($previousyear-1) ?></th>
+					    	<th scope="col" rowspan="2" style="background-color: #343a40"><?php echo ($previousyear-1).'-'.($currentyear-1) ?></th>
 					    </tr>
 
 				  	</thead>
@@ -118,12 +121,36 @@ include 'left-nav.php';
 							$your_date = strtotime($date_of_joining);
 							$datediff = $now - $your_date;
 							$years = floor($datediff / (365*60*60*24));
+							$eligible=false;
+							$sfr=false;
 						    // echo $years;
 						    if($years>=5)
 						    {
+						    	$eligible=true;
 						    	?>
 						    	<td><img src="checked.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto"></td>	
 						    	<?php
+
+								$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$id' AND year='$previousyear' AND partA=1 AND partB=1";
+								$resultsfr=mysqli_query($conn,$sqlsfr);
+
+								if(mysqli_num_rows($resultsfr)!=0)
+								{	
+									$sqlsfrp="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$id' AND year='$lasttolastyear' AND partA=1 AND partB=1";
+									$resultsfrp=mysqli_query($conn,$sqlsfrp);
+
+									if(mysqli_num_rows($resultsfrp)!=0)
+									{	
+										$sqlsfrl="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$id' AND year='$lasttolastyear2' AND partA=1 AND partB=1";
+										$resultsfrl=mysqli_query($conn,$sqlsfrl);
+
+										if(mysqli_num_rows($resultsfrl)!=0)
+										{
+											$sfr=true;
+										}
+									}
+								}
+
 						    }
 						    else
 						    {
@@ -134,22 +161,75 @@ include 'left-nav.php';
 
 						    ?>
 
-						    <td><a href="self-appraisals.php?id=<?php echo $id; ?>" class="btn btn-info" style="margin-top: 25px">View</a></td>
+						    <td><a href="self-appraisals.php?id=<?php echo $id; ?>" class="btn btn-info" style="margin-top: 25px" target="_blank">View</a></td>
 						    <td>
-						    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-1); ?>" class="btn btn-info">Part A</a>
-						    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-1); ?>" class="btn btn-info" style="margin-top: 10px">Part B</a>
+						    	<?php
+
+						    	if($eligible==true && $sfr==true)
+						    	{
+							    	?>
+							    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-2); ?>" class="btn btn-info" target="_blank">Part A</a>
+							    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-2); ?>" class="btn btn-info" style="margin-top: 10px" target="_blank">Part B</a>
+							    	<?php
+							    }
+							    else
+							    {
+							    	?>
+							    	<img src="error.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto">
+							    	<?php
+							    }
+							    ?>
 						    </td>
 						    <td>
-						    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear); ?>" class="btn btn-info">Part A</a>
-						    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear); ?>" class="btn btn-info" style="margin-top: 10px">Part B</a>
+							    <?php
+							    if($eligible==true && $sfr==true)
+							    {
+							    	?>
+							    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-1); ?>" class="btn btn-info" target="_blank">Part A</a>
+							    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($previousyear-1); ?>" class="btn btn-info" style="margin-top: 10px" target="_blank">Part B</a>
+							    	<?php
+							    }
+							    else
+							    {
+							    	?>
+							    	<img src="error.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto">
+							    	<?php
+							    }
+							    ?>
 						    </td>
 						    <td>
-						    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear); ?>" class="btn btn-info">Part A</a>
-						    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear); ?>" class="btn btn-info" style="margin-top: 10px">Part B</a>
+						    	<?php
+							    if($eligible==true && $sfr==true)
+							    {
+							    ?>
+							    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-info" target="_blank">Part A</a>
+							    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-info" style="margin-top: 10px" target="_blank">Part B</a>
+							    	<?php
+							    }
+							    else
+							    {
+							    	?>
+							    	<img src="error.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto">
+							    	<?php
+							    }
+						   		?>
 						    </td>
 
-						    <td><a href="summary.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear); ?>" class="btn btn-success" style="margin-top: 25px">Summary</a></td>
-
+						    <td>
+								<?php
+							    if($eligible==true && $sfr==true)
+							    {
+							    	?>
+						    		<a href="summary.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-success" style="margin-top: 25px" target="_blank">Summary</a></td>
+						    		<?php
+							    }
+							    else
+							    {
+							    	?>
+							    	<img src="error.png" style="width:25px;display: block;margin-top: 30px" class="mx-auto">
+							    	<?php
+							    }
+						   		?>
 						      	<!-- <form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
 						      		<td class="table-center">
 						      			<?php

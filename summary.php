@@ -47,10 +47,10 @@ include 'top.php';
 include 'left-nav.php';
 
 $currentyear=mysqli_real_escape_string($conn,$_GET['year']);
-if(date("m")>=7)
-{
-	$currentyear+=1;
-}
+// if(date("m")>=7)
+// {
+// 	$currentyear+=1;
+// }
 $previousyear=$currentyear-1;
 $lasttolastyear=$previousyear-1;
 

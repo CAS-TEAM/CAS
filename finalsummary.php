@@ -125,6 +125,9 @@ include 'left-nav.php';
 				</div>
 			</div>
 			<br>
+			<a href="generate_fs_csv.php" target="_blank" class="btn btn-primary" style="margin-bottom: 10px">
+	  			GENERATE CSV 
+			</a>
 			<button type="button" class="btn btn-success" onclick="myFunction()" id="fs-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000;margin-bottom: 10px">
 	  			PRINT 
 			</button>

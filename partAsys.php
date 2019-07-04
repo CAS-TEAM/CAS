@@ -17,7 +17,7 @@ echo $alreadybegun;
 // $ecode=mysqli_real_escape_string($conn,$_POST['ecode']);
 $praddr=mysqli_real_escape_string($conn,$_POST['praddr']);
 $peaddr=mysqli_real_escape_string($conn,$_POST['peaddr']);
-// $email=mysqli_real_escape_string($conn,$_POST['email']);
+$email=mysqli_real_escape_string($conn,$_POST['email']);
 // $mobileno=mysqli_real_escape_string($conn,$_POST['mobileno']);
 $highq=mysqli_real_escape_string($conn,$_POST['highq']);
 $dob=mysqli_real_escape_string($conn,$_POST['dob']);

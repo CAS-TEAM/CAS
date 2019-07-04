@@ -14,7 +14,7 @@ include 'dbh.php';
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
 
-$sql="SELECT email, faculty_name, date_of_joining, department, profilePicLocation, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
+$sql="SELECT email, faculty_name, date_of_joining, department, ecode, mobileno, profilePicLocation, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
 $result=mysqli_query($conn,$sql);
 
 $row=mysqli_fetch_assoc($result);
@@ -23,6 +23,8 @@ $email=$row['email'];
 $faculty_name=$row['faculty_name'];
 $date_of_joining=$row['date_of_joining'];
 $department=$row['department'];
+$ecode=$row['ecode'];
+$mobileno=$row['mobileno'];
 $profilePicLocation=$row['profilePicLocation'];
 $hod=$row['hod'];
 $committee=$row['committee'];
@@ -125,7 +127,7 @@ include 'left-nav.php';
 			        		<div class="col-md-4">
 			        			<p class="card-text" style="margin-top:1rem"><b>Date of Joining:</b> <?php echo $date_of_joining; ?></p>
 			        			<p class="card-text"><b>Email:</b> <?php echo $email; ?></p>
-
+			        			<p class="card-text"><b>Employee Code:</b> <?php echo $ecode; ?></p>
 			        			<?php 
 
 			        			if($hod==1)
@@ -149,6 +151,7 @@ include 'left-nav.php';
 
 			        		<div class="col-md-4">
 			        			<p class="card-text" style="margin-top:1rem"><b>Department:</b> <?php echo $department; ?></p>
+			        			<p class="card-text"><b>Mobile No.:</b> <?php echo $mobileno; ?></p>
 			        		</div>
 
 			        	</div>
@@ -382,9 +385,9 @@ include 'left-nav.php';
 								<h3 class="text-center">VIEW FORMS AND PROFILES OF FACULTY IN YOUR (<?php echo $department; ?>) DEPARTMENT</h3><br>
 								<!-- <p class="card-text"><b></b></p>							 -->
 								<p>
-								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHODFaculty<?php echo $department; ?>" aria-expanded="false" aria-controls="collapseHODFaculty<?php echo $department; ?>">
+								  	<!-- <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseHODFaculty<?php echo $department; ?>" aria-expanded="false" aria-controls="collapseHODFaculty<?php echo $department; ?>">
 								    View Forms of Faculty
-								  	</button>
+								  	</button> -->
 								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
 								</p>
 								<div class="collapse" id="collapseHODFaculty<?php echo $department; ?>">
@@ -516,9 +519,9 @@ include 'left-nav.php';
 					  			<!-- <hr> -->
 					  			<h3 class="text-center">VIEW PROFILES AND FORMS OF ALL FACULTY</h3><br>			
 								<p>
-								  	<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseAllFaculty" aria-expanded="false" aria-controls="collapseAllFaculty">
+								  	<!-- <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseAllFaculty" aria-expanded="false" aria-controls="collapseAllFaculty">
 								    View Forms of Faculty
-								  	</button>
+								  	</button> -->
 								  	<a class="btn btn-info" href="viewprofiles.php">View Profiles of Faculty</a>
 								  	<a class="btn btn-primary" href="finalsummary.php">View Final Summary</a>
 								</p>

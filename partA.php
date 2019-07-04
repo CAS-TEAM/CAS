@@ -985,8 +985,9 @@ include 'left-nav.php';
 	  	
 	  	// window.print();
 	  	$("#part-a-container").printThis({
-	  		beforePrint: bp(),
-	  		afterPrint: ap()
+	  		// beforePrint: bp(),
+	  		// afterPrint: ap()
+	  		importStyle: true
 	  	});
 
 	  	setTimeout(function () { 

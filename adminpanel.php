@@ -424,7 +424,7 @@ include 'left-nav.php';
 
 		?>
 		
-		<form action="multiplication_factor_sys.php" method="POST">
+		<!-- <form action="multiplication_factor_sys.php" method="POST">
 			<div class="row justify-content-center">
 	  			<div class="col-md-10 text-center admin-filter-box">
 
@@ -462,7 +462,7 @@ include 'left-nav.php';
 					</div><br>
 				</div>
 			</div>
-		</form>
+		</form> -->
 
 
 	</div>

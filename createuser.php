@@ -116,6 +116,11 @@ include 'left-nav.php';
 									  	<input type="radio" class="custom-control-input" id="defaultInlineMechanical" name="department" value="Mechanical">
 									  	<label class="custom-control-label" for="defaultInlineMechanical" style="color: #a6a6a6">Mechanical</label>
 									</div>
+
+									<div class="custom-control custom-radio custom-control-inline">
+									  	<input type="radio" class="custom-control-input" id="defaultInlineSH" name="department" value="Science & Humanities">
+									  	<label class="custom-control-label" for="defaultInlineSH" style="color: #a6a6a6">Science & Humanities</label>
+									</div>
 								</div>
 							</div><br>
 
@@ -235,7 +240,10 @@ include 'left-nav.php';
 				$hod = $myData[6];
 				$committee = $myData[7];
 				$principal = $myData[8];
-				$admin = $myData[9];	
+				$admin = $myData[9];
+
+				$ecode=$myData[10];
+				$mobileno=$myData[11];	
 
 				$sqle="SELECT email FROM faculty_table WHERE email='$email'";
 				$resulte=mysqli_query($conn,$sqle);
@@ -243,7 +251,7 @@ include 'left-nav.php';
 				if(mysqli_num_rows($resulte)==0)
 				{
 
-					$sql="INSERT INTO faculty_table (faculty_name, email, password, date_of_joining, department, faculty, hod, committee, principal,admin) VALUES ('$faculty_name','$email', '$hashed_password','$date_of_joining','$department','$faculty','$hod', '$committee', '$principal','$admin')";
+					$sql="INSERT INTO faculty_table (faculty_name, email, password, ecode, date_of_joining, department, mobileno, faculty, hod, committee, principal,admin) VALUES ('$faculty_name','$email', '$hashed_password', $ecode, '$date_of_joining','$department', '$mobileno', '$faculty','$hod', '$committee', '$principal','$admin')";
 		   			$result=mysqli_query($conn, $sql);
 
 		   		}
@@ -276,10 +284,11 @@ include 'left-nav.php';
 					  	<p style="font-size: 15px"><b>Column names to be filled accordingly in .csv file</b></p>
 					  		 <table class="table table-bordered">
 							    <thead>
-							      <tr>
+							      <tr style="background-color: white">
 							        <th style="text-align: center">Faculty Name</th>
 							        <th style="text-align: center">Email</th>
 							        <th style="text-align: center">Password</th>
+							        <th style="text-align: center">Emp Code</th>
 							        <th style="text-align: center">Date of Joining</th>
 							        <th style="text-align: center">Department</th>
 							        <th style="text-align: center">Faculty</th>
@@ -287,6 +296,8 @@ include 'left-nav.php';
 							        <th style="text-align: center">Committee</th>
 							        <th style="text-align: center">Principal</th>
 							        <th style="text-align: center">Admin</th>
+							        <th style="text-align: center">Emp Code</th>
+							        <th style="text-align: center">Mobile No.</th>
 							      </tr>
 							    </thead>
   							</table>
