@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2019 at 04:08 PM
+-- Generation Time: Jul 07, 2019 at 08:02 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -60,13 +60,13 @@ CREATE TABLE `faculty_table` (
   `ecode` varchar(200) NOT NULL,
   `date_of_joining` date NOT NULL,
   `department` varchar(50) NOT NULL,
-  `mobileno` bigint(11) NOT NULL,
+  `mobileno` bigint(11) NOT NULL DEFAULT '0',
   `profilePicLocation` varchar(100) NOT NULL DEFAULT 'defaults/default_userprofile_pic.png',
-  `faculty` int(11) NOT NULL,
-  `hod` int(11) NOT NULL,
-  `committee` int(11) NOT NULL,
-  `principal` int(11) NOT NULL,
-  `admin` int(11) NOT NULL
+  `faculty` int(11) NOT NULL DEFAULT '0',
+  `hod` int(11) NOT NULL DEFAULT '0',
+  `committee` int(11) NOT NULL DEFAULT '0',
+  `principal` int(11) NOT NULL DEFAULT '0',
+  `admin` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -170,21 +170,21 @@ CREATE TABLE `partb_cat1_pi` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `cat1_pi1_self_a` float NOT NULL,
-  `cat1_pi1_hod_a` float NOT NULL,
-  `cat1_pi1_committee_a` float NOT NULL,
-  `cat1_pi2_self_a` float NOT NULL,
-  `cat1_pi2_hod_a` float NOT NULL,
-  `cat1_pi2_committee_a` float NOT NULL,
-  `cat1_pi3_self_a` float NOT NULL,
-  `cat1_pi3_hod_a` float NOT NULL,
-  `cat1_pi3_committee_a` float NOT NULL,
-  `cat1_pi4_self_a` float NOT NULL,
-  `cat1_pi4_hod_a` float NOT NULL,
-  `cat1_pi4_committee_a` float NOT NULL,
-  `cat1_pitotal_self_a` float NOT NULL,
-  `cat1_pitotal_hod_a` float NOT NULL,
-  `cat1_pitotal_committee_a` float NOT NULL
+  `cat1_pi1_self_a` float NOT NULL DEFAULT '0',
+  `cat1_pi1_hod_a` float NOT NULL DEFAULT '0',
+  `cat1_pi1_committee_a` float DEFAULT '0',
+  `cat1_pi2_self_a` float NOT NULL DEFAULT '0',
+  `cat1_pi2_hod_a` float NOT NULL DEFAULT '0',
+  `cat1_pi2_committee_a` float NOT NULL DEFAULT '0',
+  `cat1_pi3_self_a` float NOT NULL DEFAULT '0',
+  `cat1_pi3_hod_a` float NOT NULL DEFAULT '0',
+  `cat1_pi3_committee_a` float NOT NULL DEFAULT '0',
+  `cat1_pi4_self_a` float NOT NULL DEFAULT '0',
+  `cat1_pi4_hod_a` float NOT NULL DEFAULT '0',
+  `cat1_pi4_committee_a` float NOT NULL DEFAULT '0',
+  `cat1_pitotal_self_a` float NOT NULL DEFAULT '0',
+  `cat1_pitotal_hod_a` float NOT NULL DEFAULT '0',
+  `cat1_pitotal_committee_a` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -242,21 +242,21 @@ CREATE TABLE `partb_cat2_pi` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `cat2_pii1_self_a` float NOT NULL,
-  `cat2_pii1_hod_a` float NOT NULL,
-  `cat2_pii1_committee_a` float NOT NULL,
-  `cat2_pii2_self_a` float NOT NULL,
-  `cat2_pii2_hod_a` float NOT NULL,
-  `cat2_pii2_committee_a` float NOT NULL,
-  `cat2_pii3_self_a` float NOT NULL,
-  `cat2_pii3_hod_a` float NOT NULL,
-  `cat2_pii3_committee_a` float NOT NULL,
-  `cat2_pii4_self_a` float NOT NULL,
-  `cat2_pii4_hod_a` float NOT NULL,
-  `cat2_pii4_committee_a` float NOT NULL,
-  `cat2_piitotal_self_a` float NOT NULL,
-  `cat2_piitotal_hod_a` float NOT NULL,
-  `cat2_piitotal_committee_a` float NOT NULL
+  `cat2_pii1_self_a` float NOT NULL DEFAULT '0',
+  `cat2_pii1_hod_a` float NOT NULL DEFAULT '0',
+  `cat2_pii1_committee_a` float NOT NULL DEFAULT '0',
+  `cat2_pii2_self_a` float NOT NULL DEFAULT '0',
+  `cat2_pii2_hod_a` float NOT NULL DEFAULT '0',
+  `cat2_pii2_committee_a` float NOT NULL DEFAULT '0',
+  `cat2_pii3_self_a` float NOT NULL DEFAULT '0',
+  `cat2_pii3_hod_a` float NOT NULL DEFAULT '0',
+  `cat2_pii3_committee_a` float NOT NULL DEFAULT '0',
+  `cat2_pii4_self_a` float NOT NULL DEFAULT '0',
+  `cat2_pii4_hod_a` float NOT NULL DEFAULT '0',
+  `cat2_pii4_committee_a` float NOT NULL DEFAULT '0',
+  `cat2_piitotal_self_a` float NOT NULL DEFAULT '0',
+  `cat2_piitotal_hod_a` float NOT NULL DEFAULT '0',
+  `cat2_piitotal_committee_a` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -312,45 +312,45 @@ CREATE TABLE `partb_cat3_pi` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `cat3_piii1_self_a` float NOT NULL,
-  `cat3_piii1_hod_a` float NOT NULL,
-  `cat3_piii1_committee_a` float NOT NULL,
-  `cat3_piii2_self_a` float NOT NULL,
-  `cat3_piii2_hod_a` float NOT NULL,
-  `cat3_piii2_committee_a` float NOT NULL,
-  `cat3_piii3_self_a` float NOT NULL,
-  `cat3_piii3_hod_a` float NOT NULL,
-  `cat3_piii3_committee_a` float NOT NULL,
-  `cat3_piii4_self_a` float NOT NULL,
-  `cat3_piii4_hod_a` float NOT NULL,
-  `cat3_piii4_committee_a` float NOT NULL,
-  `cat3_piii5_self_a` float NOT NULL,
-  `cat3_piii5_hod_a` float NOT NULL,
-  `cat3_piii5_committee_a` float NOT NULL,
-  `cat3_piii6_self_a` float NOT NULL,
-  `cat3_piii6_hod_a` float NOT NULL,
-  `cat3_piii6_committee_a` float NOT NULL,
-  `cat3_piii7_self_a` float NOT NULL,
-  `cat3_piii7_hod_a` float NOT NULL,
-  `cat3_piii7_committee_a` float NOT NULL,
-  `cat3_piiires_self_a` float NOT NULL,
-  `cat3_piiires_hod_a` float NOT NULL,
-  `cat3_piiires_committee_a` float NOT NULL,
-  `cat3_piii8_self_a` float NOT NULL,
-  `cat3_piii8_hod_a` float NOT NULL,
-  `cat3_piii8_committee_a` float NOT NULL,
-  `cat3_piii9_self_a` float NOT NULL,
-  `cat3_piii9_hod_a` float NOT NULL,
-  `cat3_piii9_committee_a` float NOT NULL,
-  `cat3_piii10_self_a` float NOT NULL,
-  `cat3_piii10_hod_a` float NOT NULL,
-  `cat3_piii10_committee_a` float NOT NULL,
-  `cat3_piii11_self_a` float NOT NULL,
-  `cat3_piii11_hod_a` float NOT NULL,
-  `cat3_piii11_committee_a` float NOT NULL,
-  `cat3_piiitotal_self_a` float NOT NULL,
-  `cat3_piiitotal_hod_a` float NOT NULL,
-  `cat3_piiitotal_committee_a` float NOT NULL
+  `cat3_piii1_self_a` float DEFAULT '0',
+  `cat3_piii1_hod_a` float DEFAULT '0',
+  `cat3_piii1_committee_a` float DEFAULT '0',
+  `cat3_piii2_self_a` float DEFAULT '0',
+  `cat3_piii2_hod_a` float DEFAULT '0',
+  `cat3_piii2_committee_a` float DEFAULT '0',
+  `cat3_piii3_self_a` float DEFAULT '0',
+  `cat3_piii3_hod_a` float DEFAULT '0',
+  `cat3_piii3_committee_a` float DEFAULT '0',
+  `cat3_piii4_self_a` float DEFAULT '0',
+  `cat3_piii4_hod_a` float DEFAULT '0',
+  `cat3_piii4_committee_a` float DEFAULT '0',
+  `cat3_piii5_self_a` float DEFAULT '0',
+  `cat3_piii5_hod_a` float DEFAULT '0',
+  `cat3_piii5_committee_a` float DEFAULT '0',
+  `cat3_piii6_self_a` float DEFAULT '0',
+  `cat3_piii6_hod_a` float DEFAULT '0',
+  `cat3_piii6_committee_a` float DEFAULT '0',
+  `cat3_piii7_self_a` float DEFAULT '0',
+  `cat3_piii7_hod_a` float DEFAULT '0',
+  `cat3_piii7_committee_a` float DEFAULT '0',
+  `cat3_piiires_self_a` float DEFAULT '0',
+  `cat3_piiires_hod_a` float DEFAULT '0',
+  `cat3_piiires_committee_a` float DEFAULT '0',
+  `cat3_piii8_self_a` float DEFAULT '0',
+  `cat3_piii8_hod_a` float DEFAULT '0',
+  `cat3_piii8_committee_a` float DEFAULT '0',
+  `cat3_piii9_self_a` float DEFAULT '0',
+  `cat3_piii9_hod_a` float DEFAULT '0',
+  `cat3_piii9_committee_a` float DEFAULT '0',
+  `cat3_piii10_self_a` float DEFAULT '0',
+  `cat3_piii10_hod_a` float DEFAULT '0',
+  `cat3_piii10_committee_a` float DEFAULT '0',
+  `cat3_piii11_self_a` float DEFAULT '0',
+  `cat3_piii11_hod_a` float DEFAULT '0',
+  `cat3_piii11_committee_a` float DEFAULT '0',
+  `cat3_piiitotal_self_a` float DEFAULT '0',
+  `cat3_piiitotal_hod_a` float DEFAULT '0',
+  `cat3_piiitotal_committee_a` float DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -406,18 +406,18 @@ CREATE TABLE `partb_cat4_pi` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `cat4_piv1_self_a` float NOT NULL,
-  `cat4_piv1_hod_a` float NOT NULL,
-  `cat4_piv1_committee_a` float NOT NULL,
-  `cat4_piv2_self_a` float NOT NULL,
-  `cat4_piv2_hod_a` float NOT NULL,
-  `cat4_piv2_committee_a` float NOT NULL,
-  `cat4_piv3_self_a` float NOT NULL,
-  `cat4_piv3_hod_a` float NOT NULL,
-  `cat4_piv3_committee_a` float NOT NULL,
-  `cat4_pivtotal_self_a` float NOT NULL,
-  `cat4_pivtotal_hod_a` float NOT NULL,
-  `cat4_pivtotal_committee_a` float NOT NULL
+  `cat4_piv1_self_a` float NOT NULL DEFAULT '0',
+  `cat4_piv1_hod_a` float NOT NULL DEFAULT '0',
+  `cat4_piv1_committee_a` float NOT NULL DEFAULT '0',
+  `cat4_piv2_self_a` float NOT NULL DEFAULT '0',
+  `cat4_piv2_hod_a` float NOT NULL DEFAULT '0',
+  `cat4_piv2_committee_a` float NOT NULL DEFAULT '0',
+  `cat4_piv3_self_a` float NOT NULL DEFAULT '0',
+  `cat4_piv3_hod_a` float NOT NULL DEFAULT '0',
+  `cat4_piv3_committee_a` float NOT NULL DEFAULT '0',
+  `cat4_pivtotal_self_a` float NOT NULL DEFAULT '0',
+  `cat4_pivtotal_hod_a` float NOT NULL DEFAULT '0',
+  `cat4_pivtotal_committee_a` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -471,10 +471,10 @@ INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat
 
 CREATE TABLE `part_a_doc` (
   `id` int(11) NOT NULL,
-  `formId` int(11) NOT NULL,
-  `srno` int(11) NOT NULL,
+  `formId` int(11) NOT NULL DEFAULT '0',
+  `srno` int(11) NOT NULL DEFAULT '0',
   `course` varchar(100) NOT NULL,
-  `days` int(11) NOT NULL,
+  `days` int(11) NOT NULL DEFAULT '0',
   `agency` varchar(100) NOT NULL,
   `rolee` varchar(200) NOT NULL,
   `file` varchar(200) NOT NULL DEFAULT 'NAN'
@@ -613,15 +613,15 @@ CREATE TABLE `part_a_gpi` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `parta_ugpggpi_self_a` int(11) NOT NULL,
-  `parta_ugpggpi_hod_a` int(11) NOT NULL,
-  `parta_ugpggpi_committee_a` int(11) NOT NULL,
-  `parta_gpi_self_a` float NOT NULL,
-  `parta_gpi_hod_a` float NOT NULL,
-  `parta_gpi_committee_a` float NOT NULL,
-  `parta_gpi_pi_self_a` float NOT NULL,
-  `parta_gpi_pi_hod_a` float NOT NULL,
-  `parta_gpi_pi_committee_a` float NOT NULL
+  `parta_ugpggpi_self_a` int(11) NOT NULL DEFAULT '0',
+  `parta_ugpggpi_hod_a` int(11) NOT NULL DEFAULT '0',
+  `parta_ugpggpi_committee_a` int(11) NOT NULL DEFAULT '0',
+  `parta_gpi_self_a` float NOT NULL DEFAULT '0',
+  `parta_gpi_hod_a` float NOT NULL DEFAULT '0',
+  `parta_gpi_committee_a` float DEFAULT '0',
+  `parta_gpi_pi_self_a` float NOT NULL DEFAULT '0',
+  `parta_gpi_pi_hod_a` float NOT NULL DEFAULT '0',
+  `parta_gpi_pi_committee_a` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -699,16 +699,16 @@ CREATE TABLE `part_a_table` (
   `desi` varchar(50) NOT NULL,
   `nameo` varchar(50) NOT NULL,
   `pdesi` varchar(50) NOT NULL,
-  `pscale` int(11) NOT NULL,
-  `pbg` int(11) NOT NULL,
+  `pscale` int(11) NOT NULL DEFAULT '0',
+  `pbg` int(11) NOT NULL DEFAULT '0',
   `lastdesisel` varchar(50) NOT NULL,
   `promowef` date NOT NULL,
-  `cscales` int(11) NOT NULL,
-  `cbasics` int(11) NOT NULL,
+  `cscales` int(11) NOT NULL DEFAULT '0',
+  `cbasics` int(11) NOT NULL DEFAULT '0',
   `lastdesicas` varchar(50) NOT NULL,
   `promowefcas` date NOT NULL,
-  `cscalecas` int(11) NOT NULL,
-  `cbasiccas` int(11) NOT NULL,
+  `cscalecas` int(11) NOT NULL DEFAULT '0',
+  `cbasiccas` int(11) NOT NULL DEFAULT '0',
   `customRadioInline1` varchar(3) NOT NULL,
   `nameofdegree` varchar(100) NOT NULL,
   `institute` varchar(100) NOT NULL
@@ -765,8 +765,8 @@ INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `praddr`, `peaddr`, `hig
 CREATE TABLE `part_b_cat_1` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
-  `avg_c` float NOT NULL,
-  `total_c` float NOT NULL,
+  `avg_c` float NOT NULL DEFAULT '0',
+  `total_c` float NOT NULL DEFAULT '0',
   `odpstest1` varchar(200) NOT NULL,
   `oepstest1` varchar(200) NOT NULL,
   `o1file` varchar(200) NOT NULL DEFAULT 'NAN',
@@ -863,7 +863,7 @@ CREATE TABLE `part_b_cat_1` (
   `dps6file` varchar(200) NOT NULL DEFAULT 'NAN',
   `deseps` varchar(200) NOT NULL,
   `dps7file` varchar(200) NOT NULL DEFAULT 'NAN',
-  `avg_ap` float NOT NULL
+  `avg_ap` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -903,10 +903,10 @@ CREATE TABLE `part_b_cat_1_cte` (
   `ctetyprlpt` varchar(200) NOT NULL,
   `cteugpg` varchar(200) NOT NULL,
   `cteclasssemester` varchar(200) NOT NULL,
-  `ctehrsweek` float NOT NULL,
-  `ctehrsengaged` float NOT NULL,
-  `ctemaxhrs` float NOT NULL,
-  `ctec` float NOT NULL,
+  `ctehrsweek` float NOT NULL DEFAULT '0',
+  `ctehrsengaged` float NOT NULL DEFAULT '0',
+  `ctemaxhrs` float NOT NULL DEFAULT '0',
+  `ctec` float NOT NULL DEFAULT '0',
   `ctefile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -943,10 +943,10 @@ CREATE TABLE `part_b_cat_1_cto` (
   `ctotyprlpt` varchar(200) NOT NULL,
   `ctougpg` varchar(200) NOT NULL,
   `ctoclasssemester` varchar(200) NOT NULL,
-  `ctohrsweek` float NOT NULL,
-  `ctohrsengaged` float NOT NULL,
-  `ctomaxhrs` float NOT NULL,
-  `ctoc` float NOT NULL,
+  `ctohrsweek` float NOT NULL DEFAULT '0',
+  `ctohrsengaged` float NOT NULL DEFAULT '0',
+  `ctomaxhrs` float NOT NULL DEFAULT '0',
+  `ctoc` float NOT NULL DEFAULT '0',
   `ctofile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1178,17 +1178,17 @@ INSERT INTO `part_b_cat_2_ha` (`id`, `formId`, `ha`, `hb`, `hfile`) VALUES
 CREATE TABLE `part_b_cat_3` (
   `id` int(11) NOT NULL,
   `formId` int(11) NOT NULL,
-  `phdne` int(11) NOT NULL,
-  `phdts` int(11) NOT NULL,
-  `phdda` int(11) NOT NULL,
+  `phdne` int(11) NOT NULL DEFAULT '0',
+  `phdts` int(11) NOT NULL DEFAULT '0',
+  `phdda` int(11) NOT NULL DEFAULT '0',
   `phdfile` varchar(200) NOT NULL DEFAULT 'NAN',
-  `mtechne` int(11) NOT NULL,
-  `mtechts` int(11) NOT NULL,
-  `mtechda` int(11) NOT NULL,
+  `mtechne` int(11) NOT NULL DEFAULT '0',
+  `mtechts` int(11) NOT NULL DEFAULT '0',
+  `mtechda` int(11) NOT NULL DEFAULT '0',
   `mtechfile` varchar(200) NOT NULL DEFAULT 'NAN',
-  `btechne` int(11) NOT NULL,
-  `btechts` int(11) NOT NULL,
-  `btechda` int(11) NOT NULL,
+  `btechne` int(11) NOT NULL DEFAULT '0',
+  `btechts` int(11) NOT NULL DEFAULT '0',
+  `btechda` int(11) NOT NULL DEFAULT '0',
   `btechfile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1280,7 +1280,7 @@ CREATE TABLE `part_b_cat_3_cres` (
   `tca` varchar(200) NOT NULL,
   `acb` varchar(200) NOT NULL,
   `dcc` date NOT NULL,
-  `gcd` int(11) NOT NULL,
+  `gcd` int(11) NOT NULL DEFAULT '0',
   `research3file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1311,7 +1311,7 @@ CREATE TABLE `part_b_cat_3_ores` (
   `tta` varchar(200) NOT NULL,
   `aab` varchar(200) NOT NULL,
   `ddc` date NOT NULL,
-  `ggd` int(11) NOT NULL,
+  `ggd` int(11) NOT NULL DEFAULT '0',
   `research2file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1468,7 +1468,7 @@ CREATE TABLE `part_b_cat_3_res` (
   `ta` varchar(200) NOT NULL,
   `ab` varchar(200) NOT NULL,
   `dc` date NOT NULL,
-  `gd` int(11) NOT NULL,
+  `gd` int(11) NOT NULL DEFAULT '0',
   `research1file` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1684,7 +1684,7 @@ INSERT INTO `part_b_cat_4_sem` (`id`, `formId`, `cativ_dp`, `cativ_datee`, `cati
 CREATE TABLE `part_b_table` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
-  `facultyId` int(11) NOT NULL
+  `facultyId` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1719,8 +1719,8 @@ INSERT INTO `part_b_table` (`id`, `year`, `facultyId`) VALUES
 CREATE TABLE `recommend_for_cas` (
   `id` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `recommend` int(11) NOT NULL,
-  `currentyear` int(11) NOT NULL
+  `recommend` int(11) NOT NULL DEFAULT '0',
+  `currentyear` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1808,8 +1808,8 @@ CREATE TABLE `submitted_for_self_appraisal` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `partA` int(11) NOT NULL,
-  `partB` int(11) NOT NULL
+  `partA` int(11) NOT NULL DEFAULT '0',
+  `partB` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -1829,18 +1829,18 @@ CREATE TABLE `summary_table` (
   `id` int(11) NOT NULL,
   `year` int(11) NOT NULL,
   `facultyId` int(11) NOT NULL,
-  `selfPP` float NOT NULL,
-  `selfA` float NOT NULL,
-  `selfB` float NOT NULL,
-  `self_avgpi` float NOT NULL,
-  `hodPP` float NOT NULL,
-  `hodA` float NOT NULL,
-  `hodB` float NOT NULL,
-  `hod_avgpi` float NOT NULL,
-  `committeePP` float NOT NULL,
-  `committeeA` float NOT NULL,
-  `committeeB` float NOT NULL,
-  `committee_avgpi` float NOT NULL,
+  `selfPP` float NOT NULL DEFAULT '0',
+  `selfA` float NOT NULL DEFAULT '0',
+  `selfB` float NOT NULL DEFAULT '0',
+  `self_avgpi` float NOT NULL DEFAULT '0',
+  `hodPP` float NOT NULL DEFAULT '0',
+  `hodA` float NOT NULL DEFAULT '0',
+  `hodB` float NOT NULL DEFAULT '0',
+  `hod_avgpi` float NOT NULL DEFAULT '0',
+  `committeePP` float NOT NULL DEFAULT '0',
+  `committeeA` float NOT NULL DEFAULT '0',
+  `committeeB` float NOT NULL DEFAULT '0',
+  `committee_avgpi` float NOT NULL DEFAULT '0',
   `hodremarkscum` varchar(200) NOT NULL,
   `final_recomm` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

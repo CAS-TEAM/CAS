@@ -234,13 +234,85 @@ $lasttolastyear=$previousyear-1;
 					  			<h3 class="text-center">SELF APPRAISAL FORM FILLING & APPLICATION</h3><br>
 					  			<!-- CHECK ELIGIBILITY STATUS -->
 					  			<p>
-								  	<a href="partA.php?id=<?php echo $userId; ?>&year=2019"><button class="btn btn-dark" type="button">
+								  	<a href="partA.php?id=<?php echo $userId; ?>&year=2019"><button class="btn btn-info" type="button">
 								    FORM A ~ 2018 - 2019
 								  	</button></a>
-								  	<a href="partB.php?id=<?php echo $userId; ?>&year=2019"><button class="btn btn-dark ml-2" type="button">
+								  	<a href="partB.php?id=<?php echo $userId; ?>&year=2019"><button class="btn btn-info ml-2" type="button">
 									FORM B ~ 2018 - 2019
 									</button></a>					  	
 								</p>
+								<hr>
+								<p style="font-size:20px"><b>Form Submission Status:</b></p>
+								<table class="table table-bordered" style="background-color: white">
+									<thead style="color: white">
+										<tr>
+											<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">#</th>
+											<th scope="col" rowspan="2" style="background-color: #343a40;text-align: center">Year</th>
+											<th scope="col" colspan="2" style="background-color: #343a40;text-align: center">Submission Status</th>
+										</tr>
+										<tr>
+									    	<th scope="col"style="background-color: #343a40">Form A</th>
+									    	<th scope="col"style="background-color: #343a40">Form B</th>									    	
+									    </tr>
+									</thead>
+									<tbody>
+										<?php
+
+										$sql="SELECT partA, partB, year FROM submitted_for_self_appraisal WHERE facultyId='$userId'";
+										$result=mysqli_query($conn, $sql);
+										$sfpartA=0;
+										$sfpartB=0;
+										if(mysqli_num_rows($result)!=0)
+										{
+											$counter=0;
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$sfpartB=$row['partB'];
+												$sfpartA=$row['partA'];
+												$sfyear=$row['year'];
+
+												$counter+=1;
+												?>
+												<tr>
+													<td class="text-center"><?php echo $counter; ?></td>
+													<td class="text-center"><?php echo ($sfyear-1).'-'.$sfyear; ?></td>
+													<?php 
+
+													if($sfpartA==1)
+													{
+														?>
+														<td class="text-center"><img src="checked.png" style="width:25px;display: block" class="mx-auto"></td>
+														<?php
+													}
+													else
+													{
+														?>
+														<td class="text-center"><img src="error.png" style="width:25px;display: block" class="mx-auto"></td>
+														<?php
+													}
+
+
+													if($sfpartB==1)
+													{
+														?>
+														<td class="text-center"><img src="checked.png" style="width:25px;display: block" class="mx-auto"></td>
+														<?php
+													}
+													else
+													{
+														?>
+														<td class="text-center"><img src="error.png" style="width:25px;display: block" class="mx-auto"></td>
+														<?php
+													}
+													?>
+												</tr>
+												<?php
+											}
+										}
+
+										?>
+									</tbody>
+								</table>
 					  			<?php
 					  			/*
 					  			<p>
