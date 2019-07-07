@@ -13,8 +13,11 @@ $hod=$rowx['hod'];
 $committee=$rowx['committee'];
 $profilePicLocation=$rowx['profilePicLocation'];
 
+
 include 'top.php';
 include 'left-nav.php';
+
+$lasttolastyear=$previousyear-1;
 
 ?>
 <div class="container">
@@ -40,26 +43,26 @@ include 'left-nav.php';
 							</tr>
 
 							<tr> 
+								<th><?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?></th>
 								<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 								<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
-								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?>+0.33% of API of <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
 								
+								<th><?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?></th>
 								<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 								<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
-								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?>+0.33% of API of <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
 								
+								<th><?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?></th>
 								<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 								<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								<th><?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
-								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?>+0.33% of API of <?php echo $previousyear; ?>-<?php echo $currentyear; ?></th>
+								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
 							</tr>
 
 							<tbody>
 								<?php
 
-								$sql="SELECT facultyId, selfPP, selfA, selfB, self_avgpi, hodPP, hodA, hodB, hod_avgpi, committeePP, committeeA, committeeB, committee_avgpi, final_recomm FROM summary_table WHERE year='$currentyear'";
+								$sql="SELECT facultyId, selfPP, selfA, selfB, self_avgpi, hodPP, hodA, hodB, hod_avgpi, committeePP, committeeA, committeeB, committee_avgpi, final_recomm FROM summary_table WHERE year='$previousyear'";
 								$result=mysqli_query($conn, $sql);
 								if(mysqli_num_rows($result)>0)
 								{
@@ -73,7 +76,7 @@ include 'left-nav.php';
 										$rown=mysqli_fetch_assoc($resultn);
 										$faculty_name=$rown['faculty_name'];
 
-										$sqlap="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$facultyId' AND currentyear='$currentyear' AND previousyear='$previousyear'";
+										$sqlap="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$facultyId' AND currentyear='$previousyear' AND previousyear='$lasttolastyear'";
 										$resultap=mysqli_query($conn, $sqlap);
 										if(mysqli_num_rows($resultap)!=0)
 										{

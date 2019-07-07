@@ -29,6 +29,11 @@ else
 	$same_user=0;	
 }
 
+$sqll="SELECT faculty_name FROM faculty_table WHERE id='$userId'";
+$resultl=mysqli_query($conn,$sqll);
+$rowl=mysqli_fetch_assoc($resultl);
+$fn=$rowl['faculty_name'];
+
 $sqlx="SELECT profilePicLocation, hod, committee FROM faculty_table WHERE id='$viewerId'";
 $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
@@ -47,7 +52,9 @@ include 'left-nav.php';
 
     	
     	<header>
-    		<h2 class="heading"><b>Self-Appraisal 'Part A: GENERAL INFORMATION'</b></h2>    		
+    		<h2 class="heading" style="font-size:15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
+    		<h2 class="heading" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
+    		<h2 class="heading"><b>Self-Appraisal 'Part A: GENERAL INFORMATION' - <?php echo $fn; ?> - <?php echo ($year-1).'-'.($year); ?></b></h2>    		
     	</header>
     	
     	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form" enctype="multipart/form-data">    	

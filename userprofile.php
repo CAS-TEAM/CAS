@@ -32,7 +32,9 @@ $principal=$row['principal'];
 $admin=$row['admin'];
 
 include 'top.php';
-include 'left-nav.php';				
+include 'left-nav.php';		
+
+$lasttolastyear=$previousyear-1;		
 /*
 ?>
 
@@ -167,7 +169,7 @@ include 'left-nav.php';
 				$previousyear=$currentyear-1;
 				$lasttolastyear=$previousyear-1;
 				// echo $currentyear;
-			    $sqlx="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$userId' AND currentyear='$currentyear' AND previousyear='$previousyear'";
+			    $sqlx="SELECT cas_approved FROM cas_approval_table WHERE facultyId='$userId' AND currentyear='$previousyear' AND previousyear='$lasttolastyear'";
 			    $resultx=mysqli_query($conn,$sqlx);
 			    if(mysqli_num_rows($resultx)>0)
 			    {
@@ -228,8 +230,19 @@ include 'left-nav.php';
 
 							<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CHECK CAS ELIGBILITY TAB ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 					  		<div class="tab-pane fade show active" id="pills-apply" role="tabpanel" aria-labelledby="pills-apply-tab">	
-					  			<h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br>
+					  			<!-- <h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br> -->
+					  			<h3 class="text-center">SELF APPRAISAL FORM FILLING & APPLICATION</h3><br>
 					  			<!-- CHECK ELIGIBILITY STATUS -->
+					  			<p>
+								  	<a href="partA.php?id=<?php echo $userId; ?>&year=2019"><button class="btn btn-dark" type="button">
+								    FORM A ~ 2018 - 2019
+								  	</button></a>
+								  	<a href="partB.php?id=<?php echo $userId; ?>&year=2019"><button class="btn btn-dark ml-2" type="button">
+									FORM B ~ 2018 - 2019
+									</button></a>					  	
+								</p>
+					  			<?php
+					  			/*
 					  			<p>
 								  	<button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseEligible" aria-expanded="false" aria-controls="collapseEligible">
 								    Check CAS Eligibility Status
@@ -264,15 +277,6 @@ include 'left-nav.php';
 									    
 								  	</div>
 								</div>
-								
-								<!-- <div class="collapse" id="collapseGuidelines">
-									<div class="card card-body">
-										
-									</div>
-								</div> -->
-								<!-- CHECK ELIGIBILITY STATUS OVER -->
-								<!-- <hr> -->
-								<!-- FORMS -->
 								<?php
 
 								if($eligible==1)
@@ -367,9 +371,8 @@ include 'left-nav.php';
 									
 									<?php
 								}
-
-								?>
-								<!-- FORMS OVER -->
+								*/
+								?>								
 					  		</div>
 
 					  		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VIEW PROFILES OF FACULTY IN YOUR DEPARTMENT TAB ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

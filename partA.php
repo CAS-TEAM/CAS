@@ -29,6 +29,11 @@ else
 	$same_user=0;	
 }
 
+$sqll="SELECT faculty_name FROM faculty_table WHERE id='$userId'";
+$resultl=mysqli_query($conn,$sqll);
+$rowl=mysqli_fetch_assoc($resultl);
+$fn=$rowl['faculty_name'];
+
 //making entry of this form in the PIs of all tables
 $sql="SELECT id from part_a_gpi WHERE year='$year' and facultyId='$userId'";
 $result=mysqli_query($conn,$sql);
@@ -83,9 +88,12 @@ include 'left-nav.php';
 
     	
     	<header>
-    		<h2 class="heading"><b>'Part A: GENERAL INFORMATION'</b></h2>
+    		<h2 class="heading" style="font-size:15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
+    		<h2 class="heading" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
+    		<h2 class="heading"><b>'Part A: GENERAL INFORMATION' - <?php echo $fn; ?> - <?php echo ($year-1).'-'.($year); ?></b></h2>
     		<?php 
 
+    		//SUBMIT FOR CAS REVIEW    		
 			if($_SESSION['id']==$userId)
 			{
 
@@ -93,15 +101,15 @@ include 'left-nav.php';
 				$resultsfr=mysqli_query($conn,$sqlsfr);
 
 				if(mysqli_num_rows($resultsfr)==0)
-				{
-
+				{	
+					/*
 					?>
 					<form method="POST" action="sfrA_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-						<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review">
+						<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for CAS review">
 					</form><br>
 					<?php
-
+					*/
 				}
 				else
 				{
@@ -109,23 +117,96 @@ include 'left-nav.php';
 
 					if($rowsfr['partA']==0)
 					{
+						/*
 						?>
 						<form method="POST" action="sfrA_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
-							<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for review" >
+							<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for CAS review" >
 						</form>	<br>
 						<?php
+						*/
 					}
 					else
 					{
 						$submitted_for_review=true;
 						?>
-						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
+						<!-- <p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p> -->
 						<?php
 					}
 					
 				}
 
+			}
+			
+
+			// SUBMIT FOR SELF APPRAISAL
+			$submitted_for_self_appraisal=false;
+			if($_SESSION['id']==$userId)
+			{
+
+				$sqlssa="SELECT partA FROM submitted_for_self_appraisal WHERE facultyId='$userId' AND year='$year'";
+				$resultssa=mysqli_query($conn,$sqlssa);
+
+				if(mysqli_num_rows($resultssa)==0)
+				{
+					?>
+					<form method="POST" action="ssaA_sys.php" onsubmit="return confirm('Do you want to submit the form for Self Appraisal?');">
+						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+						<input type="submit" id="ssaa_submit" name="ssaa_submit" class="btn btn-primary" value="Submit for Self Appraisal">
+					</form><br>
+					<?php
+				}
+				else
+				{
+					$rowssa=mysqli_fetch_assoc($resultssa);
+
+					if($rowssa['partA']==0)
+					{
+						?>
+						<form method="POST" action="ssaA_sys.php" onsubmit="return confirm('Do you want to submit the form for Self Appraisal?');">
+							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+							<input type="submit" id="ssaa_submit" name="ssaa_submit" class="btn btn-primary" value="Submit for Self Appraisal" >
+						</form>	<br>
+						<?php
+					}
+					else
+					{
+						$submitted_for_self_appraisal=true;
+						?>
+						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Self Appraisal</p>
+						<?php
+					}
+					
+				}
+
+			}
+
+			// Request edit access
+			if($_SESSION['id']==$userId)
+			{
+				// uncomment '$submitted_for_review==true &&' when enabling cas stuff
+				if(/*$submitted_for_review==true &&*/ $submitted_for_self_appraisal==true)
+				{
+
+					$sqlrfea="SELECT id FROM request_edit_access WHERE year='$year' AND facultyId='$userId' AND form='A'";
+					$resultrfea=mysqli_query($conn,$sqlrfea);
+					if(mysqli_num_rows($resultrfea)==0)
+					{
+						?>
+						<form method="POST" action="reqedit_sys.php" onsubmit="return confirm('Do you want to request edit access for this form?');">
+							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
+							<input type="hidden" name="form" id="form" value="A">
+							<input type="submit" id="reqeditA_submit" name="reqeditA_submit" class="btn btn-info" value="Request Edit Access" >
+						</form>
+						<?php
+					}
+					else
+					{
+						?>
+						<p class="">Edit Access for this form has been Requested</p>
+						<?php
+					}
+				}
 			}
 
 			?>
@@ -594,7 +675,7 @@ include 'left-nav.php';
 
 		<div class="row">
     		<div class="col-md-12">
-    			<p style="font-size: 18px"><b>Details of course/summer school/STTP/online course attended/completed during academic year</b></p>
+    			<p style="font-size: 18px"><b>Details of course/summer school/STTP/online course attended/completed/organised during academic year</b></p>
     		</div>
     	</div>
 
@@ -866,7 +947,7 @@ include 'left-nav.php';
 
 			<div class="col se-btn">
 				<?php
-				if($submitted_for_review==false && $same_user==1)
+				if($submitted_for_review==false && $same_user==1 && $submitted_for_self_appraisal==false)
 				{
 				?>
 
@@ -936,7 +1017,8 @@ include 'left-nav.php';
 
 	<?php
 
-	if($same_user==1 && $submitted_for_review==false && $year!=2017 && !isset($_GET['updated']))
+	// if($same_user==1 && $submitted_for_review==false && $year!=2017 && !isset($_GET['updated']))
+	if($same_user==1 && $submitted_for_review==false && $year!=2019 && !isset($_GET['updated']))
 	{
 		// 2017 since our forms from the year 2017
 		$sqldc="SELECT id FROM part_a_table WHERE year='$year' AND faculty_id='$userId'";

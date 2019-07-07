@@ -92,25 +92,22 @@ $admin=$rowp['admin'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">My Part A CAS forms</span>
+							<span style="font-size: 15px;cursor:pointer">My Part A forms</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
+								<li>
+									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=2019">2018-2019</a>
+								</li>
 								<?php
-
-								for($a=$currentyear; $a>=2017; $a--)
+								/*for($a=$currentyear; $a>=2017; $a--)
 								{
 									?>
 									<li>
 										<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
-								}
-								/*
-								<li>
-									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
-								</li>
-								*/
+								}*/
 								?>
 							</ul>
 						</div>
@@ -118,30 +115,28 @@ $admin=$rowp['admin'];
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fab fa-wpforms" style="font-size: 15px"></i>
-							<span style="font-size: 15px;cursor:pointer">My Part B CAS forms</span>
+							<span style="font-size: 15px;cursor:pointer">My Part B forms</span>
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
+								<li>
+									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=2019">2018-2019</a>
+								</li>
 								<?php
-
-								for($a=$currentyear; $a>=2017; $a--)
+								/*for($a=$currentyear; $a>=2017; $a--)
 								{
 									?>
 									<li>
 										<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
-								}
-								/*
-								<li>
-									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $previousyear; ?>"><?php echo $previousyear.'-'.($previousyear-1); ?></a>
-								</li>
-								*/
+								}*/
 								?>
 							</ul>
 						</div>
 					</li>
-
+					<?php
+					/*
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fa fa-check-circle" aria-hidden="true" style="font-size: 15px"></i>
@@ -162,18 +157,20 @@ $admin=$rowp['admin'];
 							</ul>
 						</div>
 					</li>
+					*/
+					?>
 					<li class="sidebar-dropdown">
 						<a href="self-appraisals.php?id=<?php echo $_SESSION['id']; ?>">
 							<i class="fas fa-fighter-jet" style="font-size: 15px"></i>
 							<span style="font-size: 15px">My Self Appraisals</span>
 						</a>
 					</li>
-					<li class="sidebar-dropdown">
+					<!-- <li class="sidebar-dropdown">
 						<a href="guidelines.php">
 							<i class="fas fa-info" style="font-size: 15px"></i>
 							<span style="font-size: 15px">CAS Guidelines</span>
 						</a>
-					</li>
+					</li> -->
 					<?php
 
 					if($admin==1)
@@ -187,8 +184,20 @@ $admin=$rowp['admin'];
 						</li>
 						<?php
 					}
-					?>
 					
+
+					if($admin==1 || $hod==1 || $committee==1)
+					{
+						?>
+						<li class="sidebar-dropdown">
+							<a href="request-edit-access-panel.php">
+								<i class="fas fa-unlock" style="font-size: 15px"></i>
+								<span style="font-size: 15px">Edit Access Requests</span>
+							</a>
+						</li>
+						<?php
+					}
+					?>
 				 
 				</ul>
 			</div>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2019 at 09:55 AM
+-- Generation Time: Jul 07, 2019 at 04:08 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -74,13 +74,13 @@ CREATE TABLE `faculty_table` (
 --
 
 INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `ecode`, `date_of_joining`, `department`, `mobileno`, `profilePicLocation`, `faculty`, `hod`, `committee`, `principal`, `admin`) VALUES
-(1, 'Prof. Babaso Aldar', 'babasoaldar@somaiya.edu', '$2y$10$bd4GNgydExAbWXbrf8P1SuVtVBdwxJ2oM66S.j1G/T5utSB1IeSCS', '0', '2018-05-12', 'Computer', 0, 'users/babasoaldar@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 1),
+(1, 'Prof. Babaso Aldar', 'babasoaldar@somaiya.edu', '$2y$10$bd4GNgydExAbWXbrf8P1SuVtVBdwxJ2oM66S.j1G/T5utSB1IeSCS', '0', '2018-05-12', 'Computer', 0, 'users/babasoaldar@somaiya.edu/profilepic.jpg', 1, 1, 1, 0, 1),
 (2, 'Prof. Manish Potey', 'manish.potey@somaiya.edu', '$2y$10$mRi97USluJQZPZtwSgS3ZOk1yybigUHHRhAJJ/yVPS8rF/DFRTGmK', '0', '2010-08-17', 'Computer', 0, 'users/manish.potey@somaiya.edu/profilepic.jpg', 1, 1, 0, 0, 0),
 (3, 'Jyoti Trymbake', 'jyoti.trymbake@somaiya.edu', '$2y$10$f06wIJ29VeGf1oGfh2P95uHgYPXIPuPwC4NxE/xYolwy2tn3H0O1q', '0', '2011-06-14', 'Computer', 0, 'users/jyoti.trymbake@somaiya.edu/profilepic.jpg', 1, 0, 1, 0, 0),
 (4, 'Prof. Poonam Bhogale', 'poonambhogale@somaiya.edu', '$2y$10$W6lbNYTxCAgG2GjeJ8xHuuV/BJg6NCMBifF5pvBJ7aDIiV2bIMTzC', '0', '2008-11-11', 'Etrx', 0, 'defaults/default_userprofile_pic.png', 1, 1, 0, 0, 0),
 (5, 'Anjali', 'anjali@gmail.com', '$2y$10$2hpkZa7tqA98LAhOiqq1ieaByObfDo..bwzSLbZCKJRVvhQTziwkW', '0', '1999-07-26', 'Computer', 0, 'defaults/default_userprofile_pic.png', 1, 0, 1, 1, 0),
 (6, 'Sharvai Patil', 'sharvai.p@somaiya.edu', '$2y$10$lTBgAr587gnLyzoZYR0UB.oS0jywazLATQdJNrRhdw5ltyvWiAlIu', '0', '2001-01-13', 'Computer', 0, 'users/sharvai.p@somaiya.edu/profilepic.jpg', 1, 0, 0, 1, 0),
-(11, 'ï»¿faculty_name', 'email', '$2y$10$LDi9krgwN5CPQAZj31/tdeD/VkvBkkFeHeYWBSgIBUYWSrOHCOK8G', '0', '1970-01-01', 'department', 0, 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
+(11, 'Faculty420', 'email', '$2y$10$LDi9krgwN5CPQAZj31/tdeD/VkvBkkFeHeYWBSgIBUYWSrOHCOK8G', '0', '1970-01-01', 'department', 0, 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
 (12, 'Anjvai', 'anjvai@somaiya.edu', '$2y$10$xwU8.JQXFVdylSGmzRu6sOAI6LwBA6RCSkIfFaN5oH1aOzbAAXJ2.', '0', '1999-12-01', 'Computer', 0, 'defaults/default_userprofile_pic.png', 0, 1, 0, 1, 0),
 (13, 'gfg', 'uhiud@gmail.com', '$2y$10$T7J7Zp7kzXwuzW21FHUI0ekl4RrbFPf2tgEjY3vY508W6nIPM.29a', '0', '1999-12-12', 'Computer', 0, 'defaults/default_userprofile_pic.png', 0, 1, 0, 0, 0),
 (14, 'gfyeu', 'uidhu@gmail.com', '$2y$10$.NZE8URcEbGMEbXTNEupsuOYUXerLNdcH6ChciZb8rg3XJvdioiA.', '0', '2000-04-04', 'Extc', 0, 'defaults/default_userprofile_pic.png', 0, 0, 0, 0, 0),
@@ -99,7 +99,8 @@ INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `ecode`,
 (28, 'faculty99', 'faculty99@gmail.com', '$2y$10$a6wFTQEyxniHoJpUbiQJs.mvZEI7wsDQDpDTJWM1bmI1vAG8kzQ72', '13005', '1999-02-20', 'Computer', 9969512230, 'users/faculty99@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
 (29, 'Dijon', 'dijon@gmail.com', '$2y$10$6BeD6uJWvTG5appyfCnx2u8hTEEDxiVX7Wy8.xoEF5xSjy.qJucta', '144553', '2004-05-22', 'Computer', 9899657578, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
 (30, 'SH', 'sh@gmail.com', '$2y$10$gpugUSEG/3XIZrJ3z3GVc.nxA0gzCSHngL2NBfMww9XM4a435hasa', '556600', '2000-02-04', 'Science & Humanities', 9898348483, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
-(31, 'newuser', 'newuser@gmail.com', '$2y$10$0RQakFG2Er4rCMtQRHkVFuOXdAp/5Wg.IPsBMTsLUHDhC7CFfRYSK', '1400', '1970-01-01', 'Computer', 9892111116, 'users/newuser@gmail.com/profilepic.png', 1, 0, 0, 0, 0);
+(31, 'newuser', 'newuser@gmail.com', '$2y$10$0RQakFG2Er4rCMtQRHkVFuOXdAp/5Wg.IPsBMTsLUHDhC7CFfRYSK', '1400', '1970-01-01', 'Computer', 9892111116, 'users/newuser@gmail.com/profilepic.png', 1, 0, 0, 0, 0),
+(32, 'Faculty 66', 'faculty66@gmail.com', '$2y$10$Oqfn4uTquShRsYsYY6ucs..8tBl66oklWS2k.Bs7hPCxrlbvpvf5i', '1223423', '2010-07-02', 'Computer', 9898227722, 'users/faculty66@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -224,7 +225,12 @@ INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1
 (31, 2019, 31, 20, 0, 0, 30, 0, 0, 10, 0, 0, 10, 0, 0, 70, 60, 50),
 (32, 2018, 31, 20, 0, 0, 20, 0, 0, 10, 0, 0, 10, 0, 0, 60, 50, 40),
 (33, 2017, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(34, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(34, 2020, 25, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0),
+(35, 2020, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(36, 2020, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(37, 2019, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(38, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(39, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -289,7 +295,12 @@ INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat
 (29, 2019, 31, 20, 0, 0, 20, 0, 0, 20, 0, 0, 20, 0, 0, 80, 50, 40),
 (30, 2018, 31, 20, 0, 0, 20, 0, 0, 20, 0, 0, 20, 0, 0, 80, 50, 40),
 (31, 2017, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(32, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(32, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(33, 2020, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(34, 2020, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(35, 2019, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -361,7 +372,7 @@ INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `ca
 (12, 2017, 21, 50, 0, 0, 15, 0, 0, 0, 0, 0, 15, 0, 0, 28, 0, 0, 36, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 83, 0, 0),
 (13, 2019, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (14, 2017, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(15, 2019, 25, 20, 20, 15, 10, 5, 5, 10, 5, 5, 15, 10, 10, 40, 40, 30, 20, 20, 20, 24, 20, 20, 0, 0, 0, 15, 10, 5, 15, 10, 10, 15, 20, 20, 10, 10, 10, 100, 140, 150),
+(15, 2019, 25, 20, 20, 15, 10, 5, 5, 10, 5, 5, 15, 10, 10, 40, 40, 30, 20, 20, 20, 24, 20, 20, 40, 35, 30, 15, 10, 5, 15, 10, 10, 15, 20, 20, 10, 10, 10, 100, 140, 150),
 (16, 2018, 25, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0, 40, 0, 0, 28, 0, 0, 0, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 10, 0, 0, 175, 100, 90),
 (17, 2017, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 155, 150, 100),
 (18, 2017, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 50, 0, 0),
@@ -378,7 +389,12 @@ INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `ca
 (29, 2019, 31, 20, 0, 0, 15, 0, 0, 10, 0, 0, 15, 0, 0, 36, 0, 0, 0, 0, 0, 6, 0, 0, 40, 0, 0, 15, 0, 0, 20, 0, 0, 20, 0, 0, 20, 0, 0, 175, 100, 50),
 (30, 2018, 31, 20, 0, 0, 15, 0, 0, 10, 0, 0, 15, 0, 0, 20, 0, 0, 0, 0, 0, 12, 0, 0, 32, 0, 0, 15, 0, 0, 20, 0, 0, 20, 0, 0, 20, 0, 0, 167, 150, 100),
 (31, 2017, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(32, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(32, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0),
+(33, 2020, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(34, 2020, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(35, 2019, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -440,7 +456,12 @@ INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat
 (29, 2019, 31, 20, 0, 0, 20, 0, 0, 15, 0, 0, 55, 50, 40),
 (30, 2018, 31, 20, 0, 0, 20, 0, 0, 15, 0, 0, 55, 50, 40),
 (31, 2017, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(32, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(32, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(33, 2020, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(34, 2020, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(35, 2019, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -576,7 +597,11 @@ INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `r
 (277, 83, 2, 'POJ', 2, 'KJSCE', 'Member', 'users/newuser@gmail.com/1_3.jpg'),
 (278, 83, 3, 'LOL', 3, 'KJSCE', 'Organiser', 'users/newuser@gmail.com/1_1.jpg'),
 (279, 84, 0, '', 0, '', '', 'NAN'),
-(281, 85, 0, '', 0, '', '', 'NAN');
+(281, 85, 0, '', 0, '', '', 'NAN'),
+(282, 84, 0, '', 0, '', '', 'NAN'),
+(283, 85, 0, '', 0, '', '', 'NAN'),
+(284, 86, 0, '', 0, '', '', 'NAN'),
+(286, 87, 0, '', 0, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -648,8 +673,14 @@ INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_ugpggpi_self_a`, `pa
 (44, 2018, 31, 20, 15, 0, 15, 15, 0, 35, 30, 25),
 (45, 2019, 31, 20, 20, 0, 15, 10, 0, 35, 30, 20),
 (46, 2020, 31, 20, 15, 10, 15, 10, 10, 35, 25, 20),
-(47, 2020, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(48, 2020, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(47, 2020, 25, 0, 0, 0, 10, 0, 0, 10, 0, 0),
+(48, 2020, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(49, 2020, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(50, 2017, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(51, 2020, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(52, 2020, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(53, 2017, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(54, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -719,7 +750,11 @@ INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `praddr`, `peaddr`, `hig
 (80, 2017, 31, 'New York', 'Thane', 'PHD', '1985-09-22', 'Assistant', 'RIT', 'Professor', 6000, 5000, 'Asst. Prof.', '2019-07-03', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
 (81, 2018, 31, 'New York', 'Thane', 'PHD', '1985-09-22', 'Assistant', 'RIT', 'Professor', 6000, 5000, 'Asst. Prof.', '2019-07-03', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
 (82, 2019, 31, 'New York', 'Thane', 'PHD', '1985-09-22', 'Assistant', 'RIT', 'Professor', 6000, 5000, 'Asst. Prof.', '2019-07-03', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
-(83, 2020, 31, 'New York', 'Thane', 'PHD', '1985-09-22', 'Assistant', 'RIT', 'Professor', 6000, 5000, 'Asst. Prof.', '2019-07-03', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '');
+(83, 2020, 31, 'New York', 'Thane', 'PHD', '1985-09-22', 'Assistant', 'RIT', 'Professor', 6000, 5000, 'Asst. Prof.', '2019-07-03', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(84, 2020, 18, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(85, 2020, 25, 'ghodbundar', 'road', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(86, 2019, 18, '', '', '', '0000-00-00', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', ''),
+(87, 2019, 32, 'New York', 'Thane', 'PHD', '2019-07-24', '', '', '', 0, 0, '', '0000-00-00', 0, 0, '', '0000-00-00', 0, 0, 'Yes', '', '');
 
 -- --------------------------------------------------------
 
@@ -852,7 +887,8 @@ INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oe
 (14, 14, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
 (15, 15, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
 (16, 16, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
-(17, 17, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', 'Paper Checking', '50', 'Unit Test Paper', '60', 'users/newuser@gmail.com/1_1.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'Paper Checker', '80', 'users/newuser@gmail.com/453266.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0);
+(17, 17, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', 'Paper Checking', '50', 'Unit Test Paper', '60', 'users/newuser@gmail.com/1_1.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'Paper Checker', '80', 'users/newuser@gmail.com/453266.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
+(18, 18, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0);
 
 -- --------------------------------------------------------
 
@@ -936,7 +972,8 @@ INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctou
 (134, 14, '2233', '', '', '', 0, 0, 0, 0, 'NAN'),
 (173, 17, 'IKJ', 'L', 'UG', 'II', 5, 5, 10, 50, 'users/newuser@gmail.com/1_1.jpg'),
 (174, 17, 'JK', 'P', 'PG', 'III', 5, 10, 100, 50, 'users/newuser@gmail.com/2_3.jpg'),
-(175, 17, 'Computer', 'T', 'PG', 'IV', 2, 15, 30, 50, 'users/newuser@gmail.com/1_2.jpg');
+(175, 17, 'Computer', 'T', 'PG', 'IV', 2, 15, 30, 50, 'users/newuser@gmail.com/1_2.jpg'),
+(176, 18, 'abc', '', '', '', 0, 0, 0, 0, 'users/faculty66@gmail.com/1_1.jpg');
 
 -- --------------------------------------------------------
 
@@ -1002,7 +1039,8 @@ INSERT INTO `part_b_cat_2` (`id`, `formId`) VALUES
 (17, 14),
 (18, 15),
 (19, 16),
-(20, 17);
+(20, 17),
+(21, 18);
 
 -- --------------------------------------------------------
 
@@ -1194,7 +1232,8 @@ INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `phdfile`
 (33, 14, 5, 2, 3, 'NAN', 4, 2, 1, 'NAN', 3, 3, 2, 'NAN'),
 (34, 15, 2, 0, 0, 'NAN', 1, 0, 0, 'NAN', 1, 0, 0, 'NAN'),
 (35, 16, 2, 1, 0, 'NAN', 1, 0, 1, 'NAN', 2, 0, 0, 'NAN'),
-(36, 17, 3, 2, 3, 'users/newuser@gmail.com/1_1.jpg', 5, 7, 8, 'users/newuser@gmail.com/1_1.jpg', 3, 2, 2, 'users/newuser@gmail.com/1_1.jpg');
+(36, 17, 3, 2, 3, 'users/newuser@gmail.com/1_1.jpg', 5, 7, 8, 'users/newuser@gmail.com/1_1.jpg', 3, 2, 2, 'users/newuser@gmail.com/1_1.jpg'),
+(37, 18, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1546,7 +1585,8 @@ INSERT INTO `part_b_cat_4` (`id`, `formId`) VALUES
 (80, 17),
 (81, 17),
 (82, 17),
-(83, 17);
+(83, 17),
+(84, 18);
 
 -- --------------------------------------------------------
 
@@ -1667,7 +1707,8 @@ INSERT INTO `part_b_table` (`id`, `year`, `facultyId`) VALUES
 (14, 2017, 27),
 (15, 2019, 28),
 (16, 2018, 28),
-(17, 2020, 31);
+(17, 2020, 31),
+(18, 2019, 32);
 
 -- --------------------------------------------------------
 
@@ -1693,6 +1734,19 @@ INSERT INTO `recommend_for_cas` (`id`, `facultyId`, `recommend`, `currentyear`) 
 (6, 27, 0, 2019),
 (7, 28, 1, 2019),
 (8, 31, 1, 2020);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request_edit_access`
+--
+
+CREATE TABLE `request_edit_access` (
+  `id` int(11) NOT NULL,
+  `facultyId` int(11) NOT NULL,
+  `year` int(11) NOT NULL,
+  `form` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1743,6 +1797,27 @@ INSERT INTO `submitted_for_review_table` (`id`, `year`, `facultyId`, `partA`, `p
 (28, 2018, 31, 1, 1),
 (29, 2019, 31, 1, 1),
 (30, 2020, 31, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `submitted_for_self_appraisal`
+--
+
+CREATE TABLE `submitted_for_self_appraisal` (
+  `id` int(11) NOT NULL,
+  `year` int(11) NOT NULL,
+  `facultyId` int(11) NOT NULL,
+  `partA` int(11) NOT NULL,
+  `partB` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `submitted_for_self_appraisal`
+--
+
+INSERT INTO `submitted_for_self_appraisal` (`id`, `year`, `facultyId`, `partA`, `partB`) VALUES
+(1, 2019, 32, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2025,9 +2100,21 @@ ALTER TABLE `recommend_for_cas`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `request_edit_access`
+--
+ALTER TABLE `request_edit_access`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `submitted_for_self_appraisal`
+--
+ALTER TABLE `submitted_for_self_appraisal`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2049,7 +2136,7 @@ ALTER TABLE `cas_approval_table`
 -- AUTO_INCREMENT for table `faculty_table`
 --
 ALTER TABLE `faculty_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `fields_table`
 --
@@ -2069,42 +2156,42 @@ ALTER TABLE `otp_table`
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `partb_cat4_pi`
 --
 ALTER TABLE `partb_cat4_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=282;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=287;
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
 ALTER TABLE `part_a_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1`
 --
 ALTER TABLE `part_b_cat_1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
@@ -2114,7 +2201,7 @@ ALTER TABLE `part_b_cat_1_cte`
 -- AUTO_INCREMENT for table `part_b_cat_1_cto`
 --
 ALTER TABLE `part_b_cat_1_cto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_dar`
 --
@@ -2124,7 +2211,7 @@ ALTER TABLE `part_b_cat_1_dar`
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
 ALTER TABLE `part_b_cat_2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
@@ -2149,7 +2236,7 @@ ALTER TABLE `part_b_cat_2_ha`
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
@@ -2194,7 +2281,7 @@ ALTER TABLE `part_b_cat_3_res`
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
@@ -2214,17 +2301,27 @@ ALTER TABLE `part_b_cat_4_sem`
 -- AUTO_INCREMENT for table `part_b_table`
 --
 ALTER TABLE `part_b_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `recommend_for_cas`
 --
 ALTER TABLE `recommend_for_cas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
+-- AUTO_INCREMENT for table `request_edit_access`
+--
+ALTER TABLE `request_edit_access`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+--
+-- AUTO_INCREMENT for table `submitted_for_self_appraisal`
+--
+ALTER TABLE `submitted_for_self_appraisal`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `summary_table`
 --

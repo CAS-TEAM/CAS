@@ -211,6 +211,42 @@ $(document).ready(function(){
 	})
 });
 
+// grant access for edit access request
+$(document).ready(function(){
+	$(".grant-access-form").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
+		var duconfirm=confirm("Grant edit access to this user?");
+		if(duconfirm==true)
+		{
+			// alert('hey');
+			$.ajax
+			({
+				type: 'POST',
+				url: 'grant_access_sys.php',
+				data:formData,
+				//dataType: 'text',  // what to expect back from the PHP script, if anything
+				cache: false,
+				contentType: false,
+				processData: false,                
+				success: function (response) 
+				{
+					// alert(response);
+					          
+					// var trid=document.getElementById("user"+response.trim());
+					$("#ga"+response.trim()).remove();
+					      
+				},                
+				error: function(xhr, status, error) {
+					alert(xhr.responseText);
+				}              
+			});
+			
+			return false;
+		}
+	})
+});
+
 //part A stuff
 
 function disableAinput(){

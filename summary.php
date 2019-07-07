@@ -32,6 +32,11 @@ else
 	
 }
 
+$sqll="SELECT faculty_name FROM faculty_table WHERE id='$userId'";
+$resultl=mysqli_query($conn,$sqll);
+$rowl=mysqli_fetch_assoc($resultl);
+$fn=$rowl['faculty_name'];
+
 $sqlx="SELECT profilePicLocation, hod, committee FROM faculty_table WHERE id='$viewerId'";
 $resultx=mysqli_query($conn,$sqlx);
 $rowx=mysqli_fetch_assoc($resultx);
@@ -225,8 +230,9 @@ $lasttolastyearmf=0.33;
 
 
 		?>
-		
-		<header class="heading"><b>Summary of PI Scores of Applicant</b></header><br>
+		<h2 class="heading" style="font-size:15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
+    		<h2 class="heading" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
+		<header class="heading"><b>Summary of PI Scores of <?php echo $fn; ?></b></header><br>
 		<!-- <form class="summary_self_form.php" action="summary_sys.php" enctype="multipart/form-data" method="POST"> -->
 
 		<input type="hidden" name="year" id="year" value="<?php echo $currentyear; ?>">
