@@ -198,6 +198,13 @@ $admin=$rowp['admin'];
 						<?php
 					}
 					?>
+
+					<li class="sidebar-dropdown">
+						<a href="feedback.php">
+							<i class="fa fa-envelope" style="font-size: 15px"></i>
+							<span style="font-size: 15px">Feeback / Contact Us</span>
+						</a>
+					</li>
 				 
 				</ul>
 			</div>

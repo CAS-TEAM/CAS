@@ -76,8 +76,8 @@ if(isset($_SESSION['id']))
 	$sqlx="INSERT INTO cas_approval_table (facultyId, cas_approved, currentyear, previousyear) VALUES ('$userId', '$cas_approved', '$year', '$pyear')";
 	$resultx=mysqli_query($conn,$sqlx);
 
-	$to      = 'sharvai_spqr@yahoo.com';
-	// $to 	 =  $email;
+	// $to      = 'sharvai_spqr@yahoo.com';
+	$to 	 =  $email;
 	$subject = 'CAS Application status';
 	$message = 'Your Application for CAS has been '.$cas_approved;
 	$headers = 'From: sharvai@gmail.com' . "\r\n" .

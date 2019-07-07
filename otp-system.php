@@ -34,8 +34,8 @@ if(mysqli_num_rows($result)>0)
 	$result=mysqli_query($conn, $sql);
 
 	//now mailing the otp to the respective user
-	$to      = 'sharvai_spqr@yahoo.com';
-	// $to 	 =  $email;
+	// $to      = 'sharvai_spqr@yahoo.com';
+	$to 	 =  $email;
 	$subject = 'OTP from CAS';
 	$message = 'This email consists of your OTP. Please use it to login to your CAS account. Once logged in, the OTP can no longer be used and we therefore advise you to change your password immediately. This is your OTP: '.$otp;
 	$headers = 'From: sharvai@gmail.com' . "\r\n" .
