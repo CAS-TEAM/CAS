@@ -29,13 +29,13 @@ include 'left-nav.php';
 	               	<div class="row">
 	                    <div class="col-md-6">
 	                        <div class="form-group">
-	                            <input type="text" name="name" class="form-control partaformcontrol" placeholder="Your Name *" value="" />
+	                            <input type="text" name="name" class="form-control partaformcontrol" placeholder="Your Name *" value="" required />
 	                        </div>
 	                        <div class="form-group">
-	                            <input type="text" name="email" class="form-control partaformcontrol" placeholder="Your Email *" value="" />
+	                            <input type="text" name="email" class="form-control partaformcontrol" placeholder="Your Email *" value="" required />
 	                        </div>
 	                        <div class="form-group">
-	                            <input type="text" name="phone" class="form-control partaformcontrol" placeholder="Your Phone Number *" value="" />
+	                            <input type="text" name="phone" class="form-control partaformcontrol" placeholder="Your Phone Number *" value="" required />
 	                        </div>
 	                        <div class="form-group">
 	                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
@@ -43,7 +43,7 @@ include 'left-nav.php';
 	                    </div>
 	                    <div class="col-md-6">
 	                        <div class="form-group">
-	                            <textarea name="message" class="form-control partaformcontrol" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+	                            <textarea name="message" class="form-control partaformcontrol" placeholder="Your Message *" style="width: 100%; height: 150px;" required ></textarea>
 	                        </div>
 	                    </div>
 	                </div>
