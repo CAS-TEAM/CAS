@@ -25,24 +25,80 @@ $desi=mysqli_real_escape_string($conn,$_POST['desi']);
 $nameo=mysqli_real_escape_string($conn,$_POST['nameo']);
 $pdesi=mysqli_real_escape_string($conn,$_POST['pdesi']);
 // $dojkjsce=mysqli_real_escape_string($conn,$_POST['dojkjsce']);
-$pscale=mysqli_real_escape_string($conn,$_POST['pscale']);
-$pbg=mysqli_real_escape_string($conn,$_POST['pbg']);
+if(isset($_POST['pscale']))
+{
+	$pscale=mysqli_real_escape_string($conn,$_POST['pscale']);
+}
+else
+{
+	$pscale=0;
+}
+if(isset($_POST['pbg']))
+{
+	$pbg=mysqli_real_escape_string($conn,$_POST['pbg']);
+}
+else
+{
+	$pbg=0;
+}
 $lastdesisel=mysqli_real_escape_string($conn,$_POST['lastdesisel']);
 $promowef=mysqli_real_escape_string($conn,$_POST['promowef']);
-$cscales=mysqli_real_escape_string($conn,$_POST['cscales']);
-$cbasics=mysqli_real_escape_string($conn,$_POST['cbasics']);
+if(isset($_POST['cscales']))
+{
+	$cscales=mysqli_real_escape_string($conn,$_POST['cscales']);
+}
+else
+{
+	$cscales=0;
+}
+if(isset($_POST['cbasics']))
+{
+	$cbasics=mysqli_real_escape_string($conn,$_POST['cbasics']);
+}
+else
+{
+	$cbasics=0;
+}
 $lastdesicas=mysqli_real_escape_string($conn,$_POST['lastdesicas']);
 $promowefcas=mysqli_real_escape_string($conn,$_POST['promowefcas']);
-$cscalecas=mysqli_real_escape_string($conn,$_POST['cscalecas']);
-$cbasiccas=mysqli_real_escape_string($conn,$_POST['cbasiccas']);
+if(isset($_POST['cscalecas']))
+{
+	$cscalecas=mysqli_real_escape_string($conn,$_POST['cscalecas']);
+}
+else
+{
+	$cscalecas=0;
+}
+if(isset($_POST['cbasiccas']))
+{
+	$cbasiccas=mysqli_real_escape_string($conn,$_POST['cbasiccas']);
+}
+else
+{
+	$cbasiccas=0;
+}
 $customRadioInline1=mysqli_real_escape_string($conn,$_POST['customRadioInline1']);
 $nameofdegree=mysqli_real_escape_string($conn,$_POST['nameofdegree']);
 $institute=mysqli_real_escape_string($conn,$_POST['institute']);
 
 //dynamic form
-$srno=$_POST['srno'];
+if($_POST['srno'])
+{
+	$srno=$_POST['srno'];
+}
+else
+{
+	$srno=0;
+}
 $course=$_POST['course'];
-$days=$_POST['days'];
+if(isset($_POST['days']))
+{
+	$days=$_POST['days'];
+}
+else
+{
+	$days=0;
+}
 $agency=$_POST['agency'];
 $rolee=$_POST['rolee'];
 $filelocation=$_POST['filelocation'];

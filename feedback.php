@@ -43,7 +43,7 @@ include 'left-nav.php';
 	                    </div>
 	                    <div class="col-md-6">
 	                        <div class="form-group">
-	                            <textarea name="message" class="form-control partaformcontrol" placeholder="Your Message *" style="width: 100%; height: 150px;" required ></textarea>
+	                            <textarea name="message" class="form-control partaformcontrol" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
 	                        </div>
 	                    </div>
 	                </div>
