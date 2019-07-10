@@ -202,9 +202,20 @@ include 'left-nav.php';
     <div class="col offset-md-2 parta" id="part-b-container">
 
 		<header>
-			<h2 class="heading" style="font-size:15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
-    		<h2 class="heading" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
-    		<h2 class="heading"><b>'Part A: GENERAL INFORMATION' - <?php echo $fn; ?> - <?php echo ($year-1).'-'.($year); ?></b></h2>
+			<div class="row">
+    			<div class="col-md-2">
+    				<img src="img/logo3.jpg" style="width: 70%">
+    			</div>
+    			<div class="col-md-8">
+    			    <h2 class="heading" style="font-size:18px; margin-top: 15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
+	    			<h2 class="heading" style="font-size:18px">(Autonomous College Affiliated to University of Mumbai)</h2>
+	    		</div>
+	    		<div class="col-md-2">
+    				<img src="img/logo1.jpg" style="width: 100%">
+    			</div>
+
+    		</div>
+    		<h2 class="heading" style="margin-top: -25px"><b>'Part B'<br> Faculty Name: <?php echo $fn; ?> | Academic Year: <?php echo ($year-1).'-'.($year); ?></b></h2>
 			<?php 
 
 			//SUBMIT FOR CAS REVIEW
@@ -330,7 +341,6 @@ include 'left-nav.php';
 
 		</header>
 		<!-- <br> -->
-
 		<nav>
           <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 		    <a class="nav-item nav-link active" id="nav-cat1-tab" data-toggle="tab" href="#nav-cat1" role="tab" aria-controls="nav-cat1" aria-selected="true">Category I</a>
@@ -394,7 +404,8 @@ include 'left-nav.php';
 						<tr id='addr10'>
 							<td id="ctosrno1">1</td>
 							<td>
-							<input type="text" name='ctocourse[]' id="ctocourse1" class="form-control" maxlength="200" />
+							<textarea name='ctocourse[]' id="ctocourse1" class="form-control" maxlength="200" ></textarea>
+							<!-- <input type="text" name='ctocourse[]' id="ctocourse1" class="form-control" maxlength="200" /> -->
 							</td>
 							<td>
 							<input type="text" name='ctotyprlpt[]' id="ctotyprlpt1" class="form-control" maxlength="200" />
@@ -474,7 +485,8 @@ include 'left-nav.php';
 						<tr id='addr20'>
 							<td id="ctesrno1">1</td>
 							<td>
-							<input type="text" name='ctecourse[]' id="ctecourse1" class="form-control" style="width:100" maxlength="200"/>
+							<textarea name='ctecourse[]' id="ctecourse1" class="form-control" style="width:100" maxlength="200"></textarea>
+							<!-- <input type="text" name='ctecourse[]' id="ctecourse1" class="form-control" style="width:100" maxlength="200"/> -->
 							</td>
 							<td>
 							<input type="text" name='ctetyprlpt[]' id="ctetyprlpt1" class="form-control" maxlength="200"/>
@@ -640,7 +652,7 @@ include 'left-nav.php';
 		<div class="row">
 			<div class="col">
 				<div class="col-md-12 text-left" style="border: 1px solid #b7b7b7"><br>
-					<p style="font-size: 16px">Classes Taken (Max.40for 90%-100% performance, and proportionate score upto 75% performance below which no score may be given. If (AVC)*100 is 90%-100% then PI 1=40, If (AVC)*100>75% then PI 1=((AVC)*40), If (AVC)*100 < 75 then PI 1=0)</p>
+					<p style="font-size: 16px">Classes Taken (Max.40 for 90%-100% performance, and proportionate score upto 75% performance below which no score may be given. <br> * If (AVC)*100 is 90%-100% then PI 1=40 <br> * If (AVC)*100>75% then PI 1=((AVC)*40) <br>* If (AVC)*100 < 75 then PI 1=0)</p>
 				</div>
 			</div>
 		</div>
@@ -1648,10 +1660,10 @@ include 'left-nav.php';
 								<tr id='addr30'>
 									<td id='dar1'>1</td>
 									<td>
-									<input type="text" name='dara[]' id='a1' class="form-control detailspartb"/>
+									<textarea name='dara[]' id='a1' class="form-control detailspartb"></textarea>
 									</td>
 									<td>
-									<input type="text" name='darb[]' id='b1' class="form-control detailspartb"/>
+									<textarea name='darb[]' id='b1' class="form-control detailspartb"></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -1763,7 +1775,7 @@ include 'left-nav.php';
 
 		<div class="row justify-content-center">
 			<div class="col-md-11 text-left">
-				<label class="col-form-label"><b>2 marks for each compliance</b></label>
+				<label class="col-form-label"><b>* 2 marks for each compliance</b></label>
 			</div>
 		</div>		
 
@@ -1784,7 +1796,8 @@ include 'left-nav.php';
 								<td>1</td>
 								<td>Problem based learning, case studies, group discussions, activity based learning etc.</td>
 								<td>
-								<input type="text" name='dpstest1' id='dpstest1' class="form-control" maxlength="200" />
+								<textarea name='dpstest1' id='dpstest1' class="form-control" maxlength="200" ></textarea>
+								<!-- <input type="text" name='dpstest1' id='dpstest1' class="form-control" maxlength="200" /> -->
 								</td>
 								<td>
 									<div class="filepartb">
@@ -1811,7 +1824,8 @@ include 'left-nav.php';
 		                    	<td>2</td>
 								<td>Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
 								<td>
-								<input type="text" name='dpstest2' id='dpstest2' class="form-control" maxlength="200" />
+								<textarea name='dpstest2' id='dpstest2' class="form-control" maxlength="200" ></textarea>
+								<!-- <input type="text" name='dpstest2' id='dpstest2' class="form-control" maxlength="200" /> -->
 								</td>
 								<td>
 									<div class="filepartb">
@@ -1838,7 +1852,7 @@ include 'left-nav.php';
 		                    	<td>3</td>
 								<td>Developing and imparting Remedial / Bridge Courses</td>
 								<td>
-								<input type="text" name='dtest1in' id='dtest1in' class="form-control" maxlength="200" />
+								<textarea name='dtest1in' id='dtest1in' class="form-control" maxlength="200" ></textarea>
 								</td>
 								<td>
 									<div class="filepartb">
@@ -1865,7 +1879,7 @@ include 'left-nav.php';
 		                    	<td>4</td>
 								<td>Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
 								<td>
-								<input type="text" name='dtest2in' id='dtest2in' class="form-control" maxlength="200" />
+								<textarea name='dtest2in' id='dtest2in' class="form-control" maxlength="200" ></textarea>
 								</td>
 								<td>
 									<div class="filepartb">
@@ -1892,7 +1906,7 @@ include 'left-nav.php';
 		                    	<td>5</td>
 								<td>Developing and imparting specialized teaching-learning programmes in physical education, library; innovative compositions and creations in music, performing and visual arts and other tradition areas</td>
 								<td>
-								<input type="text" name='dtest1ass' id='dtest1ass' class="form-control"/>
+								<textarea name='dtest1ass' id='dtest1ass' class="form-control"></textarea>
 								</td>
 								<td>
 									<div class="filepartb">
@@ -1919,7 +1933,7 @@ include 'left-nav.php';
 		                    	<td>6</td>
 								<td>Audit courses taken (given name/semester/term)</td>
 								<td>
-								<input type="text" name='dtest2ass' id='dtest2ass' class="form-control"/>
+								<textarea name='dtest2ass' id='dtest2ass' class="form-control"></textarea>
 								</td>
 								<td>
 									<div class="filepartb">
@@ -1946,7 +1960,7 @@ include 'left-nav.php';
 		                    	<td>7</td>
 								<td>Other:</td>
 								<td>
-								<input type="text" name='deseps' id='deseps' class="form-control"/>
+								<textarea name='deseps' id='deseps' class="form-control"></textarea>
 								</td>
 								<td>
 									<div class="filepartb">
@@ -2054,7 +2068,7 @@ include 'left-nav.php';
 
 		<div class="row justify-content-center">
 			<div class="col-md-11 text-left">
-				<label class="col-form-label"><b>2 marks for each compliance</b></label>
+				<label class="col-form-label"><b>* 2 marks for each compliance</b></label>
 			</div>
 		</div>	
 		<hr style="border: 0.5px solid #c8c8c8">
@@ -2135,9 +2149,10 @@ include 'left-nav.php';
 			</div>   
 		</div>	
 
-	
-
 		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px"></a> -->
+
+
+		<a class="text-left" style="position: absolute; left:20px" href="partA.php?id=<?php echo $_GET['id']; ?>&year=<?php echo $_GET['year']; ?>"><< Go back to Part A</a>
 
 
 		</div>
@@ -2164,7 +2179,7 @@ include 'left-nav.php';
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD/<br>Type of Activity</th>
-								<th class="text-center"></th>
+								<th class="text-center">Role</th>
 								<th>Attachments</th>
 							</tr>
 						
@@ -2173,10 +2188,10 @@ include 'left-nav.php';
 								<tr id='addr50'>
 									<td id='hasr1'>1</td>
 									<td>
-									<input type="text" name='ha[]' id='ha1' class="form-control adminpost" maxlength="200" />
+									<textarea name='ha[]' id='ha1' class="form-control adminpost" maxlength="200" ></textarea>
 									</td>
 									<td>
-									<input type="text" name='hb[]' id='hb1' class="form-control" maxlength="200" />
+									<textarea name='hb[]' id='hb1' class="form-control" maxlength="200" ></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2209,8 +2224,8 @@ include 'left-nav.php';
 			<a id='delete_row4' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 		
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>For HOD/Dean/Vice Principal 40 PI and for Associate HOD/NBA and NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
+				<div class="col-md-12 text-left">
+					<p>* For HOD/Dean/Vice Principal 40 PI <br> * For Associate HOD/NBA & NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
 				</div>
 			</div>
 
@@ -2302,7 +2317,7 @@ include 'left-nav.php';
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Extension, Co-Curricular and Field based activities / internships in college<br> Type of Activity</th>
-								<th class="text-center"></th>
+								<th class="text-center">Role</th>
 								<th>Attachments</th>
 							</tr>
 							 
@@ -2310,10 +2325,10 @@ include 'left-nav.php';
 								<tr id='addr60'>
 									<td id='actsr1'>1</td>
 									<td>
-									<input type="text" name='ea[]' id='ea1' class="form-control adminpost"/>
+									<textarea name='ea[]' id='ea1' class="form-control adminpost"></textarea>
 									</td>
 									<td>
-									<input type="text" name='eb[]' id='eb1' class="form-control"/>
+									<textarea name='eb[]' id='eb1' class="form-control"></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2345,8 +2360,8 @@ include 'left-nav.php';
 			<a id="add_row5" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row5' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>5 Marks for each compliance. Max.20</p>
+				<div class="col-md-12 text-left">
+					<p>* 5 Marks for each compliance. Max.20</p>
 				</div>
 			</div><br>
 
@@ -2439,7 +2454,7 @@ include 'left-nav.php';
 								<tr>
 									<th class="text-center">Sr.No</th>
 									<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
-									<th class="text-center"></th>
+									<th class="text-center">Role</th>
 									<th>Attachments</th>
 								</tr>
 							</thead>
@@ -2448,10 +2463,10 @@ include 'left-nav.php';
 								<tr id='addr70'>
 									<td id="exca1">1</td>
 									<td>
-									<input type="text" name="eca[]" id="eca1" class="form-control adminpost"/>
+									<textarea name="eca[]" id="eca1" class="form-control adminpost"></textarea>
 									</td>
 									<td>
-									<input type="text" name="ecb[]" id="ecb1" class="form-control"/>
+									<textarea name="ecb[]" id="ecb1" class="form-control"></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2483,8 +2498,8 @@ include 'left-nav.php';
 			<a id="add_row6" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row6' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>5 Marks for each compliance. Max.20</p>
+				<div class="col-md-12 text-left">
+					<p>* 5 Marks for each compliance. Max.20</p>
 				</div>
 			</div><br>
 
@@ -2577,7 +2592,7 @@ include 'left-nav.php';
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">College administration/organization member/committee member/NBA/NAAC of college: <br> Type of Activity</th>
-								<th class="text-center"></th>
+								<th class="text-center">Role</th>
 								<th>Attachments</th>
 							</tr>
 						</thead>
@@ -2586,10 +2601,10 @@ include 'left-nav.php';
 								<tr id='addr80'>
 									<td id="csr1">1</td>
 									<td>
-									<input type="text" name="ca[]" id="ca1" class="form-control adminpost"/>
+									<textarea name="ca[]" id="ca1" class="form-control adminpost"></textarea>
 									</td>
 									<td>
-									<input type="text" name="cb[]" id="cb1" class="form-control"/>
+									<textarea name="cb[]" id="cb1" class="form-control"></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -2621,8 +2636,8 @@ include 'left-nav.php';
 			<a id="add_row7" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row7' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>5 Marks for each compliance. Max.20</p>
+				<div class="col-md-12 text-left">
+					<p>* 5 Marks for each compliance. Max.20</p>
 				</div>
 			</div><br>
 
@@ -2779,7 +2794,7 @@ include 'left-nav.php';
 		</div>	
 
 	
-
+		<a class="text-left" style="position: absolute; left:20px" href="partA.php?id=<?php echo $_GET['id']; ?>&year=<?php echo $_GET['year']; ?>"><< Go back to Part A</a>
 		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a> -->
 
@@ -2798,7 +2813,7 @@ include 'left-nav.php';
 		<div class="container" style="border: 1px solid #c8c8c8" id="ppr1"><br>
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p>
+					<p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=20)</b></p>
 				</div>
 			</div>
 			<hr style="border: 0.5px solid #c8c8c8">
@@ -2806,7 +2821,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name="pptitle[]" id="pptitle1" class="form-control my-0 my-sm-0" maxlength="200"/>						
+		    			<textarea name="pptitle[]" id="pptitle1" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea>						
 					</div>
 				</div>
 			</div>
@@ -2816,7 +2831,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of peer review Journals (not online journals)</label>
-						<input type="text" name="ppnpr[]" id="ppnpr1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppnpr[]" id="ppnpr1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 			</div>
@@ -2824,7 +2839,7 @@ include 'left-nav.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name="ppisbn[]" id="ppisbn1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppisbn[]" id="ppisbn1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 
@@ -2877,7 +2892,7 @@ include 'left-nav.php';
 
 			<div class="row">
 				<div class="col-md-10 text-left">
-					<p>20 marks for peer review journal first author and 10 marks for second author</p>
+					<p>* 20 marks for peer review journal first author <br>* 10 marks for second author</p>
 				</div>
 				<div class="col-md-2">
 					<div class="filepartb-cat3">
@@ -3008,7 +3023,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name="pptitleic[]" id="pptitleic1" class="form-control my-0 my-sm-0" maxlength="200"/>						
+		    			<textarea name="pptitleic[]" id="pptitleic1" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea>						
 					</div>
 				</div>
 			</div>
@@ -3018,7 +3033,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of International Conference held Abroad</label>
-						<input type="text" name="ppnpric[]" id="ppnpric1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppnpric[]" id="ppnpric1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 			</div>
@@ -3026,7 +3041,7 @@ include 'left-nav.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name="ppisbnic[]" id="ppisbnic1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppisbnic[]" id="ppisbnic1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 
@@ -3078,7 +3093,7 @@ include 'left-nav.php';
 
 			<div class="row">
 				<div class="col-md-10 text-left">
-					<p>15 marks for International conference for first author and 08 marks for second author</p>
+					<p>* 15 marks for International conference for first author <br>* 08 marks for second author</p>
 				</div>
 				<div class="col-md-2">
 					<div class="filepartb-cat3">
@@ -3211,7 +3226,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name="pptitleinc[]" id="pptitleinc1" class="form-control my-0 my-sm-0" maxlength="200"/>						
+		    			<textarea name="pptitleinc[]" id="pptitleinc1" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea>						
 					</div>
 				</div>
 			</div>
@@ -3221,7 +3236,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Name of International Conference held in India</label>
-						<input type="text" name="ppnprinc[]" id="ppnprinc1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppnprinc[]" id="ppnprinc1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 			</div>
@@ -3229,7 +3244,7 @@ include 'left-nav.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name="ppisbnpinc[]" id="ppisbninc1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppisbnpinc[]" id="ppisbninc1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 
@@ -3281,7 +3296,7 @@ include 'left-nav.php';
 
 			<div class="row">
 				<div class="col-md-10 text-left">
-					<p>10 marks for International conference for first author and 05 marks for second author</p>
+					<p>* 10 marks for International conference for first author <br>* 05 marks for second author</p>
 				</div>
 				<div class="col-md-2">
 					<div class="filepartb-cat3">
@@ -3404,7 +3419,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 		    		<div class="form-inline my-2">
 		    			<label class="mr-sm-2">Title with page no.</label>
-		    			<input type="text" name="pptitlebk[]" id="pptitlebk1" class="form-control my-0 my-sm-0" maxlength="200"/>						
+		    			<textarea name="pptitlebk[]" id="pptitlebk1" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea>					
 					</div>
 				</div>
 			</div>
@@ -3414,7 +3429,7 @@ include 'left-nav.php';
 				<div class="col-md-12 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Publisher</label>
-						<input type="text" name="ppnprbk[]" id="ppnprbk1" class="form-control my-0 my-sm-0" maxlength="200" />
+						<textarea name="ppnprbk[]" id="ppnprbk1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 			</div>
@@ -3422,14 +3437,14 @@ include 'left-nav.php';
 				<div class="col-md-6 text-left">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">ISSN/ISBN No.</label>
-						<input type="text" name="ppisbnbk[]" id="ppisbnbk1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<textarea name="ppisbnbk[]" id="ppisbnbk1" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea>
 					</div>					
 				</div>
 
 				<div class="col-md-6 text-right">
 					<div class="form-inline my-2">
 						<label class="mr-sm-2">Date of Publication</label>
-						<input type="date" name="ppdatebk[]" id="ppdatebk1" class="form-control my-0 my-sm-0" maxlength="200"/>
+						<input type="date" name="ppdatebk[]" id="ppdatebk1" class="form-control my-0 my-sm-0 datewidth" maxlength="200"/>
 					</div>						
 				</div>
 			</div>		
@@ -3482,7 +3497,7 @@ include 'left-nav.php';
 
 			<div class="row">
 				<div class="col-md-10 text-left">
-					<p>15 marks for first author and 08 marks for co-author</p>
+					<p>*15 marks for first author <br>* 08 marks for co-author</p>
 				</div>
 				<div class="col-md-2">
 					<div class="filepartb-cat3">
@@ -3966,8 +3981,8 @@ include 'left-nav.php';
 								</div>  
 							</th>
 						</thead> -->
-						<thead>
-							<th colspan="6">10 marks for awarded/8 marks for thesis submitted/6 marks for enrolled Ph.D students as a guide during academic year.<br> 8 marks for awarded/6 marks for thesis submitted/4 marks for enrolled M.Tech students as guide during academic year.<br> 6 marks for awarded/4 marks for thesis submitted/2 marks per enrolled B.Tech student groups as a guide during academic year.<br> For co-guide the marks will be half.</th>
+						<thead> 
+							<th colspan="6" style="text-align: left">* 10 marks for awarded / 8 marks for thesis submitted / 6 marks for enrolled Ph.D students as a guide during academic year.<br>* 8 marks for awarded / 6 marks for thesis submitted / 4 marks for enrolled M.Tech students as guide during academic year.<br>* 6 marks for awarded / 4 marks for thesis submitted / 2 marks per enrolled B.Tech student groups as a guide during academic year.<br>* For co-guide the marks will be half.</th>
 						</thead>					
 					</table>
 
@@ -4070,10 +4085,12 @@ include 'left-nav.php';
 								<tr id='addr100'>
 									<td id="res1">1</td>
 									<td>
-									<input type="text" name="ta[]" id="ta1" class="form-control" maxlength="200"/>
+									<textarea name="ta[]" id="ta1" class="form-control" maxlength="200"/>
+									</textarea>
 									</td>
 									<td>
-									<input type="text" name="ab[]" id="ab1" class="form-control" maxlength="200"/>
+									<textarea name="ab[]" id="ab1" class="form-control" maxlength="200"/>
+									</textarea>
 									</td>
 									<td>
 									<input type="date" name="dc[]" id="dc1" class="form-control dos"/>
@@ -4111,8 +4128,8 @@ include 'left-nav.php';
 			<a id="add_row8" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row8' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator. If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				<div class="col-md-12 text-left">
+					<p>* 10 Marks for more than 5 Lacs / 8 marks for between 1 to 5 Lacs / 6 marks for less than 1 Lacs as a principle investigator. <br>* If second/third investigator then marks will be 5,4 and 3 respectively</p>
 				</div>
 			</div>
 
@@ -4215,10 +4232,12 @@ include 'left-nav.php';
 								<tr id='addr110'>
 									<td id="ores1">1</td>
 									<td>
-									<input type="text" name="tta[]" id="tta1" class="form-control" maxlength="200"/>
+									<textarea name="tta[]" id="tta1" class="form-control" maxlength="200"/>
+									</textarea>
 									</td>
 									<td>
-									<input type="text" name="aab[]" id="aab1" class="form-control" maxlength="200"/>
+									<textarea name="aab[]" id="aab1" class="form-control" maxlength="200"/>
+									</textarea>
 									</td>
 									<td>
 									<input type="date" name="ddc[]" id="ddc1" class="form-control dos"/>
@@ -4256,8 +4275,8 @@ include 'left-nav.php';
 			<a id="add_row9" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row9' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator. If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				<div class="col-md-12 text-left">
+					<p>* 10 Marks for more than 5 Lacs / 8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator.<br>* If second/third investigator then marks will be 5,4 and 3 respectively</p>
 				</div>
 			</div>
 
@@ -4351,7 +4370,7 @@ include 'left-nav.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic10">
 							<thead>
-								<th colspan="6">Completed Research Project and Consultancies initiated in academic year 20__/20__ but completed in academic year 20__/20__ (Max. PI=20) (Max. PI=20)</th>
+								<th colspan="6">Completed Research Project and Consultancies initiated in academic year 2017-2018 but completed in academic year 2018-2019 (Max. PI=20) (Max. PI=20)</th>
 							</thead>
 							
 							<tr>
@@ -4366,10 +4385,10 @@ include 'left-nav.php';
 								<tr id='addr120'>
 									<td id="cres1">1</td>
 									<td>
-									<input type="text" name="tca[]" id="tca1" class="form-control" maxlength="200"/>
+									<textarea name="tca[]" id="tca1" class="form-control" maxlength="200"></textarea>
 									</td>
 									<td>
-									<input type="text" name="acb[]" id="acb1" class="form-control" maxlength="200"/>
+									<textarea name="acb[]" id="acb1" class="form-control" maxlength="200"></textarea>
 									</td>
 									<td>
 									<input type="date" name="dcc[]" id="dcc1" class="form-control dos"/>
@@ -4407,8 +4426,8 @@ include 'left-nav.php';
 			<a id="add_row10" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row10' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>10 Marks for more than 5 Lacs/8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator completed in the academic year.If second/third investigator then marks will be 5,4 and 3 respectively</p>
+				<div class="col-md-12 text-left">
+					<p>* 10 Marks for more than 5 Lacs / 8 marks for between 1 to 5 Lacs/6 marks for less than 1 Lacs as a principle investigator completed in the academic year.<br>* If second/third investigator then marks will be 5,4 and 3 respectively</p>
 				</div>
 			</div>
 
@@ -4513,7 +4532,7 @@ include 'left-nav.php';
 								<tr id='addr130'>
 									<td id="pip1">1</td>
 									<td>
-									<input type="text" name="dpi[]" id="dpi1" class="form-control patent" maxlength="200"/>
+									<textarea name="dpi[]" id="dpi1" class="form-control patent" maxlength="200"></textarea>
 									</td>
 									<td>
 									<input type="date" name="drf[]" id="drf1" class="form-control patentdate"/>
@@ -4548,8 +4567,8 @@ include 'left-nav.php';
 			<a id="add_row11" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row11' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>25 Marks each for patent/intellectual property received and 10 each for filed in the academic year</p>
+				<div class="col-md-12 text-left">
+					<p>* 25 Marks each for patent / intellectual property received and 10 each for filed in the academic year</p>
 				</div>
 			</div>
 			<br>
@@ -4719,7 +4738,7 @@ include 'left-nav.php';
 			</div>   
 		</div>	
 
-	
+		<a class="text-left" style="position: absolute; left:20px" href="partA.php?id=<?php echo $_GET['id']; ?>&year=<?php echo $_GET['year']; ?>"><< Go back to Part A</a>
 
 		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a>
@@ -4756,13 +4775,13 @@ include 'left-nav.php';
 								<tr id='addr140'>
 									<td id="sem1">1</td>
 									<td>
-									<input type="text" name="cativ_dp[]" id="cativ_dp1" class="form-control seminarscat4" maxlength="200"/>
+									<textarea name="cativ_dp[]" id="cativ_dp1" class="form-control seminarscat4" maxlength="200"></textarea>
 									</td>
 									<td>
 									<input type="date" name="cativ_datee[]" id="cativ_datee1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="text" name="cativ_o[]" id="cativ_o1" class="form-control ogbycat4" maxlength="200"/>
+									<textarea name="cativ_o[]" id="cativ_o1" class="form-control ogbycat4" maxlength="200"></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4794,8 +4813,8 @@ include 'left-nav.php';
 			<a id="add_row12" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row12' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>05 Marks for each at national level and 10 marks for international level abroad</p>
+				<div class="col-md-12 text-left">
+					<p>* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 				</div>
 			</div>
 		</div><br>
@@ -4899,13 +4918,13 @@ include 'left-nav.php';
 								<tr id='addr150'>
 									<td id="inv1">1</td>
 									<td>
-									<input type="text" name="cativ1_dp[]" id="cativ1_dp1" class="form-control seminarscat4" maxlength="200"/>
+									<textarea name="cativ1_dp[]" id="cativ1_dp1" class="form-control seminarscat4" maxlength="200"></textarea>
 									</td>
 									<td>
 									<input type="date" name="cativ1_datee[]" id="cativ1_datee1" class="form-control dos"/>
 									</td>
 									<td>
-									<input type="text" name="cativ1_o[]" id="cativ1_o1" class="form-control ogbycat4" maxlength="200"/>
+									<textarea name="cativ1_o[]" id="cativ1_o1" class="form-control ogbycat4" maxlength="200"></textarea>
 									</td>
 									<td>
 									<div class="filepartb">
@@ -4937,8 +4956,8 @@ include 'left-nav.php';
 			<a id="add_row13" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row13' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>05 Marks for each at national level and 10 marks for international level abroad</p>
+				<div class="col-md-12 text-left">
+					<p>* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 				</div>
 			</div>
 		</div><br>
@@ -5030,7 +5049,7 @@ include 'left-nav.php';
 							<tr>
 								<th class="text-center">Sr.No</th>
 								<th class="text-center">Details</th>
-								<th class="text-center"></th>
+								<th class="text-center">Extra Information (if any)</th>
 								<th>Attachments</th>
 							</tr>
 							 
@@ -5038,7 +5057,7 @@ include 'left-nav.php';
 								<tr id='addr160'>
 									<td id="creds1">1</td>
 									<td>
-									<input type="text" name="cativ2_dp[]" id="cativ2_dp1" class="form-control seminarscat4" maxlength="200"/>
+									<textarea name="cativ2_dp[]" id="cativ2_dp1" class="form-control seminarscat4" maxlength="200"></textarea>
 									</td>
 									<td>
 									<input type="text" name="cativ2[]" id="cativ21" class="form-control ogbycat4" maxlength="200"/>
@@ -5073,8 +5092,8 @@ include 'left-nav.php';
 			<a id="add_row14" class="btn btn-default pull-left"><img src="https://img.icons8.com/color/48/000000/plus.png"></a>
 			<a id='delete_row14' class="pull-right btn btn-default"><img src="https://img.icons8.com/color/48/000000/minus.png"></a>
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<p>05 Marks for international/national credentials/activity/contribution not mentioned in application</p>
+				<div class="col-md-12 text-left">
+					<p>* 05 Marks for international / national credentials / activity / contribution not mentioned in application</p>
 				</div>
 			</div>
 		</div>
@@ -5237,12 +5256,637 @@ include 'left-nav.php';
 
 		<!-- <a href="partB.php"><img src="img/next.png" style="height: 40px;width: 40px;margin-left: 807px">
 		</a><br> -->
-
+		<a class="text-left" style="position: absolute; left:20px" href="partA.php?id=<?php echo $_GET['id']; ?>&year=<?php echo $_GET['year']; ?>"><< Go back to Part A</a><br>
 		
 	</div>
 </div>
 
 
+
+	<div class="modal fade" id="enclosuresmodal">
+	  	<div class="modal-dialog">
+		    <div class="modal-content">
+
+		      	<!-- Modal Header -->
+		      	<div class="modal-header">
+			        <h4 class="modal-title">List of Enclosures for Part B</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      	</div>
+
+		      	<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-left">
+							<p><b>Please attach copies of certificates, sanction orders, papers etc. wherever necessary</b></p>
+						</div>
+					</div>
+		    		<div class="row clearfix">
+						<div class="col-md-12 column">
+							<div class="admin-table">
+								<table class="table table-bordered table-hover" id="tab_logic4">
+								    <tr>
+										<th class="text-center">Sr. No.</th>
+										<th class="text-center">Description</th>
+										<th class="text-center">Attached File</th>
+									</tr>				
+									 
+									<tbody>
+
+										<?php
+
+										for($xx=$currentyear-1;$xx>=($currentyear-1);$xx--)
+										{
+
+										?>
+											<?php
+
+											$counter=1;
+
+											?>
+
+											<tr>
+												<td><b>~</b></td>
+												<td><b>Part B Category 1</b></td>
+												<td><b>~</b></td>
+											</tr>
+											<?php
+
+											$sqlxxx="SELECT id FROM part_b_table WHERE facultyId='$userId' AND year='$xx'";
+											$resultxxx=mysqli_query($conn,$sqlxxx);
+											$rowxxx=mysqli_fetch_assoc($resultxxx);
+											$formId=mysqli_real_escape_string($conn,$rowxxx['id']);	
+
+											// echo $userId.','.$formId.','.$xx.'<br>';							
+
+											// Part B
+											// $sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
+											$sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
+											$resultxxx=mysqli_query($conn,$sqlxxx);
+											$rowxxx=mysqli_fetch_assoc($resultxxx);
+											$o1file=mysqli_real_escape_string($conn,$rowxxx['o1file']);
+											$o2file=mysqli_real_escape_string($conn,$rowxxx['o2file']);
+											$o3file=mysqli_real_escape_string($conn,$rowxxx['o3file']);
+											$o4file=mysqli_real_escape_string($conn,$rowxxx['o4file']);
+											$o5file=mysqli_real_escape_string($conn,$rowxxx['o5file']);
+											$o6file=mysqli_real_escape_string($conn,$rowxxx['o6file']);
+											$o7file=mysqli_real_escape_string($conn,$rowxxx['o7file']);
+											$o8file=mysqli_real_escape_string($conn,$rowxxx['o8file']);
+											$o9file=mysqli_real_escape_string($conn,$rowxxx['o9file']);
+											$o10file=mysqli_real_escape_string($conn,$rowxxx['o10file']);
+											$o11file=mysqli_real_escape_string($conn,$rowxxx['o11file']);
+											$o12file=mysqli_real_escape_string($conn,$rowxxx['o12file']);
+											$o13file=mysqli_real_escape_string($conn,$rowxxx['o13file']);
+
+											$e1file=mysqli_real_escape_string($conn,$rowxxx['e1file']);
+											$e2file=mysqli_real_escape_string($conn,$rowxxx['e2file']);
+											$e3file=mysqli_real_escape_string($conn,$rowxxx['e3file']);
+											$e4file=mysqli_real_escape_string($conn,$rowxxx['e4file']);
+											$e5file=mysqli_real_escape_string($conn,$rowxxx['e5file']);
+											$e6file=mysqli_real_escape_string($conn,$rowxxx['e6file']);
+											$e7file=mysqli_real_escape_string($conn,$rowxxx['e7file']);
+											$e8file=mysqli_real_escape_string($conn,$rowxxx['e8file']);
+											$e9file=mysqli_real_escape_string($conn,$rowxxx['e9file']);
+											$e10file=mysqli_real_escape_string($conn,$rowxxx['e10file']);
+											$e11file=mysqli_real_escape_string($conn,$rowxxx['e11file']);
+											$e12file=mysqli_real_escape_string($conn,$rowxxx['e12file']);
+											$e13file=mysqli_real_escape_string($conn,$rowxxx['e13file']);
+
+											for ($x = 1; $x <= 13; $x++) {
+												$file='o'.$x.'file';
+												if($$file!='NAN' && $$file!='')
+												{
+												    ?>
+												    <tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($$file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td>
+													</tr>
+												    <?php
+												    $counter+=1;
+												}
+											} 
+
+											for ($x = 1; $x <= 13; $x++) {
+												$file='e'.$x.'file';
+												if($$file!='NAN' && $$file!='')
+												{
+												    ?>
+												    <tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($$file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td>
+													</tr>
+												    <?php
+												    $counter+=1;
+												}
+											} 
+
+											// part_b_cat_1_cte
+											$sql="SELECT ctefile FROM part_b_cat_1_cte WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['ctefile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_1_cto
+											$sql="SELECT ctofile FROM part_b_cat_1_cto WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['ctofile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_1_dar
+											$sql="SELECT darfile FROM part_b_cat_1_dar WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['darfile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											?>
+											<tr>
+												<td><b>~</b></td>
+												<td><b>Part B Category 2</b></td>
+												<td><b>~</b></td>
+											</tr>
+											<?php
+
+											// part_b_cat_2_act
+											$sql="SELECT efile FROM part_b_cat_2_act WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['efile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_2_c
+											$sql="SELECT cfile FROM part_b_cat_2_c WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['cfile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_2_exc
+											$sql="SELECT ecfile FROM part_b_cat_2_exc WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['ecfile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_2_ha
+											$sql="SELECT hfile FROM part_b_cat_2_ha WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['hfile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											?>
+											<tr>
+												<td><b>~</b></td>
+												<td><b>Part B Category 3</b></td>
+												<td><b>~</b></td>
+											</tr>
+											<?php
+
+											$sqlxxx="SELECT phdfile,mtechfile,btechfile FROM part_b_cat_3 WHERE formId='$formId'";
+											$resultxxx=mysqli_query($conn,$sqlxxx);
+											$rowxxx=mysqli_fetch_assoc($resultxxx);
+											$phdfile=mysqli_real_escape_string($conn,$rowxxx['phdfile']);
+											$mtechfile=mysqli_real_escape_string($conn,$rowxxx['mtechfile']);
+											$btechfile=mysqli_real_escape_string($conn,$rowxxx['btechfile']);
+
+											?>
+											<?php
+
+											if($phdfile!='NAN' && $phdfile!='')
+											{
+												?>
+												<tr>
+													<td><?php echo $counter; ?></td>
+													<td><?php echo basename($phdfile); ?></td>
+													<td><a href="viewfile.php?location=<?php echo $phdfile; ?>" target="_blank">View File</a></td>
+												</tr>
+												<?php
+											}
+											if($mtechfile!='NAN' && $mtechfile!='')
+											{
+												?>									
+												<tr>
+													<td><?php echo $counter; ?></td>
+													<td><?php echo basename($mtechfile); ?></td>
+													<td><a href="viewfile.php?location=<?php echo $mtechfile; ?>" target="_blank">View File</a></td>
+												</tr>
+												<?php
+											}
+											if($btechfile!='NAN' && $btechfile!='')
+											{
+												?>
+												<tr>
+													<td><?php echo $counter; ?></td>
+													<td><?php echo basename($btechfile); ?></td>
+													<td><a href="viewfile.php?location=<?php echo $btechfile; ?>" target="_blank">View File</a></td>
+												</tr>
+												<?php
+											}
+											?>
+
+											<?php
+
+											// part_b_cat_3_pp
+											$sql="SELECT ppfile FROM part_b_cat_3_pp WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['ppfile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_ppic
+											$sql="SELECT pp1file FROM part_b_cat_3_ppic WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['pp1file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_ppinc
+											$sql="SELECT pp2file FROM part_b_cat_3_ppinc WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['pp2file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_bk
+											$sql="SELECT pp3file FROM part_b_cat_3_bk WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['pp3file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_res
+											$sql="SELECT research1file FROM part_b_cat_3_res WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['research1file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_ores
+											$sql="SELECT research2file FROM part_b_cat_3_ores WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['research2file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_cres
+											$sql="SELECT research3file FROM part_b_cat_3_cres WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['research3file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_3_pip
+											$sql="SELECT dfile FROM part_b_cat_3_pip WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['dfile'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											?>
+											<tr>
+												<td><b>~</b></td>
+												<td><b>Part B Category 4</b></td>
+												<td><b>~</b></td>
+											</tr>
+											<?php
+
+											// part_b_cat_4_sem
+											$sql="SELECT cativ1file FROM part_b_cat_4_sem WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['cativ1file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_4_inv
+											$sql="SELECT cativ2file FROM part_b_cat_4_inv WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['cativ2file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+											// part_b_cat_4_creds
+											$sql="SELECT cativ3file FROM part_b_cat_4_creds WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												$file=$row['cativ3file'];
+												if($file!='NAN' && $file!='')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($file); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+
+
+										}//for loop ends
+
+										?>
+										<?php 
+										/*
+										$l=1;
+										$flag=true;//flag to check if atleast one file has been previous;y uploaded or not..true means uploaded false means not uploaded
+
+										$sqlxxx="SELECT id FROM summary_table WHERE facultyId='$userId' AND year='$currentyear'";
+										$resultxxx=mysqli_query($conn,$sqlxxx);
+										if(mysqli_num_rows($resultxxx)>0)
+										{
+
+											$rowxxx=mysqli_fetch_assoc($resultxxx);
+											$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+
+											$sqlxx="SELECT ecs,papers FROM summary_hasr WHERE formId='$formId'";
+											$resultxx=mysqli_query($conn,$sqlxx);
+											if(mysqli_num_rows($resultxx)>0)
+											{
+												while($rowxx=mysqli_fetch_assoc($resultxx))
+												{
+													?>
+													<tr id='addr5<?php echo $l-1; ?>'>
+														<td id='hasr<?php echo $l; ?>'><?php echo $l; ?></td>
+														<td>
+														<input type="number" step="0.01" name='ecs[]' id='ecs<?php echo $l; ?>' class="form-control" value="<?php echo $rowxx['ecs']; ?>" maxlength="200" />
+														</td>
+														<td>
+															<div class="custom-file">
+												                <input type="file" class="custom-file-input" id="papers<?php echo $l; ?>" name="papers[]" value="<?php echo $rowxx['papers']; ?>"/>
+												                <label class="custom-file-label" for="papers<?php echo $l; ?>"><?php echo basename($rowxx['papers']); ?></label>
+												            </div>
+														</td>
+													</tr>						                    
+													<?php
+													$l+=1;
+												}
+												?>
+												<tr id='addr5<?php echo $l-1; ?>'></tr>
+												<?php
+											}						
+											else
+											{
+												$flag=false;
+											}
+
+										}
+										else
+										{
+											$flag=false;
+										}
+										
+										if($flag==false)
+										{
+										?>
+											<tr id='addr50'>
+												<td id='hasr1'>1</td>
+												<td>
+												<input type="number" step="0.01" name='ecs[]' id='ecs1' class="form-control" maxlength="200" />
+												</td>
+												<td>
+													<div class="custom-file">
+										                <input type="file" class="custom-file-input" id="papers1" name="papers[]"/>
+										                <label class="custom-file-label" for="papers1">Choose file</label>
+										            </div>
+												</td>
+											</tr>
+						                    <tr id='addr51'></tr>
+					                    <?php
+					                	}
+					                	?>
+					                	<input type="hidden" name="l" id="l" value="<?php echo $l-1; ?>">
+					                	*/
+					                	?>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
+						</div>
+					</div>
+				</div>
+
+		      	<!-- Modal footer -->
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		      	</div>
+
+		    </div>
+	  	</div>
+	</div>
 	
 	<div class="row form-inline justify-content-center">
 		<div class="col se-btn">
@@ -5270,6 +5914,8 @@ include 'left-nav.php';
 			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
   			PRINT 
 			</button>
+
+			<button class="btn btn-info" onclick="enclosures()">View Attachments</button>
 		</div>
 	</div>
 
@@ -5310,7 +5956,7 @@ include 'left-nav.php';
      	$("#add_row1").click(function(){
      		var i=parseInt(document.getElementById('i').value);
       		// alert("i="+i);
-      		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><input type="text" name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><textarea name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
       		$('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
@@ -5337,7 +5983,7 @@ include 'left-nav.php';
       	// var j=1;      
      	$("#add_row2").click(function(){
      		var j=parseInt(document.getElementById('j').value);
-      		$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><input type="text" name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(i+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cteviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><textarea name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(i+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cteviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
       		$('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
@@ -5363,7 +6009,7 @@ include 'left-nav.php';
       	// var k=1;
 	    $("#add_row3").click(function(){
      		var k=parseInt(document.getElementById('k').value);
-      		$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><input type="text" name="dara[]" id="a'+(k+1)+'" class="form-control detailspartb" maxlength="200"/></td><td><input type="text" name="darb[]" id="b'+(k+1)+'" class="form-control detailspartb" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="darfile'+(k+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="darfile'+(k+1)+'" name="darfile[]" value="" placeholder=""><input type="hidden" name="darfilelocation[]" id="darfilelocation'+(k+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="darviewfile'+(k+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a>	</div></div></div></td>');
+      		$('#addr3'+k).html('<td id="dar'+(k+1)+'">'+(k+1)+'</td><td><textarea name="dara[]" id="a'+(k+1)+'" class="form-control detailspartb" maxlength="200"></textarea></td><td><textarea name="darb[]" id="b'+(k+1)+'" class="form-control detailspartb" maxlength="200"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="darfile'+(k+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="darfile'+(k+1)+'" name="darfile[]" value="" placeholder=""><input type="hidden" name="darfilelocation[]" id="darfilelocation'+(k+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="darviewfile'+(k+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a>	</div></div></div></td>');
 
       		// $('#tab_logic3').append('<tr id="addr3'+(k+1)+'"></tr>');
        		$('#addr3'+k).after('<tr id="addr3'+(k+1)+'"></tr>');
@@ -5390,7 +6036,7 @@ include 'left-nav.php';
       	// var l=1;      
      	$("#add_row4").click(function(){
      		var l=parseInt(document.getElementById('l').value);
-      		$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><input type="text" name="ha[]" id="ha'+(l+1)+'" class="form-control adminpost" maxlength="200" /></td><td><input type="text" name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" /></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="hfile'+(l+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="hfile'+(l+1)+'" name="hfile[]" value="" placeholder=""><input type="hidden" name="hfilelocation[]" id="hfilelocation'+(l+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="hviewfile'+(l+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr5'+l).html('<td id="hasr'+(l+1)+'">'+(l+1)+'</td><td><textarea name="ha[]" id="ha'+(l+1)+'" class="form-control adminpost" maxlength="200" ></textarea></td><td><textarea name="hb[]" id="hb'+(l+1)+'" class="form-control" maxlength="200" ></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="hfile'+(l+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="hfile'+(l+1)+'" name="hfile[]" value="" placeholder=""><input type="hidden" name="hfilelocation[]" id="hfilelocation'+(l+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="hviewfile'+(l+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic4').append('<tr id="addr5'+(l+1)+'"></tr>');
       		$('#addr5'+l).after('<tr id="addr5'+(l+1)+'"></tr>');
@@ -5417,7 +6063,7 @@ include 'left-nav.php';
       	// var m=1;      
      	$("#add_row5").click(function(){
      		var m=parseInt(document.getElementById('m').value);
-      		$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><input type="text" name="ea[]" id="ea'+(m+1)+'" class="form-control adminpost"/></td><td><input type="text" name="eb[]" id="eb'+(m+1)+'" class="form-control"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="efile'+(m+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="efile'+(m+1)+'" name="efile[]" value="" placeholder=""><input type="hidden" name="efilelocation[]" id="efilelocation'+(m+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="eviewfile'+(m+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr6'+m).html('<td id="actsr'+(m+1)+'">'+(m+1)+'</td><td><textarea name="ea[]" id="ea'+(m+1)+'" class="form-control adminpost"></textarea></td><td><textarea name="eb[]" id="eb'+(m+1)+'" class="form-control"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="efile'+(m+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="efile'+(m+1)+'" name="efile[]" value="" placeholder=""><input type="hidden" name="efilelocation[]" id="efilelocation'+(m+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="eviewfile'+(m+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic5').append('<tr id="addr6'+(m+1)+'"></tr>');
       		$('#addr6'+m).after('<tr id="addr6'+(m+1)+'"></tr>');
@@ -5444,7 +6090,7 @@ include 'left-nav.php';
       	// var n=1;
       	$("#add_row6").click(function(){
      		var n=parseInt(document.getElementById('n').value);
-      		$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><input type="text" name="eca[]" id="eca'+(n+1)+'" class="form-control adminpost"/></td><td><input type="text" name="ecb[]" id="ecb'+(n+1)+'" class="form-control"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ecfile'+(n+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ecfile'+(n+1)+'" name="ecfile[]" value="" placeholder=""><input type="hidden" name="ecfilelocation[]" id="ecfilelocation'+(n+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ecviewfile'+(n+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr7'+n).html('<td id="exca'+(n+1)+'">'+(n+1)+'</td><td><textarea name="eca[]" id="eca'+(n+1)+'" class="form-control adminpost"></textarea></td><td><textarea name="ecb[]" id="ecb'+(n+1)+'" class="form-control"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ecfile'+(n+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ecfile'+(n+1)+'" name="ecfile[]" value="" placeholder=""><input type="hidden" name="ecfilelocation[]" id="ecfilelocation'+(n+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ecviewfile'+(n+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic6').append('<tr id="addr7'+(n+1)+'"></tr>');
        		$('#addr7'+n).after('<tr id="addr7'+(n+1)+'"></tr>');
@@ -5470,7 +6116,7 @@ include 'left-nav.php';
       	// var o=1;     
      	$("#add_row7").click(function(){
      	 	var o=parseInt(document.getElementById('o').value);
-      		$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><input type="text" name="ca[]" id="ca'+(o+1)+'" class="form-control adminpost"/></td><td><input type="text" name="cb[]" id="cb'+(o+1)+'" class="form-control"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cfile'+(o+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cfile'+(o+1)+'" name="cfile[]" value="" placeholder=""><input type="hidden" name="cfilelocation[]" id="cfilelocation'+(o+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cviewfile'+(o+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr8'+o).html('<td id="csr'+(o+1)+'">'+(o+1)+'</td><td><textarea name="ca[]" id="ca'+(o+1)+'" class="form-control adminpost"></textarea></td><td><textarea name="cb[]" id="cb'+(o+1)+'" class="form-control"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cfile'+(o+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cfile'+(o+1)+'" name="cfile[]" value="" placeholder=""><input type="hidden" name="cfilelocation[]" id="cfilelocation'+(o+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cviewfile'+(o+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic7').append('<tr id="addr8'+(o+1)+'"></tr>');
       		$('#addr8'+o).after('<tr id="addr8'+(o+1)+'"></tr>');
@@ -5496,7 +6142,7 @@ include 'left-nav.php';
       	// var p=1;      
      	$("#add_row8").click(function(){
      		var p=parseInt(document.getElementById('p').value);
-      		$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><input type="text" name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control dos"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control grantamount"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research1file'+(p+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research1file'+(p+1)+'" name="research1file[]" value="" placeholder=""><input type="hidden" name="research1filelocation[]" id="research1filelocation'+(p+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="research1viewfile'+(p+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
+      		$('#addr10'+p).html('<td id="res'+(p+1)+'">'+(p+1)+'</td><td><textarea name="ta[]" id="ta'+(p+1)+'" class="form-control" maxlength="200"></textarea></td><td><textarea name="ab[]" id="ab'+(p+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="date" name="dc[]" id="dc'+(p+1)+'" class="form-control dos"/></td><td><input type="number" name="gd[]" id="gd'+(p+1)+'" class="form-control grantamount"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research1file'+(p+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research1file'+(p+1)+'" name="research1file[]" value="" placeholder=""><input type="hidden" name="research1filelocation[]" id="research1filelocation'+(p+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="research1viewfile'+(p+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
 
       		// $('#tab_logic8').append('<tr id="addr10'+(p+1)+'"></tr>');
       		$('#addr10'+p).after('<tr id="addr10'+(p+1)+'"></tr>');
@@ -5522,7 +6168,7 @@ include 'left-nav.php';
       	// var q=1;
      	$("#add_row9").click(function(){
      		var q=parseInt(document.getElementById('q').value);
-      		$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><input type="text" name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control dos"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control grantamount"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(q+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(q+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(q+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="research2viewfile'+(q+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
+      		$('#addr11'+q).html('<td id="ores'+(q+1)+'">'+(q+1)+'</td><td><textarea name="tta[]" id="tta'+(q+1)+'" class="form-control" maxlength="200"></textarea></td><td><textarea name="aab[]" id="aab'+(q+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="date" name="ddc[]" id="ddc'+(q+1)+'" class="form-control dos"/></td><td><input type="number" name="ggd[]" id="ggd'+(q+1)+'" class="form-control grantamount"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(q+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(q+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(q+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="research2viewfile'+(q+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td></tr>');
 
       		// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
       		$('#addr11'+q).after('<tr id="addr11'+(q+1)+'"></tr>');
@@ -5549,7 +6195,7 @@ include 'left-nav.php';
       	// var r=1;      
      	$("#add_row10").click(function(){
      		var r=parseInt(document.getElementById('r').value);
-      		$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><input type="text" name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200"/></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control dos"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control grantamount"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(r+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(r+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(r+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="research2viewfile'+(r+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr12'+r).html('<td id="cres'+(r+1)+'">'+(r+1)+'</td><td><textarea name="tca[]" id="tca'+(r+1)+'" class="form-control" maxlength="200"></textarea></td><td><textarea name="acb[]" id="acb'+(r+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="date" name="dcc[]" id="dcc'+(r+1)+'" class="form-control dos"/></td><td><input type="number" name="gcd[]" id="gcd'+(r+1)+'" class="form-control grantamount"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="research2file'+(r+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="research2file'+(r+1)+'" name="research2file[]" value="" placeholder=""><input type="hidden" name="research2filelocation[]" id="research2filelocation'+(r+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="research2viewfile'+(r+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic10').append('<tr id="addr12'+(r+1)+'"></tr>');
       		$('#addr12'+r).after('<tr id="addr12'+(r+1)+'"></tr>');
@@ -5575,7 +6221,7 @@ include 'left-nav.php';
       	// var s=1;      	
      	$("#add_row11").click(function(){
      		var s=parseInt(document.getElementById('s').value);
-      		$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><input type="text" name="dpi[]" id="dpi'+(s+1)+'" class="form-control patent" maxlength="200"/></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control patentdate"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr13'+s).html('<td id="pip'+(s+1)+'">'+(s+1)+'</td><td><textarea name="dpi[]" id="dpi'+(s+1)+'" class="form-control patent" maxlength="200"></textarea></td><td><input type="date" name="drf[]" id="drf'+(s+1)+'" class="form-control patentdate"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="dfile'+(s+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="dfile'+(s+1)+'" name="dfile[]" value="" placeholder=""><input type="hidden" name="dfilelocation[]" id="dfilelocation'+(s+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="dviewfile'+(s+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic11').append('<tr id="addr13'+(s+1)+'"></tr>');
       		$('#addr13'+s).after('<tr id="addr13'+(s+1)+'"></tr>');
@@ -5601,7 +6247,7 @@ include 'left-nav.php';
       	// var t=1;      
      	$("#add_row12").click(function(){
      		var t=parseInt(document.getElementById('t').value);
-     		$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><input type="text" name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control seminarscat4" maxlength="200"/></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control dos"/></td><td><input type="text" name="cativ_o[]" id="cativ_o'+(t+1)+'" class="form-control ogbycat4" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+     		$('#addr14'+t).html('<td id="sem'+(t+1)+'">'+(t+1)+'</td><td><textarea name="cativ_dp[]" id="cativ_dp'+(t+1)+'" class="form-control seminarscat4" maxlength="200"></textarea></td><td><input type="date" name="cativ_datee[]" id="cativ_datee'+(t+1)+'" class="form-control dos"/></td><td><textarea name="cativ_o[]" id="cativ_o'+(t+1)+'" class="form-control ogbycat4" maxlength="200"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ1file'+(t+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ1file'+(t+1)+'" name="cativ1file[]" value="" placeholder=""><input type="hidden" name="cativ1filelocation[]" id="cativ1filelocation'+(t+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ1viewfile'+(t+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic12').append('<tr id="addr14'+(t+1)+'"></tr>');
       		$('#addr14'+t).after('<tr id="addr14'+(t+1)+'"></tr>');
@@ -5627,7 +6273,7 @@ include 'left-nav.php';
       	// var u=1;      
      	$("#add_row13").click(function(){
      		var u=parseInt(document.getElementById('u').value);
-      		$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><input type="text" name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control seminarscat4" maxlength="200"/></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control dos"/></td><td><input type="text" name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control ogbycat4" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr15'+u).html('<td id="inv'+(u+1)+'">'+(u+1)+'</td><td><textarea name="cativ1_dp[]" id="cativ1_dp'+(u+1)+'" class="form-control seminarscat4" maxlength="200"></textarea></td><td><input type="date" name="cativ1_datee[]" id="cativ1_datee'+(u+1)+'" class="form-control dos"/></td><td><textarea name="cativ1_o[]" id="cativ1_o'+(u+1)+'" class="form-control ogbycat4" maxlength="200"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ2file'+(u+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ2file'+(u+1)+'" name="cativ2file[]" value="" placeholder=""><input type="hidden" name="cativ2filelocation[]" id="cativ2filelocation'+(u+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ2viewfile'+(u+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic13').append('<tr id="addr15'+(u+1)+'"></tr>');
       		$('#addr15'+u).after('<tr id="addr15'+(u+1)+'"></tr>');
@@ -5654,7 +6300,7 @@ include 'left-nav.php';
       	// var v=1;      
      	$("#add_row14").click(function(){
      		var v=parseInt(document.getElementById('v1').value);
-      		$('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><input type="text" name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control seminarscat4" maxlength="200"/></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control ogbycat4" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ3viewfile'+(v+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr16'+v).html('<td id="creds'+(v+1)+'">'+(v+1)+'</td><td><textarea name="cativ2_dp[]" id="cativ2_dp'+(v+1)+'" class="form-control seminarscat4" maxlength="200"></textarea></td><td><input type="text" name="cativ2[]" id="cativ2'+(v+1)+'" class="form-control ogbycat4" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="cativ3file'+(v+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="cativ3file'+(v+1)+'" name="cativ3file[]" value="" placeholder=""><input type="hidden" name="cativ3filelocation[]" id="cativ3filelocation'+(v+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cativ3viewfile'+(v+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic14').append('<tr id="addr16'+(v+1)+'"></tr>');
       		$('#addr16'+v).after('<tr id="addr16'+(v+1)+'"></tr>');
@@ -5681,7 +6327,7 @@ include 'left-nav.php';
      	$("#add_row_ppr").click(function(){
      		var ppr=parseInt(document.getElementById('ppr').value);
      		// alert(ppr);
-      		$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><input type="text" name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-10 text-left"><p>20 marks for peer review journal first author and 10 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ppfile'+ppr+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ppfile'+ppr+'" name="ppfile[]" value="" placeholder=""><input type="hidden" name="ppfilelocation[]" id="ppfilelocation'+ppr+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ppviewfile'+ppr+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
+      		$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><textarea name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><textarea name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><textarea name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-10 text-left"><p>* 20 marks for peer review journal first author <br>* 10 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ppfile'+ppr+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ppfile'+ppr+'" name="ppfile[]" value="" placeholder=""><input type="hidden" name="ppfilelocation[]" id="ppfilelocation'+ppr+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ppviewfile'+ppr+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      	$('#ppr'+ppr).toggle();
@@ -5713,7 +6359,7 @@ include 'left-nav.php';
       	// var ppric=2;      
      	$("#add_row_ppric").click(function(){
      		var ppric=parseInt(document.getElementById('ppric').value);
-      		$('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><input type="text" name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-10 text-left"><p>15 marks for International conference for first author and 08 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp1file'+ppric+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp1file'+ppric+'" name="pp1file[]" value="" placeholder=""><input type="hidden" name="pp1filelocation[]" id="pp1filelocation'+ppric+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="pp1viewfile'+ppric+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
+      		$('#ppric'+ppric).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><textarea name="pptitleic[]" id="pptitleic"'+ppric+'" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held Abroad</label><textarea name="ppnpric[]" id="ppnpric"'+ppric+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><textarea name="ppisbnic[]" id="ppisbnic"'+ppric+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppific[]" id="ppific"'+ppric+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppric+'ic">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppric+'ic" name="customRadioInline1ic['+ppric+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppric+'ic">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppncaic[]" id="ppncaic"'+ppric+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-10 text-left"><p>* 15 marks for International conference for first author <br>* 08 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp1file'+ppric+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp1file'+ppric+'" name="pp1file[]" value="" placeholder=""><input type="hidden" name="pp1filelocation[]" id="pp1filelocation'+ppric+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="pp1viewfile'+ppric+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 		    // $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 		    $('#ppric'+ppric).toggle();
@@ -5744,7 +6390,7 @@ include 'left-nav.php';
       	// var pprinc=2;      
      	$("#add_row_pprinc").click(function(){
      		var pprinc=parseInt(document.getElementById('pprinc').value);
-      		$('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><input type="text" name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><input type="text" name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><input type="text" name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-10 text-left"> <p>10 marks for International conference for first author and 05 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp2file'+pprinc+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp2file'+pprinc+'" name="pp2file[]" value="" placeholder=""><input type="hidden" name="pp2filelocation[]" id="pp2filelocation'+pprinc+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="pp2viewfile'+pprinc+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
+      		$('#pprinc'+pprinc).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><textarea name="pptitleinc[]" id="pptitleinc'+pprinc+'" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of International Conference held in India</label><textarea name="ppnprinc[]" id="ppnprinc'+pprinc+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><textarea name="ppisbnpinc[]" id="ppisbninc'+pprinc+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppifinc[]" id="ppifinc'+pprinc+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><p>Whether you are main author</p></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+pprinc+'inc">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+pprinc+'inc" name="customRadioInline1inc['+pprinc+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+pprinc+'inc">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncainc[]" id="ppncainc'+pprinc+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-10 text-left"> <p>* 10 marks for International conference for first author <br>* 05 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp2file'+pprinc+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp2file'+pprinc+'" name="pp2file[]" value="" placeholder=""><input type="hidden" name="pp2filelocation[]" id="pp2filelocation'+pprinc+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="pp2viewfile'+pprinc+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      	$('#pprinc'+pprinc).toggle();
@@ -5775,7 +6421,7 @@ include 'left-nav.php';
       	// var pprbk=2;      
      	$("#add_row_pprbk").click(function(){
      		var pprbk=parseInt(document.getElementById('pprbk').value);
-      		$('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <input type="text" name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><input type="text" name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200/> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <input type="text" name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-10 text-left"> <p>15 marks for first author and 08 marks for co-author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp3file'+pprbk+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp3file'+pprbk+'" name="pp3file[]" value="" placeholder=""><input type="hidden" name="pp3filelocation[]" id="pp3filelocation'+pprbk+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="pp3viewfile'+pprbk+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
+      		$('#pprbk'+pprbk).html('<div class="row"> <div class="col-md-12 text-left"> <br><p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Title with page no.</label> <textarea name="pptitlebk[]" id="pptitlebk'+pprbk+'" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-12 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Publisher</label><textarea name="ppnprbk[]" id="ppnprbk'+pprbk+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea> </div></div></div><div class="row"> <div class="col-md-6 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">ISSN/ISBN No.</label> <textarea name="ppisbnbk[]" id="ppisbnbk'+pprbk+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea> </div></div><div class="col-md-6 text-right"> <div class="form-inline my-2"> <label class="mr-sm-2">Date of Publication</label> <input type="date" name="ppdatebk[]" id="ppdatebk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-5 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">Impact factor</label> <input type="text" name="ppifbk[]" id="ppifbk'+pprbk+'" class="form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-2 text-left"> <p>Whether you are main author</p></div><div class="col-md-3"> <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline1'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input yesradio" value="Yes" checked> <label class="custom-control-label yes" for="customRadioInline1'+pprbk+'bk">Yes</label> </div><div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="customRadioInline2'+pprbk+'bk" name="customRadioInline1bk['+pprbk+']" class="custom-control-input noradio" value="No"> <label class="custom-control-label no" for="customRadioInline2'+pprbk+'bk">No</label> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div><div class="col-md-3 text-left"> <div class="form-inline my-2"> <label class="mr-sm-2">No. of co-author</label> <input type="text" name="ppncabk[]" id="ppncabk'+pprbk+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/> </div></div><div class="col-md-1"> <div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"> </div></div></div><hr style="border: 0.5px solid #c8c8c8"> <div class="row"> <div class="col-md-10 text-left"> <p>* 15 marks for first author <br>* 08 marks for co-author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="pp3file'+pprbk+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="pp3file'+pprbk+'" name="pp3file[]" value="" placeholder=""><input type="hidden" name="pp3filelocation[]" id="pp3filelocation'+pprbk+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="pp3viewfile'+pprbk+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      	$('#pprbk'+pprbk).toggle();
@@ -5912,6 +6558,13 @@ include 'left-nav.php';
 		}, 700);
 
 	}
+	</script>
+
+	<script type="text/javascript">
+		function enclosures()
+		{
+			$('#enclosuresmodal').modal('show');
+		}
 	</script>
 
 	<!-- DISABLING ALL INPUTS -->

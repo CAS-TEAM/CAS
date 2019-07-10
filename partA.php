@@ -88,9 +88,20 @@ include 'left-nav.php';
 
     	
     	<header>
-    		<h2 class="heading" style="font-size:15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
-    		<h2 class="heading" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
-    		<h2 class="heading"><b>'Part A: GENERAL INFORMATION' - <?php echo $fn; ?> - <?php echo ($year-1).'-'.($year); ?></b></h2>
+    		<div class="row">
+    			<div class="col-md-2">
+    				<img src="img/logo3.jpg" style="width: 70%">
+    			</div>
+    			<div class="col-md-8">
+    			    <h2 class="heading" style="font-size:18px; margin-top: 15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
+	    			<h2 class="heading" style="font-size:18px">(Autonomous College Affiliated to University of Mumbai)</h2>
+	    		</div>
+	    		<div class="col-md-2">
+    				<img src="img/logo1.jpg" style="width: 100%">
+    			</div>
+
+    		</div>
+    		<h2 class="heading" style="margin-top: -25px"><b>'Part A: GENERAL INFORMATION'<br> Faculty Name: <?php echo $fn; ?> | Academic Year: <?php echo ($year-1).'-'.($year); ?></b></h2>
     		<?php 
 
     		//SUBMIT FOR CAS REVIEW    		
@@ -210,8 +221,10 @@ include 'left-nav.php';
 			}
 
 			?>
+
     	</header>
     	
+
     	<form method="POST" action="partAsys.php" class="part-a-form" id="part-a-form" enctype="multipart/form-data">    	
     	<hr style="border: 0.5px solid #c8c8c8"><br>
     	<input type="hidden" name="formFacultyId" id="formFacultyId" value="<?php echo $_GET['id']; ?>">
@@ -255,7 +268,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel partaformcontrol" type="text" name="praddr" id="praddr" maxlength="200"/>
+							   	<textarea class="form-control partalabel partaformcontrol" name="praddr" id="praddr" maxlength="200"></textarea>
 							</div>
 						</div>							
 		    		</div>
@@ -266,7 +279,7 @@ include 'left-nav.php';
 		    				</div>
 							  
 							<div class="col-8" style="padding-left: 0">
-							   <input class="form-control partalabel partaformcontrol" type="text" name="peaddr" id="peaddr" maxlength="200"/>
+							   <textarea class="form-control partalabel partaformcontrol" name="peaddr" id="peaddr" maxlength="200"></textarea>
 							</div>
 						</div>
 		    		</div>
@@ -396,7 +409,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel partaformcontrol" type="number" name="pscale" id="pscale"  />
+						<input class="form-control partalabel partaformcontrol" type="text" name="pscale" id="pscale"  />
 					</div>
 				</div>
 			</div>
@@ -408,7 +421,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel partaformcontrol" type="number" name="pbg" id="pbg"  />
+						<input class="form-control partalabel partaformcontrol" type="text" name="pbg" id="pbg"  />
 					</div>
 				</div>
 			</div>		
@@ -452,7 +465,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel partaformcontrol" type="number" name="cscales" id="cscales"  />
+						<input class="form-control partalabel partaformcontrol" type="text" name="cscales" id="cscales"  />
 					</div>
 				</div>
 			</div>
@@ -464,7 +477,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partalabel partaformcontrol" type="number" name="cbasics" id="cbasics"  />
+						<input class="form-control partalabel partaformcontrol" type="text" name="cbasics" id="cbasics"  />
 					</div>
 				</div>
 			</div>
@@ -509,7 +522,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partaformcontrol" type="number" name="cscalecas" id="cscalecas" />
+						<input class="form-control partaformcontrol" type="text" name="cscalecas" id="cscalecas" />
 					</div>
 				</div>
 			</div>
@@ -521,7 +534,7 @@ include 'left-nav.php';
 	    			</div>
 						  
 					<div class="col-8" style="padding-left: 0">
-						<input class="form-control partaformcontrol" type="number" name="cbasiccas" id="cbasiccas"  />
+						<input class="form-control partaformcontrol" type="text" name="cbasiccas" id="cbasiccas"  />
 					</div>
 				</div>
 			</div>
@@ -582,7 +595,7 @@ include 'left-nav.php';
 
 		<div class="form-group row">
 			<div class="col-md-6 text-left">
-				<label for="ugpg" class="col-form-label">20 PI for Ph.D and M.Phil. 10 PI for other UG/PG Degree/Diploma/Certificate Courses/</label>
+				<label for="ugpg" class="col-form-label">* 20 PI for Ph.D and M.Phil. <br> * 10 PI for other UG/PG Degree/Diploma/Certificate Courses</label>
 			</div>
 				  
 			<div class="col-md-5" style="padding-left: 0">
@@ -941,7 +954,98 @@ include 'left-nav.php';
 		<hr style="border: 0.5px solid #c8c8c8">
  -->
 
-		
+ 		<div class="modal fade" id="enclosuresmodal">
+	  	<div class="modal-dialog">
+		    <div class="modal-content">
+
+		      	<!-- Modal Header -->
+		      	<div class="modal-header">
+			        <h4 class="modal-title">List of Enclosures for Part A</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      	</div>
+
+		      	<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-left">
+							<p><b>Please attach copies of certificates, sanction orders, papers etc. wherever necessary</b></p>
+						</div>
+					</div>
+		    		<div class="row clearfix">
+						<div class="col-md-12 column">
+							<div class="admin-table">
+								<table class="table table-bordered table-hover" id="tab_logic4">
+								    <tr>
+										<th class="text-center">Sr. No.</th>
+										<th class="text-center">Description</th>
+										<th class="text-center">Attached File</th>
+									</tr>				
+									 
+									<tbody>
+
+										<?php
+
+										for($xx=$currentyear-1;$xx>=($currentyear-1);$xx--)
+										{
+
+										?>
+											<tr>
+												<td><b>~</b></td>
+												<td><b>Part A</b></td>
+												<td><b>~</b></td>
+											</tr>
+											<?php
+
+											$sqlxxx="SELECT id FROM part_a_table WHERE faculty_id='$userId' AND year='$xx'";
+											$resultxxx=mysqli_query($conn,$sqlxxx);
+											$rowxxx=mysqli_fetch_assoc($resultxxx);
+											$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+
+											$counter=1;
+
+											
+											// Part A
+											$sql="SELECT file FROM part_a_doc WHERE formId='$formId'";
+											$result=mysqli_query($conn,$sql);
+											while($row=mysqli_fetch_assoc($result))
+											{
+												if($row['file']!='NAN')
+												{
+													?>
+													<tr>
+														<td><?php echo $counter; ?></td>
+														<td><?php echo basename($row['file']); ?></td>
+														<td><a href="viewfile.php?location=<?php echo $row['file']; ?>" target="_blank">View File</a></td>
+													</tr>
+													<?php
+													$counter+=1;
+												}
+											}
+
+										}
+
+											?>											
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
+						</div>
+					</div>
+				</div>
+
+		      	<!-- Modal footer -->
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		      	</div>
+
+		    </div>
+	  	</div>
+	</div>
+
+		<a class="text-right" style="position: absolute; right:10px" href="partB.php?id=<?php echo $_GET['id']; ?>&year=<?php echo $_GET['year']; ?>">Proceed to Part B >></a><br>
 
 		<div class="row form-inline justify-content-center">
 
@@ -967,12 +1071,13 @@ include 'left-nav.php';
 	  			PRINT 
 				</button>
 
+				
 			</div>
 		</div>	
 
-		<br>
+		<!-- <br> -->
 
-	</form>
+	</form><button class="btn btn-info" onclick="enclosures()" style="margin-bottom:20px">View Attachments</button><br>
 	</div>
 	</div>
 	</div>
@@ -1084,6 +1189,13 @@ include 'left-nav.php';
 	}
 	</script>
 
+	<script type="text/javascript">
+		function enclosures()
+		{
+			$('#enclosuresmodal').modal('show');
+		}
+	</script>
+
 	<?php 
 
 	if (isset($_GET['updated']))
@@ -1092,7 +1204,7 @@ include 'left-nav.php';
 		{
 			?>
 		    <script type="text/javascript">
-		    $(document).ready(function(){		    	
+		    $(document).ready(function(){	
 		        $('#myModal').modal('show');
 		    });
 		    </script>

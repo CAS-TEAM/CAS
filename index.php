@@ -13,7 +13,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CAS | Career Advancement Scheme</title>
+	<title><!-- CAS | Career Advancement Scheme -->SELF-AAPRAISALS</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -67,7 +67,7 @@ else
 
 		<div class="row justify-content-center flex-fill">
 			<div class="col-md-10 align-self-center">
-				<h1 class="text-center index-h1 fadeInUp animated delay-1s">SELF-APPRAISAL FORM <br> & <br> CAREER ADVANCEMENT SCHEME</h1><br>
+				<h1 class="text-center index-h1 fadeInUp animated delay-1s">SELF-APPRAISAL PORTAL <!-- <br> & <br> CAREER ADVANCEMENT SCHEME --></h1><br>
 				<!-- <p class="text-center index-text fadeInUp animated">~ CAS INFO ~</p> -->
 				<a class=" fadeInUp animated delay-2s" style="width:107px;display:block;margin:0 auto;" href="login.php"><button type="button" class="btn btn-outline-primary signin-link get-started-btn">Get Started</button></a>
 				<br>
@@ -79,6 +79,7 @@ else
 			<div class="col-md-4 align-self-center">
 				<h3 class="text-center index-h1 " style="font-size: 20px">DEVELOPED BY</h3>
 				<h3 class="text-center index-h1 " style="font-size: 20px">ANJALI CHAUDHARI | SHARVAI PATIL</h3>
+				
 			</div>
 		</div>
 	</div>
