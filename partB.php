@@ -2967,13 +2967,13 @@ include 'left-nav.php';
 									  </thead>
 									  <tbody>
 									    <tr>
-									      <td><input class="form-control selfapp pipartb" id="cat3_piii1_self_a" type="number"  min="0" max="100" value="<?php echo $cat3_piii1_self_a; ?>"></td>
+									      <td><input class="form-control selfapp pipartb" id="cat3_piii1_self_a" type="number"  min="0" max="20" value="<?php echo $cat3_piii1_self_a; ?>"></td>
 									      	<?php
 
 									      	if($hod==1 || $committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control hodapp pipartb" id="cat3_piii1_hod_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_hod_a; ?>"></td>
+									      		<td><input class="form-control hodapp pipartb" id="cat3_piii1_hod_a" type="number" min="0" max="20" value="<?php echo $cat3_piii1_hod_a; ?>"></td>
 												<?php
 									      	}
 
@@ -2982,7 +2982,7 @@ include 'left-nav.php';
 									      	if($committee==1)
 									      	{
 									      		?>
-									      		<td><input class="form-control commapp pipartb" id="cat3_piii1_committee_a" type="number" min="0" max="100" value="<?php echo $cat3_piii1_committee_a; ?>"></td>
+									      		<td><input class="form-control commapp pipartb" id="cat3_piii1_committee_a" type="number" min="0" max="20" value="<?php echo $cat3_piii1_committee_a; ?>"></td>
 												<?php
 									      	}
 
@@ -4070,7 +4070,7 @@ include 'left-nav.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="6">Research/project/consultancy proposals submitted in academic year 20__/20__ but yet to get approval (Max. PI=15)</th>
+								<th colspan="6">Research/project/consultancy proposals submitted in academic year 2018/2019 but yet to get approval (Max. PI=15)</th>
 							</thead>
 						     	
 							<tr>
@@ -4216,7 +4216,7 @@ include 'left-nav.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic9">
 							<thead>
-								<th colspan="6">Ongoing Research/project/consultancy proposals approved/initiated in academic year 20__/20__ but yet to complete (Max. PI=15)</th>
+								<th colspan="6">Ongoing Research/project/consultancy proposals approved/initiated in academic year 2018/2019 but yet to complete (Max. PI=15)</th>
 							</thead>
 							<tr>
 								<th class="text-center">Sr.No</th>
@@ -5911,9 +5911,13 @@ include 'left-nav.php';
 			}*/
 			?>
 
-			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+			<a href="printpartb.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>" class="btn btn-success" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
   			PRINT 
-			</button>
+			</a>
+
+			<!-- <button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+  			PRINT 
+			</button> -->
 
 			<button class="btn btn-info" onclick="enclosures()">View Attachments</button>
 		</div>
@@ -6327,7 +6331,7 @@ include 'left-nav.php';
      	$("#add_row_ppr").click(function(){
      		var ppr=parseInt(document.getElementById('ppr').value);
      		// alert(ppr);
-      		$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=100)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><textarea name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><textarea name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><textarea name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-10 text-left"><p>* 20 marks for peer review journal first author <br>* 10 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ppfile'+ppr+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ppfile'+ppr+'" name="ppfile[]" value="" placeholder=""><input type="hidden" name="ppfilelocation[]" id="ppfilelocation'+ppr+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ppviewfile'+ppr+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
+      		$('#ppr'+ppr).html('<br><div class="row"><div class="col-md-12 text-left"><p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=20)</b></p></div></div<div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Title with page no.</label><textarea name="pptitle[]" id="pptitle'+ppr+'" class="form-control my-0 my-sm-0 titlecat3" maxlength="200"></textarea></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-12 text-left"><div class="form-inline my-2"><label class="mr-sm-2">Name of peer review Journals (not online journals)</label><textarea name="ppnpr[]" id="ppnpr'+ppr+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div></div><div class="row"><div class="col-md-6 text-left"><div class="form-inline my-2"><label class="mr-sm-2">ISSN/ISBN No.</label><textarea name="ppisbn[]" id="ppisbn'+ppr+'" class="form-control my-0 my-sm-0 morewidth" maxlength="200"></textarea></div></div><div class="col-md-6 text-right"><div class="form-inline my-2"><label class="mr-sm-2">Impact factor</label><input type="text" name="ppif[]" id="ppif'+ppr+'" class="form-control my-0 my-sm-0" maxlength="200"/></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-2 text-left"><label>Whether you are main author</label></div><div class="col-md-3 text-left"><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline1'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input yesradio" value="Yes" checked><label class="custom-control-label yes" for="customRadioInline1'+ppr+'">Yes</label></div><div class="custom-control custom-radio custom-control-inline"><input type="radio" id="customRadioInline2'+ppr+'" name="customRadioInline1['+ppr+']" class="custom-control-input noradio" value="No"><label class="custom-control-label no" for="customRadioInline2'+ppr+'">No</label></div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div><div class="col-md-3 text-left"><div class="form-inline my-2"><label class="mr-sm-2">No. of co-author</label><input type="text" name="ppnca[]" id="ppnca'+ppr+'" class="col-3 form-control my-0 my-sm-0" maxlength="200"/>	</div></div><div class="col-md-1"><div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;"></div></div></div><hr style="border: 0.5px solid #c8c8c8"><div class="row"><div class="col-md-10 text-left"><p>* 20 marks for peer review journal first author <br>* 10 marks for second author</p></div><div class="col-md-2"><div class="filepartb-cat3"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ppfile'+ppr+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ppfile'+ppr+'" name="ppfile[]" value="" placeholder=""><input type="hidden" name="ppfilelocation[]" id="ppfilelocation'+ppr+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ppviewfile'+ppr+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></div></div>');
 
 	      	// $('#tab_logic9').append('<tr id="addr11'+(q+1)+'"></tr>');
 	      	$('#ppr'+ppr).toggle();

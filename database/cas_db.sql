@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2019 at 12:38 PM
+-- Generation Time: Jul 19, 2019 at 10:53 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -103,7 +103,7 @@ INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `ecode`,
 (32, 'Faculty 66', 'faculty66@gmail.com', '$2y$10$Oqfn4uTquShRsYsYY6ucs..8tBl66oklWS2k.Bs7hPCxrlbvpvf5i', '1223423', '2010-07-02', 'Computer', 9898227722, 'users/faculty66@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
 (33, 'Faculty00', 'faculty00@gmail.com', '$2y$10$rm6SOp3ZrFsknvE.g4HDD.cyQP/Q.i4SBtUnzM6rw2DVLBYA3kKlC', '13377', '1998-06-03', 'Computer', 9999999999, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
 (34, 'Test User', 'testuser@gmail.com', '$2y$10$1nJFohPWECLHRYBMEjybaets9WAVCTZPJI.6zQU2WRu1mPf.1/R8C', '160553', '2000-07-02', 'Computer', 9896774433, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
-(35, 'Vishal Pandey', 'vishal@gmail.com', '$2y$10$LOym599Lw0BqJNOMYoE9NeKNUoka49RwWKUlNq53BIa1oy.vG3meq', '16053', '2000-02-24', 'Computer', 9869561000, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0);
+(35, 'Vishal Pandey', 'vishal@gmail.com', '$2y$10$LOym599Lw0BqJNOMYoE9NeKNUoka49RwWKUlNq53BIa1oy.vG3meq', '16053', '2000-02-24', 'Computer', 9869561000, 'users/vishal@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -307,7 +307,7 @@ INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat
 (36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (38, 2019, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(39, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(39, 2019, 35, 0, 0, 0, 20, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -614,8 +614,6 @@ INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `r
 (284, 86, 0, '', 0, '', '', 'NAN'),
 (286, 87, 0, '', 0, '', '', 'NAN'),
 (291, 88, 0, '', 0, '', '', 'NAN'),
-(296, 89, 1, 'AICTE-ISTE sponsored Refresher / Induction Program on Cloud Computing and Security â€“June 11-16, 20', 6, 'AICTE-ISTE', '', 'NAN'),
-(297, 89, 2, 'Programming with MATLAB by Loren Shure, Mathworks USA', 1, 'Mathworks - USA', '', 'NAN'),
 (298, 90, 0, '', 0, '', '', 'NAN'),
 (299, 91, 0, '', 0, '', '', 'NAN'),
 (300, 92, 0, '', 0, '', '', 'NAN'),
@@ -623,7 +621,9 @@ INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `r
 (302, 94, 0, '', 0, '', '', 'NAN'),
 (303, 95, 0, '', 0, '', '', 'NAN'),
 (304, 96, 0, '', 0, '', '', 'NAN'),
-(305, 97, 0, '', 0, '', '', 'NAN');
+(305, 97, 0, '', 0, '', '', 'NAN'),
+(314, 89, 1, 'AICTE-ISTE sponsored Refresher / Induction Program on Cloud Computing and Security â€“June 11-16, 20', 6, 'AICTE-ISTE', '', 'users/vishal@gmail.com/1_2.jpg'),
+(315, 89, 2, 'Programming with MATLAB by Loren Shure, Mathworks USA', 1, 'Mathworks - USA', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1904,6 +1904,13 @@ CREATE TABLE `request_edit_access` (
   `form` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `request_edit_access`
+--
+
+INSERT INTO `request_edit_access` (`id`, `facultyId`, `year`, `form`) VALUES
+(1, 35, 2019, 'A');
+
 -- --------------------------------------------------------
 
 --
@@ -1975,7 +1982,7 @@ CREATE TABLE `submitted_for_self_appraisal` (
 INSERT INTO `submitted_for_self_appraisal` (`id`, `year`, `facultyId`, `partA`, `partB`) VALUES
 (1, 2019, 32, 1, 1),
 (2, 2019, 33, 1, 0),
-(3, 2019, 35, 1, 0);
+(3, 2019, 35, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2334,7 +2341,7 @@ ALTER TABLE `partb_cat4_pi`
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=306;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=316;
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
@@ -2469,7 +2476,7 @@ ALTER TABLE `recommend_for_cas`
 -- AUTO_INCREMENT for table `request_edit_access`
 --
 ALTER TABLE `request_edit_access`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --

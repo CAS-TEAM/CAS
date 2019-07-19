@@ -2868,9 +2868,12 @@ include 'left-nav.php';
 	
 	<div class="row form-inline justify-content-center">
 		<div class="col se-btn">
-			<button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+			<a href="printpartb.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>" class="btn btn-success" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
   			PRINT 
-			</button>
+			</a>
+			<!-- <button type="button" class="btn btn-success" onclick="myFunction()" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+  			PRINT 
+			</button> -->
 		</div>
 	</div>
 </div>

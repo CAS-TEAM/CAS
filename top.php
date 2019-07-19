@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CAS | Career Advancement Scheme</title>
+	<!-- <title>CAS | Career Advancement Scheme</title> -->
+	<title>Self Appraisal Portal</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -38,7 +39,7 @@
 <body>
 		<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" style="height: 50px">
 	  	<a class="navbar-brand" href="index.php"><img src="img\logo1.jpg" style="width: 56px;height: 52px;margin-left: -6px;border-radius: 50%;margin-top: 26px"></a>
-	  	<h3 class="text-left index-h1" style="font-size: 20px;margin-top: 27px">Somaiya Vidyavihar</h3>
+	  	<h3 class="text-left index-h1" style="font-size: 20px;margin-top: 27px">K. J. S. C. E.</h3>
 	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    	<span class="navbar-toggler-icon"></span>
 	  	</button>
@@ -53,7 +54,7 @@
 		      	{
 			      	?>
 			      	<li class="nav-item">
-			        	<a class="nav-link" href="index.php">Sign Up | Sign In</a>
+			        	<!-- <a class="nav-link" href="index.php">Sign Up | Sign In</a> -->
 			      	</li>
 			      	<?php
 			    }			      	

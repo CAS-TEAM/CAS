@@ -1067,9 +1067,11 @@ include 'left-nav.php';
 				}
 				?>
 
-				<button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<a class="btn btn-primary" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000" href="printpartA.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">PRINT</a>
+
+				<!-- <button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
-				</button>
+				</button> -->
 
 				
 			</div>

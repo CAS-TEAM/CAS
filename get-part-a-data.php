@@ -226,7 +226,7 @@ if(mysqli_num_rows($result)==0)
 
 		$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
 		$result1=mysqli_query($conn,$sql1);
-		if(mysqli_num_rows($result1)>1)
+		if(mysqli_num_rows($result1)>0)
 		{
 			$data_doc=array();
 			while($row1=mysqli_fetch_assoc($result1))
@@ -426,7 +426,7 @@ else
 
 	$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
 	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>1)
+	if(mysqli_num_rows($result1)>0)
 	{
 		$data_doc=array();
 		while($row1=mysqli_fetch_assoc($result1))

@@ -13,7 +13,8 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-	<title><!-- CAS | Career Advancement Scheme -->SELF-AAPRAISALS</title>
+	<!-- <title>CAS | Career Advancement Scheme</title> -->
+	<title>Self Appraisal Portal</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -79,6 +80,11 @@ else
 			<div class="col-md-4 align-self-center">
 				<h3 class="text-center index-h1 " style="font-size: 20px">DEVELOPED BY</h3>
 				<h3 class="text-center index-h1 " style="font-size: 20px">ANJALI CHAUDHARI | SHARVAI PATIL</h3>
+				
+			</div>
+			<div class="col-md-4 offset-md-4 align-self-center">
+				<h3 class="text-center index-h1 " style="font-size: 20px">DEVELOPED UNDER</h3>
+				<h3 class="text-center index-h1 " style="font-size: 20px">SOFTWARE DEVELOPMENT CELL</h3>
 				
 			</div>
 		</div>

@@ -113,7 +113,7 @@ include 'top.php';
 	              	</form><br>
 
 				    <!--	Google Signin Code  -->
-					<div id="wrapper">
+					<!-- <div id="wrapper">
 					  <div class="loginbox" id="myform" >						
 						<form method="post" action="#" class="popup">
 							
@@ -125,7 +125,7 @@ include 'top.php';
 						</form>
 					  </div>
 					</div>
-					<div id="hidden_form_container" style="display:none;"></div>
+					<div id="hidden_form_container" style="display:none;"></div> -->
 
 					<!--	Normal Code  -->
 

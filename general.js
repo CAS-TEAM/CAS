@@ -269,7 +269,7 @@ function disableBinput(){
 
 	$(document).on('click','#part-a-save-form',function(){
 		// alert('ho');
-		alert("save here");
+		// alert("save here");
 		$("#part-a-form input").prop("disabled", false);//have to enable inputs before submitting
 		$("#part-a-form textarea").prop("disabled", false);
 		// alert(document.getElementById("alreadybegun").value);
@@ -2735,27 +2735,27 @@ if(document.getElementById('cat3_piii1_committee_a'))
     	e.preventDefault();
         // alert("as");
         //alert(sessionId);
-        if(document.getElementById('cat3_piii1_self_a').value>100)
+        if(document.getElementById('cat3_piii1_self_a').value>20)
         {
-        	document.getElementById('cat3_piii1_self_a').value=100;
+        	document.getElementById('cat3_piii1_self_a').value=20;
         }
         var cat3_piii1_self_a = document.getElementById('cat3_piii1_self_a').value;
 
 	    var cat3_piii1_hod_a=-1;
 	    if($("#cat3_piii1_hod_a").length)
 	    {
-	    	if(document.getElementById('cat3_piii1_hod_a').value>100)
+	    	if(document.getElementById('cat3_piii1_hod_a').value>20)
 	    	{
-	    		document.getElementById('cat3_piii1_hod_a').value=100;
+	    		document.getElementById('cat3_piii1_hod_a').value=20;
 	    	}
 	     	cat3_piii1_hod_a=document.getElementById('cat3_piii1_hod_a').value;
 	    }
 	   	var cat3_piii1_committee_a=-1;
 	   	if($("#cat3_piii1_committee_a").length)
 	    {
-	    	if(document.getElementById('cat3_piii1_committee_a').value>100)
+	    	if(document.getElementById('cat3_piii1_committee_a').value>20)
 	    	{
-	    		document.getElementById('cat3_piii1_committee_a').value=100;
+	    		document.getElementById('cat3_piii1_committee_a').value=20;
 	    	}
 			cat3_piii1_committee_a=document.getElementById('cat3_piii1_committee_a').value;
 	   	}
