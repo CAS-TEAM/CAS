@@ -106,7 +106,7 @@ include 'left-nav.php';
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic1">
 					<thead>
-						<th colspan="10" style="text-align: left">ODD SEMESTER :</th>
+						<th colspan="11" style="text-align: left">ODD SEMESTER :</th>
 					</thead>
 						<tr>
 							<th class="text-center">Sr.No</th>
@@ -148,6 +148,9 @@ include 'left-nav.php';
 							<input type="number" name='ctoc[]' id="ctoc1" class="form-control" maxlength="200" />
 							</td>
 							<td>
+							<textarea name='ctofbk[]' id='ctofbk1' class="form-control" maxlength="200"></textarea>
+							</td>
+							<td>
 							<div class="filepartb">
 								<div class="row justify-content-center">
 									<div class="col-3 offset-md-3" style="padding:0;margin:0">
@@ -183,7 +186,7 @@ include 'left-nav.php';
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic2">
 					<thead>
-						<th colspan="10" style="text-align: left">EVEN SEMESTER :</th>
+						<th colspan="11" style="text-align: left">EVEN SEMESTER :</th>
 					</thead>
 					     	
 						<tr>
@@ -224,6 +227,9 @@ include 'left-nav.php';
 							</td> 
 							<td>
 							<input type="number" name='ctec[]' id="ctec1" class="form-control" maxlength="200"/>
+							</td>
+							<td>
+							<textarea name='ctefbk[]' id='ctefbk1' class="form-control" maxlength="200"></textarea>
 							</td>
 							<td>
 							<div class="filepartb">
@@ -1253,7 +1259,8 @@ include 'left-nav.php';
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-							<th colspan="3">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+							<th colspan="2">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+							<th>Description</th>
 							<th>Attachments</th>
 						</thead>
 						

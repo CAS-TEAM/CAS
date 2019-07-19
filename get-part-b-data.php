@@ -647,6 +647,7 @@ else
 			$data_doc[]=array('ctohrsengaged'=>$row1['ctohrsengaged']);
 			$data_doc[]=array('ctomaxhrs'=>$row1['ctomaxhrs']);
 			$data_doc[]=array('ctoc'=>$row1['ctoc']);
+			$data_doc[]=array('ctofbk'=>$row1['ctofbk']);
 			$data_doc[]=array('ctofile'=>$row1['ctofile']);
 
 			$data[]=array('part_b_cat_1_cto'=>$data_doc);
@@ -671,6 +672,7 @@ else
 			$data_doc[]=array('ctehrsengaged'=>$row1['ctehrsengaged']);
 			$data_doc[]=array('ctemaxhrs'=>$row1['ctemaxhrs']);
 			$data_doc[]=array('ctec'=>$row1['ctec']);
+			$data_doc[]=array('ctefbk'=>$row1['ctefbk']);
 			$data_doc[]=array('ctefile'=>$row1['ctefile']);
 
 			$data[]=array('part_b_cat_1_cte'=>$data_doc);

@@ -1069,6 +1069,8 @@ include 'left-nav.php';
 
 				<a class="btn btn-primary" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000" href="printpartA.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">PRINT</a>
 
+				<button type="button" class="btn btn-info" onclick="enclosures()">View Attachments</button>
+
 				<!-- <button type="button" class="btn btn-primary" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
 				</button> -->
@@ -1079,7 +1081,7 @@ include 'left-nav.php';
 
 		<!-- <br> -->
 
-	</form><button class="btn btn-info" onclick="enclosures()" style="margin-bottom:20px">View Attachments</button><br>
+	</form>
 	</div>
 	</div>
 	</div>
@@ -1243,6 +1245,15 @@ include 'left-nav.php';
 	<?php	
 
 	if(($submitted_for_review==true && $viewerId==$userId && $hod==0 && $committee==0)/* || (($currentyear-$year)>1)*/)
+	{
+		?>
+		<script type="text/javascript">
+			$('.pisave').remove();
+		</script>
+		<?php
+	}
+
+	if($submitted_for_self_appraisal==true && $viewerId==$userId && $hod==0 && $committee==0)
 	{
 		?>
 		<script type="text/javascript">

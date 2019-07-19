@@ -443,7 +443,7 @@ tr:nth-child(even) {
 	    	<div class="col-md-6 text-left">
 				<div class="custom-control custom-radio custom-control-inline">
 					<p><?php echo $customRadioInline1; ?>  </p>
-					<p>If yes: 20 PI</p>
+					<!-- <p>If yes: 20 PI</p> -->
 				</div>
 			</div>
 		</div>
@@ -482,7 +482,7 @@ tr:nth-child(even) {
 		</div>
 		<hr>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
     			<div class="form-group row">
     				<div class="col-10">
@@ -496,7 +496,7 @@ tr:nth-child(even) {
     		</div>
     	</div>
 
-    	<hr>
+    	<hr> -->
 
 		<div class="row">
     		<div class="col-md-12">
@@ -543,7 +543,79 @@ tr:nth-child(even) {
 		  	?>
 		</table><br>
 
-		<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p><b>List of Enclosures</b></p>
+				</div>
+			</div>
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic4">
+						    <tr>
+								<th class="text-center">Sr. No.</th>
+								<th class="text-center">Description</th>
+								<!-- <th class="text-center">Attached File</th> -->
+							</tr>				
+							 
+							<tbody>
+
+								<?php
+
+								$xx=$year;
+
+								?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part A</b></td>
+									</tr>
+									<?php
+
+									$sqlxxx="SELECT id FROM part_a_table WHERE faculty_id='$userId' AND year='$xx'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+
+									$counter=1;
+
+									// echo $formId.',';
+									// Part A
+									$sql="SELECT file FROM part_a_doc WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										// echo $counter;
+										if($row['file']!='NAN')
+										{
+											// echo 'here';
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($row['file']); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $row['file']; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+								
+
+									?>											
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="row">
 			<div class="col-md-8 text-left">
     			<label class="col-form-label"><b>Three GPI per day but maximum 30</b></label>
     		</div>
@@ -564,7 +636,7 @@ tr:nth-child(even) {
 			<div class="col-md-12">
 				<p class="text-center" style="margin-left:-270px"><b>PI Part A = GPI = <?php echo 50; ?> out of 50</b></p>
 			</div>
-    	</div>
+    	</div> -->
 
 
 	</div>

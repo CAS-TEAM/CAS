@@ -185,7 +185,7 @@ tr:nth-child(even) {
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="9" style="text-align: center">ODD SEMESTER :</th>					
+				<th colspan="10" style="text-align: center">ODD SEMESTER :</th>					
 			</thead>
 
 				<tr>
@@ -198,6 +198,7 @@ tr:nth-child(even) {
 					<th class="text-center">Total no. of Hours engaged(A)</th>
 					<th class="text-center" style="width:680px">*Max. Hrs.(B)</th>
 					<th class="text-center" style="width:640px">C=(A/B)*100</th>
+					<th class="text-center" style="width:640px">Student Feedback For Theory</th>
 				</tr>
 				<?php
 
@@ -216,6 +217,7 @@ tr:nth-child(even) {
 						$ctohrsengaged=$row1['ctohrsengaged'];
 						$ctomaxhrs=$row1['ctomaxhrs'];
 						$ctoc=$row1['ctoc'];
+						$ctofbk=$row1['ctofbk'];
 						// $ctofile=$row1['ctofile'];
 						$srno=1;
 						?>
@@ -229,6 +231,7 @@ tr:nth-child(even) {
 						    <td><?php echo $ctohrsengaged; ?></td>
 						    <td><?php echo $ctomaxhrs; ?></td>
 						    <td><?php echo $ctoc; ?></td>
+						    <td><?php echo $ctofbk; ?></td>
 					  	</tr>
 						<?php
 						$srno+=1;
@@ -241,7 +244,7 @@ tr:nth-child(even) {
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="9" style="text-align: center">EVEN SEMESTER :</th>					
+				<th colspan="10" style="text-align: center">EVEN SEMESTER :</th>					
 			</thead>
 
 				<tr>
@@ -254,6 +257,7 @@ tr:nth-child(even) {
 					<th class="text-center">Total no. of Hours engaged(A)</th>
 					<th class="text-center" style="width:680px">*Max. Hrs.(B)</th>
 					<th class="text-center" style="width:640px">C=(A/B)*100</th>
+					<th class="text-center" style="width:640px">Student Feedback For Theory</th>
 				</tr>
 				<?php
 
@@ -272,6 +276,7 @@ tr:nth-child(even) {
 						$ctehrsengaged=$row1['ctehrsengaged'];
 						$ctemaxhrs=$row1['ctemaxhrs'];
 						$ctec=$row1['ctec'];
+						$ctefbk=$row1['ctefbk'];
 
 						$srno=1;
 						?>
@@ -285,6 +290,7 @@ tr:nth-child(even) {
 						    <td><?php echo $ctehrsengaged; ?></td>
 						    <td><?php echo $ctemaxhrs; ?></td>
 						    <td><?php echo $ctec; ?></td>
+						    <td><?php echo $ctefbk; ?></td>
 					  	</tr>
 						<?php
 						$srno+=1;
@@ -323,11 +329,11 @@ tr:nth-child(even) {
     		</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-3 offset-md-9">
 				<label class="col-form-label"><b>PI 1 = Data out of 40</b></label>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="row">
 			<div class="col">
@@ -552,12 +558,12 @@ tr:nth-child(even) {
     		</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<p class="col-form-label" style="text-align: right"><b>PI2 = (Average A in % * 40)/100 = Data out of 40</b></p>
 				</label>
 			</div>
-		</div><br>
+		</div><br> -->
 
 		<table class="table table-bordered table-hover">
 			<thead>
@@ -593,14 +599,16 @@ tr:nth-child(even) {
 			<div class="col-md-6 text-left">
 				<label class="col-form-label">* 2 marks for each compliance</label>
 			</div>
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI 3 = Data out of 10</b></p>
-			</div>
+			</div> -->
 		</div><br>
 		
 		<table class="table table-bordered table-hover" id="tab_logic1">
 			<thead>
-				<th colspan="4">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+				<th colspan="2">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+				<th>Description</th>
+				<!-- <th>Attachments</th> -->
 			</thead>
 			<tr>
 			    <td>1</td>
@@ -644,17 +652,17 @@ tr:nth-child(even) {
 			<div class="col-md-6 text-left">
 				<label class="col-form-label">* 2 marks for each compliance</label>
 			</div>
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI 4 = Data out of 10</b></p>
-			</div>
+			</div> -->
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12 text-center">
 				<label class="col-form-label"><b>Teaching and Learning Total = PI1 + PI2 + PI3 + PI4 = Data	out of 100</b></label>
 			</div>
 		</div>
-
+ -->
 		<hr>
 
 		<div class="row">
@@ -706,11 +714,11 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<p style="text-align: right"><b>PII 1 = Data</b></p>
 			</div>
-		</div>
+		</div> -->
 
 		<table>
 			<thead>
@@ -753,11 +761,11 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<p style="text-align: right;"><b>PII 2 = Data</b></p>
 			</div>
-		</div>
+		</div> -->
 
 		<table>
 			<thead>						     	
@@ -799,11 +807,11 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<p style="text-align: right;"><b>PII 3 = Data</b></p>
 			</div>
-		</div>
+		</div> -->
 
 		<table>
 			<thead>						     	
@@ -844,17 +852,17 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<p style="text-align: right;"><b>PII 4 = Data</b></p>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12 text-center">
 				<p><b>Co-Curricular and administrative activities Total = PII1+PII2+PII3+PII4 = Data out of 100</b></p>
 			</div>
-		</div>
+		</div> -->
 
 		<hr>
 
@@ -1614,9 +1622,9 @@ tr:nth-child(even) {
 			<div class="col-md-6 text-left">
 				<p>* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 			</div>
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI = Data</b></p>
-			</div>
+			</div> -->
 		</div><br>
 
 		<table>
@@ -1662,9 +1670,9 @@ tr:nth-child(even) {
 			<div class="col-md-6 text-left">
 				<p>* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 			</div>
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 				<p style="text-align: right"><b>PI = Data</b></p>
-			</div>
+			</div> -->
 		</div><br>
 
 		<table>
@@ -1708,18 +1716,625 @@ tr:nth-child(even) {
 			<div class="col-md-6 text-left">
 				<p>* 05 Marks for international / national credentials / activity / contribution not mentioned in application</p>
 			</div>
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI = Data</b></p>
-			</div>
+			</div> -->
 		</div><br>
 
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12 text-center">
 				<p><b>Category IV: PI = Data out of 75</b></p>
 			</div>
-		</div>
+		</div> -->
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-left">
+					<p class="text-center"><b>List of Enclosures</b></p>
+				</div>
+			</div>
+    		<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="admin-table">
+						<table class="table table-bordered table-hover" id="tab_logic4">
+						    <tr>
+								<th class="text-center">Sr. No.</th>
+								<th class="text-center">Description</th>
+								<!-- <th class="text-center">Attached File</th> -->
+							</tr>				
+							 
+							<tbody>
 
+								<?php
+
+								// for($xx=$currentyear-1;$xx>=($currentyear-1);$xx--)
+								// {
+
+								$xx=$year;
+
+								?>
+									<?php
+
+									$counter=1;
+
+									?>
+
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 1</b></td>
+										<!-- <td><b>~</b></td> -->
+									</tr>
+									<?php
+
+									$sqlxxx="SELECT id FROM part_b_table WHERE facultyId='$userId' AND year='$xx'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);	
+
+									// echo $userId.','.$formId.','.$xx.'<br>';							
+
+									// Part B
+									// $sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
+									$sqlxxx="SELECT o1file,o2file,o3file,o4file,o5file,o6file,o7file,o8file,o9file,o10file,o11file,o12file,o13file,e1file,e2file,e3file,e4file,e5file,e6file,e7file,e8file,e9file,e10file,e11file,e12file,e13file,dps1file,dps2file,dps3file,dps4file, dps5file,dps6file,dps7file FROM part_b_cat_1 WHERE formId='$formId'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$o1file=mysqli_real_escape_string($conn,$rowxxx['o1file']);
+									$o2file=mysqli_real_escape_string($conn,$rowxxx['o2file']);
+									$o3file=mysqli_real_escape_string($conn,$rowxxx['o3file']);
+									$o4file=mysqli_real_escape_string($conn,$rowxxx['o4file']);
+									$o5file=mysqli_real_escape_string($conn,$rowxxx['o5file']);
+									$o6file=mysqli_real_escape_string($conn,$rowxxx['o6file']);
+									$o7file=mysqli_real_escape_string($conn,$rowxxx['o7file']);
+									$o8file=mysqli_real_escape_string($conn,$rowxxx['o8file']);
+									$o9file=mysqli_real_escape_string($conn,$rowxxx['o9file']);
+									$o10file=mysqli_real_escape_string($conn,$rowxxx['o10file']);
+									$o11file=mysqli_real_escape_string($conn,$rowxxx['o11file']);
+									$o12file=mysqli_real_escape_string($conn,$rowxxx['o12file']);
+									$o13file=mysqli_real_escape_string($conn,$rowxxx['o13file']);
+
+									$e1file=mysqli_real_escape_string($conn,$rowxxx['e1file']);
+									$e2file=mysqli_real_escape_string($conn,$rowxxx['e2file']);
+									$e3file=mysqli_real_escape_string($conn,$rowxxx['e3file']);
+									$e4file=mysqli_real_escape_string($conn,$rowxxx['e4file']);
+									$e5file=mysqli_real_escape_string($conn,$rowxxx['e5file']);
+									$e6file=mysqli_real_escape_string($conn,$rowxxx['e6file']);
+									$e7file=mysqli_real_escape_string($conn,$rowxxx['e7file']);
+									$e8file=mysqli_real_escape_string($conn,$rowxxx['e8file']);
+									$e9file=mysqli_real_escape_string($conn,$rowxxx['e9file']);
+									$e10file=mysqli_real_escape_string($conn,$rowxxx['e10file']);
+									$e11file=mysqli_real_escape_string($conn,$rowxxx['e11file']);
+									$e12file=mysqli_real_escape_string($conn,$rowxxx['e12file']);
+									$e13file=mysqli_real_escape_string($conn,$rowxxx['e13file']);
+
+									for ($x = 1; $x <= 13; $x++) {
+										$file='o'.$x.'file';
+										if($$file!='NAN' && $$file!='')
+										{
+										    ?>
+										    <tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($$file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+										    <?php
+										    $counter+=1;
+										}
+									} 
+
+									for ($x = 1; $x <= 13; $x++) {
+										$file='e'.$x.'file';
+										if($$file!='NAN' && $$file!='')
+										{
+										    ?>
+										    <tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($$file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+										    <?php
+										    $counter+=1;
+										}
+									} 
+
+									// part_b_cat_1_cte
+									$sql="SELECT ctefile FROM part_b_cat_1_cte WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ctefile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_1_cto
+									$sql="SELECT ctofile FROM part_b_cat_1_cto WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ctofile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_1_dar
+									$sql="SELECT darfile FROM part_b_cat_1_dar WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['darfile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 2</b></td>
+										<!-- <td><b>~</b></td> -->
+									</tr>
+									<?php
+
+									// part_b_cat_2_act
+									$sql="SELECT efile FROM part_b_cat_2_act WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['efile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_2_c
+									$sql="SELECT cfile FROM part_b_cat_2_c WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cfile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_2_exc
+									$sql="SELECT ecfile FROM part_b_cat_2_exc WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ecfile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_2_ha
+									$sql="SELECT hfile FROM part_b_cat_2_ha WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['hfile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 3</b></td>
+										<!-- <td><b>~</b></td> -->
+									</tr>
+									<?php
+
+									$sqlxxx="SELECT phdfile,mtechfile,btechfile FROM part_b_cat_3 WHERE formId='$formId'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$phdfile=mysqli_real_escape_string($conn,$rowxxx['phdfile']);
+									$mtechfile=mysqli_real_escape_string($conn,$rowxxx['mtechfile']);
+									$btechfile=mysqli_real_escape_string($conn,$rowxxx['btechfile']);
+
+									?>
+									<?php
+
+									if($phdfile!='NAN' && $phdfile!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td><?php echo basename($phdfile); ?></td>
+											<!-- <td><a href="viewfile.php?location=<?php echo $phdfile; ?>" target="_blank">View File</a></td> -->
+										</tr>
+										<?php
+									}
+									if($mtechfile!='NAN' && $mtechfile!='')
+									{
+										?>									
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td><?php echo basename($mtechfile); ?></td>
+											<!-- <td><a href="viewfile.php?location=<?php echo $mtechfile; ?>" target="_blank">View File</a></td> -->
+										</tr>
+										<?php
+									}
+									if($btechfile!='NAN' && $btechfile!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td><?php echo basename($btechfile); ?></td>
+											<!-- <td><a href="viewfile.php?location=<?php echo $btechfile; ?>" target="_blank">View File</a></td> -->
+										</tr>
+										<?php
+									}
+									?>
+
+									<?php
+
+									// part_b_cat_3_pp
+									$sql="SELECT ppfile FROM part_b_cat_3_pp WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['ppfile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_ppic
+									$sql="SELECT pp1file FROM part_b_cat_3_ppic WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['pp1file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_ppinc
+									$sql="SELECT pp2file FROM part_b_cat_3_ppinc WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['pp2file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_bk
+									$sql="SELECT pp3file FROM part_b_cat_3_bk WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['pp3file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_res
+									$sql="SELECT research1file FROM part_b_cat_3_res WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['research1file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_ores
+									$sql="SELECT research2file FROM part_b_cat_3_ores WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['research2file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_cres
+									$sql="SELECT research3file FROM part_b_cat_3_cres WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['research3file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_3_pip
+									$sql="SELECT dfile FROM part_b_cat_3_pip WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['dfile'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									?>
+									<tr>
+										<td><b>~</b></td>
+										<td><b>Part B Category 4</b></td>
+										<!-- <td><b>~</b></td> -->
+									</tr>
+									<?php
+
+									// part_b_cat_4_sem
+									$sql="SELECT cativ1file FROM part_b_cat_4_sem WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cativ1file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_4_inv
+									$sql="SELECT cativ2file FROM part_b_cat_4_inv WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cativ2file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+									// part_b_cat_4_creds
+									$sql="SELECT cativ3file FROM part_b_cat_4_creds WHERE formId='$formId'";
+									$result=mysqli_query($conn,$sql);
+									while($row=mysqli_fetch_assoc($result))
+									{
+										$file=$row['cativ3file'];
+										if($file!='NAN' && $file!='')
+										{
+											?>
+											<tr>
+												<td><?php echo $counter; ?></td>
+												<td><?php echo basename($file); ?></td>
+												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
+											</tr>
+											<?php
+											$counter+=1;
+										}
+									}
+
+
+
+								//}//for loop ends
+
+								?>
+								<?php 
+								/*
+								$l=1;
+								$flag=true;//flag to check if atleast one file has been previous;y uploaded or not..true means uploaded false means not uploaded
+
+								$sqlxxx="SELECT id FROM summary_table WHERE facultyId='$userId' AND year='$currentyear'";
+								$resultxxx=mysqli_query($conn,$sqlxxx);
+								if(mysqli_num_rows($resultxxx)>0)
+								{
+
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+
+									$sqlxx="SELECT ecs,papers FROM summary_hasr WHERE formId='$formId'";
+									$resultxx=mysqli_query($conn,$sqlxx);
+									if(mysqli_num_rows($resultxx)>0)
+									{
+										while($rowxx=mysqli_fetch_assoc($resultxx))
+										{
+											?>
+											<tr id='addr5<?php echo $l-1; ?>'>
+												<td id='hasr<?php echo $l; ?>'><?php echo $l; ?></td>
+												<td>
+												<input type="number" step="0.01" name='ecs[]' id='ecs<?php echo $l; ?>' class="form-control" value="<?php echo $rowxx['ecs']; ?>" maxlength="200" />
+												</td>
+												<td>
+													<div class="custom-file">
+										                <input type="file" class="custom-file-input" id="papers<?php echo $l; ?>" name="papers[]" value="<?php echo $rowxx['papers']; ?>"/>
+										                <label class="custom-file-label" for="papers<?php echo $l; ?>"><?php echo basename($rowxx['papers']); ?></label>
+										            </div>
+												</td>
+											</tr>						                    
+											<?php
+											$l+=1;
+										}
+										?>
+										<tr id='addr5<?php echo $l-1; ?>'></tr>
+										<?php
+									}						
+									else
+									{
+										$flag=false;
+									}
+
+								}
+								else
+								{
+									$flag=false;
+								}
+								
+								if($flag==false)
+								{
+								?>
+									<tr id='addr50'>
+										<td id='hasr1'>1</td>
+										<td>
+										<input type="number" step="0.01" name='ecs[]' id='ecs1' class="form-control" maxlength="200" />
+										</td>
+										<td>
+											<div class="custom-file">
+								                <input type="file" class="custom-file-input" id="papers1" name="papers[]"/>
+								                <label class="custom-file-label" for="papers1">Choose file</label>
+								            </div>
+										</td>
+									</tr>
+				                    <tr id='addr51'></tr>
+			                    <?php
+			                	}
+			                	?>
+			                	<input type="hidden" name="l" id="l" value="<?php echo $l-1; ?>">
+			                	*/
+			                	?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
+				</div>
+			</div>
+		</div>
 									 
 
 	</div>

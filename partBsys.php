@@ -28,6 +28,7 @@ $ctohrsweek=$_POST['ctohrsweek'];
 $ctohrsengaged=$_POST['ctohrsengaged'];
 $ctomaxhrs=$_POST['ctomaxhrs'];
 $ctoc=$_POST['ctoc'];
+$ctofbk=$_POST['ctofbk'];
 $ctofilelocation=$_POST['ctofilelocation'];
 
 
@@ -40,6 +41,7 @@ $ctehrsweek=$_POST['ctehrsweek'];
 $ctehrsengaged=$_POST['ctehrsengaged'];
 $ctemaxhrs=$_POST['ctemaxhrs'];
 $ctec=$_POST['ctec'];
+$ctefbk=$_POST['ctefbk'];
 $ctefilelocation=$_POST['ctefilelocation'];
 
 
@@ -675,7 +677,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['ctofile']['name'][$i];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc,ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]','$dest')";
+				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc, ctofbk,ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]', '$ctofbk[$i]','$dest')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 		}
@@ -683,12 +685,12 @@ if($alreadybegun==1)
 		{
 			if($ctofilelocation[$i]!="")
 			{
-				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc,ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]','$ctofilelocation[$i]')";
+				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc, ctofbk, ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]', '$ctofbk[$i]', '$ctofilelocation[$i]')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 			else
 			{
-				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc,ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]','NAN')";
+				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc, ctofbk, ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]', '$ctofbk[$i]', 'NAN')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 			
@@ -708,7 +710,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['ctefile']['name'][$j];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','$dest')";
+				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec, ctefbk, ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]', '$ctefbk[$j]', '$dest')";
 				$result2=mysqli_query($conn,$sql2);
 			}
 		}
@@ -716,12 +718,12 @@ if($alreadybegun==1)
 		{
 			if($ctefilelocation[$j]!="")
 			{
-				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','$ctefilelocation[$j]')";
+				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec, ctefbk, ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]', '$ctefbk[$j]', '$ctefilelocation[$j]')";
 				$result2=mysqli_query($conn,$sql2);
 			}
 			else
 			{
-				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','NAN')";
+				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec, ctefbk, ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]', '$ctefbk[$j]', 'NAN')";
 				$result2=mysqli_query($conn,$sql2);
 			}
 		}
@@ -1686,13 +1688,13 @@ else
 			    $dest = "users/".$email. "/".$_FILES['ctofile']['name'][$i];
 
 			    if(move_uploaded_file($tmpFilePath, $dest)) {
-					$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc,ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]','$dest')";
+					$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc, ctofbk, ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]', '$ctofbk[$i]','$dest')";
 					$result1=mysqli_query($conn,$sql1);
 				}
 			}
 			else
 			{
-				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc,ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]','NAN')";
+				$sql1="INSERT INTO part_b_cat_1_cto (formId, ctocourse, ctotyprlpt, ctougpg, ctoclasssemester, ctohrsweek, ctohrsengaged, ctomaxhrs, ctoc, ctofbk, ctofile) VALUES ('$formId', '$ctocourse[$i]', '$ctotyprlpt[$i]', '$ctougpg[$i]', '$ctoclasssemester[$i]', '$ctohrsweek[$i]', '$ctohrsengaged[$i]', '$ctomaxhrs[$i]', '$ctoc[$i]', '$ctofbk[$i]','NAN')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 		}
@@ -1712,13 +1714,13 @@ else
 			    $dest = "users/".$email. "/".$_FILES['ctefile']['name'][$j];
 
 			    if(move_uploaded_file($tmpFilePath, $dest)) {
-					$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','$dest')";
+					$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec, ctefbk, ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]', '$ctefbk[$j]', '$dest')";
 					$result2=mysqli_query($conn,$sql2);
 				}
 			}
 			else
 			{
-				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec,ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]','NAN')";
+				$sql2="INSERT INTO part_b_cat_1_cte (formId, ctecourse, ctetyprlpt, cteugpg, cteclasssemester, ctehrsweek, ctehrsengaged, ctemaxhrs, ctec, ctefbk, ctefile) VALUES ('$formId','$ctecourse[$j]', '$ctetyprlpt[$j]', '$cteugpg[$j]', '$cteclasssemester[$j]', '$ctehrsweek[$j]', '$ctehrsengaged[$j]', '$ctemaxhrs[$j]', '$ctec[$j]', '$ctefbk[$j]', 'NAN')";
 				$result2=mysqli_query($conn,$sql2);
 			}
 

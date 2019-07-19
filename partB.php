@@ -385,7 +385,7 @@ include 'left-nav.php';
 					
 					
 					<thead>
-						<th colspan="10" style="text-align: left">ODD SEMESTER :</th>					
+						<th colspan="11" style="text-align: left">ODD SEMESTER :</th>					
 					</thead>
 
 						<tr>
@@ -398,6 +398,7 @@ include 'left-nav.php';
 							<th class="text-center">Total no. of Hours engaged(A)</th>
 							<th class="text-center" style="width:680px">*Max. Hrs.(B)</th>
 							<th class="text-center" style="width:640px">C=(A/B)*100</th>
+							<th class="text-center" style="width:640px">Student Feedback For Theory</th>
 							<th class="text-center">Attachments</th>
 						</tr>
 					<tbody>
@@ -427,6 +428,9 @@ include 'left-nav.php';
 							</td> 
 							<td>
 							<input type="number" name='ctoc[]' id="ctoc1" class="form-control" maxlength="200" />
+							</td>
+							<td>
+							<textarea name='ctofbk[]' id='ctofbk1' class="form-control" maxlength="200"></textarea>
 							</td>
 							<td>
 							<div class="filepartb">
@@ -466,7 +470,7 @@ include 'left-nav.php';
 				<div class="admin-table">
 				<table class="table table-bordered table-hover" id="tab_logic2">
 					<thead>
-						<th colspan="10" style="text-align: left">EVEN SEMESTER :</th>
+						<th colspan="11" style="text-align: left">EVEN SEMESTER :</th>
 					</thead>
 					     	
 						<tr>
@@ -479,6 +483,7 @@ include 'left-nav.php';
 							<th class="text-center">Total no. of Hours engaged(A)</th>
 							<th class="text-center">*Max. Hrs.(B)</th>
 							<th class="text-center">C=(A/B)*100</th>
+							<th class="text-center">Student Feedback For Theory</th>
 							<th class="text-center">Attachments</th>
 						</tr>
 					<tbody>
@@ -508,6 +513,9 @@ include 'left-nav.php';
 							</td> 
 							<td>
 							<input type="number" name='ctec[]' id="ctec1" class="form-control" maxlength="200"/>
+							</td>
+							<td>
+							<textarea name='ctefbk[]' id='ctefbk1' class="form-control" maxlength="200"></textarea>
 							</td>
 							<td>
 							<div class="filepartb">
@@ -1787,7 +1795,8 @@ include 'left-nav.php';
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-							<th colspan="3">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+							<th colspan="2">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+							<th>Description</th>
 							<th>Attachments</th>
 						</thead>
 						
@@ -5262,7 +5271,41 @@ include 'left-nav.php';
 </div>
 
 
+	<?php 
 
+	if (isset($_GET['updated']))
+	{
+		if($_GET['updated']==1)
+		{
+			?>
+		    <script type="text/javascript">
+		    $(document).ready(function(){	
+		        $('#myModal').modal('show');
+		    });
+		    </script>
+			<?php 
+		}
+	}
+	?>
+
+	<div class="modal fade" id="myModal">
+	  	<div class="modal-dialog">
+		    <div class="modal-content">
+
+		      	<!-- Modal Header -->
+		      	<div class="modal-header">
+			        <h4 class="modal-title">Form Updated!</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      	</div>
+
+		      	<!-- Modal footer -->
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		      	</div>
+
+		    </div>
+	  	</div>
+	</div>
 	<div class="modal fade" id="enclosuresmodal">
 	  	<div class="modal-dialog">
 		    <div class="modal-content">
@@ -5919,7 +5962,7 @@ include 'left-nav.php';
   			PRINT 
 			</button> -->
 
-			<button class="btn btn-info" onclick="enclosures()">View Attachments</button>
+			<button type="button" class="btn btn-info" onclick="enclosures()">View Attachments</button>
 		</div>
 	</div>
 
@@ -5960,7 +6003,7 @@ include 'left-nav.php';
      	$("#add_row1").click(function(){
      		var i=parseInt(document.getElementById('i').value);
       		// alert("i="+i);
-      		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><textarea name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><textarea name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" /></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" /></td><td><textarea name="ctofbk[]" id="ctofbk'+(i+1)+'" class="form-control" maxlength="200"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
       		$('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
@@ -5987,7 +6030,7 @@ include 'left-nav.php';
       	// var j=1;      
      	$("#add_row2").click(function(){
      		var j=parseInt(document.getElementById('j').value);
-      		$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><textarea name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(i+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cteviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+      		$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><textarea name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200"></textarea></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200"/></td><td><textarea name="ctefbk[]" id="ctefbk'+(j+1)+'" class="form-control" maxlength="200"></textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(i+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(i+1)+'" value=""></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location=none" id="cteviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
       		// $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
       		$('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
@@ -6467,6 +6510,15 @@ include 'left-nav.php';
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//show PI save button or not
 	if(($submitted_for_review==true && $viewerId==$userId && $hod==0 && $committee==0) /*|| (($currentyear-$year)>1)*/)
+	{
+		?>
+		<script type="text/javascript">
+			$('.pisave').remove();
+		</script>
+		<?php
+	}
+
+	if($submitted_for_self_appraisal==true && $viewerId==$userId && $hod==0 && $committee==0)
 	{
 		?>
 		<script type="text/javascript">

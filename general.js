@@ -411,6 +411,9 @@ function getPartAData(){
 					    
 					});
 				}
+				if(room==0){
+					room=1;
+				}
 				document.getElementById("room").value=room;
 				// $(".part-a-plus-btn").prop("onclick", false);
 				
@@ -591,13 +594,14 @@ function getPartBData(){
 					    		var ctohrsengaged=JSON.stringify(v[5]['ctohrsengaged']).replace(/['"]+/g, '');
 					    		var ctomaxhrs=JSON.stringify(v[6]['ctomaxhrs']).replace(/['"]+/g, '');
 					    		var ctoc=JSON.stringify(v[7]['ctoc']).replace(/['"]+/g, '');
-					    		var ctofile=JSON.stringify(v[8]['ctofile']).replace(/['"]+/g, '');
+					    		var ctofbk=JSON.stringify(v[8]['ctofbk']).replace(/['"]+/g, '');
+					    		var ctofile=JSON.stringify(v[9]['ctofile']).replace(/['"]+/g, '');
 					    		i++;
 					    		if(i!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><textarea name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" value="">'+ctocourse+'</textarea></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" value="'+ctotyprlpt+'"/></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" value="'+ctougpg+'"/></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoclasssemester+'"/></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsweek+'"/></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsengaged+'"/></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" value="'+ctomaxhrs+'"/></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoc+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value="'+ctofile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ctofile+'" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr1'+i).html('<td id="ctosrno'+(i+1)+'">'+(i+1)+'</td><td><textarea name="ctocourse[]" id="ctocourse'+(i+1)+'" class="form-control" maxlength="200" value="">'+ctocourse+'</textarea></td><td><input type="text" name="ctotyprlpt[]" id="ctotyprlpt'+(i+1)+'" class="form-control" maxlength="200" value="'+ctotyprlpt+'"/></td><td><input type="text" name="ctougpg[]" id="ctougpg'+(i+1)+'" class="form-control" maxlength="200" value="'+ctougpg+'"/></td><td><input type="text" name="ctoclasssemester[]" id="ctoclasssemester'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoclasssemester+'"/></td><td><input type="number" name="ctohrsweek[]" id="ctohrsweek'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsweek+'"/></td><td><input type="number" name="ctohrsengaged[]" id="ctohrsengaged'+(i+1)+'" class="form-control" maxlength="200" value="'+ctohrsengaged+'"/></td><td><input type="number" name="ctomaxhrs[]" id="ctomaxhrs'+(i+1)+'" class="form-control" maxlength="200" value="'+ctomaxhrs+'"/></td><td><input type="number" name="ctoc[]" id="ctoc'+(i+1)+'" class="form-control" maxlength="200" value="'+ctoc+'"/></td><td><textarea name="ctofbk[]" id="ctofbk'+(i+1)+'" class="form-control" maxlength="200">'+ctofbk+'</textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctofile'+(i+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctofile'+(i+1)+'" name="ctofile[]" value="" placeholder=""><input type="hidden" name="ctofilelocation[]" id="ctofilelocation'+(i+1)+'" value="'+ctofile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ctofile+'" id="ctoviewfile'+(i+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 							      	// $('#tab_logic1').append('<tr id="addr1'+(i+1)+'"></tr>');
 							      	$('#addr1'+i).after('<tr id="addr1'+(i+1)+'"></tr>');
@@ -614,6 +618,7 @@ function getPartBData(){
 					    			document.getElementById('ctohrsengaged'+(i+1)).value=ctohrsengaged;
 					    			document.getElementById('ctomaxhrs'+(i+1)).value=ctomaxhrs;
 					    			document.getElementById('ctoc'+(i+1)).value=ctoc;
+					    			document.getElementById('ctofbk'+(i+1)).value=ctofbk;
 					    			document.getElementById('ctoviewfile'+(i+1)).href="viewfile.php?location="+ctofile;
 							    	document.getElementById('ctofilelocation'+(i+1)).value=ctofile;
 					    		}
@@ -634,14 +639,15 @@ function getPartBData(){
 					    		var ctehrsengaged=JSON.stringify(v[5]['ctehrsengaged']).replace(/['"]+/g, '');
 					    		var ctemaxhrs=JSON.stringify(v[6]['ctemaxhrs']).replace(/['"]+/g, '');
 					    		var ctec=JSON.stringify(v[7]['ctec']).replace(/['"]+/g, '');
-					    		var ctefile=JSON.stringify(v[8]['ctefile']).replace(/['"]+/g, '');
+					    		var ctefbk=JSON.stringify(v[8]['ctefbk']).replace(/['"]+/g, '');
+					    		var ctefile=JSON.stringify(v[9]['ctefile']).replace(/['"]+/g, '');
 
 					    		j++;
 					    		if(j!=0)
 					    		{
 					    			// alert("i not 0");
 
-					    			$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><textarea name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200" value="">'+ctecourse+'</textarea></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200" value="'+ctetyprlpt+'"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200" value="'+cteugpg+'"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200" value="'+cteclasssemester+'"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsweek+'"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsengaged+'"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200" value="'+ctemaxhrs+'"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200" value="'+ctec+'"/></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(j+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(j+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(j+1)+'" value="'+ctefile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ctefile+'" id="cteviewfile'+(j+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
+					    			$('#addr2'+j).html('<td id="ctesrno'+(j+1)+'">'+(j+1)+'</td><td><textarea name="ctecourse[]" id="ctecourse'+(j+1)+'" class="form-control" maxlength="200" value="">'+ctecourse+'</textarea></td><td><input type="text" name="ctetyprlpt[]" id="ctetyprlpt'+(j+1)+'" class="form-control" maxlength="200" value="'+ctetyprlpt+'"/></td><td><input type="text" name="cteugpg[]" id="cteugpg'+(j+1)+'" class="form-control" maxlength="200" value="'+cteugpg+'"/></td><td><input type="text" name="cteclasssemester[]" id="cteclasssemester'+(j+1)+'" class="form-control" maxlength="200" value="'+cteclasssemester+'"/></td><td><input type="number" name="ctehrsweek[]" id="ctehrsweek'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsweek+'"/></td><td><input type="number" name="ctehrsengaged[]" id="ctehrsengaged'+(j+1)+'" class="form-control" maxlength="200" value="'+ctehrsengaged+'"/></td><td><input type="number" name="ctemaxhrs[]" id="ctemaxhrs'+(j+1)+'" class="form-control" maxlength="200" value="'+ctemaxhrs+'"/></td><td><input type="number" name="ctec[]" id="ctec'+(j+1)+'" class="form-control" maxlength="200" value="'+ctec+'"/></td><td><textarea name="ctefbk[]" id="ctefbk'+(j+1)+'" class="form-control" maxlength="200">'+ctefbk+'</textarea></td><td><div class="filepartb"><div class="row justify-content-center"><div class="col-3 offset-md-3" style="padding:0;margin:0"><div class="file-upload mx-auto" style="width:26px"><label for="ctefile'+(j+1)+'" style="cursor:pointer"><img src="https://img.icons8.com/material/26/000000/attach.png"></label><input type="file" class="dynamic-four" id="ctefile'+(j+1)+'" name="ctefile[]" value="" placeholder=""><input type="hidden" name="ctefilelocation[]" id="ctefilelocation'+(j+1)+'" value="'+ctefile+'"></div></div><div class="col-md-3" style="padding:0;margin:0"><a href="viewfile.php?location='+ctefile+'" id="cteviewfile'+(j+1)+'" target="_blank"><img src="https://img.icons8.com/ios/24/000000/document.png"></a></div></div></div></td>');
 
 								    // $('#tab_logic2').append('<tr id="addr2'+(j+1)+'"></tr>');
 								    $('#addr2'+j).after('<tr id="addr2'+(j+1)+'"></tr>');
@@ -658,6 +664,7 @@ function getPartBData(){
 					    			document.getElementById('ctehrsengaged'+(j+1)).value=ctehrsengaged;
 					    			document.getElementById('ctemaxhrs'+(j+1)).value=ctemaxhrs;
 					    			document.getElementById('ctec'+(j+1)).value=ctec;
+					    			document.getElementById('ctefbk'+(j+1)).value=ctefbk;
 					    			document.getElementById('cteviewfile'+(j+1)).href="viewfile.php?location="+ctefile;
 							    	document.getElementById('ctefilelocation'+(j+1)).value=ctefile;
 					    		}

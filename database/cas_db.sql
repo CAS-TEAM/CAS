@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2019 at 10:53 AM
+-- Generation Time: Jul 19, 2019 at 12:50 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -103,7 +103,8 @@ INSERT INTO `faculty_table` (`id`, `faculty_name`, `email`, `password`, `ecode`,
 (32, 'Faculty 66', 'faculty66@gmail.com', '$2y$10$Oqfn4uTquShRsYsYY6ucs..8tBl66oklWS2k.Bs7hPCxrlbvpvf5i', '1223423', '2010-07-02', 'Computer', 9898227722, 'users/faculty66@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
 (33, 'Faculty00', 'faculty00@gmail.com', '$2y$10$rm6SOp3ZrFsknvE.g4HDD.cyQP/Q.i4SBtUnzM6rw2DVLBYA3kKlC', '13377', '1998-06-03', 'Computer', 9999999999, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
 (34, 'Test User', 'testuser@gmail.com', '$2y$10$1nJFohPWECLHRYBMEjybaets9WAVCTZPJI.6zQU2WRu1mPf.1/R8C', '160553', '2000-07-02', 'Computer', 9896774433, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0),
-(35, 'Vishal Pandey', 'vishal@gmail.com', '$2y$10$LOym599Lw0BqJNOMYoE9NeKNUoka49RwWKUlNq53BIa1oy.vG3meq', '16053', '2000-02-24', 'Computer', 9869561000, 'users/vishal@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0);
+(35, 'Vishal Pandey', 'vishal@gmail.com', '$2y$10$LOym599Lw0BqJNOMYoE9NeKNUoka49RwWKUlNq53BIa1oy.vG3meq', '16053', '2000-02-24', 'Computer', 9869561000, 'users/vishal@gmail.com/profilepic.jpg', 1, 0, 0, 0, 0),
+(36, 'Faculty55', 'faculty55@gmail.com', '$2y$10$yFGEDaYzQSSL4/rw7Wn0eurSazMmWjytXBumD8LNGIHocG8QQOl.W', '13550', '2000-04-04', 'Computer', 989675754, 'defaults/default_userprofile_pic.png', 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -235,7 +236,8 @@ INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1
 (38, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (39, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (40, 2019, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 10, 0, 0),
-(41, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(41, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(42, 2019, 36, 20, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 30, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -307,7 +309,8 @@ INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat
 (36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (38, 2019, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(39, 2019, 35, 0, 0, 0, 20, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0);
+(39, 2019, 35, 0, 0, 0, 20, 0, 0, 10, 0, 0, 10, 0, 0, 40, 0, 0),
+(40, 2019, 36, 10, 0, 0, 20, 0, 0, 20, 0, 0, 20, 0, 0, 70, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -403,7 +406,8 @@ INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `ca
 (36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (38, 2019, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(39, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 16, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0);
+(39, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 16, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0),
+(40, 2019, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -472,7 +476,8 @@ INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat
 (36, 2017, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (37, 2019, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (38, 2019, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(39, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(39, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(40, 2019, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -623,7 +628,11 @@ INSERT INTO `part_a_doc` (`id`, `formId`, `srno`, `course`, `days`, `agency`, `r
 (304, 96, 0, '', 0, '', '', 'NAN'),
 (305, 97, 0, '', 0, '', '', 'NAN'),
 (314, 89, 1, 'AICTE-ISTE sponsored Refresher / Induction Program on Cloud Computing and Security â€“June 11-16, 20', 6, 'AICTE-ISTE', '', 'users/vishal@gmail.com/1_2.jpg'),
-(315, 89, 2, 'Programming with MATLAB by Loren Shure, Mathworks USA', 1, 'Mathworks - USA', '', 'NAN');
+(315, 89, 2, 'Programming with MATLAB by Loren Shure, Mathworks USA', 1, 'Mathworks - USA', '', 'NAN'),
+(316, 98, 0, '', 0, '', '', 'NAN'),
+(319, 99, 1, 'KJSCE ', 5, 'KJSCOC', 'Member', 'users/faculty55@gmail.com/1_1.jpg'),
+(320, 99, 2, 'KJSCE 2', 6, 'KJSCE', 'Organiser', 'users/faculty55@gmail.com/1_2.jpg'),
+(321, 99, 3, 'KJSCE 3', 7, 'kkjj', 'None', 'users/faculty55@gmail.com/Screenshot_1 (2).png');
 
 -- --------------------------------------------------------
 
@@ -706,7 +715,9 @@ INSERT INTO `part_a_gpi` (`id`, `year`, `facultyId`, `parta_ugpggpi_self_a`, `pa
 (55, 2019, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (56, 2019, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 (57, 2019, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-(58, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+(58, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(59, 2019, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(60, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -790,7 +801,9 @@ INSERT INTO `part_a_table` (`id`, `year`, `faculty_id`, `praddr`, `peaddr`, `hig
 (94, 0, 35, '', '', '', '0000-00-00', '', '', '', '0', '0', '', '0000-00-00', '0', '0', '', '0000-00-00', '0', '0', '', '', ''),
 (95, 0, 35, '', '', '', '0000-00-00', '', '', '', '0', '0', '', '0000-00-00', '0', '0', '', '0000-00-00', '0', '0', '', '', ''),
 (96, 0, 35, '', '', '', '0000-00-00', '', '', '', '0', '0', '', '0000-00-00', '0', '0', '', '0000-00-00', '0', '0', '', '', ''),
-(97, 0, 35, '', '', '', '0000-00-00', '', '', '', '0', '0', '', '0000-00-00', '0', '0', '', '0000-00-00', '0', '0', '', '', '');
+(97, 0, 35, '', '', '', '0000-00-00', '', '', '', '0', '0', '', '0000-00-00', '0', '0', '', '0000-00-00', '0', '0', '', '', ''),
+(98, 0, 36, '', '', '', '0000-00-00', '', '', '', '0', '0', '', '0000-00-00', '0', '0', '', '0000-00-00', '0', '0', '', '', ''),
+(99, 2019, 36, '', '', '', '0000-00-00', '', '', '', '', '', '', '0000-00-00', '', '', '', '0000-00-00', '', '', 'Yes', '', '');
 
 -- --------------------------------------------------------
 
@@ -926,7 +939,10 @@ INSERT INTO `part_b_cat_1` (`id`, `formId`, `avg_c`, `total_c`, `odpstest1`, `oe
 (17, 17, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', 'Paper Checking', '50', 'Unit Test Paper', '60', 'users/newuser@gmail.com/1_1.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'Paper Checker', '80', 'users/newuser@gmail.com/453266.jpg', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
 (18, 18, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
 (19, 19, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', 'ertyytjgyjtu', 'NAN', 'ete46y6rtrry', 'NAN', 'ewrtyuio', 'NAN', 'ghjkrwrtghyjyrtfhh', 'NAN', 'ertyui', 'NAN', 'xcvcbmnb', 'NAN', 'fghgh', 'NAN', 0),
-(20, 20, 85, 220, 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', '-', '', 'NAN', 'Yes', '', 'NAN', '-', '', 'Yes', '', 'NAN', 'Senior Supervisor', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'No', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'Yes', '', 'NAN', '-', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'In Data Structure course- Assigned topics to the group of students not in a curriculum. Asked them to prepare the presentation and write code. Present it in a class and record it with help of mobile', 'NAN', 'Flipped Classroom is used for Data Structure course. Short videos prepared using Screen Cast-o-matic software and made it available on YouTube for students.   ', 'NAN', 'NIL', 'NAN', 'DCC - Report writing as part of IA', 'NAN', 'Online Quiz conducted\r\nPeer Evaluation\r\nImplementation of content beyond syllabus  \r\n', 'NAN', 'Nil', 'NAN', 'Design a New Course syllabus for L Y B Tech â€“ Distributed and Cloud Computing', 'NAN', 97);
+(20, 20, 85, 220, 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', '-', '', 'NAN', 'Yes', '', 'NAN', '-', '', 'Yes', '', 'NAN', 'Senior Supervisor', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'No', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'Yes', '', 'NAN', '-', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'Yes', '', 'NAN', 'In Data Structure course- Assigned topics to the group of students not in a curriculum. Asked them to prepare the presentation and write code. Present it in a class and record it with help of mobile', 'NAN', 'Flipped Classroom is used for Data Structure course. Short videos prepared using Screen Cast-o-matic software and made it available on YouTube for students.   ', 'NAN', 'NIL', 'NAN', 'DCC - Report writing as part of IA', 'NAN', 'Online Quiz conducted\r\nPeer Evaluation\r\nImplementation of content beyond syllabus  \r\n', 'NAN', 'Nil', 'NAN', 'Design a New Course syllabus for L Y B Tech â€“ Distributed and Cloud Computing', 'NAN', 97),
+(21, 21, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
+(22, 22, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0),
+(23, 23, 0, 0, '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', '', 'NAN', 0);
 
 -- --------------------------------------------------------
 
@@ -945,6 +961,7 @@ CREATE TABLE `part_b_cat_1_cte` (
   `ctehrsengaged` float NOT NULL DEFAULT '0',
   `ctemaxhrs` float NOT NULL DEFAULT '0',
   `ctec` float NOT NULL DEFAULT '0',
+  `ctefbk` varchar(200) NOT NULL,
   `ctefile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -952,26 +969,28 @@ CREATE TABLE `part_b_cat_1_cte` (
 -- Dumping data for table `part_b_cat_1_cte`
 --
 
-INSERT INTO `part_b_cat_1_cte` (`id`, `formId`, `ctecourse`, `ctetyprlpt`, `cteugpg`, `cteclasssemester`, `ctehrsweek`, `ctehrsengaged`, `ctemaxhrs`, `ctec`, `ctefile`) VALUES
-(127, 1, 'hey yo', '', '', '', 0, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
-(128, 1, 'yy', '', '', 'asd', 0, 0, 0, 0, 'users/manish.potey@somaiya.edu/ant.jpg'),
-(129, 1, 'er', '', '', '', 0, 0, 0, 0, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
-(130, 1, 'ttt', '', '', '', 0, 0, 0, 0, 'users/manish.potey@somaiya.edu/inspirational-smll-business-quotes5.jpg'),
-(132, 7, 'CRS', 'L', 'UG', '6', 5, 5, 1, 500, 'NAN'),
-(133, 10, '', '', '', '', 0, 0, 0, 0, 'NAN'),
-(153, 13, '', '', '', '', 0, 5, 100, 5, 'NAN'),
-(154, 13, '', '', '', '', 0, 2, 20, 10, 'NAN'),
-(157, 11, '', '', '', '', 0, 2, 20, 10, 'NAN'),
-(158, 11, '', '', '', '', 0, 4, 5, 80, 'NAN'),
-(161, 14, '123', '', '', '', 0, 5, 45, 11.11, 'NAN'),
-(162, 14, '434', '', '', '', 0, 33, 44, 75, 'NAN'),
-(186, 17, 'AI', 'L', 'UG', 'VII', 5, 15, 75, 20, 'users/newuser@gmail.com/2_2.jpg'),
-(187, 17, 'Machine ', 'L', 'UG', 'VIII', 2, 15, 30, 50, 'users/newuser@gmail.com/181096.jpg'),
-(264, 19, 'hhrr', '', '', '', 0, 0, 0, 0, 'NAN'),
-(265, 19, 'gghh23', '', '', '', 0, 0, 0, 0, 'NAN'),
-(266, 19, 'yy', '', '', '', 5, 60, 75, 80, 'users/faculty00@gmail.com/2_3.jpg'),
-(279, 20, 'Distributed and Cloud Computing', 'L', 'UG', 'VII', 3, 41, 45, 91.1111, 'NAN'),
-(280, 20, 'Distributed and Cloud Computing', 'P', 'UG', 'VII', 6, 74, 90, 82.2222, 'NAN');
+INSERT INTO `part_b_cat_1_cte` (`id`, `formId`, `ctecourse`, `ctetyprlpt`, `cteugpg`, `cteclasssemester`, `ctehrsweek`, `ctehrsengaged`, `ctemaxhrs`, `ctec`, `ctefbk`, `ctefile`) VALUES
+(127, 1, 'hey yo', '', '', '', 0, 0, 0, 0, '', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
+(128, 1, 'yy', '', '', 'asd', 0, 0, 0, 0, '', 'users/manish.potey@somaiya.edu/ant.jpg'),
+(129, 1, 'er', '', '', '', 0, 0, 0, 0, '', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
+(130, 1, 'ttt', '', '', '', 0, 0, 0, 0, '', 'users/manish.potey@somaiya.edu/inspirational-smll-business-quotes5.jpg'),
+(132, 7, 'CRS', 'L', 'UG', '6', 5, 5, 1, 500, '', 'NAN'),
+(133, 10, '', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(153, 13, '', '', '', '', 0, 5, 100, 5, '', 'NAN'),
+(154, 13, '', '', '', '', 0, 2, 20, 10, '', 'NAN'),
+(157, 11, '', '', '', '', 0, 2, 20, 10, '', 'NAN'),
+(158, 11, '', '', '', '', 0, 4, 5, 80, '', 'NAN'),
+(161, 14, '123', '', '', '', 0, 5, 45, 11.11, '', 'NAN'),
+(162, 14, '434', '', '', '', 0, 33, 44, 75, '', 'NAN'),
+(186, 17, 'AI', 'L', 'UG', 'VII', 5, 15, 75, 20, '', 'users/newuser@gmail.com/2_2.jpg'),
+(187, 17, 'Machine ', 'L', 'UG', 'VIII', 2, 15, 30, 50, '', 'users/newuser@gmail.com/181096.jpg'),
+(264, 19, 'hhrr', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(265, 19, 'gghh23', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(266, 19, 'yy', '', '', '', 5, 60, 75, 80, '', 'users/faculty00@gmail.com/2_3.jpg'),
+(279, 20, 'Distributed and Cloud Computing', 'L', 'UG', 'VII', 3, 41, 45, 91.1111, '', 'NAN'),
+(280, 20, 'Distributed and Cloud Computing', 'P', 'UG', 'VII', 6, 74, 90, 82.2222, '', 'NAN'),
+(287, 21, '', '', '', '', 2, 15, 30, 50, '80', 'NAN'),
+(288, 21, 'abc', '', '', '', 1, 7.5, 15, 46.6667, '45', 'users/faculty55@gmail.com/Screenshot_1 (2).png');
 
 -- --------------------------------------------------------
 
@@ -990,6 +1009,7 @@ CREATE TABLE `part_b_cat_1_cto` (
   `ctohrsengaged` float NOT NULL DEFAULT '0',
   `ctomaxhrs` float NOT NULL DEFAULT '0',
   `ctoc` float NOT NULL DEFAULT '0',
+  `ctofbk` varchar(200) NOT NULL,
   `ctofile` varchar(200) NOT NULL DEFAULT 'NAN'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -997,30 +1017,32 @@ CREATE TABLE `part_b_cat_1_cto` (
 -- Dumping data for table `part_b_cat_1_cto`
 --
 
-INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctougpg`, `ctoclasssemester`, `ctohrsweek`, `ctohrsengaged`, `ctomaxhrs`, `ctoc`, `ctofile`) VALUES
-(3, 2, 'asd', 'sd', 'wd', 'wd', 12, 3, 2, 3, ''),
-(4, 2, 'asd', 'a', 'dw', 'w', 12, 21, 1, 2, ''),
-(25, 3, 'iuhf', 'iuh', 'iuh', 'iuh', 1, 3, 23, 43, ''),
-(26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1, ''),
-(29, 4, 'qw', 'eqw', 'w', 'qwe', 1, 12, -1, 2, ''),
-(102, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87, 'NAN'),
-(103, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76, 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
-(104, 1, 'cto', '', '', '', 0, 0, 0, 0, 'NAN'),
-(106, 7, 'CRS', 'L', 'UG', '6', 4, 4, 2, 200, 'users/faculty1@gmail.com/1_1.jpg'),
-(107, 7, 'CRS2', 'rt', 'PG', '4', 5, 1, 1, 90, 'NAN'),
-(108, 10, '', '', '', '', 0, 0, 0, 0, 'NAN'),
-(128, 13, '', '', '', '', 0, 0, 0, 0, 'NAN'),
-(131, 11, '', '', '', '', 0, 1, 2, 0, 'NAN'),
-(132, 11, '', '', '', '', 0, 4, 6, 0, 'NAN'),
-(134, 14, '2233', '', '', '', 0, 0, 0, 0, 'NAN'),
-(173, 17, 'IKJ', 'L', 'UG', 'II', 5, 5, 10, 50, 'users/newuser@gmail.com/1_1.jpg'),
-(174, 17, 'JK', 'P', 'PG', 'III', 5, 10, 100, 50, 'users/newuser@gmail.com/2_3.jpg'),
-(175, 17, 'Computer', 'T', 'PG', 'IV', 2, 15, 30, 50, 'users/newuser@gmail.com/1_2.jpg'),
-(176, 18, 'abc', '', '', '', 0, 0, 0, 0, 'users/faculty66@gmail.com/1_1.jpg'),
-(236, 19, 'asdas', '', '', '', 0, 0, 0, 0, 'NAN'),
-(237, 19, 'gggg', '', '', '', 0, 0, 0, 0, 'NAN'),
-(252, 20, 'Data Structure', 'L', 'UG', 'III', 3, 44, 45, 97.7778, 'NAN'),
-(253, 20, 'Cloud Computing and Virtualization', 'L', 'PG', 'I', 3, 22, 45, 48.8889, 'NAN');
+INSERT INTO `part_b_cat_1_cto` (`id`, `formId`, `ctocourse`, `ctotyprlpt`, `ctougpg`, `ctoclasssemester`, `ctohrsweek`, `ctohrsengaged`, `ctomaxhrs`, `ctoc`, `ctofbk`, `ctofile`) VALUES
+(3, 2, 'asd', 'sd', 'wd', 'wd', 12, 3, 2, 3, '', ''),
+(4, 2, 'asd', 'a', 'dw', 'w', 12, 21, 1, 2, '', ''),
+(25, 3, 'iuhf', 'iuh', 'iuh', 'iuh', 1, 3, 23, 43, '', ''),
+(26, 3, 'sdvsd', 'dw', 'weew', 'wewe', 3, 2, 42, 1, '', ''),
+(29, 4, 'qw', 'eqw', 'w', 'qwe', 1, 12, -1, 2, '', ''),
+(102, 1, 'asdasd', 'das', 'dasd', 'dasdeqw', 87887, 7, 1, 87, '', 'NAN'),
+(103, 1, 'sd', 'ub', 'uhb', 'uhb', 8, 7, 76, 76, '', 'users/manish.potey@somaiya.edu/4f12ab4ef9d441cc6a608f4953f0685b--depressed-anime-quotes-depressing-anime-qoutes.jpg'),
+(104, 1, 'cto', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(106, 7, 'CRS', 'L', 'UG', '6', 4, 4, 2, 200, '', 'users/faculty1@gmail.com/1_1.jpg'),
+(107, 7, 'CRS2', 'rt', 'PG', '4', 5, 1, 1, 90, '', 'NAN'),
+(108, 10, '', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(128, 13, '', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(131, 11, '', '', '', '', 0, 1, 2, 0, '', 'NAN'),
+(132, 11, '', '', '', '', 0, 4, 6, 0, '', 'NAN'),
+(134, 14, '2233', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(173, 17, 'IKJ', 'L', 'UG', 'II', 5, 5, 10, 50, '', 'users/newuser@gmail.com/1_1.jpg'),
+(174, 17, 'JK', 'P', 'PG', 'III', 5, 10, 100, 50, '', 'users/newuser@gmail.com/2_3.jpg'),
+(175, 17, 'Computer', 'T', 'PG', 'IV', 2, 15, 30, 50, '', 'users/newuser@gmail.com/1_2.jpg'),
+(176, 18, 'abc', '', '', '', 0, 0, 0, 0, '', 'users/faculty66@gmail.com/1_1.jpg'),
+(236, 19, 'asdas', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(237, 19, 'gggg', '', '', '', 0, 0, 0, 0, '', 'NAN'),
+(252, 20, 'Data Structure', 'L', 'UG', 'III', 3, 44, 45, 97.7778, '', 'NAN'),
+(253, 20, 'Cloud Computing and Virtualization', 'L', 'PG', 'I', 3, 22, 45, 48.8889, '', 'NAN'),
+(262, 21, 'abc', '', '', '', 0, 0, 0, 0, '71.6', 'NAN'),
+(263, 21, 'bbcd', '', '', '', 0, 0, 0, 0, '21.4', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1052,7 +1074,8 @@ INSERT INTO `part_b_cat_1_dar` (`id`, `formId`, `dara`, `darb`, `darfile`) VALUE
 (140, 17, 'PPT 2', 'chapter 7', 'users/newuser@gmail.com/2_1.jpg'),
 (172, 19, '', '', 'NAN'),
 (185, 20, 'Data Structures', 'Prepared Video Lectures and uploaded on YouTube for flipped learning ', 'NAN'),
-(186, 20, 'Cryptography and System Security Laboratory', 'Prepared Videos for practical and uploaded on YouTube for flipped learning', 'NAN');
+(186, 20, 'Cryptography and System Security Laboratory', 'Prepared Videos for practical and uploaded on YouTube for flipped learning', 'NAN'),
+(192, 21, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1092,7 +1115,10 @@ INSERT INTO `part_b_cat_2` (`id`, `formId`) VALUES
 (20, 17),
 (21, 18),
 (22, 19),
-(23, 20);
+(23, 20),
+(24, 21),
+(25, 22),
+(26, 23);
 
 -- --------------------------------------------------------
 
@@ -1129,7 +1155,8 @@ INSERT INTO `part_b_cat_2_act` (`id`, `formId`, `ea`, `eb`, `efile`) VALUES
 (210, 19, '', '', 'NAN'),
 (227, 20, 'Being CSI Students Branch Counselor (SBC) advised and monitored activities conducted by CSI.', 'SBC- CSI', 'NAN'),
 (228, 20, 'Pre Tech-Next (IIT Bombay) intercollegiate activities conducted by CSI- KJSCE chapter.', 'SBC- CSI', 'NAN'),
-(229, 20, 'Orientation to third year students for Projects in the field of networking.', 'Speaker', 'NAN');
+(229, 20, 'Orientation to third year students for Projects in the field of networking.', 'Speaker', 'NAN'),
+(235, 21, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1163,7 +1190,8 @@ INSERT INTO `part_b_cat_2_c` (`id`, `formId`, `ca`, `cb`, `cfile`) VALUES
 (184, 19, '', '', 'NAN'),
 (201, 20, 'M Tech Admission Committee ', 'In-charge', 'NAN'),
 (202, 20, 'Purchase Committee ', 'Member', 'NAN'),
-(203, 20, 'Internal Committee', 'Member', 'NAN');
+(203, 20, 'Internal Committee', 'Member', 'NAN'),
+(209, 21, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1198,7 +1226,8 @@ INSERT INTO `part_b_cat_2_exc` (`id`, `formId`, `eca`, `ecb`, `ecfile`) VALUES
 (194, 17, 'Well construction', 'well', 'users/newuser@gmail.com/2_1.jpg'),
 (226, 19, '', '', 'NAN'),
 (239, 20, 'Coordinated activity for developing website for NGO.', 'Coordinator', 'NAN'),
-(240, 20, 'PUSH â€“ KJSCE', 'Donor', 'NAN');
+(240, 20, 'PUSH â€“ KJSCE', 'Donor', 'NAN'),
+(246, 21, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1232,7 +1261,8 @@ INSERT INTO `part_b_cat_2_ha` (`id`, `formId`, `ha`, `hb`, `hfile`) VALUES
 (185, 17, 'Admin', 'Administrate', 'users/newuser@gmail.com/a.jpg'),
 (186, 17, 'Dean', 'dean', 'users/newuser@gmail.com/5184x2920-2848241-landscape-snowy-peak-mount-cook-national-park-new-zealand-nature___landscape-nature-wallpapers.jpg'),
 (218, 19, '', '', 'NAN'),
-(225, 20, 'NA', 'NA', 'NAN');
+(225, 20, 'NA', 'NA', 'NAN'),
+(231, 21, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1300,7 +1330,10 @@ INSERT INTO `part_b_cat_3` (`id`, `formId`, `phdne`, `phdts`, `phdda`, `phdfile`
 (36, 17, 3, 2, 3, 'users/newuser@gmail.com/1_1.jpg', 5, 7, 8, 'users/newuser@gmail.com/1_1.jpg', 3, 2, 2, 'users/newuser@gmail.com/1_1.jpg'),
 (37, 18, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN'),
 (38, 19, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN'),
-(39, 20, 0, 0, 0, 'NAN', 1, 0, 1, 'NAN', 2, 0, 2, 'NAN');
+(39, 20, 0, 0, 0, 'NAN', 1, 0, 1, 'NAN', 2, 0, 2, 'NAN'),
+(40, 21, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN'),
+(41, 22, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN'),
+(42, 23, 0, 0, 0, 'NAN', 0, 0, 0, 'NAN', 0, 0, 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1337,7 +1370,8 @@ INSERT INTO `part_b_cat_3_bk` (`id`, `formId`, `pptitlebk`, `ppnprbk`, `ppisbnbk
 (129, 19, 'rhfhjk45', '', '', '0000-00-00', '', '', '', 'NAN'),
 (130, 19, 'vbbbbb55', '', '', '0000-00-00', '', 'No', '', 'NAN'),
 (131, 19, 'yjerfewf', '', '', '0000-00-00', '', 'Yes', '', 'NAN'),
-(138, 20, '', '', '', '0000-00-00', '', '', '', 'NAN');
+(138, 20, '', '', '', '0000-00-00', '', '', '', 'NAN'),
+(144, 21, '', '', '', '0000-00-00', '', '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1372,7 +1406,8 @@ INSERT INTO `part_b_cat_3_cres` (`id`, `formId`, `tca`, `acb`, `dcc`, `gcd`, `re
 (146, 19, 'rr', 'tt', '0000-00-00', 0, 'NAN'),
 (147, 19, 'yy', 'uu', '0000-00-00', 0, 'NAN'),
 (148, 19, 'ff', 'ff', '0000-00-00', 0, 'NAN'),
-(155, 20, '', '', '0000-00-00', 0, 'NAN');
+(155, 20, '', '', '0000-00-00', 0, 'NAN'),
+(161, 21, '', '', '0000-00-00', 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1405,7 +1440,8 @@ INSERT INTO `part_b_cat_3_ores` (`id`, `formId`, `tta`, `aab`, `ddc`, `ggd`, `re
 (73, 17, '', '', '0000-00-00', 0, 'NAN'),
 (121, 19, 'qq', 'ww', '0000-00-00', 0, 'NAN'),
 (122, 19, 'ee', 'rr3', '0000-00-00', 0, 'NAN'),
-(130, 20, '', '', '0000-00-00', 0, 'NAN');
+(130, 20, '', '', '0000-00-00', 0, 'NAN'),
+(137, 21, '									', '									', '0000-00-00', 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1437,7 +1473,8 @@ INSERT INTO `part_b_cat_3_pip` (`id`, `formId`, `dpi`, `drf`, `dfile`) VALUES
 (132, 19, 'fgvashkjvd871', '0000-00-00', 'NAN'),
 (133, 19, 'asdasd2', '0000-00-00', 'NAN'),
 (134, 19, 'geregreg3', '0000-00-00', 'NAN'),
-(141, 20, '', '0000-00-00', 'NAN');
+(141, 20, '', '0000-00-00', 'NAN'),
+(147, 21, '', '0000-00-00', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1473,7 +1510,8 @@ INSERT INTO `part_b_cat_3_pp` (`id`, `formId`, `pptitle`, `ppnpr`, `ppisbn`, `pp
 (103, 17, 'Title 2', 'IEEE', '12392', '90', 'No', '0', 'users/newuser@gmail.com/1_2.jpg'),
 (140, 19, 'dfsgsdhjhk', '', '', '', '', '', 'NAN'),
 (141, 19, 'aasvgbdhjskfbn6567', '', '', '', 'No', '', 'NAN'),
-(148, 20, '', '', '', '', '', '', 'NAN');
+(148, 20, '', '', '', '', '', '', 'NAN'),
+(154, 21, '', '', '', '', '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1510,7 +1548,8 @@ INSERT INTO `part_b_cat_3_ppic` (`id`, `formId`, `pptitleic`, `ppnpric`, `ppisbn
 (131, 19, 'yjtyhegr', '', '', '', '', '', 'NAN'),
 (132, 19, 'iluioipuio', '', '', '', 'No', '', 'NAN'),
 (143, 20, 'Comparative study of middleware solutions for control and monitoring systems.  \r\npp 1-10', 'IEEE Conference Electrical, Computer and Communication Technologies (ICECCT), 2017 Second International Conference on. IEEE, 2017.', 'INSPEC Accession Number: 17393430 ,   DOI: 10.1109/ICECCT.2017.8117808', '', '', '1', 'NAN'),
-(144, 20, '', '', '', '', 'No', '', 'NAN');
+(144, 20, '', '', '', '', 'No', '', 'NAN'),
+(150, 21, '', '', '', '', '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1547,7 +1586,8 @@ INSERT INTO `part_b_cat_3_ppinc` (`id`, `formId`, `pptitleinc`, `ppnprinc`, `ppi
 (159, 19, 'iuiuppipiopo345678', '', '', '', '', '', 'NAN'),
 (160, 19, '2345678dfsas', '', '', '', 'No', '', 'NAN'),
 (161, 19, 'i00978u756g', '', '', '', 'No', '', 'NAN'),
-(168, 20, 'From from a Data to Big Data towards Data Science', 'International Conference On Computing, Communication, Control And Automation, Pune', 'Yet to Published on IEEE Xplore', '', '', '3', 'NAN');
+(168, 20, 'From from a Data to Big Data towards Data Science', 'International Conference On Computing, Communication, Control And Automation, Pune', 'Yet to Published on IEEE Xplore', '', '', '3', 'NAN'),
+(174, 21, '', '', '', '', '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1582,7 +1622,8 @@ INSERT INTO `part_b_cat_3_res` (`id`, `formId`, `ta`, `ab`, `dc`, `gd`, `researc
 (169, 19, 'ff', 'gg', '0000-00-00', 0, 'NAN'),
 (170, 19, 'hh22', '33jj', '0000-00-00', 0, 'NAN'),
 (171, 19, '55', '66mmmnm', '0000-00-00', 0, 'NAN'),
-(179, 20, '', '', '0000-00-00', 0, 'NAN');
+(179, 20, '', '', '0000-00-00', 0, 'NAN'),
+(186, 21, '									', '									', '0000-00-00', 0, 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1724,7 +1765,16 @@ INSERT INTO `part_b_cat_4` (`id`, `formId`) VALUES
 (122, 20),
 (123, 20),
 (124, 20),
-(125, 20);
+(125, 20),
+(126, 21),
+(127, 21),
+(128, 21),
+(129, 21),
+(130, 22),
+(131, 23),
+(132, 21),
+(133, 21),
+(134, 21);
 
 -- --------------------------------------------------------
 
@@ -1758,7 +1808,8 @@ INSERT INTO `part_b_cat_4_creds` (`id`, `formId`, `cativ2_dp`, `cativ2`, `cativ3
 (128, 19, 'erger54', '4443', 'users/faculty00@gmail.com/1_1.jpg'),
 (129, 19, 'hthht', 'gbgb', 'users/faculty00@gmail.com/7c54565b19691d55cca97714b77aa2dae44ee264-shutterstock_83672455.jpg'),
 (139, 20, 'Approved Ph D guide for Computer Engineering at university of Mumbai', '', 'NAN'),
-(140, 20, 'Deputy Centre Superintendent for JEE Main Exam -2018 - April 6, 2018', '', 'NAN');
+(140, 20, 'Deputy Centre Superintendent for JEE Main Exam -2018 - April 6, 2018', '', 'NAN'),
+(146, 21, '', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1793,7 +1844,8 @@ INSERT INTO `part_b_cat_4_inv` (`id`, `formId`, `cativ1_dp`, `cativ1_datee`, `ca
 (118, 19, 'gfg56x', '0000-00-00', 'h65h', 'NAN'),
 (131, 20, 'Reviewer at International Conference on Computing, Communication, Control and Automation (ICCUBEA 2018â€“ IEEE)', '2017-08-12', 'Pimpri Chinchwad College of Engineering, Pune', 'users/vishal@gmail.com/10. IEEE conference paper Certificate PCCOE conference.pdf'),
 (132, 20, 'Reviewer of International Journal of Cloud Computing (IJCC) from Inderscience Publishers', '2017-01-28', 'International Journal of Cloud Computing (IJCC) from Inderscience Publishers', 'NAN'),
-(133, 20, 'Reviewer of IEEE Access Journal', '2017-01-30', 'IEEE Access', 'NAN');
+(133, 20, 'Reviewer of IEEE Access Journal', '2017-01-30', 'IEEE Access', 'NAN'),
+(139, 21, '', '0000-00-00', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1827,7 +1879,8 @@ INSERT INTO `part_b_cat_4_sem` (`id`, `formId`, `cativ_dp`, `cativ_datee`, `cati
 (123, 19, 'hheer', '2019-07-12', 'e21e', 'NAN'),
 (124, 19, 'trter', '2019-07-04', 'bgrbfv', 'NAN'),
 (134, 20, 'Conducted a hands on workshop on â€œUse of ICT in Educationâ€ at , IBSSâ€™s Dr. Rajendra Gode Institute of Technology & Research, Amravati', '2017-09-27', 'IBSSâ€™s Dr. Rajendra Gode Institute of Technology & Research, Amravati', 'NAN'),
-(135, 20, 'Conducted Hands on workshop on Google Classroom for faculty members of Mechanical Engineering Department, KJSCE, Mumbai', '2017-09-13', 'Mechanical Engineering Department, KJSCE, Mumbai', 'NAN');
+(135, 20, 'Conducted Hands on workshop on Google Classroom for faculty members of Mechanical Engineering Department, KJSCE, Mumbai', '2017-09-13', 'Mechanical Engineering Department, KJSCE, Mumbai', 'NAN'),
+(141, 21, '', '0000-00-00', '', 'NAN');
 
 -- --------------------------------------------------------
 
@@ -1864,7 +1917,10 @@ INSERT INTO `part_b_table` (`id`, `year`, `facultyId`) VALUES
 (17, 2020, 31),
 (18, 2019, 32),
 (19, 2019, 33),
-(20, 2019, 35);
+(20, 2019, 35),
+(21, 2019, 36),
+(22, 0, 36),
+(23, 0, 36);
 
 -- --------------------------------------------------------
 
@@ -2301,7 +2357,7 @@ ALTER TABLE `cas_approval_table`
 -- AUTO_INCREMENT for table `faculty_table`
 --
 ALTER TABLE `faculty_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `fields_table`
 --
@@ -2321,152 +2377,152 @@ ALTER TABLE `otp_table`
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `partb_cat4_pi`
 --
 ALTER TABLE `partb_cat4_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
 ALTER TABLE `part_a_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=316;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=322;
 --
 -- AUTO_INCREMENT for table `part_a_gpi`
 --
 ALTER TABLE `part_a_gpi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `part_a_table`
 --
 ALTER TABLE `part_a_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1`
 --
 ALTER TABLE `part_b_cat_1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cte`
 --
 ALTER TABLE `part_b_cat_1_cte`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=281;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_cto`
 --
 ALTER TABLE `part_b_cat_1_cto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=254;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
 --
 -- AUTO_INCREMENT for table `part_b_cat_1_dar`
 --
 ALTER TABLE `part_b_cat_1_dar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=187;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=193;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2`
 --
 ALTER TABLE `part_b_cat_2`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_act`
 --
 ALTER TABLE `part_b_cat_2_act`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_c`
 --
 ALTER TABLE `part_b_cat_2_c`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=210;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_exc`
 --
 ALTER TABLE `part_b_cat_2_exc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 --
 -- AUTO_INCREMENT for table `part_b_cat_2_ha`
 --
 ALTER TABLE `part_b_cat_2_ha`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3`
 --
 ALTER TABLE `part_b_cat_3`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_bk`
 --
 ALTER TABLE `part_b_cat_3_bk`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_cres`
 --
 ALTER TABLE `part_b_cat_3_cres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ores`
 --
 ALTER TABLE `part_b_cat_3_ores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pip`
 --
 ALTER TABLE `part_b_cat_3_pip`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_pp`
 --
 ALTER TABLE `part_b_cat_3_pp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppic`
 --
 ALTER TABLE `part_b_cat_3_ppic`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_ppinc`
 --
 ALTER TABLE `part_b_cat_3_ppinc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=175;
 --
 -- AUTO_INCREMENT for table `part_b_cat_3_res`
 --
 ALTER TABLE `part_b_cat_3_res`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=180;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=187;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4`
 --
 ALTER TABLE `part_b_cat_4`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_creds`
 --
 ALTER TABLE `part_b_cat_4_creds`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_inv`
 --
 ALTER TABLE `part_b_cat_4_inv`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 --
 -- AUTO_INCREMENT for table `part_b_cat_4_sem`
 --
 ALTER TABLE `part_b_cat_4_sem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 --
 -- AUTO_INCREMENT for table `part_b_table`
 --
 ALTER TABLE `part_b_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `recommend_for_cas`
 --
