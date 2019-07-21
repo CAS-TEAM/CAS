@@ -943,14 +943,15 @@ if($alreadybegun==1)
 	for($p=0;$p<sizeof($pptitle);$p++)
 	{
 		$tmpFilePath = $_FILES['ppfile']['tmp_name'][$p];
-		
+		$p1=$p+1;
+		echo $customRadioInline1[$p1].'<-p='.$p1;
 		if ($tmpFilePath != "")
 		{
 		    //Setup our new file path
 		    $dest = "users/".$email. "/".$_FILES['ppfile']['name'][$p];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-		    	$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p]', '$ppnca[$p]' ,'$dest')";
+		    	$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p1]', '$ppnca[$p]' ,'$dest')";
 				$result8=mysqli_query($conn,$sql8);
 			}
 		}
@@ -958,12 +959,12 @@ if($alreadybegun==1)
 		{
 			if($ppfilelocation[$p]!="")
 			{
-				$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p]', '$ppnca[$p]' ,'$ppfilelocation[$p]')";
+				$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p1]', '$ppnca[$p]' ,'$ppfilelocation[$p]')";
 				$result8=mysqli_query($conn,$sql8);
 			}
 			else
 			{
-				$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p]', '$ppnca[$p]' ,'NAN')";
+				$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p1]', '$ppnca[$p]' ,'NAN')";
 				$result8=mysqli_query($conn,$sql8);
 			}			
 		}
@@ -975,6 +976,7 @@ if($alreadybegun==1)
 	{
 		
 		$tmpFilePath = $_FILES['pp1file']['tmp_name'][$q];
+		$q1=$q+1;
 		
 		if ($tmpFilePath != "")
 		{
@@ -982,7 +984,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['pp1file']['name'][$q];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-		    	$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q]', '$ppncaic[$q]', '$dest')";
+		    	$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q1]', '$ppncaic[$q]', '$dest')";
 				$result9=mysqli_query($conn,$sql9);
 			}
 		}
@@ -990,12 +992,12 @@ if($alreadybegun==1)
 		{
 			if($pp1filelocation[$q]!="")
 			{
-				$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q]', '$ppncaic[$q]', '$pp1filelocation[$q]')";
+				$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q1]', '$ppncaic[$q]', '$pp1filelocation[$q]')";
 				$result9=mysqli_query($conn,$sql9);
 			}
 			else
 			{
-				$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q]', '$ppncaic[$q]', 'NAN')";
+				$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q1]', '$ppncaic[$q]', 'NAN')";
 				$result9=mysqli_query($conn,$sql9);
 			}			
 		}
@@ -1007,6 +1009,7 @@ if($alreadybegun==1)
 	for($r=0;$r<sizeof($pptitleinc);$r++)
 	{						
 		$tmpFilePath = $_FILES['pp2file']['tmp_name'][$r];
+		$r1=$r+1;
 		
 		if ($tmpFilePath != "")
 		{
@@ -1014,7 +1017,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['pp2file']['name'][$r];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-		    	$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r]', '$ppncainc[$r]', '$dest')";
+		    	$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r1]', '$ppncainc[$r]', '$dest')";
 				$result8=mysqli_query($conn,$sql10);
 			}
 		}
@@ -1022,12 +1025,12 @@ if($alreadybegun==1)
 		{
 			if($pp2filelocation[$r]!="")
 			{
-				$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r]', '$ppncainc[$r]', '$pp2filelocation[$r]')";
+				$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r1]', '$ppncainc[$r]', '$pp2filelocation[$r]')";
 				$result8=mysqli_query($conn,$sql10);
 			}
 			else
 			{
-				$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r]', '$ppncainc[$r]', 'NAN')";
+				$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r1]', '$ppncainc[$r]', 'NAN')";
 				$result8=mysqli_query($conn,$sql10);
 			}			
 		}
@@ -1038,6 +1041,7 @@ if($alreadybegun==1)
 	for($s=0;$s<sizeof($pptitlebk);$s++)
 	{		
 		$tmpFilePath = $_FILES['pp3file']['tmp_name'][$s];
+		$s1=$s+1;
 		
 		if ($tmpFilePath != "")
 		{
@@ -1045,7 +1049,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['pp3file']['name'][$s];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-		    	$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s]', '$ppncabk[$s]', '$dest')";
+		    	$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s1]', '$ppncabk[$s]', '$dest')";
 				$result11=mysqli_query($conn,$sql11);
 			}
 		}
@@ -1053,12 +1057,12 @@ if($alreadybegun==1)
 		{
 			if($pp3filelocation[$s]!="")
 			{
-				$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s]', '$ppncabk[$s]', '$pp3filelocation[$s]')";
+				$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s1]', '$ppncabk[$s]', '$pp3filelocation[$s]')";
 				$result11=mysqli_query($conn,$sql11);
 			}
 			else
 			{
-				$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s]', '$ppncabk[$s]', 'NAN')";
+				$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s1]', '$ppncabk[$s]', 'NAN')";
 				$result11=mysqli_query($conn,$sql11);
 			}			
 		}
@@ -1909,20 +1913,21 @@ else
 			// $sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p]', '$ppnca[$p]')";
 			// $result8=mysqli_query($conn,$sql8);
 			$tmpFilePath = $_FILES['ppfile']['tmp_name'][$p];
-		
+			$p1=$p+1;
+
 			if ($tmpFilePath != "")
 			{
 			    //Setup our new file path
 			    $dest = "users/".$email. "/".$_FILES['ppfile']['name'][$p];
 
 			    if(move_uploaded_file($tmpFilePath, $dest)) {
-			    	$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p]', '$ppnca[$p]' ,'$dest')";
+			    	$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p1]', '$ppnca[$p]' ,'$dest')";
 					$result8=mysqli_query($conn,$sql8);
 				}
 			}
 			else
 			{
-				$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p]', '$ppnca[$p]' ,'NAN')";
+				$sql8="INSERT INTO part_b_cat_3_pp (formId, pptitle, ppnpr, ppisbn, ppif, customRadioInline1, ppnca, ppfile) VALUES ('$formId', '$pptitle[$p]', '$ppnpr[$p]', '$ppisbn[$p]', '$ppif[$p]', '$customRadioInline1[$p1]', '$ppnca[$p]' ,'NAN')";
 				$result8=mysqli_query($conn,$sql8);
 			}	
 		}
@@ -1935,6 +1940,7 @@ else
 			// $sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q]', '$ppncaic[$q]')";
 			// $result9=mysqli_query($conn,$sql9);
 			$tmpFilePath = $_FILES['pp1file']['tmp_name'][$q];
+			$q1=$q+1;
 		
 			if ($tmpFilePath != "")
 			{
@@ -1942,13 +1948,13 @@ else
 			    $dest = "users/".$email. "/".$_FILES['pp1file']['name'][$q];
 
 			    if(move_uploaded_file($tmpFilePath, $dest)) {
-			    	$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q]', '$ppncaic[$q]', '$dest')";
+			    	$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q1]', '$ppncaic[$q]', '$dest')";
 					$result9=mysqli_query($conn,$sql9);
 				}
 			}
 			else
 			{
-				$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q]', '$ppncaic[$q]', 'NAN')";
+				$sql9="INSERT INTO part_b_cat_3_ppic (formId, pptitleic, ppnpric, ppisbnic, ppific, customRadioInline1ic, ppncaic, pp1file) VALUES ('$formId', '$pptitleic[$q]', '$ppnpric[$q]', '$ppisbnic[$q]', '$ppific[$q]', '$customRadioInline1ic[$q1]', '$ppncaic[$q]', 'NAN')";
 				$result9=mysqli_query($conn,$sql9);
 			}		
 		}
@@ -1961,6 +1967,7 @@ else
 			// $sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r]', '$ppncainc[$r]')";
 			// $result8=mysqli_query($conn,$sql10);
 			$tmpFilePath = $_FILES['pp2file']['tmp_name'][$r];
+			$r1=$r+1;
 		
 			if ($tmpFilePath != "")
 			{
@@ -1968,13 +1975,13 @@ else
 			    $dest = "users/".$email. "/".$_FILES['pp2file']['name'][$r];
 
 			    if(move_uploaded_file($tmpFilePath, $dest)) {
-			    	$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r]', '$ppncainc[$r]', '$dest')";
+			    	$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r1]', '$ppncainc[$r]', '$dest')";
 					$result8=mysqli_query($conn,$sql10);
 				}
 			}
 			else
 			{
-				$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r]', '$ppncainc[$r]', 'NAN')";
+				$sql10="INSERT INTO part_b_cat_3_ppinc (formId, pptitleinc, ppnprinc, ppisbnpinc, ppifinc, customRadioInline1inc, ppncainc, pp2file) VALUES ('$formId', '$pptitleinc[$r]', '$ppnprinc[$r]', '$ppisbnpinc[$r]', '$ppifinc[$r]', '$customRadioInline1inc[$r1]', '$ppncainc[$r]', 'NAN')";
 				$result8=mysqli_query($conn,$sql10);
 			}		
 		}
@@ -1987,6 +1994,7 @@ else
 			// $sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s]', '$ppncabk[$s]')";
 			// $result11=mysqli_query($conn,$sql11);
 			$tmpFilePath = $_FILES['pp3file']['tmp_name'][$s];
+			$s1=$s+1;
 		
 			if ($tmpFilePath != "")
 			{
@@ -1994,13 +2002,13 @@ else
 			    $dest = "users/".$email. "/".$_FILES['pp3file']['name'][$s];
 
 			    if(move_uploaded_file($tmpFilePath, $dest)) {
-			    	$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s]', '$ppncabk[$s]', '$dest')";
+			    	$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s1]', '$ppncabk[$s]', '$dest')";
 					$result11=mysqli_query($conn,$sql11);
 				}
 			}
 			else
 			{
-				$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s]', '$ppncabk[$s]', 'NAN')";
+				$sql11="INSERT INTO part_b_cat_3_bk (formId, pptitlebk, ppnprbk, ppisbnbk, ppdatebk, ppifbk, customRadioInline1bk, ppncabk, pp3file) VALUES ('$formId', '$pptitlebk[$s]', '$ppnprbk[$s]', '$ppisbnbk[$s]', '$ppdatebk[$s]', '$ppifbk[$s]', '$customRadioInline1bk[$s1]', '$ppncabk[$s]', 'NAN')";
 				$result11=mysqli_query($conn,$sql11);
 			}	
 		}

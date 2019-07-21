@@ -78,6 +78,7 @@ else
 	$cbasiccas=0;
 }
 $customRadioInline1=mysqli_real_escape_string($conn,$_POST['customRadioInline1']);
+echo $customRadioInline1;
 $nameofdegree=mysqli_real_escape_string($conn,$_POST['nameofdegree']);
 $institute=mysqli_real_escape_string($conn,$_POST['institute']);
 

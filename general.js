@@ -340,8 +340,25 @@ function getPartAData(){
 					    }
 					    else if(k!="parta_dynamic_form")
 					    {
-					    	document.getElementById(k).value=v;
-					    	$("#"+k).prop("disabled", true);
+					    	// alert(k+","+v);
+					    	if(k=='customRadioInline1')
+					    	{
+					    		if(v=='Yes')
+					    		{
+					    			$("input[name='customRadioInline1'][value='Yes']").prop('checked',true);
+					    		}
+					    		else
+					    		{
+					    			$("input[name='customRadioInline1'][value='No']").prop('checked',true);
+					    		}
+					    		// document.getElementById(k).value=v;
+						    	// $("#"+k).prop("disabled", true);
+					    	}
+					    	else
+					    	{					    		
+						    	document.getElementById(k).value=v;
+						    	$("#"+k).prop("disabled", true);
+					    	}
 					    }					    
 					    else
 					    {
@@ -842,6 +859,7 @@ function getPartBData(){
 					    		var ppisbn=JSON.stringify(v[2]['ppisbn']).replace(/['"]+/g, '');
 					    		var ppif=JSON.stringify(v[3]['ppif']).replace(/['"]+/g, '');
 					    		var customRadioInline1=JSON.stringify(v[4]['customRadioInline1']).replace(/['"]+/g, '');
+					    		// alert(customRadioInline1);
 					    		var ppnca=JSON.stringify(v[5]['ppnca']).replace(/['"]+/g, '');
 					    		var ppfile=JSON.stringify(v[6]['ppfile']).replace(/['"]+/g, '');
 					    		ppr++;
