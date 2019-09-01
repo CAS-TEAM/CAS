@@ -1,0 +1,417 @@
+Delivered-To: archana.gupta@somaiya.edu
+Received: by 2002:a19:535c:0:0:0:0:0 with SMTP id h89csp2377229lfb;
+        Sun, 21 Oct 2018 23:57:07 -0700 (PDT)
+X-Received: by 2002:a19:24c6:: with SMTP id k189mr8745780lfk.77.1540191427794;
+        Sun, 21 Oct 2018 23:57:07 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1540191427; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=VeFA9sKA+zkEKjUOGWsBPSBr7dpHchecI3eF46h7taVvMgch3Xef42tAR6YEM6TaJu
+         bCSH4oKuQ2mXMICyiRtNu9YqRK67PK2vekIWbnkdBSSRiTqQncSbJJKjRb3jQKChjA1M
+         5/InrVxCOGsttTFWBkb2H2UR2F1FLzpIMo+waPtMEW+m/5y22ceQ14bGYfmmGkEcL0I5
+         +yLxE4ptg9vMtOER0WHNB+tDrfaSFST62u5dW1QE5fMkYpb7QjZQkuivn/O+odqmILb5
+         DoOJl7/OunUoK05fHADGUf2fOm1Z++4ZsVTFLWppPNHRhuIdgSDc53AddRUp/QjLIo/k
+         FF5g==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-subscribe:list-archive:list-help:list-post
+         :list-id:mailing-list:precedence:to:subject:message-id:date:from
+         :in-reply-to:references:mime-version:dkim-signature;
+        bh=I68DFhJ8v4ROaQzhwa+NjVduWd7x7+cO3QNzMn5ZlmU=;
+        b=PmWOInH2qnwofvCdU7QW361QSak5hpWKhxK8R7Oxq9r05el8jbUdvM56uyvPrW24TH
+         Ic6EomlvQnVWxjae7iImi86WFxjvwO8nuvnvOHbg5ZPpwcRs+jqYkupGeUFwuuCrDRsV
+         f5wAzxoKehYrqm7jxZNS3A3fpK0vdgv/bJH4lzPOalDDbmAJ1a2FK81jMcdZxqLzez20
+         e7QUGKfc2rubAeOCyTPFgtdLRE7T3yZbJ3UQ5LwTUEIDJzre7kIO2NLfTVmim5ZcEqeK
+         kgNi02jUGGfZSBxk0bUEvoSFfyMmiD6WqWjuYbjpTm45PfHK8GVU3C2jbtZsqbMuCIv0
+         B7lQ==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@somaiya.edu header.s=google header.b="jmfkrYq/";
+       arc=pass (i=2 spf=pass spfdomain=somaiya.edu dkim=pass dkdomain=somaiya.edu dmarc=pass fromdomain=somaiya.edu);
+       spf=pass (google.com: domain of faculty-comp+bncbdikff5kzqhbbq7jwxpakgqesxatbny@somaiya.edu designates 209.85.220.69 as permitted sender) smtp.mailfrom=faculty-comp+bncBDIKFF5KZQHBBQ7JWXPAKGQESXATBNY@somaiya.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=somaiya.edu
+Return-Path: <faculty-comp+bncBDIKFF5KZQHBBQ7JWXPAKGQESXATBNY@somaiya.edu>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id l10-v6sor14383727ljj.20.2018.10.21.23.57.07
+        for <archana.gupta@somaiya.edu>
+        (Google Transport Security);
+        Sun, 21 Oct 2018 23:57:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of faculty-comp+bncbdikff5kzqhbbq7jwxpakgqesxatbny@somaiya.edu designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@somaiya.edu header.s=google header.b="jmfkrYq/";
+       arc=pass (i=2 spf=pass spfdomain=somaiya.edu dkim=pass dkdomain=somaiya.edu dmarc=pass fromdomain=somaiya.edu);
+       spf=pass (google.com: domain of faculty-comp+bncbdikff5kzqhbbq7jwxpakgqesxatbny@somaiya.edu designates 209.85.220.69 as permitted sender) smtp.mailfrom=faculty-comp+bncBDIKFF5KZQHBBQ7JWXPAKGQESXATBNY@somaiya.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=somaiya.edu
+ARC-Seal: i=2; a=rsa-sha256; t=1540191427; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=yVU5487BBx0/y0cNjTWeFqiEifiKtLF2zXkJSLLtP7uZkc+a3TKkmhDB/RueQcaEjy
+         r8dJxThI+uMMvyza1lgbDdcdMs5dIW3SNTH4PpwZPqen6t5D7gM+XwCvbmTu/7yLP6js
+         VU1Qc4tF2Ehe5xebpN6BnbArKx/SE3rmPtba8GAOB2J+sxuLDSdzDOimWowDmiRSMb82
+         suYOcJhZhQ/VQYAOSemJSEXTazoK8j9wDF5zrPqJ047+hEBDYai80vM8SOT1HRl5MB+K
+         N6Z6cWUHmP3IN8Kaw66ZLuiw6xyUERzV+hGDlw296ZFDoMrYyFJbTEVUkG1uDb6PVLBl
+         eh0w==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-subscribe:list-archive:list-help:list-post
+         :list-id:mailing-list:precedence:to:subject:message-id:date:from
+         :in-reply-to:references:mime-version:dkim-signature;
+        bh=I68DFhJ8v4ROaQzhwa+NjVduWd7x7+cO3QNzMn5ZlmU=;
+        b=Fp1J+3aVS/uv4m7GcrMXHiJZdAJoTOd7BYoCbVWE06fGC/VU6bjKgS2ku9n73jiUPm
+         VXej1R1KRIItesZ9kQch7d6B89vF6aLckxf2g7tbVKNR9RNN9WmnkyqHWKNYy7aICIBB
+         hVag0hSwHvCxJdBqwGvlj2/DODKGMbeKTfCQ/f+sVjA87yqhEk2vNmu5SJo1Zqk2lSk1
+         4cH7FQddeqP/qqeRqIlVLvSFbci42tIVD9EvklOFQ0kL8Wp9OLKblEbRhsiegqHqEoL2
+         BTsUVxIsV5CmoHklEFRrVWl75kzNVfP4ibAXp2v7H4KEILjRiH2Pp4FO42dY/HXzMDc0
+         M23A==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@somaiya.edu header.s=google header.b=jKL6wbW6;
+       spf=pass (google.com: domain of kavitakelkar@somaiya.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=kavitakelkar@somaiya.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=somaiya.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=somaiya.edu; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:precedence
+         :mailing-list:list-id:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=I68DFhJ8v4ROaQzhwa+NjVduWd7x7+cO3QNzMn5ZlmU=;
+        b=jmfkrYq/z0QRsvGQRR3+ZJOubcJHf0RwQirZTgXZecEOO/5S1fUT3HhkPpEJWe7yK0
+         QvfZow1gKkTNsJwF6jtBH8eQmqNd5Kgz31KU2twQaxzlYUqntwZP9yVZa1YweTf73Wui
+         dgtLvgm8NH7OjComKJgtm1r7c6qrl38V7pxTQ=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:x-original-sender
+         :x-original-authentication-results:precedence:mailing-list:list-id
+         :x-spam-checked-in-group:list-post:list-help:list-archive
+         :list-subscribe:list-unsubscribe;
+        bh=I68DFhJ8v4ROaQzhwa+NjVduWd7x7+cO3QNzMn5ZlmU=;
+        b=VAI8E2VDZskUMr+6bqDhU9L+HNaTIh3dCl0r/OluFWB32I9um7Gz6IUOzMT5WoQ9lk
+         4lNgFzQdfqTaeSC5KXuAaM4aWEhU9IAa+GDC3DnDCLdt3CWnVkS0Xkygz8CGGxxT5pLP
+         MRE/waVGIk+ERNslCyz12B/8lCYzbBED029/TIkZmGNh/HSOLZ9pI/RUpQiI7peHvTcA
+         r0qSZjLzxcfhwI+aPVRwLq8WMCjSXJwZ1SGq6zK3lZifGWVuMDjyXKYxuXgoTbgPaaSy
+         RnF8y3LIjoqlsdoaYW9B6SzSu/3D8hM5K1mnMEiKd8NGuYVOj97r+jqOJd61D71aFr58
+         cnfQ==
+X-Gm-Message-State: ABuFfoinwzv9mk7NqgxoTLGq6Y10wiVWc+FjqXGoOmniS43p8WwG8vLy
+	3xu0aWTkKaE11dFVEng1qD6RlOwk
+X-Google-Smtp-Source: ACcGV62ycf5bbdZIOz77HFdPMIFWMPCsTtQuiTlWhyyWh2cOYaq6dDTorPx1rhyrX7gkPKp/M1Arxg==
+X-Received: by 2002:a2e:9c03:: with SMTP id s3-v6mr1489236lji.26.1540191427423;
+        Sun, 21 Oct 2018 23:57:07 -0700 (PDT)
+X-BeenThere: faculty-comp@somaiya.edu
+Received: by 2002:a19:c50e:: with SMTP id w14-v6ls665626lfe.35.gmail; Sun, 21
+ Oct 2018 23:57:06 -0700 (PDT)
+X-Received: by 2002:a19:290e:: with SMTP id p14-v6mr8944438lfp.85.1540191426794;
+        Sun, 21 Oct 2018 23:57:06 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1540191426; cv=none;
+        d=google.com; s=arc-20160816;
+        b=pFL8xnQGUDRlwPK4xgr7WajcqVwpS+lTlx5pHqzexDCJeJPb4IH6xfzNuc7u3sYqze
+         FJM1AoOpDIOaGvfc6joy9nnZlmge3KpetoBeI82aanGJAYl3CCnVY2OO5soL8VjKI4gh
+         7RGEvC6VinjhZzL6mbmrsTOizplVzGmL/9kdDA00jxvjF36Br64AxFG6Bq46SwlLpFgw
+         rw3JOlt5J86tpBEfne51j1AOxN5Sp0IF+LNmNTYSEHpTY9vDMZPhUoBT9oHgkvrGC05v
+         Be3C17rGQSTljdWbfnnOML79OSY1GImhwUAwpyeeDbmWnvkFJhJMgQ2bQm7eI3ktbg/i
+         ZMdg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=I68DFhJ8v4ROaQzhwa+NjVduWd7x7+cO3QNzMn5ZlmU=;
+        b=EcX3f62DHjm6oBHuEOCUEH/fV2vKNB9GOqhcIkiIhu8z5KqASL4sCyhLvKb/on/ddY
+         iG5jFytbX44HQtw8/K+FJjzvDCUdJIKPNadLXydzI79Az3iz2Hqik0JaUse6djIHVhAp
+         b/CtEFzoqlxUKPnOn3ELT4FxblbyQ4SMz2dQnszWsQW8P2Ql0U0nksUqEbDGd5JiPM3v
+         I2LycK++1zDjxBvaS7garHg8tJBMrDcOiLNFNAB6IPjWDr9xe+tLKfFxLobMknFzNiSN
+         o/TG4gX36McZYC+PooGD4LWG+vMuzmiEZU8XolheHhTWDmCGZZ999Uq+J5WhGgmozgM/
+         t0aQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@somaiya.edu header.s=google header.b=jKL6wbW6;
+       spf=pass (google.com: domain of kavitakelkar@somaiya.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=kavitakelkar@somaiya.edu;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=somaiya.edu
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id l18-v6sor9148044lfh.44.2018.10.21.23.57.06
+        for <faculty-comp@somaiya.edu>
+        (Google Transport Security);
+        Sun, 21 Oct 2018 23:57:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kavitakelkar@somaiya.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+X-Received: by 2002:a19:2648:: with SMTP id m69-v6mr8197273lfm.78.1540191426334;
+ Sun, 21 Oct 2018 23:57:06 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAMb-cAHc84UDszS1o-KRYJF2hpnyvg-7p8ycHgqJ5y7-WFsRow@mail.gmail.com>
+ <CAMb-cAG3OsnuTnDNR4sG84UTamdNh1Nd9RLTPvpCmC9erJcUJw@mail.gmail.com>
+In-Reply-To: <CAMb-cAG3OsnuTnDNR4sG84UTamdNh1Nd9RLTPvpCmC9erJcUJw@mail.gmail.com>
+From: Kavita Kelkar <kavitakelkar@somaiya.edu>
+Date: Mon, 22 Oct 2018 12:26:31 +0530
+Message-ID: <CAKWtmC75bY5FnrTNK+jAfxC+X1-9SnAf+W0UdV=E26F3Y8WwvA@mail.gmail.com>
+Subject: Re: Gentle Reminder to Submit M Tech Syllabus
+To: HODCOMP <hodcomp@somaiya.edu>, faculty-comp@somaiya.edu
+Content-Type: multipart/alternative; boundary="000000000000da8e8a0578cbc241"
+X-Original-Sender: kavitakelkar@somaiya.edu
+X-Original-Authentication-Results: mx.google.com;       dkim=pass
+ header.i=@somaiya.edu header.s=google header.b=jKL6wbW6;       spf=pass
+ (google.com: domain of kavitakelkar@somaiya.edu designates 209.85.220.41 as
+ permitted sender) smtp.mailfrom=kavitakelkar@somaiya.edu;       dmarc=pass
+ (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=somaiya.edu
+Precedence: list
+Mailing-list: list faculty-comp@somaiya.edu; contact faculty-comp+owners@somaiya.edu
+List-ID: <faculty-comp.somaiya.edu>
+X-Spam-Checked-In-Group: faculty-comp@somaiya.edu
+X-Google-Group-Id: 963981756368
+List-Post: <https://groups.google.com/a/somaiya.edu/group/faculty-comp/post>, <mailto:faculty-comp@somaiya.edu>
+List-Help: <https://support.google.com/a/somaiya.edu/bin/topic.py?topic=25838>,
+ <mailto:faculty-comp+help@somaiya.edu>
+List-Archive: <https://groups.google.com/a/somaiya.edu/group/faculty-comp/>
+List-Subscribe: <https://groups.google.com/a/somaiya.edu/group/faculty-comp/subscribe>,
+ <mailto:faculty-comp+subscribe@somaiya.edu>
+List-Unsubscribe: <mailto:googlegroups-manage+963981756368+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/a/somaiya.edu/group/faculty-comp/subscribe>
+
+--000000000000da8e8a0578cbc241
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Reminder for syllabus setting of M tech
+
+Thrust Area:  Intelligent System and Data Processing
+
+Thrust Area Semester I Semester II & III
+
+Intelligent System and Data Processing Coordinator:Kavita Kelkar
+Advanced Algorithms : Design and Analysis (KMK, SNM): DONE *Big Data
+Analytics (BHN, JVJ*)
+*Applied Data Science ( BHN, JVJ)* Machine Learning (KNK, GJS) :DONE
+*Information Retrieval Systems (RNP , MMK)* *Deep Learning (Open) (GJS ,
+Swapnil Pawar)*
+*Advanced Soft Computing (NKS, AG)* *Natural Language Processing ( BNP,
+PSG)*
+*Game Theory (Open) (SNM , DHS)*
+
+
+
+On Tue, Oct 16, 2018 at 1:45 PM Dr. Manish Potey <manishpotey@somaiya.edu>
+wrote:
+
+> Dear All
+>
+> As per the discussion with HOD, you can submit the M Tech Syllabus by
+> October 21, 2018, 3.00 pm.
+>
+> Regards
+> Dr. Manish M Potey
+> Professor
+> Department of Computer Engineering
+> K J Somaiya College of Engineering,
+> Mumbai-77
+>
+> (o) - 91-22-66449117/9191
+>
+>
+>
+> On Mon, Oct 15, 2018 at 9:51 AM Dr. Manish Potey <manishpotey@somaiya.edu=
+>
+> wrote:
+>
+>> Dear All
+>>
+>> This is gentle reminder to submit the M tech Syllabus in the format
+>> provided by October 16, 2018. PFA details about the courses and faculty
+>> incharges.
+>>
+>> Regards
+>> Dr. Manish M Potey
+>> Professor
+>> Department of Computer Engineering
+>> K J Somaiya College of Engineering,
+>> Mumbai-77
+>>
+>> (o) - 91-22-66449117/9191
+>>
+>>
+> <https://www.somaiya.edu>        <http://www.somaiya-ayurvihar.org>
+> <http://nareshwadi.org>  <http://somaiya.com>  <http://www.helpachild.in>
+> <http://nareshwadi.org>
+>
+
+
+--=20
+Regards
+
+Kavita M Kelkar
+kavitakelkar@somaiya.edu
+
+--=20
+
+ <https://www.somaiya.edu>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <http://www.somaiya-a=
+yurvihar.org>=C2=A0=20
+<http://nareshwadi.org>=C2=A0 <http://somaiya.com>=C2=A0 <http://www.helpac=
+hild.in>=C2=A0=20
+<http://nareshwadi.org>
+
+--000000000000da8e8a0578cbc241
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Reminder for syllabus setting of M tech=C2=A0<div><br></di=
+v><div>Thrust Area:=C2=A0
+
+<span style=3D"color:rgb(0,0,0);font-family:&quot;Times New Roman&quot;;fon=
+t-size:15px;text-align:center;white-space:pre-wrap">Intelligent System and =
+Data Processing </span></div><div><span style=3D"color:rgb(0,0,0);font-fami=
+ly:&quot;Times New Roman&quot;;font-size:15px;text-align:center;white-space=
+:pre-wrap"><br></span></div><div><table cellspacing=3D"0" cellpadding=3D"0"=
+ dir=3D"ltr" border=3D"1" style=3D"table-layout:fixed;font-size:11pt;font-f=
+amily:Calibri;width:0px;border-collapse:collapse;border:none"><colgroup><co=
+l width=3D"251"><col width=3D"431"><col width=3D"413"></colgroup><tbody><tr=
+ style=3D"height:20px"><td style=3D"border-width:2px 1px 1px 2px;border-sty=
+le:solid;border-color:rgb(0,0,0);overflow:hidden;padding:0px 3px;vertical-a=
+lign:middle;font-family:&quot;Times New Roman&quot;;font-size:14pt;font-wei=
+ght:bold;color:rgb(0,0,0);text-align:center">Thrust Area</td><td style=3D"b=
+order-width:2px 1px 1px;border-style:solid;border-color:rgb(0,0,0) rgb(0,0,=
+0) rgb(0,0,0) rgb(204,204,204);overflow:hidden;padding:0px 3px;vertical-ali=
+gn:middle;font-family:&quot;Times New Roman&quot;;font-size:14pt;font-weigh=
+t:bold;color:rgb(0,0,0);text-align:center">Semester I </td><td style=3D"bor=
+der-width:2px 2px 1px 1px;border-style:solid;border-color:rgb(0,0,0) rgb(0,=
+0,0) rgb(0,0,0) rgb(204,204,204);overflow:hidden;padding:0px 3px;vertical-a=
+lign:middle;font-family:&quot;Times New Roman&quot;;font-size:14pt;font-wei=
+ght:bold;color:rgb(0,0,0);text-align:center">Semester II &amp; III</td></tr=
+><tr style=3D"height:20px"><td style=3D"border-width:1px 1px 2px 2px;border=
+-style:solid;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0);overflow:h=
+idden;padding:0px 3px;vertical-align:middle;font-family:&quot;Times New Rom=
+an&quot;;color:rgb(0,0,0);text-align:center" rowspan=3D"6" colspan=3D"1"><d=
+iv style=3D"max-height:120px">Intelligent System and Data Processing Coordi=
+nator:Kavita Kelkar</div></td><td style=3D"border-width:1px;border-style:so=
+lid;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204,204,204);ov=
+erflow:hidden;padding:0px 3px;vertical-align:bottom;font-family:&quot;Times=
+ New Roman&quot;;color:rgb(0,0,0)">Advanced Algorithms : Design and Analysi=
+s  (KMK, SNM): <span style=3D"background-color:rgb(0,255,0)">DONE</span></t=
+d><td style=3D"border-width:1px 2px 1px 1px;border-style:solid;border-color=
+:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204,204,204);overflow:hidden;pa=
+dding:0px 3px;vertical-align:middle;font-family:&quot;Times New Roman&quot;=
+"><font color=3D"#ff0000" style=3D"" size=3D"4"><b>Big Data Analytics    (B=
+HN, JVJ</b>)</font></td></tr><tr style=3D"height:20px"><td style=3D"border-=
+width:1px;border-style:solid;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0=
+,0,0) rgb(204,204,204);overflow:hidden;padding:0px 3px;vertical-align:botto=
+m;font-family:&quot;Times New Roman&quot;"><font color=3D"#ff0000"><b>Appli=
+ed Data Science     ( BHN, JVJ)</b></font></td><td style=3D"border-width:1p=
+x 2px 1px 1px;border-style:solid;border-color:rgb(204,204,204) rgb(0,0,0) r=
+gb(0,0,0) rgb(204,204,204);overflow:hidden;padding:0px 3px;vertical-align:b=
+ottom;font-family:&quot;Times New Roman&quot;;font-size:12pt;font-weight:bo=
+ld"><font color=3D"#ff0000">Machine Learning  (KNK, GJS) :<span style=3D"ba=
+ckground-color:rgb(0,255,0)">DONE</span></font></td></tr><tr style=3D"heigh=
+t:20px"><td style=3D"border-width:1px;border-style:solid;border-color:rgb(2=
+04,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204,204,204);overflow:hidden;padding:=
+0px 3px;vertical-align:bottom;font-family:&quot;Times New Roman&quot;;font-=
+size:12pt"><font color=3D"#ff0000" style=3D""><b>Information Retrieval Syst=
+ems  (RNP , MMK)</b></font></td><td style=3D"border-width:1px 2px 1px 1px;b=
+order-style:solid;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(2=
+04,204,204);overflow:hidden;padding:0px 3px;vertical-align:bottom;font-fami=
+ly:&quot;Times New Roman&quot;;font-size:12pt"><font color=3D"#ff0000" styl=
+e=3D""><b>Deep Learning (Open)  (GJS , Swapnil Pawar)</b></font></td></tr><=
+tr style=3D"height:20px"><td style=3D"border-width:1px;border-style:solid;b=
+order-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204,204,204);overflo=
+w:hidden;padding:0px 3px;vertical-align:bottom;font-family:&quot;Times New =
+Roman&quot;;font-size:12pt"><font color=3D"#ff0000"><b>Advanced Soft Comput=
+ing  (NKS, AG)</b></font></td><td style=3D"border-width:1px 2px 1px 1px;bor=
+der-style:solid;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204=
+,204,204);overflow:hidden;padding:0px 3px;vertical-align:bottom;font-family=
+:&quot;Times New Roman&quot;;font-size:12pt"><font color=3D"#ff0000"><b>Nat=
+ural Language Processing  ( BNP, PSG)</b></font></td></tr><tr style=3D"heig=
+ht:20px"><td style=3D"border-width:1px;border-style:solid;border-color:rgb(=
+204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204,204,204);overflow:hidden;padding=
+:0px 3px;vertical-align:bottom"></td><td style=3D"border-width:1px 2px 1px =
+1px;border-style:solid;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) =
+rgb(204,204,204);overflow:hidden;padding:0px 3px;vertical-align:bottom;font=
+-family:&quot;Times New Roman&quot;;font-size:12pt"><font color=3D"#ff0000"=
+ style=3D""><b>Game Theory (Open)   (SNM , DHS)</b></font></td></tr><tr sty=
+le=3D"height:20px"><td style=3D"border-width:1px 1px 2px;border-style:solid=
+;border-color:rgb(204,204,204) rgb(0,0,0) rgb(0,0,0) rgb(204,204,204);overf=
+low:hidden;padding:0px 3px;vertical-align:bottom"></td><td style=3D"border-=
+width:1px 2px 2px 1px;border-style:solid;border-color:rgb(204,204,204) rgb(=
+0,0,0) rgb(0,0,0) rgb(204,204,204);overflow:hidden;padding:0px 3px;vertical=
+-align:bottom"></td></tr></tbody></table></div><div><span style=3D"color:rg=
+b(0,0,0);font-family:&quot;Times New Roman&quot;;font-size:15px;text-align:=
+center;white-space:pre-wrap"><br></span></div><div><span style=3D"color:rgb=
+(0,0,0);font-family:&quot;Times New Roman&quot;;font-size:15px;text-align:c=
+enter;white-space:pre-wrap"><br></span></div></div><br><div class=3D"gmail_=
+quote"><div dir=3D"ltr">On Tue, Oct 16, 2018 at 1:45 PM Dr. Manish Potey &l=
+t;<a href=3D"mailto:manishpotey@somaiya.edu">manishpotey@somaiya.edu</a>&gt=
+; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .=
+8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div clas=
+s=3D"gmail_default" style=3D"font-family:georgia,serif">Dear All</div><div =
+class=3D"gmail_default" style=3D"font-family:georgia,serif"><br></div><div =
+class=3D"gmail_default" style=3D"font-family:georgia,serif">As per the disc=
+ussion with HOD, you can submit the M Tech Syllabus by October 21, 2018, 3.=
+00 pm.</div><div class=3D"gmail_default" style=3D"font-family:georgia,serif=
+"><br></div><div><div dir=3D"ltr" class=3D"m_-6667849992946555467gmail_sign=
+ature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><font face=3D"georgia, se=
+rif">Regards</font><div><font face=3D"georgia, serif" color=3D"#0b5394">Dr.=
+ Manish M Potey</font></div><div><font face=3D"georgia, serif" color=3D"#0b=
+5394">Professor</font></div><div><font face=3D"georgia, serif" color=3D"#0b=
+5394">Department of Computer Engineering</font></div><div><font face=3D"geo=
+rgia, serif" color=3D"#0b5394">K J Somaiya College of Engineering,</font></=
+div><div><font face=3D"georgia, serif" color=3D"#0b5394">Mumbai-77</font></=
+div><div><font face=3D"georgia, serif" color=3D"#0b5394"><br></font></div><=
+div><font face=3D"georgia, serif" color=3D"#0b5394">(o) - 91-22-66449117/91=
+91</font></div><div><br></div></div></div></div></div></div></div></div></d=
+iv></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr">On Mon, =
+Oct 15, 2018 at 9:51 AM Dr. Manish Potey &lt;<a href=3D"mailto:manishpotey@=
+somaiya.edu" target=3D"_blank">manishpotey@somaiya.edu</a>&gt; wrote:<br></=
+div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-lef=
+t:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div class=3D"gmail_def=
+ault" style=3D"font-family:georgia,serif">Dear All</div><div class=3D"gmail=
+_default" style=3D"font-family:georgia,serif"><br></div><div class=3D"gmail=
+_default" style=3D"font-family:georgia,serif">This is gentle reminder to su=
+bmit the M tech Syllabus in the format provided by October 16, 2018. PFA de=
+tails about the courses and faculty incharges.</div><div class=3D"gmail_def=
+ault" style=3D"font-family:georgia,serif"><br></div><div><div dir=3D"ltr" c=
+lass=3D"m_-6667849992946555467m_1742070175437119854gmail_signature" data-sm=
+artmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><di=
+v dir=3D"ltr"><div><div dir=3D"ltr"><font face=3D"georgia, serif">Regards</=
+font><div><font face=3D"georgia, serif" color=3D"#0b5394">Dr. Manish M Pote=
+y</font></div><div><font face=3D"georgia, serif" color=3D"#0b5394">Professo=
+r</font></div><div><font face=3D"georgia, serif" color=3D"#0b5394">Departme=
+nt of Computer Engineering</font></div><div><font face=3D"georgia, serif" c=
+olor=3D"#0b5394">K J Somaiya College of Engineering,</font></div><div><font=
+ face=3D"georgia, serif" color=3D"#0b5394">Mumbai-77</font></div><div><font=
+ face=3D"georgia, serif" color=3D"#0b5394"><br></font></div><div><font face=
+=3D"georgia, serif" color=3D"#0b5394">(o) - 91-22-66449117/9191</font></div=
+><div><br></div></div></div></div></div></div></div></div></div></div></div=
+>
+</blockquote></div>
+
+<br>
+<div><img src=3D"http://somaiya.edu/media/images/top-layer_footer.jpg" styl=
+e=3D"font-size:1.3em"></div><div><a href=3D"https://www.somaiya.edu" style=
+=3D"font-size:1.3em" target=3D"_blank"><img src=3D"http://somaiya.edu/media=
+/images/svv-logo-email-footer.jpg"></a><span style=3D"font-size:1.3em">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0</span><a href=3D"http://www.somaiya-ayurvihar.org"=
+ style=3D"font-size:1.3em" target=3D"_blank"><img src=3D"http://somaiya.edu=
+/media/images/Medical-Logo-email-footer.jpg"></a><span style=3D"font-size:1=
+.3em">=C2=A0</span><a href=3D"http://nareshwadi.org" style=3D"font-size:1.3=
+em" target=3D"_blank"><img src=3D"http://somaiya.edu/media/images/Nareshwad=
+i-Logo-email-footer.jpg"></a><span style=3D"font-size:1.3em">=C2=A0</span><=
+a href=3D"http://somaiya.com" style=3D"font-size:1.3em" target=3D"_blank"><=
+img src=3D"http://somaiya.edu/media/images/Somaiya-Trust-Logo-email-footer.=
+jpg"></a><span style=3D"font-size:1.3em">=C2=A0</span><a href=3D"http://www=
+.helpachild.in" style=3D"font-size:1.3em" target=3D"_blank"><img src=3D"htt=
+p://somaiya.edu/media/images/HelpAChild-Logo-email-footer.jpg"></a><span st=
+yle=3D"font-size:1.3em">=C2=A0</span><a href=3D"http://nareshwadi.org" styl=
+e=3D"font-size:1.3em" target=3D"_blank"><img src=3D"http://somaiya.edu/medi=
+a/images/PragatiMandal-Logo-email-footer-1.jpg"></a></div></blockquote></di=
+v><br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr" class=3D"gmail_s=
+ignature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div>Reg=
+ards</div><div><br></div><div dir=3D"ltr">Kavita M Kelkar<div><a href=3D"ma=
+ilto:kavitakelkar@somaiya.edu" target=3D"_blank">kavitakelkar@somaiya.edu</=
+a><br></div></div></div></div></div>
+
+<br>
+<div><img src=3D"http://somaiya.edu/media/images/top-layer_footer.jpg" styl=
+e=3D"font-size:1.3em"></div><div><a href=3D"https://www.somaiya.edu" style=
+=3D"font-size:1.3em" target=3D"_blank"><img src=3D"http://somaiya.edu/media=
+/images/svv-logo-email-footer.jpg"></a><span style=3D"font-size:1.3em">=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0</span><a href=3D"http://www.somaiya-ayurvihar.org"=
+ style=3D"font-size:1.3em" target=3D"_blank"><img src=3D"http://somaiya.edu=
+/media/images/Medical-Logo-email-footer.jpg"></a><span style=3D"font-size:1=
+.3em">=C2=A0</span><a href=3D"http://nareshwadi.org" style=3D"font-size:1.3=
+em" target=3D"_blank"><img src=3D"http://somaiya.edu/media/images/Nareshwad=
+i-Logo-email-footer.jpg"></a><span style=3D"font-size:1.3em">=C2=A0</span><=
+a href=3D"http://somaiya.com" style=3D"font-size:1.3em" target=3D"_blank"><=
+img src=3D"http://somaiya.edu/media/images/Somaiya-Trust-Logo-email-footer.=
+jpg"></a><span style=3D"font-size:1.3em">=C2=A0</span><a href=3D"http://www=
+.helpachild.in" style=3D"font-size:1.3em" target=3D"_blank"><img src=3D"htt=
+p://somaiya.edu/media/images/HelpAChild-Logo-email-footer.jpg"></a><span st=
+yle=3D"font-size:1.3em">=C2=A0</span><a href=3D"http://nareshwadi.org" styl=
+e=3D"font-size:1.3em" target=3D"_blank"><img src=3D"http://somaiya.edu/medi=
+a/images/PragatiMandal-Logo-email-footer-1.jpg"></a></div>
+--000000000000da8e8a0578cbc241--

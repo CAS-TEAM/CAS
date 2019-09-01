@@ -114,44 +114,44 @@ tr:nth-child(even) {
     ?>
     
     <div class="row justify-content-center">
-		<div class="col-md-6">
+		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-2">
-					<img src="img/logo3.jpg" style="width: 70%">
+					<img src="img/logo3.jpg" style="width:35%;margin-left: 100px">
 				</div>
 				<div class="col-md-8">
-				    <h2 class="heading" style="font-size:18px; margin-top: 15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
-					<h2 class="heading text-center" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
+				    <h2 class="heading" style="font-size:25px; margin-top: 15px;text-align: center"><b>K. J. Somaiya College of Engineering, Mumbai -77</b></h2>
+					<h2 class="heading" style="font-size:25px;text-align: center">(Autonomous College Affiliated to University of Mumbai)</h2>
 				</div>
 				<div class="col-md-2">
-					<img src="img/logo1.jpg" style="width: 100%">
+					<img src="img/logo1.jpg" style="width: 50%;margin-left: 60px">
 				</div>
 			</div>
 		</div>
 	</div>
 	<h2 class="heading" style="text-align: center;font-size: 22px"><b>'Part A: GENERAL INFORMATION'</b><br> Faculty Name: <?php echo $faculty_name; ?> | Academic Year: <?php echo ($year-1).'-'.($year); ?></h2>  
 
-	<div class="container" id="part-a-container" style="border:1px solid black;width: 70%;margin-left: 200px">
+	<div class="container" id="part-a-container" style="border:1px solid black;width: 90%;margin-left: 100px">
 		<div class="row">
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Name :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Name:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $faculty_name; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $faculty_name; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Emp. Code :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Emp. Code:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $ecode; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $ecode; ?></p>
 					</div>
 				</div>
     		</div>
@@ -161,22 +161,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Present Address :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Present Address:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $praddr; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $praddr; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Permanent Address :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Permanent Address :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $peaddr; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $peaddr; ?></p>
 					</div>
 				</div>
     		</div>
@@ -186,22 +186,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Email :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Email :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $email; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $email; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Mobile No. :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Mobile No. :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $mobileno; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $mobileno; ?></p>
 					</div>
 				</div>
     		</div>
@@ -211,22 +211,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Highest Qualification:</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Highest Qualification:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $highq; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $highq; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Date of Birth :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Date of Birth :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $dob; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $dob; ?></p>
 					</div>
 				</div>
     		</div>
@@ -236,7 +236,7 @@ tr:nth-child(even) {
 
 		<div class="row">
     		<div class="col-md-6 text-left">
-    			<p style="font-size: 18px"><b>Details of last service i.e before joining KJSCE:-</b></p>
+    			<p style="font-size: 25px"><b>Details of last service i.e before joining KJSCE:-</b></p>
     		</div>
     	</div>
 
@@ -244,22 +244,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Designation:</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Designation:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $desi; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $desi; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Name of Organization:</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Name of Organization:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $nameo; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $nameo; ?></p>
 					</div>
 				</div>
     		</div>
@@ -271,22 +271,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Present Designation:</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Present Designation:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $pdesi; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $pdesi; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">DOJ KJSCE :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>DOJ KJSCE:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $dojkjsce; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $dojkjsce; ?></p>
 					</div>
 				</div>
     		</div>
@@ -296,22 +296,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Present Scale :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Present Scale :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $pscale; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $pscale; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Present basic and grade pay :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Present basic and grade pay :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $pbg; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $pbg; ?></p>
 					</div>
 				</div>
     		</div>
@@ -321,7 +321,7 @@ tr:nth-child(even) {
 
 		<div class="row">
     		<div class="col-md-5 text-left">
-    			<p style="font-size: 18px"><b>Details of last promotion by selection:-</b></p>
+    			<p style="font-size: 25px"><b>Details of last promotion by selection:-</b></p>
     		</div>
     	</div>
 
@@ -329,22 +329,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Designation:</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Designation:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $lastdesisel; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $lastdesisel; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Promotion w.e.f :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Promotion w.e.f :</<b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $promowef; ?></p>
+					    <p class="col-form-label" style="font-size: 25px;margin-left: 10px"><?php echo $promowef; ?></p>
 					</div>
 				</div>
     		</div>
@@ -354,22 +354,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Changed Scale :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Changed Scale :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $cscales; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $cscales; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Changed basic and grade pay :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Changed basic and grade pay :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $cbasics; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $cbasics; ?></p>
 					</div>
 				</div>
     		</div>
@@ -379,7 +379,7 @@ tr:nth-child(even) {
 
 		<div class="row">
     		<div class="col-md-5 text-left">
-    			<p style="font-size: 18px"><b>Details of last promotion through CAS:-</b></p>
+    			<p style="font-size: 25px"><b>Details of last promotion through CAS:-</b></p>
     		</div>
     	</div>
 
@@ -387,22 +387,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Designation:</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Designation:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $lastdesicas; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $lastdesicas; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Promotion w.e.f :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Promotion w.e.f :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $promowefcas; ?></p>
+					    <p class="col-form-label" style="font-size: 25px;margin-left: 10px"><?php echo $promowefcas; ?></p>
 					</div>
 				</div>
     		</div>
@@ -412,22 +412,22 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Changed Scale :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Changed Scale :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $cscalecas; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $cscalecas; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Changed basic and grade pay :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Changed basic and grade pay :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					    <p class="col-form-label"><?php echo $cbasiccas; ?></p>
+					    <p class="col-form-label" style="font-size: 25px"><?php echo $cbasiccas; ?></p>
 					</div>
 				</div>
     		</div>
@@ -438,11 +438,11 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-6">
-				<p>Whether acquired any fresh educational qualification during said academic year?</p>
+				<p style="font-size: 25px">Whether acquired any fresh educational qualification during said academic year?</p>
 			</div>
 	    	<div class="col-md-6 text-left">
 				<div class="custom-control custom-radio custom-control-inline">
-					<p><?php echo $customRadioInline1; ?>  </p>
+					<p style="font-size: 25px"><?php echo $customRadioInline1; ?>  </p>
 					<!-- <p>If yes: 20 PI</p> -->
 				</div>
 			</div>
@@ -452,7 +452,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col text-left">
-				<p>If yes, details of qualification:-</p>
+				<p style="font-size: 25px">If yes, details of qualification:-</p>
 			</div>
 		</div>
 
@@ -460,18 +460,18 @@ tr:nth-child(even) {
 			<div class="col-md-6">
     			<div class="form-group row">
     				<div class="col-3">
-    					<label class="col-form-label">Name of Degree :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Name of Degree :</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo $nameofdegree; ?></p>
+					   <p class="col-form-label" style="font-size: 25px"><?php echo $nameofdegree; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-6">
     			<div class="form-group row">
 					<div class="col-3">
-    					<label class="col-form-label">Institute :</label>
+    					<label class="col-form-label" style="font-size: 25px"><b>Institute:</b></label>
     				</div>
 					  
 					<div class="col-8" style="padding-left: 0">
@@ -500,17 +500,17 @@ tr:nth-child(even) {
 
 		<div class="row">
     		<div class="col-md-12">
-    			<p style="font-size: 18px"><b>Details of course/summer school/STTP/online course attended/completed during academic year</b></p>
+    			<p style="font-size: 25px"><b>Details of course/summer school/STTP/online course attended/completed during academic year</b></p>
     		</div>
     	</div>
 
     	<table class="table table-bordered table-hover">
 		 	<tr>
-			    <th>Sr.no</th>
-			    <th>Name of summer school/course</th>
-			    <th>Duration(Days)</th>
-			    <th>Organising Agency</th>
-			    <th>If organised in KJSCE, mention the role played</th>
+			    <th style="font-size: 25px"><b>Sr.no</b></th>
+			    <th style="font-size: 25px"><b>Name of summer school/course</b></th>
+			    <th style="font-size: 25px"><b>Duration(Days)</b></th>
+			    <th style="font-size: 25px"><b>Organising Agency</b></th>
+			    <th style="font-size: 25px"><b>If organised in KJSCE, mention the role played</b></th>
 		  	</tr>
 		  	<?php
 
@@ -529,11 +529,11 @@ tr:nth-child(even) {
 
 					?>
 				  	<tr>
-					    <td><?php echo $srno; ?></td>
-					    <td><?php echo $course; ?></td>
-					    <td><?php echo $days; ?></td>
-					    <td><?php echo $agency; ?></td>
-					    <td><?php echo $rolee; ?></td>
+					    <td style="font-size: 25px"><?php echo $srno; ?></td>
+					    <td style="font-size: 25px"><?php echo $course; ?></td>
+					    <td style="font-size: 25px"><?php echo $days; ?></td>
+					    <td style="font-size: 25px"><?php echo $agency; ?></td>
+					    <td style="font-size: 25px"><?php echo $rolee; ?></td>
 				  	</tr>
 				  	<?php
 				}
@@ -546,7 +546,7 @@ tr:nth-child(even) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p><b>List of Enclosures</b></p>
+					<p style="font-size: 25px"><b>List of Enclosures</b></p>
 				</div>
 			</div>
     		<div class="row clearfix">
@@ -554,8 +554,8 @@ tr:nth-child(even) {
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic4">
 						    <tr>
-								<th class="text-center">Sr. No.</th>
-								<th class="text-center">Description</th>
+								<th class="text-center" style="font-size: 25px" style="font-size: 25px"><b>Sr. No.</b></th>
+								<th class="text-center" style="font-size: 25px" style="font-size: 25px"><b>Description</b></th>
 								<!-- <th class="text-center">Attached File</th> -->
 							</tr>				
 							 
@@ -567,8 +567,8 @@ tr:nth-child(even) {
 
 								?>
 									<tr>
-										<td><b>~</b></td>
-										<td><b>Part A</b></td>
+										<td style="font-size: 25px"><b>~</b></td>
+										<td style="font-size: 25px"><b>Part A</b></td>
 									</tr>
 									<?php
 
@@ -591,8 +591,8 @@ tr:nth-child(even) {
 											// echo 'here';
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($row['file']); ?></td>
+												<td style="font-size: 25px"><?php echo $counter; ?></td>
+												<td style="font-size: 25px"><?php echo basename($row['file']); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $row['file']; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -610,7 +610,7 @@ tr:nth-child(even) {
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
+					<p style="font-size: 25px">NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
 				</div>
 			</div>
 		</div>

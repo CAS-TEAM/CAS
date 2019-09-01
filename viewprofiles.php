@@ -67,7 +67,7 @@ $lasttolastyear2=$currentyear-3;
 				  		$sqlc="SELECT hod,committee,department FROM faculty_table WHERE id='$userId'";
 				  		$resultc=mysqli_query($conn,$sqlc);
 				  		$rowc=mysqli_fetch_assoc($resultc);
-				  		$check;
+				  		$check="none";
 				  		if($rowc['hod']==1)
 				  		{
 				  			$check="hod";

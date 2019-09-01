@@ -23,7 +23,7 @@ if(mysqli_num_rows($result)==1)
     mkdir('users/'.$email, 0777, true);
     }
       
-    header("LOCATION: userprofile.php");
+    header("LOCATION: http://172.17.15.0.xip.io/cas/userprofile.php");
   } 
   else
   {
@@ -43,7 +43,7 @@ if(mysqli_num_rows($result)==1)
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-	<meta name="google-signin-client_id" content="444425785443-5mh44gn88jrf46t217t7i4m62r4ui1ro.apps.googleusercontent.com">
+	<meta name="google-signin-client_id" content="805718949659-khpnrkd2qn1c8u44lrlq381g7upjn8db.apps.googleusercontent.com">
 	<!--Enter yout OAuth Client ID in the content attribute -->
 
 	<script src="https://apis.google.com/js/platform.js" async defer></script>

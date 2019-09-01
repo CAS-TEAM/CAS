@@ -113,14 +113,14 @@ include 'left-nav.php';
 
 				if(mysqli_num_rows($resultsfr)==0)
 				{	
-					/*
+					
 					?>
 					<form method="POST" action="sfrA_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
 						<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for CAS review">
 					</form><br>
 					<?php
-					*/
+					
 				}
 				else
 				{
@@ -128,20 +128,20 @@ include 'left-nav.php';
 
 					if($rowsfr['partA']==0)
 					{
-						/*
+						
 						?>
 						<form method="POST" action="sfrA_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
 							<input type="submit" id="sfra_submit" name="sfra_submit" class="btn btn-primary" value="Submit for CAS review" >
 						</form>	<br>
 						<?php
-						*/
+						
 					}
 					else
 					{
 						$submitted_for_review=true;
 						?>
-						<!-- <p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p> -->
+						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
 						<?php
 					}
 					
@@ -196,7 +196,7 @@ include 'left-nav.php';
 			if($_SESSION['id']==$userId)
 			{
 				// uncomment '$submitted_for_review==true &&' when enabling cas stuff
-				if(/*$submitted_for_review==true &&*/ $submitted_for_self_appraisal==true)
+				if($submitted_for_review==true || $submitted_for_self_appraisal==true)
 				{
 
 					$sqlrfea="SELECT id FROM request_edit_access WHERE year='$year' AND facultyId='$userId' AND form='A'";
@@ -376,6 +376,14 @@ include 'left-nav.php';
 			</div>		
 		</div>
 		<hr style="border: 1px solid #c8c8c8"><br>
+
+		<div class="row">
+    		<div class="col-md-6 text-left">
+    			<p style="font-size: 18px"><b>Details of service in KJSCE:-</b></p>
+    		</div>
+    	</div>
+
+    	<br>
 
 		<div class="row">
     		<div class="col-md-6">
@@ -1067,7 +1075,7 @@ include 'left-nav.php';
 				}
 				?>
 
-				<a class="btn btn-primary" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000" href="printpartA.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">PRINT</a>
+				<a class="btn btn-primary" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000" href="printAintermediate.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>">PRINT</a>
 
 				<button type="button" class="btn btn-info" onclick="enclosures()">View Attachments</button>
 
@@ -1127,7 +1135,7 @@ include 'left-nav.php';
 	<?php
 
 	// if($same_user==1 && $submitted_for_review==false && $year!=2017 && !isset($_GET['updated']))
-	if($same_user==1 && $submitted_for_review==false && $year!=2019 && !isset($_GET['updated']))
+	if($same_user==1 && $submitted_for_review==false && ($year!=2019 && $year!=2018 && $year!=2017) && !isset($_GET['updated']))
 	{
 		// 2017 since our forms from the year 2017
 		$sqldc="SELECT id FROM part_a_table WHERE year='$year' AND faculty_id='$userId'";

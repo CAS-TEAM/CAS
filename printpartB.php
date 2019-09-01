@@ -151,54 +151,54 @@ tr:nth-child(even) {
 	?>
     
     <div class="row justify-content-center">
-		<div class="col-md-6">
+		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-2">
-					<img src="img/logo3.jpg" style="width: 70%">
+					<img src="img/logo3.jpg" style="width:35%;margin-left: 85px">
 				</div>
 				<div class="col-md-8">
-				    <h2 class="heading" style="font-size:18px; margin-top: 15px"><b>K. J. Somaiya College of Engineering, Mumbai - 77</b></h2>
-					<h2 class="heading text-center" style="font-size:15px">(Autonomous College Affiliated to University of Mumbai)</h2>
+				    <h2 class="heading" style="font-size:25px; margin-top: 15px;text-align: center"><b>K. J. Somaiya College of Engineering, Mumbai -77</b></h2>
+					<h2 class="heading" style="font-size:25px;text-align: center">(Autonomous College Affiliated to University of Mumbai)</h2>
 				</div>
 				<div class="col-md-2">
-					<img src="img/logo1.jpg" style="width: 100%">
+					<img src="img/logo1.jpg" style="width: 50%;margin-left: 50px">
 				</div>
 			</div>
 		</div>
 	</div>
 	<h2 class="heading" style="text-align: center;font-size: 22px"><b>'Part B'</b><br>Faculty Name: <?php echo $fn; ?> | Academic Year: <?php echo ($year-1).'-'.($year); ?></b></h2>
 
-	<div class="container" style="border:1px solid black;width: 70%;margin-left: 200px">
+	<div class="container" style="border:1px solid black;width: 98%;margin-left: 65px">
 
 		<div class="row">
 			<div class="col-md-12">
-				<p style="font-size: 18px;margin-top: 10px"><b>Category I: Teaching and Learning (Max. PI=100)</b></p>
+				<p style="font-size: 18px;margin-top: 10px;font-size: 22px"><b>Category I: Teaching and Learning (Max. PI=100)</b></p>
 			</div>
 		</div>
 		<hr>
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<p><b>Courses Taught (Max. PI: 40)</b></p>
+				<p style="font-size: 22px"><b>Courses Taught (Max. PI: 40)</b></p>
 			</div>
 		</div>
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="10" style="text-align: center">ODD SEMESTER :</th>					
+				<th colspan="10" style="text-align: center;font-size: 22px">ODD SEMESTER :</th>					
 			</thead>
 
 				<tr>
-					<th class="text-center" style="width:40px">Sr.No</th>
-					<th class="text-center" style="width:1400px">Course</th>
-					<th class="text-center" style="width:80px">Type L/P/T</th>
-					<th class="text-center" style="width:150px">UG/PG</th>
-					<th class="text-center" style="width:150px">Class/<br>Semester</th>
-					<th class="text-center" style="width:800px">Hrs./<br>Week</th>
-					<th class="text-center">Total no. of Hours engaged(A)</th>
-					<th class="text-center" style="width:680px">*Max. Hrs.(B)</th>
-					<th class="text-center" style="width:640px">C=(A/B)*100</th>
-					<th class="text-center" style="width:640px">Student Feedback For Theory</th>
+					<th class="text-center" style="width:40px;font-size: 18px">Sr.No</th>
+					<th class="text-center" style="width:1400px;font-size: 18px">Course</th>
+					<th class="text-center" style="width:80px;font-size: 18px">Type L/P/T</th>
+					<th class="text-center" style="width:150px;font-size: 18px">UG/PG</th>
+					<th class="text-center" style="width:150px;font-size: 18px">Class/<br>Semester</th>
+					<th class="text-center" style="width:800px;font-size: 18px">Hrs./<br>Week</th>
+					<th class="text-center" style="font-size: 18px">Total no. of Hours engaged(A)</th>
+					<th class="text-center" style="width:680px;font-size: 18px">*Max. Hrs.(B)</th>
+					<th class="text-center" style="width:640px;font-size: 18px">C=(A/B)*100</th>
+					<th class="text-center" style="width:640px;font-size: 18px">Student Feedback For Theory</th>
 				</tr>
 				<?php
 
@@ -222,16 +222,16 @@ tr:nth-child(even) {
 						$srno=1;
 						?>
 						<tr>
-							<td><?php echo $srno; ?></td>
-						    <td><?php echo $ctocourse; ?></td>
-						    <td><?php echo $ctotyprlpt; ?></td>
-						    <td><?php echo $ctougpg; ?></td>
-						    <td><?php echo $ctoclasssemester; ?></td>
-						    <td><?php echo $ctohrsweek; ?></td>
-						    <td><?php echo $ctohrsengaged; ?></td>
-						    <td><?php echo $ctomaxhrs; ?></td>
-						    <td><?php echo $ctoc; ?></td>
-						    <td><?php echo $ctofbk; ?></td>
+							<td style="font-size: 18px"><?php echo $srno; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctocourse; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctotyprlpt; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctougpg; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctoclasssemester; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctohrsweek; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctohrsengaged; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctomaxhrs; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctoc; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctofbk; ?></td>
 					  	</tr>
 						<?php
 						$srno+=1;
@@ -244,20 +244,20 @@ tr:nth-child(even) {
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="10" style="text-align: center">EVEN SEMESTER :</th>					
+				<th colspan="10" style="text-align: center;font-size: 22px">EVEN SEMESTER :</th>					
 			</thead>
 
 				<tr>
-					<th class="text-center" style="width:40px">Sr.No</th>
-					<th class="text-center" style="width:1400px">Course</th>
-					<th class="text-center" style="width:80px">Type L/P/T</th>
-					<th class="text-center" style="width:150px">UG/PG</th>
-					<th class="text-center" style="width:150px">Class/<br>Semester</th>
-					<th class="text-center" style="width:800px">Hrs./<br>Week</th>
-					<th class="text-center">Total no. of Hours engaged(A)</th>
-					<th class="text-center" style="width:680px">*Max. Hrs.(B)</th>
-					<th class="text-center" style="width:640px">C=(A/B)*100</th>
-					<th class="text-center" style="width:640px">Student Feedback For Theory</th>
+					<th class="text-center" style="width:40px;font-size: 18px">Sr.No</th>
+					<th class="text-center" style="width:1400px;font-size: 18px">Course</th>
+					<th class="text-center" style="width:80px;font-size: 18px">Type L/P/T</th>
+					<th class="text-center" style="width:150px;font-size: 18px">UG/PG</th>
+					<th class="text-center" style="width:150px;font-size: 18px">Class/<br>Semester</th>
+					<th class="text-center" style="width:800px;font-size: 18px">Hrs./<br>Week</th>
+					<th class="text-center" style="font-size: 18px">Total no. of Hours engaged(A)</th>
+					<th class="text-center" style="width:680px;font-size: 18px">*Max. Hrs.(B)</th>
+					<th class="text-center" style="width:640px;font-size: 18px">C=(A/B)*100</th>
+					<th class="text-center" style="width:640px;font-size: 18px">Student Feedback For Theory</th>
 				</tr>
 				<?php
 
@@ -281,16 +281,16 @@ tr:nth-child(even) {
 						$srno=1;
 						?>
 						<tr>
-						    <td><?php echo $srno; ?></td>
-						    <td><?php echo $ctecourse; ?></td>
-						    <td><?php echo $ctetyprlpt; ?></td>
-						    <td><?php echo $cteugpg; ?></td>
-						    <td><?php echo $cteclasssemester; ?></td>
-						    <td><?php echo $ctehrsweek; ?></td>
-						    <td><?php echo $ctehrsengaged; ?></td>
-						    <td><?php echo $ctemaxhrs; ?></td>
-						    <td><?php echo $ctec; ?></td>
-						    <td><?php echo $ctefbk; ?></td>
+						    <td style="font-size: 18px"><?php echo $srno; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctecourse; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctetyprlpt; ?></td>
+						    <td style="font-size: 18px"><?php echo $cteugpg; ?></td>
+						    <td style="font-size: 18px"><?php echo $cteclasssemester; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctehrsweek; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctehrsengaged; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctemaxhrs; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctec; ?></td>
+						    <td style="font-size: 18px"><?php echo $ctefbk; ?></td>
 					  	</tr>
 						<?php
 						$srno+=1;
@@ -303,27 +303,27 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-4">
-				<label class="col-form-label"><b>*Max hours(B)=(Hrs./week)*(15)</b></label>
+				<label class="col-form-label" style="font-size: 22px"><b>*Max hours(B)=(Hrs./week)*(15)</b></label>
 			</div>
 			<div class="col-md-5" >
     			<div class="form-group row justify-content-center">
     				<div class="col-6 text-right" style="margin:0;padding:0;padding-right: 10px">
-    					<label class="col-form-label"><b>Average of C(AVC) :</b></label>
+    					<label class="col-form-label" style="font-size: 22px"><b>Average of C(AVC) :</b></label>
     				</div>
 					  
 					<div class="col-3" style="margin:0;padding:0">
-					   <p class="col-form-label"><?php echo $avg_c; ?></p>
+					   <p class="col-form-label" style="font-size: 22px"><?php echo $avg_c; ?></p>
 					</div>
 				</div>							
     		</div>
     		<div class="col-md-3">
     			<div class="form-group row justify-content-center">
     				<div class="col-6 text-right" style="margin:0;padding:0;padding-right: 10px">
-    					<label class="col-form-label"><b>Total of C :</b></label>
+    					<label class="col-form-label" style="font-size: 22px"><b>Total of C :</b></label>
     				</div>
 					  
 					<div class="col-4" style="margin:0;padding:0;padding-right:10px">
-					   <p class="col-form-label"><?php echo $total_c; ?></p>
+					   <p class="col-form-label" style="font-size: 22px"><?php echo $total_c; ?></p>
 					</div>
 				</div>							
     		</div>
@@ -338,7 +338,7 @@ tr:nth-child(even) {
 		<div class="row">
 			<div class="col">
 				<div class="col-md-12 text-left" style="border: 1px solid #b7b7b7"><br>
-					<p style="font-size: 16px">Classes Taken (Max.40 for 90%-100% performance, and proportionate score upto 75% performance below which no score may be given. <br> * If (AVC)*100 is 90%-100% then PI 1=40 <br> * If (AVC)*100>75% then PI 1=((AVC)*40) <br>* If (AVC)*100 < 75 then PI 1=0)</p>
+					<p style="font-size: 22px">Classes Taken (Max.40 for 90%-100% performance, and proportionate score upto 75% performance below which no score may be given. <br> * If (AVC)*100 is 90%-100% then PI 1=40 <br> * If (AVC)*100>75% then PI 1=((AVC)*40) <br>* If (AVC)*100 < 75 then PI 1=0)</p>
 				</div>
 			</div>
 		</div>
@@ -347,200 +347,200 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<p><b>Examination Duties Assigned and Performed (Max. PI: 40)</b></p>
+				<p style="font-size: 22px"><b>Examination Duties Assigned and Performed (Max. PI: 40)</b></p>
 			</div>
 		</div>
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="4" style="text-align: center">ODD SEMESTER</th>
+				<th colspan="4" style="text-align: center;font-size: 22px"><b>ODD SEMESTER</b></th>
 			</thead>
 				<tr>
-					<th class="text-center">Sr.No</th>
-					<th class="text-center">Type of Examination Duties</th>
-					<th class="text-center">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
-					<th class="text-center">Extent to which carried out (%) (Max.100%) (A)</th>
+					<th class="text-center" style="font-size: 22px">Sr.No</th>
+					<th class="text-center" style="font-size: 22px">Type of Examination Duties</th>
+					<th class="text-center" style="font-size: 22px">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
+					<th class="text-center" style="font-size: 22px">Extent to which carried out (%) (Max.100%) (A)</th>
 				</tr>
 			<tr>
-			    <td>1</td>
-			    <td>Paper Setting Test 1</td>
-			    <td><?php echo $odpstest1; ?></td>
-			    <td><?php echo $oepstest1; ?></td>
+			    <td style="font-size: 22px">1</td>
+			    <td style="font-size: 22px">Paper Setting Test 1</td>
+			    <td style="font-size: 22px"><?php echo $odpstest1; ?></td>
+			    <td style="font-size: 22px"><?php echo $oepstest1; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>2</td>
-			    <td>Paper Setting Test 2</td>
-			    <td><?php echo $odpstest2; ?></td>
-			    <td><?php echo $oepstest2; ?></td>
+			    <td style="font-size: 22px">2</td>
+			    <td style="font-size: 22px">Paper Setting Test 2</td>
+			    <td style="font-size: 22px"><?php echo $odpstest2; ?></td>
+			    <td style="font-size: 22px"><?php echo $oepstest2; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>3</td>
-			    <td>Test 1 invigilation</td>
-			    <td><?php echo $odtest1in; ?></td>
-			    <td><?php echo $oetest1in; ?></td>		  	
+			    <td style="font-size: 22px">3</td>
+			    <td style="font-size: 22px">Test 1 invigilation</td>
+			    <td style="font-size: 22px"><?php echo $odtest1in; ?></td>
+			    <td style="font-size: 22px"><?php echo $oetest1in; ?></td>		  	
 			</tr>
 		  	<tr>
-			    <td>4</td>
-			    <td>Test 2 invigilation</td>
-			    <td><?php echo $odtest2in; ?></td>
-			    <td><?php echo $oetest2in; ?></td>
+			    <td style="font-size: 22px">4</td>
+			    <td style="font-size: 22px">Test 2 invigilation</td>
+			    <td style="font-size: 22px"><?php echo $odtest2in; ?></td>
+			    <td style="font-size: 22px"><?php echo $oetest2in; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>5</td>
-			    <td>Test 1 paper assessment</td>
-			    <td><?php echo $odtest1ass; ?></td>
-			    <td><?php echo $oetest1ass; ?></td>
+			    <td style="font-size: 22px">5</td>
+			    <td style="font-size: 22px">Test 1 paper assessment</td>
+			    <td style="font-size: 22px"><?php echo $odtest1ass; ?></td>
+			    <td style="font-size: 22px"><?php echo $oetest1ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>6</td>
-			    <td>Test 2 paper assessment</td>
-			    <td><?php echo $odtest2ass; ?></td>
-			    <td><?php echo $oetest2ass; ?></td>
+			    <td style="font-size: 22px">6</td>
+			    <td style="font-size: 22px">Test 2 paper assessment</td>
+			    <td style="font-size: 22px"><?php echo $odtest2ass; ?></td>
+			    <td style="font-size: 22px"><?php echo $oetest2ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>7</td>
-			    <td>ESE Supervisor</td>
-			    <td><?php echo $odesesup; ?></td>
-			    <td><?php echo $oeesesup; ?></td>
+			    <td style="font-size: 22px">7</td>
+			    <td style="font-size: 22px">ESE Supervisor</td>
+			    <td style="font-size: 22px"><?php echo $odesesup; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeesesup; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>8</td>
-			    <td>ESE paper setting</td>
-			    <td><?php echo $odeseps; ?></td>
-			    <td><?php echo $oeeseps; ?></td>
+			    <td style="font-size: 22px">8</td>
+			    <td style="font-size: 22px">ESE paper setting</td>
+			    <td style="font-size: 22px"><?php echo $odeseps; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeeseps; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>9</td>
-			    <td>ESE invigilation/Squad team member</td>
-			    <td><?php echo $odesein; ?></td>
-			    <td><?php echo $oeesein; ?></td>
+			    <td style="font-size: 22px">9</td>
+			    <td style="font-size: 22px">ESE invigilation/Squad team member</td>
+			    <td style="font-size: 22px"><?php echo $odesein; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeesein; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>10</td>
-			    <td>ESE Theory paper assessment</td>
-			    <td><?php echo $odeseth; ?></td>
-			    <td><?php echo $oeeseth; ?></td>
+			    <td style="font-size: 22px">10</td>
+			    <td style="font-size: 22px">ESE Theory paper assessment</td>
+			    <td style="font-size: 22px"><?php echo $odeseth; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeeseth; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>11</td>
-			    <td>ESE Practical/oral examination</td>
-			    <td><?php echo $odesepo; ?></td>
-			    <td><?php echo $oeesepo; ?></td>
+			    <td style="font-size: 22px">11</td>
+			    <td style="font-size: 22px">ESE Practical/oral examination</td>
+			    <td style="font-size: 22px"><?php echo $odesepo; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeesepo; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>12</td>
-			    <td>ESE re-assessment</td>
-			    <td><?php echo $odesere_ass; ?></td>
-			    <td><?php echo $oeesere_ass; ?></td>
+			    <td style="font-size: 22px">12</td>
+			    <td style="font-size: 22px">ESE re-assessment</td>
+			    <td style="font-size: 22px"><?php echo $odesere_ass; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeesere_ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>13</td>
-			    <td>Proof reading</td>
-			    <td><?php echo $odproofr; ?></td>
-			    <td><?php echo $oeproofr; ?></td>
+			    <td style="font-size: 22px">13</td>
+			    <td style="font-size: 22px">Proof reading</td>
+			    <td style="font-size: 22px"><?php echo $odproofr; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeproofr; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>14</td>
-			    <td>Open day</td>
-			    <td><?php echo $odopenday; ?></td>
-			    <td><?php echo $oeopenday; ?></td>
+			    <td style="font-size: 22px">14</td>
+			    <td style="font-size: 22px">Open day</td>
+			    <td style="font-size: 22px"><?php echo $odopenday; ?></td>
+			    <td style="font-size: 22px"><?php echo $oeopenday; ?></td>
 		  	</tr>
 		</table>
 
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="4" style="text-align: center">EVEN SEMESTER</th>
+				<th colspan="4" style="text-align: center;font-size: 22px">EVEN SEMESTER</th>
 			</thead>
 			<tr>
-				<th class="text-center">Sr.No</th>
-				<th class="text-center">Type of Examination Duties</th>
-				<th class="text-center">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
-				<th class="text-center">Extent to which carried out (%) (Max.100%) (A)</th>
+				<th class="text-center" style="font-size: 22px">Sr.No</th>
+				<th class="text-center" style="font-size: 22px">Type of Examination Duties</th>
+				<th class="text-center" style="font-size: 22px">Description of Duties Assigned(If duties not assigned then not to be taken into account)</th>
+				<th class="text-center" style="font-size: 22px">Extent to which carried out (%) (Max.100%) (A)</th>
 			</tr>
 			<tr>
-			    <td>1</td>
-			    <td>Paper Setting Test 1</td>
-			    <td><?php echo $edpstest1; ?></td>
-			    <td><?php echo $eepstest1; ?></td>
+			    <td style="font-size: 22px">1</td>
+			    <td style="font-size: 22px">Paper Setting Test 1</td>
+			    <td style="font-size: 22px"><?php echo $edpstest1; ?></td>
+			    <td style="font-size: 22px"><?php echo $eepstest1; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>2</td>
-			    <td>Paper Setting Test 2</td>
-			    <td><?php echo $edpstest2; ?></td>
-			    <td><?php echo $eepstest2; ?></td>
+			    <td style="font-size: 22px">2</td>
+			    <td style="font-size: 22px">Paper Setting Test 2</td>
+			    <td style="font-size: 22px"><?php echo $edpstest2; ?></td>
+			    <td style="font-size: 22px"><?php echo $eepstest2; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>3</td>
-			    <td>Test 1 invigilation</td>
-			    <td><?php echo $edtest1in; ?></td>
-			    <td><?php echo $eetest1in; ?></td>		  	
+			    <td style="font-size: 22px">3</td>
+			    <td style="font-size: 22px">Test 1 invigilation</td>
+			    <td style="font-size: 22px"><?php echo $edtest1in; ?></td>
+			    <td style="font-size: 22px"><?php echo $eetest1in; ?></td>		  	
 			</tr>
 		  	<tr>
-			    <td>4</td>
-			    <td>Test 2 invigilation</td>
-			    <td><?php echo $edtest2in; ?></td>
-			    <td><?php echo $eetest2in; ?></td>
+			    <td style="font-size: 22px">4</td>
+			    <td style="font-size: 22px">Test 2 invigilation</td>
+			    <td style="font-size: 22px"><?php echo $edtest2in; ?></td>
+			    <td style="font-size: 22px"><?php echo $eetest2in; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>5</td>
-			    <td>Test 1 paper assessment</td>
-			    <td><?php echo $edtest1ass; ?></td>
-			    <td><?php echo $eetest1ass; ?></td>
+			    <td style="font-size: 22px">5</td>
+			    <td style="font-size: 22px">Test 1 paper assessment</td>
+			    <td style="font-size: 22px"><?php echo $edtest1ass; ?></td>
+			    <td style="font-size: 22px"><?php echo $eetest1ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>6</td>
-			    <td>Test 2 paper assessment</td>
-			    <td><?php echo $edtest2ass; ?></td>
-			    <td><?php echo $eetest2ass; ?></td>
+			    <td style="font-size: 22px">6</td>
+			    <td style="font-size: 22px">Test 2 paper assessment</td>
+			    <td style="font-size: 22px"><?php echo $edtest2ass; ?></td>
+			    <td style="font-size: 22px"><?php echo $eetest2ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>7</td>
-			    <td>ESE Supervisor</td>
-			    <td><?php echo $edesesup; ?></td>
-			    <td><?php echo $eeesesup; ?></td>
+			    <td style="font-size: 22px">7</td>
+			    <td style="font-size: 22px">ESE Supervisor</td>
+			    <td style="font-size: 22px"><?php echo $edesesup; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeesesup; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>8</td>
-			    <td>ESE paper setting</td>
-			    <td><?php echo $edeseps; ?></td>
-			    <td><?php echo $eeeseps; ?></td>
+			    <td style="font-size: 22px">8</td>
+			    <td style="font-size: 22px">ESE paper setting</td>
+			    <td style="font-size: 22px"><?php echo $edeseps; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeeseps; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>9</td>
-			    <td>ESE invigilation/Squad team member</td>
-			    <td><?php echo $edesein; ?></td>
-			    <td><?php echo $eeesein; ?></td>
+			    <td style="font-size: 22px">9</td>
+			    <td style="font-size: 22px">ESE invigilation/Squad team member</td>
+			    <td style="font-size: 22px"><?php echo $edesein; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeesein; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>10</td>
-			    <td>ESE Theory paper assessment</td>
-			    <td><?php echo $edeseth; ?></td>
-			    <td><?php echo $eeeseth; ?></td>
+			    <td style="font-size: 22px">10</td>
+			    <td style="font-size: 22px">ESE Theory paper assessment</td>
+			    <td style="font-size: 22px"><?php echo $edeseth; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeeseth; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>11</td>
-			    <td>ESE Practical/oral examination</td>
-			    <td><?php echo $edesepo; ?></td>
-			    <td><?php echo $eeesepo; ?></td>
+			    <td style="font-size: 22px">11</td>
+			    <td style="font-size: 22px">ESE Practical/oral examination</td>
+			    <td style="font-size: 22px"><?php echo $edesepo; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeesepo; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>12</td>
-			    <td>ESE re-assessment</td>
-			    <td><?php echo $edesere_ass; ?></td>
-			    <td><?php echo $eeesere_ass; ?></td>
+			    <td style="font-size: 22px">12</td>
+			    <td style="font-size: 22px">ESE re-assessment</td>
+			    <td style="font-size: 22px"><?php echo $edesere_ass; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeesere_ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>13</td>
-			    <td>Proof reading</td>
-			    <td><?php echo $edproofr; ?></td>
-			    <td><?php echo $eeproofr; ?></td>
+			    <td style="font-size: 22px">13</td>
+			    <td style="font-size: 22px">Proof reading</td>
+			    <td style="font-size: 22px"><?php echo $edproofr; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeproofr; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>14</td>
-			    <td>Open day</td>
-			    <td><?php echo $edopenday; ?></td>
-			    <td><?php echo $eeopenday; ?></td>
+			    <td style="font-size: 22px">14</td>
+			    <td style="font-size: 22px">Open day</td>
+			    <td style="font-size: 22px"><?php echo $edopenday; ?></td>
+			    <td style="font-size: 22px"><?php echo $eeopenday; ?></td>
 		  	</tr>
 		</table>
 
@@ -548,11 +548,11 @@ tr:nth-child(even) {
 			<div class="col-md-12">
     			<div class="form-group row justify-content-center">
     				<div class="col-6 text-right" style="padding:0">
-    					<label class="col-form-label"><b>Average of A in % =</b></label>
+    					<label class="col-form-label" style="font-size: 22px"><b>Average of A in % =</b></label>
     				</div>
 					  
 					<div class="col-6">
-					   <p class="col-form-label"><?php echo $avg_ap; ?></p>
+					   <p class="col-form-label" style="font-size: 22px"><?php echo $avg_ap; ?></p>
 					</div>
 				</div>							
     		</div>
@@ -567,7 +567,7 @@ tr:nth-child(even) {
 
 		<table class="table table-bordered table-hover">
 			<thead>
-				<th colspan="3">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
+				<th colspan="3" style="font-size: 22px">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
 			</thead>
 			<?php
 
@@ -584,8 +584,8 @@ tr:nth-child(even) {
 					?>
 					<tr>
 					    <td style="width: 5%"><?php echo $srno; ?></td>
-					    <td><?php echo $dara; ?></td>
-					    <td><?php echo $darb; ?></td>
+					    <td style="font-size: 22px"><?php echo $dara; ?></td>
+					    <td style="font-size: 22px"><?php echo $darb; ?></td>
 				  	</tr>
 					<?php
 					$srno+=1;
@@ -597,7 +597,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-6 text-left">
-				<label class="col-form-label">* 2 marks for each compliance</label>
+				<label class="col-form-label" style="font-size: 22px">* 2 marks for each compliance</label>
 			</div>
 			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI 3 = Data out of 10</b></p>
@@ -606,51 +606,51 @@ tr:nth-child(even) {
 		
 		<table class="table table-bordered table-hover" id="tab_logic1">
 			<thead>
-				<th colspan="2">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
-				<th>Description</th>
+				<th colspan="2" style="font-size: 22px">Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</th>
+				<th style="font-size: 22px">Description</th>
 				<!-- <th>Attachments</th> -->
 			</thead>
 			<tr>
-			    <td>1</td>
-				<td>Problem based learning, case studies, group discussions, activity based learning etc.</td>
-				<td style="width: 50%"><?php echo $dpstest1; ?></td>
+			    <td style="font-size: 22px">1</td>
+				<td style="font-size: 22px">Problem based learning, case studies, group discussions, activity based learning etc.</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $dpstest1; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>2</td>
-				<td>Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
-				<td style="width: 50%"><?php echo $dpstest2; ?></td>
+			    <td style="font-size: 22px">2</td>
+				<td style="font-size: 22px">Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $dpstest2; ?></td>
 		  	</tr>
 			<tr>
-			    <td>3</td>
-				<td>Developing and imparting Remedial / Bridge Courses</td>
-				<td style="width: 50%"><?php echo $dtest1in; ?></td>
+			    <td style="font-size: 22px">3</td>
+				<td style="font-size: 22px">Developing and imparting Remedial / Bridge Courses</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $dtest1in; ?></td>
 		  	</tr>	
 		  	<tr>
-			    <td>4</td>
-				<td>Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
-				<td style="width: 50%"><?php echo $dtest2in; ?></td>
+			    <td style="font-size: 22px">4</td>
+				<td style="font-size: 22px">Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $dtest2in; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>5</td>
-				<td>Developing and imparting specialized teaching-learning programmes in physical education, library; innovative compositions and creations in music, performing and visual arts and other tradition areas</td>
-				<td style="width: 50%"><?php echo $dtest1ass; ?></td>
+			    <td style="font-size: 22px">5</td>
+				<td style="font-size: 22px">Developing and imparting specialized teaching-learning programmes in physical education, library; innovative compositions and creations in music, performing and visual arts and other tradition areas</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $dtest1ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>6</td>
-				<td>Audit courses taken (given name/semester/term)</td>
-				<td style="width: 50%"><?php echo $dtest2ass; ?></td>
+			    <td style="font-size: 22px">6</td>
+				<td style="font-size: 22px">Audit courses taken (given name/semester/term)</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $dtest2ass; ?></td>
 		  	</tr>
 		  	<tr>
-			    <td>7</td>
-				<td>Other:</td>
-				<td style="width: 50%"><?php echo $deseps; ?></td>
+			    <td style="font-size: 22px">7</td>
+				<td style="font-size: 22px">Other:</td>
+				<td style="width: 50%;font-size: 22px"><?php echo $deseps; ?></td>
 		  	</tr>		  	
 
 		</table>
 
 		<div class="row">
 			<div class="col-md-6 text-left">
-				<label class="col-form-label">* 2 marks for each compliance</label>
+				<label class="col-form-label" style="font-size: 22px">* 2 marks for each compliance</label>
 			</div>
 			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI 4 = Data out of 10</b></p>
@@ -667,19 +667,19 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12">
-				<p style="font-size: 18px;margin-top: 10px"><b>Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></p>
+				<p style="font-size: 22px;margin-top: 10px"><b>Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></p>
 			</div>
 		</div>
 
 		<table>
 			<thead>
-				<th colspan="3" style="text-align: center">Administrative Post</th>
+				<th colspan="3" style="text-align: center;font-size: 22px">Administrative Post</th>
 			</thead>
 		     	
 			<tr>
-				<th class="text-center">Sr.No</th>
-				<th class="text-center">Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD/<br>Type of Activity</th>
-				<th class="text-center">Role</th>
+				<th class="text-center" style="font-size: 22px">Sr.No</th>
+				<th class="text-center" style="font-size: 22px">Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD/<br>Type of Activity</th>
+				<th class="text-center" style="font-size: 22px">Role</th>
 			</tr>
 			<?php
 
@@ -696,9 +696,9 @@ tr:nth-child(even) {
 					$srno=1;
 					?>
 					<tr>
-						<td><?php echo $srno; ?></td>
-						<td><?php echo $ha; ?></td>
-						<td><?php echo $hb; ?></td>
+						<td style="font-size: 22px"><?php echo $srno; ?></td>
+						<td style="font-size: 22px"><?php echo $ha; ?></td>
+						<td style="font-size: 22px"><?php echo $hb; ?></td>
 					</tr>
 					<?php
 					$srno+=1;
@@ -710,7 +710,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<p>* For HOD/Dean/Vice Principal 40 PI <br> * For Associate HOD/NBA & NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
+				<p style="font-size: 22px">* For HOD/Dean/Vice Principal 40 PI <br> * For Associate HOD/NBA & NAAC co-ordinator/IQAC co-ordinator/Purchase Committee member 20 PI</p>
 			</div>
 		</div>
 
@@ -722,12 +722,12 @@ tr:nth-child(even) {
 
 		<table>
 			<thead>
-				<th colspan="3" style="text-align: center">Activities</th>
+				<th colspan="3" style="text-align: center;font-size: 22px">Activities</th>
 			</thead>
 			<tr>
-				<th class="text-center">Sr.No</th>
-				<th class="text-center">Extension, Co-Curricular and Field based activities / internships in college<br> Type of Activity</th>
-				<th class="text-center">Role</th>
+				<th class="text-center" style="font-size: 22px">Sr.No</th>
+				<th class="text-center" style="font-size: 22px">Extension, Co-Curricular and Field based activities / internships in college<br> Type of Activity</th>
+				<th class="text-center" style="font-size: 22px">Role</th>
 			</tr>
 			<?php
 
@@ -744,9 +744,9 @@ tr:nth-child(even) {
 					$srno=1;
 					?>
 					<tr>
-						<td><?php echo $srno; ?></td>
-						<td><?php echo $ea; ?></td>
-						<td><?php echo $eb; ?></td>
+						<td style="font-size: 22px"><?php echo $srno; ?></td>
+						<td style="font-size: 22px"><?php echo $ea; ?></td>
+						<td style="font-size: 22px"><?php echo $eb; ?></td>
 					</tr>
 					<?php
 					$srno+=1;
@@ -757,7 +757,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<p>* 5 Marks for each compliance. Max.20</p>
+				<p style="font-size: 22px">* 5 Marks for each compliance. Max.20</p>
 			</div>
 		</div>
 
@@ -770,9 +770,9 @@ tr:nth-child(even) {
 		<table>
 			<thead>						     	
 				<tr>
-					<th class="text-center">Sr.No</th>
-					<th class="text-center">Extra-curricular and social activities in college<br> Type of Activity</th>
-					<th class="text-center">Role</th>
+					<th class="text-center" style="font-size: 22px">Sr.No</th>
+					<th class="text-center" style="font-size: 22px">Extra-curricular and social activities in college<br> Type of Activity</th>
+					<th class="text-center" style="font-size: 22px">Role</th>
 				</tr>
 				<?php
 
@@ -789,9 +789,9 @@ tr:nth-child(even) {
 						$srno=1;
 						?>
 						<tr>
-							<td><?php echo $srno; ?></td>
-							<td><?php echo $eca; ?></td>
-							<td><?php echo $ecb; ?></td>
+							<td style="font-size: 22px"><?php echo $srno; ?></td>
+							<td style="font-size: 22px"><?php echo $eca; ?></td>
+							<td style="font-size: 22px"><?php echo $ecb; ?></td>
 						</tr>
 						<?php
 						$srno+=1;
@@ -803,7 +803,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<p>* 5 Marks for each compliance. Max.20</p>
+				<p style="font-size: 22px">* 5 Marks for each compliance. Max.20</p>
 			</div>
 		</div>
 
@@ -816,9 +816,9 @@ tr:nth-child(even) {
 		<table>
 			<thead>						     	
 				<tr>
-					<th class="text-center">Sr.No</th>
-					<th class="text-center">College administration/organization member/committee member/NBA/NAAC of college: <br> Type of Activity</th>
-					<th class="text-center">Role</th>
+					<th class="text-center" style="font-size: 22px">Sr.No</th>
+					<th class="text-center" style="font-size: 22px">College administration/organization member/committee member/NBA/NAAC of college: <br> Type of Activity</th>
+					<th class="text-center" style="font-size: 22px">Role</th>
 				</tr>
 				<?php
 
@@ -834,9 +834,9 @@ tr:nth-child(even) {
 						$srno=1;
 						?>
 						<tr>
-							<td><?php echo $srno; ?></td>
-							<td><?php echo $ca; ?></td>
-							<td><?php echo $cb; ?></td>
+							<td style="font-size: 22px"><?php echo $srno; ?></td>
+							<td style="font-size: 22px"><?php echo $ca; ?></td>
+							<td style="font-size: 22px"><?php echo $cb; ?></td>
 						</tr>
 						<?php
 						$srno+=1;
@@ -848,7 +848,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12 text-left">
-				<p>* 5 Marks for each compliance. Max.20</p>
+				<p style="font-size: 22px">* 5 Marks for each compliance. Max.20</p>
 			</div>
 		</div>
 
@@ -868,7 +868,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12">
-				<p style="font-size: 18px;margin-top: 10px"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175)</b></p>
+				<p style="font-size: 22px;margin-top: 10px"><b>Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175)</b></p>
 			</div>
 		</div>
 
@@ -891,15 +891,15 @@ tr:nth-child(even) {
 				<div class="container" style="border: 1px solid #c8c8c8"><br>
 					<div class="row">
 						<div class="col-md-12 text-left">
-							<p style="text-align: center"><b>Published Papers In Peer Reviewed Journals (Max. PI=20)</b></p>
+							<p style="text-align: center;font-size: 22px"><b>Published Papers In Peer Reviewed Journals (Max. PI=20)</b></p>
 						</div>
 					</div>
 					<hr style="border: 0.5px solid #c8c8c8">
 					<div class="row">
 						<div class="col-md-12 text-left">
 				    		<div class="form-inline my-2">
-				    			<p>Title with page no.: </p>
-				    			<p><?php echo $pptitle; ?></p>						
+				    			<p style="font-size: 22px">Title with page no.: </p>
+				    			<p style="font-size: 22px"><?php echo $pptitle; ?></p>						
 							</div>
 						</div>
 					</div>
@@ -908,23 +908,23 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 							<div class="form-inline my-2">
-								<p>Name of peer review Journals (not online journals)</p>
-								<p><?php echo $ppnpr; ?></p>
+								<p style="font-size: 22px">Name of peer review Journals (not online journals)</p>
+								<p style="font-size: 22px"><?php echo $ppnpr; ?></p>
 							</div>					
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 text-left">
 							<div class="form-inline my-2">
-								<p>ISSN/ISBN No.: </p>
-								<p><?php echo $ppisbn; ?></p>
+								<p style="font-size: 22px">ISSN/ISBN No.: </p>
+								<p style="font-size: 22px"><?php echo $ppisbn; ?></p>
 							</div>					
 						</div>
 
 						<div class="col-md-6 text-right">
 							<div class="form-inline my-2">
-								<p>Impact factor: </p>
-								<p><?php echo $ppif; ?></p>
+								<p style="font-size: 22px">Impact factor: </p>
+								<p style="font-size: 22px"><?php echo $ppif; ?></p>
 							</div>						
 						</div>
 					</div>
@@ -932,10 +932,10 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-2 text-left">
-							<p>Whether you are main author: </p>
+							<p style="font-size: 22px">Whether you are main author: </p>
 						</div>
 				    	<div class="col-md-3 text-left">
-							<p><?php echo $customRadioInline1; ?></p>
+							<p style="font-size: 22px"><?php echo $customRadioInline1; ?></p>
 						</div>
 						<div class="col-md-1">
 							<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
@@ -943,8 +943,8 @@ tr:nth-child(even) {
 						</div>
 						<div class="col-md-3 text-left">
 							<div class="form-inline my-2">
-								<p>No. of co-author: </p>
-								<p><?php echo $ppnca; ?></p>	
+								<p style="font-size: 22px">No. of co-author: </p>
+								<p style="font-size: 22px"><?php echo $ppnca; ?></p>	
 							</div>
 						</div>
 						<div class="col-md-1">
@@ -957,7 +957,7 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-10 text-left">
-							<p>* 20 marks for peer review journal first author <br>* 10 marks for second author</p>
+							<p style="font-size: 22px">* 20 marks for peer review journal first author <br>* 10 marks for second author</p>
 						</div>
 					</div>
 
@@ -987,7 +987,7 @@ tr:nth-child(even) {
 				<div class="container" style="border: 1px solid #c8c8c8"><br>
 					<div class="row">
 						<div class="col-md-12 text-left">
-							<p style="text-align: center"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p>
+							<p style="text-align: center;font-size: 22px"><b>Published Papers in International/National Conference Abroad (Max.PI=15)</b></p>
 						</div>
 					</div>
 					<hr style="border: 0.5px solid #c8c8c8">
@@ -995,8 +995,8 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 				    		<div class="form-inline my-2">
-				    			<p><b>Title with page no.:</b></p>
-				    			<p><?php echo $pptitleic; ?></p>						
+				    			<p style="font-size: 22px"><b>Title with page no.:</b></p>
+				    			<p style="font-size: 22px"><?php echo $pptitleic; ?></p>						
 							</div>
 						</div>
 					</div>
@@ -1005,23 +1005,23 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 							<div class="form-inline my-2">
-								<p><b>Name of International Conference held Abroad:</b></p>
-								<p><?php echo $ppnpric; ?></p>
+								<p style="font-size: 22px"><b>Name of International Conference held Abroad:</b></p>
+								<p style="font-size: 22px"><?php echo $ppnpric; ?></p>
 							</div>					
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 text-left">
 							<div class="form-inline my-2">
-								<p><b>ISSN/ISBN No.:</b></p>
-								<p><?php echo $ppisbnic; ?></p>
+								<p style="font-size: 22px"><b>ISSN/ISBN No.:</b></p>
+								<p style="font-size: 22px"><?php echo $ppisbnic; ?></p>
 							</div>					
 						</div>
 
 						<div class="col-md-6 text-right">
 							<div class="form-inline my-2">
-								<p><b>Impact factor:</b></p>
-								<p><?php echo $ppific; ?></p>
+								<p style="font-size: 22px"><b>Impact factor:</b></p>
+								<p style="font-size: 22px"><?php echo $ppific; ?></p>
 							</div>						
 						</div>
 					</div>		
@@ -1029,10 +1029,10 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-2 text-left">
-							<p><b>Whether you are main author:</b></p>
+							<p style="font-size: 22px"><b>Whether you are main author:</b></p>
 						</div>
 				    	<div class="col-md-3 text-left">
-				    		<p><?php echo $customRadioInline1ic; ?></p>
+				    		<p style="font-size: 22px"><?php echo $customRadioInline1ic; ?></p>
 						</div>
 						<div class="col-md-1">
 							<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
@@ -1040,8 +1040,8 @@ tr:nth-child(even) {
 						</div>
 						<div class="col-md-3 text-left">
 							<div class="form-inline my-2">
-								<p class="mr-sm-2"><b>No. of co-author:</b></p>
-								<p><?php echo $ppncaic; ?></p>
+								<p class="mr-sm-2" style="font-size: 22px"><b>No. of co-author:</b></p>
+								<p style="font-size: 22px"><?php echo $ppncaic; ?></p>
 							</div>
 						</div>
 							<div class="col-md-1">
@@ -1059,7 +1059,7 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-10 text-left">
-							<p>* 15 marks for International conference for first author <br>* 08 marks for second author</p>
+							<p style="font-size: 22px">* 15 marks for International conference for first author <br>* 08 marks for second author</p>
 						</div>
 					</div>
 				</div>
@@ -1088,7 +1088,7 @@ tr:nth-child(even) {
 				<div class="container" style="border: 1px solid #c8c8c8"><br>
 					<div class="row">
 						<div class="col-md-12 text-left">
-							<p style="text-align: center"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p>
+							<p style="text-align: center;font-size: 22px"><b>Published Papers in International/National Conference in India (Max.PI=10)</b></p>
 						</div>
 					</div>
 					<hr style="border: 0.5px solid #c8c8c8">
@@ -1096,8 +1096,8 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 				    		<div class="form-inline my-2">
-				    			<p><b>Title with page no.:</b></p>
-				    			<p><?php echo $pptitleinc; ?></p>						
+				    			<p style="font-size: 22px"><b>Title with page no.:</b></p>
+				    			<p style="font-size: 22px"><?php echo $pptitleinc; ?></p>						
 							</div>
 						</div>
 					</div>
@@ -1106,23 +1106,23 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 							<div class="form-inline my-2">
-								<p><b>Name of International Conference held in India:</b></p>
-								<p><?php echo $ppnprinc; ?></p>
+								<p style="font-size: 22px"><b>Name of International Conference held in India:</b></p>
+								<p style="font-size: 22px"><?php echo $ppnprinc; ?></p>
 							</div>					
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 text-left">
 							<div class="form-inline my-2">
-								<p><b>ISSN/ISBN No.:</b></p>
-								<p><?php echo $ppisbnpinc; ?></p>
+								<p style="font-size: 22px"><b>ISSN/ISBN No.:</b></p>
+								<p style="font-size: 22px"><?php echo $ppisbnpinc; ?></p>
 							</div>					
 						</div>
 
 						<div class="col-md-6 text-right">
 							<div class="form-inline my-2">
-								<p><b>Impact factor:</b></p>
-								<p><?php echo $ppifinc; ?></p>
+								<p style="font-size: 22px"><b>Impact factor:</b></p>
+								<p style="font-size: 22px"><?php echo $ppifinc; ?></p>
 							</div>						
 						</div>
 					</div>		
@@ -1130,10 +1130,10 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-2 text-left">
-							<p><b>Whether you are main author:</b></p>
+							<p style="font-size: 22px"><b>Whether you are main author:</b></p>
 						</div>
 				    	<div class="col-md-3 text-left">
-							<p><?php echo $customRadioInline1inc; ?></p>
+							<p style="font-size: 22px"><?php echo $customRadioInline1inc; ?></p>
 						</div>
 						<div class="col-md-1">
 							<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
@@ -1141,8 +1141,8 @@ tr:nth-child(even) {
 						</div>
 						<div class="col-md-3 text-left">
 							<div class="form-inline my-2">
-								<p><b>No. of co-author:</b></p>
-								<p><?php echo $ppncainc; ?></p>
+								<p style="font-size: 22px"><b>No. of co-author:</b></p>
+								<p style="font-size: 22px"><?php echo $ppncainc; ?></p>
 							</div>
 						</div>
 							<div class="col-md-1">
@@ -1160,7 +1160,7 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-10 text-left">
-							<p>* 10 marks for International conference for first author <br>* 05 marks for second author</p>
+							<p style="font-size: 22px">* 10 marks for International conference for first author <br>* 05 marks for second author</p>
 						</div>				
 					</div>
 				</div>
@@ -1193,7 +1193,7 @@ tr:nth-child(even) {
 				<div class="container" style="border: 1px solid #c8c8c8"><br>
 					<div class="row">
 						<div class="col-md-12 text-left">
-							<p style="text-align: center"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p>
+							<p style="text-align: center;font-size: 22px"><b>Books/Articles/Chapters published in Books (Max.PI=15)</b></p>
 						</div>
 					</div>
 					<hr style="border: 0.5px solid #c8c8c8">
@@ -1201,8 +1201,8 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 				    		<div class="form-inline my-2">
-				    			<p><b>Title with page no.:</b></p>
-				    			<p><?php echo $pptitlebk; ?></p>					
+				    			<p style="font-size: 22px"><b>Title with page no.:</b></p>
+				    			<p style="font-size: 22px"><?php echo $pptitlebk; ?></p>					
 							</div>
 						</div>
 					</div>
@@ -1211,23 +1211,23 @@ tr:nth-child(even) {
 					<div class="row">
 						<div class="col-md-12 text-left">
 							<div class="form-inline my-2">
-								<p><b>Publisher:</b></p>
-								<p><?php echo $ppnprbk; ?></p>
+								<p style="font-size: 22px"><b>Publisher:</b></p>
+								<p style="font-size: 22px"><?php echo $ppnprbk; ?></p>
 							</div>					
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 text-left">
 							<div class="form-inline my-2">
-								<p><b>ISSN/ISBN No.:</b></p>
-								<p><?php echo $ppisbnbk; ?></p>
+								<p style="font-size: 22px"><b>ISSN/ISBN No.:</b></p>
+								<p style="font-size: 22px"><?php echo $ppisbnbk; ?></p>
 							</div>					
 						</div>
 
 						<div class="col-md-6 text-right">
 							<div class="form-inline my-2">
-								<p><b>Date of Publication:</b></p>
-								<p><?php echo $ppdatebk; ?></p>
+								<p style="font-size: 22px"><b>Date of Publication:</b></p>
+								<p style="font-size: 22px"><?php echo $ppdatebk; ?></p>
 							</div>						
 						</div>
 					</div>		
@@ -1237,16 +1237,16 @@ tr:nth-child(even) {
 
 						<div class="col-md-5 text-left">
 							<div class="form-inline my-2">
-								<p><b>Impact factor:</b></p>
-								<p><?php echo $ppifbk; ?></p>
+								<p style="font-size: 22px"><b>Impact factor:</b></p>
+								<p style="font-size: 22px"><?php echo $ppifbk; ?></p>
 							</div>						
 						</div>
 
 						<div class="col-md-2 text-left">
-							<p><b>Whether you are main author:</b></p>
+							<p style="font-size: 22px"><b>Whether you are main author:</b></p>
 						</div>
 				    	<div class="col-md-3">
-							<p><?php echo $customRadioInline1bk; ?></p>
+							<p style="font-size: 22px"><?php echo $customRadioInline1bk; ?></p>
 						</div>
 						<div class="col-md-1">
 							<div class="v1" style="border-left: 0.5px solid #c8c8c8;height: 70px;">
@@ -1254,8 +1254,8 @@ tr:nth-child(even) {
 						</div>
 						<div class="col-md-3 text-left">
 							<div class="form-inline my-2">
-								<p>No. of co-author</p>
-								<p><?php echo $ppncabk; ?></p>
+								<p style="font-size: 22px">No. of co-author</p>
+								<p style="font-size: 22px"><?php echo $ppncabk; ?></p>
 							</div>
 						</div>
 							<div class="col-md-1">
@@ -1273,7 +1273,7 @@ tr:nth-child(even) {
 
 					<div class="row">
 						<div class="col-md-10 text-left">
-							<p>*15 marks for first author <br>* 08 marks for co-author</p>
+							<p style="font-size: 22px">*15 marks for first author <br>* 08 marks for co-author</p>
 						</div>
 					</div>
 				</div>
@@ -1307,55 +1307,55 @@ tr:nth-child(even) {
 					<div class="admin-table">
 					<table class="table table-bordered table-hover" id="tab_logic1">
 						<thead>
-							<th colspan="6">Research/thesis supervisor and project guide (Max.PI=40)</th>
+							<th colspan="6" style="font-size: 22px">Research/thesis supervisor and project guide (Max.PI=40)</th>
 						</thead>
 						     	
 							<tr>
-								<th class="text-center">Degree</th>
-								<th class="text-center">Number Enrolled</th>
-								<th class="text-center">Thesis submitted</th>
-								<th class="text-center">No. of Degree Awarded</th>
+								<th class="text-center" style="font-size: 22px">Degree</th>
+								<th class="text-center" style="font-size: 22px">Number Enrolled</th>
+								<th class="text-center" style="font-size: 22px">Thesis submitted</th>
+								<th class="text-center" style="font-size: 22px">No. of Degree Awarded</th>
 							</tr>
 						<tbody>
 							<tr id='addr90'>
-								<td>Ph.D</td>
+								<td style="font-size: 22px">Ph.D</td>
 								<td>
-									<p><?php echo $phdne; ?></p>
+									<p style="font-size: 22px"><?php echo $phdne; ?></p>
 								</td>
 								<td>
-									<p><?php echo $phdts; ?></p>
+									<p style="font-size: 22px"><?php echo $phdts; ?></p>
 								</td>
 								<td>
-									<p><?php echo $phdda; ?></p>
+									<p style="font-size: 22px"><?php echo $phdda; ?></p>
 								</td>								
 							</tr>
 		                    <tr id='addr91'>
-		                    	<td>M.Tech</td>
+		                    	<td style="font-size: 22px">M.Tech</td>
 								<td>
-									<p><?php echo $mtechne; ?></p>
+									<p style="font-size: 22px"><?php echo $mtechne; ?></p>
 								</td>
 								<td>
-									<p><?php echo $mtechts; ?></p>
+									<p style="font-size: 22px"><?php echo $mtechts; ?></p>
 								</td>
 								<td>
-									<p><?php echo $mtechda; ?></p>
+									<p style="font-size: 22px"><?php echo $mtechda; ?></p>
 								</td>								
 		                    </tr>
 		                    <tr id='addr92'>
-		                    	<td>B.Tech <br>(Number of groups)</td>
+		                    	<td style="font-size: 22px">B.Tech <br>(Number of groups)</td>
 								<td>
-									<p><?php echo $btechne; ?></p>
+									<p style="font-size: 22px"><?php echo $btechne; ?></p>
 								</td>
 								<td>
-									<p><?php echo $btechts; ?></p>
+									<p style="font-size: 22px"><?php echo $btechts; ?></p>
 								</td>
 								<td>
-									<p><?php echo $btechda; ?></p>
+									<p style="font-size: 22px"><?php echo $btechda; ?></p>
 								</td>
 		                    </tr>
 						</tbody>
 						<thead> 
-							<th colspan="6" style="text-align: left">* 10 marks for awarded / 8 marks for thesis submitted / 6 marks for enrolled Ph.D students as a guide during academic year.<br>* 8 marks for awarded / 6 marks for thesis submitted / 4 marks for enrolled M.Tech students as guide during academic year.<br>* 6 marks for awarded / 4 marks for thesis submitted / 2 marks per enrolled B.Tech student groups as a guide during academic year.<br>* For co-guide the marks will be half.</th>
+							<th colspan="6" style="text-align: left;font-size: 22px">* 10 marks for awarded / 8 marks for thesis submitted / 6 marks for enrolled Ph.D students as a guide during academic year.<br>* 8 marks for awarded / 6 marks for thesis submitted / 4 marks for enrolled M.Tech students as guide during academic year.<br>* 6 marks for awarded / 4 marks for thesis submitted / 2 marks per enrolled B.Tech student groups as a guide during academic year.<br>* For co-guide the marks will be half.</th>
 						</thead>					
 					</table>
 					
@@ -1371,15 +1371,15 @@ tr:nth-child(even) {
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="6">Research/project/consultancy proposals submitted in academic year 2018/2019 but yet to get approval (Max. PI=15)</th>
+								<th colspan="6" style="font-size: 22px">Research/project/consultancy proposals submitted in academic year 2018/2019 but yet to get approval (Max. PI=15)</th>
 							</thead>
 						     	
 							<tr>
-								<th class="text-center">Sr.No</th>
-								<th class="text-center">Title</th>
-								<th class="text-center">Agency</th>
-								<th class="text-center">Date of Submission</th>
-								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+								<th class="text-center" style="font-size: 22px">Sr.No</th>
+								<th class="text-center" style="font-size: 22px">Title</th>
+								<th class="text-center" style="font-size: 22px">Agency</th>
+								<th class="text-center" style="font-size: 22px">Date of Submission</th>
+								<th class="text-center" style="font-size: 22px">Grant/Amount Mobilized (Rs.)</th>
 							</tr>
 							<tbody>
 								<?php
@@ -1398,11 +1398,11 @@ tr:nth-child(even) {
 										$srno=1;
 										?>
 										<tr>
-											<td><?php echo $srno; ?></td>
-											<td><?php echo $ta; ?></td>
-											<td><?php echo $ab; ?></td>
-											<td><?php echo $dc; ?></td>
-											<td><?php echo $gd; ?></td>									
+											<td style="font-size: 22px"><?php echo $srno; ?></td>
+											<td style="font-size: 22px"><?php echo $ta; ?></td>
+											<td style="font-size: 22px"><?php echo $ab; ?></td>
+											<td style="font-size: 22px"><?php echo $dc; ?></td>
+											<td style="font-size: 22px"><?php echo $gd; ?></td>									
 										</tr>
 										<?php
 										$srno+=1;
@@ -1424,15 +1424,15 @@ tr:nth-child(even) {
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="6">Ongoing Research/project/consultancy proposals approved/initiated in academic year 2018/2019 but yet to complete (Max. PI=15)</th>
+								<th colspan="6" style="font-size: 22px">Ongoing Research/project/consultancy proposals approved/initiated in academic year 2018/2019 but yet to complete (Max. PI=15)</th>
 							</thead>
 						     	
 							<tr>
-								<th class="text-center">Sr.No</th>
-								<th class="text-center">Title</th>
-								<th class="text-center">Agency</th>
-								<th class="text-center">Period in years</th>
-								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+								<th class="text-center" style="font-size: 22px">Sr.No</th>
+								<th class="text-center" style="font-size: 22px">Title</th>
+								<th class="text-center" style="font-size: 22px">Agency</th>
+								<th class="text-center" style="font-size: 22px">Period in years</th>
+								<th class="text-center" style="font-size: 22px">Grant/Amount Mobilized (Rs.)</th>
 							</tr>
 							<tbody>
 								<?php
@@ -1451,11 +1451,11 @@ tr:nth-child(even) {
 										$srno=1;
 										?>
 										<tr>
-											<td><?php echo $srno; ?></td>
-											<td><?php echo $tta; ?></td>
-											<td><?php echo $aab; ?></td>
-											<td><?php echo $ddc; ?></td>
-											<td><?php echo $ggd; ?></td>									
+											<td style="font-size: 22px"><?php echo $srno; ?></td>
+											<td style="font-size: 22px"><?php echo $tta; ?></td>
+											<td style="font-size: 22px"><?php echo $aab; ?></td>
+											<td style="font-size: 22px"><?php echo $ddc; ?></td>
+											<td style="font-size: 22px"><?php echo $ggd; ?></td>									
 										</tr>
 										<?php
 										$srno+=1;
@@ -1477,15 +1477,15 @@ tr:nth-child(even) {
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="6">Completed Research Project and Consultancies initiated in academic year 2017-2018 but completed in academic year 2018-2019 (Max. PI=20) (Max. PI=20)</th>
+								<th colspan="6" style="font-size: 22px">Completed Research Project and Consultancies initiated in academic year 2017-2018 but completed in academic year 2018-2019 (Max. PI=20) (Max. PI=20)</th>
 							</thead>
 						     	
 							<tr>
-								<th class="text-center">Sr.No</th>
-								<th class="text-center">Title</th>
-								<th class="text-center">Agency</th>
-								<th class="text-center">Date of Completion</th>
-								<th class="text-center">Grant/Amount Mobilized (Rs.)</th>
+								<th class="text-center" style="font-size: 22px">Sr.No</th>
+								<th class="text-center" style="font-size: 22px">Title</th>
+								<th class="text-center" style="font-size: 22px">Agency</th>
+								<th class="text-center" style="font-size: 22px">Date of Completion</th>
+								<th class="text-center" style="font-size: 22px">Grant/Amount Mobilized (Rs.)</th>
 							</tr>
 							<tbody>
 								<?php
@@ -1504,11 +1504,11 @@ tr:nth-child(even) {
 										$srno=1;
 										?>
 										<tr>
-											<td><?php echo $srno; ?></td>
-											<td><?php echo $tca; ?></td>
-											<td><?php echo $acb; ?></td>
-											<td><?php echo $dcc; ?></td>
-											<td><?php echo $gcd; ?></td>									
+											<td style="font-size: 22px"><?php echo $srno; ?></td>
+											<td style="font-size: 22px"><?php echo $tca; ?></td>
+											<td style="font-size: 22px"><?php echo $acb; ?></td>
+											<td style="font-size: 22px"><?php echo $dcc; ?></td>
+											<td style="font-size: 22px"><?php echo $gcd; ?></td>									
 										</tr>
 										<?php
 										$srno+=1;
@@ -1530,13 +1530,13 @@ tr:nth-child(even) {
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic8">
 							<thead>
-								<th colspan="6">Patent/Intellectual property filed/received (Max.PI=25)</th>
+								<th colspan="6" style="font-size: 22px">Patent/Intellectual property filed/received (Max.PI=25)</th>
 							</thead>
 						     	
 							<tr>
-								<th class="text-center">Sr.No</th>
-								<th class="text-center">Details of patent/intellectual property</th>
-								<th class="text-center">Date of received/filed</th>
+								<th class="text-center" style="font-size: 22px">Sr.No</th>
+								<th class="text-center" style="font-size: 22px">Details of patent/intellectual property</th>
+								<th class="text-center" style="font-size: 22px">Date of received/filed</th>
 							</tr>
 							<tbody>
 								<?php
@@ -1553,9 +1553,9 @@ tr:nth-child(even) {
 										$srno=1;
 										?>
 										<tr>
-											<td><?php echo $srno; ?></td>
-											<td><?php echo $dpi; ?></td>
-											<td><?php echo $drf; ?></td>								
+											<td style="font-size: 22px"><?php echo $srno; ?></td>
+											<td style="font-size: 22px"><?php echo $dpi; ?></td>
+											<td style="font-size: 22px"><?php echo $drf; ?></td>								
 										</tr>
 										<?php
 										$srno+=1;
@@ -1575,20 +1575,20 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-12">
-				<p style="font-size: 18px;margin-top: 10px"><b>Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></p>
+				<p style="font-size: 22px;margin-top: 10px"><b>Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></p>
 			</div>
 		</div>
 
 		<table>
 			<thead>
-				<th colspan="4" style="text-align: center">Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college (Max.PI=30)</th>
+				<th colspan="4" style="text-align: center;font-size: 22px">Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college (Max.PI=30)</th>
 			</thead>
 		     	
 			<tr>
-				<th class="text-center">Sr.No</th>
-				<th class="text-center">Details of Programme</th>
-				<th class="text-center">Date</th>
-				<th class="text-center">Organized by</th>
+				<th class="text-center" style="font-size: 22px">Sr.No</th>
+				<th class="text-center" style="font-size: 22px">Details of Programme</th>
+				<th class="text-center" style="font-size: 22px">Date</th>
+				<th class="text-center" style="font-size: 22px">Organized by</th>
 			</tr>
 			<?php
 
@@ -1605,10 +1605,10 @@ tr:nth-child(even) {
 					$srno=1;
 					?>
 					<tr>
-						<td style="text-align: center"><?php echo $srno; ?></td>
-						<td><?php echo $cativ_dp; ?></td>
-						<td><?php echo $cativ_datee; ?></td>
-						<td><?php echo $cativ_o; ?></td>
+						<td style="text-align: center" style="font-size: 22px"><?php echo $srno; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ_dp; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ_datee; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ_o; ?></td>
 					</tr>
 					<?php
 					$srno+=1;
@@ -1620,7 +1620,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-6 text-left">
-				<p>* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
+				<p style="font-size: 22px">* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 			</div>
 			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI = Data</b></p>
@@ -1629,14 +1629,14 @@ tr:nth-child(even) {
 
 		<table>
 			<thead>
-				<th colspan="4" style="text-align: center">Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college (Max. PI=30)</th>
+				<th colspan="4" style="text-align: center;font-size: 22px">Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college (Max. PI=30)</th>
 			</thead>
 		     	
 			<tr>
-				<th class="text-center">Sr.No</th>
-				<th class="text-center">Details of Programme</th>
-				<th class="text-center">Date</th>
-				<th class="text-center">Organized by</th>
+				<th class="text-center" style="font-size: 22px">Sr.No</th>
+				<th class="text-center" style="font-size: 22px">Details of Programme</th>
+				<th class="text-center" style="font-size: 22px">Date</th>
+				<th class="text-center" style="font-size: 22px">Organized by</th>
 			</tr>
 			<?php
 
@@ -1653,10 +1653,10 @@ tr:nth-child(even) {
 					$srno=1;
 					?>
 					<tr>
-						<td style="text-align: center"><?php echo $srno; ?></td>
-						<td><?php echo $cativ1_dp; ?></td>
-						<td><?php echo $cativ1_datee; ?></td>
-						<td><?php echo $cativ1_o; ?></td>
+						<td style="text-align: center;font-size: 22px"><?php echo $srno; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ1_dp; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ1_datee; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ1_o; ?></td>
 					</tr>
 					<?php
 					$srno+=1;
@@ -1668,7 +1668,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-6 text-left">
-				<p>* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
+				<p style="font-size: 22px">* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 			</div>
 			<!-- <div class="col-md-6">
 				<p style="text-align: right"><b>PI = Data</b></p>
@@ -1677,13 +1677,13 @@ tr:nth-child(even) {
 
 		<table>
 			<thead>
-				<th colspan="4" style="text-align: center">Please give details of any other credential, significant contributions, and awards received etc. Which are not mentioned. (Max. PI=15)</th>
+				<th colspan="4" style="text-align: center;font-size: 22px">Please give details of any other credential, significant contributions, and awards received etc. Which are not mentioned. (Max. PI=15)</th>
 			</thead>
 		     	
 			<tr>
-				<th class="text-center">Sr.No</th>
-				<th class="text-center">Details of Programme</th>
-				<th class="text-center">Extra Information (if any)</th>
+				<th class="text-center" style="font-size: 22px">Sr.No</th>
+				<th class="text-center" style="font-size: 22px">Details of Programme</th>
+				<th class="text-center" style="font-size: 22px">Extra Information (if any)</th>
 			</tr>
 			<?php
 
@@ -1699,9 +1699,9 @@ tr:nth-child(even) {
 					$srno=1;
 					?>
 					<tr>
-						<td style="text-align: center"><?php echo $srno; ?></td>
-						<td><?php echo $cativ2_dp; ?></td>
-						<td><?php echo $cativ2; ?></td>
+						<td style="text-align: center" style="font-size: 22px"><?php echo $srno; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ2_dp; ?></td>
+						<td style="font-size: 22px"><?php echo $cativ2; ?></td>
 					</tr>
 					<?php
 					$srno+=1;
@@ -1714,7 +1714,7 @@ tr:nth-child(even) {
 
 		<div class="row">
 			<div class="col-md-6 text-left">
-				<p>* 05 Marks for international / national credentials / activity / contribution not mentioned in application</p>
+				<p style="font-size: 22px">* 05 Marks for international / national credentials / activity / contribution not mentioned in application</p>
 			</div>
 			<!-- <div class="col-md-6">
 				<p class="col-form-label" style="text-align: right"><b>PI = Data</b></p>
@@ -1731,7 +1731,7 @@ tr:nth-child(even) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-left">
-					<p class="text-center"><b>List of Enclosures</b></p>
+					<p class="text-center" style="font-size: 22px"><b>List of Enclosures</b></p>
 				</div>
 			</div>
     		<div class="row clearfix">
@@ -1739,8 +1739,8 @@ tr:nth-child(even) {
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic4">
 						    <tr>
-								<th class="text-center">Sr. No.</th>
-								<th class="text-center">Description</th>
+								<th class="text-center" style="font-size: 22px">Sr. No.</th>
+								<th class="text-center" style="font-size: 22px">Description</th>
 								<!-- <th class="text-center">Attached File</th> -->
 							</tr>				
 							 
@@ -1761,8 +1761,8 @@ tr:nth-child(even) {
 									?>
 
 									<tr>
-										<td><b>~</b></td>
-										<td><b>Part B Category 1</b></td>
+										<td style="font-size: 22px"><b>~</b></td>
+										<td style="font-size: 22px"><b>Part B Category 1</b></td>
 										<!-- <td><b>~</b></td> -->
 									</tr>
 									<?php
@@ -1813,8 +1813,8 @@ tr:nth-child(even) {
 										{
 										    ?>
 										    <tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($$file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($$file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 										    <?php
@@ -1828,8 +1828,8 @@ tr:nth-child(even) {
 										{
 										    ?>
 										    <tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($$file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($$file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 										    <?php
@@ -1847,8 +1847,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1866,8 +1866,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1885,8 +1885,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1896,8 +1896,8 @@ tr:nth-child(even) {
 
 									?>
 									<tr>
-										<td><b>~</b></td>
-										<td><b>Part B Category 2</b></td>
+										<td style="font-size: 22px"><b>~</b></td>
+										<td style="font-size: 22px"><b>Part B Category 2</b></td>
 										<!-- <td><b>~</b></td> -->
 									</tr>
 									<?php
@@ -1912,8 +1912,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1931,8 +1931,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1950,8 +1950,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1969,8 +1969,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -1980,8 +1980,8 @@ tr:nth-child(even) {
 
 									?>
 									<tr>
-										<td><b>~</b></td>
-										<td><b>Part B Category 3</b></td>
+										<td style="font-size: 22px"><b>~</b></td>
+										<td style="font-size: 22px"><b>Part B Category 3</b></td>
 										<!-- <td><b>~</b></td> -->
 									</tr>
 									<?php
@@ -2000,8 +2000,8 @@ tr:nth-child(even) {
 									{
 										?>
 										<tr>
-											<td><?php echo $counter; ?></td>
-											<td><?php echo basename($phdfile); ?></td>
+											<td style="font-size: 22px"><?php echo $counter; ?></td>
+											<td style="font-size: 22px"><?php echo basename($phdfile); ?></td>
 											<!-- <td><a href="viewfile.php?location=<?php echo $phdfile; ?>" target="_blank">View File</a></td> -->
 										</tr>
 										<?php
@@ -2010,8 +2010,8 @@ tr:nth-child(even) {
 									{
 										?>									
 										<tr>
-											<td><?php echo $counter; ?></td>
-											<td><?php echo basename($mtechfile); ?></td>
+											<td style="font-size: 22px"><?php echo $counter; ?></td>
+											<td style="font-size: 22px"><?php echo basename($mtechfile); ?></td>
 											<!-- <td><a href="viewfile.php?location=<?php echo $mtechfile; ?>" target="_blank">View File</a></td> -->
 										</tr>
 										<?php
@@ -2020,8 +2020,8 @@ tr:nth-child(even) {
 									{
 										?>
 										<tr>
-											<td><?php echo $counter; ?></td>
-											<td><?php echo basename($btechfile); ?></td>
+											<td style="font-size: 22px"><?php echo $counter; ?></td>
+											<td style="font-size: 22px"><?php echo basename($btechfile); ?></td>
 											<!-- <td><a href="viewfile.php?location=<?php echo $btechfile; ?>" target="_blank">View File</a></td> -->
 										</tr>
 										<?php
@@ -2040,8 +2040,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2059,8 +2059,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2078,8 +2078,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2097,8 +2097,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2116,8 +2116,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2135,8 +2135,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2154,8 +2154,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2173,8 +2173,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2184,8 +2184,8 @@ tr:nth-child(even) {
 
 									?>
 									<tr>
-										<td><b>~</b></td>
-										<td><b>Part B Category 4</b></td>
+										<td style="font-size: 22px"><b>~</b></td>
+										<td style="font-size: 22px"><b>Part B Category 4</b></td>
 										<!-- <td><b>~</b></td> -->
 									</tr>
 									<?php
@@ -2200,8 +2200,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2219,8 +2219,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2238,8 +2238,8 @@ tr:nth-child(even) {
 										{
 											?>
 											<tr>
-												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<td style="font-size: 22px"><?php echo $counter; ?></td>
+												<td style="font-size: 22px"><?php echo basename($file); ?></td>
 												<!-- <td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td> -->
 											</tr>
 											<?php
@@ -2331,7 +2331,7 @@ tr:nth-child(even) {
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<p>NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
+					<p style="font-size: 22px">NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
 				</div>
 			</div>
 		</div>

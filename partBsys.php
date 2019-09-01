@@ -3,6 +3,9 @@
 session_start();
 
 include 'dbh.php';
+include 'escape_chars_sys.php';
+
+ini_set('max_execution_time', 0);
 
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
@@ -21,27 +24,45 @@ $email=mysqli_real_escape_string($conn,$rowe['email']);
 
 // part_b_cat_1_cto
 $ctocourse=$_POST['ctocourse'];
+$ctocourse=array_map("escape_chars_func",$ctocourse);
 $ctotyprlpt=$_POST['ctotyprlpt'];
+$ctotyprlpt=array_map("escape_chars_func",$ctotyprlpt);
 $ctougpg=$_POST['ctougpg'];
+$ctougpg=array_map("escape_chars_func",$ctougpg);
 $ctoclasssemester=$_POST['ctoclasssemester'];
+$ctoclasssemester=array_map("escape_chars_func",$ctoclasssemester);
 $ctohrsweek=$_POST['ctohrsweek'];
+$ctohrsweek=array_map("escape_chars_func",$ctohrsweek);
 $ctohrsengaged=$_POST['ctohrsengaged'];
+$ctohrsengaged=array_map("escape_chars_func",$ctohrsengaged);
 $ctomaxhrs=$_POST['ctomaxhrs'];
+$ctomaxhrs=array_map("escape_chars_func",$ctomaxhrs);
 $ctoc=$_POST['ctoc'];
+$ctoc=array_map("escape_chars_func",$ctoc);
 $ctofbk=$_POST['ctofbk'];
+$ctofbk=array_map("escape_chars_func",$ctofbk);
 $ctofilelocation=$_POST['ctofilelocation'];
 
 
 // part_b_cat_1_cte
 $ctecourse=$_POST['ctecourse'];
+$ctecourse=array_map("escape_chars_func",$ctecourse);
 $ctetyprlpt=$_POST['ctetyprlpt'];
+$ctetyprlpt=array_map("escape_chars_func",$ctetyprlpt);
 $cteugpg=$_POST['cteugpg'];
+$cteugpg=array_map("escape_chars_func",$cteugpg);
 $cteclasssemester=$_POST['cteclasssemester'];
+$cteclasssemester=array_map("escape_chars_func",$cteclasssemester);
 $ctehrsweek=$_POST['ctehrsweek'];
+$ctehrsweek=array_map("escape_chars_func",$ctehrsweek);
 $ctehrsengaged=$_POST['ctehrsengaged'];
+$ctehrsengaged=array_map("escape_chars_func",$ctehrsengaged);
 $ctemaxhrs=$_POST['ctemaxhrs'];
+$ctemaxhrs=array_map("escape_chars_func",$ctemaxhrs);
 $ctec=$_POST['ctec'];
+$ctec=array_map("escape_chars_func",$ctec);
 $ctefbk=$_POST['ctefbk'];
+$ctefbk=array_map("escape_chars_func",$ctefbk);
 $ctefilelocation=$_POST['ctefilelocation'];
 
 
@@ -115,7 +136,9 @@ $avg_ap=mysqli_real_escape_string($conn,$_POST['avg_ap']);
 
 // part_b_cat_1_dar
 $dara=$_POST['dara'];
+$dara=array_map("escape_chars_func",$dara);
 $darb=$_POST['darb'];
+$darb=array_map("escape_chars_func",$darb);
 $darfilelocation=$_POST['darfilelocation'];
 
 $dpstest1=mysqli_real_escape_string($conn,$_POST['dpstest1']);
@@ -134,22 +157,30 @@ $deseps=mysqli_real_escape_string($conn,$_POST['deseps']);
 
 // part_b_cat_2_ha
 $ha=$_POST['ha'];
+$ha=array_map("escape_chars_func",$ha);
 $hb=$_POST['hb'];
+$hb=array_map("escape_chars_func",$hb);
 $hfilelocation=$_POST['hfilelocation'];
 
 // part_b_cat_2_act
 $ea=$_POST['ea'];
+$ea=array_map("escape_chars_func",$ea);
 $eb=$_POST['eb'];
+$eb=array_map("escape_chars_func",$eb);
 $efilelocation=$_POST['efilelocation'];
 
 // part_b_cat_2_exc
 $eca=$_POST['eca'];
+$eca=array_map("escape_chars_func",$eca);
 $ecb=$_POST['ecb'];
+$ecb=array_map("escape_chars_func",$ecb);
 $ecfilelocation=$_POST['ecfilelocation'];
 
 // part_b_cat_2_c
 $ca=$_POST['ca'];
+$ca=array_map("escape_chars_func",$ca);
 $cb=$_POST['cb'];
+$cb=array_map("escape_chars_func",$cb);
 $cfilelocation=$_POST['cfilelocation'];
 
 
@@ -161,39 +192,64 @@ $cfilelocation=$_POST['cfilelocation'];
 
 // part_b_cat_3_pp
 $pptitle=$_POST['pptitle'];
+$pptitle=array_map("escape_chars_func",$pptitle);
 $ppnpr=$_POST['ppnpr'];
+$ppnpr=array_map("escape_chars_func",$ppnpr);
 $ppisbn=$_POST['ppisbn'];
+$ppisbn=array_map("escape_chars_func",$ppisbn);
 $ppif=$_POST['ppif'];
+$ppif=array_map("escape_chars_func",$ppif);
 $customRadioInline1=$_POST['customRadioInline1'];
+$customRadioInline1=array_map("escape_chars_func",$customRadioInline1);
 $ppnca=$_POST['ppnca'];
+$ppnca=array_map("escape_chars_func",$ppnca);
 $ppfilelocation=$_POST['ppfilelocation'];
 
 // part_b_cat_3_ppic
 $pptitleic=$_POST['pptitleic'];
+$pptitleic=array_map("escape_chars_func",$pptitleic);
 $ppnpric=$_POST['ppnpric'];
+$ppnpric=array_map("escape_chars_func",$ppnpric);
 $ppisbnic=$_POST['ppisbnic'];
+$ppisbnic=array_map("escape_chars_func",$ppisbnic);
 $ppific=$_POST['ppific'];
+$ppific=array_map("escape_chars_func",$ppific);
 $customRadioInline1ic=$_POST['customRadioInline1ic'];
+$customRadioInline1ic=array_map("escape_chars_func",$customRadioInline1ic);
 $ppncaic=$_POST['ppncaic'];
+$ppncaic=array_map("escape_chars_func",$ppncaic);
 $pp1filelocation=$_POST['pp1filelocation'];
 
 // part_b_cat_3_ppinc
 $pptitleinc=$_POST['pptitleinc'];
+$pptitleinc=array_map("escape_chars_func",$pptitleinc);
 $ppnprinc=$_POST['ppnprinc'];
+$ppnprinc=array_map("escape_chars_func",$ppnprinc);
 $ppisbnpinc=$_POST['ppisbnpinc'];
+$ppisbnpinc=array_map("escape_chars_func",$ppisbnpinc);
 $ppifinc=$_POST['ppifinc'];
+$ppifinc=array_map("escape_chars_func",$ppifinc);
 $customRadioInline1inc=$_POST['customRadioInline1inc'];
+$customRadioInline1inc=array_map("escape_chars_func",$customRadioInline1inc);
 $ppncainc=$_POST['ppncainc'];
+$ppncainc=array_map("escape_chars_func",$ppncainc);
 $pp2filelocation=$_POST['pp2filelocation'];
 
 // part_b_cat_3_bk
 $pptitlebk=$_POST['pptitlebk'];
+$pptitlebk=array_map("escape_chars_func",$pptitlebk);
 $ppnprbk=$_POST['ppnprbk'];
+$ppnprbk=array_map("escape_chars_func",$ppnprbk);
 $ppisbnbk=$_POST['ppisbnbk'];
+$ppisbnbk=array_map("escape_chars_func",$ppisbnbk);
 $ppdatebk=$_POST['ppdatebk'];
+$ppdatebk=array_map("escape_chars_func",$ppdatebk);
 $ppifbk=$_POST['ppifbk'];
+$ppifbk=array_map("escape_chars_func",$ppifbk);
 $customRadioInline1bk=$_POST['customRadioInline1bk'];
+$customRadioInline1bk=array_map("escape_chars_func",$customRadioInline1bk);
 $ppncabk=$_POST['ppncabk'];
+$ppncabk=array_map("escape_chars_func",$ppncabk);
 $pp3filelocation=$_POST['pp3filelocation'];
 
 
@@ -209,28 +265,42 @@ $btechda=mysqli_real_escape_string($conn,$_POST['btechda']);
 
 // part_b_cat_3_res
 $ta=$_POST['ta'];
+$ta=array_map("escape_chars_func",$ta);
 $ab=$_POST['ab'];
+$ab=array_map("escape_chars_func",$ab);
 $dc=$_POST['dc'];
+$dc=array_map("escape_chars_func",$dc);
 $gd=$_POST['gd'];
+$gd=array_map("escape_chars_func",$gd);
 $research1filelocation=$_POST['research1filelocation'];
 
 // part_b_cat_3_ores
 $tta=$_POST['tta'];
+$tta=array_map("escape_chars_func",$tta);
 $aab=$_POST['aab'];
+$aab=array_map("escape_chars_func",$aab);
 $ddc=$_POST['ddc'];
+$ddc=array_map("escape_chars_func",$ddc);
 $ggd=$_POST['ggd'];
+$ggd=array_map("escape_chars_func",$ggd);
 $research2filelocation=$_POST['research2filelocation'];
 
 // part_b_cat_3_cres
 $tca=$_POST['tca'];
+$tca=array_map("escape_chars_func",$tca);
 $acb=$_POST['acb'];
+$acb=array_map("escape_chars_func",$acb);
 $dcc=$_POST['dcc'];
+$dcc=array_map("escape_chars_func",$dcc);
 $gcd=$_POST['gcd'];
+$gcd=array_map("escape_chars_func",$gcd);
 $research3filelocation=$_POST['research3filelocation'];
 
 // part_b_cat_3_pip
 $dpi=$_POST['dpi'];
+$dpi=array_map("escape_chars_func",$dpi);
 $drf=$_POST['drf'];
+$drf=array_map("escape_chars_func",$drf);
 $dfilelocation=$_POST['dfilelocation'];
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,19 +312,27 @@ $dfilelocation=$_POST['dfilelocation'];
 
 // part_b_cat_4_sem
 $cativ_dp=$_POST['cativ_dp'];
+$cativ_dp=array_map("escape_chars_func",$cativ_dp);
 $cativ_datee=$_POST['cativ_datee'];
+$cativ_datee=array_map("escape_chars_func",$cativ_datee);
 $cativ_o=$_POST['cativ_o'];
+$cativ_o=array_map("escape_chars_func",$cativ_o);
 $cativ1filelocation=$_POST['cativ1filelocation'];
 
 // part_b_cat_4_inv
 $cativ1_dp=$_POST['cativ1_dp'];
+$cativ1_dp=array_map("escape_chars_func",$cativ1_dp);
 $cativ1_datee=$_POST['cativ1_datee'];
+$cativ1_datee=array_map("escape_chars_func",$cativ1_datee);
 $cativ1_o=$_POST['cativ1_o'];
+$cativ1_o=array_map("escape_chars_func",$cativ1_o);
 $cativ2filelocation=$_POST['cativ2filelocation'];
 
 // part_b_cat_4_creds
 $cativ2_dp=$_POST['cativ2_dp'];
+$cativ2_dp=array_map("escape_chars_func",$cativ2_dp);
 $cativ2=$_POST['cativ2'];
+$cativ2=array_map("escape_chars_func",$cativ2);
 $cativ3filelocation=$_POST['cativ3filelocation'];
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

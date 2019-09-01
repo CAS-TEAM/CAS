@@ -67,7 +67,7 @@ $(document).ready(function(){
 				if(response.trim()!="failure")
 				{           
 					// $("#otpsent-message").toggle();
-					window.location.href="http://localhost/cas/"+response.trim();
+					window.location.href="http://182.76.21.124:8080/cas/"+response.trim();
 				}      
 				else
 				{
@@ -88,6 +88,30 @@ $(document).ready(function(){
 
 //admin panel stuff
 $(document).ready(function(){
+
+	$('.admin-table-department').click(function(){
+
+		$(this).removeAttr('readonly');
+
+		var idstr = $(this).attr('id');
+		var facultyId=parseInt(idstr.match(/\d+$/)[0], 10);
+
+		document.getElementById('update'+facultyId).disabled = false;
+		$('#update'+facultyId).addClass('btn-primary');
+
+	});
+
+	$('.admin-table-doj').click(function(){
+
+		$(this).removeAttr('readonly');
+
+		var idstr = $(this).attr('id');
+		var facultyId=parseInt(idstr.match(/\d+$/)[0], 10);
+
+		document.getElementById('update'+facultyId).disabled = false;
+		$('#update'+facultyId).addClass('btn-primary');
+
+	});
 
 	$('.admin-table-checkbox').click(function(){
 
@@ -130,6 +154,9 @@ $(document).ready(function(){
 				if(response.trim()=="success")
 				{           
 					$('#myModal').modal('show');
+
+					$("#department"+facultyId).prop("readonly", true);
+					$("#doj"+facultyId).prop("readonly", true);
 				}      
 			},                
 			error: function(xhr, status, error) {
@@ -281,8 +308,12 @@ function disableBinput(){
 	$(document).on('click','#part-a-edit-form',function(){
 		// alert("edit here");
 
-		$("#part-a-form input").prop("disabled", false);//disablig all inputs
+		$("#part-a-form input").prop("disabled", false);//enabling all inputs
 		$("#part-a-form textarea").prop("disabled", false);
+		// enabling all except mobileno and email
+		$("#email").prop("disabled", true);
+		$("#mobileno").prop("disabled", true);
+
 		// $(".part-a-plus-btn").prop("onclick", parta_dynamic_form()).off("click");//diabling on-click on dynamic form plus button
 		//enable on click for the dynamic form and disable edit button
 		// $(".part-a-minus-button").prop("onclick", true);
@@ -367,10 +398,10 @@ function getPartAData(){
 					    	
 
 					    	var srno=JSON.parse(v[0]['srno']);
-					    	var course=JSON.stringify(v[1]['course']).replace(/['"]+/g, '');
-					    	var days=JSON.stringify(v[2]['days']).replace(/['"]+/g, '');
-					    	var agency=JSON.stringify(v[3]['agency']).replace(/['"]+/g, '');
-					    	var rolee=JSON.stringify(v[4]['rolee']).replace(/['"]+/g, '');
+					    	var course=JSON.stringify(v[1]['course']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    	var days=JSON.stringify(v[2]['days']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    	var agency=JSON.stringify(v[3]['agency']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    	var rolee=JSON.stringify(v[4]['rolee']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    	var file=JSON.stringify(v[5]['file']).replace(/['"]+/g, '');
 
 					    	// alert(srno+","+course+","+days+","+agency);
@@ -433,6 +464,21 @@ function getPartAData(){
 				}
 				document.getElementById("room").value=room;
 				// $(".part-a-plus-btn").prop("onclick", false);
+
+				$('a').each(function(){ 
+		            var url = $(this).attr("href"); // Get current url
+		            // if(url.substring(0,url.indexOf("?")))
+		            if(url!=null && url.substring(0,url.indexOf("?"))=='viewfile.php')
+		            {
+		            	// alert(url);
+		            	// alert(url.substring(url.indexOf("=")+1));
+		            	if(url.substring(url.indexOf("=")+1)!='NAN' && url.substring(url.indexOf("=")+1)!='none')
+		            	{
+		            		$(this).children().attr("src", "https://img.icons8.com/color/24/000000/document.png");
+		            	}
+		            }
+		            
+		        });
 				
 			}
 		},                
@@ -603,15 +649,15 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctocourse']));
 					    		//replace applied to remove double quotes
-					    		var ctocourse=JSON.stringify(v[0]['ctocourse']).replace(/['"]+/g, '');
-					    		var ctotyprlpt=JSON.stringify(v[1]['ctotyprlpt']).replace(/['"]+/g, '');
-					    		var ctougpg=JSON.stringify(v[2]['ctougpg']).replace(/['"]+/g, '');
-					    		var ctoclasssemester=JSON.stringify(v[3]['ctoclasssemester']).replace(/['"]+/g, '');
-					    		var ctohrsweek=JSON.stringify(v[4]['ctohrsweek']).replace(/['"]+/g, '');
-					    		var ctohrsengaged=JSON.stringify(v[5]['ctohrsengaged']).replace(/['"]+/g, '');
-					    		var ctomaxhrs=JSON.stringify(v[6]['ctomaxhrs']).replace(/['"]+/g, '');
-					    		var ctoc=JSON.stringify(v[7]['ctoc']).replace(/['"]+/g, '');
-					    		var ctofbk=JSON.stringify(v[8]['ctofbk']).replace(/['"]+/g, '');
+					    		var ctocourse=JSON.stringify(v[0]['ctocourse']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctotyprlpt=JSON.stringify(v[1]['ctotyprlpt']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctougpg=JSON.stringify(v[2]['ctougpg']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctoclasssemester=JSON.stringify(v[3]['ctoclasssemester']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctohrsweek=JSON.stringify(v[4]['ctohrsweek']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctohrsengaged=JSON.stringify(v[5]['ctohrsengaged']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctomaxhrs=JSON.stringify(v[6]['ctomaxhrs']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctoc=JSON.stringify(v[7]['ctoc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctofbk=JSON.stringify(v[8]['ctofbk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var ctofile=JSON.stringify(v[9]['ctofile']).replace(/['"]+/g, '');
 					    		i++;
 					    		if(i!=0)
@@ -648,15 +694,15 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var ctecourse=JSON.stringify(v[0]['ctecourse']).replace(/['"]+/g, '');
-					    		var ctetyprlpt=JSON.stringify(v[1]['ctetyprlpt']).replace(/['"]+/g, '');
-					    		var cteugpg=JSON.stringify(v[2]['cteugpg']).replace(/['"]+/g, '');
-					    		var cteclasssemester=JSON.stringify(v[3]['cteclasssemester']).replace(/['"]+/g, '');
-					    		var ctehrsweek=JSON.stringify(v[4]['ctehrsweek']).replace(/['"]+/g, '');
-					    		var ctehrsengaged=JSON.stringify(v[5]['ctehrsengaged']).replace(/['"]+/g, '');
-					    		var ctemaxhrs=JSON.stringify(v[6]['ctemaxhrs']).replace(/['"]+/g, '');
-					    		var ctec=JSON.stringify(v[7]['ctec']).replace(/['"]+/g, '');
-					    		var ctefbk=JSON.stringify(v[8]['ctefbk']).replace(/['"]+/g, '');
+					    		var ctecourse=JSON.stringify(v[0]['ctecourse']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctetyprlpt=JSON.stringify(v[1]['ctetyprlpt']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cteugpg=JSON.stringify(v[2]['cteugpg']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cteclasssemester=JSON.stringify(v[3]['cteclasssemester']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctehrsweek=JSON.stringify(v[4]['ctehrsweek']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctehrsengaged=JSON.stringify(v[5]['ctehrsengaged']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctemaxhrs=JSON.stringify(v[6]['ctemaxhrs']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctec=JSON.stringify(v[7]['ctec']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ctefbk=JSON.stringify(v[8]['ctefbk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var ctefile=JSON.stringify(v[9]['ctefile']).replace(/['"]+/g, '');
 
 					    		j++;
@@ -694,8 +740,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var dara=JSON.stringify(v[0]['dara']).replace(/['"]+/g, '');
-					    		var darb=JSON.stringify(v[1]['darb']).replace(/['"]+/g, '');
+					    		var dara=JSON.stringify(v[0]['dara']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var darb=JSON.stringify(v[1]['darb']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var darfile=JSON.stringify(v[2]['darfile']).replace(/['"]+/g, '');
 
 					    		k++;
@@ -726,8 +772,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var ha=JSON.stringify(v[0]['ha']).replace(/['"]+/g, '');
-					    		var hb=JSON.stringify(v[1]['hb']).replace(/['"]+/g, '');
+					    		var ha=JSON.stringify(v[0]['ha']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var hb=JSON.stringify(v[1]['hb']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var hfile=JSON.stringify(v[2]['hfile']).replace(/['"]+/g, '');
 
 					    		l++;
@@ -758,8 +804,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var ea=JSON.stringify(v[0]['ea']).replace(/['"]+/g, '');
-					    		var eb=JSON.stringify(v[1]['eb']).replace(/['"]+/g, '');
+					    		var ea=JSON.stringify(v[0]['ea']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var eb=JSON.stringify(v[1]['eb']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var efile=JSON.stringify(v[2]['efile']).replace(/['"]+/g, '');
 
 					    		m++;
@@ -790,8 +836,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var eca=JSON.stringify(v[0]['eca']).replace(/['"]+/g, '');
-					    		var ecb=JSON.stringify(v[1]['ecb']).replace(/['"]+/g, '');
+					    		var eca=JSON.stringify(v[0]['eca']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ecb=JSON.stringify(v[1]['ecb']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var ecfile=JSON.stringify(v[2]['ecfile']).replace(/['"]+/g, '');
 
 					    		n++;
@@ -822,8 +868,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var ca=JSON.stringify(v[0]['ca']).replace(/['"]+/g, '');
-					    		var cb=JSON.stringify(v[1]['cb']).replace(/['"]+/g, '');
+					    		var ca=JSON.stringify(v[0]['ca']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cb=JSON.stringify(v[1]['cb']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var cfile=JSON.stringify(v[2]['cfile']).replace(/['"]+/g, '');
 					    		o++;
 					    		if(o!=0)
@@ -854,13 +900,13 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var pptitle=JSON.stringify(v[0]['pptitle']).replace(/['"]+/g, '');
-					    		var ppnpr=JSON.stringify(v[1]['ppnpr']).replace(/['"]+/g, '');
-					    		var ppisbn=JSON.stringify(v[2]['ppisbn']).replace(/['"]+/g, '');
-					    		var ppif=JSON.stringify(v[3]['ppif']).replace(/['"]+/g, '');
+					    		var pptitle=JSON.stringify(v[0]['pptitle']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppnpr=JSON.stringify(v[1]['ppnpr']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppisbn=JSON.stringify(v[2]['ppisbn']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppif=JSON.stringify(v[3]['ppif']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var customRadioInline1=JSON.stringify(v[4]['customRadioInline1']).replace(/['"]+/g, '');
 					    		// alert(customRadioInline1);
-					    		var ppnca=JSON.stringify(v[5]['ppnca']).replace(/['"]+/g, '');
+					    		var ppnca=JSON.stringify(v[5]['ppnca']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var ppfile=JSON.stringify(v[6]['ppfile']).replace(/['"]+/g, '');
 					    		ppr++;
 					    		if(ppr!=0)
@@ -917,12 +963,12 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['pptitleic']));
 					    		//replace applied to remove double quotes
-					    		var pptitleic=JSON.stringify(v[0]['pptitleic']).replace(/['"]+/g, '');
-					    		var ppnpric=JSON.stringify(v[1]['ppnpric']).replace(/['"]+/g, '');
-					    		var ppisbnic=JSON.stringify(v[2]['ppisbnic']).replace(/['"]+/g, '');
-					    		var ppific=JSON.stringify(v[3]['ppific']).replace(/['"]+/g, '');
+					    		var pptitleic=JSON.stringify(v[0]['pptitleic']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppnpric=JSON.stringify(v[1]['ppnpric']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppisbnic=JSON.stringify(v[2]['ppisbnic']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppific=JSON.stringify(v[3]['ppific']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var customRadioInline1ic=JSON.stringify(v[4]['customRadioInline1ic']).replace(/['"]+/g, '');
-					    		var ppncaic=JSON.stringify(v[5]['ppncaic']).replace(/['"]+/g, '');
+					    		var ppncaic=JSON.stringify(v[5]['ppncaic']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var pp1file=JSON.stringify(v[6]['pp1file']).replace(/['"]+/g, '');
 					    		ppric++;
 					    		if(ppric!=0)
@@ -980,12 +1026,12 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['pptitleic']));
 					    		//replace applied to remove double quotes
-					    		var pptitleinc=JSON.stringify(v[0]['pptitleinc']).replace(/['"]+/g, '');
-					    		var ppnprinc=JSON.stringify(v[1]['ppnprinc']).replace(/['"]+/g, '');
-					    		var ppisbnpinc=JSON.stringify(v[2]['ppisbnpinc']).replace(/['"]+/g, '');
-					    		var ppifinc=JSON.stringify(v[3]['ppifinc']).replace(/['"]+/g, '');
+					    		var pptitleinc=JSON.stringify(v[0]['pptitleinc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppnprinc=JSON.stringify(v[1]['ppnprinc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppisbnpinc=JSON.stringify(v[2]['ppisbnpinc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppifinc=JSON.stringify(v[3]['ppifinc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var customRadioInline1inc=JSON.stringify(v[4]['customRadioInline1inc']).replace(/['"]+/g, '');
-					    		var ppncainc=JSON.stringify(v[5]['ppncainc']).replace(/['"]+/g, '');
+					    		var ppncainc=JSON.stringify(v[5]['ppncainc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var pp2file=JSON.stringify(v[6]['pp2file']).replace(/['"]+/g, '');
 					    		pprinc++;
 					    		if(pprinc!=0)
@@ -1044,13 +1090,13 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['pptitleic']));
 					    		//replace applied to remove double quotes
-					    		var pptitlebk=JSON.stringify(v[0]['pptitlebk']).replace(/['"]+/g, '');
-					    		var ppnprbk=JSON.stringify(v[1]['ppnprbk']).replace(/['"]+/g, '');
-					    		var ppisbnbk=JSON.stringify(v[2]['ppisbnbk']).replace(/['"]+/g, '');
-					    		var ppdatebk=JSON.stringify(v[3]['ppdatebk']).replace(/['"]+/g, '');
-					    		var ppifbk=JSON.stringify(v[4]['ppifbk']).replace(/['"]+/g, '');
+					    		var pptitlebk=JSON.stringify(v[0]['pptitlebk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppnprbk=JSON.stringify(v[1]['ppnprbk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppisbnbk=JSON.stringify(v[2]['ppisbnbk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppdatebk=JSON.stringify(v[3]['ppdatebk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ppifbk=JSON.stringify(v[4]['ppifbk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var customRadioInline1bk=JSON.stringify(v[5]['customRadioInline1bk']).replace(/['"]+/g, '');
-					    		var ppncabk=JSON.stringify(v[6]['ppncabk']).replace(/['"]+/g, '');
+					    		var ppncabk=JSON.stringify(v[6]['ppncabk']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var pp3file=JSON.stringify(v[7]['pp3file']).replace(/['"]+/g, '');
 					    		pprbk++;
 					    		if(pprbk!=0)
@@ -1110,10 +1156,10 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var ta=JSON.stringify(v[0]['ta']).replace(/['"]+/g, '');
-					    		var ab=JSON.stringify(v[1]['ab']).replace(/['"]+/g, '');
-					    		var dc=JSON.stringify(v[2]['dc']).replace(/['"]+/g, '');
-					    		var gd=JSON.stringify(v[3]['gd']).replace(/['"]+/g, '');
+					    		var ta=JSON.stringify(v[0]['ta']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ab=JSON.stringify(v[1]['ab']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var dc=JSON.stringify(v[2]['dc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var gd=JSON.stringify(v[3]['gd']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var research1file=JSON.stringify(v[4]['research1file']).replace(/['"]+/g, '');
 					    		p++;
 					    		if(p!=0)
@@ -1145,10 +1191,10 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var tta=JSON.stringify(v[0]['tta']).replace(/['"]+/g, '');
-					    		var aab=JSON.stringify(v[1]['aab']).replace(/['"]+/g, '');
-					    		var ddc=JSON.stringify(v[2]['ddc']).replace(/['"]+/g, '');
-					    		var ggd=JSON.stringify(v[3]['ggd']).replace(/['"]+/g, '');
+					    		var tta=JSON.stringify(v[0]['tta']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var aab=JSON.stringify(v[1]['aab']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ddc=JSON.stringify(v[2]['ddc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var ggd=JSON.stringify(v[3]['ggd']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var research2file=JSON.stringify(v[4]['research2file']).replace(/['"]+/g, '');
 					    		q++;
 					    		if(q!=0)
@@ -1180,10 +1226,10 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var tca=JSON.stringify(v[0]['tca']).replace(/['"]+/g, '');
-					    		var acb=JSON.stringify(v[1]['acb']).replace(/['"]+/g, '');
-					    		var dcc=JSON.stringify(v[2]['dcc']).replace(/['"]+/g, '');
-					    		var gcd=JSON.stringify(v[3]['gcd']).replace(/['"]+/g, '');
+					    		var tca=JSON.stringify(v[0]['tca']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var acb=JSON.stringify(v[1]['acb']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var dcc=JSON.stringify(v[2]['dcc']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var gcd=JSON.stringify(v[3]['gcd']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var research3file=JSON.stringify(v[4]['research3file']).replace(/['"]+/g, '');
 					    		r++;
 					    		if(r!=0)
@@ -1214,8 +1260,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var dpi=JSON.stringify(v[0]['dpi']).replace(/['"]+/g, '');
-					    		var drf=JSON.stringify(v[1]['drf']).replace(/['"]+/g, '');
+					    		var dpi=JSON.stringify(v[0]['dpi']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var drf=JSON.stringify(v[1]['drf']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var dfile=JSON.stringify(v[2]['dfile']).replace(/['"]+/g, '');
 					    		s++;
 					    		if(s!=0)
@@ -1244,9 +1290,9 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var cativ_dp=JSON.stringify(v[0]['cativ_dp']).replace(/['"]+/g, '');
-					    		var cativ_datee=JSON.stringify(v[1]['cativ_datee']).replace(/['"]+/g, '');
-					    		var cativ_o=JSON.stringify(v[2]['cativ_o']).replace(/['"]+/g, '');
+					    		var cativ_dp=JSON.stringify(v[0]['cativ_dp']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cativ_datee=JSON.stringify(v[1]['cativ_datee']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cativ_o=JSON.stringify(v[2]['cativ_o']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var cativ1file=JSON.stringify(v[3]['cativ1file']).replace(/['"]+/g, '');
 					    		t++;
 					    		if(t!=0)
@@ -1276,9 +1322,9 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var cativ1_dp=JSON.stringify(v[0]['cativ1_dp']).replace(/['"]+/g, '');
-					    		var cativ1_datee=JSON.stringify(v[1]['cativ1_datee']).replace(/['"]+/g, '');
-					    		var cativ1_o=JSON.stringify(v[2]['cativ1_o']).replace(/['"]+/g, '');
+					    		var cativ1_dp=JSON.stringify(v[0]['cativ1_dp']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cativ1_datee=JSON.stringify(v[1]['cativ1_datee']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cativ1_o=JSON.stringify(v[2]['cativ1_o']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var cativ2file=JSON.stringify(v[3]['cativ2file']).replace(/['"]+/g, '');
 					    		u++;
 					    		if(u!=0)
@@ -1308,8 +1354,8 @@ function getPartBData(){
 					    		// alert("ineer");
 					    		// alert(JSON.stringify(v[0]['ctecourse']));
 					    		//replace applied to remove double quotes
-					    		var cativ2_dp=JSON.stringify(v[0]['cativ2_dp']).replace(/['"]+/g, '');
-					    		var cativ2=JSON.stringify(v[1]['cativ2']).replace(/['"]+/g, '');
+					    		var cativ2_dp=JSON.stringify(v[0]['cativ2_dp']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
+					    		var cativ2=JSON.stringify(v[1]['cativ2']).replace (/(^")|("$)/g, '').replace(/\\/g,'');
 					    		var cativ3file=JSON.stringify(v[2]['cativ3file']).replace(/['"]+/g, '');
 					    		v1++;
 					    		if(v1!=0)
@@ -1464,6 +1510,21 @@ function getPartBData(){
 			$(".btn-default").prop('disabled', true);
 			$('#sfrb_submit').prop('disabled', false);
 			enableinputs();
+
+			$('a').each(function(){ 
+	            var url = $(this).attr("href"); // Get current url
+	            // if(url.substring(0,url.indexOf("?")))
+	            if(url!=null && url.substring(0,url.indexOf("?"))=='viewfile.php')
+	            {
+	            	// alert(url);
+	            	// alert(url.substring(url.indexOf("=")+1));
+	            	if(url.substring(url.indexOf("=")+1)!='NAN' && url.substring(url.indexOf("=")+1)!='none')
+	            	{
+	            		$(this).children().attr("src", "https://img.icons8.com/color/24/000000/document.png");
+	            	}
+	            }
+	            
+	        });
 
 		},                
 		error: function(xhr, status, error) {

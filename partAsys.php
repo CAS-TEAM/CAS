@@ -3,6 +3,7 @@
 session_start();
 
 include 'dbh.php';
+ini_set('max_execution_time', 0);
 
 $userId=mysqli_real_escape_string($conn,$_SESSION['id']);
 
@@ -122,6 +123,11 @@ if($alreadybegun==1)
 
 	for($i=0;$i<sizeof($srno);$i++)
 	{	
+		$s=mysqli_real_escape_string($conn,$srno[$i]);
+		$c=mysqli_real_escape_string($conn,$course[$i]);
+		$d=mysqli_real_escape_string($conn,$days[$i]);
+		$a=mysqli_real_escape_string($conn,$agency[$i]);
+		$r=mysqli_real_escape_string($conn,$rolee[$i]);
 
 		// $sql2="SELECT id FROM part_a_doc WHERE formId='$formId' AND srno='$srno[$i]'";
 		// $result2=mysqli_query($conn,$sql2);
@@ -139,7 +145,7 @@ if($alreadybegun==1)
 		    $dest = "users/".$email. "/".$_FILES['file']['name'][$i];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','$dest')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$s','$c','$d','$a','$r','$dest')";
 				$result1=mysqli_query($conn,$sql1);
 			}	
 
@@ -149,12 +155,12 @@ if($alreadybegun==1)
 			if($filelocation[$i]!="")
 			{
 				//that means if file was previously attached but now form has been edited and user hasnt manually attached it
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','$filelocation[$i]')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$s','$c','$d','$a','$r','$filelocation[$i]')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 			else
 			{
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','NAN')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$s','$c','$d','$a','$r','NAN')";
 				$result1=mysqli_query($conn,$sql1);
 			}
 			
@@ -176,6 +182,12 @@ else
 
 	for($i=0;$i<sizeof($srno);$i++)
 	{
+		$s=mysqli_real_escape_string($conn,$srno[$i]);
+		$c=mysqli_real_escape_string($conn,$course[$i]);
+		$d=mysqli_real_escape_string($conn,$days[$i]);
+		$a=mysqli_real_escape_string($conn,$agency[$i]);
+		$r=mysqli_real_escape_string($conn,$rolee[$i]);
+
 		$tmpFilePath = $_FILES['file']['tmp_name'][$i];
 		// echo "temp->".$tmpFilePath;
 		if ($tmpFilePath != "")
@@ -184,14 +196,14 @@ else
 		    $dest = "users/".$email. "/".$_FILES['file']['name'][$i];
 
 		    if(move_uploaded_file($tmpFilePath, $dest)) {
-				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','$dest')";
+				$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$s','$c','$d','$a','$r','$dest')";
 				$result1=mysqli_query($conn,$sql1);
 			}	
 
 		}
 		else
 		{
-			$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$srno[$i]','$course[$i]','$days[$i]','$agency[$i]','$rolee[$i]','NAN')";
+			$sql1="INSERT INTO part_a_doc (formId,srno,course,days,agency,rolee,file) VALUES ('$formId','$s','$c','$d','$a','$r','NAN')";
 			$result1=mysqli_query($conn,$sql1);
 		}		
 
@@ -199,5 +211,5 @@ else
 		// $result1=mysqli_query($conn,$sql1);
 	}
 }
-
+// echo 'year='.$year;
 header('LOCATION: partA.php?id='.$userId.'&year='.$year.'&updated=1');

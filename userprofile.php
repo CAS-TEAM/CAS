@@ -313,8 +313,10 @@ $lasttolastyear=$previousyear-1;
 										?>
 									</tbody>
 								</table>
-					  			<?php
-					  			/*
+
+					  			<hr style="height:1px;border:none;color:#333;background-color:#333;">
+					  			<h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br>
+
 					  			<p>
 								  	<button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapseEligible" aria-expanded="false" aria-controls="collapseEligible">
 								    Check CAS Eligibility Status
@@ -403,35 +405,35 @@ $lasttolastyear=$previousyear-1;
 
 									    		
 									  		?>
-									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $currentyear.'-'.$previousyear; ?></b></p>
+									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear.'-'.($previousyear-1); ?></b></p>
 									    	<div class="row">							    		
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM A</a>
+									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM A</a>
 									    		</div>
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0px">
-									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM B</a>	
+									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM B</a>	
 									    		</div> 
 									    		
 
 									    	</div>
 									    	<hr>
-									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $previousyear.'-'.($previousyear-1); ?></b></p>
-									    	<div class="row">							    		
-									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM A</a>
-									    		</div>
-									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
-									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $previousyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM B</a>
-									    		</div>
-									    	</div>
-									    	<hr>
-									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo $lasttolastyear.'-'.($lasttolastyear-1); ?></b></p>
+									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo ($previousyear-1).'-'.($previousyear-2); ?></b></p>
 									    	<div class="row">							    		
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
 									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $lasttolastyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM A</a>
 									    		</div>
 									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
 									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $lasttolastyear; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM B</a>
+									    		</div>
+									    	</div>
+									    	<hr>
+									    	<p class="card-text" style="margin-bottom: 0px"><b><?php echo ($lasttolastyear-1).'-'.($lasttolastyear-2); ?></b></p>
+									    	<div class="row">							    		
+									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
+									    			<a href="partA.php?id=<?php echo $userId; ?>&year=<?php echo $lasttolastyear-1; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM A</a>
+									    		</div>
+									    		<div class="col-md-2 col-sm-6" style="margin:0;padding-right:0">
+									    			<a href="partB.php?id=<?php echo $userId; ?>&year=<?php echo $lasttolastyear-1; ?>" class="btn btn-primary" style="margin-top: 10px;width:100%" target="_blank">FORM B</a>
 									    		</div>
 									    	</div>
 
@@ -443,7 +445,7 @@ $lasttolastyear=$previousyear-1;
 									
 									<?php
 								}
-								*/
+								
 								?>								
 					  		</div>
 

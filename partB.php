@@ -227,14 +227,14 @@ include 'left-nav.php';
 
 				if(mysqli_num_rows($resultsfr)==0)
 				{
-					/*
+					
 					?>
 					<form method="POST" action="sfrB_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 						<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
 						<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
 					</form><br>
 					<?php
-					*/
+					
 				}
 				else
 				{
@@ -242,21 +242,21 @@ include 'left-nav.php';
 
 					if($rowsfr['partB']==0)
 					{	
-						/*
+						
 						?>
 						<form method="POST" action="sfrB_sys.php" onsubmit="return confirm('Do you want to submit the form for review?');">
 							<input type="hidden" name="year" id="year" value="<?php echo $year; ?>">
 							<input type="submit" id="sfrb_submit" name="sfrb_submit" class="btn btn-primary" value="Submit for review">
 						</form>	<br>
 						<?php
-						*/
+						
 					}
 					else
 					{
 						$submitted_for_review=true;
 						$sfr_forjs=1;
 						?>
-						<!-- <p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p> -->
+						<p class=""><i class="fas fa-check" style="color: green;font-size: 20px" class="mr-1"></i> Submitted for Review</p>
 						<?php
 					}
 					
@@ -313,7 +313,7 @@ include 'left-nav.php';
 			if($_SESSION['id']==$userId)
 			{
 				// uncomment '$submitted_for_review==true &&' when enabling cas stuff
-				if(/*$submitted_for_review==true &&*/ $submitted_for_self_appraisal==true)
+				if($submitted_for_review==true || $submitted_for_self_appraisal==true)
 				{
 
 					$sqlrfea="SELECT id FROM request_edit_access WHERE year='$year' AND facultyId='$userId' AND form='B'";
@@ -1660,10 +1660,14 @@ include 'left-nav.php';
 					<div class="admin-table">
 						<table class="table table-bordered table-hover" id="tab_logic3">
 							<thead>
-								<th colspan="3">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
-								<th>Attachments</th>
+								<th colspan="4">Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</th>
 							</thead>
-							 
+							<tr>
+							 	<th>Sr.No</th>
+								<th>Details of Course</th>
+								<th>Enrichment in Content</th>
+								<th>Attachments</th>
+							</tr>
 							<tbody>
 								<tr id='addr30'>
 									<td id='dar1'>1</td>
@@ -4094,12 +4098,10 @@ include 'left-nav.php';
 								<tr id='addr100'>
 									<td id="res1">1</td>
 									<td>
-									<textarea name="ta[]" id="ta1" class="form-control" maxlength="200"/>
-									</textarea>
+									<textarea name="ta[]" id="ta1" class="form-control" maxlength="200"/></textarea>
 									</td>
 									<td>
-									<textarea name="ab[]" id="ab1" class="form-control" maxlength="200"/>
-									</textarea>
+									<textarea name="ab[]" id="ab1" class="form-control" maxlength="200"/></textarea>
 									</td>
 									<td>
 									<input type="date" name="dc[]" id="dc1" class="form-control dos"/>
@@ -4241,12 +4243,10 @@ include 'left-nav.php';
 								<tr id='addr110'>
 									<td id="ores1">1</td>
 									<td>
-									<textarea name="tta[]" id="tta1" class="form-control" maxlength="200"/>
-									</textarea>
+									<textarea name="tta[]" id="tta1" class="form-control" maxlength="200"/></textarea>
 									</td>
 									<td>
-									<textarea name="aab[]" id="aab1" class="form-control" maxlength="200"/>
-									</textarea>
+									<textarea name="aab[]" id="aab1" class="form-control" maxlength="200"/></textarea>
 									</td>
 									<td>
 									<input type="date" name="ddc[]" id="ddc1" class="form-control dos"/>
@@ -5954,7 +5954,7 @@ include 'left-nav.php';
 			}*/
 			?>
 
-			<a href="printpartb.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>" class="btn btn-success" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+			<a href="printBintermediate.php?id=<?php echo $userId; ?>&year=<?php echo $year; ?>" class="btn btn-success" id="part-b-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
   			PRINT 
 			</a>
 

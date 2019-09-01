@@ -21,8 +21,7 @@ include 'top.php';
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
-			<meta name="google-signin-client_id" content="444425785443-5mh44gn88jrf46t217t7i4m62r4ui1ro.apps.googleusercontent.com">
-			
+			<meta name="google-signin-client_id" content="805718949659-khpnrkd2qn1c8u44lrlq381g7upjn8db.apps.googleusercontent.com">
 			<!--Enter yout OAuth Client ID in the content tag -->
 
 			<script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -31,44 +30,53 @@ include 'top.php';
 
 			<script type="text/javascript">
 			
-				
-			function onSignIn(googleUser) {
-				var profile = googleUser.getBasicProfile();
-				name = profile.getName();
-				pic=profile.getImageUrl();
-				var email=profile.getEmail();
-			
-				if(email.includes("somaiya.edu")) //domain constraint
-				{
-				var theForm, newInput1, newInput2, newInput3;
-				theForm = document.createElement('form');
-				theForm.action = 'homepage.php';	//enter the page url you want to redirect the index page to after sign in
-				theForm.method = 'post';
-				newInput1 = document.createElement('input');
-				newInput1.type = 'hidden';
-				newInput1.name = 'user';
-				newInput1.value = name;
-				newInput2 = document.createElement('input');
-				newInput2.type = 'hidden';
-				newInput2.name = 'pic';
-				newInput2.value = pic;
-				newInput3 = document.createElement('input');
-				newInput3.type = 'hidden';
-				newInput3.name = 'email';
-				newInput3.value = email;
-				theForm.appendChild(newInput1);
-				theForm.appendChild(newInput2);
-				theForm.appendChild(newInput3);
+				var clicked=fse;
+			function ClickLogin()
+{
+    clicked=true;
+}
+  	function onSignIn(googleUser) {
+		  var profile = googleUser.getBasicProfile();
+		  name = profile.getName();
+		  pic=profile.getImageUrl();
+		  var email=profile.getEmail();
+	
+		 
+		  
+		  
 
-				document.getElementById('hidden_form_container').appendChild(theForm);
-				theForm.submit();
-				}else{
-					window.location.href="http://localhost/cas/login.php";
-					alert("Please login using Somaiya Mail ID");
-				}
+     	  var auth2 = gapi.auth2.getAuthInstance();
+		  auth2.disconnect();
+		  if(clicked){
 
-				
-			}
+		  if(email.includes("somaiya.edu"))
+		  {
+		  var theForm, newInput1, newInput2;
+		  theForm = document.createElement('form');
+		  theForm.action = 'homepage.php';	//enter the page url you want to redirect the index page to after sign in
+		  theForm.method = 'post';
+		  newInput1 = document.createElement('input');
+		  newInput1.type = 'hidden';
+		  newInput1.name = 'user';
+		  newInput1.value = name;
+		  newInput2 = document.createElement('input');
+		  newInput2.type = 'hidden';
+		  newInput2.name = 'pic';
+		  newInput2.value = pic;
+		  theForm.appendChild(newInput1);
+		  theForm.appendChild(newInput2);
+
+		  document.getElementById('hidden_form_container').appendChild(theForm);
+		  theForm.submit();
+		  }else{
+		  	window.location.href="http://172.17.15.0.xip.io/cas/homepage.php";
+		  	alert("Please login using Somaiya Mail ID");
+		  }
+
+
+		 }
+		 
+	}
 
 
 				function signOut() {
@@ -120,7 +128,7 @@ include 'top.php';
 							<div class="col-md-12 text-center">
 		        				<p style="color: #44a0b3;font-size: 22px"> OR </p>
 		        			</div>
-							<div class="g-signin2" data-onsuccess="onSignIn" align="middle"></div>			
+							<div class="g-signin2" onclick="ClickLogin()" data-onsuccess="onSignIn" align="middle"></div>		
 							
 						</form>
 					  </div>

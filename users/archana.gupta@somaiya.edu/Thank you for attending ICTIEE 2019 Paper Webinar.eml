@@ -1,0 +1,308 @@
+Delivered-To: archana.gupta@somaiya.edu
+Received: by 2002:ab3:1292:0:0:0:0:0 with SMTP id c18csp7092590ltc;
+        Thu, 11 Apr 2019 04:01:29 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqxWyDcfKskQ5xP1NfwEXpI3ajhb/vA5oD1ajQT2khY++6arE+aVcMOfnlRbYH9+wtGKKm3D
+X-Received: by 2002:a25:ba52:: with SMTP id z18mr15364147ybj.309.1554980488827;
+        Thu, 11 Apr 2019 04:01:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554980488; cv=none;
+        d=google.com; s=arc-20160816;
+        b=N92u91r4kDXsEEsaXIv4qCr5CFWIxeD4KB1uzHjZKjyqhpmnkr8t8BM44rcjX7RDU5
+         CKco0u5VwwDpyuaZ6kjxrLBTAjFONtE8YS4iAn21AAwJv5wQ8RJW0fMw4qcmdZqg6oQ2
+         XTNsmagNLmHGldquUd4KINzuDBJ/2uNj61PB5SP/FtB4a4qe7aG4BlowD5aNGihFaQi5
+         61XWrei8H+PKYi4k7+2K5i2u9GHZdHNhOYcVYlSHdLZnH5u7gm+1gXbX0LWPCKEebznI
+         iRnLAMqajTITC0eXnFMSkbEx6Xf2315LYvMLNZJIh0Te2/P4ziNOz9xSsZM1glNHJPRc
+         3EmQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:message-id:to:reply-to:mime-version:from:date
+         :dkim-signature;
+        bh=QCMByL81H9bexBXUWNjkP9G/jyBQmnk1RCA1OiSyZYw=;
+        b=Jo0kzPk1OWr1WnuofQY2eIN/EdnEwqGgIJ2y2/cBLX5U57frHbVxafrLHe/kM6qBf6
+         q6F6/SCR00JkcoSVjEJAMdre4ZcycTHE0pK+pQ8KAtSqjqgKd3HDOhhLQwatOxfai3dG
+         7xRHqjxZCmZPdQ9dy9O4gsgWpK6ADURMkhwwgWRV6qIMQH8h+BjXwS3gDVln5OUTSxAl
+         4iMXef+DF5HIXSlCp/f8MY1U9WmB7AWe09b99mjkStxdFWuFPocp69JV+UDvX7kmpQmI
+         AbWLiLqh39opCld6xwyxzLAab95cwlx3lI7mz7Oe14E3wAKdgApr8Xfow/JrRPavH9yn
+         qZiw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gotowebinar.com header.s=s1 header.b=WRPzfjeb;
+       spf=pass (google.com: domain of bounces+2129455-4211-archana.gupta=somaiya.edu@msg.gotowebinar.com designates 167.89.56.18 as permitted sender) smtp.mailfrom="bounces+2129455-4211-archana.gupta=somaiya.edu@msg.gotowebinar.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gotowebinar.com
+Return-Path: <bounces+2129455-4211-archana.gupta=somaiya.edu@msg.gotowebinar.com>
+Received: from o10.s.logmeininc.com (o10.s.logmeininc.com. [167.89.56.18])
+        by mx.google.com with ESMTPS id v71si9539540ywc.322.2019.04.11.04.01.28
+        for <archana.gupta@somaiya.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 11 Apr 2019 04:01:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2129455-4211-archana.gupta=somaiya.edu@msg.gotowebinar.com designates 167.89.56.18 as permitted sender) client-ip=167.89.56.18;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gotowebinar.com header.s=s1 header.b=WRPzfjeb;
+       spf=pass (google.com: domain of bounces+2129455-4211-archana.gupta=somaiya.edu@msg.gotowebinar.com designates 167.89.56.18 as permitted sender) smtp.mailfrom="bounces+2129455-4211-archana.gupta=somaiya.edu@msg.gotowebinar.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gotowebinar.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; 
+	d=gotowebinar.com; 
+	h=content-type:from:mime-version:reply-to:to:subject; s=s1; 
+	bh=oA06TltLLcK/dT53dtBfeVH6t9Y=; b=WRPzfjebqVx0zv1sESfzCsMvfU5pt
+	w3P8BfOqgZxgVmBiUZxf/7RRIJIS87r8GjPs3KRcLKJ/RVd76KJjhbTRnJuiaeaz
+	2uKvpCxSM+ARrBOpLWTmZk9msH1+5CoiWLYXKBezX8X2DbWDk4PzqmI7/7gwPJj5
+	vFB1ih7yVPWO8c=
+Received: by filter1406p1mdw1.sendgrid.net with SMTP id filter1406p1mdw1-25863-5CAF1E86-24
+        2019-04-11 11:01:26.731627832 +0000 UTC m=+212710.026387669
+Received: from MjEyOTQ1NQ (unknown [173.199.20.227])
+	by ismtpd0010p1sjc2.sendgrid.net (SG) with HTTP id BKNg5CcGSm2Cuu2gtJFUQA
+	Thu, 11 Apr 2019 11:01:26.670 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=5ba8ecf8dafffa99c407d002613091ee1b517d622c78c60ac3be0cfe1585
+Date: Thu, 11 Apr 2019 11:01:26 +0000 (UTC)
+From: "Sridhar Nori" <customercare@gotowebinar.com>
+Mime-Version: 1.0
+Reply-to: s_nori@hotmail.com
+To: archana.gupta@somaiya.edu
+Message-ID: <BKNg5CcGSm2Cuu2gtJFUQA@ismtpd0010p1sjc2.sendgrid.net>
+Subject: Thank you for attending ICTIEE 2019 Paper Webinar: Design, development of Android application for teaching, learning with mobile computing devices
+X-organizerEmail: s_nori@hotmail.com
+X-RcptEnc: YXJjaGFuYS5ndXB0YUBzb21haXlhLmVkdQ==
+X-campaignid: g2w_attendeeFollowUp
+X-SG-EID: iHp3TFkR2b3bOEO7ayU3CWDzmVfjTq6riISaKDxz3jq74hnp1a4xeaS7Z7e1K2YyDtF52MQGtm+L2S
+ uhCKSN5IHofB/GkG4dks5zU2a5XiXfJCMlKsZH30alXbr3J7qLeUw1D3pj7Ibqz/xeau925T6q5Y5M
+ gRRA3jEt117KnWhgSrw2aTQnPZDS6KldAcunBArrm1LLgmR2x5Eayv4ggPC7oYG3J1rA0hSK5IqTna
+ uunkxnrOZ+nj8z7OjDoMsz
+X-SG-ID: FcwyPB9id4b7JeDVnR//N/QFqZeTEo0DDJKP/nKbuETVEc4EXrsUkwdS8wdpyR1vOT9a+z/9kmHWk+
+ LaC2McS4pwzKIdElzW22lFa3GyxrcRXoeVNCEPNdvfxnVIltLi/x4jcpXvaKOolLt4RqwrfHGlDCTB
+ wQ7nnXIJa+V9/VQivaf4E9lMP2eoOhjUUvrgJzcyLIcawleodVvUU2u0Wc7DA+p5BlUqQH1gXbwrPj
+ /ZWCkjfSqDETq2CwTYJ4UqiXWt6cIBGE2QZARy3hYBSNvj9y0nvQF7toBlCpJLbbO9DkG9ljNV+I3z
+ Yrd8uP5+
+
+--5ba8ecf8dafffa99c407d002613091ee1b517d622c78c60ac3be0cfe1585
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+Dear Archana,
+We hope you enjoyed our webinar.
+
+
+
+
+***********************************************************
+
+=20=20=20=20
+You are receiving this email because you registered for this webinar. Your =
+email address and personal information will be used by the Webinar organize=
+r to communicate with you about this event and their other services. To rev=
+iew the organizer's privacy policy or stop receiving their communications, =
+please contact the organizer directly.
+=20=20=20=20
+=20=20=20=20
+Stop GoToWebinar emails (https://attendee.gotowebinar.com/subscription.tmpl=
+?organizer=3D200000000001202943&token=3DpZZmIj50KCL30%2F1A3Dr2Og%3D%3D&orga=
+nizerEmail=3Ds_nori%40hotmail.com&attendeeEmail=3Darchana.gupta%40somaiya.e=
+du&locale=3Den_US)
+
+Report spam (https://attendee.gotowebinar.com/reportSpam.tmpl?organizer=3D2=
+00000000001202943&token=3DpZZmIj50KCL30%2F1A3Dr2Og%3D%3D&userEmail=3Darchan=
+a.gupta%40somaiya.edu&webinarId=3D463752939&webinarName=3DICTIEE+2019+Paper=
++Webinar%3A+Design%2C+development+of...&organizerEmail=3Ds_nori%40hotmail.c=
+om&locale=3Den_US)
+
+This email is sent on behalf of the organizer by GoToWebinar.
+LogMeIn, Inc. | 7414 Hollister Avenue | Goleta, CA 93117
+Privacy Policy (https://secure.logmein.com/home/en/policies/overview)
+Anti-spam Policy (https://secure.logmein.com/home/en/policies/anti-spam-pol=
+icy)
+www.gotowebinar.com =C2=A92019 LogMeIn, Inc. All rights reserved.=
+
+--5ba8ecf8dafffa99c407d002613091ee1b517d622c78c60ac3be0cfe1585
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en">
+    <head>
+        <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-=
+Type" />
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--general stylesheet-->
+        <style type=3D"text/css">
+            p { padding: 0; margin: 0; line-height: 1.25em; }
+            h1, h2, h3, p, li, a { font-family: Helvetica Neue, Helvetica, =
+Arial, sans-serif; }
+            td { vertical-align: top; }
+            ul, ol { margin: 0; padding: 0; }
+                @media screen and (max-width: 500px) {
+                    .mobile-button-padding {
+                      padding: 15px !important;
+                    }
+                    .mobile-button-container {
+                      width: 100%;
+                      max-width: 100%;
+                    }
+                    .mobile-button {
+                      display: block !important;
+                    }
+                }
+                @media screen and (max-width: 760px) {
+                    .contentWrapper, .footer {
+                      width: 100% !important;
+                      max-width: 100% !important;
+                    }
+                    #paddingFooter1, #paddingFooter2 {
+                      display: none;
+                    }
+                }
+        </style>
+    </head>
+    <body marginheight=3D"0" topmargin=3D"0" marginwidth=3D"0" leftmargin=
+=3D"0" background=3D"" style=3D"margin: 0; background-color: #FFFFFF;" bgco=
+lor=3D"#FFFFFF">
+        <table cellspacing=3D"0" border=3D"0" cellpadding=3D"0" width=3D"10=
+0%" bgcolor=3D"#eeeee7" style=3D"background-color: #eeeee7;
+                background: -moz-linear-gradient(#eeeee7, #eeeee7);
+                background: -webkit-gradient(linear, top, bottom, from(#eee=
+ee7), to(#eeeee7));
+                background: -webkit-linear-gradient(#eeeee7, #eeeee7);
+                background: -o-linear-gradient(#eeeee7, #eeeee7);
+                background: -ms-linear-gradient(#eeeee7, #eeeee7);
+                background: linear-gradient(#eeeee7, #eeeee7);
+                border-color: #cccccc;
+                color:#114c7f;">
+            <tbody>
+                <tr valign=3D"top">
+                    <td>
+                        <table cellspacing=3D"0" border=3D"0" cellpadding=
+=3D"7" id=3D"paddingFooter1" align=3D"center" width=3D"100%">
+                        <tr>
+                        <td/>
+                        </tr>
+                        </table>
+
+                        <!--container-->
+                        <table class=3D"contentWrapper" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" align=3D"center" width=3D"100%" bgcolor=3D"#F=
+FFFFF" style=3D"
+                                border-width: 2px;
+                                border-style: solid;
+                                border-color: #cccccc;
+                                max-width: 700px;
+                                background-color:#FFFFFF;
+                                padding-bottom: 15px;
+                                padding-top: 15px;">
+                            <tbody><!--content-->
+                                <tr>
+                                    <td style=3D"padding-right: 20px; paddi=
+ng-left: 20px; ">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+    <p style=3D"margin: 25px 0 0 0; font-size: 16px; font-weight: normal; c=
+olor: #010101; text-align: left;">
+        Dear Archana,    </p>
+<p style=3D"margin: 10px 0 0 0; font-size: 16px; font-weight: normal; color=
+: #010101; text-align: left;">
+            We hope you enjoyed our webinar.
+    </p>
+<p style=3D"margin: 10px 0 0 0; font-size: 16px; font-weight: normal; color=
+: #010101; text-align: left;">
+    Please send your questions, comments and feedback to: s_nori@hotmail.co=
+m&#46;
+</p>
+    <p style=3D"margin: 10px 0 15px 0; font-size: 16px; font-weight: normal=
+; color: #010101; text-align: left;">
+</p>
+<p style=3D"margin: 10px 0 0 0; font-size: 16px; font-weight: normal; color=
+: #010101; text-align: left;">
+    </p>
+<p style=3D"margin: 10px 0 0 0; font-size: 16px; font-weight: normal; color=
+: #010101; text-align: left;">
+    </p>                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--/container-->
+
+                        <table cellspacing=3D"0" border=3D"0" cellpadding=
+=3D"8" id=3D"paddingFooter2" align=3D"center" width=3D"100%">
+                        <tr>
+                        <td/>
+                        </tr>
+                        </table>
+
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+<table cellspacing=3D"0" border=3D"0" cellpadding=3D"0" id=3D"footer" style=
+=3D"background-color: #444;" align=3D"center" width=3D"100%">
+<tr>
+<td>
+<table class=3D"footer" cellspacing=3D"0" border=3D"0" cellpadding=3D"0" al=
+ign=3D"center" width=3D"100%" style=3D"max-width: 680px; padding: 0 10px;">
+
+
+        <tr>
+               <td valign=3D"top" style=3D"vertical-align: top;" id=3D"lega=
+l">
+                    <p style=3D"font-size: 11px; font-weight: normal; color=
+: #AAA; text-align: center; ;margin: 15px 0 0;">You are receiving this emai=
+l because you registered for this webinar. Your email address and personal =
+information will be used by the Webinar organizer to communicate with you a=
+bout this event and their other services. To review the organizer's privacy=
+ policy or stop receiving their communications, please contact the organize=
+r directly.</p>
+               </td>
+        </tr>
+
+                                             <tr>
+                <td valign=3D"top" style=3D"vertical-align: top;" id=3D"uns=
+ubscribe">
+                    <p style=3D"font-size: 11px; font-weight: normal; color=
+: #AAA; text-align: center; ;margin: 10px 0 0;"><a href=3D'https://attendee=
+.gotowebinar.com/subscription.tmpl?organizer=3D200000000001202943&token=3Dp=
+ZZmIj50KCL30%2F1A3Dr2Og%3D%3D&organizerEmail=3Ds_nori%40hotmail.com&attende=
+eEmail=3Darchana.gupta%40somaiya.edu&locale=3Den_US' id=3D'unsubscribeLink'=
+ style=3D'color: #AAA; text-decoration: underline;'>Stop GoToWebinar emails=
+</a> | <a href=3D'https://attendee.gotowebinar.com/reportSpam.tmpl?organize=
+r=3D200000000001202943&token=3DpZZmIj50KCL30%2F1A3Dr2Og%3D%3D&userEmail=3Da=
+rchana.gupta%40somaiya.edu&webinarId=3D463752939&webinarName=3DICTIEE+2019+=
+Paper+Webinar%3A+Design%2C+development+of...&organizerEmail=3Ds_nori%40hotm=
+ail.com&locale=3Den_US' id=3D'reportSpamLink' style=3D'color: #AAA; text-de=
+coration: underline;'>Report spam</a></p>
+                </td>
+             </tr>
+=20=20=20=20=20=20=20=20=20
+    <tr>
+       <td valign=3D"top" style=3D"vertical-align: top;" id=3D"legal2">
+            <p style=3D"font-size: 11px; font-weight: normal; color: #AAA; =
+text-align: center; ;margin: 10px 0 0;">This email is sent on behalf of the=
+ organizer by GoToWebinar.</p>
+       </td>
+    </tr>
+    <tr>
+       <td valign=3D"top" style=3D"vertical-align: top;" id=3D"legal3">
+            <p style=3D"font-size: 11px; font-weight: normal; color: #AAA; =
+text-align: center; ;margin: 0 0 15px;">7414 Hollister Avenue | Goleta, CA =
+93117 <a href=3D'https://secure.logmein.com/home/en/policies/overview' id=
+=3D'privacyLink' style=3D'color: #AAA; text-decoration: underline;'>Privacy=
+ Policy</a> | <a href=3Dhttps://secure.logmein.com/home/en/policies/anti-sp=
+am-policy id=3D'antiSpamLink' style=3D'color: #AAA; text-decoration: underl=
+ine;'>Anti-spam Policy</a> | <a href=3D'http://www.gotowebinar.com' id=3D'g=
+tmLink' style=3D'color: #AAA; text-decoration: underline;'>www.gotowebinar.=
+com</a> =C2=A92019 LogMeIn, Inc.</p>
+       </td>
+    </tr>
+
+</table>
+</td>
+</tr>
+
+</table>=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+--5ba8ecf8dafffa99c407d002613091ee1b517d622c78c60ac3be0cfe1585--

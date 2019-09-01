@@ -29,7 +29,7 @@ include 'left-nav.php';
 				
 				<?php
 
-				$sql="SELECT email, faculty_name, date_of_joining, department, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
+				$sql="SELECT email, faculty_name, date_of_joining, department, mobileno, hod, committee, principal, admin FROM faculty_table WHERE id='$userId'";
 				$result=mysqli_query($conn,$sql);
 
 				$row=mysqli_fetch_assoc($result);
@@ -38,6 +38,7 @@ include 'left-nav.php';
 				$faculty_name=$row['faculty_name'];
 				$date_of_joining=$row['date_of_joining'];
 				$department=$row['department'];
+				$mobileno=$row['mobileno'];
 				$hod=$row['hod'];
 				$committee=$row['committee'];
 				$principal=$row['principal'];
@@ -66,8 +67,13 @@ include 'left-nav.php';
 									</div> 
 
 									<div class="form-inline">
+									  	<label for="mobileno" class="mr-sm-3">Mobile No.:</label>
+									  	<input class="form-control partalabel mb-3 usersettingsformcontrol" type="text" name="mobileno" style="width: 280px;margin-left: 27px" id="mobileno" value="<?php echo $mobileno; ?>"/>
+									</div>
+
+									<div class="form-inline">
 									  	<label for="department" class="mr-sm-3">Department:</label>
-									  	<input class="form-control partalabel mb-3 usersettingsformcontrol" type="text" name="department" style="width: 280px;margin-left: 20px" id="department" value="<?php echo $department; ?>"/>
+									  	<input class="form-control partalabel mb-3 usersettingsformcontrol" type="text" name="department" style="width: 280px;margin-left: 20px" id="department" value="<?php echo $department; ?>" disabled/>
 									</div> 
 									
 									<div class="form-inline">

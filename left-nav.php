@@ -96,18 +96,18 @@ $admin=$rowp['admin'];
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
-								<li>
+								<!-- <li>
 									<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=2019">2018-2019</a>
-								</li>
+								</li> -->
 								<?php
-								/*for($a=$currentyear; $a>=2017; $a--)
+								for($a=$currentyear-1; $a>=2017; $a--)
 								{
 									?>
 									<li>
 										<a href="partA.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
-								}*/
+								}
 								?>
 							</ul>
 						</div>
@@ -119,24 +119,22 @@ $admin=$rowp['admin'];
 						</a>
 						<div class="sidebar-submenu">
 							<ul>
-								<li>
+								<!-- <li>
 									<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=2019">2018-2019</a>
-								</li>
+								</li> -->
 								<?php
-								/*for($a=$currentyear; $a>=2017; $a--)
+								for($a=$currentyear-1; $a>=2017; $a--)
 								{
 									?>
 									<li>
 										<a href="partB.php?id=<?php echo $_SESSION['id']; ?>&year=<?php echo $a; ?>"><?php echo ($a-1).'-'.$a; ?></a>
 									</li>
 									<?php
-								}*/
+								}
 								?>
 							</ul>
 						</div>
-					</li>
-					<?php
-					/*
+					</li>	
 					<li class="sidebar-dropdown dropdown-arrow">
 						<a>
 							<i class="fa fa-check-circle" aria-hidden="true" style="font-size: 15px"></i>
@@ -145,7 +143,7 @@ $admin=$rowp['admin'];
 						<div class="sidebar-submenu">
 							<ul>
 								<?php
-								for($a=$currentyear; $a>=2019; $a--)
+								for($a=$currentyear-1; $a>=2019; $a--)
 								{
 									?>
 									<li>
@@ -157,21 +155,43 @@ $admin=$rowp['admin'];
 							</ul>
 						</div>
 					</li>
-					*/
-					?>
 					<li class="sidebar-dropdown">
 						<a href="self-appraisals.php?id=<?php echo $_SESSION['id']; ?>">
 							<i class="fas fa-fighter-jet" style="font-size: 15px"></i>
 							<span style="font-size: 15px">My Self Appraisals</span>
 						</a>
 					</li>
-					<!-- <li class="sidebar-dropdown">
+					<li class="sidebar-dropdown">
 						<a href="guidelines.php">
 							<i class="fas fa-info" style="font-size: 15px"></i>
 							<span style="font-size: 15px">CAS Guidelines</span>
 						</a>
-					</li> -->
+					</li>
 					<?php
+
+					if($hod==1)
+					{
+						?>
+						<li class="sidebar-dropdown">
+							<a href="viewprofiles.php">
+								<i class="fas fa-user-circle" style="font-size: 15px"></i>
+								<span style="font-size: 15px">View Profiles of <span style="margin-left:44px">Departmental Faculty</span></span>
+							</a>
+						</li>
+						<?php
+					}
+
+					if($committee==1)
+					{
+						?>
+						<li class="sidebar-dropdown">
+							<a href="viewprofiles.php">
+								<i class="fas fa-user-circle" style="font-size: 15px"></i>
+								<span style="font-size: 15px">View Profiles of <span style="margin-left:44px">All Faculty</span></span>
+							</a>
+						</li>
+						<?php
+					}
 
 					if($admin==1)
 					{
@@ -213,7 +233,7 @@ $admin=$rowp['admin'];
 		<!-- sidebar-content  -->
 		<div class="sidebar-footer">
 			<a>
-				<p style="font-size: 15px">Copyright  <i class="far fa-copyright"></i>  <?php echo $currentyear; ?>  CAS</p>
+				<p style="font-size: 15px">Copyright  <i class="far fa-copyright"></i>  <?php echo $currentyear-1; ?>  CAS&SAF</p>
 			</a>
 		</div>
 	</nav>

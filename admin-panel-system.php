@@ -45,4 +45,22 @@ else
 $sql="UPDATE faculty_table SET hod='$hod',committee='$committee',principal='$principal',admin='$admin' WHERE id='$faculty_id'";
 $result=mysqli_query($conn,$sql);
 
+if(isset($_POST['department']))
+{
+	$department=mysqli_real_escape_string($conn,$_POST['department']);
+	// echo $department;
+
+	$sql="UPDATE faculty_table SET department='$department' WHERE id='$faculty_id'";
+	$result=mysqli_query($conn,$sql);
+}
+
+if(isset($_POST['doj']))
+{
+	$doj=mysqli_real_escape_string($conn,$_POST['doj']);
+	// echo $department;
+
+	$sql="UPDATE faculty_table SET date_of_joining='$doj' WHERE id='$faculty_id'";
+	$result=mysqli_query($conn,$sql);
+}
+
 echo "success";

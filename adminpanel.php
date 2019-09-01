@@ -131,34 +131,36 @@ include 'left-nav.php';
 				  			$admin=$row['admin'];
 
 					  		?>
-						    <tr id="user<?php echo $id; ?>">
-						      	<th scope="row"><?php echo $counter; ?></th>
-						      	<td><?php echo $faculty_name; ?></td>
-						      	<td><?php echo $email; ?></td>
-						      	<td><?php echo $department; ?></td>
-						      	<td><?php echo $date_of_joining; ?></td>					      	
+					  		<form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
 
-						    <?php
-							$now = time();
-							$your_date = strtotime($date_of_joining);
-							$datediff = $now - $your_date;
-							$years = floor($datediff / (365*60*60*24));
-						    // echo $years;
-						    if($years>=5)
-						    {
-						    	?>
-						    	<td>Eligible</td>	
-						    	<?php
-						    }
-						    else
-						    {
-						    	?>
-						    	<td>Not Eligible</td>
-						    	<?php
-						    }
+							    <tr id="user<?php echo $id; ?>">
+							      	<th scope="row"><?php echo $counter; ?></th>
+							      	<td><?php echo $faculty_name; ?></td>
+							      	<td><?php echo $email; ?></td>
+							      	<td><input type="text" class="form-control admin-table-department" name="department" id="department<?php echo $id; ?>" value="<?php echo $department; ?>" readonly="readonly"></td>
+							      	<td><input type="date" class="form-control admin-table-doj dos" name="doj" id="doj<?php echo $id; ?>" value="<?php echo $date_of_joining; ?>" readonly="readonly"></td>					      	
 
-						    ?>
-						      	<form class="update-rights-form" id="update-rights-form-<?php echo $id; ?>" action="" method="POST">
+							    <?php
+								$now = time();
+								$your_date = strtotime($date_of_joining);
+								$datediff = $now - $your_date;
+								$years = floor($datediff / (365*60*60*24));
+							    // echo $years;
+							    if($years>=5)
+							    {
+							    	?>
+							    	<td>Eligible</td>	
+							    	<?php
+							    }
+							    else
+							    {
+							    	?>
+							    	<td>Not Eligible</td>
+							    	<?php
+							    }
+
+							    ?>
+						      	
 						      		<td class="table-center">
 		  								<?php
 
