@@ -613,7 +613,48 @@ tr:nth-child(even) {
 					<p style="font-size: 25px">NB: The proforma duly filled along with all enclosures, submitted will be verified by the authorities.</p>
 				</div>
 			</div>
+			  
+
 		</div>
+
+		<h2>Part A PI Values :</h2>            
+			  <table class="table table-bordered">
+			    <thead>
+			      <tr>
+			      	<th style="text-align: center;font-size: 25px">Sr.No</th>
+			        <th style="text-align: center;font-size: 25px">PI Info</th>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td style="font-size: 25px">1</td>
+			      	<td style="font-size: 25px">Certificate Courses</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">2</td>
+			      	<td style="font-size: 25px">Details of course/summer school/STTP/online course attended/completed/organised during academic year</td>
+			        <td style="font-size: 25px"></td>
+			        <td style="font-size: 25px"></td>
+			        <td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">3</td>
+			      	<td style="font-size: 25px">Total Part A PI out of 50</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      
+			    </tbody>
+			  </table>
+
+
 
 		<!-- <div class="row">
 			<div class="col-md-8 text-left">
@@ -640,6 +681,7 @@ tr:nth-child(even) {
 
 
 	</div>
+
 	<br><br>
 
 	<script type="text/javascript">

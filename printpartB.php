@@ -2335,6 +2335,212 @@ tr:nth-child(even) {
 				</div>
 			</div>
 		</div>
+
+		<h2>Part B PI Values :</h2>            
+			  <table class="table table-bordered">
+			    <thead>
+			      <tr>
+			      	<th style="text-align: center;font-size: 25px">Sr.No</th>
+			        <th style="text-align: center;font-size: 25px">PI Info</th>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td colspan="5" style="font-size: 25px"><i class="fas fa-arrow-right" style="color: green;font-size: 25px"></i><b> Category I: Teaching and Learning (Max. PI=100)</b></td></tr>
+			      <tr>
+		      	  <tr>
+			      	<td style="font-size: 25px">1</td>
+			      	<td style="font-size: 25px">PI 1: Courses Taught (Max. PI: 40)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">2</td>
+			      	<td style="font-size: 25px">PI 2: Examination Duties Assigned and Performed (Max. PI: 40)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">3</td>
+			      	<td style="font-size: 25px">PI 3: Details of additional resource provided to the students to enrich course content/syllabus (Max. PI=10)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">4</td>
+			      	<td style="font-size: 25px">PI 4: Use of Participatory and innovative Teaching-Learning Methodologies (Max. PI=10)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">5</td>
+			      	<td style="font-size: 25px">Total Part B Category I out of 100</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td colspan="5" style="font-size: 25px"><i class="fas fa-arrow-right" style="color: green;font-size: 25px"></i><b> Category II: Co-curricular and administrative activities done in college (Max. PI=100)</b></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">6</td>
+			      	<td style="font-size: 25px">PII 1: Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">7</td>
+			      	<td style="font-size: 25px">PII 2: Extension, Co-Curricular and Field based activities / internships in college</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">8</td>
+			      	<td style="font-size: 25px">PII 3: Extra-curricular and social activities in college</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">9</td>
+			      	<td style="font-size: 25px">PII 4: College administration/organization member/committee member/NBA/NAAC of college</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+
+			       <tr>
+			      	<td style="font-size: 25px">10</td>
+			      	<td style="font-size: 25px">Total Part B Category II PI out of 100</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      </tr>
+
+			      <tr>
+			      	<td colspan="5" style="font-size: 25px"><i class="fas fa-arrow-right" style="color: green;font-size: 25px"></i><b> Category III: Publication, research/thesis supervisor,project guide,research,consultancy and intellectual properties (Max.PI=175)</b></td>
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">11</td>
+			      	<td style="font-size: 25px">PI: Published Papers In Peer Reviewed Journals (Max. PI=20)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">12</td>
+			      	<td style="font-size: 25px">PI: Published Papers in International/National Conference Abroad (Max.PI=15)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">13</td>
+			      	<td style="font-size: 25px">PI: Published Papers in International/National Conference in India (Max.PI=10)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">14</td>
+			      	<td style="font-size: 25px">PI: Books/Articles/Chapters published in Books (Max.PI=15)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">15</td>
+			      	<td style="font-size: 25px">PI: Research/thesis supervisor and project guide (Max.PI=40)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">16</td>
+			      	<td style="font-size: 25px">PI: Research/project/consultancy proposals submitted in academic year 2018/2019 but yet to get approval (Max. PI=15)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			      <tr>
+			      	<td style="font-size: 25px">17</td>
+			      	<td style="font-size: 25px">PI: Ongoing Research/project/consultancy proposals approved/initiated in academic year 2018/2019 but yet to complete (Max. PI=15)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+
+			       <tr>
+			      	<td style="font-size: 25px">18</td>
+			      	<td style="font-size: 25px">Completed Research Project and Consultancies initiated in academic year 2017-2018 but completed in academic year 2018-2019 (Max. PI=20) (Max. PI=20)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			       <tr>
+			      	<td style="font-size: 25px">19</td>
+			      	<td style="font-size: 25px">Patent/Intellectual property filed/received (Max.PI=25)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			       <tr>
+			      	<td style="font-size: 25px">20</td>
+			      	<td style="font-size: 25px">Total Part B Category III PI out of 175</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			      <tr>
+			      	<td colspan="5" style="font-size: 25px"><i class="fas fa-arrow-right" style="color: green;font-size: 25px"></i><b> Category IV: Curricular/Co-curricular/Administrative activities done outside college (Max. PI=75)</b></td>
+			      </tr>
+			       <tr>
+			      	<td style="font-size: 25px">21</td>
+			      	<td style="font-size: 25px">Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college (Max.PI=30)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">22</td>
+			      	<td style="font-size: 25px">Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college (Max. PI=30)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">23</td>
+			      	<td style="font-size: 25px">Please give details of any other credential, significant contributions, and awards received etc. Which are not mentioned. (Max. PI=15)</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			      <tr>
+			      	<td style="font-size: 25px">24</td>
+			      	<td style="font-size: 25px">Total Part B Category IV PI out of 75</td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>
+			      	<td style="font-size: 25px"></td>			      
+			      </tr>
+			</tbody>
+			  </table>
+
 									 
 
 	</div>
