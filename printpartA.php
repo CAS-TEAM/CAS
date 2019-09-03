@@ -482,21 +482,41 @@ tr:nth-child(even) {
 		</div>
 		<hr>
 
-		<!-- <div class="row">
+		<div class="row">
 			<div class="col-md-12">
     			<div class="form-group row">
-    				<div class="col-10">
-    					<label class="col-form-label">20 PI for Ph.D and M.Phil. 10 PI for other UG/PG Degree/Diploma/Certificate Courses/</label>
+    				<div class="col-6">
+    					<label class="col-form-label" style="font-size: 25px">20 PI for Ph.D and M.Phil. 10 PI for other UG/PG Degree/Diploma/Certificate Courses/</label>
     				</div>
 					  
-					<div class="col-2" style="padding-left: 0">
-					   <p class="col-form-label"><?php echo 20; ?></p>
+					<div class="col-4">
+					   <!-- <p class="col-form-label"><?php echo 20; ?></p> -->
+					   	<table class="table table-bordered">
+					    <thead>
+					    	<tr>
+					    		<th style="text-align: center;font-size: 25px" colspan="3">GPI</th>
+					    	</tr>
+					      <tr>
+					        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+					        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+					        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr>
+					      	<td style="text-align: center;font-size: 25px"></td>
+					      	<td style="text-align: center;font-size: 25px"></td>
+					      	<td style="text-align: center;font-size: 25px"></td> 
+					    </tbody>
+			  			</table>
+
+
 					</div>
 				</div>							
     		</div>
     	</div>
 
-    	<hr> -->
+    	<hr>
 
 		<div class="row">
     		<div class="col-md-12">
@@ -542,6 +562,66 @@ tr:nth-child(even) {
 
 		  	?>
 		</table><br>
+
+		<div class="row">
+			<div class="col-md-12">
+    			<div class="form-group row">
+    				<div class="col-6">
+    					<label class="col-form-label" style="font-size: 25px">Three GPI per day but maximum 30</label>
+    				</div>
+					  
+					<div class="col-4">
+					   <!-- <p class="col-form-label"><?php echo 20; ?></p> -->
+					   	<table class="table table-bordered">
+					    <thead>
+					    	<tr>
+					    		<th style="text-align: center;font-size: 25px" colspan="3">GPI</th>
+					    	</tr>
+					      <tr>
+					        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+					        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+					        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr>
+					      	<td style="text-align: center;font-size: 25px"></td>
+					      	<td style="text-align: center;font-size: 25px"></td>
+					      	<td style="text-align: center;font-size: 25px"></td> 
+					    </tbody>
+			  			</table>
+
+
+					</div>
+				</div>							
+    		</div>
+    	</div>
+
+    	<div class="row">
+			<div class="col-md-12">
+			   	<table class="table table-bordered">
+			    <thead>
+			    	<tr>
+			    		<th style="text-align: center;font-size: 25px" colspan="3">PI Part A = GPI out of 50</th>
+			    	</tr>
+			      <tr>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td style="text-align: center;font-size: 25px"></td>
+			      	<td style="text-align: center;font-size: 25px"></td>
+			      	<td style="text-align: center;font-size: 25px"></td> 
+			    </tbody>
+	  			</table>
+	  		</div>
+    	</div>
+
+    	<hr>
+
 
 		<div class="container">
 			<div class="row">
@@ -615,45 +695,8 @@ tr:nth-child(even) {
 			</div>
 			  
 
-		</div>
-
-		<h2>Part A PI Values :</h2>            
-			  <table class="table table-bordered">
-			    <thead>
-			      <tr>
-			      	<th style="text-align: center;font-size: 25px">Sr.No</th>
-			        <th style="text-align: center;font-size: 25px">PI Info</th>
-			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
-			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
-			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
-			      </tr>
-			    </thead>
-			    <tbody>
-			      <tr>
-			      	<td style="font-size: 25px">1</td>
-			      	<td style="font-size: 25px">Certificate Courses</td>
-			      	<td style="font-size: 25px"></td>
-			      	<td style="font-size: 25px"></td>
-			      	<td style="font-size: 25px"></td>
-			      </tr>
-			      <tr>
-			      	<td style="font-size: 25px">2</td>
-			      	<td style="font-size: 25px">Details of course/summer school/STTP/online course attended/completed/organised during academic year</td>
-			        <td style="font-size: 25px"></td>
-			        <td style="font-size: 25px"></td>
-			        <td style="font-size: 25px"></td>
-			      </tr>
-			      <tr>
-			      	<td style="font-size: 25px">3</td>
-			      	<td style="font-size: 25px">Total Part A PI out of 50</td>
-			      	<td style="font-size: 25px"></td>
-			      	<td style="font-size: 25px"></td>
-			      	<td style="font-size: 25px"></td>
-			      </tr>
-			      
-			    </tbody>
-			  </table>
-
+		</div>        
+			  
 
 
 		<!-- <div class="row">
