@@ -62,10 +62,10 @@ include 'left-nav.php';
 			<div class="row">
 				<div class="col-md-11 text-left ml-5">
 					<ul>
-						<li><p>Calculation of PI for CAS will be based on cumulative PI score for academic year 2017-18.(Weightage of 75%)</p></li>
-						<li><p>PI Score for academic year 2016-17(Weightage of 25%). However, faculty members who have applieed for CAS 2017 and submitted the PI form of 2016-17 need not submit form again as the same would be considered during CAS 2018.</p></li>
-						<li><p>Hence faculty members are requested to fill application form(s) and attach relevant documents for academic year(s) 2017-18 and 2016-17 wherever applicable.</p></li>
-						<li><p>Completed handwritten (in legible handwriting) application form along with necessary and relevant documents will have to be routed through Head of Department for the evaluation of applications.</p></li>
+						<li><p>Calculation of PI scores for CAS-2019 will be based on cumulative PI score for academic years 2016-17, 2017-18, 2018-19.(Average of last 3 years)</p></li>
+						<li><p>However, faculty members who have applieed for CAS 2018 and submitted the PI form of 2016-17 & 2017-18 need not submit form again as the same would be considered during CAS 2019.</p></li>
+						<li><p>Hence faculty members are requested to fill application form(s) and attach relevant documents for academic year(s) 2018-19, 2017-18 and 2016-17 wherever applicable.</p></li>
+						<li><p>Completed online application form along with necessary and relevant documents will have to be routed through Head of Department for the evaluation of applications.</p></li>
 					</ul>
 				</div>
 			</div>
@@ -274,7 +274,11 @@ include 'left-nav.php';
 							<li><p><b>Maximum PI = 175</b></p></li>
 							<li><p>Only peer reviewed journal will be considered. Online / paid journals will not be taken into account.</p></li>
 							<li><p>Publications of a faculty member in other than peer reviewed journals will be evaluated by committee.</p></li>
-							<li><p>The project / research work / consultancy are divided in three categories(Avoid entry of any project in more than one category)</p></li>
+							<li><p>The project / research work / consultancy are divided in three categories(Avoid entry of any project in more than one category)</p>
+								<li style="margin-left:35px"><p>submitted but not approved/ awarded</p></li>
+								<li style="margin-left:35px"><p>ongoing</p></li>
+								<li style="margin-left:35px"><p>completed</p></li>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -321,7 +325,13 @@ include 'left-nav.php';
 
 				<div class="row">
 					<div class="col-md-12 text-left">
-						<p><b>Total PI for CAS evaluation = (0.25*A)+(0.75*B)</b></p>
+						<p><b>PI of 2018-19 = C</b></p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12 text-left">
+						<p><b>Total PI for CAS evaluation = (A+B+C)/3</b></p>
 					</div>
 				</div>
 			</div>
