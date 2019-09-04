@@ -2679,9 +2679,11 @@ $lasttolastyearmf=0.33;
 
 				?>
 
-				<button type="button" class="btn btn-primary part-a-print-form" onclick="myFunction()" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+				<!-- <button type="button" class="btn btn-primary part-a-print-form" onclick="myFunction()" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 	  			PRINT 
-				</button>
+				</button> -->
+
+				<a href="printsummary.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary part-a-print-form" style="background-color: #e60000;border: 1px solid #e60000">PRINT</a>
 
 				<!-- <button type="button" class="btn btn-primary" onclick="printJS('summary-container', 'html')" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 				    Print Form
@@ -2773,7 +2775,7 @@ $lasttolastyearmf=0.33;
 
     </script>
 
-    <script type="text/javascript">
+   <!--  <script type="text/javascript">
 	function myFunction() {
 		$("#summary-comm-submit-form").toggle();
 		$(".part-a-print-form").toggle();
@@ -2786,7 +2788,7 @@ $lasttolastyearmf=0.33;
 		$(".part-a-print-form").toggle();
 		$("#sidebar").toggle();
 	}
-	</script>
+	</script> -->
 
 </body>
 </html>
