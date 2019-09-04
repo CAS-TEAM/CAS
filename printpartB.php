@@ -56,10 +56,20 @@ tr:nth-child(even) {
 
  	<?php
 
+ 	session_start();
+
     include 'dbh.php';
 
     $userId=mysqli_real_escape_string($conn,$_GET['id']);
 	$year=mysqli_real_escape_string($conn,$_GET['year']);
+
+	$viewerId=mysqli_real_escape_string($conn,$_SESSION['id']);//the one who is viewing the form
+	$sqlx="SELECT hod, committee FROM faculty_table WHERE id='$viewerId'";
+	$resultx=mysqli_query($conn,$sqlx);
+	$rowx=mysqli_fetch_assoc($resultx);
+
+	$hod=$rowx['hod'];
+	$committee=$rowx['committee'];
 
 	$sqll="SELECT faculty_name FROM faculty_table WHERE id='$userId'";
 	$resultl=mysqli_query($conn,$sqll);
@@ -147,6 +157,110 @@ tr:nth-child(even) {
 	// CATEGORY 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//PI values
+	if(isset($_GET['pivalues']) && $_GET['pivalues']==true)
+	{
+		$sqly="SELECT * FROM partb_cat1_pi WHERE facultyId='$userId' AND year='$year'";
+		$resulty=mysqli_query($conn,$sqly);
+		$rowy=mysqli_fetch_assoc($resulty);
+		$cat1_pi1_self_a=$rowy['cat1_pi1_self_a'];
+		$cat1_pi1_hod_a=$rowy['cat1_pi1_hod_a'];
+		$cat1_pi1_committee_a=$rowy['cat1_pi1_committee_a'];
+		$cat1_pi2_self_a=$rowy['cat1_pi2_self_a'];
+		$cat1_pi2_hod_a=$rowy['cat1_pi2_hod_a'];
+		$cat1_pi2_committee_a=$rowy['cat1_pi2_committee_a'];
+		$cat1_pi3_self_a=$rowy['cat1_pi3_self_a'];
+		$cat1_pi3_hod_a=$rowy['cat1_pi3_hod_a'];
+		$cat1_pi3_committee_a=$rowy['cat1_pi3_committee_a'];
+		$cat1_pi4_self_a=$rowy['cat1_pi4_self_a'];
+		$cat1_pi4_hod_a=$rowy['cat1_pi4_hod_a'];
+		$cat1_pi4_committee_a=$rowy['cat1_pi4_committee_a'];
+		$cat1_pitotal_self_a=$rowy['cat1_pitotal_self_a'];
+		$cat1_pitotal_hod_a=$rowy['cat1_pitotal_hod_a'];
+		$cat1_pitotal_committee_a=$rowy['cat1_pitotal_committee_a'];
+
+		// echo "cat=".$cat1_pi1_self_a;
+
+		$sqlz="SELECT * FROM partb_cat2_pi WHERE facultyId='$userId' AND year='$year'";
+		$resultz=mysqli_query($conn,$sqlz);
+		$rowz=mysqli_fetch_assoc($resultz);
+		$cat2_pii1_self_a=$rowz['cat2_pii1_self_a'];
+		$cat2_pii1_hod_a=$rowz['cat2_pii1_hod_a'];
+		$cat2_pii1_committee_a=$rowz['cat2_pii1_committee_a'];
+		$cat2_pii2_self_a=$rowz['cat2_pii2_self_a'];
+		$cat2_pii2_hod_a=$rowz['cat2_pii2_hod_a'];
+		$cat2_pii2_committee_a=$rowz['cat2_pii2_committee_a'];
+		$cat2_pii3_self_a=$rowz['cat2_pii3_self_a'];
+		$cat2_pii3_hod_a=$rowz['cat2_pii3_hod_a'];
+		$cat2_pii3_committee_a=$rowz['cat2_pii3_committee_a'];
+		$cat2_pii4_self_a=$rowz['cat2_pii4_self_a'];
+		$cat2_pii4_hod_a=$rowz['cat2_pii4_hod_a'];
+		$cat2_pii4_committee_a=$rowz['cat2_pii4_committee_a'];
+		$cat2_piitotal_self_a=$rowz['cat2_piitotal_self_a'];
+		$cat2_piitotal_hod_a=$rowz['cat2_piitotal_hod_a'];
+		$cat2_piitotal_committee_a=$rowz['cat2_piitotal_committee_a'];
+
+		$sqlzz="SELECT * FROM partb_cat3_pi WHERE facultyId='$userId' AND year='$year'";
+		$resultzz=mysqli_query($conn,$sqlzz);
+		$rowzz=mysqli_fetch_assoc($resultzz);
+		$cat3_piii1_self_a=$rowzz['cat3_piii1_self_a'];
+		$cat3_piii1_hod_a=$rowzz['cat3_piii1_hod_a'];
+		$cat3_piii1_committee_a=$rowzz['cat3_piii1_committee_a'];
+		$cat3_piii2_self_a=$rowzz['cat3_piii2_self_a'];
+		$cat3_piii2_hod_a=$rowzz['cat3_piii2_hod_a'];
+		$cat3_piii2_committee_a=$rowzz['cat3_piii2_committee_a'];
+		$cat3_piii3_self_a=$rowzz['cat3_piii3_self_a'];
+		$cat3_piii3_hod_a=$rowzz['cat3_piii3_hod_a'];
+		$cat3_piii3_committee_a=$rowzz['cat3_piii3_committee_a'];
+		$cat3_piii4_self_a=$rowzz['cat3_piii4_self_a'];
+		$cat3_piii4_hod_a=$rowzz['cat3_piii4_hod_a'];
+		$cat3_piii4_committee_a=$rowzz['cat3_piii4_committee_a'];
+		$cat3_piii5_self_a=$rowzz['cat3_piii5_self_a'];
+		$cat3_piii5_hod_a=$rowzz['cat3_piii5_hod_a'];
+		$cat3_piii5_committee_a=$rowzz['cat3_piii5_committee_a'];
+		$cat3_piii6_self_a=$rowzz['cat3_piii6_self_a'];
+		$cat3_piii6_hod_a=$rowzz['cat3_piii6_hod_a'];
+		$cat3_piii6_committee_a=$rowzz['cat3_piii6_committee_a'];
+		$cat3_piii7_self_a=$rowzz['cat3_piii7_self_a'];
+		$cat3_piii7_hod_a=$rowzz['cat3_piii7_hod_a'];
+		$cat3_piii7_committee_a=$rowzz['cat3_piii7_committee_a'];
+		$cat3_piiires_self_a=$rowzz['cat3_piiires_self_a'];
+		$cat3_piiires_hod_a=$rowzz['cat3_piiires_hod_a'];
+		$cat3_piiires_committee_a=$rowzz['cat3_piiires_committee_a'];
+		$cat3_piii8_self_a=$rowzz['cat3_piii8_self_a'];
+		$cat3_piii8_hod_a=$rowzz['cat3_piii8_hod_a'];
+		$cat3_piii8_committee_a=$rowzz['cat3_piii8_committee_a'];
+		$cat3_piii9_self_a=$rowzz['cat3_piii9_self_a'];
+		$cat3_piii9_hod_a=$rowzz['cat3_piii9_hod_a'];
+		$cat3_piii9_committee_a=$rowzz['cat3_piii9_committee_a'];
+		$cat3_piii10_self_a=$rowzz['cat3_piii10_self_a'];
+		$cat3_piii10_hod_a=$rowzz['cat3_piii10_hod_a'];
+		$cat3_piii10_committee_a=$rowzz['cat3_piii10_committee_a'];
+		$cat3_piii11_self_a=$rowzz['cat3_piii11_self_a'];
+		$cat3_piii11_hod_a=$rowzz['cat3_piii11_hod_a'];
+		$cat3_piii11_committee_a=$rowzz['cat3_piii11_committee_a'];
+		$cat3_piiitotal_self_a=$rowzz['cat3_piiitotal_self_a'];
+		$cat3_piiitotal_hod_a=$rowzz['cat3_piiitotal_hod_a'];
+		$cat3_piiitotal_committee_a=$rowzz['cat3_piiitotal_committee_a'];
+
+
+		$sqlzzz="SELECT * FROM partb_cat4_pi WHERE facultyId='$userId' AND year='$year'";
+		$resultzzz=mysqli_query($conn,$sqlzzz);
+		$rowzzz=mysqli_fetch_assoc($resultzzz);
+		$cat4_piv1_self_a=$rowzzz['cat4_piv1_self_a'];
+		$cat4_piv1_hod_a=$rowzzz['cat4_piv1_hod_a'];
+		$cat4_piv1_committee_a=$rowzzz['cat4_piv1_committee_a'];
+		$cat4_piv2_self_a=$rowzzz['cat4_piv2_self_a'];
+		$cat4_piv2_hod_a=$rowzzz['cat4_piv2_hod_a'];
+		$cat4_piv2_committee_a=$rowzzz['cat4_piv2_committee_a'];
+		$cat4_piv3_self_a=$rowzzz['cat4_piv3_self_a'];
+		$cat4_piv3_hod_a=$rowzzz['cat4_piv3_hod_a'];
+		$cat4_piv3_committee_a=$rowzzz['cat4_piv3_committee_a'];
+		$cat4_pivtotal_self_a=$rowzzz['cat4_pivtotal_self_a'];
+		$cat4_pivtotal_hod_a=$rowzzz['cat4_pivtotal_hod_a'];
+		$cat4_pivtotal_committee_a=$rowzzz['cat4_pivtotal_committee_a'];
+	}
 
 	?>
     
@@ -329,7 +443,7 @@ tr:nth-child(even) {
     		</div>
 		</div>
 
-		<div class="row justify-content-right">
+		<div class="row justify-content-right pipart">
 			<div class="col-md-6">
 			</div>
 			<div class="col-md-6">
@@ -346,9 +460,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi1_self_a; ?></td>
+			      	<?php 
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi1_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi1_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -583,7 +709,7 @@ tr:nth-child(even) {
     		</div>
 		</div>
 
-		<div class="row justify-content-right">
+		<div class="row justify-content-right pipart">
 			<div class="col-md-6">
 			</div>
 			<div class="col-md-6">
@@ -600,9 +726,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi2_self_a; ?></td>
+			      	<?php 
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi2_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi2_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -659,7 +797,7 @@ tr:nth-child(even) {
 				<div class="col-md-6">
 					<label class="col-form-label" style="font-size: 22px">* 2 marks for each compliance</label>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 pipart">
 				   	<table class="table table-bordered">
 				    <thead>
 				    	<tr>
@@ -673,9 +811,21 @@ tr:nth-child(even) {
 				    </thead>
 				    <tbody>
 				      <tr>
-				      	<td style="text-align: center;font-size: 25px"></td>
-				      	<td style="text-align: center;font-size: 25px"></td>
-				      	<td style="text-align: center;font-size: 25px"></td> 
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi3_self_a; ?></td>
+				      	<?php 
+				      	if($hod==1 || $committee==1)
+				      	{
+				      		?>
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi3_hod_a; ?></td>
+				      	<?php
+				      }
+				      if($committee==1)
+				      {
+				      	?>
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi3_committee_a; ?></td> 
+				      	<?php
+				      }
+				      ?>
 				    </tbody>
 		  			</table>
 		  		</div>
@@ -737,7 +887,7 @@ tr:nth-child(even) {
 				<div class="col-md-6">
 					<label class="col-form-label" style="font-size: 22px">* 2 marks for each compliance</label>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 pipart">
 				   	<table class="table table-bordered">
 				    <thead>
 				    	<tr>
@@ -751,15 +901,27 @@ tr:nth-child(even) {
 				    </thead>
 				    <tbody>
 				      <tr>
-				      	<td style="text-align: center;font-size: 25px"></td>
-				      	<td style="text-align: center;font-size: 25px"></td>
-				      	<td style="text-align: center;font-size: 25px"></td> 
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi4_self_a; ?></td>
+				      	<?php 
+				      	if($hod==1 || $committee==1)
+				      	{
+				      		?>
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi4_hod_a; ?></td>
+				      	<?php
+				      }
+				      if($committee==1)
+				      {
+				      	?>
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pi4_committee_a; ?></td> 
+				      	<?php
+				      }
+				      ?>
 				    </tbody>
 		  			</table>
 		  		</div>
     		</div>
 
-    		<div class="row">
+    		<div class="row pipart">
 				<div class="col-md-12">
 				   	<table class="table table-bordered">
 				    <thead>
@@ -774,9 +936,21 @@ tr:nth-child(even) {
 				    </thead>
 				    <tbody>
 				      <tr>
-				      	<td style="text-align: center;font-size: 25px"></td>
-				      	<td style="text-align: center;font-size: 25px"></td>
-				      	<td style="text-align: center;font-size: 25px"></td> 
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pitotal_self_a; ?></td>
+				      	<?php 
+				      	if($hod==1 || $committee==1)
+				      	{
+				      		?>
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pitotal_hod_a; ?></td>
+				      	<?php
+				      }
+				      if($committee==1)
+				      {
+				      	?>
+				      	<td style="text-align: center;font-size: 25px"><?php echo $cat1_pitotal_committee_a; ?></td> 
+				      	<?php
+				      }
+				      ?>
 				    </tbody>
 		  			</table>
 		  		</div>
@@ -840,7 +1014,7 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-6">
 				
 			</div>
@@ -858,9 +1032,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii1_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii1_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii1_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -920,7 +1106,7 @@ tr:nth-child(even) {
 			</div>
 		</div> -->
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-6">
 				
 			</div>
@@ -938,9 +1124,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii2_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii2_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii2_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -987,7 +1185,7 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-6">
 				
 			</div>
@@ -1005,9 +1203,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii3_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii3_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii3_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -1059,7 +1269,7 @@ tr:nth-child(even) {
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-6">
 				
 			</div>
@@ -1077,9 +1287,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii4_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii4_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_pii4_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -1098,7 +1320,7 @@ tr:nth-child(even) {
 			</div>
 		</div> -->
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-12">
 			   	<table class="table table-bordered">
 			    <thead>
@@ -1113,9 +1335,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_piitotal_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_piitotal_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat2_piitotal_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -1219,31 +1453,7 @@ tr:nth-child(even) {
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-md-6">
-							
-						</div>
-						<div class="col-md-6">
-						   	<table class="table table-bordered">
-						    <thead>
-						    	<tr>
-						    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
-						    	</tr>
-						      <tr>
-						        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
-						    </tbody>
-				  			</table>
-				  		</div>
-    				</div>
+					
 
 				</div>
 
@@ -1252,6 +1462,43 @@ tr:nth-child(even) {
 		}
 
 		?>
+		<div class="row pipart">
+			<div class="col-md-6">
+				<p class="text-center h4">Published Papers In Peer Reviewed Journals (Max. PI=20)</p>
+			</div>
+			<div class="col-md-6">
+			   	<table class="table table-bordered">
+			    <thead>
+			    	<tr>
+			    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
+			    	</tr>
+			      <tr>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii1_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii1_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii1_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
+			    </tbody>
+	  			</table>
+	  		</div>
+		</div>
 		<?php
 
 		$sql1="SELECT * FROM part_b_cat_3_ppic WHERE formId='$formId'";
@@ -1347,38 +1594,50 @@ tr:nth-child(even) {
 							<p style="font-size: 22px">* 15 marks for International conference for first author <br>* 08 marks for second author</p>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-6">
-							
-						</div>
-						<div class="col-md-6">
-						   	<table class="table table-bordered">
-						    <thead>
-						    	<tr>
-						    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
-						    	</tr>
-						      <tr>
-						        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
-						    </tbody>
-				  			</table>
-				  		</div>
-    				</div>
+					
 
 				</div>
 				<?php
 			}
 		}
 		?>
-
+		<div class="row pipart">
+			<div class="col-md-6">
+				<p class="text-center h4">Published Papers in International/National Conference Abroad (Max.PI=15)</p>
+			</div>
+			<div class="col-md-6">
+			   	<table class="table table-bordered">
+			    <thead>
+			    	<tr>
+			    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
+			    	</tr>
+			      <tr>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii2_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii2_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii2_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
+			    </tbody>
+	  			</table>
+	  		</div>
+		</div>
 		<?php
 
 		$sql1="SELECT * FROM part_b_cat_3_ppinc WHERE formId='$formId'";
@@ -1473,33 +1732,7 @@ tr:nth-child(even) {
 						<div class="col-md-10 text-left">
 							<p style="font-size: 22px">* 10 marks for International conference for first author <br>* 05 marks for second author</p>
 						</div>				
-					</div>
-
-					<div class="row">
-						<div class="col-md-6">
-							
-						</div>
-						<div class="col-md-6">
-						   	<table class="table table-bordered">
-						    <thead>
-						    	<tr>
-						    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
-						    	</tr>
-						      <tr>
-						        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
-						    </tbody>
-				  			</table>
-				  		</div>
-    				</div>
+					</div>			
 
 				</div>
 
@@ -1509,7 +1742,43 @@ tr:nth-child(even) {
 		}
 
 		?>
-
+		<div class="row pipart">
+			<div class="col-md-6">
+				<p class="text-center h4">Published Papers in International/National Conference in India (Max.PI=10)</p>
+			</div>
+			<div class="col-md-6">
+			   	<table class="table table-bordered">
+			    <thead>
+			    	<tr>
+			    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
+			    	</tr>
+			      <tr>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii3_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii3_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii3_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
+			    </tbody>
+	  			</table>
+	  		</div>
+		</div>
 		<?php
 
 		$sql1="SELECT * FROM part_b_cat_3_bk WHERE formId='$formId'";
@@ -1615,31 +1884,7 @@ tr:nth-child(even) {
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-md-6">
-							
-						</div>
-						<div class="col-md-6">
-						   	<table class="table table-bordered">
-						    <thead>
-						    	<tr>
-						    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
-						    	</tr>
-						      <tr>
-						        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
-						        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
-						      </tr>
-						    </thead>
-						    <tbody>
-						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
-						    </tbody>
-				  			</table>
-				  		</div>
-    				</div>
+					
 
 				</div>
 				<?php
@@ -1647,7 +1892,43 @@ tr:nth-child(even) {
 		}
 
 		?>	
-
+		<div class="row pipart">
+			<div class="col-md-6">
+				<p class="text-center h4">Books/Articles/Chapters published in Books (Max.PI=15)</p>
+			</div>
+			<div class="col-md-6">
+			   	<table class="table table-bordered">
+			    <thead>
+			    	<tr>
+			    		<th style="text-align: center;font-size: 25px" colspan="3">PI</th>
+			    	</tr>
+			      <tr>
+			        <th style="text-align: center;font-size: 25px">Self Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Hod Appraisals</th>
+			        <th style="text-align: center;font-size: 25px">Committee Appraisals</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii4_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii4_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii4_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
+			    </tbody>
+	  			</table>
+	  		</div>
+		</div>
 		<?php
 
 		$sql1="SELECT * FROM part_b_cat_3 WHERE formId='$formId'";
@@ -1724,7 +2005,7 @@ tr:nth-child(even) {
 						</thead>					
 					</table>
 					</div>
-					<div class="row justify-content-center">
+					<div class="row justify-content-center pipart">
 						<div class="col-md-6">
 						   	<table class="table table-bordered">
 						    <thead>
@@ -1739,9 +2020,21 @@ tr:nth-child(even) {
 						    </thead>
 						    <tbody>
 						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piiires_self_a; ?></td>
+						      	<?php
+						      	if($hod==1 || $committee==1)
+						      	{
+						      		?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piiires_hod_a; ?></td>
+						      	<?php
+						      }
+						      if($committee==1)
+						      {
+						      	?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piiires_committee_a; ?></td> 
+						      	<?php
+						      }
+						      ?>
 						    </tbody>
 				  			</table>
 				  		</div>
@@ -1799,7 +2092,7 @@ tr:nth-child(even) {
 							</tbody>
 						</table>
 					</div>
-					<div class="row">
+					<div class="row pipart">
 						<div class="col-md-6"></div>
 						<div class="col-md-6">
 						   	<table class="table table-bordered">
@@ -1815,9 +2108,21 @@ tr:nth-child(even) {
 						    </thead>
 						    <tbody>
 						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii8_self_a; ?></td>
+						      	<?php
+						      	if($hod==1 || $committee==1)
+						      	{
+						      		?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii8_hod_a; ?></td>
+						      	<?php
+						      }
+						      if($committee==1)
+						      {
+						      	?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii8_committee_a; ?></td> 
+						      	<?php
+						      }
+						      ?>
 						    </tbody>
 				  			</table>
 				  		</div>
@@ -1875,7 +2180,7 @@ tr:nth-child(even) {
 							</tbody>
 						</table>
 					</div>
-					<div class="row">
+					<div class="row pipart">
 						<div class="col-md-6"></div>
 						<div class="col-md-6">
 						   	<table class="table table-bordered">
@@ -1891,9 +2196,21 @@ tr:nth-child(even) {
 						    </thead>
 						    <tbody>
 						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii9_self_a; ?></td>
+						      	<?php
+						      	if($hod==1 || $committee==1)
+						      	{
+						      		?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii9_hod_a; ?></td>
+						      	<?php
+						      }
+						      if($committee==1)
+						      {
+						      	?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii9_committee_a; ?></td> 
+						      	<?php
+						      }
+						      ?>
 						    </tbody>
 				  			</table>
 				  		</div>
@@ -1951,7 +2268,7 @@ tr:nth-child(even) {
 							</tbody>
 						</table>
 					</div>
-					<div class="row">
+					<div class="row pipart">
 						<div class="col-md-6"></div>
 						<div class="col-md-6">
 						   	<table class="table table-bordered">
@@ -1967,9 +2284,21 @@ tr:nth-child(even) {
 						    </thead>
 						    <tbody>
 						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii10_self_a; ?></td>
+						      	<?php
+						      	if($hod==1 || $committee==1)
+						      	{
+						      		?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii10_hod_a; ?></td>
+						      	<?php
+						      }
+						      if($committee==1)
+						      {
+						      	?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii10_committee_a; ?></td> 
+						      	<?php
+						      }
+						      ?>
 						    </tbody>
 				  			</table>
 				  		</div>
@@ -2021,7 +2350,7 @@ tr:nth-child(even) {
 							</tbody>
 						</table>
 					</div>
-					<div class="row">
+					<div class="row pipart">
 						<div class="col-md-6"></div>
 						<div class="col-md-6">
 						   	<table class="table table-bordered">
@@ -2037,9 +2366,21 @@ tr:nth-child(even) {
 						    </thead>
 						    <tbody>
 						      <tr>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td>
-						      	<td style="text-align: center;font-size: 25px"></td> 
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii11_self_a; ?></td>
+						      	<?php
+						      	if($hod==1 || $committee==1)
+						      	{
+						      		?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii11_hod_a; ?></td>
+						      	<?php
+						      }
+						      if($committee==1)
+						      {
+						      	?>
+						      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piii11_committee_a; ?></td> 
+						      	<?php
+						      }
+						      ?>
 						    </tbody>
 				  			</table>
 				  		</div>
@@ -2050,7 +2391,7 @@ tr:nth-child(even) {
 
 		<hr>
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-12">
 			   	<table class="table table-bordered">
 			    <thead>
@@ -2065,9 +2406,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piiitotal_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piiitotal_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat3_piiitotal_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -2133,7 +2486,7 @@ tr:nth-child(even) {
 			<div class="col-md-6">
 				<p style="font-size: 22px">* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 pipart">
 			   	<table class="table table-bordered">
 			    <thead>
 			    	<tr>
@@ -2147,9 +2500,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv1_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv1_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv1_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -2207,7 +2572,7 @@ tr:nth-child(even) {
 			<div class="col-md-6">
 				<p style="font-size: 22px">* 05 Marks for each at national level <br>* 10 marks for international level abroad</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 pipart">
 			   	<table class="table table-bordered">
 			    <thead>
 			    	<tr>
@@ -2221,9 +2586,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv2_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv2_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv2_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -2279,7 +2656,7 @@ tr:nth-child(even) {
 			<div class="col-md-6">
 				<p style="font-size: 22px">* 05 Marks for international / national credentials / activity / contribution not mentioned in application</p>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 pipart">
 			   	<table class="table table-bordered">
 			    <thead>
 			    	<tr>
@@ -2293,15 +2670,27 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv3_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv3_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_piv3_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
 		</div>
 
-		<div class="row">
+		<div class="row pipart">
 			<div class="col-md-12">
 			   	<table class="table table-bordered">
 			    <thead>
@@ -2316,9 +2705,21 @@ tr:nth-child(even) {
 			    </thead>
 			    <tbody>
 			      <tr>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td>
-			      	<td style="text-align: center;font-size: 25px"></td> 
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_pivtotal_self_a; ?></td>
+			      	<?php
+			      	if($hod==1 || $committee==1)
+			      	{
+			      		?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_pivtotal_hod_a; ?></td>
+			      	<?php
+			      }
+			      if($committee==1)
+			      {
+			      	?>
+			      	<td style="text-align: center;font-size: 25px"><?php echo $cat4_pivtotal_committee_a; ?></td> 
+			      	<?php
+			      }
+			      ?>
 			    </tbody>
 	  			</table>
 	  		</div>
@@ -3160,6 +3561,17 @@ tr:nth-child(even) {
 		
 	});
 	</script> 
+	<?php
+	//removing PI part if pivalues is not set
+	if(!isset($_GET['pivalues']) || (isset($_GET['pivalues']) && $_GET['pivalues']!='true'))
+	{
+		?>
+		<script type="text/javascript">
+			$(".pipart").remove();
+		</script>
+		<?php
+	}
+	?>
 </body>
 </html>
 

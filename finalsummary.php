@@ -38,7 +38,7 @@ $lasttolastyear=$previousyear-1;
 								<th class="text-center" colspan="4">Average API given by Faculty Member(in %)</th>
 								<th class="text-center" colspan="4">Average API after verification by HOD(in %)</th>
 								<th class="text-center" colspan="4">Final Score by Screening Cum Evaluation/Selection Committee</th>
-								<th class="text-center" rowspan="2">Final Recommendation</th>
+								<th class="text-center" rowspan="2">Final Remarks by Committee</th>
 								<th class="text-center" rowspan="2">Approved / Disapproved for CAS</th>
 							</tr>
 
@@ -46,17 +46,20 @@ $lasttolastyear=$previousyear-1;
 								<th><?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?></th>
 								<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 								<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								
+								<!-- <th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th> -->
+								<th>Average PI %</th>
+
 								<th><?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?></th>
 								<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 								<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								
+								<!-- <th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th> -->
+								<th>Average PI %</th>
+
 								<th><?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?></th>
 								<th><?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?></th>
 								<th><?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
-								<th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th>
+								<!-- <th>Cumulated Score=0.33% of API of <?php echo $previousyear-3; ?>-<?php echo $previousyear-2; ?>+0.33% of API of <?php echo $previousyear-2; ?>-<?php echo $previousyear-1; ?>+0.33% of API of <?php echo $previousyear-1; ?>-<?php echo $previousyear; ?></th> -->
+								<th>Average PI %</th>
 							</tr>
 
 							<tbody>
@@ -95,15 +98,15 @@ $lasttolastyear=$previousyear-1;
 											<td><?php echo $row['selfPP']; ?></td>
 											<td><?php echo $row['selfA']; ?></td>
 											<td><?php echo $row['selfB']; ?></td>
-											<td><?php echo $row['self_avgpi']; ?></td>
+											<td><?php echo number_format((float)($row['self_avgpi']/5), 2, '.', ''); ?></td>
 											<td><?php echo $row['hodPP']; ?></td>
 											<td><?php echo $row['hodA']; ?></td>
 											<td><?php echo $row['hodB']; ?></td>
-											<td><?php echo $row['hod_avgpi']; ?></td>
+											<td><?php echo number_format((float)($row['hod_avgpi']/5), 2, '.', ''); ?></td>
 											<td><?php echo $row['committeePP']; ?></td>
 											<td><?php echo $row['committeeA']; ?></td>
 											<td><?php echo $row['committeeB']; ?></td>
-											<td><?php echo $row['committee_avgpi']; ?></td>
+											<td><?php echo number_format((float)($row['committee_avgpi']/5), 2, '.', ''); ?></td>
 											<td><?php echo $row['final_recomm']; ?></td>
 											<td><?php echo $cas_approved; ?></td>
 										</tr>									
@@ -128,9 +131,9 @@ $lasttolastyear=$previousyear-1;
 				</div>
 			</div>
 			<br>
-			<a href="generate_fs_csv.php" target="_blank" class="btn btn-primary" style="margin-bottom: 10px">
+			<!-- <a href="generate_fs_csv.php" target="_blank" class="btn btn-primary" style="margin-bottom: 10px">
 	  			GENERATE CSV 
-			</a>
+			</a> -->
 			<button type="button" class="btn btn-success" onclick="myFunction()" id="fs-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000;margin-bottom: 10px">
 	  			PRINT 
 			</button>

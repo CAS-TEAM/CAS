@@ -1551,9 +1551,10 @@ $lasttolastyearmf=0.33;
 				<!-- <button type="submit" class="btn btn-success" id="part-a-submit-form" data-toggle="tooltip" data-placement="bottom" title="Clicking this button will automatically save whatever information you have uploaded so far.">
 	  			SUBMIT 
 				</button> -->
-					<button type="button" class="btn btn-primary part-a-print-form" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
+					<!-- <button type="button" class="btn btn-primary part-a-print-form" onclick="myFunction()" id="part-a-print-form" data-toggle="tooltip" data-placement="bottom" style="background-color: #e60000;border: 1px solid #e60000">
 		  			PRINT 
-					</button>					
+					</button> -->
+					<a href="printsummary.php?id=<?php echo $userId; ?>&year=<?php echo $currentyear; ?>" class="btn btn-primary part-a-print-form" style="background-color: #e60000;border: 1px solid #e60000">PRINT</a>					
 				</div>
 			</div><br>
 			<!-- </form> -->
