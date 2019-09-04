@@ -185,38 +185,56 @@ $lasttolastyearmf=0.33;
 
 		///////////////////////////////////////////////////////////////
 		//calculating percentages
-		$PPpartAself=number_format($lparta_gpi_pi_self_a/50*100,2);
-		$PPpartBcat1self=number_format(($lcat1_pitotal_self_a/100)*100,2);
-		$PPpartBcat2self=number_format($lcat2_piitotal_self_a,2);
-		$PPpartBcat3self=number_format($lcat3_piiitotal_self_a/175*100,2);
-		$PPpartBcat4self=number_format($lcat4_pivtotal_self_a/75*100,2);
+		// $PPpartAself=number_format($lparta_gpi_pi_self_a/50*100,2);
+		// $PPpartBcat1self=number_format(($lcat1_pitotal_self_a/100)*100,2);
+		// $PPpartBcat2self=number_format($lcat2_piitotal_self_a,2);
+		// $PPpartBcat3self=number_format($lcat3_piiitotal_self_a/175*100,2);
+		// $PPpartBcat4self=number_format($lcat4_pivtotal_self_a/75*100,2);
 
-		$PPtotal= ($PPpartAself + $PPpartBcat1self + $PPpartBcat2self + $PPpartBcat3self + $PPpartBcat4self);
-		$PP=number_format($PPtotal/5, 2);
+		$PPpartAself=$lparta_gpi_pi_self_a;
+		$PPpartBcat1self=$lcat1_pitotal_self_a;
+		$PPpartBcat2self=$lcat2_piitotal_self_a;
+		$PPpartBcat3self=$lcat3_piiitotal_self_a;
+		$PPpartBcat4self=$lcat4_pivtotal_self_a;
 
-		$PpartAself=number_format($pparta_gpi_pi_self_a/50*100,2);
-		$PpartBcat1self=number_format(($pcat1_pitotal_self_a/100)*100,2);
-		$PpartBcat2self=number_format($pcat2_piitotal_self_a,2);
-		$PpartBcat3self=number_format($pcat3_piiitotal_self_a/175*100,2);
-		$PpartBcat4self=number_format($pcat4_pivtotal_self_a/75*100,2);
+		// $PPtotal= ($PPpartAself + $PPpartBcat1self + $PPpartBcat2self + $PPpartBcat3self + $PPpartBcat4self);
+		// $PP=number_format($PPtotal/5, 2);
 
-		$Atotal= ($PpartAself + $PpartBcat1self + $PpartBcat2self + $PpartBcat3self + $PpartBcat4self);
-		$A=number_format($Atotal/5, 2);
+		$PP = $lparta_gpi_pi_self_a+$lcat1_pitotal_self_a+$lcat2_piitotal_self_a+$lcat3_piiitotal_self_a+$lcat4_pivtotal_self_a;
 
-		$CpartAself=number_format($cparta_gpi_pi_self_a/50*100,2);
-		$CpartBcat1self=number_format($ccat1_pitotal_self_a,2);
-		$CpartBcat2self=number_format($ccat2_piitotal_self_a,2);
-		$CpartBcat3self=number_format($ccat3_piiitotal_self_a/175*100,2);
-		$CpartBcat4self=number_format($ccat4_pivtotal_self_a/75*100,2);
+		// $PpartAself=number_format($pparta_gpi_pi_self_a/50*100,2);
+		// $PpartBcat1self=number_format(($pcat1_pitotal_self_a/100)*100,2);
+		// $PpartBcat2self=number_format($pcat2_piitotal_self_a,2);
+		// $PpartBcat3self=number_format($pcat3_piiitotal_self_a/175*100,2);
+		// $PpartBcat4self=number_format($pcat4_pivtotal_self_a/75*100,2);
 
-		$Btotal = ($CpartAself +	$CpartBcat1self +	$CpartBcat2self + $CpartBcat3self +	$CpartBcat4self);
-		$B=number_format($Btotal/5, 2);
+		$PpartAself=$pparta_gpi_pi_self_a;
+		$PpartBcat1self=$pcat1_pitotal_self_a;
+		$PpartBcat2self=$pcat2_piitotal_self_a;
+		$PpartBcat3self=$pcat3_piiitotal_self_a;
+		$PpartBcat4self=$pcat4_pivtotal_self_a;
 
+		// $Atotal= ($PpartAself + $PpartBcat1self + $PpartBcat2self + $PpartBcat3self + $PpartBcat4self);
+		// $A=number_format($Atotal/5, 2);
 
+		$A = $pparta_gpi_pi_self_a+$pcat1_pitotal_self_a+$pcat2_piitotal_self_a+$pcat3_piiitotal_self_a+$pcat4_pivtotal_self_a;
+
+		$CpartAself=$cparta_gpi_pi_self_a;
+		$CpartBcat1self=$ccat1_pitotal_self_a;
+		$CpartBcat2self=$ccat2_piitotal_self_a;
+		$CpartBcat3self=$ccat3_piiitotal_self_a;
+		$CpartBcat4self=$ccat4_pivtotal_self_a;
+
+		// $Btotal = ($CpartAself +	$CpartBcat1self +	$CpartBcat2self + $CpartBcat3self +	$CpartBcat4self);
+		// $B=number_format($Btotal/5, 2);
+
+		$B = $cparta_gpi_pi_self_a+$ccat1_pitotal_self_a+$ccat2_piitotal_self_a+$ccat3_piiitotal_self_a+$ccat4_pivtotal_self_a;
 
 		// $avgpi=number_format(0.25*$A + 0.75*$B, 2);
 		
-		$avgpi=number_format($lasttolastyearmf*$PP + $previousyearmf*$A + $currentyearmf*$B, 2);
+		// $avgpi=number_format($lasttolastyearmf*$PP + $previousyearmf*$A + $currentyearmf*$B, 2);
+
+		$avgpi=($PP+$A+$B)/3;
 
 		// $sqls="SELECT self_avgpi,selfA,selfB FROM summary_table WHERE facultyId='$userId' AND year='$currentyear'";
 		// $results=mysqli_query($conn,$sqls);
@@ -260,69 +278,72 @@ $lasttolastyearmf=0.33;
 								<td>General</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $lparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $lparta_gpi_pi_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicA_lasttolast' value="<?php echo $lparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academic_lasttolast' value="<?php echo $lparta_gpi_pi_self_a/50*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicA_last' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $pparta_gpi_pi_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicA_last' value="<?php echo $pparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academic_last' value="<?php echo $pparta_gpi_pi_self_a/50*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='current_academicA_current' value="<?php echo $cparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $cparta_gpi_pi_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicA_current' value="<?php echo $cparta_gpi_pi_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/50)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicA_current' value="<?php echo $cparta_gpi_pi_self_a/50*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 							</tr>
 		                    <tr id='summ11'>
@@ -331,69 +352,72 @@ $lasttolastyearmf=0.33;
 								<td>Teaching and Learning</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $lcat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $lcat1_pitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBI_lasttolast' value="<?php echo $lcat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBI_lasttolast' value="<?php echo ($lcat1_pitotal_self_a/100)*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicBI_last' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $pcat1_pitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBI_last' value="<?php echo $pcat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBI_last' value="<?php echo ($pcat1_pitotal_self_a/100)*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='current_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $ccat1_pitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBI_current' value="<?php echo $ccat1_pitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 		                    </tr>
 		                    <tr id='summ12'>
@@ -402,69 +426,72 @@ $lasttolastyearmf=0.33;
 								<td>Co-Curricular and administrative activities in college</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $lcat2_piitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBII_lasttolast' value="<?php echo $lcat2_piitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $pcat2_piitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBII_last' value="<?php echo $pcat2_piitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='current_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $ccat2_piitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/100)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBII_current' value="<?php echo $ccat2_piitotal_self_a; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 		                    </tr>
 		                    <tr id='summ13'>
@@ -473,69 +500,72 @@ $lasttolastyearmf=0.33;
 								<td>Publications, supervisor, guide, research, consultancy, intellectual properties</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $lcat3_piiitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIII_lasttolast' value="<?php echo $lcat3_piiitotal_self_a/175*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $pcat3_piiitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIII_last' value="<?php echo $pcat3_piiitotal_self_a/175*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='current_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $ccat3_piiitotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/175)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIII_current' value="<?php echo $ccat3_piiitotal_self_a/175*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 		                    </tr>
 		                    <tr id='summ14'>
@@ -544,153 +574,177 @@ $lasttolastyearmf=0.33;
 								<td>Co-Curricular and administrative activities outside college</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $lcat4_pivtotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_lasttolast' value="<?php echo $lcat4_pivtotal_self_a/75*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $pcat4_pivtotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_last' value="<?php echo $pcat4_pivtotal_self_a/75*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-1" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">(</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='current_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/> -->
+											<p><?php echo $ccat4_pivtotal_self_a; ?></p>
 										</div>
-										<div class="col-md-5" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='current_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a; ?>" class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" disabled/>
-										</div>
-										<div class="col-md-4 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-4 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">/75)*100</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">%PI =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_current' value="<?php echo $ccat4_pivtotal_self_a/75*100; ?>" class="form-control summaryyearspi" style="width: 100%" disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 		                    </tr>
 		                    <tr id='summ14'>
-		                    	<td colspan="3">Average PI for total out of 500</td>
+		                    	<!-- <td colspan="3">Average PI for total out of 500</td> -->
+		                    	<td colspan="3">PI total out of 500</td>
 		                    	<td>
 		                    		<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">A =</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $PPtotal; ?>" disabled/> -->
+											<p><?php echo $PP; ?></p>
 										</div>
-										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='lasttolast_academicBIV_avgA_lasttolast' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $PPtotal; ?>" disabled/>
-										</div>
-										<div class="col-md-3 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">A =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_avgA_lasttolast' value="<?php echo $PP; ?>" class="form-control summaryyearspi" style="width: 100%"  disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 		                    		<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">B =</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicBIV_avgA_last' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/> -->
+											<p><?php echo $A; ?></p>
 										</div>
-										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_avgA_last' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Atotal; ?>" disabled/>
-										</div>
-										<div class="col-md-3 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">B =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_avgA_last' value="<?php echo $A; ?>" class="form-control summaryyearspi" style="width: 100%"  disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 								<td>
 									<div class="row">
-										<div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
+										<!-- <div class="col-md-4" style="margin:0;padding:0;padding-left:10px;padding-right:10px">
 											<label class="col-form-label">C =</label>
+										</div> -->
+										<div class="col-md-12" style="margin:0;padding:0;padding-right:5px">
+											<!-- <input type="number" step="0.01" name='last_academicBIV_avgB_last' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Btotal; ?>" disabled/> -->
+											<p><?php echo $B; ?></p>
 										</div>
-										<div class="col-md-4" style="margin:0;padding:0;padding-right:5px">
-											<input type="number" step="0.01" name='last_academicBIV_avgB_last' class="form-control summaryyears" style="width: 100%;margin: 0;padding: 0" value="<?php echo $Btotal; ?>" disabled/>
-										</div>
-										<div class="col-md-3 text-left" style="margin:0;padding:0">
+										<!-- <div class="col-md-3 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">% /5</label>
-										</div>
+										</div> -->
 									</div><br>
 
-									<div class="row">
+									<!-- <div class="row">
 										<div class="col-md-4" style="margin:0;padding:0">
 											<label class="col-form-label">C =</label>
 										</div>
 										<div class="col-md-8" style="margin:0;padding:0;padding-right:10px"> 
 											<input type="number" step="0.01" name='pi_academicBIV_avgB_last' value="<?php echo number_format((float)$B, 2, '.', ''); ?>" class="form-control summaryyearspi" style="width: 100%"  disabled/>
 										</div>
-									</div>
+									</div> -->
 								</td>
 
 							</tr>
 		                    <tr id='summ15'>
 		                    	<td colspan="6">
 									<div class="row justify-content-center">
-										<div class="col-md-5" style="margin:0;padding:0">
-											<label class="col-form-label">Average PI = [ (<?php echo $lasttolastyearmf; ?> * A) + (<?php echo $previousyearmf; ?> * B) + (<?php echo $currentyearmf; ?> * C) ] = </label>
+										<div class="col-md-12" style="margin:0;padding:0">
+											<!-- <label class="col-form-label">Average PI = [ (<?php echo $lasttolastyearmf; ?> * A) + (<?php echo $previousyearmf; ?> * B) + (<?php echo $currentyearmf; ?> * C) ] = </label> -->
+											<label class="col-form-label">Average PI = (A + B + C) / 3 = <?php echo number_format((float)$avgpi, 2, '.', ''); ?></label>
 										</div>
-										<div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
+										<!-- <div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
 											<input type="number" step="0.01" name='last_academicBIV_avgpi_last' class="form-control summaryyearsaverage" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
 										</div>
 										<div class="col-md-1 text-left" style="margin:0;padding:0">
 											<label class="col-form-label">%</label>
+										</div> -->
+									</div>
+								</td>
+		                    </tr>
+		                    <tr id='summ15'>
+		                    	<td colspan="6">
+									<div class="row justify-content-center">
+										<div class="col-md-12" style="margin:0;padding:0">
+											<!-- <label class="col-form-label">Average PI = [ (<?php echo $lasttolastyearmf; ?> * A) + (<?php echo $previousyearmf; ?> * B) + (<?php echo $currentyearmf; ?> * C) ] = </label> -->
+											<label class="col-form-label">Average PI % = ((Average PI)/500)*100 = <?php echo number_format((float)($avgpi/5), 2, '.', ''); ?></label>
 										</div>
+										<!-- <div class="col-md-3" style="margin:0;padding:0;padding-right:5px">
+											<input type="number" step="0.01" name='last_academicBIV_avgpi_last' class="form-control summaryyearsaverage" style="width: 100%;margin: 0;padding: 0" value='<?php echo number_format((float)$avgpi, 2, '.', ''); ?>' disabled/>
+										</div>
+										<div class="col-md-1 text-left" style="margin:0;padding:0">
+											<label class="col-form-label">%</label>
+										</div> -->
 									</div>
 								</td>
 		                    </tr>
@@ -742,7 +796,7 @@ $lasttolastyearmf=0.33;
 
 								<?php
 
-								for($xx=$currentyear;$xx>=($currentyear-1);$xx--)
+								for($xx=$currentyear;$xx>=($currentyear-2);$xx--)
 								{
 
 								?>
@@ -776,7 +830,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($row['file']); ?></td>
+												<!-- <td><?php echo basename($row['file']); ?></td> -->
+												<td>Details of course/summer school/STTP/online course attended/completed/organised during academic year</td>
 												<td><a href="viewfile.php?location=<?php echo $row['file']; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -832,6 +887,15 @@ $lasttolastyearmf=0.33;
 									$e12file=mysqli_real_escape_string($conn,$rowxxx['e12file']);
 									$e13file=mysqli_real_escape_string($conn,$rowxxx['e13file']);
 
+									$dps1file=mysqli_real_escape_string($conn,$rowxxx['dps1file']);
+									$dps2file=mysqli_real_escape_string($conn,$rowxxx['dps2file']);
+									$dps3file=mysqli_real_escape_string($conn,$rowxxx['dps3file']);
+									$dps4file=mysqli_real_escape_string($conn,$rowxxx['dps4file']);
+									$dps5file=mysqli_real_escape_string($conn,$rowxxx['dps5file']);
+									$dps6file=mysqli_real_escape_string($conn,$rowxxx['dps6file']);
+									$dps7file=mysqli_real_escape_string($conn,$rowxxx['dps7file']);
+
+
 									for ($x = 1; $x <= 13; $x++) {
 										$file='o'.$x.'file';
 										if($$file!='NAN' && $$file!='')
@@ -839,7 +903,8 @@ $lasttolastyearmf=0.33;
 										    ?>
 										    <tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($$file); ?></td>
+												<!-- <td><?php echo basename($$file); ?></td> -->
+												<td>ESE Paper Setting (Odd Semester)</td>
 												<td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td>
 											</tr>
 										    <?php
@@ -854,7 +919,8 @@ $lasttolastyearmf=0.33;
 										    ?>
 										    <tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($$file); ?></td>
+												<!-- <td><?php echo basename($$file); ?></td> -->
+												<td>ESE Paper Setting (Even Semester)</td>
 												<td><a href="viewfile.php?location=<?php echo $$file; ?>" target="_blank">View File</a></td>
 											</tr>
 										    <?php
@@ -873,7 +939,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Courses Taught (Even Semester)</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -892,7 +959,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Courses Taught (Odd Semester)</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -911,12 +979,91 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Details of additional resource provided to the students to enrich course content/syllabus</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
 											$counter+=1;
 										}
+									}
+
+									if($dps1file!='NAN' && $dps1file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Problem based learning, case studies, group discussions, activity based learning etc</td>
+											<td><a href="viewfile.php?location=<?php echo $dps1file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
+									}
+									if($dps2file!='NAN' && $dps2file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Use of ICT in T/L process with computer-aided methods like PowerPoint / Multimedia / Simulation / Software etc. Use of anyone of these in addition to Chalk and Board</td>
+											<td><a href="viewfile.php?location=<?php echo $dps2file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
+									}
+									if($dps3file!='NAN' && $dps3file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Developing and imparting Remedial / Bridge Courses</td>
+											<td><a href="viewfile.php?location=<?php echo $dps3file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
+									}
+									if($dps4file!='NAN' && $dps4file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Developing and imparting soft skills / communication skills / personality / development courses / modules</td>
+											<td><a href="viewfile.php?location=<?php echo $dps4file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
+									}
+									if($dps5file!='NAN' && $dps5file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Developing and imparting specialized teaching-learning programmes in physical education, library; innovative compositions and creations in music, performing and visual arts and other tradition areas</td>
+											<td><a href="viewfile.php?location=<?php echo $dps5file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
+									}
+									if($dps6file!='NAN' && $dps6file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Audit courses taken (given name/semester/term)</td>
+											<td><a href="viewfile.php?location=<?php echo $dps6file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
+									}
+									if($dps7file!='NAN' && $dps7file!='')
+									{
+										?>
+										<tr>
+											<td><?php echo $counter; ?></td>
+											<td>Other files</td>
+											<td><a href="viewfile.php?location=<?php echo $dps7file; ?>" target="_blank">View File</a></td>
+										</tr>
+										<?php
+										$counter+=1;
 									}
 
 									?>
@@ -938,7 +1085,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Extension, Co-Curricular and Field based activities / internships in college</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -957,7 +1105,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>College administration/organization member/committee member/NBA/NAAC of college</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -976,7 +1125,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Extra-curricular and social activities in college</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -995,7 +1145,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Holding administrative post: HOD/Dean/Vice-Principal/Associate HOD</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1026,7 +1177,8 @@ $lasttolastyearmf=0.33;
 										?>
 										<tr>
 											<td><?php echo $counter; ?></td>
-											<td><?php echo basename($phdfile); ?></td>
+											<!-- <td><?php echo basename($phdfile); ?></td> -->
+											<td>Ph.D. Attachments</td>
 											<td><a href="viewfile.php?location=<?php echo $phdfile; ?>" target="_blank">View File</a></td>
 										</tr>
 										<?php
@@ -1036,7 +1188,8 @@ $lasttolastyearmf=0.33;
 										?>									
 										<tr>
 											<td><?php echo $counter; ?></td>
-											<td><?php echo basename($mtechfile); ?></td>
+											<!-- <td><?php echo basename($mtechfile); ?></td> -->
+											<td>M. Tech. Attachments</td>
 											<td><a href="viewfile.php?location=<?php echo $mtechfile; ?>" target="_blank">View File</a></td>
 										</tr>
 										<?php
@@ -1046,7 +1199,8 @@ $lasttolastyearmf=0.33;
 										?>
 										<tr>
 											<td><?php echo $counter; ?></td>
-											<td><?php echo basename($btechfile); ?></td>
+											<!-- <td><?php echo basename($btechfile); ?></td> -->
+											<td>B. Tech. Attachments</td>
 											<td><a href="viewfile.php?location=<?php echo $btechfile; ?>" target="_blank">View File</a></td>
 										</tr>
 										<?php
@@ -1066,7 +1220,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Published Papers In Peer Reviewed Journals</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1085,7 +1240,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Published Papers in International/National Conference Abroad</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1104,7 +1260,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Published Papers in International/National Conference in India</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1123,7 +1280,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Books/Articles/Chapters published in Books</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1142,7 +1300,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Research/project/consultancy proposals submitted in academic year 2018/2019 but yet to get approval</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1161,7 +1320,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Ongoing Research/project/consultancy proposals approved/initiated in academic year 2018/2019 but yet to complete</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1180,7 +1340,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Completed Research Project and Consultancies initiated in academic year 2017-2018 but completed in academic year 2018-2019</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1199,7 +1360,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Patent/Intellectual property filed/received</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1226,7 +1388,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Seminars/invited talks given in Training Courses, Teaching-Evaluation Technology, Faculty Development Programs,Seminars,Workshops,Symposia etc. invited outside college</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1245,7 +1408,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Invited as cheif guest/guest of honor/expert/Chairmanships at Conference/reviewer/board member etc. outside college</td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1264,7 +1428,8 @@ $lasttolastyearmf=0.33;
 											?>
 											<tr>
 												<td><?php echo $counter; ?></td>
-												<td><?php echo basename($file); ?></td>
+												<!-- <td><?php echo basename($file); ?></td> -->
+												<td>Please give details of any other credential, significant contributions, and awards received etc. which are not mentioned. </td>
 												<td><a href="viewfile.php?location=<?php echo $file; ?>" target="_blank">View File</a></td>
 											</tr>
 											<?php
@@ -1539,35 +1704,61 @@ $lasttolastyearmf=0.33;
 
 		///////////////////////////////////////////////////////////////
 		//calculating percentages
-		$PPpartAhod=number_format($lparta_gpi_pi_hod_a/50*100,2);
-		$PPpartBcat1hod=number_format(($lcat1_pitotal_hod_a/100)*100,2);
-		$PPpartBcat2hod=number_format($lcat2_piitotal_hod_a,2);
-		$PPpartBcat3hod=number_format($lcat3_piiitotal_hod_a/175*100,2);
-		$PPpartBcat4hod=number_format($lcat4_pivtotal_hod_a/75*100,2);
+		// $PPpartAhod=number_format($lparta_gpi_pi_hod_a/50*100,2);
+		// $PPpartBcat1hod=number_format(($lcat1_pitotal_hod_a/100)*100,2);
+		// $PPpartBcat2hod=number_format($lcat2_piitotal_hod_a,2);
+		// $PPpartBcat3hod=number_format($lcat3_piiitotal_hod_a/175*100,2);
+		// $PPpartBcat4hod=number_format($lcat4_pivtotal_hod_a/75*100,2);
 
-		$PPtotal= ($PPpartAhod + $PPpartBcat1hod + $PPpartBcat2hod + $PPpartBcat3hod + $PPpartBcat4hod);
-		$PPhod=number_format($PPtotal/5, 2);
+		$PPpartAhod=$lparta_gpi_pi_hod_a;
+		$PPpartBcat1hod=$lcat1_pitotal_hod_a;
+		$PPpartBcat2hod=$lcat2_piitotal_hod_a;
+		$PPpartBcat3hod=$lcat3_piiitotal_hod_a;
+		$PPpartBcat4hod=$lcat4_pivtotal_hod_a;
 
-		$PpartAhod=number_format($pparta_gpi_pi_hod_a/50*100,2);
-		$PpartBcat1hod=number_format(($pcat1_pitotal_hod_a/100)*100,2);
-		$PpartBcat2hod=number_format($pcat2_piitotal_hod_a,2);
-		$PpartBcat3hod=number_format($pcat3_piiitotal_hod_a/175*100,2);
-		$PpartBcat4hod=number_format($pcat4_pivtotal_hod_a/75*100,2);
+		// $PPtotal= ($PPpartAhod + $PPpartBcat1hod + $PPpartBcat2hod + $PPpartBcat3hod + $PPpartBcat4hod);
+		// $PPhod=number_format($PPtotal/5, 2);
 
-		$Atotal= ($PpartAhod + $PpartBcat1hod + $PpartBcat2hod + $PpartBcat3hod + $PpartBcat4hod);
-		$Ahod=number_format($Atotal/5, 2);
+		$PPhod= ($PPpartAhod + $PPpartBcat1hod + $PPpartBcat2hod + $PPpartBcat3hod + $PPpartBcat4hod);
 
-		$CpartAhod=number_format($cparta_gpi_pi_hod_a/50*100,2);
-		$CpartBcat1hod=number_format($ccat1_pitotal_hod_a,2);
-		$CpartBcat2hod=number_format($ccat2_piitotal_hod_a,2);
-		$CpartBcat3hod=number_format($ccat3_piiitotal_hod_a/175*100,2);
-		$CpartBcat4hod=number_format($ccat4_pivtotal_hod_a/75*100,2);
+		// $PpartAhod=number_format($pparta_gpi_pi_hod_a/50*100,2);
+		// $PpartBcat1hod=number_format(($pcat1_pitotal_hod_a/100)*100,2);
+		// $PpartBcat2hod=number_format($pcat2_piitotal_hod_a,2);
+		// $PpartBcat3hod=number_format($pcat3_piiitotal_hod_a/175*100,2);
+		// $PpartBcat4hod=number_format($pcat4_pivtotal_hod_a/75*100,2);
 
-		$Btotal = ($CpartAhod +	$CpartBcat1hod +	$CpartBcat2hod + $CpartBcat3hod +	$CpartBcat4hod);
-		$Bhod=number_format($Btotal/5, 2);
+		$PpartAhod=$pparta_gpi_pi_hod_a;
+		$PpartBcat1hod=$pcat1_pitotal_hod_a;
+		$PpartBcat2hod=$pcat2_piitotal_hod_a;
+		$PpartBcat3hod=$pcat3_piiitotal_hod_a;
+		$PpartBcat4hod=$pcat4_pivtotal_hod_a;
+
+		// $Atotal= ($PpartAhod + $PpartBcat1hod + $PpartBcat2hod + $PpartBcat3hod + $PpartBcat4hod);
+		// $Ahod=number_format($Atotal/5, 2);
+
+		$Ahod= ($PpartAhod + $PpartBcat1hod + $PpartBcat2hod + $PpartBcat3hod + $PpartBcat4hod);
+
+		// $CpartAhod=number_format($cparta_gpi_pi_hod_a/50*100,2);
+		// $CpartBcat1hod=number_format($ccat1_pitotal_hod_a,2);
+		// $CpartBcat2hod=number_format($ccat2_piitotal_hod_a,2);
+		// $CpartBcat3hod=number_format($ccat3_piiitotal_hod_a/175*100,2);
+		// $CpartBcat4hod=number_format($ccat4_pivtotal_hod_a/75*100,2);
+
+		$CpartAhod=$cparta_gpi_pi_hod_a;
+		$CpartBcat1hod=$ccat1_pitotal_hod_a;
+		$CpartBcat2hod=$ccat2_piitotal_hod_a;
+		$CpartBcat3hod=$ccat3_piiitotal_hod_a;
+		$CpartBcat4hod=$ccat4_pivtotal_hod_a;
+
+		// $Btotal = ($CpartAhod +	$CpartBcat1hod +	$CpartBcat2hod + $CpartBcat3hod +	$CpartBcat4hod);
+		// $Bhod=number_format($Btotal/5, 2);
+
+		$Bhod = ($CpartAhod +	$CpartBcat1hod +	$CpartBcat2hod + $CpartBcat3hod +	$CpartBcat4hod);
 
 		// $avgpihod=number_format(0.25*$Ahod + 0.75*$Bhod, 2);
-		$avgpihod=number_format($lasttolastyearmf*$PPhod + $previousyearmf*$Ahod + $currentyearmf*$Bhod, 2);
+		// $avgpihod=number_format($lasttolastyearmf*$PPhod + $previousyearmf*$Ahod + $currentyearmf*$Bhod, 2);
+
+		$avgpihod=number_format(($PPhod +$Ahod + $Bhod)/3, 2);
 
 		// $sqlss="SELECT hodremarksA, hodremarksBcat1, hodremarksBcat2, hodremarksBcat3, hodremarksBcat4, hodremarksavgpi, hodremarkscum FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 		$sqlss="SELECT hodremarkscum FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
@@ -1690,35 +1881,59 @@ $lasttolastyearmf=0.33;
 
 			///////////////////////////////////////////////////////////////
 			//calculating percentages
-			$PPpartAcommittee=number_format($lparta_gpi_pi_committee_a/50*100,2);
-			$PPpartBcat1committee=number_format(($lcat1_pitotal_committee_a/100)*100,2);
-			$PPpartBcat2committee=number_format($lcat2_piitotal_committee_a,2);
-			$PPpartBcat3committee=number_format($lcat3_piiitotal_committee_a/175*100,2);
-			$PPpartBcat4committee=number_format($lcat4_pivtotal_committee_a/75*100,2);
+			// $PPpartAcommittee=number_format($lparta_gpi_pi_committee_a/50*100,2);
+			// $PPpartBcat1committee=number_format(($lcat1_pitotal_committee_a/100)*100,2);
+			// $PPpartBcat2committee=number_format($lcat2_piitotal_committee_a,2);
+			// $PPpartBcat3committee=number_format($lcat3_piiitotal_committee_a/175*100,2);
+			// $PPpartBcat4committee=number_format($lcat4_pivtotal_committee_a/75*100,2);
 
-			$PPtotal= ($PPpartAcommittee + $PPpartBcat1committee + $PPpartBcat2committee + $PPpartBcat3committee + $PPpartBcat4committee);
-			$PPcommittee=number_format($PPtotal/5, 2);
+			$PPpartAcommittee=$lparta_gpi_pi_committee_a;
+			$PPpartBcat1committee=$lcat1_pitotal_committee_a;
+			$PPpartBcat2committee=$lcat2_piitotal_committee_a;
+			$PPpartBcat3committee=$lcat3_piiitotal_committee_a;
+			$PPpartBcat4committee=$lcat4_pivtotal_committee_a;
 
-			$PpartAcommittee=number_format($pparta_gpi_pi_committee_a/50*100,2);
-			$PpartBcat1committee=number_format(($pcat1_pitotal_committee_a/100)*100,2);
-			$PpartBcat2committee=number_format($pcat2_piitotal_committee_a,2);
-			$PpartBcat3committee=number_format($pcat3_piiitotal_committee_a/175*100,2);
-			$PpartBcat4committee=number_format($pcat4_pivtotal_committee_a/75*100,2);
+			// $PPtotal= ($PPpartAcommittee + $PPpartBcat1committee + $PPpartBcat2committee + $PPpartBcat3committee + $PPpartBcat4committee);
+			// $PPcommittee=number_format($PPtotal/5, 2);
 
-			$Atotal= ($PpartAcommittee + $PpartBcat1committee + $PpartBcat2committee + $PpartBcat3committee + $PpartBcat4committee);
-			$Acommittee=number_format($Atotal/5, 2);
+			$PPcommittee=($PPpartAcommittee + $PPpartBcat1committee + $PPpartBcat2committee + $PPpartBcat3committee + $PPpartBcat4committee);
 
-			$CpartAcommittee=number_format($cparta_gpi_pi_committee_a/50*100,2);
-			$CpartBcat1committee=number_format($ccat1_pitotal_committee_a,2);
-			$CpartBcat2committee=number_format($ccat2_piitotal_committee_a,2);
-			$CpartBcat3committee=number_format($ccat3_piiitotal_committee_a/175*100,2);
-			$CpartBcat4committee=number_format($ccat4_pivtotal_committee_a/75*100,2);
+			// $PpartAcommittee=number_format($pparta_gpi_pi_committee_a/50*100,2);
+			// $PpartBcat1committee=number_format(($pcat1_pitotal_committee_a/100)*100,2);
+			// $PpartBcat2committee=number_format($pcat2_piitotal_committee_a,2);
+			// $PpartBcat3committee=number_format($pcat3_piiitotal_committee_a/175*100,2);
+			// $PpartBcat4committee=number_format($pcat4_pivtotal_committee_a/75*100,2);
 
-			$Btotal = ($CpartAcommittee +	$CpartBcat1committee +	$CpartBcat2committee + $CpartBcat3committee +	$CpartBcat4committee);
-			$Bcommittee=number_format($Btotal/5, 2);
+			$PpartAcommittee=$pparta_gpi_pi_committee_a;
+			$PpartBcat1committee=$pcat1_pitotal_committee_a;
+			$PpartBcat2committee=$pcat2_piitotal_committee_a;
+			$PpartBcat3committee=$pcat3_piiitotal_committee_a;
+			$PpartBcat4committee=$pcat4_pivtotal_committee_a;
+
+			// $Atotal= ($PpartAcommittee + $PpartBcat1committee + $PpartBcat2committee + $PpartBcat3committee + $PpartBcat4committee);
+			// $Acommittee=number_format($Atotal/5, 2);
+
+			$Acommittee= ($PpartAcommittee + $PpartBcat1committee + $PpartBcat2committee + $PpartBcat3committee + $PpartBcat4committee);
+
+			// $CpartAcommittee=number_format($cparta_gpi_pi_committee_a/50*100,2);
+			// $CpartBcat1committee=number_format($ccat1_pitotal_committee_a,2);
+			// $CpartBcat2committee=number_format($ccat2_piitotal_committee_a,2);
+			// $CpartBcat3committee=number_format($ccat3_piiitotal_committee_a/175*100,2);
+			// $CpartBcat4committee=number_format($ccat4_pivtotal_committee_a/75*100,2);
+
+			$CpartAcommittee=$cparta_gpi_pi_committee_a;
+			$CpartBcat1committee=$ccat1_pitotal_committee_a;
+			$CpartBcat2committee=$ccat2_piitotal_committee_a;
+			$CpartBcat3committee=$ccat3_piiitotal_committee_a;
+			$CpartBcat4committee=$ccat4_pivtotal_committee_a;
+
+			// $Btotal = ($CpartAcommittee +	$CpartBcat1committee +	$CpartBcat2committee + $CpartBcat3committee +	$CpartBcat4committee);
+			// $Bcommittee=number_format($Btotal/5, 2);
+
+			$Bcommittee = ($CpartAcommittee +	$CpartBcat1committee +	$CpartBcat2committee + $CpartBcat3committee +	$CpartBcat4committee);
 
 			// $avgpicommittee=number_format(0.25*$Acommittee + 0.75*$Bcommittee, 2);
-			$avgpicommittee=number_format($lasttolastyearmf*$PPcommittee + $previousyearmf*$Acommittee + $currentyearmf*$Bcommittee, 2);
+			$avgpicommittee=number_format(($PPcommittee + $Acommittee + $Bcommittee)/3, 2);
 
 			// $sqlss="SELECT committeeremarksA, committeeremarksBcat1, committeeremarksBcat2, committeeremarksBcat3, committeeremarksBcat4, committeeremarksavgpi, committeeremarkscum, final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
 			$sqlss="SELECT final_recomm FROM summary_table WHERE year='$currentyear' AND facultyId='$userId'";
@@ -2135,7 +2350,7 @@ $lasttolastyearmf=0.33;
 		                    <tr>
 		                    	<td colspan="1">
 			                    	<div class="row justify-content-center">
-			                    		<label class="col-form-label">Average PI</label>
+			                    		<label class="col-form-label">PI total out of 500</label>
 			                    	</div>
 								</td>
 								<td>
@@ -2206,17 +2421,17 @@ $lasttolastyearmf=0.33;
 		                    <tr>
 		                    	<td colspan="1">
 									<div class="row justify-content-center">
-										<label class="col-form-label">Cumulated Score=<?php echo $lasttolastyearmf; ?>% of<br> API of <?php echo ($lasttolastyear-1).'-'.$lasttolastyear; ?>+<br><?php echo $previousyearmf; ?>% of<br> API of <?php echo ($previousyear-1).'-'.$previousyear; ?>+<br><?php echo $currentyearmf; ?>% of API of <?php echo ($currentyear-1).'-'.$currentyear; ?></label>
+										<label class="col-form-label">Average PI</label>
 									</div>
 								</td>
 								<td colspan="3">
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $avgpi; ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										<input type="number" value="<?php echo number_format((float)$avgpi, 2, '.', ''); ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<td colspan="3">
 									<div class="col-md-12" style="margin:0;padding:0">
-										<input type="number" value="<?php echo $avgpihod; ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										<input type="number" value="<?php echo number_format((float)$avgpihod, 2, '.', ''); ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 									</div>
 								</td>
 								<!-- <td>
@@ -2231,7 +2446,48 @@ $lasttolastyearmf=0.33;
 									?>
 									<td colspan="3">
 										<div class="col-md-12" style="margin:0;padding:0">
-											<input type="number" value="<?php echo $avgpicommittee; ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+											<input type="number" value="<?php echo number_format((float)$avgpicommittee, 2, '.', ''); ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+										</div>
+									</td>
+									<!-- <td>
+										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="text" value="<?php echo $committeeremarkscum; ?>" id="committeeremarkscum" name="committeeremarkscum" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+										</div>
+									</td> -->
+									<?php
+								}
+								?>
+		                    </tr>
+
+		                    <tr>
+		                    	<td colspan="1">
+									<div class="row justify-content-center">
+										<label class="col-form-label">Average PI %</label>
+									</div>
+								</td>
+								<td colspan="3">
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo number_format((float)($avgpi/5), 2, '.', ''); ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+									</div>
+								</td>
+								<td colspan="3">
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="number" value="<?php echo number_format((float)($avgpihod/5), 2, '.', ''); ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
+									</div>
+								</td>
+								<!-- <td>
+									<div class="col-md-12" style="margin:0;padding:0">
+										<input type="text" value="<?php echo $hodremarkscum; ?>" id="hodremarkscum" name="hodremarkscum" class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" />
+									</div>
+								</td> -->
+								<?php
+								// if($committee==1 && $recommended==1)
+								if($committee==1)
+								{
+									?>
+									<td colspan="3">
+										<div class="col-md-12" style="margin:0;padding:0">
+											<input type="number" value="<?php echo number_format((float)($avgpicommittee/5), 2, '.', ''); ?>" class="form-control summaryyearscum" style="width: 100%;margin: 0;padding: 0" maxlength="200" disabled/>
 										</div>
 									</td>
 									<!-- <td>
@@ -2255,7 +2511,7 @@ $lasttolastyearmf=0.33;
 		<div class="hodrecommendationdiv" id="hodrecommendationdiv">
 			<div class="row justify-content-center">
 				<div class="col-md-3 text-right">
-					<label class="col-form-label"><b>HOD Recommendation:</b></label>
+					<label class="col-form-label"><b>HOD Remarks:</b></label>
 				</div>
 				<div class="col-md-7">
 					<textarea class="form-control mx-auto summaryhodrecommend" id="hodremarkscum" name="hodremarkscum" maxlength="200"><?php echo $hodremarkscum; ?></textarea><br>
@@ -2334,7 +2590,7 @@ $lasttolastyearmf=0.33;
 				<form class="summary_comm_form" action="" method="POST">
 				<div class="row justify-content-center">
 					<div class="col-md-3 text-right">
-						<label class="col-form-label"><b>Final Recommendation:</b></label>
+						<label class="col-form-label"><b>Final Remarks by Committee:</b></label>
 					</div>
 					<div class="col-md-7">
 						<!-- <input type="text" value="<?php echo $final_recomm; ?>" name='final_recomm' id='final_recomm' class="form-control" style="width: 100%;margin: 0;padding: 0" maxlength="200" /> -->
