@@ -152,7 +152,7 @@ include 'left-nav.php';
 
 			// SUBMIT FOR SELF APPRAISAL
 			$submitted_for_self_appraisal=false;
-			if($_SESSION['id']==$userId)
+			/*if($_SESSION['id']==$userId)
 			{
 
 				$sqlssa="SELECT partA FROM submitted_for_self_appraisal WHERE facultyId='$userId' AND year='$year'";
@@ -190,7 +190,7 @@ include 'left-nav.php';
 					
 				}
 
-			}
+			}*/
 
 			// Request edit access
 			if($_SESSION['id']==$userId)
@@ -1261,14 +1261,14 @@ include 'left-nav.php';
 		<?php
 	}
 
-	if($submitted_for_self_appraisal==true && $viewerId==$userId && $hod==0 && $committee==0)
+	/*if($submitted_for_self_appraisal==true && $viewerId==$userId && $hod==0 && $committee==0)
 	{
 		?>
 		<script type="text/javascript">
 			$('.pisave').remove();
 		</script>
 		<?php
-	}
+	}*/
 
 	$nyear=$year+1;
 	$cyear=$year;

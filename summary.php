@@ -804,7 +804,19 @@ $lasttolastyearmf=0.33;
 										<td><b>~</b></td>
 										<td><b><?php echo $xx.'-'.($xx-1); ?></b></td>
 										<td><b>~</b></td>
-									</tr>
+									</tr>									
+									<?php
+
+									$sqlxxx="SELECT id FROM part_a_table WHERE faculty_id='$userId' AND year='$xx'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
+								
+
+									if($formId!='')
+									{
+
+									?>
 									<tr>
 										<td><b>~</b></td>
 										<td><b>Part A</b></td>
@@ -812,13 +824,7 @@ $lasttolastyearmf=0.33;
 									</tr>
 									<?php
 
-									$sqlxxx="SELECT id FROM part_a_table WHERE faculty_id='$userId' AND year='$xx'";
-									$resultxxx=mysqli_query($conn,$sqlxxx);
-									$rowxxx=mysqli_fetch_assoc($resultxxx);
-									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);
-
 									$counter=1;
-
 									
 									// Part A
 									$sql="SELECT file FROM part_a_doc WHERE formId='$formId'";
@@ -839,6 +845,17 @@ $lasttolastyearmf=0.33;
 										}
 									}
 
+									}
+									
+
+									$sqlxxx="SELECT id FROM part_b_table WHERE facultyId='$userId' AND year='$xx'";
+									$resultxxx=mysqli_query($conn,$sqlxxx);
+									$rowxxx=mysqli_fetch_assoc($resultxxx);
+									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);	
+
+									if($formId!='')
+									{
+
 									?>
 									<tr>
 										<td><b>~</b></td>
@@ -846,11 +863,6 @@ $lasttolastyearmf=0.33;
 										<td><b>~</b></td>
 									</tr>
 									<?php
-
-									$sqlxxx="SELECT id FROM part_b_table WHERE facultyId='$userId' AND year='$xx'";
-									$resultxxx=mysqli_query($conn,$sqlxxx);
-									$rowxxx=mysqli_fetch_assoc($resultxxx);
-									$formId=mysqli_real_escape_string($conn,$rowxxx['id']);	
 
 									// echo $userId.','.$formId.','.$xx.'<br>';							
 
@@ -1436,6 +1448,8 @@ $lasttolastyearmf=0.33;
 											$counter+=1;
 										}
 									}
+
+									} // if formid !='' ends
 
 
 

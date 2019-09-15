@@ -1,3 +1,44 @@
+// PI data portal data
+$(document).ready(function(){
+
+	$(".piportalform").submit(function(e){ 
+		e.preventDefault();        
+		var formData = new FormData(this);  
+		
+		$.ajax
+		({
+			type: 'POST',
+			url: 'pidataportal_sys.php',
+			data:formData,
+			//dataType: 'text',  // what to expect back from the PHP script, if anything
+			cache: false,
+			contentType: false,
+			processData: false,                
+			success: function (response) 
+			{
+				// alert(response);
+				$(".pidataportal").trigger("reset");
+				if(response.trim()=="success")
+				{           
+					document.getElementById('message').innerHTML="PI data successfully updated";
+				}      
+				else
+				{
+					document.getElementById('message').innerHTML="There was some error!";
+				}
+				// document.getElementById('send-otp').innerHTML="Send OTP";
+				// $("#send-otp").prop("disabled",false);
+				// $(".loader").toggle();
+			},                
+			error: function(xhr, status, error) {
+				alert(xhr.responseText);
+			}              
+		});
+		
+		return false;
+	})
+});
+
 // send OTP form system
 $(document).ready(function(){
 

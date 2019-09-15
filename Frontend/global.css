@@ -1216,3 +1216,87 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* PI DATA INPUT PORTAL   */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+
+.custombox
+{
+	position:relative;
+	
+	left:50%;
+	transform: translate(-50%);
+	width: 400px;
+	background: #fff;
+	padding: 40px;
+	/*box-sizing: border-box;
+	border: 1px solid rgba(0,0,0,.1);
+	box-shadow:0 5px 10px rgba(0,0,0,.2);*/
+	font-family: 'Roboto', sans-serif;}
+
+.custombox form h2
+{
+	margin:0 0  40px;
+	padding: 0;
+	color: #f7497d;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.custombox form p
+{
+	color: #34495e;
+	text-align: left;
+}
+.custombox input
+{
+	padding:10px 0;
+	margin-bottom: 30px; 
+	width:100%;
+	box-sizing: border-box;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	border-bottom: .5px solid #34495e; 
+}
+ 
+
+
+.custombox input[type="submit"]
+{
+	border-bottom: none;
+	cursor: pointer;
+	background: #f7497d;
+	color: #fff;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.custombox form div
+{
+	position: relative;
+}
+.custombox form div label
+{
+	position: absolute;
+	top: 5px;
+	left: 0;
+	color:#34495e;
+	transition: .5s;
+	pointer-events: none;
+}
+.custombox input:focus ~ label, .custombox input:valid ~ label
+{
+	top: -20px;
+	left: 0;
+	color: #f7497d;
+	font-size: 12px;
+	font-weight: bold;
+}
+.custombox input:focus, .custombox input:valid
+{
+	border-bottom: .5px solid #f7497d;
+}
+
+/* PI DATA INPUT PORTAL END  */

@@ -8,6 +8,8 @@ $userId=mysqli_real_escape_string($conn,$_POST['userId']);
 
 $year=mysqli_real_escape_string($conn,$_POST['year']);
 $cyear=$year;//current year
+
+// echo $userId.','.$year.'//';
 if($year!=2017)
 {
 	// if its 2017, then load 2017's data itself since our forms begin from 2017
@@ -223,25 +225,28 @@ if(mysqli_num_rows($result)==0)
 		}
 
 		$formId=$row['id'];
-
-		$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
-		$result1=mysqli_query($conn,$sql1);
-		if(mysqli_num_rows($result1)>0)
+		// echo 'FORM ID ---->'.$formId;
+		if($formId!='')
 		{
-			$data_doc=array();
-			while($row1=mysqli_fetch_assoc($result1))
+			$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
+			$result1=mysqli_query($conn,$sql1);
+			if(mysqli_num_rows($result1)>0)
 			{
-				$data_doc[]=array('srno'=>$row1['srno']);
-				$data_doc[]=array('course'=>$row1['course']);
-				$data_doc[]=array('days'=>$row1['days']);
-				$data_doc[]=array('agency'=>$row1['agency']);
-				$data_doc[]=array('rolee'=>$row1['rolee']);
-				$data_doc[]=array('file'=>$row1['file']);
+				$data_doc=array();
+				while($row1=mysqli_fetch_assoc($result1))
+				{
+					$data_doc[]=array('srno'=>$row1['srno']);
+					$data_doc[]=array('course'=>$row1['course']);
+					$data_doc[]=array('days'=>$row1['days']);
+					$data_doc[]=array('agency'=>$row1['agency']);
+					$data_doc[]=array('rolee'=>$row1['rolee']);
+					$data_doc[]=array('file'=>$row1['file']);
 
-				$data[]=array('parta_dynamic_form'=>$data_doc);
+					$data[]=array('parta_dynamic_form'=>$data_doc);
 
-				unset($data_doc); 
-				$data_doc = array();
+					unset($data_doc); 
+					$data_doc = array();
+				}
 			}
 		}
 		
@@ -423,25 +428,28 @@ else
 	}
 
 	$formId=$row['id'];
-
-	$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
-	$result1=mysqli_query($conn,$sql1);
-	if(mysqli_num_rows($result1)>0)
+	// echo 'FORM ID ---->'.$formId;
+	if($formId!='')
 	{
-		$data_doc=array();
-		while($row1=mysqli_fetch_assoc($result1))
+		$sql1="SELECT * FROM part_a_doc WHERE formId='$formId' ORDER BY srno ASC";
+		$result1=mysqli_query($conn,$sql1);
+		if(mysqli_num_rows($result1)>0)
 		{
-			$data_doc[]=array('srno'=>$row1['srno']);
-			$data_doc[]=array('course'=>$row1['course']);
-			$data_doc[]=array('days'=>$row1['days']);
-			$data_doc[]=array('agency'=>$row1['agency']);
-			$data_doc[]=array('rolee'=>$row1['rolee']);
-			$data_doc[]=array('file'=>$row1['file']);
+			$data_doc=array();
+			while($row1=mysqli_fetch_assoc($result1))
+			{
+				$data_doc[]=array('srno'=>$row1['srno']);
+				$data_doc[]=array('course'=>$row1['course']);
+				$data_doc[]=array('days'=>$row1['days']);
+				$data_doc[]=array('agency'=>$row1['agency']);
+				$data_doc[]=array('rolee'=>$row1['rolee']);
+				$data_doc[]=array('file'=>$row1['file']);
 
-			$data[]=array('parta_dynamic_form'=>$data_doc);
+				$data[]=array('parta_dynamic_form'=>$data_doc);
 
-			unset($data_doc); 
-			$data_doc = array();
+				unset($data_doc); 
+				$data_doc = array();
+			}
 		}
 	}
 	

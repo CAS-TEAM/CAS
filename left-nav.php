@@ -225,6 +225,20 @@ $admin=$rowp['admin'];
 							<span style="font-size: 15px">Feeback / Contact Us</span>
 						</a>
 					</li>
+
+					<?php
+					if($hod==1)
+					{
+						?>
+						<li class="sidebar-dropdown">
+							<a href="pidataportal.php">
+								<i class="fas fa-edit" style="font-size: 15px"></i>
+								<span style="font-size: 15px">PI Data Input Portal</span>
+							</a>
+						</li>
+						<?php
+					}
+					?>
 				 
 				</ul>
 			</div>

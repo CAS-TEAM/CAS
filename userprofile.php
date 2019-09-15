@@ -231,6 +231,8 @@ $lasttolastyear=$previousyear-1;
 							<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CHECK CAS ELIGBILITY TAB ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 					  		<div class="tab-pane fade show active" id="pills-apply" role="tabpanel" aria-labelledby="pills-apply-tab">	
 					  			<!-- <h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br> -->
+					  			<?php
+					  			/*
 					  			<h3 class="text-center">SELF APPRAISAL FORM FILLING & APPLICATION</h3><br>
 					  			<!-- CHECK ELIGIBILITY STATUS -->
 					  			<p>
@@ -315,6 +317,8 @@ $lasttolastyear=$previousyear-1;
 								</table>
 
 					  			<hr style="height:1px;border:none;color:#333;background-color:#333;">
+					  			*/
+					  			?>
 					  			<h3 class="text-center">CAS ELIGIBILITY AND APPLICATION</h3><br>
 
 					  			<p>
