@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2019 at 02:53 PM
+-- Generation Time: Sep 28, 2019 at 02:35 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -255,7 +255,8 @@ INSERT INTO `partb_cat1_pi` (`id`, `year`, `facultyId`, `cat1_pi1_self_a`, `cat1
 (53, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50),
 (54, 2019, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 0, 90),
 (55, 2018, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90),
-(56, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90);
+(56, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90),
+(57, 2019, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -342,7 +343,8 @@ INSERT INTO `partb_cat2_pi` (`id`, `year`, `facultyId`, `cat2_pii1_self_a`, `cat
 (51, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50),
 (52, 2019, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 0, 90),
 (53, 2018, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90),
-(54, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90);
+(54, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90),
+(55, 2019, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -453,7 +455,8 @@ INSERT INTO `partb_cat3_pi` (`id`, `year`, `facultyId`, `cat3_piii1_self_a`, `ca
 (51, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50),
 (52, 2019, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 170, 0, 90),
 (53, 2018, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90),
-(54, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90);
+(54, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 90),
+(55, 2019, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -537,7 +540,8 @@ INSERT INTO `partb_cat4_pi` (`id`, `year`, `facultyId`, `cat4_piv1_self_a`, `cat
 (51, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50),
 (52, 2019, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70, 0, 50),
 (53, 2018, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70),
-(54, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70);
+(54, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 70),
+(55, 2019, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2191,7 +2195,9 @@ INSERT INTO `submitted_for_review_table` (`id`, `year`, `facultyId`, `partA`, `p
 (35, 2018, 39, 1, 1),
 (36, 2017, 39, 1, 1),
 (37, 2018, 1, 1, 1),
-(38, 2017, 1, 1, 1);
+(38, 2017, 1, 1, 1),
+(39, 2019, 24, 1, 1),
+(40, 2019, 30, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -2284,7 +2290,9 @@ INSERT INTO `summary_table` (`id`, `year`, `facultyId`, `selfPP`, `selfA`, `self
 (33, 2018, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
 (34, 2017, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
 (35, 2018, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
-(36, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '');
+(36, 2017, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
+(37, 2019, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
+(38, 2019, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '');
 
 --
 -- Indexes for dumped tables
@@ -2563,22 +2571,22 @@ ALTER TABLE `otp_table`
 -- AUTO_INCREMENT for table `partb_cat1_pi`
 --
 ALTER TABLE `partb_cat1_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- AUTO_INCREMENT for table `partb_cat2_pi`
 --
 ALTER TABLE `partb_cat2_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `partb_cat3_pi`
 --
 ALTER TABLE `partb_cat3_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `partb_cat4_pi`
 --
 ALTER TABLE `partb_cat4_pi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `part_a_doc`
 --
@@ -2723,7 +2731,7 @@ ALTER TABLE `request_edit_access`
 -- AUTO_INCREMENT for table `submitted_for_review_table`
 --
 ALTER TABLE `submitted_for_review_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT for table `submitted_for_self_appraisal`
 --
@@ -2733,7 +2741,7 @@ ALTER TABLE `submitted_for_self_appraisal`
 -- AUTO_INCREMENT for table `summary_table`
 --
 ALTER TABLE `summary_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

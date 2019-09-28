@@ -123,6 +123,10 @@ $lasttolastyear2=$currentyear-3;
 							$years = floor($datediff / (365*60*60*24));
 							$eligible=false;
 							$sfr=false;
+							
+							$sfr2019=false;
+							$sfr2019A=false;
+							$sfr2019B=false;
 						    // echo $years;
 						    if($years>=5)
 						    {
@@ -149,6 +153,29 @@ $lasttolastyear2=$currentyear-3;
 											$sfr=true;
 										}
 									}
+								}
+
+								$sqlsfr="SELECT partA,partB FROM submitted_for_review_table WHERE facultyId='$id' AND year='$previousyear' AND (partA=1 OR partB=1)";
+								$resultsfr=mysqli_query($conn,$sqlsfr);
+								// echo 'faculty4-'.$sfr2019;
+								if(mysqli_num_rows($resultsfr)!=0)
+								{
+									$sfr2019=true;
+									// echo 'change->'.$sfr2019;
+
+									$sqlsfr="SELECT partA FROM submitted_for_review_table WHERE facultyId='$id' AND year='$previousyear' AND partA=1";
+									$resultsfr=mysqli_query($conn,$sqlsfr);
+									if(mysqli_num_rows($resultsfr)!=0)
+									{
+										$sfr2019A=true;
+									}
+									$sqlsfr="SELECT partB FROM submitted_for_review_table WHERE facultyId='$id' AND year='$previousyear' AND partB=1";
+									$resultsfr=mysqli_query($conn,$sqlsfr);
+									if(mysqli_num_rows($resultsfr)!=0)
+									{
+										$sfr2019B=true;
+									}
+
 								}
 
 						    }
@@ -199,12 +226,21 @@ $lasttolastyear2=$currentyear-3;
 						    </td>
 						    <td>
 						    	<?php
-							    if($eligible==true && $sfr==true)
+						    	// echo 'change->'.$sfr2019;
+							    if($eligible==true && /*$sfr==true &&*/ $sfr2019==true)
 							    {
-							    ?>
-							    	<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-info" target="_blank">Part A</a>
-							    	<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-info" style="margin-top: 10px" target="_blank">Part B</a>
-							    	<?php
+							    	if($sfr2019A==true)
+							    	{
+							    		?>
+							    		<a href="partA.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-info" target="_blank">Part A</a>
+							    		<?php
+							    	}
+							    	if($sfr2019B==true)
+							    	{
+							    		?>
+							    		<a href="partB.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-info" style="margin-top: 10px" target="_blank">Part B</a>
+							    		<?php
+							    	}
 							    }
 							    else
 							    {
@@ -217,7 +253,7 @@ $lasttolastyear2=$currentyear-3;
 
 						    <td>
 								<?php
-							    if($eligible==true && $sfr==true)
+							    if($eligible==true && /*$sfr==true &&*/ $sfr2019==true)
 							    {
 							    	?>
 						    		<a href="summary.php?id=<?php echo $id; ?>&year=<?php echo ($currentyear-1); ?>" class="btn btn-success" style="margin-top: 25px" target="_blank">Summary</a></td>

@@ -161,6 +161,19 @@ $admin=$rowp['admin'];
 							<span style="font-size: 15px">My Self Appraisals</span>
 						</a>
 					</li>
+					<?php
+					if($committee==1)
+					{
+						?>
+						<li class="sidebar-dropdown">
+							<a href="print-self-appraisals.php">
+								<i class="fas fa-print" style="font-size: 15px"></i>
+								<span style="font-size: 15px">Print Appraisals Data</span>
+							</a>
+						</li>
+						<?php
+					}
+					?>
 					<li class="sidebar-dropdown">
 						<a href="guidelines.php">
 							<i class="fas fa-info" style="font-size: 15px"></i>
