@@ -219,7 +219,7 @@ for($x=0;$x<$maximum;$x++)
 	// echo sizeof($data[0]);
 	// declaring an empty array for every faculty..in this array we will fill all the data of the two forms
 	$roww=array();
-	for($i=0;$i<10;$i++)
+	for($i=0;$i<50;$i++)
 	{
 		$temp=array();
 		for($j=0; $j<sizeof($data[0]); $j++)
