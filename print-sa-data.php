@@ -15,6 +15,7 @@ else
 
 include 'dbh.php';
 
+$department=mysqli_real_escape_string($conn,$_GET['department']);
 $year=mysqli_real_escape_string($conn,$_GET['year']);
 
 header('Content-Type: text/csv');
@@ -233,6 +234,11 @@ for($x=0;$x<$maximum;$x++)
 
 	$roww[0][0]=$srno;
 	$facultyId=$rowfaculty[$x][$facultyidcolumnname];
+
+	$sqlxx="SELECT id FROM faculty_table WHERE id='$facultyId' AND department='$department'";
+	$resultxx=mysqli_query($conn, $sqlxx);
+	if(mysqli_num_rows($resultxx)!=0)
+	{
 	// echo $facultyId.'->';
 	// Now we will get the data for the current faculty
 	// PART A DATA
@@ -240,6 +246,9 @@ for($x=0;$x<$maximum;$x++)
 	$result=mysqli_query($conn, $sql);
 	$row=mysqli_fetch_row($result);
 	// print_r($row);
+	if($row[0]!='')
+	{
+
 	$partAformId=$row[0];
 	for($i=1;$i<sizeof($row);$i++)
 	{
@@ -666,6 +675,9 @@ for($x=0;$x<$maximum;$x++)
 	}
 
 	$srno+=1;
+
+	} // if($row[0]!='')
+	} // faculty from this department wala check
 
 
 

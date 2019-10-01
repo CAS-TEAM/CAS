@@ -162,7 +162,7 @@ $admin=$rowp['admin'];
 						</a>
 					</li>
 					<?php
-					if($committee==1)
+					if($hod==1)
 					{
 						?>
 						<li class="sidebar-dropdown">
