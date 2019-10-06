@@ -36,6 +36,7 @@ include 'left-nav.php';
     	<br><h2 class="text-center">PRINT ALL SELF APPRAISALS' DATA</h2>
     	<hr>
     	<a href="print-sa-data.php?year=2019&department=<?php echo $department; ?>" class="btn btn-info">PRINT FOR YEAR 2019</a>
+        <a href="download-fac-attachments.php?year=2019&department=<?php echo $department; ?>" class="btn btn-primary">DOWNLOAD FACULTY ATTACHMENTS</a>
     	<br><br>
     </div>
 	</div>
