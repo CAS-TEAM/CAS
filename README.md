@@ -1,4 +1,4 @@
-<h1 align="center">C A S</h1>
+<h1 align="center" style="font-size:30px">C A S</h1>
 CAS stands for Career Advancement Scheme.
 
 It is a portal for colleges which can be used by faculty to apply for pay raises. This code has been specifically developed for K. J. Somaiya College of Engineering, Vidyavihar, Maharashtra, India but a little tweaking can enable this website to be used for other colleges also.
