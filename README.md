@@ -1,5 +1,6 @@
 <h1 align="center" style="font-size:50px">C A S</h1>
-<p align="center">https://img.shields.io/badge/-PHP-131223?style=flat  https://img.shields.io/github/repo-size/CAS-TEAM/CAS?style=plastic</p>
+<p align="center"><img src="https://img.shields.io/apm/l/vim-mode" /> <img src="https://img.shields.io/badge/-php-7377AD?logo=php&logoColor=white&style=plastic" /> <img src="https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white&style=plastic" /> <img src="https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white&style=plastic" /> <img src="https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white&style=plastic" /> <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=white&style=plastic" /> <img src="https://img.shields.io/github/repo-size/CAS-TEAM/CAS?style=plastic"/> </p>
+	
 CAS stands for Career Advancement Scheme.
 
 It is a portal for colleges which can be used by faculty to apply for pay raises. This code has been specifically developed for K. J. Somaiya College of Engineering, Vidyavihar, Maharashtra, India but a little tweaking can enable this website to be used for other colleges also.
